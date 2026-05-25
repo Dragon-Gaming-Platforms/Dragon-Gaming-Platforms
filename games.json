@@ -1,4 +1,10 @@
 [
   { "name": "Eaglercraft 1.12.2", "path": "/games/singlefiles/Eaglercraft-1.12.2.html" },
+  { "name": "Recoil", "path": "/games/singlefiles/Recoil.html" },
+  { "name": "Vex 8", "path": "/games/singlefiles/Vex-8.html" },
+  { "name": "Drive Mad", "path": "/games/singlefiles/Drive-Mad.html" },
+  { "name": "Bloons TD4", "path": "/games/singlefiles/Bloons-TD4.html" },
+  { "name": "Escape Road", "path": "/games/singlefiles/Escape-Road.html" },
+  { "name": "Hole.io", "path": "/games/singlefiles/Hole.io.html" },
   { "name": "Eaglercraft 1.8.8", "path": "/games/singlefiles/Eaglercraft-1.8.8.html" }
 ]
