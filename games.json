@@ -10,5 +10,8 @@
   { "name": "Borg Games", "path": "./games/singlefiles/Borg-Games.html" },
   { "name": "Anura OS", "path": "./emulators/anuraOS.html" },
   { "name": "GUST", "path": "./browsers/GUST.html" },
-  { "name": "Scramjet", "path": "./browsers/Scramjet.html" }
+  { "name": "Scramjet", "path": "./browsers/Scramjet.html" },
+  { "name": "Moto x3m 2", "path": "./games/singlefiles/Moto-x3m-2.html" },
+  { "name": "Snowrider 3D", "path": "./games/singlefiles/Snowrider.html" },
+  { "name": "Dreadhead Parkour", "path": "./games/singlefiles/dreadheadparkour.htm" }
 ]
