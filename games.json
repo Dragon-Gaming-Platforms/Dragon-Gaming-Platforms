@@ -13,6 +13,7 @@
   { "name": "Scramjet", "path": "./browsers/Scramjet.html" },
   { "name": "Moto x3m 2", "path": "./games/singlefiles/Moto-x3m-2.html" },
   { "name": "Snowrider 3D", "path": "./games/singlefiles/Snowrider.html" },
-  { "name": "Dreadhead Parkour", "path": "./games/singlefiles/dreadheadparkour.htm" }
-  { "name": "HexGL", "path": "./games/HexGL/index.html" }
+  { "name": "Dreadhead Parkour", "path": "./games/singlefiles/dreadheadparkour.htm" },
+  { "name": "HexGL", "path": "./games/HexGL/index.html" },
+  { "name": "Balatro", "path": "./games/singlefiles/Balatro.html" }
 ]
