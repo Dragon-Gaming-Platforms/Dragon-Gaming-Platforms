@@ -4,10 +4,12 @@
   <img src="https://raw.githubusercontent.com/Dragon-Gaming-Platforms/Web-OS/main/os/assets/images/dragon-login.png" height="425" />
 </div>
 
+## Introduction
 
+*Dragon Gaming Platforms* is a website to play web based games and emulators as well as browse the web. 
+
+__Warning__ this website is still in development and therefore may be unreliable for now.
 <!--
-**Dragon-Gaming-Platforms/Dragon-Gaming-Platforms** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
 Here are some ideas to get you started:
 
 - 🔭 I’m currently working on ...
@@ -16,6 +18,4 @@ Here are some ideas to get you started:
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
 -->
