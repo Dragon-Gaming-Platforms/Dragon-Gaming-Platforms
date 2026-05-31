@@ -6,7 +6,7 @@
 const GAMES_DATA = [ 
   {  
     "name": "Eaglercraft 1.12.2",
-     "path": "./games/singlefiles/Eaglercraft-1.12.2.html",
+     "path": "./games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html",
      "category": "games" 
   },
   { 
@@ -41,7 +41,7 @@ const GAMES_DATA = [
   },
   { 
     "name": "Eaglercraft 1.8.8", 
-    "path": "./games/singlefiles/Eaglercraft-1.8.8.html", 
+    "path": "./games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html", 
     "category": "games" 
   },
   { 
