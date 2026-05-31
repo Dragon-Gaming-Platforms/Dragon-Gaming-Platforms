@@ -14,6 +14,12 @@
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container">
+      
+      <button class="navbar__cloak-btn" id="cloakBtn" title="Open in Cloaked Tab">
+        <span class="navbar__cloak-icon">🛡️</span>
+        <span class="navbar__cloak-text">Cloaked Tab</span>
+      </button>
+
       <a href="#" class="navbar__brand">
         <img class="navbar__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
         <div class="navbar__title"><span>Dragon</span> Gaming</div>
@@ -24,7 +30,13 @@
         <li><a href="#category-games">Games</a></li>
         <li><a href="#category-browsers">Browsers</a></li>
         <li><a href="#category-emulators">Emulators</a></li>
-        <li><a href="#" id="navDownload">Download</a></li>
+        <li class="navbar__dropdown" id="dropdownRoot">
+          <a href="#" class="navbar__dropdown-toggle" id="dropdownToggle">More ▾</a>
+          <ul class="navbar__dropdown-menu" id="dropdownMenu">
+            <li><a href="#download">Download</a></li>
+            <li><a href="#settings">Settings</a></li>
+          </ul>
+        </li>
       </ul>
 
       <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
@@ -45,7 +57,7 @@
     </div>
   </section>
 
-  <!-- CATEGORIES (rendered by games.js) -->
+  <!-- MAIN CONTENT SECTIONS -->
   <div id="categoriesRoot">
     <div class="loading-state" id="loadingState">
       <div class="loading-state__spinner"></div>
@@ -53,6 +65,8 @@
     </div>
   </div>
   <div id="mainContent"></div>
+  <div id="downloadRoot"></div>
+  <div id="settingsRoot"></div>
 
   <!-- GAME VIEWER OVERLAY -->
   <div class="game-viewer" id="gameViewer">
@@ -88,5 +102,5 @@
 
   <!-- JS: data + engine -->
   <script src="games.js"></script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a04904049df70fd6',t:'MTc4MDI2MjM1NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

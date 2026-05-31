@@ -101,6 +101,11 @@ const GAMES_DATA = [
     { id: "browsers",   label: "Browsers",  icon: "🌐" }
   ];
 
+  const REPO_OWNER = 'Dragon-Gaming-Platforms';
+  const REPO_NAME  = 'Dragon-Gaming-Platforms';
+  const API_BASE   = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`;
+  const CURRENT_VER = 'v1.0.0';
+
   const $ = (s) => document.querySelector(s);
   const $$ = (s) => document.querySelectorAll(s);
 
@@ -108,8 +113,13 @@ const GAMES_DATA = [
   const navbar         = $('#navbar');
   const navLinks       = $('#navLinks');
   const hamburger      = $('#hamburger');
+  const cloakBtn       = $('#cloakBtn');
+  const dropdownRoot   = $('#dropdownRoot');
+  const dropdownToggle = $('#dropdownToggle');
   const browseBtn      = $('#browseGamesBtn');
   const mainContainer  = $('#mainContent');
+  const downloadRoot   = $('#downloadRoot');
+  const settingsRoot   = $('#settingsRoot');
   const loadingEl      = $('#loadingState');
   const gameViewer     = $('#gameViewer');
   const viewerBackdrop = $('#viewerBackdrop');
@@ -118,69 +128,82 @@ const GAMES_DATA = [
   const viewerLoading  = $('#viewerLoading');
   const viewerGameName = $('#viewerGameName');
 
+  // ---- Eruda State ----
+  let erudaLoaded = false;
+  const ERUDA_KEY = 'dgp_eruda_enabled';
+  function isErudaEnabled() { return localStorage.getItem(ERUDA_KEY) === 'true'; }
+  function setErudaEnabled(v) { localStorage.setItem(ERUDA_KEY, v ? 'true' : 'false'); }
+  function initEruda() {
+    if (erudaLoaded) return;
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/eruda';
+    s.onload = () => { if (typeof eruda !== 'undefined') { eruda.init(); erudaLoaded = true; } };
+    document.body.appendChild(s);
+  }
+  function destroyEruda() { if (typeof eruda !== 'undefined' && eruda._isInit) { eruda.destroy(); erudaLoaded = false; } }
+  function toggleEruda(enabled) { setErudaEnabled(enabled); if (enabled) initEruda(); else destroyEruda(); }
+
+  // ---- Cloaked Tab ----
+  if (cloakBtn) {
+    cloakBtn.addEventListener('click', () => {
+      const win = window.open('about:blank', '_blank');
+      if (!win) return; // popup blocked
+      
+      fetch('./singlefile.html')
+        .then(res => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return res.text();
+        })
+        .then(html => {
+          win.document.open();
+          win.document.write(html);
+          win.document.close();
+        })
+        .catch(() => {
+          // If fetch fails (e.g. file doesn't exist), just leave the blank tab open
+        });
+    });
+  }
+
   // ---- Scroll reveal ----
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.15 });
 
-  // ---- Navbar scroll effect ----
+  // ---- Navbar ----
   window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 40));
-
-  // ---- Hamburger ----
   hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  dropdownToggle.addEventListener('click', (e) => { e.preventDefault(); if (innerWidth <= 768) dropdownRoot.classList.toggle('open'); });
+  browseBtn.addEventListener('click', (e) => { e.preventDefault(); $('#categoriesRoot').scrollIntoView({ behavior: 'smooth' }); });
 
-  // ---- Browse CTA ----
-  browseBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    $('#categoriesRoot').scrollIntoView({ behavior: 'smooth' });
-  });
-
-  // ---- Viewer open / close ----
+  // ---- Viewer ----
   function openGame(name, path) {
     viewerGameName.textContent = name;
     viewerLoading.classList.remove('hidden');
-    viewerIframe.src = ''; // Clear previous source
-
+    viewerIframe.src = '';
     requestAnimationFrame(() => {
       gameViewer.classList.add('active');
       document.body.style.overflow = 'hidden';
-
       setTimeout(() => {
         viewerIframe.src = path;
-
-        const revealGame = () => {
-          if (!viewerLoading.classList.contains('hidden')) {
-            viewerLoading.classList.add('hidden');
-          }
-        };
-
-        viewerIframe.addEventListener('load', function onIframeLoad() {
-          viewerIframe.removeEventListener('load', onIframeLoad);
+        const reveal = () => { if (!viewerLoading.classList.contains('hidden')) viewerLoading.classList.add('hidden'); };
+        viewerIframe.addEventListener('load', function onL() {
+          viewerIframe.removeEventListener('load', onL);
           try {
-            const innerDoc = viewerIframe.contentDocument || viewerIframe.contentWindow.document;
-            if (innerDoc.readyState === 'complete' || innerDoc.readyState === 'interactive') {
-              revealGame();
-            } else {
-              innerDoc.addEventListener('DOMContentLoaded', revealGame, { once: true });
-            }
-          } catch (e) {
-            // Fallback to timeout if cross-origin
-          }
+            const d = viewerIframe.contentDocument || viewerIframe.contentWindow.document;
+            if (d.readyState === 'complete' || d.readyState === 'interactive') reveal();
+            else d.addEventListener('DOMContentLoaded', reveal, { once: true });
+          } catch(e) {}
         });
-
-        // Safety timeout
-        setTimeout(revealGame, 3500);
+        setTimeout(reveal, 3500);
       }, 100);
     });
   }
-
   function closeGame() {
     gameViewer.classList.remove('active');
     document.body.style.overflow = '';
-    // Clear src after animation to stop audio/processing
     setTimeout(() => { viewerIframe.src = ''; viewerLoading.classList.add('hidden'); }, 500);
   }
-
   viewerClose.addEventListener('click', closeGame);
   viewerBackdrop.addEventListener('click', closeGame);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && gameViewer.classList.contains('active')) closeGame(); });
@@ -202,17 +225,118 @@ const GAMES_DATA = [
     const cards = items.map((g,i) => cardHTML(g,i)).join('');
     return `<section class="category-section fade-in" id="category-${cat.id}">
       <div class="container">
-        <div class="category-section__header">
-          <span class="category-section__icon">${cat.icon}</span>
-          <h2 class="category-section__title">${cat.label}</h2>
-          <span class="category-section__count">${items.length} ${items.length===1?'item':'items'}</span>
+        <div class="section-header">
+          <span class="section-icon">${cat.icon}</span>
+          <h2 class="section-title">${cat.label}</h2>
+          <span class="section-count">${items.length} ${items.length===1?'item':'items'}</span>
         </div>
         <div class="games-grid">${cards}</div>
       </div>
     </section>`;
   }
 
+  function downloadHTML() {
+    return `<section class="download-section fade-in" id="download">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">⬇️</span>
+          <h2 class="section-title">Download</h2>
+        </div>
+        <div class="download-versions">
+          <div class="version-box">
+            <div class="version-box__label">Current Version</div>
+            <div class="version-box__value">${CURRENT_VER}</div>
+          </div>
+          <div class="version-box">
+            <div class="version-box__label">Latest Version</div>
+            <div class="version-box__value" id="latestVersion"><span class="version-box__loading">Checking GitHub…</span></div>
+          </div>
+        </div>
+        <div class="download-actions" id="downloadActions">
+          <a href="#" class="btn-download disabled" id="btnZip" download>⬇ Download ZIP</a>
+          <a href="#" class="btn-download btn-download--secondary disabled" id="btnSingle" download>📄 Download Singlefile</a>
+        </div>
+        <div class="commit-log">
+          <h3 class="commit-log__title">Recent Commits</h3>
+          <div id="commitLog"><div class="commit-loading">Loading commit history…</div></div>
+        </div>
+      </div>
+    </section>`;
+  }
+
+  function settingsHTML() {
+    const checked = isErudaEnabled() ? 'checked' : '';
+    return `<section class="settings-section fade-in" id="settings">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-icon">⚙️</span>
+          <h2 class="section-title">Settings</h2>
+        </div>
+        <div class="settings-item">
+          <div>
+            <div class="settings-label">Eruda Developer Console</div>
+            <div class="settings-desc">Inject a mobile-friendly dev tools console</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="erudaToggle" ${checked}>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+    </section>`;
+  }
+
   function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+  // ---- GitHub API ----
+  async function fetchLatestRelease() {
+    try {
+      const res = await fetch(`${API_BASE}/releases/latest`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch(e) { console.error('Failed to fetch release:', e); return null; }
+  }
+
+  async function fetchCommits(limit = 15) {
+    try {
+      const res = await fetch(`${API_BASE}/commits?per_page=${limit}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch(e) { console.error('Failed to fetch commits:', e); return []; }
+  }
+
+  function renderCommitLog(commits) {
+    const el = $('#commitLog');
+    if (!el || !commits.length) { if (el) el.innerHTML = '<div class="commit-loading">No commits found.</div>'; return; }
+    el.innerHTML = commits.map(c => {
+      const sha = c.sha.substring(0, 7);
+      const date = new Date(c.commit.author.date).toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+      const author = c.commit.author.name;
+      const msg = esc(c.commit.message.split('\n')[0]);
+      return `<div class="commit-item">
+        <div class="commit-dot"></div>
+        <div class="commit-info">
+          <div class="commit-msg">${msg}</div>
+          <div class="commit-meta">
+            <a href="${c.html_url}" class="commit-sha" target="_blank" rel="noopener">${sha}</a>
+            <span class="commit-date">${date}</span>
+            <span class="commit-author">${esc(author)}</span>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  function updateDownloadUI(release) {
+    const verEl = $('#latestVersion');
+    const btnZip = $('#btnZip');
+    const btnSingle = $('#btnSingle');
+    if (!release) { if (verEl) verEl.innerHTML = '<span style="color:var(--text-dim)">Could not fetch</span>'; return; }
+    const tagName = release.tag_name || release.name || 'unknown';
+    if (verEl) verEl.innerHTML = `<span class="highlight">${esc(tagName)}</span>`;
+    if (btnZip) { btnZip.href = release.zipball_url; btnZip.classList.remove('disabled'); }
+    if (btnSingle) { btnSingle.href = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${release.tag_name}/singlefile.html`; btnSingle.classList.remove('disabled'); }
+  }
 
   // ---- Render ----
   function render() {
@@ -221,11 +345,18 @@ const GAMES_DATA = [
     GAMES_DATA.forEach(g => { if (grouped[g.category]) grouped[g.category].push(g); });
 
     mainContainer.innerHTML = CATEGORIES.map(c => sectionHTML(c, grouped[c.id])).join('');
+    downloadRoot.innerHTML = downloadHTML();
+    settingsRoot.innerHTML = settingsHTML();
     $$('.fade-in').forEach(el => observer.observe(el));
 
-    $$('.game-card').forEach(card => {
-      card.addEventListener('click', () => openGame(card.dataset.name, card.dataset.path));
-    });
+    $$('.game-card').forEach(card => { card.addEventListener('click', () => openGame(card.dataset.name, card.dataset.path)); });
+
+    const erudaToggle = $('#erudaToggle');
+    if (erudaToggle) erudaToggle.addEventListener('change', (e) => toggleEruda(e.target.checked));
+    if (isErudaEnabled()) initEruda();
+
+    fetchLatestRelease().then(updateDownloadUI);
+    fetchCommits().then(renderCommitLog);
 
     if (loadingEl) loadingEl.style.display = 'none';
   }
