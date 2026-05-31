@@ -6,43 +6,25 @@
   <title>Dragon Gaming Platforms</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ============ NAVBAR ============ -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="#" class="navbar__brand">
-        <img
-          class="navbar__logo"
-          src="assets/dragon-login.png"
-          alt="Dragon Gaming Platforms Logo"
-        />
+        <img class="navbar__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
         <div class="navbar__title"><span>Dragon</span> Gaming</div>
       </a>
-
+      
       <ul class="navbar__links" id="navLinks">
         <li><a href="#hero" class="active">Home</a></li>
-
-        <!-- Categories dropdown -->
-        <li class="navbar__dropdown" id="dropdownRoot">
-          <a href="#" class="navbar__dropdown-toggle" id="dropdownToggle">
-            Categories &#9662;
-          </a>
-          <ul class="navbar__dropdown-menu" id="dropdownMenu">
-            <li><a href="#category-games">&#127918; Games</a></li>
-            <li><a href="#category-emulators">&#128377; Emulators</a></li>
-            <li><a href="#category-browsers">&#127760; Browsers</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">About</a></li>
-        <li><a href="#">Support</a></li>
+        <li><a href="#category-games">Games</a></li>
+        <li><a href="#category-browsers">Browsers</a></li>
+        <li><a href="#category-emulators">Emulators</a></li>
+        <li><a href="#" id="navDownload">Download</a></li>
       </ul>
 
       <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
@@ -51,29 +33,19 @@
     </div>
   </nav>
 
-  <!-- ============ HERO ============ -->
+  <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero__bg"></div>
     <div class="hero__content">
-      <img
-        class="hero__logo"
-        src="assets/dragon-login.png"
-        alt="Dragon Gaming Platforms"
-      />
+      <img class="hero__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
       <div class="hero__line"></div>
-      <h1 class="hero__title">
-        <span class="highlight">Dragon</span> Gaming<br />Platforms
-      </h1>
-      <p class="hero__subtitle">
-        Your gateway to the ultimate gaming experience. Load, launch, and dominate.
-      </p>
-      <a href="#categoriesRoot" class="hero__cta" id="browseGamesBtn">
-        &#9654; Browse All
-      </a>
+      <h1 class="hero__title"><span class="highlight">Dragon</span> Gaming<br />Platforms</h1>
+      <p class="hero__subtitle">Your gateway to the ultimate gaming experience. Load, launch, and dominate.</p>
+      <a href="#category-games" class="hero__cta" id="browseGamesBtn">▶ Browse All</a>
     </div>
   </section>
 
-  <!-- ============ ALL CATEGORIES ============ -->
+  <!-- CATEGORIES (rendered by games.js) -->
   <div id="categoriesRoot">
     <div class="loading-state" id="loadingState">
       <div class="loading-state__spinner"></div>
@@ -82,15 +54,14 @@
   </div>
   <div id="mainContent"></div>
 
-  <!-- ============ GAME VIEWER OVERLAY ============ -->
+  <!-- GAME VIEWER OVERLAY -->
   <div class="game-viewer" id="gameViewer">
     <div class="game-viewer__backdrop" id="viewerBackdrop"></div>
     <div class="game-viewer__window" id="viewerWindow">
       <div class="game-viewer__toolbar">
         <span class="game-viewer__game-name" id="viewerGameName">—</span>
         <button class="game-viewer__close" id="viewerClose">
-          <span class="game-viewer__close-icon">&#10005;</span>
-          Close
+          <span class="game-viewer__close-icon">✕</span> Close
         </button>
       </div>
       <div class="game-viewer__iframe-wrapper">
@@ -98,34 +69,24 @@
           <div class="loading-state__spinner"></div>
           <span class="game-viewer__loading-text">Launching…</span>
         </div>
-        <iframe
-          class="game-viewer__iframe"
-          id="viewerIframe"
-          title="Game"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <iframe class="game-viewer__iframe" id="viewerIframe" title="Game" loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__brand">
-        <img
-          class="footer__logo"
-          src="assets/dragon-login.png"
-          alt="Dragon Gaming Platforms"
-        />
+        <img class="footer__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
         <span class="footer__name">Dragon Gaming Platforms</span>
       </div>
-      <p class="footer__copy">&copy; 2026 Dragon Gaming Platforms. All rights reserved.</p>
+      <p class="footer__copy">© 2026 Dragon Gaming Platforms. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- ============ JS: game data + engine ============ -->
+  <!-- JS: data + engine -->
   <script src="games.js"></script>
 </body>
 </html>
