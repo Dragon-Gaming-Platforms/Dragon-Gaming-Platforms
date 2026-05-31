@@ -109,24 +109,10 @@ const GAMES_DATA = [
   const $ = (s) => document.querySelector(s);
   const $$ = (s) => document.querySelectorAll(s);
 
-  // ---- Elements ----
-  const navbar         = $('#navbar');
-  const navLinks       = $('#navLinks');
-  const hamburger      = $('#hamburger');
-  const cloakBtn       = $('#cloakBtn');
-  const dropdownRoot   = $('#dropdownRoot');
-  const dropdownToggle = $('#dropdownToggle');
-  const browseBtn      = $('#browseGamesBtn');
-  const mainContainer  = $('#mainContent');
-  const downloadRoot   = $('#downloadRoot');
-  const settingsRoot   = $('#settingsRoot');
-  const loadingEl      = $('#loadingState');
-  const gameViewer     = $('#gameViewer');
-  const viewerBackdrop = $('#viewerBackdrop');
-  const viewerClose    = $('#viewerClose');
-  const viewerIframe   = $('#viewerIframe');
-  const viewerLoading  = $('#viewerLoading');
-  const viewerGameName = $('#viewerGameName');
+  // ---- Elements (cached after DOM ready) ----
+  let navbar, navLinks, hamburger, cloakBtn, dropdownRoot, dropdownToggle;
+  let browseBtn, mainContainer, downloadRoot, settingsRoot, loadingEl;
+  let gameViewer, viewerBackdrop, viewerClose, viewerIframe, viewerLoading, viewerGameName;
 
   // ---- Eruda State ----
   let erudaLoaded = false;
@@ -143,38 +129,48 @@ const GAMES_DATA = [
   function destroyEruda() { if (typeof eruda !== 'undefined' && eruda._isInit) { eruda.destroy(); erudaLoaded = false; } }
   function toggleEruda(enabled) { setErudaEnabled(enabled); if (enabled) initEruda(); else destroyEruda(); }
 
-  // ---- Cloaked Tab ----
-  if (cloakBtn) {
-    cloakBtn.addEventListener('click', () => {
-      const win = window.open('about:blank', '_blank');
-      if (!win) return; // popup blocked
-      
-      fetch('./singlefile.html')
-        .then(res => {
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          return res.text();
-        })
-        .then(html => {
-          win.document.open();
-          win.document.write(html);
-          win.document.close();
-        })
-        .catch(() => {
-          // If fetch fails (e.g. file doesn't exist), just leave the blank tab open
-        });
-    });
-  }
-
   // ---- Scroll reveal ----
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.15 });
 
-  // ---- Navbar ----
-  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 40));
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  dropdownToggle.addEventListener('click', (e) => { e.preventDefault(); if (innerWidth <= 768) dropdownRoot.classList.toggle('open'); });
-  browseBtn.addEventListener('click', (e) => { e.preventDefault(); $('#categoriesRoot').scrollIntoView({ behavior: 'smooth' }); });
+  // ---- Smooth Scroll Helper ----
+  function scrollToId(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ---- Cloaked Tab ----
+  function handleCloakClick() {
+    const win = window.open('about:blank', '_blank');
+    if (!win) {
+      alert('Popup blocked! Please allow popups for this site.');
+      return;
+    }
+    
+    fetch('./singlefile.html')
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.text();
+      })
+      .then(html => {
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+      })
+      .catch(err => {
+        console.error('Cloak fetch failed:', err);
+        // Inject a simple fallback message so the user knows something happened
+        win.document.body.innerHTML = `
+          <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#050505;color:#e60012;font-family:sans-serif;text-align:center;">
+            <div>
+              <h2>🛡️ Cloaked Tab Active</h2>
+              <p style="color:#aaa;">singlefile.html not found or failed to load.</p>
+              <p style="color:#666;font-size:0.8rem;">Check console for details.</p>
+            </div>
+          </div>`;
+      });
+  }
 
   // ---- Viewer ----
   function openGame(name, path) {
@@ -204,9 +200,6 @@ const GAMES_DATA = [
     document.body.style.overflow = '';
     setTimeout(() => { viewerIframe.src = ''; viewerLoading.classList.add('hidden'); }, 500);
   }
-  viewerClose.addEventListener('click', closeGame);
-  viewerBackdrop.addEventListener('click', closeGame);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && gameViewer.classList.contains('active')) closeGame(); });
 
   // ---- Build HTML ----
   function cardHTML(item, i) {
@@ -338,7 +331,70 @@ const GAMES_DATA = [
     if (btnSingle) { btnSingle.href = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${release.tag_name}/singlefile.html`; btnSingle.classList.remove('disabled'); }
   }
 
-  // ---- Render ----
+  // ---- Render & Init ----
+  function init() {
+    // Cache elements
+    navbar         = $('#navbar');
+    navLinks       = $('#navLinks');
+    hamburger      = $('#hamburger');
+    cloakBtn       = $('#cloakBtn');
+    dropdownRoot   = $('#dropdownRoot');
+    dropdownToggle = $('#dropdownToggle');
+    browseBtn      = $('#browseGamesBtn');
+    mainContainer  = $('#mainContent');
+    downloadRoot   = $('#downloadRoot');
+    settingsRoot   = $('#settingsRoot');
+    loadingEl      = $('#loadingState');
+    gameViewer     = $('#gameViewer');
+    viewerBackdrop = $('#viewerBackdrop');
+    viewerClose    = $('#viewerClose');
+    viewerIframe   = $('#viewerIframe');
+    viewerLoading  = $('#viewerLoading');
+    viewerGameName = $('#viewerGameName');
+
+    // Navbar scroll
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 40));
+
+    // Hamburger
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    // Mobile dropdown toggle
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (innerWidth <= 768) dropdownRoot.classList.toggle('open');
+    });
+
+    // Cloak button
+    if (cloakBtn) cloakBtn.addEventListener('click', handleCloakClick);
+
+    // Section links (Download / Settings)
+    $$('.nav-section-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('href').substring(1);
+        scrollToId(target);
+        // Close mobile menu if open
+        navLinks.classList.remove('open');
+        dropdownRoot.classList.remove('open');
+      });
+    });
+
+    // Browse CTA
+    browseBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToId('category-games');
+    });
+
+    // Viewer close
+    viewerClose.addEventListener('click', closeGame);
+    viewerBackdrop.addEventListener('click', closeGame);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && gameViewer.classList.contains('active')) closeGame(); });
+
+    // Render content
+    render();
+  }
+
   function render() {
     const grouped = {};
     CATEGORIES.forEach(c => grouped[c.id] = []);
@@ -361,6 +417,10 @@ const GAMES_DATA = [
     if (loadingEl) loadingEl.style.display = 'none';
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
-  else render();
+  // Start when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
