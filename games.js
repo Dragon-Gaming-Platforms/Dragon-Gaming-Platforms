@@ -1,282 +1,164 @@
-/* ============================
-   GAME DATA
-   Category must be: "games" | "emulators" | "browsers"
-   Path is relative to repo root (e.g. "games/my-game/")
-   ============================ */
+/* ================================================================
+   GAME DATA — edit only this array
+   category: "games" | "emulators" | "browsers"
+   path: relative to repo root, e.g. "games/my-game/"
+   ================================================================ */
 const GAMES_DATA = [
-  {  
-    "name": "Eaglercraft 1.12.2",
-     "path": "./games/singlefiles/Eaglercraft-1.12.2.html",
-     "category": "games" 
-  },
-  { 
-    "name": "Recoil",
-    "path": "./games/singlefiles/Recoil.html",
-    "category": "games" 
-  },
-  {
-    "name": "Vex 8",
-    "path": "./games/singlefiles/Vex-8.html",
-    "category": "games"
-  },
-  { 
-    "name": "Drive Mad",
-    "path": "./games/singlefiles/Drive-Mad.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Bloons TD4", 
-    "path": "./games/singlefiles/Bloons-TD4.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Escape Road", 
-    "path": "./games/singlefiles/Escape-Road.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Hole.io", 
-    "path": "./games/singlefiles/Hole.io.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Eaglercraft 1.8.8", 
-    "path": "./games/singlefiles/Eaglercraft-1.8.8.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Borg Games", 
-    "path": "./games/singlefiles/Borg-Games.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Anura OS", 
-    "path": "./emulators/anuraOS.html", 
-    "category": "emulators" 
-  },
-  { 
-    "name": "GUST", 
-    "path": "./browsers/GUST.html", 
-    "category": "browsers" 
-  },
-  { 
-    "name": "Scramjet", 
-    "path": "./browsers/Scramjet.html", 
-    "category": "browsers" 
-  },
-  { 
-    "name": "Moto x3m 2", 
-    "path": "./games/singlefiles/Moto-x3m-2.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Snowrider 3D", 
-    "path": "./games/singlefiles/Snowrider.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Dreadhead Parkour", 
-    "path": "./games/singlefiles/dreadheadparkour.htm", 
-    "category": "games" 
-  },
-  { 
-    "name": "HexGL", 
-    "path": "./games/HexGL/index.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Balatro", 
-    "path": "./games/singlefiles/Balatro.html", 
-    "category": "games" 
-  }
+  { name: "Recoil",       path: "games/singlefiles/Recoil.html", category: "games" },
+  { name: "HexGL",        path: "games/HexGL/index.html",        category: "games" }
 ];
 
-/* ============================
-   CATEGORY CONFIG
-   ============================ */
-const CATEGORIES = [
-  { id: "games",      label: "Games",     icon: "\u{1F3AE}", iconChar: "\u{1F3AE}" },
-  { id: "emulators",  label: "Emulators", icon: "\u{1F579}", iconChar: "\u{1F579}" },
-  { id: "browsers",   label: "Browsers",  icon: "\u{1F310}", iconChar: "\u{1F310}" }
-];
-
-/* ============================
-   RENDER ENGINE
-   ============================ */
+/* ================================================================
+   ENGINE
+   ================================================================ */
 (function () {
-  'use strict';
+  const CATEGORIES = [
+    { id: "games",      label: "Games",     icon: "🎮" },
+    { id: "emulators",  label: "Emulators", icon: "🕹️" },
+    { id: "browsers",   label: "Browsers",  icon: "🌐" }
+  ];
 
-  const BASE_URL = 'https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/';
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => document.querySelectorAll(s);
 
   // ---- Elements ----
-  const navbar          = document.getElementById('navbar');
-  const navLinks        = document.getElementById('navLinks');
-  const hamburger       = document.getElementById('hamburger');
-  const dropdownRoot    = document.getElementById('dropdownRoot');
-  const dropdownToggle  = document.getElementById('dropdownToggle');
-  const browseBtn       = document.getElementById('browseGamesBtn');
-  const mainContainer   = document.getElementById('mainContent');
-  const loadingEl       = document.getElementById('loadingState');
-  const gameViewer      = document.getElementById('gameViewer');
-  const viewerBackdrop  = document.getElementById('viewerBackdrop');
-  const viewerWindow    = document.getElementById('viewerWindow');
-  const viewerClose     = document.getElementById('viewerClose');
-  const viewerIframe    = document.getElementById('viewerIframe');
-  const viewerLoading   = document.getElementById('viewerLoading');
-  const viewerGameName  = document.getElementById('viewerGameName');
+  const navbar         = $('#navbar');
+  const navLinks       = $('#navLinks');
+  const hamburger      = $('#hamburger');
+  const dropdownRoot   = $('#dropdownRoot');
+  const dropdownToggle = $('#dropdownToggle');
+  const browseBtn      = $('#browseGamesBtn');
+  const mainContainer  = $('#mainContent');
+  const loadingEl      = $('#loadingState');
+  const gameViewer     = $('#gameViewer');
+  const viewerBackdrop = $('#viewerBackdrop');
+  const viewerClose    = $('#viewerClose');
+  const viewerIframe   = $('#viewerIframe');
+  const viewerLoading  = $('#viewerLoading');
+  const viewerGameName = $('#viewerGameName');
 
-  // ---- Scroll reveal observer ----
+  // ---- Scroll reveal ----
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.15 });
 
   // ---- Navbar scroll effect ----
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  });
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 40));
 
-  // ---- Mobile hamburger toggle ----
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
+  // ---- Hamburger ----
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
   // ---- Mobile dropdown toggle ----
   dropdownToggle.addEventListener('click', (e) => {
     e.preventDefault();
-    // On mobile (hamburger visible), toggle class; desktop uses CSS :hover
-    if (window.innerWidth <= 768) {
-      dropdownRoot.classList.toggle('open');
-    }
+    if (innerWidth <= 768) dropdownRoot.classList.toggle('open');
   });
 
-  // ---- "Browse All" CTA scrolls smoothly ----
+  // ---- Browse CTA ----
   browseBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    document.getElementById('categoriesRoot').scrollIntoView({ behavior: 'smooth' });
+    $('#categoriesRoot').scrollIntoView({ behavior: 'smooth' });
   });
 
   // ---- Viewer open / close ----
-  function openGameViewer(name, path) {
-    const cleanPath = path.replace(/^\//, '').replace(/^\.\/?/, '');
-    const gameUrl   = BASE_URL + cleanPath;
-
+  function openGame(name, path) {
     viewerGameName.textContent = name;
-    viewerIframe.src = '';
     viewerLoading.classList.remove('hidden');
+    viewerIframe.src = ''; // Clear previous source
 
     requestAnimationFrame(() => {
       gameViewer.classList.add('active');
       document.body.style.overflow = 'hidden';
 
       setTimeout(() => {
-        viewerIframe.src = gameUrl;
-      }, 200);
+        viewerIframe.src = path;
+
+        const revealGame = () => {
+          if (!viewerLoading.classList.contains('hidden')) {
+            viewerLoading.classList.add('hidden');
+          }
+        };
+
+        // Since games are on the same origin, we can inspect the iframe's document.
+        // We wait for the iframe to load, then check its readyState.
+        // This is faster than waiting for all external assets (images/scripts) to finish.
+        viewerIframe.addEventListener('load', function onIframeLoad() {
+          viewerIframe.removeEventListener('load', onIframeLoad);
+          try {
+            const innerDoc = viewerIframe.contentDocument || viewerIframe.contentWindow.document;
+            if (innerDoc.readyState === 'complete' || innerDoc.readyState === 'interactive') {
+              revealGame();
+            } else {
+              innerDoc.addEventListener('DOMContentLoaded', revealGame, { once: true });
+            }
+          } catch (e) {
+            // Fallback to timeout if cross-origin
+          }
+        });
+
+        // Safety timeout: If the game hangs on external assets (like CORS failures),
+        // show the game anyway after 3.5 seconds so the user isn't stuck on "Launching".
+        setTimeout(revealGame, 3500);
+      }, 100);
     });
   }
 
-  function closeGameViewer() {
+  function closeGame() {
     gameViewer.classList.remove('active');
     document.body.style.overflow = '';
-
-    setTimeout(() => {
-      viewerIframe.src = '';
-      viewerLoading.classList.add('hidden');
-    }, 500);
+    // Clear src after animation to stop audio/processing
+    setTimeout(() => { viewerIframe.src = ''; viewerLoading.classList.add('hidden'); }, 500);
   }
 
-  viewerClose.addEventListener('click', closeGameViewer);
-  viewerBackdrop.addEventListener('click', closeGameViewer);
+  viewerClose.addEventListener('click', closeGame);
+  viewerBackdrop.addEventListener('click', closeGame);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && gameViewer.classList.contains('active')) closeGame(); });
 
-  // ---- Escape to close viewer ----
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && gameViewer.classList.contains('active')) {
-      closeGameViewer();
-    }
-  });
-
-  // ---- Build card HTML ----
-  function buildCard(item, delayIndex) {
-    const iconMap = { games: '\u{1F3AE}', emulators: '\u{1F579}', browsers: '\u{1F310}' };
-    const icon = iconMap[item.category] || '\u{1F3AE}';
-
-    return `
-      <div class="game-card fade-in" style="transition-delay:${delayIndex * 0.08}s"
-           data-name="${escapeHTML(item.name)}"
-           data-path="${escapeHTML(item.path)}">
-        <div class="game-card__image">
-          <span class="game-card__placeholder-icon">${icon}</span>
-        </div>
-        <div class="game-card__body">
-          <h3 class="game-card__name">${escapeHTML(item.name)}</h3>
-          <div class="game-card__path">${escapeHTML(item.path)}</div>
-          <div class="game-card__status">
-            <span class="game-card__status-dot"></span>
-            <span class="game-card__status-text">Path Ready</span>
-          </div>
-        </div>
-      </div>`;
+  // ---- Build HTML ----
+  function cardHTML(item, i) {
+    const icons = { games: "🎮", emulators: "🕹️", browsers: "🌐" };
+    return `<div class="game-card fade-in" style="transition-delay:${i*0.08}s" data-name="${esc(item.name)}" data-path="${esc(item.path)}">
+      <div class="game-card__image"><span class="game-card__placeholder-icon">${icons[item.category]||"🎮"}</span></div>
+      <div class="game-card__body">
+        <h3 class="game-card__name">${esc(item.name)}</h3>
+        <div class="game-card__path">${esc(item.path)}</div>
+        <div class="game-card__status"><span class="game-card__status-dot"></span><span class="game-card__status-text">Ready</span></div>
+      </div>
+    </div>`;
   }
 
-  // ---- Build a category section ----
-  function buildCategorySection(cat, items) {
-    const cards = items.map((item, i) => buildCard(item, i)).join('');
-    const count = items.length;
-
-    return `
-      <section class="category-section fade-in" id="category-${cat.id}">
-        <div class="container">
-          <div class="category-section__header">
-            <span class="category-section__icon">${cat.iconChar}</span>
-            <h2 class="category-section__title">${escapeHTML(cat.label)}</h2>
-            <span class="category-section__count">${count} ${count === 1 ? 'item' : 'items'}</span>
-          </div>
-          <div class="games-grid">${cards}</div>
+  function sectionHTML(cat, items) {
+    const cards = items.map((g,i) => cardHTML(g,i)).join('');
+    return `<section class="category-section fade-in" id="category-${cat.id}">
+      <div class="container">
+        <div class="category-section__header">
+          <span class="category-section__icon">${cat.icon}</span>
+          <h2 class="category-section__title">${cat.label}</h2>
+          <span class="category-section__count">${items.length} ${items.length===1?'item':'items'}</span>
         </div>
-      </section>`;
+        <div class="games-grid">${cards}</div>
+      </div>
+    </section>`;
   }
 
-  // ---- Render everything ----
-  function renderAll() {
+  function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+  // ---- Render ----
+  function render() {
     const grouped = {};
-    CATEGORIES.forEach(cat => { grouped[cat.id] = []; });
-    GAMES_DATA.forEach(item => {
-      if (grouped[item.category]) grouped[item.category].push(item);
+    CATEGORIES.forEach(c => grouped[c.id] = []);
+    GAMES_DATA.forEach(g => { if (grouped[g.category]) grouped[g.category].push(g); });
+
+    mainContainer.innerHTML = CATEGORIES.map(c => sectionHTML(c, grouped[c.id])).join('');
+    $$('.fade-in').forEach(el => observer.observe(el));
+
+    $$('.game-card').forEach(card => {
+      card.addEventListener('click', () => openGame(card.dataset.name, card.dataset.path));
     });
 
-    const sections = CATEGORIES
-      .map(cat => buildCategorySection(cat, grouped[cat.id]))
-      .join('');
-
-    mainContainer.innerHTML = sections;
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // Attach card click handlers
-    document.querySelectorAll('.game-card').forEach(card => {
-      card.addEventListener('click', () => {
-        openGameViewer(card.dataset.name, card.dataset.path);
-      });
-    });
-
-    // Hide loading spinner
     if (loadingEl) loadingEl.style.display = 'none';
   }
 
-  // ---- Utility ----
-  function escapeHTML(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  // ---- Init ----
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderAll);
-  } else {
-    renderAll();
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
+  else render();
 })();

@@ -1,1 +1,5 @@
-
+# ingnore ide config files 
+.vscode/
+.cursor/
+# This file is for my reference so it does not need to be added to the repository.
+games.json
