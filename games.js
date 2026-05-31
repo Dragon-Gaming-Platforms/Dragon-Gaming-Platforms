@@ -3,9 +3,92 @@
    category: "games" | "emulators" | "browsers"
    path: relative to repo root, e.g. "games/my-game/"
    ================================================================ */
-const GAMES_DATA = [
-  { name: "Recoil",       path: "games/singlefiles/Recoil.html", category: "games" },
-  { name: "HexGL",        path: "games/HexGL/index.html",        category: "games" }
+const GAMES_DATA = [ 
+  {  
+    "name": "Eaglercraft 1.12.2",
+     "path": "./games/singlefiles/Eaglercraft-1.12.2.html",
+     "category": "games" 
+  },
+  { 
+    "name": "Recoil",
+    "path": "./games/singlefiles/Recoil.html",
+    "category": "games" 
+  },
+  {
+    "name": "Vex 8",
+    "path": "./games/singlefiles/Vex-8.html",
+    "category": "games"
+  },
+  { 
+    "name": "Drive Mad",
+    "path": "./games/singlefiles/Drive-Mad.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Bloons TD4", 
+    "path": "./games/singlefiles/Bloons-TD4.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Escape Road", 
+    "path": "./games/singlefiles/Escape-Road.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Hole.io", 
+    "path": "./games/singlefiles/Hole.io.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Eaglercraft 1.8.8", 
+    "path": "./games/singlefiles/Eaglercraft-1.8.8.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Borg Games", 
+    "path": "./games/singlefiles/Borg-Games.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Anura OS", 
+    "path": "./emulators/anuraOS.html", 
+    "category": "emulators" 
+  },
+  { 
+    "name": "GUST", 
+    "path": "./browsers/GUST.html", 
+    "category": "browsers" 
+  },
+  { 
+    "name": "Scramjet", 
+    "path": "./browsers/Scramjet.html", 
+    "category": "browsers" 
+  },
+  { 
+    "name": "Moto x3m 2", 
+    "path": "./games/singlefiles/Moto-x3m-2.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Snowrider 3D", 
+    "path": "./games/singlefiles/Snowrider.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Dreadhead Parkour", 
+    "path": "./games/singlefiles/dreadheadparkour.htm", 
+    "category": "games" 
+  },
+  { 
+    "name": "HexGL", 
+    "path": "./games/HexGL/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Balatro", 
+    "path": "./games/singlefiles/Balatro.html", 
+    "category": "games" 
+  }
 ];
 
 /* ================================================================
