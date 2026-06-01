@@ -11,10 +11,7 @@
 /* ============================
    CSS RESET & VARIABLES
    ============================ */
-*,
-*::before,
-*::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
   --red-primary: #e60012;
   --red-bright: #ff1a2e;
@@ -34,232 +31,132 @@
   --t-fast: 0.2s ease;
   --t-med: 0.35s ease;
 }
-
 html { scroll-behavior: smooth; }
-
-body {
-  font-family: var(--font-body);
-  background-color: var(--bg-darkest);
-  color: var(--text-primary);
-  min-height: 100vh;
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-
-/* ---------- Animated BG ---------- */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(139,0,0,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(230,0,18,0.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 100%, rgba(139,0,0,0.06) 0%, transparent 60%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    radial-gradient(1px 1px at 10% 20%, rgba(255,0,51,0.3), transparent),
-    radial-gradient(1px 1px at 30% 70%, rgba(255,0,51,0.2), transparent),
-    radial-gradient(1px 1px at 50% 40%, rgba(255,26,46,0.3), transparent),
-    radial-gradient(1px 1px at 70% 80%, rgba(255,0,51,0.2), transparent),
-    radial-gradient(1px 1px at 90% 30%, rgba(255,0,51,0.3), transparent),
-    radial-gradient(1px 1px at 15% 90%, rgba(255,26,46,0.2), transparent),
-    radial-gradient(1px 1px at 60% 10%, rgba(255,0,51,0.3), transparent),
-    radial-gradient(1px 1px at 85% 55%, rgba(255,26,46,0.2), transparent),
-    radial-gradient(1px 1px at 45% 60%, rgba(255,0,51,0.2), transparent),
-    radial-gradient(1px 1px at 75% 15%, rgba(255,0,51,0.3), transparent);
-  animation: particlesFloat 30s linear infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-
-@keyframes particlesFloat {
-  0%, 100% { transform: translateY(0); opacity: 0.5; }
-  50% { opacity: 0.8; }
-  100% { transform: translateY(-100px); opacity: 0.5; }
-}
-
-/* ---------- Scrollbar ---------- */
+body { font-family: var(--font-body); background-color: var(--bg-darkest); color: var(--text-primary); min-height: 100vh; overflow-x: hidden; line-height: 1.6; }
+body::before { content: ''; position: fixed; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(139,0,0,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(230,0,18,0.05) 0%, transparent 50%), radial-gradient(ellipse at 50% 100%, rgba(139,0,0,0.06) 0%, transparent 60%); pointer-events: none; z-index: 0; }
+body::after { content: ''; position: fixed; inset: 0; background-image: radial-gradient(1px 1px at 10% 20%, rgba(255,0,51,0.3), transparent), radial-gradient(1px 1px at 30% 70%, rgba(255,0,51,0.2), transparent), radial-gradient(1px 1px at 50% 40%, rgba(255,26,46,0.3), transparent), radial-gradient(1px 1px at 70% 80%, rgba(255,0,51,0.2), transparent), radial-gradient(1px 1px at 90% 30%, rgba(255,0,51,0.3), transparent), radial-gradient(1px 1px at 15% 90%, rgba(255,26,46,0.2), transparent), radial-gradient(1px 1px at 60% 10%, rgba(255,0,51,0.3), transparent), radial-gradient(1px 1px at 85% 55%, rgba(255,26,46,0.2), transparent), radial-gradient(1px 1px at 45% 60%, rgba(255,0,51,0.2), transparent), radial-gradient(1px 1px at 75% 15%, rgba(255,0,51,0.3), transparent); animation: particlesFloat 30s linear infinite; pointer-events: none; z-index: 0; }
+@keyframes particlesFloat { 0%, 100% { transform: translateY(0); opacity: 0.5; } 50% { opacity: 0.8; } 100% { transform: translateY(-100px); opacity: 0.5; } }
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-darkest); }
 ::-webkit-scrollbar-thumb { background: var(--red-dark); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--red-primary); }
-
-/* ---------- Utility ---------- */
 .container { max-width: 1300px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
-/* ============================
-   NAVBAR
-   ============================ */
-.navbar {
-  position: fixed;
-  top: 0; left: 0; width: 100%;
-  z-index: 1000;
-  background: rgba(5,5,5,0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
-  transition: var(--t-med);
-}
-.navbar.scrolled {
-  border-bottom-color: var(--red-dim);
-  box-shadow: 0 2px 30px rgba(230,0,18,0.1);
-}
+/* NAVBAR */
+.navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(5,5,5,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-color); transition: var(--t-med); }
+.navbar.scrolled { border-bottom-color: var(--red-dim); box-shadow: 0 2px 30px rgba(230,0,18,0.1); }
 .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 80px; }
-
-.navbar__brand { display: flex; align-items: center; gap: 16px; text-decoration: none; }
-
-.navbar__logo {
-  height: 64px; width: 64px; object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(255,0,51,0.5));
-  transition: var(--t-med);
-}
-.navbar__brand:hover .navbar__logo {
-  filter: drop-shadow(0 0 18px rgba(255,0,51,0.8));
-  transform: scale(1.05);
-}
-
-.navbar__title {
-  font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700;
-  color: var(--text-primary); letter-spacing: 2px; text-transform: uppercase;
-}
+.navbar__cloak-btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-secondary); background: rgba(230,0,18,0.08); border: 1px solid rgba(230,0,18,0.25); padding: 8px 16px; border-radius: 4px; cursor: pointer; transition: var(--t-fast); flex-shrink: 0; }
+.navbar__cloak-btn:hover { color: var(--red-bright); background: rgba(230,0,18,0.15); border-color: var(--red-primary); box-shadow: 0 0 15px rgba(230,0,18,0.15); }
+.navbar__cloak-icon { font-size: 1rem; }
+.navbar__cloak-text { display: inline; }
+.navbar__brand { display: flex; align-items: center; gap: 16px; text-decoration: none; margin-left: 16px; }
+.navbar__logo { height: 64px; width: 64px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255,0,51,0.5)); transition: var(--t-med); }
+.navbar__brand:hover .navbar__logo { filter: drop-shadow(0 0 18px rgba(255,0,51,0.8)); transform: scale(1.05); }
+.navbar__title { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--text-primary); letter-spacing: 2px; text-transform: uppercase; }
 .navbar__title span { color: var(--red-bright); text-shadow: 0 0 10px rgba(255,0,51,0.5); }
-
-.navbar__links { display: flex; align-items: center; gap: 8px; list-style: none; }
-
-.navbar__links a {
-  font-family: var(--font-body); font-weight: 600; font-size: 1rem;
-  color: var(--text-secondary); text-decoration: none; text-transform: uppercase;
-  letter-spacing: 1.5px; padding: 8px 18px; border-radius: 4px;
-  transition: var(--t-fast); position: relative;
-}
-.navbar__links a::after {
-  content: ''; position: absolute; bottom: 2px; left: 50%;
-  width: 0; height: 2px; background: var(--red-bright);
-  box-shadow: 0 0 8px var(--red-glow); transition: var(--t-med); transform: translateX(-50%);
-}
+.navbar__links { display: flex; align-items: center; gap: 8px; list-style: none; margin-left: auto; }
+.navbar__links a { font-family: var(--font-body); font-weight: 600; font-size: 1rem; color: var(--text-secondary); text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px; padding: 8px 18px; border-radius: 4px; transition: var(--t-fast); position: relative; }
+.navbar__links a::after { content: ''; position: absolute; bottom: 2px; left: 50%; width: 0; height: 2px; background: var(--red-bright); box-shadow: 0 0 8px var(--red-glow); transition: var(--t-med); transform: translateX(-50%); }
 .navbar__links a:hover { color: var(--text-primary); }
 .navbar__links a:hover::after { width: 60%; }
 .navbar__links a.active { color: var(--red-bright); }
 .navbar__links a.active::after { width: 60%; }
-
-/* ---------- Dropdown ---------- */
 .navbar__dropdown { position: relative; }
 .navbar__dropdown-toggle { cursor: pointer; user-select: none; }
-
-.navbar__dropdown-menu {
-  display: none; position: absolute; top: 100%; left: 50%;
-  transform: translateX(-50%); list-style: none;
-  background: rgba(10,10,10,0.97); backdrop-filter: blur(20px);
-  border: 1px solid var(--border-color); border-radius: 6px;
-  min-width: 220px; padding: 8px 0; z-index: 1100;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-}
+.navbar__dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); list-style: none; background: rgba(10,10,10,0.97); backdrop-filter: blur(20px); border: 1px solid var(--border-color); border-radius: 6px; min-width: 200px; padding: 8px 0; z-index: 1100; box-shadow: 0 12px 40px rgba(0,0,0,0.6); }
 .navbar__dropdown-menu li { list-style: none; }
-.navbar__dropdown-menu a {
-  display: block; padding: 10px 20px; color: var(--text-secondary);
-  text-decoration: none; font-family: var(--font-body); font-weight: 600;
-  font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;
-  transition: var(--t-fast); border-radius: 0; white-space: nowrap;
-}
+.navbar__dropdown-menu a { display: block; padding: 10px 20px; color: var(--text-secondary); text-decoration: none; font-family: var(--font-body); font-weight: 600; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; transition: var(--t-fast); border-radius: 0; white-space: nowrap; }
 .navbar__dropdown-menu a::after { display: none; }
 .navbar__dropdown-menu a:hover { color: var(--text-primary); background: rgba(230,0,18,0.08); }
-.navbar__dropdown:hover .navbar__dropdown-menu { display: block; }
-.navbar__dropdown.open .navbar__dropdown-menu { display: block; }
-
-/* ---------- Hamburger ---------- */
+.navbar__dropdown:hover .navbar__dropdown-menu, .navbar__dropdown.open .navbar__dropdown-menu { display: block; }
 .navbar__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
 .navbar__hamburger span { display: block; width: 26px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: var(--t-fast); }
 
-/* ============================
-   HERO
-   ============================ */
-.hero {
-  position: relative; min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; padding-top: 80px; overflow: hidden;
-}
+/* HERO */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px; overflow: hidden; }
 .hero__bg { position: absolute; inset: 0; background: radial-gradient(circle at 50% 40%, rgba(139,0,0,0.15) 0%, transparent 65%); z-index: 0; }
 .hero__content { position: relative; z-index: 1; max-width: 800px; }
-
-.hero__logo {
-  width: 300px; height: 300px; object-fit: contain; margin-bottom: 32px;
-  filter: drop-shadow(0 0 30px rgba(255,0,51,0.4));
-  animation: heroLogoPulse 4s ease-in-out infinite;
-}
-@keyframes heroLogoPulse {
-  0%, 100% { filter: drop-shadow(0 0 30px rgba(255,0,51,0.4)); }
-  50% { filter: drop-shadow(0 0 50px rgba(255,0,51,0.7)); }
-}
-
-.hero__title {
-  font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 900; letter-spacing: 4px; text-transform: uppercase; line-height: 1.2; margin-bottom: 16px;
-}
+.hero__logo { width: 300px; height: 300px; object-fit: contain; margin-bottom: 32px; filter: drop-shadow(0 0 30px rgba(255,0,51,0.4)); animation: heroLogoPulse 4s ease-in-out infinite; }
+@keyframes heroLogoPulse { 0%, 100% { filter: drop-shadow(0 0 30px rgba(255,0,51,0.4)); } 50% { filter: drop-shadow(0 0 50px rgba(255,0,51,0.7)); } }
+.hero__title { font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: 4px; text-transform: uppercase; line-height: 1.2; margin-bottom: 16px; }
 .hero__title .highlight { color: var(--red-bright); text-shadow: 0 0 20px rgba(255,0,51,0.6), 0 0 60px rgba(255,0,51,0.3); }
-
 .hero__subtitle { font-family: var(--font-body); font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 400; color: var(--text-secondary); margin-bottom: 40px; letter-spacing: 1px; }
-
-.hero__cta {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--font-heading); font-size: 1rem; font-weight: 700;
-  letter-spacing: 3px; text-transform: uppercase; color: var(--text-primary);
-  background: linear-gradient(135deg, var(--red-dark), var(--red-primary));
-  border: 1px solid var(--red-primary); padding: 16px 40px; border-radius: 4px;
-  cursor: pointer; text-decoration: none; transition: var(--t-med);
-  box-shadow: 0 0 20px rgba(230,0,18,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
-}
-.hero__cta:hover {
-  background: linear-gradient(135deg, var(--red-primary), var(--red-bright));
-  box-shadow: 0 0 40px rgba(230,0,18,0.4), 0 0 80px rgba(230,0,18,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
-  transform: translateY(-2px);
-}
+.hero__cta { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--text-primary); background: linear-gradient(135deg, var(--red-dark), var(--red-primary)); border: 1px solid var(--red-primary); padding: 16px 40px; border-radius: 4px; cursor: pointer; text-decoration: none; transition: var(--t-med); box-shadow: 0 0 20px rgba(230,0,18,0.2), inset 0 1px 0 rgba(255,255,255,0.05); }
+.hero__cta:hover { background: linear-gradient(135deg, var(--red-primary), var(--red-bright)); box-shadow: 0 0 40px rgba(230,0,18,0.4), 0 0 80px rgba(230,0,18,0.15), inset 0 1px 0 rgba(255,255,255,0.1); transform: translateY(-2px); }
 .hero__line { width: 120px; height: 2px; margin: 0 auto 24px; background: linear-gradient(90deg, transparent, var(--red-bright), transparent); box-shadow: 0 0 12px var(--red-glow); }
 
-/* ============================
-   CATEGORY SECTION
-   ============================ */
+/* SECTIONS */
+.section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 36px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); }
+.section-icon { font-size: 1.6rem; }
+.section-title { font-family: var(--font-heading); font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-primary); }
+.section-count { font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; color: var(--text-dim); background: rgba(255,255,255,0.04); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 20px; letter-spacing: 1px; margin-left: auto; }
+
+/* CATEGORY */
 .category-section { padding: 80px 0 40px; position: relative; z-index: 1; }
 
-.category-section__header { display: flex; align-items: center; gap: 16px; margin-bottom: 36px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); }
-.category-section__icon { font-size: 1.6rem; }
-.category-section__title { font-family: var(--font-heading); font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-primary); }
-.category-section__count { font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; color: var(--text-dim); background: rgba(255,255,255,0.04); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 20px; letter-spacing: 1px; margin-left: auto; }
+/* DOWNLOAD */
+.download-section { padding: 80px 0 40px; position: relative; z-index: 1; }
+.download-versions { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+.version-box { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 28px; position: relative; overflow: hidden; }
+.version-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--red-dark), var(--red-bright)); }
+.version-box__label { font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+.version-box__value { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--text-primary); }
+.version-box__value.highlight { color: var(--red-bright); text-shadow: 0 0 10px rgba(255,0,51,0.3); }
+.version-box__loading { font-size: 1rem; color: var(--text-dim); }
+.download-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 48px; }
+.btn-download { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-primary); background: linear-gradient(135deg, var(--red-dark), var(--red-primary)); border: 1px solid var(--red-primary); padding: 14px 32px; border-radius: 4px; cursor: pointer; text-decoration: none; transition: var(--t-med); box-shadow: 0 0 15px rgba(230,0,18,0.15), inset 0 1px 0 rgba(255,255,255,0.05); }
+.btn-download:hover { background: linear-gradient(135deg, var(--red-primary), var(--red-bright)); box-shadow: 0 0 30px rgba(230,0,18,0.3), 0 0 60px rgba(230,0,18,0.1), inset 0 1px 0 rgba(255,255,255,0.1); transform: translateY(-2px); }
+.btn-download--secondary { background: transparent; border-color: var(--border-color); box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); }
+.btn-download--secondary:hover { background: rgba(230,0,18,0.08); border-color: var(--red-primary); box-shadow: 0 0 20px rgba(230,0,18,0.1), inset 0 1px 0 rgba(255,255,255,0.05); }
+.btn-download.disabled { opacity: 0.4; pointer-events: none; cursor: not-allowed; }
+.commit-log { border-top: 1px solid var(--border-color); padding-top: 32px; }
+.commit-log__title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 20px; }
+.commit-item { display: flex; align-items: flex-start; gap: 16px; padding: 14px 16px; border-left: 2px solid var(--border-color); transition: var(--t-fast); }
+.commit-item:hover { border-left-color: var(--red-primary); background: rgba(255,255,255,0.02); }
+.commit-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--red-dark); border: 2px solid var(--red-primary); flex-shrink: 0; margin-top: 6px; }
+.commit-info { flex: 1; min-width: 0; }
+.commit-msg { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; color: var(--text-primary); word-break: break-word; }
+.commit-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.commit-sha { font-family: 'Courier New', monospace; font-size: 0.75rem; color: var(--text-dim); text-decoration: none; transition: var(--t-fast); }
+.commit-sha:hover { color: var(--red-bright); }
+.commit-date { font-size: 0.8rem; color: var(--text-dim); }
+.commit-author { font-size: 0.8rem; color: var(--text-dim); }
+.commit-loading { text-align: center; padding: 32px; color: var(--text-dim); letter-spacing: 1px; }
 
-/* ============================
-   GAMES GRID
-   ============================ */
+/* SETTINGS */
+.settings-section { padding: 80px 0 40px; position: relative; z-index: 1; }
+.settings-item { display: flex; align-items: center; justify-content: space-between; padding: 24px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; max-width: 500px; }
+.settings-label { font-family: var(--font-body); font-size: 1.1rem; font-weight: 600; color: var(--text-primary); }
+.settings-desc { font-size: 0.85rem; color: var(--text-dim); margin-top: 4px; }
+.toggle-switch { position: relative; display: inline-block; width: 52px; height: 28px; flex-shrink: 0; }
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+.toggle-slider { position: absolute; cursor: pointer; inset: 0; background-color: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 28px; transition: var(--t-fast); }
+.toggle-slider::before { content: ""; position: absolute; height: 20px; width: 20px; left: 3px; bottom: 3px; background-color: var(--text-dim); border-radius: 50%; transition: var(--t-fast); }
+.toggle-switch input:checked + .toggle-slider { background-color: var(--red-primary); border-color: var(--red-bright); }
+.toggle-switch input:checked + .toggle-slider::before { transform: translateX(24px); background-color: #fff; }
+.save-manager { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.btn-save { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--text-primary); background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 4px; cursor: pointer; transition: var(--t-fast); }
+.btn-save:hover { background: rgba(230,0,18,0.1); border-color: var(--red-primary); }
+.btn-save--export { border-color: rgba(0, 200, 100, 0.3); }
+.btn-save--export:hover { border-color: #00c864; background: rgba(0, 200, 100, 0.1); }
+.btn-save--import { border-color: rgba(0, 140, 255, 0.3); }
+.btn-save--import:hover { border-color: #008cff; background: rgba(0, 140, 255, 0.1); }
+.btn-save input[type="file"] { display: none; }
+.save-status { margin-top: 12px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; min-height: 20px; transition: var(--t-fast); }
+.save-status.success { color: #00c864; }
+.save-status.error { color: #ff4444; }
+.save-status.info { color: var(--text-secondary); }
+
+/* GAMES GRID */
 .games-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
-
-.game-card {
-  background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px;
-  overflow: hidden; transition: var(--t-med); cursor: pointer; position: relative;
-}
-.game-card::before {
-  content: ''; position: absolute; inset: 0; border-radius: 8px; padding: 1px;
-  background: linear-gradient(135deg, transparent 40%, var(--red-dim) 100%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: var(--t-med);
-}
-.game-card:hover {
-  border-color: var(--red-dark); background: var(--bg-card-hover); transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 20px rgba(230,0,18,0.08);
-}
+.game-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: var(--t-med); cursor: pointer; position: relative; }
+.game-card::before { content: ''; position: absolute; inset: 0; border-radius: 8px; padding: 1px; background: linear-gradient(135deg, transparent 40%, var(--red-dim) 100%); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: var(--t-med); }
+.game-card:hover { border-color: var(--red-dark); background: var(--bg-card-hover); transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 20px rgba(230,0,18,0.08); }
 .game-card:hover::before { opacity: 1; }
-
-.game-card__image {
-  width: 100%; height: 180px; background: linear-gradient(135deg, var(--bg-darkest), var(--bg-dark));
-  display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
-}
+.game-card__image { width: 100%; height: 180px; background: linear-gradient(135deg, var(--bg-darkest), var(--bg-dark)); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
 .game-card__image::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; background: linear-gradient(to top, var(--bg-card), transparent); }
 .game-card__placeholder-icon { font-size: 3rem; opacity: 0.3; }
-
 .game-card__body { padding: 20px; }
 .game-card__name { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; color: var(--text-primary); }
 .game-card__path { font-family: 'Courier New', monospace; font-size: 0.8rem; color: var(--text-dim); background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 6px 10px; border-radius: 4px; word-break: break-all; margin-bottom: 12px; }
@@ -268,68 +165,47 @@ body::after {
 @keyframes statusPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 .game-card__status-text { color: var(--red-bright); }
 
-/* ============================
-   LOADING / ERROR
-   ============================ */
+/* LOADING / ERROR */
 .loading-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 0; gap: 24px; }
 .loading-state__spinner { width: 48px; height: 48px; border: 3px solid var(--border-color); border-top-color: var(--red-primary); border-radius: 50%; animation: spin 1s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .loading-state__text { font-family: var(--font-body); font-size: 1rem; color: var(--text-dim); letter-spacing: 2px; text-transform: uppercase; }
-
 .error-state { text-align: center; padding: 80px 24px; }
 .error-state__icon { font-size: 3rem; margin-bottom: 16px; }
 .error-state__message { font-family: var(--font-body); font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 8px; }
 .error-state__detail { font-family: 'Courier New', monospace; font-size: 0.85rem; color: var(--red-primary); background: rgba(230,0,18,0.05); border: 1px solid rgba(230,0,18,0.15); padding: 12px 20px; border-radius: 4px; display: inline-block; }
 
-/* ============================
-   FOOTER
-   ============================ */
+/* FOOTER */
 .footer { position: relative; z-index: 1; border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; }
 .footer__brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px; }
 .footer__logo { height: 40px; width: 40px; object-fit: contain; opacity: 0.6; }
 .footer__name { font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--text-dim); }
 .footer__copy { font-size: 0.85rem; color: var(--text-dim); }
 
-/* ============================
-   GAME VIEWER OVERLAY
-   ============================ */
-.game-viewer {
-  position: fixed; inset: 0; z-index: 9999;
-  display: flex; align-items: flex-end; justify-content: center;
-  pointer-events: none; visibility: hidden;
-}
+/* GAME VIEWER */
+.game-viewer { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: flex-end; justify-content: center; pointer-events: none; visibility: hidden; }
 .game-viewer.active { pointer-events: auto; visibility: visible; }
-
 .game-viewer__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0); transition: background 0.4s ease; }
 .game-viewer.active .game-viewer__backdrop { background: rgba(0,0,0,0.8); }
-
-.game-viewer__window {
-  position: relative; width: 100%; height: 100%;
-  background: var(--bg-darkest); border-top: 2px solid var(--red-primary);
-  box-shadow: 0 -10px 60px rgba(230,0,18,0.15);
-  transform: translateY(100%); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex; flex-direction: column;
-}
+.game-viewer__window { position: relative; width: 100%; height: 100%; background: var(--bg-darkest); border-top: 2px solid var(--red-primary); box-shadow: 0 -10px 60px rgba(230,0,18,0.15); transform: translateY(100%); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; }
 .game-viewer.active .game-viewer__window { transform: translateY(0); }
-
 .game-viewer__toolbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; background: var(--bg-dark); border-bottom: 1px solid var(--border-color); flex-shrink: 0; }
 .game-viewer__game-name { font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-primary); }
 .game-viewer__close { display: flex; align-items: center; gap: 8px; background: none; border: 1px solid var(--border-color); color: var(--text-secondary); font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 16px; border-radius: 4px; cursor: pointer; transition: var(--t-fast); }
 .game-viewer__close:hover { border-color: var(--red-primary); color: var(--red-bright); box-shadow: 0 0 12px rgba(230,0,18,0.2); }
 .game-viewer__close-icon { font-size: 1.1rem; line-height: 1; }
-
 .game-viewer__iframe-wrapper { flex: 1; position: relative; overflow: hidden; }
 .game-viewer__iframe { width: 100%; height: 100%; border: none; background: var(--bg-darkest); }
-
 .game-viewer__loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: var(--bg-darkest); z-index: 2; transition: opacity 0.3s ease; }
 .game-viewer__loading.hidden { opacity: 0; pointer-events: none; }
 .game-viewer__loading .loading-state__spinner { width: 40px; height: 40px; }
 .game-viewer__loading-text { font-family: var(--font-body); font-size: 0.9rem; color: var(--text-dim); letter-spacing: 2px; text-transform: uppercase; }
 
-/* ============================
-   RESPONSIVE
-   ============================ */
+/* RESPONSIVE */
 @media (max-width: 768px) {
+  .navbar__cloak-text { display: none; }
+  .navbar__cloak-btn { padding: 8px 12px; }
+  .navbar__brand { margin-left: 8px; }
   .navbar__links { display: none; position: absolute; top: 80px; left: 0; width: 100%; flex-direction: column; background: rgba(5,5,5,0.95); backdrop-filter: blur(20px); padding: 16px; border-bottom: 1px solid var(--border-color); gap: 4px; }
   .navbar__links.open { display: flex; }
   .navbar__links a { width: 100%; text-align: center; padding: 12px 18px; }
@@ -338,14 +214,14 @@ body::after {
   .games-grid { grid-template-columns: 1fr; }
   .game-viewer__toolbar { padding: 10px 16px; }
   .game-viewer__game-name { font-size: 0.75rem; }
-  .category-section__header { flex-wrap: wrap; }
-  .category-section__count { margin-left: 0; }
-
+  .section-header { flex-wrap: wrap; }
+  .section-count { margin-left: 0; }
   .navbar__dropdown-menu { position: static; transform: none; border: none; box-shadow: none; background: transparent; padding: 0; min-width: 0; }
   .navbar__dropdown-menu a { padding: 10px 0; font-size: 1rem; }
+  .download-versions { grid-template-columns: 1fr; }
+  .download-actions { flex-direction: column; }
+  .btn-download { width: 100%; justify-content: center; }
 }
-
-/* ---------- Scroll reveal ---------- */
 .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
@@ -355,22 +231,28 @@ body::after {
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container">
+      <button class="navbar__cloak-btn" id="cloakBtn" title="Open in Cloaked Tab">
+        <span class="navbar__cloak-icon">🛡️</span>
+        <span class="navbar__cloak-text">Cloaked Tab</span>
+      </button>
       <a href="#" class="navbar__brand">
         <img class="navbar__logo" src="https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png" alt="Dragon Gaming Platforms" />
         <div class="navbar__title"><span>Dragon</span> Gaming</div>
       </a>
-      
       <ul class="navbar__links" id="navLinks">
         <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#category-games">Games</a></li>
         <li><a href="#category-browsers">Browsers</a></li>
         <li><a href="#category-emulators">Emulators</a></li>
-        <li><a href="#" id="navDownload">Download</a></li>
+        <li class="navbar__dropdown" id="dropdownRoot">
+          <a href="#" class="navbar__dropdown-toggle" id="dropdownToggle">More ▾</a>
+          <ul class="navbar__dropdown-menu" id="dropdownMenu">
+            <li><a href="#download" class="nav-section-link">Download</a></li>
+            <li><a href="#settings" class="nav-section-link">Settings</a></li>
+          </ul>
+        </li>
       </ul>
-
-      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
@@ -386,7 +268,7 @@ body::after {
     </div>
   </section>
 
-  <!-- CATEGORIES (rendered by games.js) -->
+  <!-- MAIN CONTENT -->
   <div id="categoriesRoot">
     <div class="loading-state" id="loadingState">
       <div class="loading-state__spinner"></div>
@@ -394,24 +276,23 @@ body::after {
     </div>
   </div>
   <div id="mainContent"></div>
+  <div id="downloadRoot"></div>
+  <div id="settingsRoot"></div>
 
-  <!-- GAME VIEWER OVERLAY -->
+  <!-- GAME VIEWER -->
   <div class="game-viewer" id="gameViewer">
     <div class="game-viewer__backdrop" id="viewerBackdrop"></div>
     <div class="game-viewer__window" id="viewerWindow">
       <div class="game-viewer__toolbar">
         <span class="game-viewer__game-name" id="viewerGameName">—</span>
-        <button class="game-viewer__close" id="viewerClose">
-          <span class="game-viewer__close-icon">✕</span> Close
-        </button>
+        <button class="game-viewer__close" id="viewerClose"><span class="game-viewer__close-icon">✕</span> Close</button>
       </div>
       <div class="game-viewer__iframe-wrapper">
         <div class="game-viewer__loading" id="viewerLoading">
           <div class="loading-state__spinner"></div>
           <span class="game-viewer__loading-text">Launching…</span>
         </div>
-        <iframe class="game-viewer__iframe" id="viewerIframe" title="Game" loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="game-viewer__iframe" id="viewerIframe" title="Game" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -427,99 +308,14 @@ body::after {
     </div>
   </footer>
 
-  <!-- JS: data + engine -->
+  <!-- JS ENGINE -->
   <script>
 /* ================================================================
-   GAME DATA — edit only this array
-   category: "games" | "emulators" | "browsers"
-   path: relative to repo root, e.g. "games/my-game/"
+   GAME DATA — Absolute paths for standalone use
    ================================================================ */
-const GAMES_DATA = [ 
-  {  
-    "name": "Eaglercraft 1.12.2",
-     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html",
-     "category": "games" 
-  },
-  { 
-    "name": "Recoil",
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Recoil.html",
-    "category": "games" 
-  },
-  {
-    "name": "Vex 8",
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Vex-8.html",
-    "category": "games"
-  },
-  { 
-    "name": "Drive Mad",
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Drive-Mad.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Bloons TD4", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Bloons-TD4.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Escape Road", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Escape-Road.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Hole.io", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Hole.io.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Eaglercraft 1.8.8", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Borg Games", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Borg-Games.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Anura OS", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/emulators/anuraOS.html", 
-    "category": "emulators" 
-  },
-  { 
-    "name": "GUST", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/GUST.html", 
-    "category": "browsers" 
-  },
-  { 
-    "name": "Scramjet", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/Scramjet.html", 
-    "category": "browsers" 
-  },
-  { 
-    "name": "Moto x3m 2", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Moto-x3m-2.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Snowrider 3D", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Snowrider.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Dreadhead Parkour", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/dreadheadparkour.htm", 
-    "category": "games" 
-  },
-  { 
-    "name": "HexGL", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/HexGL/index.html", 
-    "category": "games" 
-  },
-  { 
-    "name": "Balatro", 
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Balatro.html", 
-    "category": "games" 
-  }
+const GAMES_DATA = [
+  { name: "Recoil",       path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Recoil.html", category: "games" },
+  { name: "HexGL",        path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/HexGL/index.html",        category: "games" }
 ];
 
 /* ================================================================
@@ -532,91 +328,123 @@ const GAMES_DATA = [
     { id: "browsers",   label: "Browsers",  icon: "🌐" }
   ];
 
+  const REPO_OWNER = 'Dragon-Gaming-Platforms';
+  const REPO_NAME  = 'Dragon-Gaming-Platforms';
+  const API_BASE   = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`;
+  const CURRENT_VER = 'v1.0.0';
+
   const $ = (s) => document.querySelector(s);
   const $$ = (s) => document.querySelectorAll(s);
 
-  // ---- Elements ----
-  const navbar         = $('#navbar');
-  const navLinks       = $('#navLinks');
-  const hamburger      = $('#hamburger');
-  const browseBtn      = $('#browseGamesBtn');
-  const mainContainer  = $('#mainContent');
-  const loadingEl      = $('#loadingState');
-  const gameViewer     = $('#gameViewer');
-  const viewerBackdrop = $('#viewerBackdrop');
-  const viewerClose    = $('#viewerClose');
-  const viewerIframe   = $('#viewerIframe');
-  const viewerLoading  = $('#viewerLoading');
-  const viewerGameName = $('#viewerGameName');
+  let navbar, navLinks, hamburger, cloakBtn, dropdownRoot, dropdownToggle;
+  let browseBtn, mainContainer, downloadRoot, settingsRoot, loadingEl;
+  let gameViewer, viewerBackdrop, viewerClose, viewerIframe, viewerLoading, viewerGameName;
+  let saveStatus;
 
-  // ---- Scroll reveal ----
+  // Eruda
+  let erudaLoaded = false;
+  const ERUDA_KEY = 'dgp_eruda_enabled';
+  function isErudaEnabled() { return localStorage.getItem(ERUDA_KEY) === 'true'; }
+  function setErudaEnabled(v) { localStorage.setItem(ERUDA_KEY, v ? 'true' : 'false'); }
+  function initEruda() {
+    if (erudaLoaded) return;
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/eruda';
+    s.onload = () => { if (typeof eruda !== 'undefined') { eruda.init(); erudaLoaded = true; } };
+    document.body.appendChild(s);
+  }
+  function destroyEruda() { if (typeof eruda !== 'undefined' && eruda._isInit) { eruda.destroy(); erudaLoaded = false; } }
+  function toggleEruda(enabled) { setErudaEnabled(enabled); if (enabled) initEruda(); else destroyEruda(); }
+
+  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.15 });
 
-  // ---- Navbar scroll effect ----
-  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 40));
+  function scrollToId(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 
-  // ---- Hamburger ----
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  // Save Manager
+  function showSaveStatus(msg, type) {
+    if (!saveStatus) return;
+    saveStatus.textContent = msg;
+    saveStatus.className = `save-status ${type}`;
+    setTimeout(() => { saveStatus.textContent = ''; saveStatus.className = 'save-status'; }, 4000);
+  }
 
-  // ---- Browse CTA ----
-  browseBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    $('#categoriesRoot').scrollIntoView({ behavior: 'smooth' });
-  });
+  function exportSaves() {
+    try {
+      const backup = { meta: { exported: new Date().toISOString(), origin: location.origin }, localStorage: {}, sessionStorage: {}, cookies: document.cookie };
+      for (let i = 0; i < localStorage.length; i++) { const key = localStorage.key(i); backup.localStorage[key] = localStorage.getItem(key); }
+      for (let i = 0; i < sessionStorage.length; i++) { const key = sessionStorage.key(i); backup.sessionStorage[key] = sessionStorage.getItem(key); }
+      const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = `dragon-saves-${new Date().toISOString().slice(0,10)}.json`;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+      showSaveStatus('✓ Saves exported successfully', 'success');
+    } catch (err) { console.error('Export failed:', err); showSaveStatus('✕ Export failed: ' + err.message, 'error'); }
+  }
 
-  // ---- Viewer open / close ----
+  function importSaves(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const backup = JSON.parse(e.target.result);
+        let count = 0;
+        if (backup.localStorage) { Object.entries(backup.localStorage).forEach(([k, v]) => { localStorage.setItem(k, v); count++; }); }
+        if (backup.sessionStorage) { Object.entries(backup.sessionStorage).forEach(([k, v]) => { sessionStorage.setItem(k, v); count++; }); }
+        if (backup.cookies) { backup.cookies.split(';').forEach(c => { const [name, ...rest] = c.trim().split('='); if (name && rest.length) { document.cookie = `${name}=${rest.join('=')}; path=/; max-age=31536000`; count++; } }); }
+        showSaveStatus(`✓ Restored ${count} items. Refresh to apply.`, 'success');
+        const erudaToggle = $('#erudaToggle');
+        if (erudaToggle) erudaToggle.checked = isErudaEnabled();
+      } catch (err) { console.error('Import failed:', err); showSaveStatus('✕ Import failed: Invalid file', 'error'); }
+    };
+    reader.readAsText(file);
+  }
+
+  // Cloaked Tab
+  function handleCloakClick() {
+    const win = window.open('about:blank', '_blank');
+    if (!win) { alert('Popup blocked! Please allow popups for this site.'); return; }
+    fetch('https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/singlefile.html')
+      .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.text(); })
+      .then(html => { win.document.open(); win.document.write(html); win.document.close(); })
+      .catch(err => {
+        console.error('Cloak fetch failed:', err);
+        win.document.body.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#050505;color:#e60012;font-family:sans-serif;text-align:center;"><div><h2>🛡️ Cloaked Tab Active</h2><p style="color:#aaa;">singlefile.html not found or failed to load.</p></div></div>`;
+      });
+  }
+
+  // Viewer
   function openGame(name, path) {
     viewerGameName.textContent = name;
     viewerLoading.classList.remove('hidden');
-    viewerIframe.src = ''; // Clear previous source
-
+    viewerIframe.src = '';
     requestAnimationFrame(() => {
       gameViewer.classList.add('active');
       document.body.style.overflow = 'hidden';
-
       setTimeout(() => {
         viewerIframe.src = path;
-
-        const revealGame = () => {
-          if (!viewerLoading.classList.contains('hidden')) {
-            viewerLoading.classList.add('hidden');
-          }
-        };
-
-        viewerIframe.addEventListener('load', function onIframeLoad() {
-          viewerIframe.removeEventListener('load', onIframeLoad);
+        const reveal = () => { if (!viewerLoading.classList.contains('hidden')) viewerLoading.classList.add('hidden'); };
+        viewerIframe.addEventListener('load', function onL() {
+          viewerIframe.removeEventListener('load', onL);
           try {
-            const innerDoc = viewerIframe.contentDocument || viewerIframe.contentWindow.document;
-            if (innerDoc.readyState === 'complete' || innerDoc.readyState === 'interactive') {
-              revealGame();
-            } else {
-              innerDoc.addEventListener('DOMContentLoaded', revealGame, { once: true });
-            }
-          } catch (e) {
-            // Fallback to timeout if cross-origin
-          }
+            const d = viewerIframe.contentDocument || viewerIframe.contentWindow.document;
+            if (d.readyState === 'complete' || d.readyState === 'interactive') reveal();
+            else d.addEventListener('DOMContentLoaded', reveal, { once: true });
+          } catch(e) {}
         });
-
-        // Safety timeout
-        setTimeout(revealGame, 3500);
+        setTimeout(reveal, 3500);
       }, 100);
     });
   }
-
   function closeGame() {
     gameViewer.classList.remove('active');
     document.body.style.overflow = '';
-    // Clear src after animation to stop audio/processing
     setTimeout(() => { viewerIframe.src = ''; viewerLoading.classList.add('hidden'); }, 500);
   }
 
-  viewerClose.addEventListener('click', closeGame);
-  viewerBackdrop.addEventListener('click', closeGame);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && gameViewer.classList.contains('active')) closeGame(); });
-
-  // ---- Build HTML ----
+  // HTML Builders
   function cardHTML(item, i) {
     const icons = { games: "🎮", emulators: "🕹️", browsers: "🌐" };
     return `<div class="game-card fade-in" style="transition-delay:${i*0.08}s" data-name="${esc(item.name)}" data-path="${esc(item.path)}">
@@ -625,44 +453,136 @@ const GAMES_DATA = [
         <h3 class="game-card__name">${esc(item.name)}</h3>
         <div class="game-card__path">${esc(item.path)}</div>
         <div class="game-card__status"><span class="game-card__status-dot"></span><span class="game-card__status-text">Ready</span></div>
-      </div>
-    </div>`;
+      </div></div>`;
   }
 
   function sectionHTML(cat, items) {
     const cards = items.map((g,i) => cardHTML(g,i)).join('');
     return `<section class="category-section fade-in" id="category-${cat.id}">
       <div class="container">
-        <div class="category-section__header">
-          <span class="category-section__icon">${cat.icon}</span>
-          <h2 class="category-section__title">${cat.label}</h2>
-          <span class="category-section__count">${items.length} ${items.length===1?'item':'items'}</span>
-        </div>
+        <div class="section-header"><span class="section-icon">${cat.icon}</span><h2 class="section-title">${cat.label}</h2><span class="section-count">${items.length} ${items.length===1?'item':'items'}</span></div>
         <div class="games-grid">${cards}</div>
-      </div>
-    </section>`;
+      </div></section>`;
+  }
+
+  function downloadHTML() {
+    return `<section class="download-section fade-in" id="download">
+      <div class="container">
+        <div class="section-header"><span class="section-icon">⬇️</span><h2 class="section-title">Download</h2></div>
+        <div class="download-versions">
+          <div class="version-box"><div class="version-box__label">Current Version</div><div class="version-box__value">${CURRENT_VER}</div></div>
+          <div class="version-box"><div class="version-box__label">Latest Version</div><div class="version-box__value" id="latestVersion"><span class="version-box__loading">Checking GitHub…</span></div></div>
+        </div>
+        <div class="download-actions" id="downloadActions">
+          <a href="#" class="btn-download disabled" id="btnZip" download>⬇ Download ZIP</a>
+          <a href="#" class="btn-download btn-download--secondary disabled" id="btnSingle" download>📄 Download Singlefile</a>
+        </div>
+        <div class="commit-log"><h3 class="commit-log__title">Recent Commits</h3><div id="commitLog"><div class="commit-loading">Loading commit history…</div></div></div>
+      </div></section>`;
+  }
+
+  function settingsHTML() {
+    const checked = isErudaEnabled() ? 'checked' : '';
+    return `<section class="settings-section fade-in" id="settings">
+      <div class="container">
+        <div class="section-header"><span class="section-icon">⚙️</span><h2 class="section-title">Settings</h2></div>
+        <div class="settings-item">
+          <div><div class="settings-label">Eruda Developer Console</div><div class="settings-desc">Inject a mobile-friendly dev tools console</div></div>
+          <label class="toggle-switch"><input type="checkbox" id="erudaToggle" ${checked}><span class="toggle-slider"></span></label>
+        </div>
+        <div class="settings-item" style="margin-top: 20px;">
+          <div><div class="settings-label">Save Data Manager</div><div class="settings-desc">Export or import localStorage, sessionStorage & cookies</div></div>
+        </div>
+        <div class="save-manager">
+          <button class="btn-save btn-save--export" id="btnExportSaves">⬇ Export Saves</button>
+          <label class="btn-save btn-save--import">⬆ Import Saves<input type="file" id="btnImportSaves" accept=".json"></label>
+        </div>
+        <div class="save-status" id="saveStatus"></div>
+      </div></section>`;
   }
 
   function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
-  // ---- Render ----
+  // GitHub API
+  async function fetchLatestRelease() {
+    try { const res = await fetch(`${API_BASE}/releases/latest`); if (!res.ok) throw new Error(`HTTP ${res.status}`); return await res.json(); }
+    catch(e) { console.error('Failed to fetch release:', e); return null; }
+  }
+  async function fetchCommits(limit = 15) {
+    try { const res = await fetch(`${API_BASE}/commits?per_page=${limit}`); if (!res.ok) throw new Error(`HTTP ${res.status}`); return await res.json(); }
+    catch(e) { console.error('Failed to fetch commits:', e); return []; }
+  }
+  function renderCommitLog(commits) {
+    const el = $('#commitLog');
+    if (!el || !commits.length) { if (el) el.innerHTML = '<div class="commit-loading">No commits found.</div>'; return; }
+    el.innerHTML = commits.map(c => {
+      const sha = c.sha.substring(0, 7);
+      const date = new Date(c.commit.author.date).toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+      return `<div class="commit-item"><div class="commit-dot"></div><div class="commit-info">
+        <div class="commit-msg">${esc(c.commit.message.split('\n')[0])}</div>
+        <div class="commit-meta">
+          <a href="${c.html_url}" class="commit-sha" target="_blank" rel="noopener">${sha}</a>
+          <span class="commit-date">${date}</span>
+          <span class="commit-author">${esc(c.commit.author.name)}</span>
+        </div></div></div>`;
+    }).join('');
+  }
+  function updateDownloadUI(release) {
+    const verEl = $('#latestVersion'), btnZip = $('#btnZip'), btnSingle = $('#btnSingle');
+    if (!release) { if (verEl) verEl.innerHTML = '<span style="color:var(--text-dim)">Could not fetch</span>'; return; }
+    if (verEl) verEl.innerHTML = `<span class="highlight">${esc(release.tag_name || release.name || 'unknown')}</span>`;
+    if (btnZip) { btnZip.href = release.zipball_url; btnZip.classList.remove('disabled'); }
+    if (btnSingle) { btnSingle.href = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${release.tag_name}/singlefile.html`; btnSingle.classList.remove('disabled'); }
+  }
+
+  // Init
+  function init() {
+    navbar = $('#navbar'); navLinks = $('#navLinks'); hamburger = $('#hamburger');
+    cloakBtn = $('#cloakBtn'); dropdownRoot = $('#dropdownRoot'); dropdownToggle = $('#dropdownToggle');
+    browseBtn = $('#browseGamesBtn'); mainContainer = $('#mainContent');
+    downloadRoot = $('#downloadRoot'); settingsRoot = $('#settingsRoot'); loadingEl = $('#loadingState');
+    gameViewer = $('#gameViewer'); viewerBackdrop = $('#viewerBackdrop'); viewerClose = $('#viewerClose');
+    viewerIframe = $('#viewerIframe'); viewerLoading = $('#viewerLoading'); viewerGameName = $('#viewerGameName');
+    saveStatus = $('#saveStatus');
+
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 40));
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    dropdownToggle.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); if (innerWidth <= 768) dropdownRoot.classList.toggle('open'); });
+    if (cloakBtn) cloakBtn.addEventListener('click', handleCloakClick);
+    $$('.nav-section-link').forEach(link => { link.addEventListener('click', (e) => { e.preventDefault(); scrollToId(link.getAttribute('href').substring(1)); navLinks.classList.remove('open'); dropdownRoot.classList.remove('open'); }); });
+    browseBtn.addEventListener('click', (e) => { e.preventDefault(); scrollToId('category-games'); });
+    viewerClose.addEventListener('click', closeGame);
+    viewerBackdrop.addEventListener('click', closeGame);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && gameViewer.classList.contains('active')) closeGame(); });
+
+    const btnExport = $('#btnExportSaves');
+    const btnImport = $('#btnImportSaves');
+    if (btnExport) btnExport.addEventListener('click', exportSaves);
+    if (btnImport) btnImport.addEventListener('change', (e) => importSaves(e.target.files[0]));
+
+    render();
+  }
+
   function render() {
     const grouped = {};
     CATEGORIES.forEach(c => grouped[c.id] = []);
     GAMES_DATA.forEach(g => { if (grouped[g.category]) grouped[g.category].push(g); });
-
     mainContainer.innerHTML = CATEGORIES.map(c => sectionHTML(c, grouped[c.id])).join('');
+    downloadRoot.innerHTML = downloadHTML();
+    settingsRoot.innerHTML = settingsHTML();
+    saveStatus = $('#saveStatus');
     $$('.fade-in').forEach(el => observer.observe(el));
-
-    $$('.game-card').forEach(card => {
-      card.addEventListener('click', () => openGame(card.dataset.name, card.dataset.path));
-    });
-
+    $$('.game-card').forEach(card => { card.addEventListener('click', () => openGame(card.dataset.name, card.dataset.path)); });
+    const erudaToggle = $('#erudaToggle');
+    if (erudaToggle) erudaToggle.addEventListener('change', (e) => toggleEruda(e.target.checked));
+    if (isErudaEnabled()) initEruda();
+    fetchLatestRelease().then(updateDownloadUI);
+    fetchCommits().then(renderCommitLog);
     if (loadingEl) loadingEl.style.display = 'none';
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', render);
-  else render();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
 })();
   </script>
 </body>
