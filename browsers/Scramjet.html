@@ -1,19 +1,789 @@
-<!DOCTYPE html><html>
-<head><title>Scramjet</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Scramjet</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-base:       #1a1a1c;
+    --bg-tabbar:     #111113;
+    --bg-toolbar:    #1e1e21;
+    --bg-tab-active: #2a2a2e;
+    --bg-tab-hover:  #222226;
+    --bg-tab-idle:   #141416;
+    --border:        #2e2e34;
+    --border-light:  #3a3a42;
+    --text-primary:  #e8e8ec;
+    --text-secondary:#9898a8;
+    --text-dim:      #55555f;
+    --accent:        #4f9eff;
+    --accent-glow:   rgba(79,158,255,0.18);
+    --tab-close-hover: #ff5f57;
+    --radius-tab:    6px;
+    --font-ui:       'IBM Plex Sans', sans-serif;
+    --font-mono:     'IBM Plex Mono', monospace;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  #tabbar {
+    display: flex;
+    align-items: flex-end;
+    background: var(--bg-tabbar);
+    border-bottom: 1px solid var(--border);
+    padding: 0 6px;
+    height: 38px;
+    gap: 2px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    flex-shrink: 0;
+  }
+  #tabbar::-webkit-scrollbar { display: none; }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 30px;
+    padding: 0 10px 0 12px;
+    background: var(--bg-tab-idle);
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: var(--radius-tab) var(--radius-tab) 0 0;
+    cursor: pointer;
+    min-width: 120px;
+    max-width: 200px;
+    flex-shrink: 0;
+    transition: background 0.12s, border-color 0.12s;
+    position: relative;
+    bottom: -1px;
+  }
+  .tab:hover { background: var(--bg-tab-hover); border-color: var(--border); }
+  .tab.active {
+    background: var(--bg-tab-active);
+    border-color: var(--border);
+    border-bottom-color: var(--bg-tab-active);
+  }
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 1px;
+    background: var(--bg-tab-active);
+  }
+
+  .tab-favicon {
+    width: 14px; height: 14px;
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+  .tab-favicon svg { width: 14px; height: 14px; }
+
+  .tab-label {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .tab.active .tab-label { color: var(--text-primary); }
+
+  .tab-close {
+    width: 16px; height: 16px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 3px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.12s, background 0.1s;
+    cursor: pointer;
+  }
+  .tab:hover .tab-close,
+  .tab.active .tab-close { opacity: 1; }
+  .tab-close:hover { background: var(--tab-close-hover); }
+  .tab-close svg { width: 8px; height: 8px; stroke: var(--text-primary); }
+
+  #new-tab-btn {
+    display: flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+    transition: background 0.12s, color 0.12s;
+  }
+  #new-tab-btn:hover { background: var(--bg-tab-hover); color: var(--text-primary); }
+  #new-tab-btn svg { width: 14px; height: 14px; }
+
+  #toolbar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 40px;
+    padding: 0 10px;
+    background: var(--bg-toolbar);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .nav-btn {
+    display: flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--text-dim);
+    flex-shrink: 0;
+    transition: background 0.12s, color 0.12s;
+  }
+  .nav-btn:hover { background: var(--bg-tab-hover); color: var(--text-primary); }
+  .nav-btn.active-btn { color: var(--text-secondary); }
+  .nav-btn svg { width: 14px; height: 14px; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .nav-btn.loading svg { animation: spin 0.7s linear infinite; }
+
+  #toolbar-right {
+    display: flex; align-items: center; gap: 4px; flex-shrink: 0;
+  }
+  .pill {
+    font-size: 11px;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 7px;
+    letter-spacing: 0.04em;
+  }
+
+  #btn-settings.open { background: var(--bg-tab-hover); color: var(--text-primary); }
+
+  #url-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 0 12px;
+    height: 30px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  #url-bar:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+  #url-bar svg { width: 12px; height: 12px; color: var(--text-dim); flex-shrink: 0; }
+  #url-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    caret-color: var(--accent);
+    user-select: text;
+  }
+  #url-input::placeholder { color: var(--text-dim); }
+  #url-go {
+    display: flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-dim);
+    flex-shrink: 0;
+    transition: background 0.12s, color 0.12s;
+  }
+  #url-go:hover { background: var(--accent); color: #fff; }
+  #url-go svg { width: 12px; height: 12px; }
+
+  #url-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #22c55e;
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 12px rgba(34,197,94,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 300;
+    white-space: nowrap;
+  }
+  #url-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  #settings-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+  }
+  #settings-overlay.open { display: flex; }
+
+  #settings-modal {
+    background: #18181b;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    width: 480px;
+    max-width: 92vw;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.04);
+    overflow: hidden;
+    animation: modal-in 0.18s cubic-bezier(.2,.8,.3,1) both;
+  }
+  @keyframes modal-in {
+    from { opacity: 0; transform: scale(0.96) translateY(8px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  #settings-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  #settings-title {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 600; color: var(--text-primary);
+    letter-spacing: 0.02em;
+  }
+  #settings-title svg { width: 16px; height: 16px; color: var(--accent); }
+  #settings-close {
+    width: 26px; height: 26px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 5px; cursor: pointer;
+    color: var(--text-dim);
+    transition: background 0.1s, color 0.1s;
+  }
+  #settings-close:hover { background: var(--tab-close-hover); color: #fff; }
+  #settings-close svg { width: 10px; height: 10px; }
+
+  #settings-body { padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+
+  .setting-group { display: flex; flex-direction: column; gap: 8px; }
+  .setting-label {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+    color: var(--text-dim); text-transform: uppercase;
+  }
+  .setting-desc {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.5;
+  }
+
+  .setting-input-wrap {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 0 12px;
+    height: 36px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .setting-input-wrap:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+  .setting-input-wrap svg { width: 12px; height: 12px; color: var(--text-dim); flex-shrink: 0; }
+  .setting-input-wrap input {
+    flex: 1; background: none; border: none; outline: none;
+    color: var(--text-primary); font-family: var(--font-mono); font-size: 12px;
+    caret-color: var(--accent);
+  }
+  .setting-input-wrap input::placeholder { color: var(--text-dim); }
+
+  .setting-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .preset-btn {
+    display: flex; align-items: center; gap: 6px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background: var(--bg-tab-idle);
+    color: var(--text-secondary);
+    font-size: 11px; font-family: var(--font-mono);
+    cursor: pointer;
+    transition: background 0.1s, border-color 0.1s, color 0.1s;
+  }
+  .preset-btn:hover { background: var(--bg-tab-hover); border-color: var(--border-light); color: var(--text-primary); }
+
+  #settings-save.saved { background: #22c55e; box-shadow: 0 0 12px rgba(34,197,94,0.3); }
+
+  #settings-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+    gap: 10px;
+  }
+  #settings-reset {
+    font-size: 12px; color: var(--text-dim); cursor: pointer;
+    font-family: var(--font-mono);
+    transition: color 0.1s;
+  }
+  #settings-reset:hover { color: var(--text-secondary); }
+  #settings-save {
+    display: flex; align-items: center; gap: 6px;
+    padding: 7px 18px;
+    border-radius: 6px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px; font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 12px var(--accent-glow);
+    transition: opacity 0.1s, box-shadow 0.1s, background 0.2s;
+  }
+  #settings-save:hover { opacity: 0.88; box-shadow: 0 0 20px var(--accent-glow); }
+  #settings-save svg { width: 13px; height: 13px; }
+
+  #content {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tab-panel {
+    position: absolute;
+    inset: 0;
+    display: none;
+  }
+  .tab-panel.active { display: block; }
+
+  .tab-panel iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+  }
+
+  #load-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    background: var(--accent);
+    width: 0%;
+    opacity: 0;
+    transition: width 0.3s, opacity 0.2s;
+    z-index: 999;
+    box-shadow: 0 0 8px var(--accent);
+    pointer-events: none;
+  }
+</style>
+</head>
 <body>
-<div style="position:relative;width:100%;aspect-ratio:1024/768;">
-  <iframe
-    src="https://dragon-gaming-platforms.github.io/scramjet/"
-    width="100%"
-    height="100%"
-    style="border:1px solid #ccc;overflow:hidden;"
-    scrolling="auto"
-    frameborder="0"
-    name="Scramjet"
-    sandbox="allow-scripts allow-popups allow-top-navigation allow-forms allow-same-origin"
-    allowfullscreen
-    allow="camera; autoplay; picture-in-picture; microphone"
-  ></iframe>
+
+<div id="load-bar"></div>
+<div id="url-toast"></div>
+
+<div id="app">
+  <div id="tabbar">
+    <div id="new-tab-btn" title="New tab" onclick="newTab()">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/>
+      </svg>
+    </div>
+  </div>
+
+  <div id="toolbar">
+    <div class="nav-btn active-btn" id="btn-reload" title="Reset all tabs" onclick="reloadAllTabs()">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13.5 2.5v4h-4"/>
+        <path d="M2 8a6 6 0 0 1 10.5-3.96L13.5 6.5"/>
+        <path d="M2.5 13.5v-4h4"/>
+        <path d="M14 8a6 6 0 0 1-10.5 3.96L2.5 9.5"/>
+      </svg>
+    </div>
+
+    <div id="url-bar">
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <circle cx="6" cy="6" r="5"/>
+        <path d="M1.5 6h9M6 1.5C4.5 3 3.8 4.5 3.8 6s.7 3 2.2 4.5M6 1.5C7.5 3 8.2 4.5 8.2 6S7.5 9 6 10.5"/>
+      </svg>
+      <input id="url-input" type="text" spellcheck="false" placeholder="Scramjet server URL"
+        onkeydown="handleUrlKey(event)" onfocus="this.select()" />
+      <div id="url-go" title="Apply to all tabs" onclick="navigateFromBar()">
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 6h8M7 3l3 3-3 3"/>
+        </svg>
+      </div>
+    </div>
+
+    <div id="toolbar-right">
+      <div class="pill">SCRAMJET</div>
+      <div class="nav-btn" id="btn-settings" title="Settings" onclick="toggleSettings()">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="8" cy="8" r="2.2"/>
+          <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.05 3.05l1.06 1.06M11.89 11.89l1.06 1.06M3.05 12.95l1.06-1.06M11.89 4.11l1.06-1.06"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div id="settings-overlay" onclick="overlayClick(event)">
+    <div id="settings-modal">
+      <div id="settings-header">
+        <div id="settings-title">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="8" r="2.2"/>
+            <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.05 3.05l1.06 1.06M11.89 11.89l1.06 1.06M3.05 12.95l1.06-1.06M11.89 4.11l1.06-1.06"/>
+          </svg>
+          Browser Settings
+        </div>
+        <div id="settings-close" onclick="closeSettings()">
+          <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="1" y1="1" x2="9" y2="9"/><line x1="9" y1="1" x2="1" y2="9"/>
+          </svg>
+        </div>
+      </div>
+
+      <div id="settings-body">
+        <div class="setting-group">
+          <div class="setting-label">Default Proxy URL</div>
+          <div class="setting-desc">
+            Set the default URL loaded in all iframes. Changing the URL in the toolbar address bar will also update every open tab simultaneously.
+          </div>
+          <div class="setting-input-wrap">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="6" cy="6" r="5"/>
+              <path d="M1.5 6h9M6 1.5C4.5 3 3.8 4.5 3.8 6s.7 3 2.2 4.5M6 1.5C7.5 3 8.2 4.5 8.2 6S7.5 9 6 10.5"/>
+            </svg>
+            <input id="settings-url-input" type="text" spellcheck="false" placeholder="https://…"
+              onkeydown="if(event.key==='Enter') saveSettings()" />
+          </div>
+          <div class="setting-row">
+            <div class="preset-btn" onclick="applyPreset('https://dragon-gaming-platforms.github.io/scramjet/')">⚡ Scramjet (default)</div>
+            <div class="preset-btn" onclick="applyPreset('about:blank')">◻ Blank</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="settings-footer">
+        <span id="settings-reset" onclick="resetSettings()">Reset to default</span>
+        <div id="settings-save" onclick="saveSettings()">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="2 7 6 11 12 3"/>
+          </svg>
+          Apply
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content"></div>
 </div>
+
+<script>
+  const DEFAULT_PROXY = 'https://dragon-gaming-platforms.github.io/scramjet/';
+
+  let currentProxyUrl = localStorage.getItem('proxyUrl') || DEFAULT_PROXY;
+
+  let tabs = [];
+  let activeTabId = null;
+  let nextId = 1;
+
+  const tabbar    = document.getElementById('tabbar');
+  const content   = document.getElementById('content');
+  const reloadBtn = document.getElementById('btn-reload');
+  const loadBar   = document.getElementById('load-bar');
+  const urlInput  = document.getElementById('url-input');
+  const urlToast  = document.getElementById('url-toast');
+
+  function normalizeUrl(url) {
+    url = url.trim();
+    if (!url) return '';
+    if (url !== 'about:blank' && !/^https?:\/\//i.test(url)) {
+      url = 'https://' + url;
+    }
+    return url;
+  }
+
+  /*
+   * Build a srcdoc string that creates a clean, isolated document
+   * containing only a full-page iframe pointing to the target URL.
+   * This breaks the origin chain so the parent's service worker
+   * cannot detect or interfere with the nested content.
+   */
+  function buildSrcdoc(url) {
+    // Escape for safe embedding inside the srcdoc attribute
+    const escaped = url
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+
+    return `<!DOCTYPE html>
+<html><head><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden}
+iframe{width:100%;height:100%;border:none}
+</style></head><body>
+<iframe src="${escaped}" allow="fullscreen" referrerpolicy="no-referrer"></iframe>
+</body></html>`;
+  }
+
+  function applyUrlToAllTabs(url) {
+    currentProxyUrl = url;
+    localStorage.setItem('proxyUrl', currentProxyUrl);
+    urlInput.value = currentProxyUrl;
+
+    tabs.forEach(tab => {
+      const panel = document.getElementById('panel-' + tab.id);
+      if (panel) {
+        panel.innerHTML = '';
+        panel.appendChild(makeIframe(tab));
+      }
+    });
+
+    showToast('URL applied to all ' + tabs.length + ' tab' + (tabs.length !== 1 ? 's' : ''));
+  }
+
+  function handleUrlKey(e) {
+    if (e.key === 'Enter') navigateFromBar();
+  }
+
+  function navigateFromBar() {
+    const url = normalizeUrl(urlInput.value);
+    if (!url) return;
+    urlInput.value = url;
+    applyUrlToAllTabs(url);
+    urlInput.blur();
+  }
+
+  let toastTimer;
+  function showToast(msg) {
+    clearTimeout(toastTimer);
+    urlToast.textContent = msg;
+    urlToast.classList.add('show');
+    toastTimer = setTimeout(() => urlToast.classList.remove('show'), 1800);
+  }
+
+  function toggleSettings() {
+    const overlay = document.getElementById('settings-overlay');
+    const btn     = document.getElementById('btn-settings');
+    if (overlay.classList.contains('open')) {
+      closeSettings();
+    } else {
+      document.getElementById('settings-url-input').value = currentProxyUrl;
+      overlay.classList.add('open');
+      btn.classList.add('open');
+      setTimeout(() => document.getElementById('settings-url-input').focus(), 80);
+    }
+  }
+
+  function closeSettings() {
+    document.getElementById('settings-overlay').classList.remove('open');
+    document.getElementById('btn-settings').classList.remove('open');
+  }
+
+  function overlayClick(e) {
+    if (e.target === document.getElementById('settings-overlay')) closeSettings();
+  }
+
+  function applyPreset(url) {
+    document.getElementById('settings-url-input').value = url;
+  }
+
+  function resetSettings() {
+    document.getElementById('settings-url-input').value = DEFAULT_PROXY;
+    applyUrlToAllTabs(DEFAULT_PROXY);
+    showSaveFeedback();
+  }
+
+  function saveSettings() {
+    const input = document.getElementById('settings-url-input');
+    const url = normalizeUrl(input.value);
+    if (!url) { input.focus(); return; }
+    input.value = url;
+    applyUrlToAllTabs(url);
+    showSaveFeedback();
+  }
+
+  function showSaveFeedback() {
+    const btn = document.getElementById('settings-save');
+    btn.classList.add('saved');
+    btn.innerHTML = `
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="2 7 6 11 12 3"/>
+      </svg>
+      Saved!`;
+    setTimeout(() => {
+      btn.classList.remove('saved');
+      btn.innerHTML = `
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="2 7 6 11 12 3"/>
+        </svg>
+        Apply`;
+      closeSettings();
+    }, 900);
+  }
+
+  let loadTimer;
+  function startLoad() {
+    clearTimeout(loadTimer);
+    loadBar.style.transition = 'width 1.8s cubic-bezier(.1,.6,.4,1), opacity 0.15s';
+    loadBar.style.width = '85%';
+    loadBar.style.opacity = '1';
+    reloadBtn.classList.add('loading');
+  }
+  function endLoad() {
+    loadBar.style.transition = 'width 0.2s, opacity 0.4s';
+    loadBar.style.width = '100%';
+    loadTimer = setTimeout(() => {
+      loadBar.style.opacity = '0';
+      loadBar.style.width = '0%';
+      reloadBtn.classList.remove('loading');
+    }, 400);
+  }
+
+  function createTabData() {
+    return { id: nextId++, label: 'Loading…' };
+  }
+
+  function newTab() {
+    const tab = createTabData();
+    tabs.push(tab);
+    renderTabEl(tab);
+    createPanel(tab);
+    switchTab(tab.id);
+  }
+
+  function renderTabEl(tab) {
+    const el = document.createElement('div');
+    el.className = 'tab';
+    el.id = 'tab-' + tab.id;
+    el.dataset.id = tab.id;
+    el.innerHTML = `
+      <span class="tab-favicon">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <circle cx="7" cy="7" r="5.5"/>
+          <path d="M2 7h10M7 1.5c-1.2 1.3-1.8 3-1.8 5.5s.6 4.2 1.8 5.5"/>
+          <path d="M7 1.5C8.2 2.8 8.8 4.5 8.8 7S8.2 11.2 7 12.5"/>
+        </svg>
+      </span>
+      <span class="tab-label">${escHtml(tab.label)}</span>
+      <span class="tab-close" title="Close tab" data-close="${tab.id}">
+        <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="2" y1="2" x2="8" y2="8"/><line x1="8" y1="2" x2="2" y2="8"/>
+        </svg>
+      </span>`;
+    el.addEventListener('click', (e) => {
+      if (e.target.closest('[data-close]')) closeTab(tab.id);
+      else switchTab(tab.id);
+    });
+    tabbar.insertBefore(el, document.getElementById('new-tab-btn'));
+  }
+
+  function createPanel(tab) {
+    const panel = document.createElement('div');
+    panel.className = 'tab-panel';
+    panel.id = 'panel-' + tab.id;
+    panel.appendChild(makeIframe(tab));
+    content.appendChild(panel);
+  }
+
+  function makeIframe(tab) {
+    const frame = document.createElement('iframe');
+    frame.id = 'iframe-' + tab.id;
+
+    /*
+     * Use srcdoc with a nested iframe to isolate from parent origin.
+     * The outer iframe gets a unique sandbox origin via srcdoc,
+     * so the inner iframe loading the target URL won't share
+     * the parent's service worker scope.
+     */
+    frame.srcdoc = buildSrcdoc(currentProxyUrl);
+
+    // No sandbox attribute — let srcdoc handle isolation
+    frame.allow = 'fullscreen';
+    frame.referrerPolicy = 'no-referrer';
+
+    frame.addEventListener('load', () => {
+      setTabLabel(tab.id, 'Browser');
+      endLoad();
+    });
+    startLoad();
+    return frame;
+  }
+
+  function switchTab(id) {
+    activeTabId = id;
+    tabs.forEach(t => {
+      document.getElementById('tab-' + t.id)?.classList.toggle('active', t.id === id);
+      document.getElementById('panel-' + t.id)?.classList.toggle('active', t.id === id);
+    });
+  }
+
+  function closeTab(id) {
+    const idx = tabs.findIndex(t => t.id === id);
+    if (idx === -1) return;
+    document.getElementById('tab-' + id)?.remove();
+    document.getElementById('panel-' + id)?.remove();
+    tabs.splice(idx, 1);
+    if (tabs.length === 0) { newTab(); return; }
+    if (activeTabId === id) switchTab(tabs[Math.min(idx, tabs.length - 1)].id);
+  }
+
+  function setTabLabel(id, label) {
+    const el = document.querySelector(`#tab-${id} .tab-label`);
+    if (el) el.textContent = label;
+  }
+
+  function reloadAllTabs() {
+    tabs.forEach(tab => {
+      const panel = document.getElementById('panel-' + tab.id);
+      if (panel) {
+        panel.innerHTML = '';
+        panel.appendChild(makeIframe(tab));
+      }
+    });
+    showToast('Reset Complete ' + tabs.length + ' tab' + (tabs.length !== 1 ? 's' : ''));
+  }
+
+  function escHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeSettings();
+    if ((e.ctrlKey || e.metaKey) && e.key === 'l') { e.preventDefault(); urlInput.focus(); urlInput.select(); }
+    if ((e.ctrlKey || e.metaKey) && e.key === 't') { e.preventDefault(); newTab(); }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'w') { e.preventDefault(); if (activeTabId) closeTab(activeTabId); }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'r') { e.preventDefault(); reloadAllTabs(); }
+  });
+
+  urlInput.value = currentProxyUrl;
+  newTab();
+</script>
 </body>
 </html>
