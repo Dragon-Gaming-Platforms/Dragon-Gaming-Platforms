@@ -1,7 +1,7 @@
 <h1 align="center">Dragon Gaming Platforms</h1>
 
 <div align="center">
-  <img src="./assets/dragon-login.png" height="425" />
+  <img src="https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png" height="425" />
 </div>
 
 ## Introduction
@@ -16,4 +16,4 @@
 4. Export and import buttons for local storage
 5. A whole host of games!
 
-## [Credits](./credits.md)
+[__Credits__](./credits.md)
