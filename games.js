@@ -64,6 +64,16 @@ const GAMES_DATA = [
     "path": "./browsers/Scramjet.html", 
     "category": "browsers" 
   },
+  {
+    "name": "Incognito",
+    "path": "./browsers/Incognito.html"
+    "category": "browsers"
+  },
+  {
+    "name": "Interstellar",
+    "path": "./browsers/Interstellar.html"
+    "category": "browsers"
+  },
   { 
     "name": "Moto x3m 2", 
     "path": "./games/singlefiles/Moto-x3m-2.html", 
