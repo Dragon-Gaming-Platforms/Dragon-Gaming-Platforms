@@ -61,12 +61,12 @@
   },
   {
     "name": "Incognito",
-    "path": "./browsers/Incognito.html"
+    "path": "./browsers/Incognito.html",
     "category": "browsers"
   },
   {
     "name": "Interstellar",
-    "path": "./browsers/Interstellar.html"
+    "path": "./browsers/Interstellar.html",
     "category": "browsers"
   },
   { 

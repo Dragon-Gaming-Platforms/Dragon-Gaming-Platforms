@@ -66,12 +66,12 @@ const GAMES_DATA = [
   },
   {
     "name": "Incognito",
-    "path": "./browsers/Incognito.html"
+    "path": "./browsers/Incognito.html",
     "category": "browsers"
   },
   {
     "name": "Interstellar",
-    "path": "./browsers/Interstellar.html"
+    "path": "./browsers/Interstellar.html",
     "category": "browsers"
   },
   { 
@@ -123,6 +123,7 @@ const GAMES_DATA = [
   let navbar, navLinks, hamburger, cloakBtn, dropdownRoot, dropdownToggle;
   let browseBtn, mainContainer, downloadRoot, settingsRoot, loadingEl;
   let gameViewer, viewerBackdrop, viewerClose, viewerIframe, viewerLoading, viewerGameName;
+  let saveStatus;
 
   // ---- Eruda State ----
   let erudaLoaded = false;
@@ -150,35 +151,103 @@ const GAMES_DATA = [
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  // ---- Save Manager Logic ----
+  function showSaveStatus(msg, type) {
+    if (!saveStatus) return;
+    saveStatus.textContent = msg;
+    saveStatus.className = `save-status ${type}`;
+    setTimeout(() => { saveStatus.textContent = ''; saveStatus.className = 'save-status'; }, 4000);
+  }
+
+  function exportSaves() {
+    try {
+      const backup = {
+        meta: { exported: new Date().toISOString(), origin: location.origin },
+        localStorage: {},
+        sessionStorage: {},
+        cookies: document.cookie
+      };
+
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        backup.localStorage[key] = localStorage.getItem(key);
+      }
+      for (let i = 0; i < sessionStorage.length; i++) {
+        const key = sessionStorage.key(i);
+        backup.sessionStorage[key] = sessionStorage.getItem(key);
+      }
+
+      const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `dragon-saves-${new Date().toISOString().slice(0,10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      showSaveStatus('✓ Saves exported successfully', 'success');
+    } catch (err) {
+      console.error('Export failed:', err);
+      showSaveStatus('✕ Export failed: ' + err.message, 'error');
+    }
+  }
+
+  function importSaves(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const backup = JSON.parse(e.target.result);
+        let count = 0;
+
+        if (backup.localStorage) {
+          Object.entries(backup.localStorage).forEach(([k, v]) => {
+            localStorage.setItem(k, v);
+            count++;
+          });
+        }
+        if (backup.sessionStorage) {
+          Object.entries(backup.sessionStorage).forEach(([k, v]) => {
+            sessionStorage.setItem(k, v);
+            count++;
+          });
+        }
+        if (backup.cookies) {
+          backup.cookies.split(';').forEach(c => {
+            const [name, ...rest] = c.trim().split('=');
+            if (name && rest.length) {
+              document.cookie = `${name}=${rest.join('=')}; path=/; max-age=31536000`;
+              count++;
+            }
+          });
+        }
+
+        showSaveStatus(`✓ Restored ${count} items. Refresh to apply.`, 'success');
+        // Update Eruda toggle if state was imported
+        const erudaToggle = $('#erudaToggle');
+        if (erudaToggle) erudaToggle.checked = isErudaEnabled();
+      } catch (err) {
+        console.error('Import failed:', err);
+        showSaveStatus('✕ Import failed: Invalid file', 'error');
+      }
+    };
+    reader.readAsText(file);
+  }
+
   // ---- Cloaked Tab ----
   function handleCloakClick() {
     const win = window.open('about:blank', '_blank');
-    if (!win) {
-      alert('Popup blocked! Please allow popups for this site.');
-      return;
-    }
+    if (!win) { alert('Popup blocked! Please allow popups for this site.'); return; }
     
     fetch('./singlefile.html')
-      .then(res => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.text();
-      })
-      .then(html => {
-        win.document.open();
-        win.document.write(html);
-        win.document.close();
-      })
+      .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.text(); })
+      .then(html => { win.document.open(); win.document.write(html); win.document.close(); })
       .catch(err => {
         console.error('Cloak fetch failed:', err);
-        // Inject a simple fallback message so the user knows something happened
-        win.document.body.innerHTML = `
-          <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#050505;color:#e60012;font-family:sans-serif;text-align:center;">
-            <div>
-              <h2>🛡️ Cloaked Tab Active</h2>
-              <p style="color:#aaa;">singlefile.html not found or failed to load.</p>
-              <p style="color:#666;font-size:0.8rem;">Check console for details.</p>
-            </div>
-          </div>`;
+        win.document.body.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#050505;color:#e60012;font-family:sans-serif;text-align:center;">
+          <div><h2>🛡️ Cloaked Tab Active</h2><p style="color:#aaa;">singlefile.html not found or failed to load.</p></div></div>`;
       });
   }
 
@@ -246,14 +315,8 @@ const GAMES_DATA = [
           <h2 class="section-title">Download</h2>
         </div>
         <div class="download-versions">
-          <div class="version-box">
-            <div class="version-box__label">Current Version</div>
-            <div class="version-box__value">${CURRENT_VER}</div>
-          </div>
-          <div class="version-box">
-            <div class="version-box__label">Latest Version</div>
-            <div class="version-box__value" id="latestVersion"><span class="version-box__loading">Checking GitHub…</span></div>
-          </div>
+          <div class="version-box"><div class="version-box__label">Current Version</div><div class="version-box__value">${CURRENT_VER}</div></div>
+          <div class="version-box"><div class="version-box__label">Latest Version</div><div class="version-box__value" id="latestVersion"><span class="version-box__loading">Checking GitHub…</span></div></div>
         </div>
         <div class="download-actions" id="downloadActions">
           <a href="#" class="btn-download disabled" id="btnZip" download>⬇ Download ZIP</a>
@@ -285,6 +348,21 @@ const GAMES_DATA = [
             <span class="toggle-slider"></span>
           </label>
         </div>
+        
+        <div class="settings-item" style="margin-top: 20px;">
+          <div>
+            <div class="settings-label">Save Data Manager</div>
+            <div class="settings-desc">Export or import localStorage, sessionStorage & cookies</div>
+          </div>
+        </div>
+        <div class="save-manager">
+          <button class="btn-save btn-save--export" id="btnExportSaves">⬇ Export Saves</button>
+          <label class="btn-save btn-save--import">
+            ⬆ Import Saves
+            <input type="file" id="btnImportSaves" accept=".json">
+          </label>
+        </div>
+        <div class="save-status" id="saveStatus"></div>
       </div>
     </section>`;
   }
@@ -293,115 +371,65 @@ const GAMES_DATA = [
 
   // ---- GitHub API ----
   async function fetchLatestRelease() {
-    try {
-      const res = await fetch(`${API_BASE}/releases/latest`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
-    } catch(e) { console.error('Failed to fetch release:', e); return null; }
+    try { const res = await fetch(`${API_BASE}/releases/latest`); if (!res.ok) throw new Error(`HTTP ${res.status}`); return await res.json(); }
+    catch(e) { console.error('Failed to fetch release:', e); return null; }
   }
-
   async function fetchCommits(limit = 15) {
-    try {
-      const res = await fetch(`${API_BASE}/commits?per_page=${limit}`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
-    } catch(e) { console.error('Failed to fetch commits:', e); return []; }
+    try { const res = await fetch(`${API_BASE}/commits?per_page=${limit}`); if (!res.ok) throw new Error(`HTTP ${res.status}`); return await res.json(); }
+    catch(e) { console.error('Failed to fetch commits:', e); return []; }
   }
-
   function renderCommitLog(commits) {
     const el = $('#commitLog');
     if (!el || !commits.length) { if (el) el.innerHTML = '<div class="commit-loading">No commits found.</div>'; return; }
     el.innerHTML = commits.map(c => {
       const sha = c.sha.substring(0, 7);
       const date = new Date(c.commit.author.date).toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
-      const author = c.commit.author.name;
-      const msg = esc(c.commit.message.split('\n')[0]);
-      return `<div class="commit-item">
-        <div class="commit-dot"></div>
-        <div class="commit-info">
-          <div class="commit-msg">${msg}</div>
-          <div class="commit-meta">
-            <a href="${c.html_url}" class="commit-sha" target="_blank" rel="noopener">${sha}</a>
-            <span class="commit-date">${date}</span>
-            <span class="commit-author">${esc(author)}</span>
-          </div>
-        </div>
-      </div>`;
+      return `<div class="commit-item"><div class="commit-dot"></div><div class="commit-info">
+        <div class="commit-msg">${esc(c.commit.message.split('\n')[0])}</div>
+        <div class="commit-meta">
+          <a href="${c.html_url}" class="commit-sha" target="_blank" rel="noopener">${sha}</a>
+          <span class="commit-date">${date}</span>
+          <span class="commit-author">${esc(c.commit.author.name)}</span>
+        </div></div></div>`;
     }).join('');
   }
-
   function updateDownloadUI(release) {
-    const verEl = $('#latestVersion');
-    const btnZip = $('#btnZip');
-    const btnSingle = $('#btnSingle');
+    const verEl = $('#latestVersion'), btnZip = $('#btnZip'), btnSingle = $('#btnSingle');
     if (!release) { if (verEl) verEl.innerHTML = '<span style="color:var(--text-dim)">Could not fetch</span>'; return; }
-    const tagName = release.tag_name || release.name || 'unknown';
-    if (verEl) verEl.innerHTML = `<span class="highlight">${esc(tagName)}</span>`;
+    if (verEl) verEl.innerHTML = `<span class="highlight">${esc(release.tag_name || release.name || 'unknown')}</span>`;
     if (btnZip) { btnZip.href = release.zipball_url; btnZip.classList.remove('disabled'); }
     if (btnSingle) { btnSingle.href = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${release.tag_name}/singlefile.html`; btnSingle.classList.remove('disabled'); }
   }
 
   // ---- Render & Init ----
   function init() {
-    // Cache elements
-    navbar         = $('#navbar');
-    navLinks       = $('#navLinks');
-    hamburger      = $('#hamburger');
-    cloakBtn       = $('#cloakBtn');
-    dropdownRoot   = $('#dropdownRoot');
-    dropdownToggle = $('#dropdownToggle');
-    browseBtn      = $('#browseGamesBtn');
-    mainContainer  = $('#mainContent');
-    downloadRoot   = $('#downloadRoot');
-    settingsRoot   = $('#settingsRoot');
-    loadingEl      = $('#loadingState');
-    gameViewer     = $('#gameViewer');
-    viewerBackdrop = $('#viewerBackdrop');
-    viewerClose    = $('#viewerClose');
-    viewerIframe   = $('#viewerIframe');
-    viewerLoading  = $('#viewerLoading');
-    viewerGameName = $('#viewerGameName');
+    navbar = $('#navbar'); navLinks = $('#navLinks'); hamburger = $('#hamburger');
+    cloakBtn = $('#cloakBtn'); dropdownRoot = $('#dropdownRoot'); dropdownToggle = $('#dropdownToggle');
+    browseBtn = $('#browseGamesBtn'); mainContainer = $('#mainContent');
+    downloadRoot = $('#downloadRoot'); settingsRoot = $('#settingsRoot'); loadingEl = $('#loadingState');
+    gameViewer = $('#gameViewer'); viewerBackdrop = $('#viewerBackdrop'); viewerClose = $('#viewerClose');
+    viewerIframe = $('#viewerIframe'); viewerLoading = $('#viewerLoading'); viewerGameName = $('#viewerGameName');
+    saveStatus = $('#saveStatus');
 
-    // Navbar scroll
     window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 40));
-
-    // Hamburger
     hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-
-    // Mobile dropdown toggle
-    dropdownToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      if (innerWidth <= 768) dropdownRoot.classList.toggle('open');
-    });
-
-    // Cloak button
+    dropdownToggle.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); if (innerWidth <= 768) dropdownRoot.classList.toggle('open'); });
     if (cloakBtn) cloakBtn.addEventListener('click', handleCloakClick);
-
-    // Section links (Download / Settings)
+    
     $$('.nav-section-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = link.getAttribute('href').substring(1);
-        scrollToId(target);
-        // Close mobile menu if open
-        navLinks.classList.remove('open');
-        dropdownRoot.classList.remove('open');
-      });
+      link.addEventListener('click', (e) => { e.preventDefault(); scrollToId(link.getAttribute('href').substring(1)); navLinks.classList.remove('open'); dropdownRoot.classList.remove('open'); });
     });
-
-    // Browse CTA
-    browseBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      scrollToId('category-games');
-    });
-
-    // Viewer close
+    browseBtn.addEventListener('click', (e) => { e.preventDefault(); scrollToId('category-games'); });
     viewerClose.addEventListener('click', closeGame);
     viewerBackdrop.addEventListener('click', closeGame);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && gameViewer.classList.contains('active')) closeGame(); });
 
-    // Render content
+    // Save buttons
+    const btnExport = $('#btnExportSaves');
+    const btnImport = $('#btnImportSaves');
+    if (btnExport) btnExport.addEventListener('click', exportSaves);
+    if (btnImport) btnImport.addEventListener('change', (e) => importSaves(e.target.files[0]));
+
     render();
   }
 
@@ -409,28 +437,20 @@ const GAMES_DATA = [
     const grouped = {};
     CATEGORIES.forEach(c => grouped[c.id] = []);
     GAMES_DATA.forEach(g => { if (grouped[g.category]) grouped[g.category].push(g); });
-
     mainContainer.innerHTML = CATEGORIES.map(c => sectionHTML(c, grouped[c.id])).join('');
     downloadRoot.innerHTML = downloadHTML();
     settingsRoot.innerHTML = settingsHTML();
+    saveStatus = $('#saveStatus'); // Re-cache after render
     $$('.fade-in').forEach(el => observer.observe(el));
-
     $$('.game-card').forEach(card => { card.addEventListener('click', () => openGame(card.dataset.name, card.dataset.path)); });
-
     const erudaToggle = $('#erudaToggle');
     if (erudaToggle) erudaToggle.addEventListener('change', (e) => toggleEruda(e.target.checked));
     if (isErudaEnabled()) initEruda();
-
     fetchLatestRelease().then(updateDownloadUI);
     fetchCommits().then(renderCommitLog);
-
     if (loadingEl) loadingEl.style.display = 'none';
   }
 
-  // Start when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
 })();
