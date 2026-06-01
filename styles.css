@@ -242,6 +242,31 @@ body::after {
 .toggle-switch input:checked + .toggle-slider { background-color: var(--red-primary); border-color: var(--red-bright); }
 .toggle-switch input:checked + .toggle-slider::before { transform: translateX(24px); background-color: #fff; }
 
+/* Add this to the SETTINGS SECTION area in styles.css */
+
+/* ---------- Save Manager Buttons ---------- */
+.save-manager { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.btn-save {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--text-primary);
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border-color);
+  padding: 10px 20px; border-radius: 4px; cursor: pointer; transition: var(--t-fast);
+}
+.btn-save:hover { background: rgba(230,0,18,0.1); border-color: var(--red-primary); }
+.btn-save--export { border-color: rgba(0, 200, 100, 0.3); }
+.btn-save--export:hover { border-color: #00c864; background: rgba(0, 200, 100, 0.1); }
+.btn-save--import { border-color: rgba(0, 140, 255, 0.3); }
+.btn-save--import:hover { border-color: #008cff; background: rgba(0, 140, 255, 0.1); }
+.btn-save input[type="file"] { display: none; }
+
+.save-status {
+  margin-top: 12px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px;
+  min-height: 20px; transition: var(--t-fast);
+}
+.save-status.success { color: #00c864; }
+.save-status.error { color: #ff4444; }
+.save-status.info { color: var(--text-secondary); }
 /* ============================
    GAMES GRID
    ============================ */
