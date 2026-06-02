@@ -16,4 +16,4 @@
 4. Export and import buttons for local storage
 5. A whole host of games!
 
-[__Credits__](./credits.md)
+[__Credits__](./CREDITS.md)
