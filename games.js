@@ -55,6 +55,16 @@ const GAMES_DATA = [
     "category": "emulators" 
   },
   { 
+    "name": "CyberChef", 
+    "path": "./emulators/CyberChef/index.html", 
+    "category": "emulators" 
+  },
+  { 
+    "name": "EmulatorJS", 
+    "path": "./emulators/Emulatorjs/index.html", 
+    "category": "emulators" 
+  },
+  { 
     "name": "GUST", 
     "path": "./browsers/GUST.html", 
     "category": "browsers" 
@@ -73,6 +83,41 @@ const GAMES_DATA = [
     "name": "Interstellar",
     "path": "./browsers/Interstellar.html",
     "category": "browsers"
+  },
+  { 
+    "name": "2048", 
+    "path": "./games/2048/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "A Dark Room", 
+    "path": "./games/adarkroom/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Hextris", 
+    "path": "./games/Hextris/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "OpenSC2K", 
+    "path": "./games/OpenSC2K/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Space Company", 
+    "path": "./games/SpaceCompany/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Sandspiel", 
+    "path": "./games/sandspiel/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Teterjs", 
+    "path": "./games/teterjs/index.html", 
+    "category": "games" 
   },
   { 
     "name": "Moto x3m 2", 
