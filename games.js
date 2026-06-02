@@ -85,8 +85,28 @@ const GAMES_DATA = [
     "category": "browsers"
   },
   { 
+    "name": "Blockrain", 
+    "path": "./blockrain/index.html", 
+    "category": "games" 
+  },
+  { 
     "name": "2048", 
     "path": "./games/2048/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "1255 Burgomaster", 
+    "path": "./games/1255-burgomaster/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "3D.City", 
+    "path": "./games/3d.city/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Ancient Beast", 
+    "path": "./games/AncientBeast/index.html", 
     "category": "games" 
   },
   { 
@@ -95,8 +115,33 @@ const GAMES_DATA = [
     "category": "games" 
   },
   { 
+    "name": "Aquastax", 
+    "path": "./games/aquastax/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Arashi JS", 
+    "path": "./games/arashi-js/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "ASDF", 
+    "path": "./games/asdf/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Ball and Wall", 
+    "path": "./games/ball-and-wall/index.html", 
+    "category": "games" 
+  },
+  { 
     "name": "Hextris", 
     "path": "./games/Hextris/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "HexGL", 
+    "path": "./games/HexGL/index.html", 
     "category": "games" 
   },
   { 
@@ -132,11 +177,6 @@ const GAMES_DATA = [
   { 
     "name": "Dreadhead Parkour", 
     "path": "./games/singlefiles/dreadheadparkour.htm", 
-    "category": "games" 
-  },
-  { 
-    "name": "HexGL", 
-    "path": "./games/HexGL/index.html", 
     "category": "games" 
   },
   { 
