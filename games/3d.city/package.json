@@ -1,0 +1,49 @@
+{
+  "name": "3d.city",
+  "version": "1.0.0",
+  "description": "JavaScript city builder game",
+  "main": "./build/Main.js",
+  "repository": "lo-th/3d.city",
+  "type": "module",
+  "jsnext:main": "./build/citygame.module.js",
+  "module": "build/citygame.module.js",
+  "files": [
+    "package.json",
+    "LICENSE",
+    "README.md",
+    "build/citygame.js",
+    "build/citygame.min.js",
+    "build/citygame.module.js"
+  ],
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "eslintConfig": {
+    "extends": "mdcs"
+  },
+  "scripts": {
+    "build": "npm run main && npm run city",
+    "main": "rollup -c utils/rollup.config.main.js",
+    "city": "rollup -c utils/rollup.config.city.js",
+    "dev": "http-server ./ -c-1 -a localhost -p 8666 -o dev.html",
+    "start": "http-server ./ -c-1 -a localhost -p 8686 -o ./index.html"
+  },
+  "keywords": [
+    "3d.city",
+    "city",
+    "builder"
+  ],
+  "author": "lo-th",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lo-th/3d.city/issues"
+  },
+  "homepage": "https://lo-th.github.io/3d.city/",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^1.0.0",
+    "magic-string": "^0.30.0",
+    "rollup": "^4.6.0"
+  }
+}

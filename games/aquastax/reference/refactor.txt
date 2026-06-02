@@ -1,0 +1,194 @@
+27th February 2018
+
+First proper 1 hour stream on twitch.tv.  Basically wrote no code, but fixed a tiny bug in the path finding test code,
+and refreshed my memory on where I'm at.  Ready to continue implementing the Gumbler logic.
+
+31st January 2018
+
+I wrote the entry below (on Jan 15th if seems) but didn't commit the code that day. I was probably only able to do
+so much in the single commute session and decided that it would be better to wait until things were stable. Then
+due to personal illness, I was not able to work on AquaStax again until today (31st Jan). Now at least I remember
+where I was and have picked up at the point of implementing grid events. These events will form the basis of altering
+the Gumbler state, so they navigate around (walk and climb).
+
+15th January 2018
+
+After a fairly easy direct source copy from my original Java code, I have integrated the A* pathfinding code into
+Javascript functions.  Testing this out by using the mouse pointer as the path target seems to work pretty well.
+Now the job is to work out how to control the Gumbler, possibly using a state machine, effected by events from
+from the grid.
+
+3rd January 2018
+
+Due to very limited travel in December, I did not progress very much. I did however refactor the spritey animation
+system so that it is spit nicely into general sprite, gumbler data and specialised gumbler sprite classes, along with
+the base spritey class.  Alongside the grid class is also a new 'navigation' class that is going to handle the
+Gumbler movement around the grid.  The block class related to grid and gumbler will to navigation.  The grid and
+navigation classes will need to share much data, as the 'nav mesh' data structures will need to mirror the grid
+layout at all times, and be kept up to date as blocks land and the grid expands and collapses.
+
+diagram.txt shows that it will be the job of navigation.js to effectively 'contain' the gumblers, and drive their
+states for movement and animation.  The order in which I plan to implement the gumbler is much like the description
+of the basic logic for animateGumbler, that I describe below.  This means I will start with the A* pathfinding
+routines.  I remember these were originally quite fun to implement, and a lot of the gumbler logic is driven by the
+calculated path data.  It is also quite visual so easy to determine the correctness of the results (if not so easy
+to actually debug when errors occur!)
+
+22nd November 2017
+
+I have chosen a plan for continued development in the mid term.  I am not going to reuse verbatim the old Gumbler
+animation logic.  I have not re-used existing logic wholesale yet, except for the animation description, which I
+consider data and not logic.  I am first going to work on the grid metadata, describing the various movement related
+areas, creating something equivalent to a navigation mesh. With visual representation of where the gumblers can walk,
+climb, stand and sit, this will be the perfect place to move into the pathfinding logic.  Once that is done, the
+movement directives and state machine will probably come almost automatically by filling in the gaps.
+
+20th November 2017
+
+I've now completed the fishing animation for the gumbler, and it looks pretty good.  I still only have a 'test' scene
+that contains a single gumbler sprite, and not a system to contain multiple sprites yet.  The question now is about
+how much further I take the gumbler classes, without starting to put in place the framework for pathfinding, movement
+and AI.  I'm going to list here all the various logical functions of the old AquaStax2.java handleGumblers method,
+which took care of all little buggers in the original game.  This should hopefully give me a to-do list of sorts:
+
+Local Calculated State:
+
+1) all gumblers drowned
+2) all gumblers rescued
+
+Loop over each active Gumbler:
+
+- Update Sprite at 20fps
+- Set speed factor if climbing
+- Check for state change request (from the level script)
+- If no requested change, call animateGumbler ( --> see below) :
+- Handle drowning
+- Handle exiting
+- Handle exited
+- Handle the disco pickup
+- Check for drowning
+- Check if has reached exit
+- Check for pickups
+- Check for blundering into hazard
+
+animateGumbler
+
+This is the general logic for the gumbler walking, climbing and timeout.  This is a great comment, lifted from the
+original code:
+
+//
+// In general, a Gumbler wants to be positioned on the bottom middle of an empty block, above a solid block.
+// If the block width of the area he's standing upon is 2 blocks or less, he'll wait, standing still, with appropriate timeouts.
+// If the block width is 3 or more blocks wide, he'll wander about.  If he is standing upon a block or platform (but not the ground)
+// with nothing to the side, he might sit down, and even start fishing.
+//
+// He'll only start to climb up a set of blocks when it gets to 2 blocks or higher.  That is, there has to be a block on the square
+// upon which he's positioned, and one above it.  When he gets to the square before the top of a tower, he will hang for a short while
+// and then climb up onto the top of the blocks.
+//
+
+Here's the basic logic for animateGumbler:
+
+- If climbing or walking, run pathfinding to determine direction requirements
+- Determine climb animation based on direction requirements
+- Check for falling (when the stack is collapsed)
+- If knocked off, update based on looping path and falling
++ Handle wakeup of a sleeping gumbler
+- Handle random timeouts for a sitting gumbler
+- Handle the fishing and reeling in
+- Handle hitting platform (and play area) edges and turning around
+
+The combined functions of handleGumblers and animateGumbler total of 1337 lines of code.  That's a lot, for just two
+functions!  Then there is another 411 lines of code, comprising a dozen helper functions such as canWalkOn, waterIsClose
+etc.
+
+I think I will ponder this complexity for a little while before I dive in.  All this code is without any external references
+or libraries.  It is pure, hard coded logic, designed very specifically with the internals of the old game in mind. Although
+it was thoroughly tested, the same logic might not hold up in the new system, but it is a lot to have to re-write from
+scratch.
+
+16th October 2017
+
+Almost one month after I started on the Gumbler Animation System, I'm at a pretty good point to pause and reflect. It
+is working well, with a significant amount of the original intent of the scripted data still in place.  Some simple (ish)
+overrides of the cc.Sprite class (into an aq.Sprite subclass) allow for per frame updating of image (with mirror), sprite
+position and timings.  All the sprite animations still look really great, and hold up well I think. I had some issues
+with getting the sprite position change (movement) correct, with what appeared to be a bug where the first frame after
+a transition would cause double the expected movement. I think this is resolved, however, after reviewing my original
+java baased Spritey tool, I'm not sure the new animations are identical to the original, but the new ones are good
+enough.
+
+The final set of things to do with the animations, before implementing the gumbler AI is to add in the various extra
+effects that were hard coded within the source.  These include the fishing animation with line and fish drawn overlaid
+in top of the sprite, and the drowning animation, with bubbles drawn overlaid.
+
+14th September 2017
+
+After writing my thoughts out in longhand, and thinking over the dilema of the flipped sprite frames for a day on the
+train, I've implemented a really simple mechanism that overrides the cc.Sprite.setSpriteFrame method.  Saving the
+flippedX property within a cc.SpriteFrame object, and setting the property on the Sprite object as the frame is set,
+works a treat.  With sprite frames cached by name, but saved as cc.Animation objects with the correct horizontal flip
+setting, the sprite object itself can handle the horizontal mirroring.
+
+13th September 2017
+
+
+Gumbler Animation System History
+
+I have taken the original Gumbler Animation System data file and converted it to Javascript. The original text definition
+file was a domain specific language, with the processor implemented by a jflex/cup parser. The processor generated pure
+binary data (as arrays) from the animations and processed png image files.
+
+The runtime animation system loaded the binary animation and image data, and presented a state machine for the gumblers,
+handled all the animations and transitions, and rendered the sprites frame by frame.
+
+The complex set of animations, even when encoded at it's highest quality and sprite resolution was still only about
+250kb of data. This was then compressed within .jar files to take up less package space, and at runtime, could be memory
+managed to use minimal heap. When the animations were reduced (automatically) based on some filters, it was possible
+to output a bundle of less than 64kb in size, useable on even the lowest end, extremely memory limited devices of the time.
+
+Modern Sprite Animation with Cocos2D-JS
+
+I decided that attempting to recreate the domain specific language parser and sprite processor in Javascript was not a
+good use of time. I did investigate some parser generators that output Javascript, but the original Java based lexer and
+parser definitions would need almost a complete re-write. I could have kept the processor in Java, just modifying it's output
+to be more relevant to a new animation system, but I think the new system would still have had to be created with all the
+constraints of the original. I want to animate the gumblers in my new game using the modern and comphrensive sprite animation
+features of Cocos2D-JS, and not simply port my 10 year old code.
+
+There is still a lot of useful information within the text based sprite definition data file. With the help of some simple
+editor macros (SlickEdit) I was easily able to convert the data file into syntatically correct Javascript. By implementing
+the various keyword functions like image(), begin_anim(), major_state() etc. I should be able to build a data structure that
+can then be used to generate Cocos2D-JS sprite/node/action animations.
+
+However (Snags)
+
+This is where I am today, writing my thoughts out in long form so I can get clarity on them. I have translated the sprite
+definitions into Javascript, and I have a rudimentary set of functions that can render the animations of a Gumbler. However
+there are some snags I have hit that I must work out.
+
+  1) The original animation definition relied heavily on using images mirrored horizontally. The MIRROR keyword was used
+  at the image level, so individual frames of animations could be mirrored copies of other frames. This does not translate
+  well to sprite frames defined within a TexturePacker created packed texture. Cocos2D-JS/X has the concept of an entire
+  sprite being flipped in the X direction (flippedX), but does not support individual sprite frame textures being flipped.
+
+  2) The original animation system runtime was entirely built from scratch, and hence managed the sprite update entirely
+  by itself. Each game update called the sprite runtime update method, which handled all state changes, movement and frame
+  incrementing based on the delta time for the update. The render method was almost trivial, simply rendering the current
+  frame at it's already calculated position.
+
+  The Cocos2D-JS sprite animation system is built on the concept of an individual cc.Sprite instance running a cc.Animation
+  which is comprised of cc.SpriteFrame instances for the image updating. Alongside this, you create sequences of cc.Action
+  elements and call runAction on the sprite node to perform things like movement, flipping and other transformations.
+
+  All of this happens logically independently of the main game update loop.  Mapping the original animation data to
+  the new system is not quite straightfoward, especially in the areas of individually variable frame times, and sprite
+  frame image mirror/flippedX requirements.
+
+
+BUGS
+
+TO REFACTOR
+99) Rename block or grid functions that only operate on single cells (that is, the 50x50 grid cell sized elements)
+
+
