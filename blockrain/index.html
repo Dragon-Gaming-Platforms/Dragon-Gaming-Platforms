@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockrain.js Tetris</title>
+    
+    <!-- 1. Include BlockRain CSS via jsDelivr CDN -->
+    <link rel="stylesheet" href="blockrain.css">
+
+    <style>
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        /* Define the container size for the Tetris board */
+        .game-container {
+            width: 300px;
+            height: 500px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The target element where the game will render -->
+    <div class="game-container target-game"></div>
+
+    <!-- 2. Include jQuery (Required Dependency) -->
+    <script src="https://jquery.com"></script>
+
+    <!-- 3. Include BlockRain JS via jsDelivr CDN -->
+    <script src="blockrain.jquery.js"></script>
+
+    <!-- 4. Initialize the Game -->
+    <script>
+        $(document).ready(function() {
+            $('.target-game').blockrain({
+                theme: 'candy', // Options: 'candy', 'modern', 'retro', 'vim'
+                autoplay: false,
+                autoplayRestart: true,
+                speed: 20
+            });
+        });
+    </script>
+
+</body>
+</html>
