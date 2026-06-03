@@ -66,8 +66,8 @@ const GAMES_DATA = [
   },
   { 
     "name": "CyberChef", 
-    "path": "./emulators/CyberChef/index.html", 
-    "category": "emulators" 
+    "path": "./other/CyberChef/index.html", 
+    "category": "other" 
   },
   { 
     "name": "EmulatorJS", 
