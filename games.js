@@ -1,6 +1,6 @@
 /* ================================================================
    GAME DATA — edit only this array
-   category: "games" | "emulators" | "browsers"
+   category: "games" | "emulators" | "other"
    path: relative to repo root, e.g. "games/my-game/"
    ================================================================ */
 const GAMES_DATA = [ 
@@ -77,22 +77,22 @@ const GAMES_DATA = [
   { 
     "name": "GUST", 
     "path": "./browsers/GUST.html", 
-    "category": "browsers" 
+    "category": "other" 
   },
   { 
     "name": "Scramjet", 
     "path": "./browsers/Scramjet.html", 
-    "category": "browsers" 
+    "category": "other" 
   },
   {
     "name": "Incognito",
     "path": "./browsers/Incognito.html",
-    "category": "browsers"
+    "category": "other"
   },
   {
     "name": "Interstellar",
     "path": "./browsers/Interstellar.html",
-    "category": "browsers"
+    "category": "other"
   },
   { 
     "name": "Blockrain", 
@@ -203,7 +203,7 @@ const GAMES_DATA = [
   const CATEGORIES = [
     { id: "games",      label: "Games",     icon: "🎮" },
     { id: "emulators",  label: "Emulators", icon: "🕹️" },
-    { id: "browsers",   label: "Browsers",  icon: "🌐" }
+    { id: "other",      label: "Other",     icon: "📦" }
   ];
 
   const REPO_OWNER = 'Dragon-Gaming-Platforms';
@@ -377,7 +377,7 @@ const GAMES_DATA = [
 
   // ---- Build HTML ----
   function cardHTML(item, i) {
-    const icons = { games: "🎮", emulators: "🕹️", browsers: "🌐" };
+    const icons = { games: "🎮", emulators: "🕹️", other: "📦" };
     return `<div class="game-card fade-in" style="transition-delay:${i*0.08}s" data-name="${esc(item.name)}" data-path="${esc(item.path)}">
       <div class="game-card__image"><span class="game-card__placeholder-icon">${icons[item.category]||"🎮"}</span></div>
       <div class="game-card__body">

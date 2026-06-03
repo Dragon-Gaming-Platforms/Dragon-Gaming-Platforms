@@ -52,22 +52,22 @@
   { 
     "name": "GUST", 
     "path": "./browsers/GUST.html", 
-    "category": "browsers" 
+    "category": "other" 
   },
   { 
     "name": "Scramjet", 
     "path": "./browsers/Scramjet.html", 
-    "category": "browsers" 
+    "category": "other" 
   },
   {
     "name": "Incognito",
     "path": "./browsers/Incognito.html",
-    "category": "browsers"
+    "category": "other"
   },
   {
     "name": "Interstellar",
     "path": "./browsers/Interstellar.html",
-    "category": "browsers"
+    "category": "other"
   },
   { 
     "name": "Moto x3m 2", 

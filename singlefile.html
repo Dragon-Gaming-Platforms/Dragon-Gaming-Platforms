@@ -243,7 +243,7 @@ body::after { content: ''; position: fixed; inset: 0; background-image: radial-g
       <ul class="navbar__links" id="navLinks">
         <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#category-games">Games</a></li>
-        <li><a href="#category-browsers">Browsers</a></li>
+        <li><a href="#category-other">Other</a></li>
         <li><a href="#category-emulators">Emulators</a></li>
         <li class="navbar__dropdown" id="dropdownRoot">
           <a href="#" class="navbar__dropdown-toggle" id="dropdownToggle">More ▾</a>
@@ -388,22 +388,22 @@ const GAMES_DATA = [
   { 
     "name": "GUST", 
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/GUST.html", 
-    "category": "browsers" 
+    "category": "other" 
   },
   { 
     "name": "Scramjet", 
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/Scramjet.html", 
-    "category": "browsers" 
+    "category": "other" 
   },
   {
     "name": "Incognito",
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/Incognito.html",
-    "category": "browsers"
+    "category": "other"
   },
   {
     "name": "Interstellar",
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/Interstellar.html",
-    "category": "browsers"
+    "category": "other"
   },
   { 
     "name": "Blockrain", 
@@ -514,7 +514,7 @@ const GAMES_DATA = [
   const CATEGORIES = [
     { id: "games",      label: "Games",     icon: "🎮" },
     { id: "emulators",  label: "Emulators", icon: "🕹️" },
-    { id: "browsers",   label: "Browsers",  icon: "🌐" }
+    { id: "other",      label: "Other",     icon: "📦" }
   ];
 
   const REPO_OWNER = 'Dragon-Gaming-Platforms';
@@ -635,7 +635,7 @@ const GAMES_DATA = [
 
   // HTML Builders
   function cardHTML(item, i) {
-    const icons = { games: "🎮", emulators: "🕹️", browsers: "🌐" };
+    const icons = { games: "🎮", emulators: "🕹️", other: "📦" };
     return `<div class="game-card fade-in" style="transition-delay:${i*0.08}s" data-name="${esc(item.name)}" data-path="${esc(item.path)}">
       <div class="game-card__image"><span class="game-card__placeholder-icon">${icons[item.category]||"🎮"}</span></div>
       <div class="game-card__body">
