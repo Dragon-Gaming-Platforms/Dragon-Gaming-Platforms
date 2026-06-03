@@ -1,4 +1,4 @@
-- **[Bobby](../bobby.md)** (TypeScript, AGPL-3.0, mature)
+- **[Bobby](trilarion/opensourcegames/entries/bobby.md)** (TypeScript, AGPL-3.0, mature)
 - **[Boohu](../boohu.md)** (Go, ISC, beta)
 - **[Boxcars](../boxcars.md)** (Go, AGPL-3.0, mature)
 - **[Breakout 71](../breakout_71.md)** (TypeScript, AGPL-3.0, mature)
