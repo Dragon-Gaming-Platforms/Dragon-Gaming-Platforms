@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crystal Quest</title>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Audiowide|Bungee+Shade' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./crystalQuest.css">
+    <script src="./jquery-2.1.1.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  </head>
+  <body align="center">
+    <div class="big-container">
+      <div id="container">
+        <div id="status-bar"></div>
+        <canvas id="game-canvas" width="780" height="500"></canvas>
+        <menu id="controls"></menu>
+        <br>
+        <info id="info">
+          <instructions class="instructions">
+            <strong style="font-size:20px;">Instructions</strong><br><br>
+            <strong>Collect all the crystals <img src='img/crystal.png' width="15"> and escape out the gate</strong><br>
+            <strong>Don't run into any aliens <img src='img/basic_alien.png' width="18"> or asteroids!</strong><br>
+            <strong>Use your cherry bombs to clear the screen <img src='img/bomb.png' width="15"></strong><br>
+            <strong>Catch the big crystal for a bonus prize</strong>
+          </instructions>
+          <keys class="keys">
+            <strong style="font-size:20px;">Keys</strong><br><br>
+            <strong><code>&#65514;</code> <code>&#65516;</code> <code>&#65515;</code> <code>&#65513;</code>  or <code>w</code> <code>s</code> <code>a</code> <code>d</code> to move</strong><br>
+            <strong><code>r</code> to stop</strong><br>
+            <strong><code>space</code> to shoot</strong><br>
+            <strong><code>shift</code> to FLASHBOMB</strong><br>
+            <strong><code>esc</code> to return to start menu</strong><br>
+          </keys>
+          <div class="other-game">Want to play another game? Try <a href="https://haleymt.github.io/Snake" target="_blank">Snake</a>.</div>
+        </info>
+      </div>
+    </div>
+    <script src="keymaster.js"></script>
+    <script src="lib/utils.js"></script>
+    <script src="lib/clock.js"></script>
+    <script src="lib/movingObject.js"></script>
+    <script src="lib/basicAlien.js"></script>
+    <script src="lib/shooterAlien.js"></script>
+    <script src="lib/blobAlien.js"></script>
+    <script src="lib/computerAlien.js"></script>
+    <script src="lib/CSAlien.js"></script>
+    <script src="lib/XSAlien.js"></script>
+    <script src="lib/fourLegAlien.js"></script>
+    <script src="lib/bulletAlien.js"></script>
+    <script src="lib/laserAlien.js"></script>
+    <script src="lib/ship.js"></script>
+    <script src="lib/bullet.js"></script>
+    <script src="lib/alienBullet.js"></script>
+    <script src="lib/bigCrystal.js"></script>
+    <script src="lib/asteroid.js"></script>
+    <script src="lib/computerHash.js"></script>
+    <script src="lib/crystalPoints.js"></script>
+    <script src="lib/bomb.js"></script>
+    <script src="lib/crystal.js"></script>
+    <script src="lib/points.js"></script>
+    <script src="lib/gate.js"></script>
+    <script src="lib/portal.js"></script>
+    <script src="lib/wave.js"></script>
+    <script src="lib/game.js"></script>
+    <script>
+      var canvas = document.getElementById("game-canvas");
+      var ctx = canvas.getContext("2d");
+      var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      new CrystalQuest.Game(
+        780,
+        500,
+        ctx,
+        audioCtx
+      ).run();
+    </script>
+  </body>
+</html>
