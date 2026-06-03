@@ -5,9 +5,19 @@
    ================================================================ */
 const GAMES_DATA = [ 
   {  
-    "name": "Eaglercraft 1.12.2",
+    "name": "Eaglercraft 1.12.2 WASM",
      "path": "./games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html",
      "category": "games" 
+  },
+  {
+  	"name": "Eaglercraft 1.12.2 JS",
+    "path": "./games/singlefiles/Eaglercraft-JS-1.12.2.html",
+    "category": "games"
+  },
+  {
+  	"name": "Eaglercraft 1.8.8 JS",
+    "path": "./games/singlefiles/Eaglercraft-JS-1.8.8.html",
+    "category": "games"
   },
   { 
     "name": "Recoil",
@@ -40,7 +50,7 @@ const GAMES_DATA = [
     "category": "games" 
   },
   { 
-    "name": "Eaglercraft 1.8.8", 
+    "name": "Eaglercraft 1.8.8 WASM", 
     "path": "./games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html", 
     "category": "games" 
   },
