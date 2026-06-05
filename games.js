@@ -193,6 +193,21 @@ const GAMES_DATA = [
     "name": "Balatro", 
     "path": "./games/singlefiles/Balatro.html", 
     "category": "games" 
+  },
+  { 
+    "name": "CrappyBird", 
+    "path": "./games/CrappyBird/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "CrystalQuest", 
+    "path": "./games/CrystalQuest/index.html", 
+    "category": "games" 
+  },
+  { 
+    "name": "Canvas Tetris", 
+    "path": "./games/canvas-tetris/index.html", 
+    "category": "games" 
   }
 ];
 
