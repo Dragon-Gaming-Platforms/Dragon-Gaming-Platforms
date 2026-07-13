@@ -30,11 +30,6 @@ const GAMES_DATA = [
     "category": "games"
   },
   { 
-    "name": "Drive Mad",
-    "path": "./games/singlefiles/Drive-Mad.html", 
-    "category": "games" 
-  },
-  { 
     "name": "Bloons TD4", 
     "path": "./games/singlefiles/Bloons-TD4.html", 
     "category": "games" 
