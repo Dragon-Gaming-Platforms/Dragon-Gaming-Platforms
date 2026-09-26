@@ -638,7 +638,13 @@ const GAMES_DATA = [
 
   const $ = (s, doc = document) => doc.querySelector(s);
   const $$ = (s, doc = document) => doc.querySelectorAll(s);
-  const esc = (s) => { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; };
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  })[m]);
 
   // ---- State Keys ----
   const KEY_FAVS      = 'dgp_favorites';
@@ -1197,7 +1203,7 @@ const GAMES_DATA = [
     const tagsHTML = item.tags.slice(0, 3).map(t => `<span class="game-card__tag">${esc(t)}</span>`).join('');
 
     return `
-      <div class="game-card fade-in" data-id="${esc(item.id)}">
+      <div class="game-card" data-id="${esc(item.id)}">
         <div class="game-card__image">
           <span class="game-card__badge">${esc(item.badge || item.category)}</span>
           <button class="game-card__fav-btn ${isFav ? 'is-fav' : ''}" title="${isFav ? 'Remove Favorite' : 'Add to Favorites'}" data-fav-id="${esc(item.id)}">
@@ -1308,7 +1314,7 @@ const GAMES_DATA = [
       let favsSection = '';
       if (favs.length) {
         favsSection = `
-          <section class="category-section fade-in" id="category-favorites">
+          <section class="category-section" id="category-favorites">
             <div class="section-header">
               <span class="section-icon">⭐</span>
               <h2 class="section-title">Favorites</h2>
@@ -1322,7 +1328,7 @@ const GAMES_DATA = [
       let recentsSection = '';
       if (recents.length) {
         recentsSection = `
-          <section class="category-section fade-in" id="category-recent">
+          <section class="category-section" id="category-recent">
             <div class="section-header">
               <span class="section-icon">🕒</span>
               <h2 class="section-title">Recently Played</h2>
@@ -1337,7 +1343,7 @@ const GAMES_DATA = [
       const catSections = CATEGORIES.map(cat => {
         const catItems = GAMES_DATA.filter(g => g.category === cat.id);
         return `
-          <section class="category-section fade-in" id="category-${cat.id}">
+          <section class="category-section" id="category-${cat.id}">
             <div class="section-header">
               <span class="section-icon">${cat.icon}</span>
               <h2 class="section-title">${cat.label}</h2>
@@ -1351,7 +1357,7 @@ const GAMES_DATA = [
       content = favsSection + recentsSection + catSections;
     } else {
       content = `
-        <section class="category-section fade-in">
+        <section class="category-section">
           <div class="games-grid">${list.map(cardHTML).join('')}</div>
         </section>
       `;
@@ -1384,8 +1390,6 @@ const GAMES_DATA = [
 
     const resetBtn = $('#resetFiltersBtn');
     if (resetBtn) resetBtn.addEventListener('click', resetFilters);
-
-    $$('.fade-in', gridRoot).forEach(el => observer.observe(el));
   }
 
   function resetFilters() {
@@ -1460,7 +1464,7 @@ const GAMES_DATA = [
     const panicUrl = getPanicUrl();
 
     return `
-      <section class="settings-section fade-in" id="settings">
+      <section class="settings-section" id="settings">
         <div class="container">
           <div class="section-header">
             <span class="section-icon">⚙️</span>
@@ -1620,7 +1624,7 @@ const GAMES_DATA = [
   // ---- Download Section HTML ----
   function downloadHTML() {
     return `
-      <section class="download-section fade-in" id="download">
+      <section class="download-section" id="download">
         <div class="container">
           <div class="section-header">
             <span class="section-icon">⬇️</span>
@@ -1706,16 +1710,6 @@ const GAMES_DATA = [
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-
-  // ---- Scroll reveal ----
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
 
   // ---- Keyboard Shortcuts Controller ----
   function initKeyboardShortcuts() {
