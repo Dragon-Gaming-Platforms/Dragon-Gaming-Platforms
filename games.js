@@ -614,6 +614,406 @@ const GAMES_DATA = [
     badge: "Browser",
     desc: "High-performance web proxy client built on modern service worker proxy technologies.",
     controls: "Enter URL or search keyword into the navigation search bar"
+  },
+  {
+    id: "chip8-emulator",
+    name: "CHIP-8 Virtual Machine",
+    path: "./emulators/chip8/index.html",
+    category: "emulators",
+    tags: ["Emulator","Retro","CHIP-8","Arcade"],
+    badge: "Retro",
+    desc: "Classic CHIP-8 virtual machine emulator with 24 built-in retro games including Pong, Space Invaders, Brix, and Tetris.",
+    controls: "Keyboard: Hex keypad (1-4, Q-R, A-F, Z-V) | Select ROM from dropdown menu"
+  },
+  {
+    id: "binjgb-emulator",
+    name: "binjgb Game Boy Emulator",
+    path: "./emulators/binjgb/index.html",
+    category: "emulators",
+    tags: ["Emulator","GameBoy","GBC","WASM","Retro"],
+    badge: "WASM",
+    desc: "High-performance Game Boy and Game Boy Color WASM emulator with built-in Porklike roguelike and drag-and-drop ROM loading.",
+    controls: "Arrow Keys: D-Pad | Z: A Button | X: B Button | Enter: Start | Shift: Select"
+  },
+  {
+    id: "eaglercraft-1-5-2",
+    name: "Eaglercraft 1.5.2 Offline",
+    path: "./games/singlefiles/Eaglercraft-1.5.2-Offline.html",
+    category: "games",
+    tags: ["Sandbox","Survival","3D","Minecraft"],
+    badge: "3D",
+    desc: "Classic Minecraft 1.5.2 running completely offline in your browser with singleplayer and world saves.",
+    controls: "WASD: Move | Space: Jump | Left Click: Mine / Attack | Right Click: Place | E: Inventory | Esc: Pause"
+  },
+  {
+    id: "eaglercraft-beta-1-3",
+    name: "Eaglercraft Beta 1.3 Offline",
+    path: "./games/singlefiles/Eaglercraft-Beta-1.3-Offline.html",
+    category: "games",
+    tags: ["Sandbox","Survival","Retro","Minecraft"],
+    badge: "Retro",
+    desc: "Nostalgic Minecraft Beta 1.3 offline edition featuring original terrain generation and retro gameplay.",
+    controls: "WASD: Move | Space: Jump | Left Click: Mine / Attack | Right Click: Place | E: Inventory"
+  },
+  {
+    id: "eaglercraft-alpha-1-2-6",
+    name: "Eaglercraft Alpha 1.2.6 Offline",
+    path: "./games/singlefiles/Eaglercraft-Alpha-1.2.6-Offline.html",
+    category: "games",
+    tags: ["Sandbox","Survival","Retro","Minecraft"],
+    badge: "Retro",
+    desc: "Classic Minecraft Alpha 1.2.6 running offline with vintage mechanics, Halloween update terrain, and early survival.",
+    controls: "WASD: Move | Space: Jump | Left Click: Mine / Attack | Right Click: Place | I: Inventory"
+  },
+  {
+    id: "eaglercraft-indev",
+    name: "Eaglercraft Indev Offline",
+    path: "./games/singlefiles/Eaglercraft-Indev-Offline.html",
+    category: "games",
+    tags: ["Sandbox","Retro","Minecraft"],
+    badge: "Retro",
+    desc: "Very early Indev edition of Minecraft running directly in your browser with classic isometric blocks.",
+    controls: "WASD: Move | Space: Jump | Left Click: Break | Right Click: Build"
+  },
+  {
+    id: "escape-road-2",
+    name: "Escape Road 2",
+    path: "./games/singlefiles/Escape-Road-2.html",
+    category: "games",
+    tags: ["Driving","3D","Action","Arcade"],
+    badge: "3D",
+    desc: "High-octane police getaway chase game with upgraded 3D city physics, explosive powerups, and new vehicles.",
+    controls: "A/D or Left/Right Arrow Keys: Steer | Space: Drift / Boost"
+  },
+  {
+    id: "slow-roads",
+    name: "Slow Roads 3D",
+    path: "./games/singlefiles/Slow-Roads.html",
+    category: "games",
+    tags: ["Driving","3D","Casual","Relaxing"],
+    badge: "3D",
+    desc: "Anslo procedural 3D endless scenic driving game with dynamic weather, day/night cycles, and atmospheric music.",
+    controls: "WASD or Arrow Keys: Drive & Steer | Space: Handbrake | C: Change Camera | R: Reset"
+  },
+  {
+    id: "sandboxels",
+    name: "Sandboxels",
+    path: "./games/singlefiles/Sandboxels.html",
+    category: "games",
+    tags: ["Sandbox","Physics","Simulation","Science"],
+    badge: "Sim",
+    desc: "R74n cellular automata sandbox game with hundreds of interacting chemical elements, heat, electricity, and life.",
+    controls: "Mouse: Select element & Paint | Scroll: Brush size | Space: Pause simulation"
+  },
+  {
+    id: "operius",
+    name: "Operius 3D",
+    path: "./games/singlefiles/Operius.html",
+    category: "games",
+    tags: ["Shooter","3D","Arcade","Action","Sci-Fi"],
+    badge: "3D",
+    desc: "Fast-paced cylindrical 3D vector tube arcade shooter with intense synthwave beats and neon enemies.",
+    controls: "A/D or Left/Right Arrow Keys: Rotate around tube | Space or Up Arrow: Shoot"
+  },
+  {
+    id: "survev-io",
+    name: "Survev.io",
+    path: "./games/singlefiles/Survev-io.html",
+    category: "games",
+    tags: ["Action","Shooter","Survival","Multiplayer"],
+    badge: "Action",
+    desc: "Top-down 2D battle royale survival shooter. Loot weapons, break crates, avoid the red zone, and be the last survivor.",
+    controls: "WASD: Move | Mouse: Aim & Shoot | F: Interact / Loot | 1-4: Switch Weapons | R: Reload"
+  },
+  {
+    id: "territorial-io",
+    name: "Territorial.io",
+    path: "./games/singlefiles/Territorial-io.html",
+    category: "games",
+    tags: ["Strategy","Tactical","Multiplayer","Casual"],
+    badge: "Strategy",
+    desc: "Fast-paced real-time territory conquest strategy game. Expand your empire and outmaneuver rival armies.",
+    controls: "Mouse: Click territory to attack / expand | Adjust troop percentage slider"
+  },
+  {
+    id: "geometry-dash-scratch",
+    name: "Geometry Dash Scratch",
+    path: "./games/singlefiles/Geometry-Dash-Scratch.html",
+    category: "games",
+    tags: ["Platformer","Rhythm","Music","Arcade"],
+    badge: "Rhythm",
+    desc: "Griffpatch rhythm platformer recreation featuring stereo tracks, jump rings, and high-speed gravity portals.",
+    controls: "Space / Up Arrow / Left Click: Jump & Fly | P: Pause"
+  },
+  {
+    id: "cat-mario",
+    name: "Cat Mario (Syobon Action)",
+    path: "./games/singlefiles/Cat-Mario.html",
+    category: "games",
+    tags: ["Platformer","Puzzle","Retro","Comedy"],
+    badge: "Retro",
+    desc: "The infamous Japanese comedy rage platformer filled with unexpected traps, invisible blocks, and flying trolls.",
+    controls: "Arrow Keys: Move & Jump | O: Self-Destruct | Esc: Pause"
+  },
+  {
+    id: "paper-io-3d",
+    name: "Paper.io 3D",
+    path: "./games/singlefiles/Paper-io-3D.html",
+    category: "games",
+    tags: ["Action","3D","Arcade","Casual"],
+    badge: "3D",
+    desc: "Capture territory across 3D geometric shapes by painting your trail and enclosing land while defending your tail.",
+    controls: "Mouse or Arrow Keys: Steer your painter"
+  },
+  {
+    id: "we-become-what-we-behold",
+    name: "We Become What We Behold",
+    path: "./games/wbwwb/index.html",
+    category: "games",
+    tags: ["Story","Simulation","Indie","Casual"],
+    badge: "Story",
+    desc: "Nicky Case 5-minute viral interactive game about news cycles, social media, cameras, and how stories shape human behavior.",
+    controls: "Mouse: Aim viewfinder & Click to snap photographs"
+  },
+  {
+    id: "evolution-of-trust",
+    name: "The Evolution of Trust",
+    path: "./games/trust/index.html",
+    category: "games",
+    tags: ["Strategy","Simulation","Indie","Educational"],
+    badge: "Indie",
+    desc: "Nicky Case interactive exploration of game theory, the Prisoner Dilemma, and why we cooperate or betray.",
+    controls: "Mouse: Click choices and interact with the simulation"
+  },
+  {
+    id: "parable-of-polygons",
+    name: "Parable of the Polygons",
+    path: "./games/polygons/index.html",
+    category: "games",
+    tags: ["Simulation","Indie","Educational"],
+    badge: "Sim",
+    desc: "Vi Hart & Nicky Case playable post about the mechanics of diversity, individual bias, and systemic patterns.",
+    controls: "Mouse: Drag and move unhappy shapes until they feel comfortable"
+  },
+  {
+    id: "javascript-racer",
+    name: "OutRun 3D Javascript Racer",
+    path: "./games/racer/index.html",
+    category: "games",
+    tags: ["Driving","3D","Retro","Arcade"],
+    badge: "Retro",
+    desc: "Jake Gordon classic pseudo-3D OutRun arcade racing game with music tracks, steep hills, tight curves, and rival cars.",
+    controls: "Up Arrow: Accelerate | Down Arrow: Brake | Left/Right: Steer | M: Toggle Music"
+  },
+  {
+    id: "tiny-platformer",
+    name: "Tiny Platformer",
+    path: "./games/platformer/index.html",
+    category: "games",
+    tags: ["Platformer","Retro","Arcade"],
+    badge: "Retro",
+    desc: "Jake Gordon retro tile-based physics platformer with smooth jumps, collectibles, and level challenges.",
+    controls: "Arrow Keys: Move & Jump | Space: Action"
+  },
+  {
+    id: "javascript-snakes",
+    name: "Retro Snakes",
+    path: "./games/snakes/index.html",
+    category: "games",
+    tags: ["Arcade","Casual","Retro"],
+    badge: "Classic",
+    desc: "Jake Gordon smooth multi-mode classic snake with custom speeds, obstacle walls, and score tracking.",
+    controls: "Arrow Keys: Steer Snake | Space: Pause / Resume"
+  },
+  {
+    id: "floppy-bird",
+    name: "Floppy Bird",
+    path: "./games/floppybird/index.html",
+    category: "games",
+    tags: ["Arcade","Casual","Retro"],
+    badge: "Arcade",
+    desc: "Nebez Briefkani pixel-perfect Flappy Bird recreation with sound effects and responsive physics.",
+    controls: "Space / Click / Tap: Flap wings"
+  },
+  {
+    id: "flappy-bird-canvas",
+    name: "Flappy Bird Canvas",
+    path: "./games/flappy-canvas/index.html",
+    category: "games",
+    tags: ["Arcade","Casual","Retro"],
+    badge: "Arcade",
+    desc: "Smooth HTML5 Canvas Flappy Bird with high score tracker, retro audio, and medals.",
+    controls: "Space or Click: Flap wings"
+  },
+  {
+    id: "sight-and-light",
+    name: "Sight & Light",
+    path: "./games/sight-and-light/index.html",
+    category: "games",
+    tags: ["Puzzle","Physics","Indie"],
+    badge: "Indie",
+    desc: "Nicky Case interactive 2D raycasting and dynamic light exploration game.",
+    controls: "Mouse: Move light source | Click to interact"
+  },
+  {
+    id: "pacman-dh",
+    name: "Classic Pacman Canvas",
+    path: "./games/pacman-dh/index.html",
+    category: "games",
+    tags: ["Arcade","Retro","Classic"],
+    badge: "Retro",
+    desc: "Dale Harvey accurate HTML5 canvas recreation of the original Pacman arcade classic with ghost AI and authentic sounds.",
+    controls: "Arrow Keys or WASD: Move Pacman | N: New Game | P: Pause"
+  },
+  {
+    id: "there-is-no-game",
+    name: "There Is No Game",
+    path: "./games/singlefiles/There-Is-No-Game.html",
+    category: "games",
+    tags: ["Puzzle","Comedy","Indie","Story"],
+    badge: "Indie",
+    desc: "Pascal Cammisotto award-winning meta comedy puzzle game. Whatever you do, do NOT play this non-game.",
+    controls: "Mouse: Click, drag, and interact with the narrator elements"
+  },
+  {
+    id: "tanuki-sunset",
+    name: "Tanuki Sunset",
+    path: "./games/singlefiles/Tanuki-Sunset.html",
+    category: "games",
+    tags: ["Driving","3D","Arcade","Retro"],
+    badge: "3D",
+    desc: "Vaporwave downhill longboard skating raccoon cruising down scenic coastal roads to relaxing synth beats.",
+    controls: "A/D or Left/Right: Steer | S or Down: Drift / 180 Spin | Space: Boost"
+  },
+  {
+    id: "big-tower-tiny-square",
+    name: "Big Tower Tiny Square",
+    path: "./games/singlefiles/Big-Tower-Tiny-Square.html",
+    category: "games",
+    tags: ["Platformer","Action","Arcade"],
+    badge: "Platformer",
+    desc: "Precision platformer where you guide a tiny square through a giant single-screen obstacle tower to rescue a pineapple.",
+    controls: "A/D or Left/Right Arrow Keys: Move | Space or Up Arrow: Jump | Z: Restart checkpoint"
+  },
+  {
+    id: "awesome-tanks-1",
+    name: "Awesome Tanks",
+    path: "./games/singlefiles/Awesome-Tanks.html",
+    category: "games",
+    tags: ["Action","Shooter","Tanks","Arcade"],
+    badge: "Action",
+    desc: "Top-down tactical tank shooter. Destroy enemy turrets, collect coins, and upgrade your armor, lasers, and cannons.",
+    controls: "WASD: Drive tank | Mouse: Aim turret & Shoot"
+  },
+  {
+    id: "vex-3",
+    name: "Vex 3",
+    path: "./games/singlefiles/Vex-3.html",
+    category: "games",
+    tags: ["Platformer","Parkour","Action","Stickman"],
+    badge: "Parkour",
+    desc: "The classic stickman obstacle course platformer with wall jumping, ziplines, and razor-sharp saws.",
+    controls: "WASD or Arrow Keys: Run, Jump, Crouch, Slide"
+  },
+  {
+    id: "vex-4",
+    name: "Vex 4",
+    path: "./games/singlefiles/Vex-4.html",
+    category: "games",
+    tags: ["Platformer","Parkour","Action","Stickman"],
+    badge: "Parkour",
+    desc: "Fourth chapter of the Vex parkour saga with 9 action-packed acts and challenging Challenge Rooms.",
+    controls: "WASD or Arrow Keys: Move, Jump, Swim, Slide"
+  },
+  {
+    id: "vex-5",
+    name: "Vex 5",
+    path: "./games/singlefiles/Vex-5.html",
+    category: "games",
+    tags: ["Platformer","Parkour","Action","Stickman"],
+    badge: "Parkour",
+    desc: "Fifth installment in the Vex franchise with death-defying stunts, laser cannons, and timed levels.",
+    controls: "WASD or Arrow Keys: Run, Climb, Jump, Slide"
+  },
+  {
+    id: "vex-6",
+    name: "Vex 6",
+    path: "./games/singlefiles/Vex-6.html",
+    category: "games",
+    tags: ["Platformer","Parkour","Action","Stickman"],
+    badge: "Parkour",
+    desc: "Featuring unlockable character skins, daily bonus stages, and 9 brand new high-difficulty obstacle courses.",
+    controls: "WASD or Arrow Keys: Move, Jump, Slide"
+  },
+  {
+    id: "vex-7",
+    name: "Vex 7",
+    path: "./games/singlefiles/Vex-7.html",
+    category: "games",
+    tags: ["Platformer","Parkour","Action","Stickman"],
+    badge: "Parkour",
+    desc: "Master high-speed stickman acrobatics, glide past surveillance drones, and collect gold stars.",
+    controls: "WASD or Arrow Keys: Move, Jump, Slide, Wall-Jump"
+  },
+  {
+    id: "basket-random",
+    name: "Basket Random",
+    path: "./games/singlefiles/Basket-Random.html",
+    category: "games",
+    tags: ["Sports","Physics","2-Player","Arcade"],
+    badge: "Sports",
+    desc: "Hilarious 2-player ragdoll basketball game with bouncy physics, changing courts, and random balls.",
+    controls: "Player 1: W | Player 2: Up Arrow | Tap on touch devices"
+  },
+  {
+    id: "boxing-random",
+    name: "Boxing Random",
+    path: "./games/singlefiles/Boxing-Random.html",
+    category: "games",
+    tags: ["Sports","Physics","2-Player","Action"],
+    badge: "Action",
+    desc: "Physics-based ragdoll boxing duel. Land headshots across snowy rings, rooftops, and stormy arenas.",
+    controls: "Player 1: W | Player 2: Up Arrow | Tap to jump and punch"
+  },
+  {
+    id: "volley-random",
+    name: "Volley Random",
+    path: "./games/singlefiles/Volley-Random.html",
+    category: "games",
+    tags: ["Sports","Physics","2-Player","Arcade"],
+    badge: "Sports",
+    desc: "Ragdoll volleyball chaos with dynamic gravity, different ball types, and sun-soaked beach physics.",
+    controls: "Player 1: W | Player 2: Up Arrow | Tap to jump and spike"
+  },
+  {
+    id: "time-shooter-2",
+    name: "Time Shooter 2",
+    path: "./games/singlefiles/Time-Shooter-2.html",
+    category: "games",
+    tags: ["Shooter","3D","Action","Tactical"],
+    badge: "3D",
+    desc: "First-person tactical shooter where time only moves when you move. Dodge bullets and eliminate targets.",
+    controls: "WASD: Move | Mouse: Aim & Shoot | Right Click: Throw weapon"
+  },
+  {
+    id: "time-shooter-3",
+    name: "Time Shooter 3: SWAT",
+    path: "./games/singlefiles/Time-Shooter-3.html",
+    category: "games",
+    tags: ["Shooter","3D","Action","Tactical"],
+    badge: "3D",
+    desc: "SWAT breach and hostage rescue mission with slow-motion mechanics and ballistic shields.",
+    controls: "WASD: Move | Mouse: Aim & Shoot | Right Click: Pick Up / Throw"
+  },
+  {
+    id: "temple-of-boom",
+    name: "Temple of Boom",
+    path: "./games/singlefiles/Temple-of-Boom.html",
+    category: "games",
+    tags: ["Action","Platformer","2-Player","Shooter"],
+    badge: "Action",
+    desc: "Fast-paced platform survival shooter. Fight endless monster waves or duel a friend in 2-player mode.",
+    controls: "Player 1: WASD + E/C | Player 2: Arrow Keys + K/L"
   }
 ];
 
@@ -638,7 +1038,13 @@ const GAMES_DATA = [
 
   const $ = (s, doc = document) => doc.querySelector(s);
   const $$ = (s, doc = document) => doc.querySelectorAll(s);
-  const esc = (s) => { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; };
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  })[m]);
 
   // ---- State Keys ----
   const KEY_FAVS      = 'dgp_favorites';
@@ -1197,7 +1603,7 @@ const GAMES_DATA = [
     const tagsHTML = item.tags.slice(0, 3).map(t => `<span class="game-card__tag">${esc(t)}</span>`).join('');
 
     return `
-      <div class="game-card fade-in" data-id="${esc(item.id)}">
+      <div class="game-card" data-id="${esc(item.id)}">
         <div class="game-card__image">
           <span class="game-card__badge">${esc(item.badge || item.category)}</span>
           <button class="game-card__fav-btn ${isFav ? 'is-fav' : ''}" title="${isFav ? 'Remove Favorite' : 'Add to Favorites'}" data-fav-id="${esc(item.id)}">
@@ -1308,7 +1714,7 @@ const GAMES_DATA = [
       let favsSection = '';
       if (favs.length) {
         favsSection = `
-          <section class="category-section fade-in" id="category-favorites">
+          <section class="category-section" id="category-favorites">
             <div class="section-header">
               <span class="section-icon">⭐</span>
               <h2 class="section-title">Favorites</h2>
@@ -1322,7 +1728,7 @@ const GAMES_DATA = [
       let recentsSection = '';
       if (recents.length) {
         recentsSection = `
-          <section class="category-section fade-in" id="category-recent">
+          <section class="category-section" id="category-recent">
             <div class="section-header">
               <span class="section-icon">🕒</span>
               <h2 class="section-title">Recently Played</h2>
@@ -1337,7 +1743,7 @@ const GAMES_DATA = [
       const catSections = CATEGORIES.map(cat => {
         const catItems = GAMES_DATA.filter(g => g.category === cat.id);
         return `
-          <section class="category-section fade-in" id="category-${cat.id}">
+          <section class="category-section" id="category-${cat.id}">
             <div class="section-header">
               <span class="section-icon">${cat.icon}</span>
               <h2 class="section-title">${cat.label}</h2>
@@ -1351,7 +1757,7 @@ const GAMES_DATA = [
       content = favsSection + recentsSection + catSections;
     } else {
       content = `
-        <section class="category-section fade-in">
+        <section class="category-section">
           <div class="games-grid">${list.map(cardHTML).join('')}</div>
         </section>
       `;
@@ -1384,8 +1790,6 @@ const GAMES_DATA = [
 
     const resetBtn = $('#resetFiltersBtn');
     if (resetBtn) resetBtn.addEventListener('click', resetFilters);
-
-    $$('.fade-in', gridRoot).forEach(el => observer.observe(el));
   }
 
   function resetFilters() {
@@ -1460,7 +1864,7 @@ const GAMES_DATA = [
     const panicUrl = getPanicUrl();
 
     return `
-      <section class="settings-section fade-in" id="settings">
+      <section class="settings-section" id="settings">
         <div class="container">
           <div class="section-header">
             <span class="section-icon">⚙️</span>
@@ -1620,7 +2024,7 @@ const GAMES_DATA = [
   // ---- Download Section HTML ----
   function downloadHTML() {
     return `
-      <section class="download-section fade-in" id="download">
+      <section class="download-section" id="download">
         <div class="container">
           <div class="section-header">
             <span class="section-icon">⬇️</span>
@@ -1706,16 +2110,6 @@ const GAMES_DATA = [
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-
-  // ---- Scroll reveal ----
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
 
   // ---- Keyboard Shortcuts Controller ----
   function initKeyboardShortcuts() {
