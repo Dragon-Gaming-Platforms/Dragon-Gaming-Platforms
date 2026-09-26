@@ -1,0 +1,37 @@
+{
+  "name": "SkiFree.js",
+  "version": "0.1.0",
+  "type": "module",
+  "author": "Dan Hough <daniel.hough@gmail.com>",
+  "description": "A browser-based SkiFree port",
+  "contributors": [
+    {
+      "name": "Daniel Hough",
+      "email": "daniel.hough@gmail.com",
+      "url": "https://danhough.com"
+    },
+    {
+      "name": "tomgrim",
+      "url": "https://github.com/tomgrim"
+    },
+    {
+      "name": "andersevenrud",
+      "url": "https://github.com/andersevenrud"
+    }
+  ],
+  "scripts": {
+    "dev": "esbuild js/main.js --bundle --outfile=dist/skifree.js --define:global=globalThis --watch",
+    "build": "esbuild js/main.js --bundle --outfile=dist/skifree.js --define:global=globalThis --minify",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "esbuild": "latest",
+    "vitest": "latest"
+  },
+  "dependencies": {
+    "br-mousetrap": "~1.1.3",
+    "events": "^3.3.0",
+    "hammerjs": "git://github.com/EightMedia/hammer.js"
+  }
+}
