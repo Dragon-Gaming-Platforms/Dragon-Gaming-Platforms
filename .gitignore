@@ -4,3 +4,11 @@
 # These files are for my reference so it does not need to be added to the repository.
 games.json
 games-to-add.md
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+.vs/
+.vscode/
+.cursor/
