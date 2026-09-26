@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A website for playing free games online,  including emulators and classic titles. Dragon Gaming Platforms offers a wide selection of games across various genres, allowing users to enjoy nostalgic gaming experiences directly from their browsers." />
-  <meta name="keywords" content="games, game site, gaming site, unblocked games, unbl0ked games, free online games, browser gaming, emulators, classic games, retro gaming, play games online, gaming platforms, nostalgic games, web-based games" />
+  <meta name="description" content="A website for playing free games online, including emulators and classic titles. Dragon Gaming Platforms offers a wide selection of games across various genres, allowing users to enjoy nostalgic gaming experiences directly from their browsers." />
+  <meta name="keywords" content="games, game site, gaming site, unblocked games, free online games, browser gaming, emulators, classic games, retro gaming, play games online, gaming platforms, nostalgic games, web-based games, wasm games, eaglercraft, balatro" />
   <meta name="author" content="Dragon Gaming Platforms" />
   <title>Dragon Gaming Platforms</title>
   <link rel="icon" type="image/png" href="assets/dragon-login.png">
@@ -19,10 +19,17 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       
-      <button class="navbar__cloak-btn" id="cloakBtn" title="Open in Cloaked Tab">
-        <span class="navbar__cloak-icon">🛡️</span>
-        <span class="navbar__cloak-text">Cloaked Tab</span>
-      </button>
+      <div class="navbar__left-actions">
+        <button class="navbar__cloak-btn" id="cloakBtn" title="Open in Cloaked Tab (about:blank)">
+          <span class="navbar__cloak-icon">🛡️</span>
+          <span class="navbar__cloak-text">Cloaked Tab</span>
+        </button>
+
+        <button class="navbar__panic-btn" id="panicBtn" title="Panic Button (Emergency Redirect)">
+          <span>🚨</span>
+          <span class="navbar__panic-text">Panic</span>
+        </button>
+      </div>
 
       <a href="#" class="navbar__brand">
         <img class="navbar__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
@@ -31,14 +38,14 @@
       
       <ul class="navbar__links" id="navLinks">
         <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#category-games">Games</a></li>
-        <li><a href="#category-other">Other</a></li>
-        <li><a href="#category-emulators">Emulators</a></li>
+        <li><a href="#filterBarRoot" class="nav-section-link">Games (46)</a></li>
+        <li><a href="#category-emulators" class="nav-section-link">Emulators</a></li>
+        <li><a href="#category-other" class="nav-section-link">Tools</a></li>
         <li class="navbar__dropdown" id="dropdownRoot">
           <a href="#" class="navbar__dropdown-toggle" id="dropdownToggle">More ▾</a>
           <ul class="navbar__dropdown-menu" id="dropdownMenu">
             <li><a href="#download" class="nav-section-link">Download</a></li>
-            <li><a href="#settings" class="nav-section-link">Settings</a></li>
+            <li><a href="#settings" class="nav-section-link">Settings & Cloak</a></li>
           </ul>
         </li>
       </ul>
@@ -56,39 +63,79 @@
       <img class="hero__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
       <div class="hero__line"></div>
       <h1 class="hero__title"><span class="highlight">Dragon</span> Gaming<br />Platforms</h1>
-      <p class="hero__subtitle">Your gateway to the ultimate gaming experience. Load, launch, and dominate.</p>
-      <a href="#category-games" class="hero__cta" id="browseGamesBtn">▶ Browse All</a>
+      <p class="hero__subtitle">Your gateway to the ultimate web gaming experience. Play 46 classic games, emulators, and unblocked tools directly from your browser.</p>
+      
+      <div class="hero__cta-group">
+        <a href="#filterBarRoot" class="hero__cta" id="browseGamesBtn">▶ Explore Library</a>
+        <button class="hero__cta hero__cta--secondary" id="heroRandomBtn">🎲 Random Game</button>
+      </div>
     </div>
   </section>
 
-  <!-- MAIN CONTENT SECTIONS -->
-  <div id="categoriesRoot">
-    <div class="loading-state" id="loadingState">
-      <div class="loading-state__spinner"></div>
-      <div class="loading-state__text">Loading library…</div>
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+    <!-- Filter, Search & Discovery Controls -->
+    <div id="filterBarRoot"></div>
+
+    <!-- Games Library Grid & Shelf Views -->
+    <div id="catalogRoot">
+      <div class="loading-state" id="loadingState">
+        <div class="loading-state__spinner"></div>
+        <div class="loading-state__text">Loading library…</div>
+      </div>
     </div>
-  </div>
-  <div id="mainContent"></div>
-  <div id="downloadRoot"></div>
-  <div id="settingsRoot"></div>
+
+    <!-- Additional Dynamic Sections -->
+    <div id="downloadRoot"></div>
+    <div id="settingsRoot"></div>
+  </main>
 
   <!-- GAME VIEWER OVERLAY -->
   <div class="game-viewer" id="gameViewer">
     <div class="game-viewer__backdrop" id="viewerBackdrop"></div>
     <div class="game-viewer__window" id="viewerWindow">
       <div class="game-viewer__toolbar">
-        <span class="game-viewer__game-name" id="viewerGameName">—</span>
-        <button class="game-viewer__close" id="viewerClose">
-          <span class="game-viewer__close-icon">✕</span> Close
-        </button>
+        <div class="game-viewer__meta">
+          <span class="game-viewer__game-name" id="viewerGameName">—</span>
+          <span class="game-viewer__game-badge" id="viewerGameBadge">Game</span>
+        </div>
+
+        <div class="game-viewer__actions">
+          <button class="game-viewer__btn" id="viewerFavBtn" title="Toggle Favorite">
+            <span>☆</span> <span class="game-viewer__btn-text">Favorite</span>
+          </button>
+          <button class="game-viewer__btn" id="viewerControlsBtn" title="Game Controls & Info">
+            <span>ℹ️</span> <span class="game-viewer__btn-text">Controls</span>
+          </button>
+          <button class="game-viewer__btn" id="viewerRestartBtn" title="Restart Game">
+            <span>🔄</span> <span class="game-viewer__btn-text">Restart</span>
+          </button>
+          <button class="game-viewer__btn" id="viewerPopoutBtn" title="Open in New Window / Tab">
+            <span>↗️</span> <span class="game-viewer__btn-text">Popout</span>
+          </button>
+          <button class="game-viewer__btn" id="viewerFullscreenBtn" title="Toggle Fullscreen">
+            <span>⛶</span> <span class="game-viewer__btn-text">Fullscreen</span>
+          </button>
+          <button class="game-viewer__btn game-viewer__btn--close" id="viewerClose" title="Close Game (Esc)">
+            <span>✕</span> <span class="game-viewer__btn-text">Close</span>
+          </button>
+        </div>
       </div>
+
       <div class="game-viewer__iframe-wrapper">
         <div class="game-viewer__loading" id="viewerLoading">
           <div class="loading-state__spinner"></div>
-          <span class="game-viewer__loading-text">Launching…</span>
+          <span class="game-viewer__loading-text">Launching game environment…</span>
         </div>
-        <iframe class="game-viewer__iframe" id="viewerIframe" title="Game" loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <!-- Controls Info Popup Card inside Viewer -->
+        <div class="game-viewer__controls-card" id="viewerControlsCard">
+          <div class="game-viewer__controls-title">Controls & Instructions</div>
+          <div class="game-viewer__controls-text" id="viewerControlsText">Use WASD or Arrow Keys to control.</div>
+        </div>
+
+        <iframe class="game-viewer__iframe" id="viewerIframe" title="Dragon Game Viewer" loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; gamepad; fullscreen" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -100,7 +147,7 @@
         <img class="footer__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
         <span class="footer__name">Dragon Gaming Platforms</span>
       </div>
-      <p class="footer__copy">© 2026 Dragon Gaming Platforms. All rights reserved.</p>
+      <p class="footer__copy">© 2026 Dragon Gaming Platforms. Open Source Web Gaming.</p>
     </div>
   </footer>
 

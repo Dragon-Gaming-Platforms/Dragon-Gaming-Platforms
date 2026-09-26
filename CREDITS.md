@@ -1,13 +1,47 @@
 # Credits
     
-There are *so* many games and services that have gone into the development of this website. Here are a few:
+Dragon Gaming Platforms is built with and powered by an incredible ecosystem of open-source games, web technologies, and emulators:
 
-- Eruda Developer Consle
-- [HexGL](http://github.com/bkcore/HexGL/)
-- [Ultimate Game Stash](https://drive.google.com/drive/folders/1ou3mI5xJVQv8Vt_MvwejPtf7zStSnU-s?usp=drive_link)
+### Core Tools & Engines
+- [Eruda Developer Console](https://github.com/liriliri/eruda) (MIT)
+- [EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) (GPL-3.0)
+- [AnuraOS](https://github.com/MercuryWorkshop/anuraOS) (AGPL-3.0)
+- [CyberChef](https://github.com/gchq/CyberChef) (Apache-2.0)
 - [Scramjet](https://github.com/mercuryworkshop/scramjet)
 - [Interstellar](https://github.com/useinterstellar/interstellar)
 - [Incognito](https://incog.works)
 
+### Open Source Games
+- **SpaceCadetPinball (WASM)** — [k4zmu2a](https://github.com/k4zmu2a/SpaceCadetPinball) & [alula](https://github.com/alula/SpaceCadetPinball) (MIT / 2-Clause BSD)
+- **Heroine Dusk** — [Clint Bellanger](https://github.com/clintbellanger/heroine-dusk) (MIT / GPL)
+- **Clumsy Bird** — [Ellison Leao](https://github.com/ellisonleao/clumsy-bird) (MIT)
+- **HTML5 Minesweeper** — [Joeynoh](https://github.com/Joeynoh/HTML5-Minesweeper) (MIT)
+- **Duck Hunt JS** — [Matt Surabian](https://github.com/MattSurabian/DuckHunt-JS) (MIT)
+- **Sokoban Canvas** — [Dalvorsn](https://github.com/dalvorsn/Sokoban) (MIT)
+- **HTML5 Snake** — [CodeExplained](https://github.com/CodeExplainedRepo/Snake-JavaScript) (MIT)
+- **SudokuJS** — [pocketjoso](https://github.com/pocketjoso/sudokuJS) (MIT)
+- **Simple Chess AI** — [Lauri Hartikka](https://github.com/lhartikk/simple-chess-ai) (MIT)
+- **MicropolisJS (SimCity 1)** — [Graeme McCutcheon](https://github.com/graememcc/micropolisJS) & [Don Hopkins](https://github.com/simhacker/micropolis) (GPL-3.0)
+- **Solitaire** — [Cyan Harlow](https://github.com/cyanharlow/solitaire) (MIT)
+- **HTML5 Asteroids** — [Doug McInnes](https://github.com/dmcinnes/HTML5-Asteroids) (MIT)
+- **SkiFree.js** — [Dan Motzenbecker](https://github.com/basicallydan/skifree.js) (MIT)
+- **Canvas Tower Defense** — [oldj](https://github.com/oldj/html5-tower-defense) (MIT)
+- **HexGL** — [Thibaut Despoulain](http://github.com/bkcore/HexGL/) (MIT)
+- **Hextris** — [Hextris Team](https://github.com/Hextris/hextris) (GPL-3.0)
+- **2048** — [Gabriele Cirulli](https://github.com/gabrielecirulli/2048) (MIT)
+- **A Dark Room** — [Michael Townsend](https://github.com/doublespeakgames/adarkroom) (MPL-2.0)
+- **Sandspiel** — [Max Bittker](https://github.com/sandspiel/sandspiel) (MIT)
+- **OpenSC2K** — [OpenSC2K](https://github.com/srnelson/OpenSC2K) (GPL-3.0)
+- **Space Company** — [Spacemig](https://github.com/sparticle999/SpaceCompany) (MIT)
+- **Ancient Beast** — [DreadLord](https://github.com/Free-Gamers/Ancient-Beast) (CC-BY-SA-4.0 / AGPL-3.0)
+- **3D.City** — [Lo-Th](https://github.com/lo-th/3d.city) (MIT)
+- **Pacman Canvas** — [Lucio PANEPINTO](https://github.com/platzhersh/pacman-canvas) (CC-BY-SA-4.0)
+- **Canvas Tetris** — [Dionysis Zindros](https://github.com/dionyziz/canvas-tetris) (MIT)
+- **Blockrain** — [Aerolab](https://github.com/Aerolab/blockrain.js) (MIT)
+- **Aquastax** — [Subterrane](https://github.com/Subterrane/aquastax) (MIT)
+- **1255 Burgomaster** — [Burgomaster Team](https://github.com/1255-burgomaster) (GPL-3.0)
+- **CrappyBird** — [CrappyBird Team](https://github.com/crappybird) (MIT)
+- **CrystalQuest** — [CrystalQuest Team](https://github.com/crystalquest) (MIT)
+
 __NOTICE:__
-Any illigallity is unitended by @Dragon-Gaming-Platforms
+All third-party open-source projects, assets, and engines retain their respective licenses and copyrights.
