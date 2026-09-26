@@ -13,6 +13,16 @@ Dragon Gaming Platforms is built with and powered by an incredible ecosystem of 
 
 ### Open Source Games
 - **SpaceCadetPinball (WASM)** — [k4zmu2a](https://github.com/k4zmu2a/SpaceCadetPinball) & [alula](https://github.com/alula/SpaceCadetPinball) (MIT / 2-Clause BSD)
+- **Tower Game** — [iamkun](https://github.com/iamkun/tower_game) (MIT)
+- **T-Rex Dino Runner** — [wayou](https://github.com/wayou/t-rex-runner) & Chromium Authors (BSD-3-Clause)
+- **BreakLock (Pattern Lock Mastermind)** — [maxwellito](https://github.com/maxwellito/breaklock) (MIT)
+- **Connect Four** — [Caleb Evans](https://github.com/caleb531/connect-four) (MIT)
+- **Ping Pong Game** — [CodeExplained](https://github.com/CodeExplainedRepo/Ping-Pong-Game-JavaScript) (MIT)
+- **Tic-Tac-Toe Pro** — [Ramazan Çetinkaya](https://github.com/ramazancetinkaya/tictactoe) (MIT)
+- **JavaScript Simon** — [Kelly King](https://github.com/kellyk/javascript-simon) (MIT)
+- **Progress Knight (Idle RPG)** — [Ihtasham](https://github.com/ihtasham42/progress-knight) (MIT)
+- **Wordle Vanilla** — [doeixd](https://github.com/doeixd/Wordle-Vanilla) (MIT)
+- **Flappy 2048** — [hczhcz](https://github.com/hczhcz/Flappy-2048) (MIT)
 - **Heroine Dusk** — [Clint Bellanger](https://github.com/clintbellanger/heroine-dusk) (MIT / GPL)
 - **Clumsy Bird** — [Ellison Leao](https://github.com/ellisonleao/clumsy-bird) (MIT)
 - **HTML5 Minesweeper** — [Joeynoh](https://github.com/Joeynoh/HTML5-Minesweeper) (MIT)
