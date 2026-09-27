@@ -1,0 +1,58 @@
+Ceros name and logo copyright Ceros Inc. All rights reserved.
+Ceros Snake copyright Matthew Hasbach under the MIT license.
+
+BigScreen copyright Brad Dougherty under the Apache License Version 2.0.
+https://github.com/bdougherty/BigScreen/blob/master/LICENSE
+
+Buzz copyright Jay Salvat under the MIT license.
+https://github.com/jaysalvat/buzz/blob/master/MIT-LICENSE
+
+Epic Song copyright BoxCat Games under the CC BY 3.0 licence.
+http://creativecommons.org/licenses/by/3.0/
+
+Firebase copyright Firebase, Inc. under their terms of service.
+https://www.firebase.com/terms/terms-of-service.html
+
+Font Awesome Code copyright Dave Gandy under the MIT License.
+http://fortawesome.github.io/Font-Awesome/license/
+
+Font Awesome Fonts copyright Dave Gandy under the SIL OFL 1.1.
+http://fortawesome.github.io/Font-Awesome/license/
+
+jQuery copyright jQuery Foundation under the MIT license.
+https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
+
+kinetic-editable-text copyright Nikos Tsitas under the GNU General Public License, Version 3.0
+https://github.com/nktsitas/kineticjs-editable-text/blob/master/README.md
+
+KineticJS copyright Eric Rowell under the MIT license.
+https://github.com/ericdrowell/KineticJS/wiki/License
+
+RequireJS copyright The Dojo Foundation under the MIT license.
+https://github.com/jrburke/requirejs/blob/master/LICENSE
+
+RequireJS Plugins copyright Miller Medeiros under the MIT license.
+https://github.com/millermedeiros/requirejs-plugins/blob/master/README.mdown
+
+Underscore copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors under the MIT license.
+https://github.com/jashkenas/underscore/blob/master/LICENSE
+
+The MIT license:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
