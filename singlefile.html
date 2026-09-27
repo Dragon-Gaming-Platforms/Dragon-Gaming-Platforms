@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#0a0a0a" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="description" content="Dragon Gaming Platforms — Ultimate library of 70+ legal open-source browser games, emulators, and tools. Optimized for mobile, tablet, and desktop." />
+  <meta name="description" content="Dragon Gaming Platforms — Ultimate library of 120+ legal open-source browser games, emulators, and tools. Optimized for mobile, tablet, and desktop." />
   <meta name="keywords" content="games, game site, gaming site, unblocked games, free online games, browser gaming, emulators, classic games, retro gaming, play games online, gaming platforms, nostalgic games, web-based games, wasm games, eaglercraft, balatro" />
   <meta name="author" content="Dragon Gaming Platforms" />
   <title>Dragon Gaming Platforms</title>
-  <link rel="icon" type="image/png" href="https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png">
+  <link rel="icon" type="image/png" href="assets/dragon-login.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -1016,13 +1016,13 @@ body.crt-mode::before {
       </div>
 
       <a href="#" class="navbar__brand">
-        <img class="navbar__logo" src="https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png" alt="Dragon Gaming Platforms" />
+        <img class="navbar__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
         <div class="navbar__title"><span>Dragon</span> Gaming</div>
       </a>
       
       <ul class="navbar__links" id="navLinks">
         <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#filterBarRoot" class="nav-section-link">Games (70)</a></li>
+        <li><a href="#filterBarRoot" class="nav-section-link">Games (120+)</a></li>
         <li><a href="#category-emulators" class="nav-section-link">Emulators</a></li>
         <li><a href="#category-other" class="nav-section-link">Tools</a></li>
         <li class="navbar__dropdown" id="dropdownRoot">
@@ -1044,10 +1044,10 @@ body.crt-mode::before {
   <section class="hero" id="hero">
     <div class="hero__bg"></div>
     <div class="hero__content">
-      <img class="hero__logo" src="https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png" alt="Dragon Gaming Platforms" />
+      <img class="hero__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
       <div class="hero__line"></div>
       <h1 class="hero__title"><span class="highlight">Dragon</span> Gaming<br />Platforms</h1>
-      <p class="hero__subtitle">Your gateway to the ultimate web gaming experience. Play 70 classic games, emulators, and unblocked tools directly from your browser on mobile and desktop.</p>
+      <p class="hero__subtitle">Your gateway to the ultimate web gaming experience. Play 120+ classic games, emulators, and unblocked tools directly from your browser on mobile and desktop.</p>
       
       <div class="hero__cta-group">
         <a href="#filterBarRoot" class="hero__cta" id="browseGamesBtn">▶ Explore Library</a>
@@ -1100,57 +1100,69 @@ body.crt-mode::before {
           <button class="game-viewer__btn" id="viewerFullscreenBtn" title="Toggle Fullscreen">
             <span>⛶</span> <span class="game-viewer__btn-text">Fullscreen</span>
           </button>
-          <button class="game-viewer__btn game-viewer__btn--close" id="viewerClose" title="Close Game (Esc)">
+          <button class="game-viewer__btn game-viewer__btn--close" id="viewerClose" title="Close Game">
             <span>✕</span> <span class="game-viewer__btn-text">Close</span>
           </button>
         </div>
       </div>
 
-      <div class="game-viewer__iframe-wrapper">
+      <div class="game-viewer__controls-overlay" id="viewerControlsCard">
+        <div class="game-viewer__controls-header">
+          <strong>🎮 How to Play & Instructions</strong>
+        </div>
+        <div class="game-viewer__controls-content" id="viewerControlsText">
+          Loading controls…
+        </div>
+      </div>
+
+      <div class="game-viewer__frame-wrap">
         <div class="game-viewer__loading" id="viewerLoading">
           <div class="loading-state__spinner"></div>
-          <span class="game-viewer__loading-text">Launching game environment…</span>
+          <div class="loading-state__text">Starting Game…</div>
         </div>
-        
-        <!-- Controls Info Popup Card inside Viewer -->
-        <div class="game-viewer__controls-card" id="viewerControlsCard">
-          <div class="game-viewer__controls-title">Controls & Instructions</div>
-          <div class="game-viewer__controls-text" id="viewerControlsText">Use WASD or Arrow Keys to control.</div>
-        </div>
-
-        <iframe class="game-viewer__iframe" id="viewerIframe" title="Dragon Game Viewer" loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; gamepad; fullscreen" allowfullscreen></iframe>
+        <iframe class="game-viewer__iframe" id="viewerIframe" allow="fullscreen; autoplay; gamepad; clipboard-write" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"></iframe>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
+    <div class="container footer__container">
       <div class="footer__brand">
-        <img class="footer__logo" src="https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png" alt="Dragon Gaming Platforms" />
-        <span class="footer__name">Dragon Gaming Platforms</span>
+        <img src="assets/dragon-login.png" alt="Dragon Gaming" class="footer__logo" />
+        <div>
+          <div class="footer__name">Dragon Gaming Platforms</div>
+          <div class="footer__tagline">The Unblocked Browser Gaming Frontier</div>
+        </div>
       </div>
-      <p class="footer__copy">© 2026 Dragon Gaming Platforms. Open Source Web Gaming.</p>
+
+      <div class="footer__links">
+        <a href="#hero">Home</a>
+        <a href="#filterBarRoot">Games (120+)</a>
+        <a href="#category-emulators">Emulators</a>
+        <a href="#category-other">Tools</a>
+        <a href="#download">Download</a>
+        <a href="#settings">Settings</a>
+      </div>
+
+      <div class="footer__copy">
+        <p>Built with ❤️ by the Dragon Gaming Community. All open source games and emulators belong to their respective creators.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- JS: data + engine -->
+  <!-- SCRIPT -->
   <script>
-/* ================================================================
-   DRAGON GAMING PLATFORMS — CORE DATA & ENGINE
-   ================================================================ */
-
-/* ================================================================
-   1. GAME DATA CATALOG (60 Games, Emulators & Tools)
-   ================================================================ */
-const GAMES_DATA = [
+/*    DRAGON GAMING PLATFORMS — CORE DATA & ENGINE
+   
+/*    1. GAME DATA CATALOG (60 Games, Emulators & Tools)
+   const GAMES_DATA = [
   {
     id: "eaglercraft-1-12-2-wasm",
     name: "Eaglercraft 1.12.2 WASM",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html",
+    path: "./games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html",
     category: "games",
-    shelf: "action-3d",
+    shelf: "sandbox-simulation",
     tags: ["Sandbox", "Survival", "3D", "WASM"],
     badge: "WASM",
     desc: "Full Minecraft 1.12.2 running offline directly in your browser via WebAssembly.",
@@ -1159,9 +1171,9 @@ const GAMES_DATA = [
   {
     id: "eaglercraft-1-12-2-js",
     name: "Eaglercraft 1.12.2 JS",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-JS-1.12.2.html",
+    path: "./games/singlefiles/Eaglercraft-JS-1.12.2.html",
     category: "games",
-    shelf: "action-3d",
+    shelf: "sandbox-simulation",
     tags: ["Sandbox", "Survival", "3D"],
     badge: "3D",
     desc: "JavaScript client for Minecraft 1.12.2 with online multiplayer and singleplayer worlds.",
@@ -1170,9 +1182,9 @@ const GAMES_DATA = [
   {
     id: "eaglercraft-1-8-8-js",
     name: "Eaglercraft 1.8.8 JS",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-JS-1.8.8.html",
+    path: "./games/singlefiles/Eaglercraft-JS-1.8.8.html",
     category: "games",
-    shelf: "action-3d",
+    shelf: "sandbox-simulation",
     tags: ["Sandbox", "Survival", "3D", "Multiplayer"],
     badge: "Popular",
     desc: "Classic Minecraft 1.8.8 with server browser, custom skins, and fluid combat.",
@@ -1181,1091 +1193,1325 @@ const GAMES_DATA = [
   {
     id: "eaglercraft-1-8-8-wasm",
     name: "Eaglercraft 1.8.8 WASM",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html",
+    path: "./games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html",
     category: "games",
-    shelf: "action-3d",
+    shelf: "sandbox-simulation",
     tags: ["Sandbox", "Survival", "3D", "WASM"],
     badge: "WASM",
-    desc: "Ultra-fast WebAssembly port of Minecraft 1.8.8 for offline sandbox play.",
-    controls: "WASD: Move | Space: Jump | Left Click: Mine | Right Click: Place | Esc: Pause"
+    desc: "Ultra-fast WebAssembly offline edition of Minecraft 1.8.8.",
+    controls: "WASD: Move | Space: Jump | Left/Right Click: Mine/Place | E: Inventory"
   },
   {
     id: "balatro",
     name: "Balatro",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Balatro.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Roguelike", "Deckbuilder", "Poker", "Strategy"],
-    badge: "Roguelike",
-    desc: "Poker roguelike deckbuilder. Combine valid poker hands with unique Joker cards to create synergies.",
-    controls: "Mouse: Select / Play Cards / Discard"
-  },
-  {
-    id: "hole-io",
-    name: "Hole.io",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Hole.io.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Arcade", "Multiplayer", "Physics", "3D"],
-    badge: "Multiplayer",
-    desc: "Control a ravenous black hole consuming everything from street lamps to skyscrapers across a 3D city.",
-    controls: "Mouse Drag / WASD / Arrow Keys: Move Black Hole"
-  },
-  {
-    id: "awesome-tanks-2",
-    name: "Awesome Tanks 2",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/awesometanks2.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Shooter", "Tanks", "Action", "Upgrades"],
-    badge: "Action",
-    desc: "Blaze through destructible arenas, blast enemy war machines, and upgrade cannons, armor, and lasers.",
-    controls: "WASD: Drive | Mouse: Aim and Fire"
-  },
-  {
-    id: "recoil",
-    name: "Recoil",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Recoil.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Physics", "Shooter", "Action", "Puzzle"],
-    badge: "Physics",
-    desc: "Navigate tight hazard rooms by weapon recoil propulsion alone! Shoot targets to fling your character.",
-    controls: "Mouse Aim & Left Click: Shoot / Propel"
-  },
-  {
-    id: "ragdoll-archers",
-    name: "Ragdoll Archers",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Ragdoll-Archers.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Physics", "Archery", "Ragdoll", "Shooter"],
-    badge: "Action",
-    desc: "Draw your bow and launch precision arrows against hordes of incoming ragdoll enemies and giant bosses.",
-    controls: "Mouse Drag: Aim and Charge Bow | Release: Shoot"
-  },
-  {
-    id: "alien-invasion",
-    name: "Alien Invasion",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/alien-invasion/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Arcade", "Shooter", "Space", "Retro"],
-    badge: "Shooter",
-    desc: "Classic mobile-friendly HTML5 space shooter. Blast descending waves of alien invaders and dodge missile barrages.",
-    controls: "Left / Right: Steer Fighter | Space: Fire Missiles"
-  },
-  {
-    id: "sorades",
-    name: "Sorades 13K",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sorades/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Arcade", "Shooter", "Shmup", "JS13K"],
-    badge: "Action",
-    desc: "High-octane JS13K vertical shmup inspired by Raptor: Call of the Shadows. Dodge bullet patterns and destroy bosses.",
-    controls: "Arrow Keys / WASD: Move Starship | Space / Z: Fire Cannons"
-  },
-  {
-    id: "survivor",
-    name: "Survivor",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/survivor/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Arcade", "Shooter", "Action", "Space"],
-    badge: "Action",
-    desc: "Playable HTML5 + CSS + JavaScript space shooter remake of the classic 8-bit Survivor game by Scott Schiller.",
-    controls: "WASD / Arrow Keys: Fly | Space: Shoot"
-  },
-  {
-    id: "onslaught",
-    name: "Onslaught Arena",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/onslaught/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Action", "Arena", "Medieval", "Combat"],
-    badge: "Action",
-    desc: "Fast-paced medieval arena combat by Lost Decade Games. Battle endless hordes of goblins, skeletons, and bosses.",
-    controls: "WASD: Move | Mouse: Aim and Attack | 1-4: Switch Weapons"
-  },
-  {
-    id: "drakonas",
-    name: "Drakonas 3D",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/drakonas/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Action", "3D", "Three.js", "Shooter"],
-    badge: "3D",
-    desc: "3D Three.js orbital space combat shoot 'em up. Engage enemy dreadnoughts and interceptors across open space.",
-    controls: "Mouse: Aim & Steer | Space / Left Click: Fire Laser Cannons"
-  },
-  {
-    id: "ancient-beast",
-    name: "Ancient Beast",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/AncientBeast/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Strategy", "Turn-Based", "Multiplayer", "Hex"],
-    badge: "Strategy",
-    desc: "Open-source 3D/2D turn-based tactical strategy game. Materialize mystical beasts and wage hex combat.",
-    controls: "Mouse: Select Unit / Move / Attack / Summon"
-  },
-  {
-    id: "hexgl",
-    name: "HexGL",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/HexGL/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Racing", "3D", "WebGL", "Sci-Fi"],
-    badge: "3D",
-    desc: "Futuristic high-speed WebGL anti-gravity racing game inspired by Wipeout and F-Zero by Thibaut Despoulain.",
-    controls: "Left / Right or A / D: Steer | Up: Airbrake | Space: Boost"
-  },
-  {
-    id: "3d-city",
-    name: "3D.City",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/3d.city/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Simulation", "3D", "City Builder", "WebGL"],
-    badge: "3D",
-    desc: "Interactive 3D Three.js city builder. Place roads, skyscrapers, power plants, and observe dynamic traffic.",
-    controls: "Mouse: Rotate Camera / Place Buildings / Zoom"
-  },
-  {
-    id: "spashal",
-    name: "Spashal",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/spashal/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Arcade", "Space", "Survival", "Shooter"],
-    badge: "Space",
-    desc: "Danger lurks in every corner of deep space! Dodge asteroid fields and dogfight hostile space cruisers.",
-    controls: "WASD: Steer Ship | Mouse: Aim & Fire Primary Weapons"
-  },
-  {
-    id: "zedinvaders",
-    name: "Zed Invaders",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/zedinvaders/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Arcade", "Shooter", "Comic", "Action"],
-    badge: "Comic",
-    desc: "Stylized sci-fi comic shooter based on the ZED graphic novel universe with explosive power-ups.",
-    controls: "Left / Right: Steer Hero | Space: Fire Plasma Beams"
-  },
-  {
-    id: "asdf",
-    name: "ASDF",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/asdf/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["Arcade", "Rhythm", "Typing", "Speed"],
-    badge: "Speed",
-    desc: "Ultra-fast keyboard agility rhythm game testing pure typing reflex speed.",
-    controls: "A, S, D, F Keys: Match On-screen Rhythm Cues"
-  },
-  {
-    id: "space-cadet-pinball",
-    name: "Space Cadet Pinball",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/space-cadet-pinball/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Pinball", "Retro", "Classic"],
-    badge: "Classic",
-    desc: "The legendary 3D Pinball for Windows - Space Cadet running natively in WebAssembly & HTML5.",
-    controls: "Z / /: Left/Right Flippers | Space: Plunger | Space/Arrows: Nudge"
-  },
-  {
-    id: "mariohtml5",
-    name: "Infinite Mario HTML5",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/mariohtml5/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Platformer", "Retro", "Mario", "Classic"],
-    badge: "Classic",
-    desc: "Robert Kleffner's complete HTML5 JavaScript port of Notch's Infinite Mario Bros with procedural level generation.",
-    controls: "A / D or Left / Right: Run | S / Up: Jump | A: Run / Fireball | Esc: Pause"
-  },
-  {
-    id: "pacman",
-    name: "HTML5 Pacman",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/pacman/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Retro", "Pacman", "Classic"],
-    badge: "Retro",
-    desc: "Classic HTML5 Pacman with full sound effects, fruit bonuses, ghost vulnerability timers, and high scores.",
-    controls: "Arrow Keys: Navigate Maze | S: Sound Toggle"
-  },
-  {
-    id: "pacman-canvas",
-    name: "Pacman Canvas",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/pacman-canvas/index.htm",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Pacman", "Classic", "Retro"],
-    badge: "Classic",
-    desc: "Complete HTML5 Canvas recreation of Pacman with AI ghost routines, energizers, and sound effects.",
-    controls: "Arrow Keys / WASD: Move Pacman | N: New Game"
-  },
-  {
-    id: "space-invaders",
-    name: "Space Invaders",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/space-invaders/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Space", "Retro", "Classic"],
-    badge: "Classic",
-    desc: "Faithful JavaScript remake of Taito's iconic 1978 Space Invaders arcade machine with destructible bunkers.",
-    controls: "Left / Right: Move Cannon | Space: Fire"
-  },
-  {
-    id: "asteroids",
-    name: "Asteroids",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/asteroids/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Space", "Vector", "Retro"],
-    badge: "Vector",
-    desc: "Pure JavaScript vector arcade space shooter. Blast asteroids into fragments and eliminate flying saucers.",
-    controls: "Left / Right: Rotate | Up: Thrust | Space: Fire Lasers"
-  },
-  {
-    id: "duck-hunt",
-    name: "Duck Hunt JS",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/duck-hunt/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Shooter", "Retro", "Classic"],
-    badge: "Retro",
-    desc: "Faithful recreation of the 8-bit duck shooting gallery with animated dog and level customizer.",
-    controls: "Mouse: Aim & Shoot"
-  },
-  {
-    id: "digger",
-    name: "Digger",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/digger/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Retro", "Boulderdash", "Classic"],
-    badge: "Retro",
-    desc: "HTML5 version of the iconic 1983 Boulderdash / Digger game by Lutz Roeder with authentic PC speaker sound effects.",
-    controls: "Arrow Keys: Dig Tunnels / Push Emeralds | F10: Fire Weapon"
-  },
-  {
-    id: "ceros-snake",
-    name: "Ceros Snake",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/ceros-snake/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Retro", "Snake", "70s"],
-    badge: "Retro",
-    desc: "Vintage 70s-style monochrome arcade Snake with authentic retro scanline aesthetics and crisp sound.",
-    controls: "WASD / Arrow Keys: Slither"
-  },
-  {
-    id: "snake",
-    name: "Snake",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/snake/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Retro", "Classic", "Casual"],
-    badge: "Retro",
-    desc: "Classic retro snake game. Slither, gobble apples to grow longer, and avoid crashing into your own tail.",
-    controls: "Arrow Keys / WASD: Change Direction | Space: Pause"
-  },
-  {
-    id: "pong",
-    name: "Pong",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/pong/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Retro", "Atari", "Classic"],
-    badge: "Retro",
-    desc: "The game that started video game history: classic 1972 table tennis arcade Pong with responsive AI paddle.",
-    controls: "Mouse / Up-Down Arrows: Defend Goal"
-  },
-  {
-    id: "t-rex-runner",
-    name: "T-Rex Dino Runner",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/t-rex-runner/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Runner", "Classic", "Casual"],
-    badge: "Popular",
-    desc: "The iconic Chromium offline dinosaur runner. Leap over desert cacti and duck under soaring pterodactyls.",
-    controls: "Space / Up Arrow: Jump | Down Arrow: Duck"
-  },
-  {
-    id: "crappybird",
-    name: "CrappyBird",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/CrappyBird/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Flappy", "Canvas", "Casual"],
-    badge: "Casual",
-    desc: "Smooth 60FPS pure JavaScript Canvas2D flappy bird clone with accurate collision and high score tracking.",
-    controls: "Space / Click: Flap"
-  },
-  {
-    id: "clumsy-bird",
-    name: "Clumsy Bird",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/clumsy-bird/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Flappy", "Retro", "Canvas"],
-    badge: "Arcade",
-    desc: "Charming open-source melonJS recreation of the iconic bird flapping obstacle course.",
-    controls: "Space / Click / Tap: Flap Wings"
-  },
-  {
-    id: "floppybird",
-    name: "Floppy Bird",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/floppybird/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Flappy", "Retro", "Canvas"],
-    badge: "Arcade",
-    desc: "Pixel-perfect open source canvas Flappy Bird clone with authentic physics and high score saves.",
-    controls: "Space / Click: Flap Wings"
-  },
-  {
-    id: "flappy-2048",
-    name: "Flappy 2048",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/flappy-2048/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Flappy", "2048", "Hybrid"],
-    badge: "Hybrid",
-    desc: "Brilliant mashup of Flappy Bird and 2048! Flap your tile through obstacles matching your number to double it.",
-    controls: "Space / Click: Flap and Merge Numbers"
-  },
-  {
-    id: "crystalquest",
-    name: "CrystalQuest",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/CrystalQuest/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Shooter", "Retro", "Action"],
-    badge: "Action",
-    desc: "HTML5 remake of the beloved Mac arcade shooter. Collect glowing crystals while dodging kinetic mines.",
-    controls: "Mouse: Steer Ship | Space / Click: Shoot"
-  },
-  {
-    id: "banania",
-    name: "Banania",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/Banania/banania.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Retro", "Maze", "Classic"],
-    badge: "Retro",
-    desc: "Classic DOS maze game recreation. Collect all bananas on the grid while evading roaming monsters.",
-    controls: "Arrow Keys: Move Monkey"
-  },
-  {
-    id: "simon",
-    name: "Simon Says",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/simon/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Puzzle", "Memory", "Audio", "Retro"],
-    badge: "Memory",
-    desc: "Classic 1978 Milton Bradley electronic memory game. Repeat increasingly complex sequences of lights and tones.",
-    controls: "Mouse Click: Replicate Light Sequence"
-  },
-  {
-    id: "ball-and-wall",
-    name: "Ball and Wall",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/ball-and-wall/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Breakout", "Retro", "Physics"],
-    badge: "Breakout",
-    desc: "High-framerate Arkanoid / Breakout arcade remake with dynamic brick patterns and power-ups.",
-    controls: "Mouse / Left-Right Arrows: Move Paddle | Space: Launch Ball"
-  },
-  {
-    id: "coil",
-    name: "Coil",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/coil/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Canvas", "Action", "Glow"],
-    badge: "Glow",
-    desc: "Hypnotic canvas game by Hakim El Hattab. Defeat swirling cosmic enemies by enclosing them in your glowing particle trail.",
-    controls: "Mouse: Steer Orb Trail in Full Circles"
-  },
-  {
-    id: "hotfix",
-    name: "HotFix",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/hotfix/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Sci-Fi", "Dodger", "Action"],
-    badge: "Sci-Fi",
-    desc: "Help Hotfix harvest shimmering stargazers across quantum space while evading deadly bug anomalies.",
-    controls: "Arrow Keys / Mouse: Navigate Particle Field"
-  },
-  {
-    id: "hurry",
-    name: "Hurry!",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/hurry/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Speed", "Shooter", "Ludum Dare"],
-    badge: "Speed",
-    desc: "Adrenaline-fueled 10-second arcade shooter created by Hugh Kennedy for Ludum Dare 27.",
-    controls: "Mouse: Aim & Accelerate | Click: Fire Rapid Blaster"
-  },
-  {
-    id: "arashi-js",
-    name: "Arashi JS",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/arashi-js/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade", "Vector", "Shooter", "Tempest"],
-    badge: "Vector",
-    desc: "Hypnotic HTML5 vector clone of the classic arcade tube shooter Tempest with pulsing geometric webs.",
-    controls: "Arrow Keys: Rotate Around Rim | Space: Fire | Z: Superzapper"
-  },
-  {
-    id: "2048",
-    name: "2048",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/2048/index.html",
+    path: "./games/singlefiles/Balatro.html",
     category: "games",
     shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Numbers", "Addictive", "Casual"],
-    badge: "Popular",
-    desc: "The iconic sliding tile numbers puzzle by Gabriele Cirulli. Merge identical tiles to reach the 2048 tile.",
-    controls: "Arrow Keys / Swipe: Slide Tiles"
-  },
-  {
-    id: "hextris",
-    name: "Hextris",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/Hextris/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Hexagon", "Fast-Paced", "Addictive"],
-    badge: "Popular",
-    desc: "Fast-paced hexagonal puzzle game. Rotate the outer hexagon to match 3 or more blocks of the same color.",
-    controls: "Left / Right Arrow Keys or A / D: Rotate Hexagon"
-  },
-  {
-    id: "canvas-tetris",
-    name: "Canvas Tetris",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/canvas-tetris/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Tetris", "Classic", "Canvas"],
-    badge: "Puzzle",
-    desc: "Lightweight vanilla HTML5 Canvas Tetris implementation with smooth line clears and classic scoring.",
-    controls: "Left / Right: Move | Up: Rotate | Down: Fast Drop"
-  },
-  {
-    id: "custom-tetris",
-    name: "Custom Tetris",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/custom-tetris/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Tetris", "Customizable", "Retro"],
-    badge: "Puzzle",
-    desc: "Fully customizable Tetris engine by Ond\u0159ej \u017d\u00e1ra. Customize piece shapes, gravity speed, and grid dimensions.",
-    controls: "Arrow Keys: Move & Rotate | Space: Drop"
-  },
-  {
-    id: "blockrain",
-    name: "Blockrain",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/blockrain/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Tetris", "Retro", "Canvas"],
-    badge: "Puzzle",
-    desc: "Gorgeous retro pixel-art Tetris engine with responsive controls, custom palettes, and particle effects.",
-    controls: "Arrow Keys: Move & Rotate | Down: Soft Drop | Space: Hard Drop"
-  },
-  {
-    id: "teterjs",
-    name: "Teterjs",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/teterjs/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Tetris", "Casual", "Canvas"],
-    badge: "Puzzle",
-    desc: "Clean and responsive canvas block drop puzzle with customizable board speeds.",
-    controls: "Arrow Keys: Move & Rotate | Space: Drop"
-  },
-  {
-    id: "3d-chess",
-    name: "3D Hartwig Chess Set",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/3d-chess/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Board", "Chess", "3D", "CSS3"],
-    badge: "3D",
-    desc: "Stunning Bauhaus Josef Hartwig 3D chess set crafted entirely in HTML5, CSS 3D transforms, and JavaScript.",
-    controls: "Mouse: Orbit Camera & Select Chess Pieces"
-  },
-  {
-    id: "chess",
-    name: "Chess vs AI",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/chess/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Board", "Strategy", "AI", "Classic"],
-    badge: "Strategy",
-    desc: "Full chess engine running in browser. Test your tactical prowess against adjustable AI difficulty.",
-    controls: "Mouse / Click: Drag and Drop Pieces"
-  },
-  {
-    id: "connect-four",
-    name: "Connect Four",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/connect-four/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Board", "Strategy", "AI", "Classic"],
-    badge: "Classic",
-    desc: "Slick Connect Four game by Caleb Evans with smart AI, local 2-player mode, and smooth drop animations.",
-    controls: "Mouse Click: Drop Disc Into Target Column"
-  },
-  {
-    id: "minesweeper",
-    name: "Minesweeper",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/minesweeper/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Logic", "Classic", "Retro"],
-    badge: "Logic",
-    desc: "Authentic recreation of the classic Windows logic puzzle. Clear the minefield without detonating a single bomb.",
-    controls: "Left Click: Reveal Cell | Right Click: Place Flag"
-  },
-  {
-    id: "sudoku",
-    name: "Sudoku",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sudoku/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Numbers", "Logic", "Brain"],
-    badge: "Logic",
-    desc: "Clean and elegant 9x9 Sudoku puzzle generator with multiple difficulty levels and hint assist.",
-    controls: "Mouse / Touch: Select Cell | Number Keys 1-9: Enter Digit"
-  },
-  {
-    id: "solitaire",
-    name: "Solitaire",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/solitaire/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Cards", "Klondike", "Classic", "Patience"],
-    badge: "Cards",
-    desc: "Classic Klondike Solitaire card game. Stack suits in ascending order from Ace to King.",
-    controls: "Mouse: Drag and Drop Cards / Click Deck to Draw"
-  },
-  {
-    id: "wordle",
-    name: "Wordle Infinite",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/wordle/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Word", "Logic", "Brain"],
-    badge: "Word",
-    desc: "Infinite word-guessing challenge with color-coded feedback tiles and complete performance statistics.",
-    controls: "Keyboard: Type 5-letter Words | Enter: Submit | Backspace: Delete"
-  },
-  {
-    id: "green-mahjong",
-    name: "Green Mahjong",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/green-mahjong/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Board", "Solitaire", "Mahjong"],
-    badge: "Mahjong",
-    desc: "Relaxing solitaire Mahjong tile-matching game done in clean HTML5/CSS3 with customizable boards.",
-    controls: "Mouse / Touch: Select Matching Unblocked Tiles"
-  },
-  {
-    id: "breaklock",
-    name: "Breaklock",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/breaklock/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Pattern", "Logic", "Casual"],
-    badge: "Logic",
-    desc: "Addictive pattern lock deduction game combining Mastermind with smartphone pattern unlock mechanics.",
-    controls: "Mouse Drag / Touch: Connect Dots to Deduce Secret Pattern"
-  },
-  {
-    id: "tictactoe",
-    name: "Tic-Tac-Toe",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tictactoe/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Board", "Logic", "AI", "Classic"],
-    badge: "Classic",
-    desc: "Modern neon Tic-Tac-Toe with unbeatable Minimax AI option and two-player local pass-and-play.",
-    controls: "Mouse Click: Place X or O"
-  },
-  {
-    id: "sokoban",
-    name: "Sokoban",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sokoban/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Logic", "Classic", "Grid"],
-    badge: "Puzzle",
-    desc: "Classic warehouse keeper puzzle. Push crates into designated storage targets in minimal steps.",
-    controls: "Arrow Keys / WASD: Move Pusher"
-  },
-  {
-    id: "aquastax",
-    name: "Aquastax",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/aquastax/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Physics", "Water", "Casual"],
-    badge: "Puzzle",
-    desc: "Fluid water pipe physics puzzle game. Guide bubbling water into target flasks with strategic placement.",
-    controls: "Mouse: Rotate and Place Pipe Connectors"
-  },
-  {
-    id: "heal-em-all",
-    name: "Heal 'em All",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/heal-em-all/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Strategy", "Zombies", "Game Off"],
-    badge: "Puzzle",
-    desc: "What if the zombie plague could be cured? Deploy antidote injectors to heal infected humans across the grid.",
-    controls: "Mouse: Select & Deploy Antidote Doses"
-  },
-  {
-    id: "cellmates",
-    name: "Cell Mates",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/cellmates/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Puzzle", "Physics", "Co-op", "Game Jam"],
-    badge: "Puzzle",
-    desc: "Global Game Jam puzzle game. Coordinate two linked organic cells through perilous micro-cellular mazes.",
-    controls: "Arrow Keys: Steer Coupled Cells"
-  },
-  {
-    id: "openpanzer",
-    name: "Open Panzer",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/openpanzer/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Strategy", "Hex", "WWII", "Tactical"],
-    badge: "Strategy",
-    desc: "Panzer General tactical WWII hex wargame engine in HTML5. Command armor battalions and tactical aviation.",
-    controls: "Mouse: Select Unit / Move / Attack / Inspect Terrain"
+    tags: ["Cards", "Roguelike", "Strategy"],
+    badge: "Featured",
+    desc: "Poker roguelike deck builder \u2014 trigger synergistic jokers and execute wild combos.",
+    controls: "Mouse / Touch: Select cards, buy jokers, open booster packs"
   },
   {
     id: "bloons-td4",
-    name: "Bloons TD4",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Bloons-TD4.html",
+    name: "Bloons TD 4",
+    path: "./games/singlefiles/Bloons-TD4.html",
     category: "games",
     shelf: "puzzle-strategy",
-    tags: ["Tower Defense", "Strategy", "Classic"],
-    badge: "Popular",
-    desc: "Pop incoming waves of colorful balloons by tactically placing and upgrading dart monkeys and cannons.",
-    controls: "Mouse: Place and Upgrade Towers | Space: Start Wave"
-  },
-  {
-    id: "tower-defense",
-    name: "Canvas Tower Defense",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tower-defense/index.html",
-    category: "games",
-    shelf: "puzzle-strategy",
-    tags: ["Strategy", "Tower Defense", "Canvas", "Tactical"],
-    badge: "Strategy",
-    desc: "Strategic path-building tower defense. Place lasers, cannons, and missile turrets to repel enemy creep waves.",
-    controls: "Mouse: Select and Place Defensive Turrets"
+    tags: ["Strategy", "Tower Defense", "Classic"],
+    badge: "Featured",
+    desc: "The iconic balloon-popping defense game \u2014 deploy dart monkeys, tack shooters, and mortar cannons.",
+    controls: "Mouse: Select and place monkey defense towers on track"
   },
   {
     id: "drive-mad",
     name: "Drive Mad",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Drive-Mad.html",
+    path: "./games/singlefiles/Drive-Mad.html",
     category: "games",
     shelf: "driving-sports",
-    tags: ["Driving", "Physics", "Obstacle", "3D"],
-    badge: "Physics",
-    desc: "Physics-based 3D stunt driving challenge with inventive tracks and unique vehicle mechanics.",
-    controls: "W / Up: Accelerate | S / Down: Reverse | A / D: Balance"
-  },
-  {
-    id: "moto-x3m-2",
-    name: "Moto x3m 2",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Moto-x3m-2.html",
-    category: "games",
-    shelf: "driving-sports",
-    tags: ["Motorcycle", "Stunts", "Physics", "Racing"],
-    badge: "Racing",
-    desc: "High-flying bike racing game filled with massive jumps, explosive obstacles, and acrobatic flips.",
-    controls: "Up: Accelerate | Down: Brake | Left / Right: Tilt"
-  },
-  {
-    id: "snowrider-3d",
-    name: "Snowrider 3D",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Snowrider.html",
-    category: "games",
-    shelf: "driving-sports",
-    tags: ["3D", "Endless Runner", "Winter", "Sports"],
-    badge: "3D",
-    desc: "Hurtle downhill on a high-speed bobsled dodging pine trees, rocks, and icy ravines in true 3D.",
-    controls: "Left / Right or A / D: Steer | Up / Space: Jump"
-  },
-  {
-    id: "enduro",
-    name: "Enduro",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/enduro/index.html",
-    category: "games",
-    shelf: "driving-sports",
-    tags: ["Racing", "Retro", "Atari", "Speed"],
-    badge: "Retro",
-    desc: "Tribute to the classic Atari 2600 racing endurance game. Overtake cars through day, night, fog, and ice.",
-    controls: "Left / Right: Steer | Up: Accelerate | Down: Brake"
-  },
-  {
-    id: "skifree",
-    name: "SkiFree.js",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/skifree/index.html",
-    category: "games",
-    shelf: "driving-sports",
-    tags: ["Arcade", "Sports", "Retro", "Classic"],
-    badge: "Classic",
-    desc: "Faithful remake of the classic Windows 3.1 skiing game. Carve down slopes and flee the Abominable Snow Monster.",
-    controls: "Arrow Keys / Mouse: Steer, Accelerate, Jump"
-  },
-  {
-    id: "marble-soccer",
-    name: "Marble Soccer 3D",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/marble-soccer/index.html",
-    category: "games",
-    shelf: "driving-sports",
-    tags: ["Sports", "3D", "Three.js", "Physics"],
-    badge: "3D",
-    desc: "Exciting 3D Three.js physics marble soccer match by Jerome Etienne with realistic goal collisions.",
-    controls: "WASD / Arrow Keys: Roll Marble Toward Opponent Goal"
-  },
-  {
-    id: "vex-8",
-    name: "Vex 8",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Vex-8.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Platformer", "Parkour", "Agility", "Stickman"],
-    badge: "Parkour",
-    desc: "The definitive stickman parkour challenge featuring razor traps, wall-climbing, zip lines, and precision jumps.",
-    controls: "WASD / Arrow Keys: Run, Jump, Slide | R: Restart"
-  },
-  {
-    id: "dreadhead-parkour",
-    name: "Dreadhead Parkour",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/dreadheadparkour.htm",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Runner", "Parkour", "Physics", "Action"],
-    badge: "Action",
-    desc: "Flip, vault, and slide across perilous rooftops and urban hazards in fast-paced parkour action.",
-    controls: "A / D: Run | W: Jump / Flip | S: Slide"
+    tags: ["Driving", "Physics", "Action", "3D"],
+    badge: "Popular",
+    desc: "High-tension 3D physics truck driving with crazy stunts, balance traps, and obstacle courses.",
+    controls: "W / Up Arrow: Accelerate | S / Down Arrow: Reverse & Brake | A / D: Balance truck"
   },
   {
     id: "escape-road",
     name: "Escape Road",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Escape-Road.html",
+    path: "./games/singlefiles/Escape-Road.html",
+    category: "games",
+    shelf: "driving-sports",
+    tags: ["Driving", "Action", "3D", "Endless"],
+    badge: "3D Action",
+    desc: "Fast-paced high-speed getaway driving game \u2014 weave through traffic and evade police chases.",
+    controls: "A / D or Left / Right: Steer vehicle | Space: Drift / Handbrake"
+  },
+  {
+    id: "hole-io",
+    name: "Hole.io",
+    path: "./games/singlefiles/Hole.io.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Multiplayer", "Physics", "3D"],
+    badge: "Popular",
+    desc: "Control a growing black hole, swallow city buildings, cars, and opponents in an arena showdown.",
+    controls: "Mouse Drag / Arrow Keys / WASD: Move hole around city"
+  },
+  {
+    id: "moto-x3m-2",
+    name: "Moto X3M 2",
+    path: "./games/singlefiles/Moto-x3m-2.html",
+    category: "games",
+    shelf: "driving-sports",
+    tags: ["Driving", "Physics", "Action"],
+    badge: "Popular",
+    desc: "Adrenaline-packed motocross stunt racer with lethal traps, explosive loops, and timed trials.",
+    controls: "Up / W: Accelerate | Down / S: Brake | Left / Right or A / D: Tilt & Front/Backflips"
+  },
+  {
+    id: "ragdoll-archers",
+    name: "Ragdoll Archers",
+    path: "./games/singlefiles/Ragdoll-Archers.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Physics", "Shooter"],
+    badge: "Physics",
+    desc: "Physics-driven ragdoll archery battle \u2014 aim arrows, unlock special arrowheads, and defeat enemy waves.",
+    controls: "Mouse Drag & Release: Aim bow and fire arrow"
+  },
+  {
+    id: "recoil",
+    name: "Recoil",
+    path: "./games/singlefiles/Recoil.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Physics", "Shooter"],
+    badge: "Action",
+    desc: "Clever puzzle shooter where your only way to move is using weapon recoil forces.",
+    controls: "Mouse: Aim | Click: Shoot weapon and propel yourself with recoil"
+  },
+  {
+    id: "snowrider-3d",
+    name: "Snow Rider 3D",
+    path: "./games/singlefiles/Snowrider.html",
+    category: "games",
+    shelf: "driving-sports",
+    tags: ["Sports", "3D", "Endless"],
+    badge: "3D",
+    desc: "Ride your snow sled down treacherous mountain peaks, dodge giant pine trees, rocks, and jump chasms.",
+    controls: "Left / Right Arrows or A / D: Steer sled | Up Arrow or Space: Jump"
+  },
+  {
+    id: "vex-8",
+    name: "Vex 8",
+    path: "./games/singlefiles/Vex-8.html",
     category: "games",
     shelf: "platformer-adventure",
-    tags: ["Driving", "Action", "3D", "Chaser"],
+    tags: ["Action", "Platformer", "Parkour"],
     badge: "Action",
-    desc: "High-octane city car chase! Outrun relentless police cruisers, dodge road blocks, and drift through streets.",
-    controls: "A / D or Left / Right: Steer | Space: Brake / Drift"
+    desc: "Extreme precision stickman parkour with buzzsaws, trampolines, grappling hooks, and laser grids.",
+    controls: "WASD / Arrow Keys: Run, jump, slide, wall-climb"
+  },
+  {
+    id: "awesome-tanks-2",
+    name: "Awesome Tanks 2",
+    path: "./games/singlefiles/awesometanks2.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Shooter", "Tanks"],
+    badge: "Action",
+    desc: "Top-down arcade tank warfare \u2014 obliterate enemy spawners, collect gold coins, and upgrade turrets.",
+    controls: "WASD / Arrow Keys: Drive tank | Mouse: Aim and fire cannons"
+  },
+  {
+    id: "dreadhead-parkour",
+    name: "Dreadhead Parkour",
+    path: "./games/singlefiles/dreadheadparkour.htm",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Action", "Platformer", "Parkour"],
+    badge: "Parkour",
+    desc: "Stylized high-speed parkour runner \u2014 slide under spikes, vault rooftop gaps, and collect gold rings.",
+    controls: "WASD / Arrow Keys: Move, jump, slide, flip"
+  },
+  {
+    id: "borg-games",
+    name: "Borg Games Hub",
+    path: "./games/singlefiles/Borg-Games.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Retro", "Arcade", "Compilation"],
+    badge: "Hub",
+    desc: "Classic unblocked web games arcade hub featuring multiple vintage mini-games.",
+    controls: "Mouse & Keyboard: Navigate catalog and play games"
+  },
+  {
+    id: "q1k3",
+    name: "Q1K3 (Quake 13K)",
+    path: "./games/q1k3/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "3D", "FPS", "Retro"],
+    badge: "3D FPS",
+    desc: "Legendary homage to 1996 Quake written in pure WebGL with dynamic lighting, monsters, and guns.",
+    controls: "WASD: Move | Mouse: Look & Shoot | Space: Jump | 1-2: Switch Weapons"
+  },
+  {
+    id: "space-huggers",
+    name: "Space Huggers",
+    path: "./games/space-huggers/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Platformer", "Shooter", "Roguelike"],
+    badge: "Roguelike",
+    desc: "Procedural roguelike run-and-gun action shooter with destructible environments and LittleJS engine.",
+    controls: "WASD / Arrows: Move & Jump | Mouse / Z: Aim & Shoot | R: Reload"
+  },
+  {
+    id: "radius-raid",
+    name: "Radius Raid",
+    path: "./games/radius-raid/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Arcade", "Shooter", "Vector"],
+    badge: "Arcade",
+    desc: "Frenzied vector arena space shooter with particle glow effects, enemy swarms, and powerups.",
+    controls: "WASD / Arrows: Move | Mouse: Aim & Fire | Space: Bomb"
+  },
+  {
+    id: "bounce-back",
+    name: "BounceBack",
+    path: "./games/bounce-back/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Adventure", "Retro"],
+    badge: "Action",
+    desc: "Top-down procedural Zelda-like adventure where your trusty boomerang is your only weapon.",
+    controls: "WASD / Arrows: Move | Mouse / Space: Throw Boomerang | E: Interact"
+  },
+  {
+    id: "doom-13k",
+    name: "Doom 13K",
+    path: "./games/doom-13k/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "3D", "FPS", "Retro"],
+    badge: "3D FPS",
+    desc: "Micro 3D raycaster shooter capturing the raw essence of retro DOOM inside 13 kilobytes.",
+    controls: "WASD / Arrows: Move & Turn | Space / Ctrl: Fire Weapon | E: Open Doors"
+  },
+  {
+    id: "dante-13k",
+    name: "Dante (13K)",
+    path: "./games/dante-13k/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "3D", "Hack & Slash"],
+    badge: "3D Action",
+    desc: "Isometric 3D hack-and-slash brawler journeying through the 9 circles of hell with combo combat.",
+    controls: "WASD / Arrows: Move | J / Space: Attack | K: Dash | L: Special"
+  },
+  {
+    id: "diablo-js",
+    name: "Diablo JS",
+    path: "./games/diablo-js/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["RPG", "Action", "Isometric", "Retro"],
+    badge: "RPG",
+    desc: "Isometric HTML5 canvas action RPG engine with procedural dungeons, loot drops, and skeleton hordes.",
+    controls: "Mouse: Click to move, attack enemies, and pick up items"
+  },
+  {
+    id: "emberwind",
+    name: "Emberwind",
+    path: "./games/emberwind/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Platformer", "Action", "Adventure"],
+    badge: "Platformer",
+    desc: "High-production fairytale action platformer \u2014 soar with your magical cane and fight gremlins.",
+    controls: "Arrow Keys: Move & Crouch | Space / Z: Cane Attack | X: Jump"
+  },
+  {
+    id: "executive-man",
+    name: "Executive Man",
+    path: "./games/executive-man/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Action", "Platformer", "Retro"],
+    badge: "Retro",
+    desc: "Mega Man style retro action platformer climbing the corporate ladder with briefcase blasters.",
+    controls: "Arrow Keys / WASD: Move & Jump | Space / Z: Shoot | X: Slide"
+  },
+  {
+    id: "pixel-platformer",
+    name: "Pixel Platformer",
+    path: "./games/pixel-platformer/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Platformer", "Action", "Pixel"],
+    badge: "Platformer",
+    desc: "Crisp EntityJS pixel platformer with responsive wall-jumping, collectibles, and hazards.",
+    controls: "Left / Right: Run | Space / Up: Jump | Down: Duck / Fall"
+  },
+  {
+    id: "space-shooter",
+    name: "Space Shooter",
+    path: "./games/space-shooter/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Arcade", "Shooter", "Space"],
+    badge: "Space",
+    desc: "Smooth arcade space shooter with laser upgrades, shield generators, and mothership bosses.",
+    controls: "WASD / Arrow Keys: Steer ship | Space / Mouse Click: Fire cannons"
+  },
+  {
+    id: "canyon-runner",
+    name: "Canyon Runner",
+    path: "./games/canyon-runner/index.html",
+    category: "games",
+    shelf: "driving-sports",
+    tags: ["3D", "Driving", "Action"],
+    badge: "3D Runner",
+    desc: "High-speed 3D flight simulator navigating narrow desert canyons without crashing.",
+    controls: "Arrow Keys / WASD: Steer & Pitch Jet | Space: Afterburner Boost"
+  },
+  {
+    id: "circus-charlie",
+    name: "Circus Charlie",
+    path: "./games/circus-charlie/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "Classic"],
+    badge: "Retro Arcade",
+    desc: "Faithful recreation of Konami classic circus performer jumping through fiery hoops on a lion.",
+    controls: "Left / Right: Walk / Run | Space / Up: Jump through hoops"
+  },
+  {
+    id: "alges-escapade",
+    name: "Alges Escapade",
+    path: "./games/alges-escapade/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Platformer", "Adventure", "Action"],
+    badge: "Adventure",
+    desc: "Charming 2D puzzle platformer with physics-driven level mechanics and quirky creatures.",
+    controls: "Arrow Keys / A/D: Move | Space / W: Jump | Down: Crouch"
+  },
+  {
+    id: "ekg-runner",
+    name: "EKG Runner",
+    path: "./games/ekg-runner/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Action", "Endless", "Rhythm"],
+    badge: "Runner",
+    desc: "Unique rhythm pulse runner where you surf along dynamic electrocardiogram heartbeat waves.",
+    controls: "Space / Up Arrow / Click: Jump across pulse spikes"
+  },
+  {
+    id: "loderunner",
+    name: "Lode Runner",
+    path: "./games/loderunner/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Arcade", "Platformer", "Retro"],
+    badge: "Classic",
+    desc: "Total recall recreation of the 1983 platform puzzle legend with all 150 original levels.",
+    controls: "Arrow Keys: Move & Climb Ladders | Z / X: Dig hole left / right"
+  },
+  {
+    id: "roguish",
+    name: "Roguish",
+    path: "./games/roguish/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["RPG", "Roguelike", "Dungeon"],
+    badge: "Roguelike",
+    desc: "Turn-based roguelike dungeon crawler with tactical grid positioning, potions, and spells.",
+    controls: "WASD / Arrow Keys: Move & Bump Attack | 1-4: Cast Spells | I: Inventory"
+  },
+  {
+    id: "protocol-390",
+    name: "Protocol 390",
+    path: "./games/protocol-390/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Adventure", "Sci-Fi", "Cyberpunk"],
+    badge: "Sci-Fi",
+    desc: "Atmospheric cyberpunk adventure game unraveling dark corporate conspiracies.",
+    controls: "WASD / Arrow Keys: Move | E / Space: Interact with terminals and NPCs"
+  },
+  {
+    id: "puzzlescript",
+    name: "PuzzleScript Gallery",
+    path: "./games/puzzlescript/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Retro", "Engine"],
+    badge: "Puzzle",
+    desc: "Interactive showcase of Stephen Lavelle innovative puzzle engine with multiple built-in games.",
+    controls: "Arrow Keys / WASD: Move | Z / U: Undo step | R: Restart puzzle"
+  },
+  {
+    id: "edge-not-found",
+    name: "Edge Not Found",
+    path: "./games/edge-not-found/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Sokoban", "Logic"],
+    badge: "Puzzle",
+    desc: "Mind-bending Sokoban puzzle taking place on an infinitely wrapping 4D toroidal grid.",
+    controls: "WASD / Arrow Keys: Move | Z / U: Undo | R: Restart level"
+  },
+  {
+    id: "behind-asteroids",
+    name: "Behind Asteroids",
+    path: "./games/behind-asteroids/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Arcade", "Space", "Sci-Fi"],
+    badge: "JS13K",
+    desc: "JS13K winner flipping Asteroids upside down \u2014 defend asteroid mining rigs from raiders.",
+    controls: "WASD / Arrows: Steer ship | Space / Click: Shoot lasers | Shift: Boost"
+  },
+  {
+    id: "island-builder",
+    name: "Island Builder",
+    path: "./games/island-builder/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["Simulation", "Sandbox", "3D"],
+    badge: "Sandbox",
+    desc: "Relaxing 3D isometric island builder \u2014 craft Mediterranean voxel villages on sunlit shores.",
+    controls: "Mouse Click / Drag: Place terrain, roads, houses, trees | Mouse Wheel: Zoom"
+  },
+  {
+    id: "black-hole-square",
+    name: "Black Hole Square",
+    path: "./games/black-hole-square/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Physics", "Spatial"],
+    badge: "Puzzle",
+    desc: "Gravitational spatial puzzle game manipulating celestial singularities and cosmic geometry.",
+    controls: "Mouse: Place & rotate gravity deflector tiles | Space: Test orbit"
+  },
+  {
+    id: "xx142-b2",
+    name: "xx142-b2.exe",
+    path: "./games/xx142-b2/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Adventure", "Sci-Fi", "Retro"],
+    badge: "Retro",
+    desc: "Immersive retro sci-fi cyber terminal text adventure unraveling alien transmission logs.",
+    controls: "Keyboard: Type terminal commands (help, scan, decode, access)"
+  },
+  {
+    id: "os13k",
+    name: "OS13k Game Hub",
+    path: "./games/os13k/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["Sandbox", "Retro", "Compilation"],
+    badge: "Hub",
+    desc: "Compact retro operating system containing built-in arcade games, paint tools, and music synth.",
+    controls: "Mouse / Keyboard: Click desktop icons and run mini apps"
+  },
+  {
+    id: "space-cadet-pinball",
+    name: "3D Pinball: Space Cadet",
+    path: "./games/space-cadet-pinball/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "3D", "Classic"],
+    badge: "Popular",
+    desc: "The nostalgic Windows XP 3D Space Cadet Pinball compiled to WebAssembly with authentic sound effects.",
+    controls: "Space: Launch ball | Z / / : Left / Right flippers | Space: Bump table | F2: New Game"
   },
   {
     id: "heroine-dusk",
     name: "Heroine Dusk",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/heroine-dusk/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["RPG", "Dungeon Crawler", "Turn-Based", "Retro"],
-    badge: "RPG",
-    desc: "First-person dungeon crawler RPG. Explore dark labyrinths, battle monsters, and collect legendary relics.",
-    controls: "Arrow Keys: Navigate | Mouse / Click: Attack / Cast Spells"
-  },
-  {
-    id: "a-dark-room",
-    name: "A Dark Room",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/adarkroom/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["RPG", "Incremental", "Atmospheric", "Text"],
-    badge: "Story",
-    desc: "Award-winning minimalist text-based RPG. Stoke the fire, build your village, and explore the desolate wastes.",
-    controls: "Mouse / Click: Story Interactions"
-  },
-  {
-    id: "jolly-jumper",
-    name: "Jolly Jumper",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/jolly-jumper/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Platformer", "Endless", "Phaser", "Casual"],
-    badge: "Casual",
-    desc: "Fast-paced endless vertical platform jumping game built with the Phaser HTML5 framework.",
-    controls: "Left / Right Arrow Keys: Steer Hero Onto Platforms"
-  },
-  {
-    id: "monster-candy",
-    name: "Monster Wants Candy",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/monster-candy/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Arcade", "Casual", "Phaser", "Fun"],
-    badge: "Casual",
-    desc: "Delightful Phaser matching game by Enclave Games. Feed tasty falling candies to the adorable monster.",
-    controls: "Mouse Click / Touch: Catch Delicious Sweets"
-  },
-  {
-    id: "octocat-jump",
-    name: "Octocat Jump",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/octocat-jump/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Arcade", "Jumper", "Octocat", "Casual"],
-    badge: "Casual",
-    desc: "GitHub Game Off entry! Guide GitHub's mascot Octocat jumping higher and higher on bouncy cloud platforms.",
-    controls: "Left / Right Arrow Keys: Steer Octocat"
-  },
-  {
-    id: "captain-rogers",
-    name: "Captain Rogers",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/captain-rogers/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Action", "Runner", "Sci-Fi", "ImpactJS"],
-    badge: "Sci-Fi",
-    desc: "Captain Rogers: Asteroid Belt of Sirius. Dodge cosmic space mines and pilot through deadly asteroid belts.",
-    controls: "Mouse Click / Tap: Thrust Rocket Upward"
-  },
-  {
-    id: "raging-gardens",
-    name: "Raging Gardens",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/raging-gardens/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Arcade", "Ninja", "Maze", "Retro"],
-    badge: "Action",
-    desc: "Control a hungry ninja rabbit sneaking through garden mazes to feast on carrots while evading guard dogs.",
-    controls: "Arrow Keys: Move Ninja Rabbit"
-  },
-  {
-    id: "avabranch",
-    name: "Avabranch",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/avabranch/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Arcade", "Procedural", "Fast-Paced", "Dodge"],
-    badge: "Speed",
-    desc: "Award-winning GitHub Game Off entry by Zolmeister. Dodge branching geometric tree obstacles at breakneck velocity.",
-    controls: "Left / Right: Weave Through Branch Fractures"
-  },
-  {
-    id: "save-the-forest",
-    name: "Save The Forest",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/save-the-forest/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Arcade", "Strategy", "JS13K", "Casual"],
-    badge: "Action",
-    desc: "Intense JS13K wildfire extinguishing game. Deploy water bombers and fire lines to halt devastating forest fires.",
-    controls: "Mouse / Click: Extinguish Flames & Plant Firebreaks"
-  },
-  {
-    id: "1255-burgomaster",
-    name: "1255 Burgomaster",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/1255-burgomaster/index.html",
-    category: "games",
-    shelf: "platformer-adventure",
-    tags: ["Strategy", "Medieval", "Management", "Text"],
-    badge: "Strategy",
-    desc: "Historical medieval city governance simulation. Manage grain stores, taxation, and town defenses.",
-    controls: "Mouse / Click: Town Management Decisions"
-  },
-  {
-    id: "sandspiel",
-    name: "Sandspiel",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sandspiel/index.html",
+    path: "./games/heroine-dusk/index.html",
     category: "games",
     shelf: "sandbox-simulation",
-    tags: ["Sandbox", "Physics", "Simulation", "WASM"],
-    badge: "WASM",
-    desc: "Cellular automata falling sand physics simulator. Experiment with sand, water, fire, plant, oil, and lava.",
-    controls: "Mouse: Draw Elements | UI: Select Material / Brush Size"
+    tags: ["RPG", "Adventure", "Retro"],
+    badge: "Retro",
+    desc: "Classic turn-based 8-bit dungeon crawler RPG with spellcasting, town shops, and enemy encounters.",
+    controls: "WASD / Arrow Keys: Navigate dungeon grid | Mouse: Select combat actions"
   },
   {
-    id: "opensc2k",
-    name: "OpenSC2K",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/OpenSC2K/index.html",
+    id: "clumsy-bird",
+    name: "Clumsy Bird",
+    path: "./games/clumsy-bird/index.html",
     category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Simulation", "City Builder", "Isometric", "Retro"],
-    badge: "Sim",
-    desc: "Open-source HTML5 remake of the iconic isometric SimCity 2000 city simulation.",
-    controls: "Mouse: Select Tool / Construct / Pan Map"
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Casual", "Retro"],
+    badge: "Arcade",
+    desc: "MelonJS-powered open-source Flappy Bird remake with smooth 60 FPS physics and particle FX.",
+    controls: "Spacebar / Up Arrow / Mouse Click: Flap wings"
+  },
+  {
+    id: "minesweeper",
+    name: "Minesweeper Classic",
+    path: "./games/minesweeper/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Classic", "Strategy"],
+    badge: "Classic",
+    desc: "Authentic Windows 95 style Minesweeper with Beginner, Intermediate, and Expert grid configurations.",
+    controls: "Left Click: Reveal cell | Right Click: Place flag | Both: Chording"
+  },
+  {
+    id: "duck-hunt",
+    name: "Duck Hunt",
+    path: "./games/duck-hunt/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "Classic"],
+    badge: "Retro",
+    desc: "Faithful recreation of the iconic NES light-gun shooter with flying ducks and the laughing dog.",
+    controls: "Mouse: Aim crosshair | Left Click: Pull trigger"
+  },
+  {
+    id: "sokoban",
+    name: "Sokoban",
+    path: "./games/sokoban/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Classic", "Retro"],
+    badge: "Puzzle",
+    desc: "Original Japanese warehouse puzzle game \u2014 push every crate onto its designated target square.",
+    controls: "WASD / Arrow Keys: Move pusher | R: Restart level | U: Undo move"
+  },
+  {
+    id: "snake",
+    name: "Snake HTML5",
+    path: "./games/snake/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Classic", "Retro"],
+    badge: "Classic",
+    desc: "Clean, responsive HTML5 canvas recreation of the legendary Nokia mobile Snake game.",
+    controls: "Arrow Keys / WASD: Steer snake direction"
+  },
+  {
+    id: "sudoku",
+    name: "Sudoku Master",
+    path: "./games/sudoku/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Strategy", "Classic"],
+    badge: "Puzzle",
+    desc: "Interactive 9x9 Sudoku grid generator with difficulty tiers, error checking, and note-taking.",
+    controls: "Click cell: Select | 1-9: Enter number | Del / Backspace: Erase note"
+  },
+  {
+    id: "chess",
+    name: "HTML5 Chess",
+    path: "./games/chess/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Strategy", "Board", "Classic"],
+    badge: "Classic",
+    desc: "Clean 2-player and AI chess board with legal move indicators, capture history, and checkmate detection.",
+    controls: "Mouse Click / Drag: Pick up and move chess pieces"
   },
   {
     id: "micropolisjs",
     name: "MicropolisJS (SimCity)",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/micropolisjs/index.html",
+    path: "./games/micropolisjs/index.html",
     category: "games",
     shelf: "sandbox-simulation",
-    tags: ["Simulation", "City Builder", "Strategy", "Retro"],
-    badge: "Sim",
-    desc: "Pure JavaScript port of the original open-source SimCity city-building simulation engine.",
-    controls: "Mouse: Select Tool / Zone Residential, Commercial & Industrial"
+    tags: ["Simulation", "Strategy", "Classic"],
+    badge: "Classic Sim",
+    desc: "Full JavaScript port of Will Wright original SimCity (Micropolis) engine running in browser.",
+    controls: "Mouse: Select construction tools, zone residential/commercial/industrial, manage tax budget"
+  },
+  {
+    id: "solitaire",
+    name: "Klondike Solitaire",
+    path: "./games/solitaire/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Cards", "Classic", "Puzzle"],
+    badge: "Classic",
+    desc: "Standard Klondike Solitaire with draw-1 and draw-3 modes, auto-complete, and scoring.",
+    controls: "Mouse Drag / Double Click: Move cards to foundation piles"
+  },
+  {
+    id: "asteroids",
+    name: "Vector Asteroids",
+    path: "./games/asteroids/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "Shooter"],
+    badge: "Retro",
+    desc: "High-contrast monochrome vector physics space shooter inspired by Atari arcade 1979 masterpiece.",
+    controls: "Left / Right: Rotate ship | Up Arrow: Thruster | Spacebar: Fire laser blaster"
+  },
+  {
+    id: "skifree",
+    name: "SkiFree HTML5",
+    path: "./games/skifree/index.html",
+    category: "games",
+    shelf: "driving-sports",
+    tags: ["Sports", "Retro", "Arcade"],
+    badge: "Retro",
+    desc: "Downhill ski slalom simulator complete with moguls, jumps, snowboarders, and the terrifying Abominable Snow Monster.",
+    controls: "Left / Right: Steer skier | Down: Accelerate | Up: Brake | Space: Jump"
+  },
+  {
+    id: "tower-defense",
+    name: "Canvas Tower Defense",
+    path: "./games/tower-defense/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Strategy", "Tower Defense", "Arcade"],
+    badge: "Strategy",
+    desc: "Top-down tactical defense \u2014 place laser turrets, flak cannons, and freeze towers along enemy path.",
+    controls: "Mouse: Select tower type and place along the road | Space: Fast forward wave"
+  },
+  {
+    id: "2048",
+    name: "2048 Original",
+    path: "./games/2048/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Math", "Casual"],
+    badge: "Popular",
+    desc: "Gabriele Cirulli addictive sliding tile number puzzle \u2014 merge matching numbers to achieve 2048.",
+    controls: "Arrow Keys / WASD / Swipe: Slide all tiles in one direction"
+  },
+  {
+    id: "1255-burgomaster",
+    name: "1255 Burgomaster",
+    path: "./games/1255-burgomaster/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["Strategy", "Simulation", "Retro"],
+    badge: "Strategy",
+    desc: "Medieval city-state political management simulator \u2014 balance taxes, food supplies, and citizen approval.",
+    controls: "Mouse: Adjust municipal sliders, manage trade policies, review decrees"
+  },
+  {
+    id: "3d-city",
+    name: "3D City Engine",
+    path: "./games/3d.city/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["Simulation", "3D", "Sandbox"],
+    badge: "3D Sim",
+    desc: "Three.js powered 3D procedural voxel metropolis generator with dynamic camera controls and weather.",
+    controls: "Mouse Drag: Rotate view | Scroll: Zoom | WASD: Pan camera | Click: Inspect district"
+  },
+  {
+    id: "ancient-beast",
+    name: "Ancient Beast",
+    path: "./games/AncientBeast/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Strategy", "Turn-Based", "RPG"],
+    badge: "Turn-Based",
+    desc: "Turn-based tactical creature combat on a hexagonal battleground with unique elemental beasts.",
+    controls: "Mouse: Select creature, choose abilities, target enemy hexes"
+  },
+  {
+    id: "a-dark-room",
+    name: "A Dark Room",
+    path: "./games/adarkroom/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["RPG", "Adventure", "Incremental"],
+    badge: "Story",
+    desc: "Critically acclaimed minimalist text-based role playing mystery game \u2014 stoke the fire and survive.",
+    controls: "Mouse: Click buttons to light fire, gather wood, explore outside"
+  },
+  {
+    id: "aquastax",
+    name: "Aquastax",
+    path: "./games/aquastax/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Physics", "Casual"],
+    badge: "Physics",
+    desc: "Fluid mechanics puzzle game where you manage pipes and water currents to fill floating tanks.",
+    controls: "Mouse: Click pipes to rotate direction and seal leak points"
+  },
+  {
+    id: "arashi-js",
+    name: "Arashi Tempest",
+    path: "./games/arashi-js/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "Shooter"],
+    badge: "Retro",
+    desc: "Vector tube shooter homage to classic Tempest \u2014 crawl around geometric perimeters and blast geometric enemies.",
+    controls: "Left / Right: Move along edge | Spacebar: Fire blaster | Enter: Superzapper"
+  },
+  {
+    id: "asdf",
+    name: "ASDF Typing Arcade",
+    path: "./games/asdf/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Casual", "Retro"],
+    badge: "Typing",
+    desc: "High-speed rhythm keyboard typing test \u2014 hit falling keys in sync with the beat.",
+    controls: "Keyboard: Press falling letters (A, S, D, F) in sequence"
+  },
+  {
+    id: "ball-and-wall",
+    name: "Ball & Wall Breakout",
+    path: "./games/ball-and-wall/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "Physics"],
+    badge: "Retro",
+    desc: "Polished Breakout brick-breaker arcade with power-ups, multiball, and laser paddles.",
+    controls: "Mouse / Left-Right Arrows: Move paddle | Space: Launch ball"
+  },
+  {
+    id: "banania",
+    name: "Banania",
+    path: "./games/Banania/banania.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Classic", "Retro"],
+    badge: "Retro",
+    desc: "Classic DOS maze game \u2014 guide the monkey to eat all bananas while outsmarting angry monsters.",
+    controls: "Arrow Keys: Move monkey | Esc: Pause"
+  },
+  {
+    id: "blockrain",
+    name: "Blockrain Tetris",
+    path: "./games/blockrain/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Arcade", "Puzzle", "Retro"],
+    badge: "Retro",
+    desc: "Retro pixel-art falling block puzzle with smooth line-clear animations and chiptune vibes.",
+    controls: "Left / Right: Move block | Up: Rotate | Down: Soft drop | Space: Hard drop"
+  },
+  {
+    id: "canvas-tetris",
+    name: "Canvas Tetris",
+    path: "./games/canvas-tetris/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Arcade", "Puzzle", "Classic"],
+    badge: "Classic",
+    desc: "Lightweight, ultra-responsive HTML5 Canvas implementation of standard competitive Tetris.",
+    controls: "Left / Right: Shift | Up / X: Rotate | Down: Soft drop | Space: Hard drop"
+  },
+  {
+    id: "crappybird",
+    name: "CrappyBird",
+    path: "./games/CrappyBird/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Casual", "Flappy"],
+    badge: "Arcade",
+    desc: "Humorous Flappy Bird parody \u2014 tap to flap your wings and weave through tricky pipe obstacles.",
+    controls: "Spacebar / Mouse Click / Touch: Flap wings"
+  },
+  {
+    id: "crystalquest",
+    name: "CrystalQuest",
+    path: "./games/CrystalQuest/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Arcade", "Shooter", "Retro"],
+    badge: "Retro",
+    desc: "Classic arcade arena shooter \u2014 vacuum up all crystals while blasting invading alien swarms.",
+    controls: "Mouse: Move ship | Mouse Click: Fire blaster | Space: Smart Bomb"
+  },
+  {
+    id: "enduro",
+    name: "Enduro",
+    path: "./games/enduro/index.html",
+    category: "games",
+    shelf: "driving-sports",
+    tags: ["Racing", "Retro", "Classic"],
+    badge: "Atari Retro",
+    desc: "Tribute to the classic Atari 2600 endurance racer with dynamic weather, fog, and day/night cycles.",
+    controls: "Up Arrow: Accelerate | Down Arrow: Brake | Left / Right Arrows: Steer"
+  },
+  {
+    id: "hexgl",
+    name: "HexGL",
+    path: "./games/HexGL/index.html",
+    category: "games",
+    shelf: "driving-sports",
+    tags: ["Racing", "3D", "Sci-Fi"],
+    badge: "3D",
+    desc: "Futuristic high-speed anti-gravity 3D racer built in WebGL with stunning Three.js graphics.",
+    controls: "Up / W: Accelerate | A / D or Left / Right: Steer | Q / E: Air brakes | Space: Boost"
+  },
+  {
+    id: "hextris",
+    name: "Hextris",
+    path: "./games/Hextris/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Arcade", "Hexagonal"],
+    badge: "Popular",
+    desc: "Fast-paced hexagonal puzzle \u2014 rotate the center hexagon to match 3 or more blocks of the same color.",
+    controls: "Left / Right Arrows or A / D: Rotate hexagon | Down Arrow: Speed up block fall"
+  },
+  {
+    id: "opensc2k",
+    name: "OpenSC2K",
+    path: "./games/OpenSC2K/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["Simulation", "Classic", "Retro"],
+    badge: "Retro Sim",
+    desc: "Open-source WebGL recreation of the classic city simulator SimCity 2000.",
+    controls: "Mouse: Select zoning tools, lay pipes, construct buildings and power grids"
+  },
+  {
+    id: "pacman-canvas",
+    name: "Pacman Canvas",
+    path: "./games/pacman-canvas/index.htm",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Classic", "Retro"],
+    badge: "Classic",
+    desc: "Faithful HTML5 canvas recreation of the legendary arcade Pac-Man with original sounds.",
+    controls: "Arrow Keys / WASD: Steer Pac-Man | Space: Pause / Start"
+  },
+  {
+    id: "sandspiel",
+    name: "Sandspiel",
+    path: "./games/sandspiel/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["Simulation", "Sandbox", "Physics"],
+    badge: "Physics",
+    desc: "Falling sand cellular automata physics game written in Rust & WebAssembly.",
+    controls: "Mouse Left Click: Draw selected element | Right Click: Erase | 1-9: Select element"
   },
   {
     id: "space-company",
     name: "Space Company",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/SpaceCompany/index.html",
+    path: "./games/SpaceCompany/index.html",
     category: "games",
     shelf: "sandbox-simulation",
-    tags: ["Simulation", "Sci-Fi", "Incremental", "Space"],
+    tags: ["Incremental", "Sci-Fi", "Strategy"],
     badge: "Sci-Fi",
-    desc: "Deep space exploration incremental game. Harvest resources, research orbital tech, and colonize the galaxy.",
-    controls: "Mouse / Click: Research and Base Management"
+    desc: "Deep sci-fi incremental simulation \u2014 harvest solar energy, colonize planets, and build Dyson spheres.",
+    controls: "Mouse: Manage industry, research technologies, build rockets"
+  },
+  {
+    id: "teterjs",
+    name: "Teterjs",
+    path: "./games/teterjs/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Arcade", "Puzzle", "Classic"],
+    badge: "Puzzle",
+    desc: "Crisp JavaScript block puzzle with ghost piece preview, hold queue, and level progression.",
+    controls: "Left / Right: Move | Up: Rotate CW | Z: Rotate CCW | C: Hold | Space: Hard drop"
+  },
+  {
+    id: "flappy-2048",
+    name: "Flappy 2048",
+    path: "./games/flappy-2048/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Puzzle", "Casual"],
+    badge: "Casual",
+    desc: "Wild hybrid of Flappy Bird and 2048 \u2014 flap your number tile through walls with matching values.",
+    controls: "Spacebar / Click: Flap tile upward"
+  },
+  {
+    id: "connect-four",
+    name: "Connect Four",
+    path: "./games/connect-four/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Strategy", "Board", "Classic"],
+    badge: "Board",
+    desc: "Classic 4-in-a-row token drop game with smart minimax AI and pass-and-play multiplayer.",
+    controls: "Mouse: Click column slot to drop token"
+  },
+  {
+    id: "tictactoe",
+    name: "Tic-Tac-Toe AI",
+    path: "./games/tictactoe/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Classic", "Casual"],
+    badge: "Casual",
+    desc: "Unbeatable Minimax AI Tic-Tac-Toe featuring customizable board themes and difficulty tiers.",
+    controls: "Mouse: Click empty square to place X or O"
+  },
+  {
+    id: "tower-game",
+    name: "Tower Stacker",
+    path: "./games/tower-game/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Physics", "Casual"],
+    badge: "Casual",
+    desc: "Addictive high-rise tower stacking arcade \u2014 tap with precision timing to stack floors to the clouds.",
+    controls: "Click / Spacebar: Drop current tower block"
+  },
+  {
+    id: "wordle",
+    name: "Wordle Unlimited",
+    path: "./games/wordle/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Word", "Logic"],
+    badge: "Word",
+    desc: "Clean HTML5 recreation of the 5-letter daily word guessing puzzle with infinite replayability.",
+    controls: "Keyboard: Type letters | Enter: Submit guess | Backspace: Erase letter"
   },
   {
     id: "progress-knight",
     name: "Progress Knight",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/progress-knight/index.html",
+    path: "./games/progress-knight/index.html",
     category: "games",
     shelf: "sandbox-simulation",
-    tags: ["Simulation", "Incremental", "RPG", "Life Sim"],
+    tags: ["Incremental", "RPG", "Strategy"],
+    badge: "Incremental",
+    desc: "Deep life-simulation incremental RPG \u2014 train swordplay, study arcane magic, and achieve immortality.",
+    controls: "Mouse: Assign job tasks, study skills, manage daily schedule"
+  },
+  {
+    id: "alien-invasion",
+    name: "Alien Invasion",
+    path: "./games/alien-invasion/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "Shooter"],
+    badge: "Retro",
+    desc: "Classic top-down space arcade shooter built with HTML5 canvas sprite engine.",
+    controls: "Arrow Keys / WASD: Move ship | Spacebar: Shoot lasers"
+  },
+  {
+    id: "monster-candy",
+    name: "Monster Wants Candy",
+    path: "./games/monster-candy/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Casual", "Match"],
+    badge: "Casual",
+    desc: "Juicy Phaser-powered candy catching arcade \u2014 tap sweet treats and dodge evil skull bombs.",
+    controls: "Mouse Click / Touch: Catch candies before they hit the ground"
+  },
+  {
+    id: "sorades",
+    name: "Starship Sorades 13K",
+    path: "./games/sorades/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Arcade", "Bullet Hell", "Space"],
+    badge: "JS13K",
+    desc: "Hyper-intense 13KB vertical bullet-hell shmup with screen-filling boss laser patterns.",
+    controls: "Arrow Keys / WASD: Steer fighter | Spacebar: Primary fire | Shift: Focus movement"
+  },
+  {
+    id: "space-invaders",
+    name: "Space Invaders HTML5",
+    path: "./games/space-invaders/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "Shooter"],
+    badge: "Classic",
+    desc: "Crisp HTML5 recreation of the 1978 arcade alien defense game with classic destructible bunkers.",
+    controls: "Left / Right Arrows: Move cannon | Spacebar: Fire laser"
+  },
+  {
+    id: "survivor",
+    name: "Survivor Arena",
+    path: "./games/survivor/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Arena", "Survival"],
+    badge: "Action",
+    desc: "Intense top-down dual-stick zombie arena survivor with shotgun spreads and powerups.",
+    controls: "WASD: Move | Mouse: Aim and shoot swarming zombies"
+  },
+  {
+    id: "3d-chess",
+    name: "3D Hartwig Chess",
+    path: "./games/3d-chess/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Strategy", "Board", "3D"],
+    badge: "3D Board",
+    desc: "Elegant 3D CSS/WebGL Bauhaus Hartwig chess board with smooth perspective orbits.",
+    controls: "Mouse Click / Drag: Select piece and make legal moves"
+  },
+  {
+    id: "onslaught",
+    name: "Onslaught Arena",
+    path: "./games/onslaught/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Arena", "Medieval"],
+    badge: "Featured",
+    desc: "Lost Decade Games medieval arena hack-and-slash \u2014 blast goblin hordes with magical crossbows.",
+    controls: "WASD: Move hero | Mouse: Aim and fire arrows / magic spells"
+  },
+  {
+    id: "mariohtml5",
+    name: "Mario HTML5",
+    path: "./games/mariohtml5/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Platformer", "Retro", "Classic"],
+    badge: "Retro",
+    desc: "Full HTML5 canvas recreation of Super Mario with mushroom powerups, pipes, and Goombas.",
+    controls: "Arrow Keys: Walk / Duck | S: Jump | A: Run / Shoot Fireballs"
+  },
+  {
+    id: "green-mahjong",
+    name: "Green Mahjong",
+    path: "./games/green-mahjong/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Board", "Solitaire"],
+    badge: "Relaxing",
+    desc: "Solitaire tile-matching Mahjong with multiple classic pyramid layouts and clean vector art.",
+    controls: "Mouse Click: Select unblocked matching tile pairs"
+  },
+  {
+    id: "custom-tetris",
+    name: "Custom Tetris",
+    path: "./games/custom-tetris/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Arcade", "Puzzle", "Tetris"],
+    badge: "Retro",
+    desc: "Ondras highly configurable JavaScript falling block puzzle with custom grid dimensions.",
+    controls: "Left / Right: Shift block | Up: Rotate | Down: Drop"
+  },
+  {
+    id: "jolly-jumper",
+    name: "Jolly Jumper",
+    path: "./games/jolly-jumper/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Arcade", "Casual", "Endless"],
+    badge: "Casual",
+    desc: "Bouncy vertical platform jumper \u2014 leap across springs, clouds, and moving platforms.",
+    controls: "Left / Right Arrows or A / D: Steer jumper left and right"
+  },
+  {
+    id: "captain-rogers",
+    name: "Captain Rogers",
+    path: "./games/captain-rogers/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Action", "Space"],
+    badge: "Sci-Fi",
+    desc: "Asteroid belt escape pilot game by Enclave Games \u2014 collect star tokens and avoid space mines.",
+    controls: "Spacebar / Touch / Mouse Click: Thrust jetpack upward"
+  },
+  {
+    id: "coil",
+    name: "Coil",
+    path: "./games/coil/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Action", "Minimal"],
+    badge: "Minimal",
+    desc: "Hypnotic circular mouse-dodging game \u2014 enclose glowing particles within your energy trail.",
+    controls: "Mouse Movement: Steer light trail and encircle energy nodes"
+  },
+  {
+    id: "floppybird",
+    name: "Floppy Bird HTML5",
+    path: "./games/floppybird/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Casual", "Flappy"],
+    badge: "Casual",
+    desc: "Smooth CSS3/HTML5 Flappy Bird clone with authentic sound effects and high score saving.",
+    controls: "Spacebar / Mouse Click / Touch: Flap wings"
+  },
+  {
+    id: "pacman",
+    name: "Pacman JS",
+    path: "./games/pacman/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Classic", "Retro"],
+    badge: "Classic",
+    desc: "Lucio Panepinto full-featured canvas Pac-Man with authentic maze pathfinding AI.",
+    controls: "Arrow Keys: Steer Pac-Man | Space: Start / Pause"
+  },
+  {
+    id: "drakonas",
+    name: "Drakonas",
+    path: "./games/drakonas/index.html",
+    category: "games",
+    shelf: "sandbox-simulation",
+    tags: ["RPG", "Action", "Fantasy"],
     badge: "RPG",
-    desc: "Life-sim incremental RPG. Work as a beggar or scholar, master holy magic, and unlock immortality through rebirth.",
-    controls: "Mouse / Click: Choose Careers, Skills, and Reincarnations"
+    desc: "Action fantasy RPG where you battle dragons, cast fireball spells, and explore ruins.",
+    controls: "WASD / Arrows: Move | Space: Attack | 1-3: Spells"
   },
   {
-    id: "tower-game",
-    name: "Tower Building Game",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tower-game/index.html",
+    id: "digger",
+    name: "Digger Remastered",
+    path: "./games/digger/index.html",
     category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Arcade", "Physics", "Stacking", "Casual"],
-    badge: "Stacking",
-    desc: "Addictive skyscraper stacking game. Time the swinging crane release to stack tower floors into the clouds.",
-    controls: "Space / Click: Drop Floor Block"
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "Classic"],
+    badge: "Retro",
+    desc: "Windmill Software 1983 classic Digger remastered in modern HTML5 canvas.",
+    controls: "Arrow Keys: Dig tunnels & steer digger | F1: Fire weapon"
   },
   {
-    id: "borg-games",
-    name: "Borg Games",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Borg-Games.html",
+    id: "ceros-snake",
+    name: "Ceros Snake",
+    path: "./games/ceros-snake/index.html",
     category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Hub", "Arcade", "Retro", "Collection"],
-    badge: "Hub",
-    desc: "Comprehensive standalone arcade collection featuring classic mini-games and retro simulations.",
-    controls: "Interactive Menu UI / On-screen Controls"
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Snake", "Retro"],
+    badge: "Arcade",
+    desc: "Vibrant arcade snake with speed boosts, collectible gems, and obstacle grids.",
+    controls: "Arrow Keys / WASD: Steer snake"
+  },
+  {
+    id: "openpanzer",
+    name: "OpenPanzer",
+    path: "./games/openpanzer/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Strategy", "Wargame", "Hex"],
+    badge: "Wargame",
+    desc: "Deep tactical turn-based WWII hex grid wargame recreating historical battlefield operations.",
+    controls: "Mouse: Select armored divisions, give movement & bombardment orders"
+  },
+  {
+    id: "hotfix",
+    name: "Hotfix",
+    path: "./games/hotfix/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Action", "Cyber", "Puzzle"],
+    badge: "Sci-Fi",
+    desc: "Fast cyber security puzzle action \u2014 patch memory leaks and eliminate rogue server viruses.",
+    controls: "Arrow Keys / WASD: Move avatar | Space: Deploy software patches"
+  },
+  {
+    id: "hurry",
+    name: "Hurry!",
+    path: "./games/hurry/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Action", "Speed", "Casual"],
+    badge: "Speed",
+    desc: "Fast-paced timer countdown survival game by Hugh Kennedy \u2014 grab glowing clock nodes.",
+    controls: "WASD / Arrow Keys: Move character | Dodge laser barriers"
+  },
+  {
+    id: "octocat-jump",
+    name: "Octocat Jump",
+    path: "./games/octocat-jump/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Arcade", "Platformer", "Endless"],
+    badge: "Casual",
+    desc: "GitHub Game Off platform jumper starring Octocat \u2014 collect commit coins and climb higher.",
+    controls: "Left / Right Arrow Keys: Move Octocat across floating ledges"
+  },
+  {
+    id: "raging-gardens",
+    name: "Raging Gardens",
+    path: "./games/raging-gardens/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Action", "Stealth", "Retro"],
+    badge: "Stealth",
+    desc: "Stealth garden ninja action \u2014 sneak past angry guard dogs, grab carrots, and escape.",
+    controls: "Arrow Keys / WASD: Move ninja | Space: Sneak / Dash"
+  },
+  {
+    id: "save-the-forest",
+    name: "Save the Forest",
+    path: "./games/save-the-forest/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Strategy", "Tower Defense", "Casual"],
+    badge: "Defense",
+    desc: "Strategic environmental defense game \u2014 stop wildfire spread and plant saplings.",
+    controls: "Mouse: Click to deploy water pumps and clear firebreak paths"
+  },
+  {
+    id: "spashal",
+    name: "Spashal",
+    path: "./games/spashal/index.html",
+    category: "games",
+    shelf: "action-3d",
+    tags: ["Arcade", "Space", "Physics"],
+    badge: "Physics",
+    desc: "Orbital physics space maneuver game \u2014 guide rocket trajectories around planetary gravity wells.",
+    controls: "Left / Right: Rotate ship | Up Arrow / Space: Fire main rocket booster"
+  },
+  {
+    id: "zedinvaders",
+    name: "Zed Invaders",
+    path: "./games/zedinvaders/index.html",
+    category: "games",
+    shelf: "arcade-retro",
+    tags: ["Arcade", "Retro", "Shooter"],
+    badge: "Retro",
+    desc: "High-tempo space invaders tribute featuring pulsing neon graphics and bonus waves.",
+    controls: "Left / Right Arrows: Move | Spacebar: Fire rapid plasma beams"
+  },
+  {
+    id: "avabranch",
+    name: "Avabranch",
+    path: "./games/avabranch/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Puzzle", "Physics", "Casual"],
+    badge: "Puzzle",
+    desc: "Charming branching physics puzzle \u2014 guide seed sprouts to open sunlight blossoms.",
+    controls: "Mouse: Click branch joints to split and redirect energy flow"
+  },
+  {
+    id: "heal-em-all",
+    name: "Heal Em All",
+    path: "./games/heal-em-all/index.html",
+    category: "games",
+    shelf: "puzzle-strategy",
+    tags: ["Strategy", "Puzzle", "Casual"],
+    badge: "Strategy",
+    desc: "Reverse zombie strategy puzzle \u2014 synthesize antidotes and cure zombie hordes back to humans.",
+    controls: "Mouse: Deploy cure syringes, set barricades, and guide survivors"
+  },
+  {
+    id: "marble-soccer",
+    name: "Marble Soccer 3D",
+    path: "./games/marble-soccer/index.html",
+    category: "games",
+    shelf: "driving-sports",
+    tags: ["Sports", "3D", "Physics"],
+    badge: "3D Sports",
+    desc: "Physics 3D soccer simulation by Jerome Etienne \u2014 steer rolling marbles to score goals.",
+    controls: "WASD / Arrows: Steer soccer marble | Space: Boost dash"
+  },
+  {
+    id: "cellmates",
+    name: "Cellmates",
+    path: "./games/cellmates/index.html",
+    category: "games",
+    shelf: "platformer-adventure",
+    tags: ["Puzzle", "Stealth", "Adventure"],
+    badge: "Stealth",
+    desc: "Cooperative prison stealth escape puzzle \u2014 switch between inmates and evade security guards.",
+    controls: "WASD / Arrows: Move active prisoner | Space: Switch prisoner | E: Interact"
   },
   {
     id: "emulatorjs",
     name: "EmulatorJS",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/emulators/Emulatorjs/index.html",
+    path: "./emulators/Emulatorjs/index.html",
     category: "emulators",
     shelf: "emulators",
-    tags: ["Emulator", "Retro", "NES", "SNES", "GBA", "N64", "Genesis", "PSX"],
-    badge: "Multi-System",
-    desc: "Multi-system web emulator supporting NES, SNES, Game Boy, GBA, Genesis, Nintendo 64, and PlayStation with built-in ROM drop zone.",
-    controls: "Gamepad / Keyboard Configurable | In-game Settings Menu"
+    tags: ["Emulator", "Retro", "Multi-System"],
+    badge: "Emulator",
+    desc: "Multi-console retro emulator supporting NES, SNES, GBA, GBC, N64, Genesis, PS1 with ROM drag-and-drop.",
+    controls: "Drag & drop any ROM file or browse local files. Supports gamepad & custom keyboard mapping."
   },
   {
     id: "anura-os",
     name: "Anura OS",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/emulators/anuraOS.html",
+    path: "./emulators/anuraOS.html",
     category: "emulators",
     shelf: "emulators",
-    tags: ["OS", "Linux", "Desktop", "Sandbox"],
-    badge: "Web OS",
-    desc: "Full-featured web-based operating system with window manager, terminal, apps, and browser environment.",
-    controls: "Standard Desktop UI: Windows, Mouse, Keyboard"
+    tags: ["Emulator", "OS", "Sandbox"],
+    badge: "Virtual OS",
+    desc: "Complete desktop operating system running directly in your browser with Linux/x86 app emulation.",
+    controls: "Mouse & Keyboard: Full desktop window manager, terminal, file system, and browser apps"
   },
   {
-    id: "iodinegba",
-    name: "IodineGBA",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/emulators/iodinegba/index.html",
+    id: "iodine-gba",
+    name: "IodineGBA (GBA Emulator)",
+    path: "./emulators/iodinegba/index.html",
     category: "emulators",
     shelf: "emulators",
-    tags: ["Emulator", "GBA", "Game Boy Advance", "Retro"],
-    badge: "GBA",
-    desc: "High-performance pure JavaScript Game Boy Advance emulator engine by Grant Galitz with full audio and save support.",
-    controls: "Z: A | X: B | A: L | S: R | Enter: Start | Space: Select | Arrow Keys: D-Pad"
+    tags: ["Emulator", "Retro", "GBA"],
+    badge: "GBA Emulator",
+    desc: "High-accuracy pure JavaScript Game Boy Advance emulator \u2014 load .gba ROMs and play instantly.",
+    controls: "Load ROM file from disk | Keyboard: Z (A), X (B), Enter (Start), Shift (Select), Arrows (D-Pad)"
   },
   {
     id: "cyberchef",
     name: "CyberChef",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/other/CyberChef/index.html",
-    category: "tools",
-    shelf: "tools",
-    tags: ["Tool", "Cryptography", "Encoding", "Utilities"],
+    path: "./other/CyberChef/index.html",
+    category: "other",
+    shelf: "other",
+    tags: ["Tools", "Utility", "Cryptography"],
     badge: "Utility",
-    desc: "The Cyber Swiss Army Knife. Swiss-army tool for encryption, encoding, compression, and data analysis.",
-    controls: "Interactive Pipeline Builder UI"
+    desc: "The cyber Swiss Army knife by GCHQ for encoding, decoding, hashing, encryption, regex, and hex editing.",
+    controls: "Mouse: Drag operations into recipe pipeline, paste input, inspect output"
   },
   {
     id: "gust-browser",
     name: "GUST",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/GUST.html",
-    category: "tools",
-    shelf: "tools",
-    tags: ["Browser", "Proxy", "Web", "Privacy"],
-    badge: "Proxy",
-    desc: "Fast, lightweight web proxy browser with tabbed browsing and cloaking capabilities.",
-    controls: "URL Bar / Standard Browser Navigation"
+    path: "./browsers/GUST.html",
+    category: "other",
+    shelf: "other",
+    tags: ["Browser", "Proxy", "Utility"],
+    badge: "Browser",
+    desc: "Full-featured web proxy browser client with tab management and stealth browsing.",
+    controls: "Type any web address or search query in the address bar"
   },
   {
     id: "incognito-browser",
     name: "Incognito",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/Incognito.html",
-    category: "tools",
-    shelf: "tools",
-    tags: ["Browser", "Proxy", "Stealth", "Privacy"],
-    badge: "Proxy",
-    desc: "Privacy-first web proxy browser designed for seamless browsing and privacy isolation.",
-    controls: "URL Bar / Standard Browser Navigation"
+    path: "./browsers/Incognito.html",
+    category: "other",
+    shelf: "other",
+    tags: ["Browser", "Proxy", "Utility"],
+    badge: "Browser",
+    desc: "Fast, privacy-focused proxy gateway designed for unblocked web exploration.",
+    controls: "Enter search terms or URL in the navigation bar"
   },
   {
     id: "interstellar-browser",
     name: "Interstellar",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/Interstellar.html",
-    category: "tools",
-    shelf: "tools",
-    tags: ["Browser", "Proxy", "Fast", "Stealth"],
-    badge: "Proxy",
-    desc: "Modern proxy frontend with ultra-fast request routing, customizable themes, and built-in tab cloaking.",
-    controls: "URL Bar / Standard Browser Navigation"
+    path: "./browsers/Interstellar.html",
+    category: "other",
+    shelf: "other",
+    tags: ["Browser", "Proxy", "Utility"],
+    badge: "Browser",
+    desc: "Modern, streamlined web proxy interface with fast loading and responsive controls.",
+    controls: "Type search query or website destination into the bar"
   },
   {
     id: "scramjet-browser",
     name: "Scramjet",
-    path: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/browsers/Scramjet.html",
-    category: "tools",
-    shelf: "tools",
-    tags: ["Browser", "Proxy", "NextGen", "Fast"],
-    badge: "Proxy",
-    desc: "Next-generation web proxy engine offering high compatibility for complex modern web applications.",
-    controls: "URL Bar / Standard Browser Navigation"
+    path: "./browsers/Scramjet.html",
+    category: "other",
+    shelf: "other",
+    tags: ["Browser", "Proxy", "Utility"],
+    badge: "Browser",
+    desc: "High-performance web proxy client built on modern service worker proxy technologies.",
+    controls: "Enter URL or search keyword into the navigation search bar"
   }
 ];
 
-/* ================================================================
-   2. CORE ENGINE & APPLICATION CONTROLLER
-   ================================================================ */
-(function () {
-  const CATEGORIES = [
-    { id: "games",      label: "Games",     icon: "🎮" },
-    { id: "emulators",  label: "Emulators", icon: "🕹️" },
-    { id: "other",      label: "Other & Tools", icon: "📦" }
+/*    2. CORE ENGINE & APPLICATION CONTROLLER
+   (function () {
+  const SHELVES = [
+    { id: "action-3d",              label: "Action & 3D",            icon: "⚔️" },
+    { id: "platformer-adventure",   label: "Platformer & Adventure", icon: "🏃" },
+    { id: "arcade-retro",           label: "Arcade & Retro",         icon: "👾" },
+    { id: "puzzle-strategy",        label: "Puzzle & Strategy",      icon: "🧩" },
+    { id: "driving-sports",         label: "Driving & Sports",       icon: "🏎️" },
+    { id: "sandbox-simulation",     label: "Sandbox & Simulation",   icon: "🌍" },
+    { id: "emulators",              label: "Emulators",              icon: "🕹️" },
+    { id: "other",                  label: "Tools & Proxies",        icon: "📦" }
   ];
 
   const THEMATIC_SHELVES = [
@@ -2281,6 +2527,19 @@ const GAMES_DATA = [
 
   const GENRE_TAGS = [
     "All", "Action", "Arcade", "Puzzle", "Strategy", "Retro", "Driving", "Platformer", "Physics", "3D", "WASM", "Sandbox", "RPG", "Cards", "Tools"
+  const SHELVES = [
+    { id: "action-3d",              label: "Action & 3D",            icon: "⚔️" },
+    { id: "platformer-adventure",   label: "Platformer & Adventure", icon: "🏃" },
+    { id: "arcade-retro",           label: "Arcade & Retro",         icon: "👾" },
+    { id: "puzzle-strategy",        label: "Puzzle & Strategy",      icon: "🧩" },
+    { id: "driving-sports",         label: "Driving & Sports",       icon: "🏎️" },
+    { id: "sandbox-simulation",     label: "Sandbox & Simulation",   icon: "🌍" },
+    { id: "emulators",              label: "Emulators",              icon: "🕹️" },
+    { id: "other",                  label: "Tools & Proxies",        icon: "📦" }
+  ];
+
+  const GENRE_TAGS = [
+    "All", "Action", "Arcade", "Puzzle", "Strategy", "Retro", "Driving", "Physics", "3D", "WASM", "Sandbox", "Cards", "Tools"
   ];
 
   const REPO_OWNER = 'Dragon-Gaming-Platforms';
@@ -2329,7 +2588,7 @@ const GAMES_DATA = [
   const CLOAK_PRESETS = {
     default: {
       title: "Dragon Gaming Platforms",
-      icon: "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png"
+      icon: "assets/dragon-login.png"
     },
     classroom: {
       title: "Classes",
@@ -2854,6 +3113,88 @@ const GAMES_DATA = [
     const playCount = getPlayCount(item.id);
     const tagsHTML = item.tags.slice(0, 3).map(t => `<span class="game-card__tag">${esc(t)}</span>`).join('');
 
+
+  function popoutGame() {
+    if (!activeGame) return;
+    window.open(activeGame.path, '_blank');
+  }
+
+  function toggleFullscreen() {
+    const target = $('#viewerWindow') || viewerIframe;
+    if (!document.fullscreenElement) {
+      if (target.requestFullscreen) target.requestFullscreen();
+      else if (target.webkitRequestFullscreen) target.webkitRequestFullscreen();
+    } else {
+      if (document.exitFullscreen) document.exitFullscreen();
+    }
+  }
+
+  function updateViewerFavButton() {
+    if (!viewerFavBtn || !activeGame) return;
+    const isFav = isFavorite(activeGame.id);
+    viewerFavBtn.classList.toggle('active', isFav);
+    viewerFavBtn.title = isFav ? "Remove from Favorites" : "Add to Favorites";
+    viewerFavBtn.innerHTML = `<span>${isFav ? '★' : '☆'}</span> <span class="game-viewer__btn-text">${isFav ? 'Favorited' : 'Favorite'}</span>`;
+  }
+
+  function toggleControlsOverlay() {
+    if (!viewerControlsCard) return;
+    viewerControlsCard.classList.toggle('open');
+  }
+
+  function openRandomGame() {
+    const list = getFilteredGames();
+    if (!list.length) return;
+    const randomItem = list[Math.floor(Math.random() * list.length)];
+    openGame(randomItem);
+  }
+
+  // ---- Filtering, Search & Card Rendering ----
+  function getFilteredGames() {
+    let list = [...GAMES_DATA];
+    const favs = getFavorites();
+    const recents = getRecents();
+
+    if (currentCategory === 'favorites') {
+      list = list.filter(g => favs.includes(g.id));
+    } else if (currentCategory === 'recent') {
+      list = recents.map(id => list.find(g => g.id === id)).filter(Boolean);
+    } else if (currentCategory !== 'all') {
+      list = list.filter(g => g.category === currentCategory);
+    }
+
+    if (currentTag && currentTag !== 'All') {
+      list = list.filter(g => g.tags.some(t => t.toLowerCase() === currentTag.toLowerCase()));
+    }
+
+    if (currentSearchQuery.trim()) {
+      const q = currentSearchQuery.toLowerCase().trim();
+      list = list.filter(g =>
+        g.name.toLowerCase().includes(q) ||
+        g.desc.toLowerCase().includes(q) ||
+        g.tags.some(t => t.toLowerCase().includes(q)) ||
+        g.category.toLowerCase().includes(q)
+      );
+    }
+
+    if (currentSort === 'az') {
+      list.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (currentSort === 'za') {
+      list.sort((a, b) => b.name.localeCompare(a.name));
+    } else if (currentSort === 'played') {
+      const counts = getPlayCounts();
+      list.sort((a, b) => (counts[b.id] || 0) - (counts[a.id] || 0));
+    }
+
+    return list;
+  }
+
+  function cardHTML(item) {
+    const icons = { games: "🎮", emulators: "🕹️", other: "📦" };
+    const isFav = isFavorite(item.id);
+    const playCount = getPlayCount(item.id);
+    const tagsHTML = item.tags.slice(0, 3).map(t => `<span class="game-card__tag">${esc(t)}</span>`).join('');
+
     return `
       <div class="game-card" data-id="${esc(item.id)}">
         <div class="game-card__image">
@@ -2890,6 +3231,7 @@ const GAMES_DATA = [
       { id: 'games', label: '🎮 Games', count: GAMES_DATA.filter(g => g.category === 'games').length },
       { id: 'emulators', label: '🕹️ Emulators', count: GAMES_DATA.filter(g => g.category === 'emulators').length },
       { id: 'other', label: '🛠️ Other & Tools', count: GAMES_DATA.filter(g => g.category === 'other' || g.category === 'tools').length }
+      { id: 'other', label: '📦 Other & Tools', count: GAMES_DATA.filter(g => g.category === 'other').length }
     ];
 
     return `
@@ -2898,6 +3240,7 @@ const GAMES_DATA = [
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
             <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search ${GAMES_DATA.length} games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 122 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>
@@ -3003,11 +3346,23 @@ const GAMES_DATA = [
               <span class="section-count">${shelfItems.length} items</span>
             </div>
             <div class="games-grid">${shelfItems.map(cardHTML).join('')}</div>
+      const catSections = SHELVES.map(sh => {
+        const catItems = GAMES_DATA.filter(g => g.shelf === sh.id || (!g.shelf && g.category === sh.id));
+        if (!catItems.length) return '';
+        return `
+          <section class="category-section" id="category-${sh.id}">
+            <div class="section-header">
+              <span class="section-icon">${sh.icon}</span>
+              <h2 class="section-title">${sh.label}</h2>
+              <span class="section-count">${catItems.length} items</span>
+            </div>
+            <div class="games-grid">${catItems.map(cardHTML).join('')}</div>
           </section>
         `;
       }).join('');
 
       content = favsSection + recentsSection + shelfSections;
+      content = favsSection + recentsSection + catSections;
     } else {
       content = `
         <section class="category-section">
@@ -3036,6 +3391,23 @@ const GAMES_DATA = [
         });
       });
     }
+    if (gridRoot) gridRoot.innerHTML = content;
+
+    $$('.game-card', gridRoot).forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.game-card__fav-btn')) return;
+        const id = card.dataset.id;
+        openGame(id);
+      });
+    });
+
+    $$('.game-card__fav-btn', gridRoot).forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.favId;
+        toggleFavorite(id);
+      });
+    });
 
     const clearRecentsBtn = $('#clearRecentsBtn');
     if (clearRecentsBtn) clearRecentsBtn.addEventListener('click', clearRecents);
