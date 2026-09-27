@@ -22,6 +22,20 @@ Dragon Gaming Platforms is built with and powered by an incredible ecosystem of 
 - **Sight & Light (2D Raycasting)** — [Nicky Case](https://github.com/ncase/sight-and-light) (CC0 Public Domain)
 
 ### Open Source Games & Developers
+- **Q1K3 (Quake in 13KB JS)** — [Dominic Szablewski / Phoboslab](https://github.com/phoboslab/q1k3) (MIT)
+- **Underrun** — [Dominic Szablewski / Phoboslab](https://github.com/phoboslab/underrun) (MIT)
+- **Space Huggers Roguelite** — [Frank Force / KilledByAPixel](https://github.com/KilledByAPixel/SpaceHuggers) (MIT)
+- **Bounce Back (Boomerang Roguelike)** — [Frank Force / KilledByAPixel](https://github.com/KilledByAPixel/BounceBack) (MIT)
+- **OS13k Virtual OS & Games** — [Frank Force / KilledByAPixel](https://github.com/KilledByAPixel/OS13k) (MIT)
+- **Radius Raid Survival** — [Jack Rugile](https://github.com/jackrugile/radius-raid-js13k) (MIT)
+- **Dante's Inferno 3D** — [Salvatore Previti](https://github.com/SalvatorePreviti/js13k-2022) (MIT)
+- **Norman the Necromancer** — [Dan Prince](https://github.com/danprince/norman-the-necromancer) (MIT)
+- **Black Hole Square** — [Quinten](https://github.com/Quinten/black-hole-square) (MIT)
+- **XX142-B2 Alien Infiltration** — [Bencoder](https://github.com/bencoder/js13k-2019) (MIT)
+- **Behind Asteroids Vector** — [Gre](https://github.com/gre/behind-asteroids) (MIT)
+- **Mykonos Island Builder 3D** — [Boona13](https://github.com/boona13/mykonos-island-voxels) (MIT)
+- **IsoCity & IsoCity Tower Defense** — [Victor Ribeiro](https://github.com/victorqribeiro/isocity) (MIT)
+- **Mumuy Pacman Deluxe** — [mumuy](https://github.com/mumuy/pacman) (MIT)
 - **SpaceCadetPinball (WASM)** — [k4zmu2a](https://github.com/k4zmu2a/SpaceCadetPinball) & [alula](https://github.com/alula/SpaceCadetPinball) (MIT / 2-Clause BSD)
 - **Slow Roads 3D** — [anslo](https://github.com/anslo/slow-roads) (MIT)
 - **Sandboxels Falling Sand Simulation** — [R74n](https://github.com/R74n/Sandboxels) (GPL-3.0)
@@ -112,7 +126,8 @@ Dragon Gaming Platforms is built with and powered by an incredible ecosystem of 
 - **1255 Burgomaster** — [Burgomaster Team](https://github.com/1255-burgomaster) (GPL-3.0)
 - **CrappyBird** — [CrappyBird Team](https://github.com/crappybird) (MIT)
 - **CrystalQuest** — [CrystalQuest Team](https://github.com/crystalquest) (MIT)
-- **Mini-Browser Games Suite** (Air Hockey, Chalk Billiards, Drift Racer, Fruit Slice, Moon Lander, Orbital Pinball, Pocket Golf, Prism Breaker, Slingstorm, Tank Arena, Thunder Vanguard, Monster Horde, Forest Dash, Snow Ridge, Dungeon Delver, Auto Chess Forge, Backpack Arena, Spud Arena, Starforge Idle, Curling Endgame, Sky Hop, Elemental Sandbox, Air Traffic Control, Alchemy Workshop, Auction Fever, Neon Blackjack Table, Bomb Grid Tactical, ByteBot Lab, Clockwork Escape, Comet Weaver, Connect Arena, Dice Delver, Dojo Duel, Drone Survey, Fleet Duel, Maze Chase, Mine Matrix, Neon 2048, Penalty Rush, Photo Safari, Pocket Empire, Pocket Farm, Radish Guard, Shadow Post, Sokoban Quest, Stack Tower, Starship Suspects, Touchline Manager, Truss Workshop, Word Grid) — [Wang Zifan](https://github.com/wangzifan396-wzf/mini-browser-games) (MIT)
+- **One HTML Page Challenge** — [Metroxe & Contributors](https://github.com/Metroxe/one-html-page-challenge) (MIT)
+- **Mini-Browser Games Suite** (Abyss Sonar, Air Hockey, Air Traffic Control, Alchemy Workshop, Ant Colony Sim, Auction Fever, Auto Chess Forge, Avoid the Bikes, Backpack Arena, Ball Arena, Basin Control, Battery Cycle, Beat Bento, Blackjack Table, Block Forge, Bomb Grid, Branching Tales, ByteBot Lab, Chalk Billiards, Charm Reels, Checkpoint Inspector, Chromatic Press, Chromatography Lab, Cipher Relay, Claw Carnival, Clean Slate, Climbing Route, Clockwork Escape, Comet Weaver, Connect Arena, Courier Grid, Courtroom Clash, Cozy Organizer, Crossword Cafe, Curling Endgame, Detective Desk, Dice Delver, Dojo Duel, Drift Racer, Drone Survey, Dungeon Delver, Ecosystem Keeper, Elemental Sandbox, Ember Tactics, Fishing Harbor, Flappy Glider, Fleet Duel, Forest Dash, Frequency Bureau, Frontier Command, Fruit Slice, Garden Front, Gear Calibrator, Gem Garden, Glyph Warden, Hive Sovereign, Island Survival, Lantern Memory, Lockmaster Shift, Mahjong Link, Market Pulse, Maze Chase, Merge Orbit, Metro Weaver, Midnight Chess, Midnight Monitor, Mine Matrix, Mist Valley Herbarium, MOBA Frontier, Mole Market, Monster Horde, Monster Tamer, Moon Lander, Mosaic Jigsaw, Museum Climate, Neon 2048, Noodle Shift, Observatory Watch, Orbital Pinball, Orbital Stowage, Pathogen Protocol, Penalty Rush, Photo Safari, Pixel Clues, Pocket Companion, Pocket Empire, Pocket Farm, Pocket Golf, Prim's Maze Generator, Prism Breaker, Prism Orchard, Pulse Studio, Radish Guard, Relay Coordination, Risky Stakes, River Hold'em, Runway Stylist, Shadow Post, Shan Hai, Signal Caravan, Silent Rescue, Sky Hop, Skyline Planner, Slingstorm, Snake Game, Snow Ridge, Sokoban Quest, Solitaire Classic, Spectrum Console, Spud Arena, Stack Tower, Starforge Idle, Starline Route, Starship Suspects, Stratigraphy Lab, Sudoku Studio, Switchyard Rush, Tank Arena, Thunder Vanguard, Tidal Grid, Tide Salvage, Time Post, Tiny Factory, Touchline Manager, Truss Workshop, Wind Tunnel Contracts, Wonder Park, Word Grid) — [Wang Zifan](https://github.com/wangzifan396-wzf/mini-browser-games) (MIT)
 
 __NOTICE:__
 All third-party open-source projects, assets, and engines retain their respective licenses and copyrights.

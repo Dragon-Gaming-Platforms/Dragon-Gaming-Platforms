@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0a0a0a" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="description" content="Dragon Gaming Platforms — Ultimate library of 220+ legal open-source browser games, emulators, and tools. Optimized for mobile, tablet, and desktop." />
+  <meta name="description" content="Dragon Gaming Platforms — Ultimate library of 70+ legal open-source browser games, emulators, and tools. Optimized for mobile, tablet, and desktop." />
   <meta name="keywords" content="games, game site, gaming site, unblocked games, free online games, browser gaming, emulators, classic games, retro gaming, play games online, gaming platforms, nostalgic games, web-based games, wasm games, eaglercraft, balatro" />
   <meta name="author" content="Dragon Gaming Platforms" />
   <title>Dragon Gaming Platforms</title>
@@ -41,7 +41,7 @@
       
       <ul class="navbar__links" id="navLinks">
         <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#filterBarRoot" class="nav-section-link">Games (220+)</a></li>
+        <li><a href="#filterBarRoot" class="nav-section-link">Games (70)</a></li>
         <li><a href="#category-emulators" class="nav-section-link">Emulators</a></li>
         <li><a href="#category-other" class="nav-section-link">Tools</a></li>
         <li class="navbar__dropdown" id="dropdownRoot">
@@ -66,7 +66,7 @@
       <img class="hero__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
       <div class="hero__line"></div>
       <h1 class="hero__title"><span class="highlight">Dragon</span> Gaming<br />Platforms</h1>
-      <p class="hero__subtitle">Your gateway to the ultimate web gaming experience. Play 220+ classic games, emulators, and unblocked tools directly from your browser on mobile and desktop.</p>
+      <p class="hero__subtitle">Your gateway to the ultimate web gaming experience. Play 70 classic games, emulators, and unblocked tools directly from your browser on mobile and desktop.</p>
       
       <div class="hero__cta-group">
         <a href="#filterBarRoot" class="hero__cta" id="browseGamesBtn">▶ Explore Library</a>
@@ -119,58 +119,42 @@
           <button class="game-viewer__btn" id="viewerFullscreenBtn" title="Toggle Fullscreen">
             <span>⛶</span> <span class="game-viewer__btn-text">Fullscreen</span>
           </button>
-          <button class="game-viewer__btn game-viewer__btn--close" id="viewerClose" title="Close Game">
+          <button class="game-viewer__btn game-viewer__btn--close" id="viewerClose" title="Close Game (Esc)">
             <span>✕</span> <span class="game-viewer__btn-text">Close</span>
           </button>
         </div>
       </div>
 
-      <div class="game-viewer__controls-overlay" id="viewerControlsCard">
-        <div class="game-viewer__controls-header">
-          <strong>🎮 How to Play & Instructions</strong>
-        </div>
-        <div class="game-viewer__controls-content" id="viewerControlsText">
-          Loading controls…
-        </div>
-      </div>
-
-      <div class="game-viewer__frame-wrap">
+      <div class="game-viewer__iframe-wrapper">
         <div class="game-viewer__loading" id="viewerLoading">
           <div class="loading-state__spinner"></div>
-          <div class="loading-state__text">Starting Game…</div>
+          <span class="game-viewer__loading-text">Launching game environment…</span>
         </div>
-        <iframe class="game-viewer__iframe" id="viewerIframe" allow="fullscreen; autoplay; gamepad; clipboard-write" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"></iframe>
+        
+        <!-- Controls Info Popup Card inside Viewer -->
+        <div class="game-viewer__controls-card" id="viewerControlsCard">
+          <div class="game-viewer__controls-title">Controls & Instructions</div>
+          <div class="game-viewer__controls-text" id="viewerControlsText">Use WASD or Arrow Keys to control.</div>
+        </div>
+
+        <iframe class="game-viewer__iframe" id="viewerIframe" title="Dragon Game Viewer" loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; gamepad; fullscreen" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__container">
+    <div class="container">
       <div class="footer__brand">
-        <img src="assets/dragon-login.png" alt="Dragon Gaming" class="footer__logo" />
-        <div>
-          <div class="footer__name">Dragon Gaming Platforms</div>
-          <div class="footer__tagline">The Unblocked Browser Gaming Frontier</div>
-        </div>
+        <img class="footer__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
+        <span class="footer__name">Dragon Gaming Platforms</span>
       </div>
-
-      <div class="footer__links">
-        <a href="#hero">Home</a>
-        <a href="#filterBarRoot">Games (220+)</a>
-        <a href="#category-emulators">Emulators</a>
-        <a href="#category-other">Tools</a>
-        <a href="#download">Download</a>
-        <a href="#settings">Settings</a>
-      </div>
-
-      <div class="footer__copy">
-        <p>Built with ❤️ by the Dragon Gaming Community. All open source games and emulators belong to their respective creators.</p>
-      </div>
+      <p class="footer__copy">© 2026 Dragon Gaming Platforms. Open Source Web Gaming.</p>
     </div>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- JS: data + engine -->
   <script src="games.js"></script>
 </body>
 </html>
