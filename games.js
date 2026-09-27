@@ -1027,6 +1027,57 @@ const GAMES_DATA = [
     { id: "other",      label: "Other & Tools", icon: "📦" }
   ];
 
+  const FEATURED_SHELVES = [
+    {
+      id: "action-3d",
+      title: "Action & 3D Games",
+      icon: "⚡",
+      match: g => g.category === "games" && (g.tags.includes("3D") || g.tags.includes("Action") || g.tags.includes("Shooter") || g.tags.includes("WASM"))
+    },
+    {
+      id: "arcade-retro",
+      title: "Arcade & Retro Classics",
+      icon: "🕹️",
+      match: g => g.category === "games" && (g.tags.includes("Arcade") || g.tags.includes("Classic") || g.tags.includes("Retro")) && !g.tags.includes("3D")
+    },
+    {
+      id: "puzzle-strategy",
+      title: "Puzzle & Strategy",
+      icon: "🧩",
+      match: g => g.category === "games" && (g.tags.includes("Puzzle") || g.tags.includes("Strategy") || g.tags.includes("Cards"))
+    },
+    {
+      id: "driving-sports",
+      title: "Driving & Sports",
+      icon: "🏎️",
+      match: g => g.category === "games" && (g.tags.includes("Driving") || g.tags.includes("Sports"))
+    },
+    {
+      id: "platformer-adventure",
+      title: "Platformer & Adventure",
+      icon: "🏃",
+      match: g => g.category === "games" && (g.tags.includes("Platformer") || g.tags.includes("Parkour") || g.tags.includes("Story") || g.tags.includes("RPG"))
+    },
+    {
+      id: "sandbox-simulation",
+      title: "Sandbox & Simulation",
+      icon: "🧪",
+      match: g => g.category === "games" && (g.tags.includes("Sandbox") || g.tags.includes("Simulation") || g.tags.includes("Physics") || g.tags.includes("Idle"))
+    },
+    {
+      id: "emulators",
+      title: "Emulators & Virtual Systems",
+      icon: "🕹️",
+      match: g => g.category === "emulators"
+    },
+    {
+      id: "other",
+      title: "Web Browsers & Tools",
+      icon: "📦",
+      match: g => g.category === "other"
+    }
+  ];
+
   const GENRE_TAGS = [
     "All", "Action", "Arcade", "Puzzle", "Strategy", "Retro", "Driving", "Physics", "3D", "WASM", "Sandbox", "Cards", "Tools"
   ];
@@ -1740,21 +1791,22 @@ const GAMES_DATA = [
         `;
       }
 
-      const catSections = CATEGORIES.map(cat => {
-        const catItems = GAMES_DATA.filter(g => g.category === cat.id);
+      const shelfSections = FEATURED_SHELVES.map(shelf => {
+        const items = GAMES_DATA.filter(shelf.match);
+        if (!items.length) return '';
         return `
-          <section class="category-section" id="category-${cat.id}">
+          <section class="category-section" id="category-${shelf.id}">
             <div class="section-header">
-              <span class="section-icon">${cat.icon}</span>
-              <h2 class="section-title">${cat.label}</h2>
-              <span class="section-count">${catItems.length} items</span>
+              <span class="section-icon">${shelf.icon}</span>
+              <h2 class="section-title">${shelf.title}</h2>
+              <span class="section-count">${items.length} items</span>
             </div>
-            <div class="games-grid">${catItems.map(cardHTML).join('')}</div>
+            <div class="games-grid">${items.map(cardHTML).join('')}</div>
           </section>
         `;
       }).join('');
 
-      content = favsSection + recentsSection + catSections;
+      content = favsSection + recentsSection + shelfSections;
     } else {
       content = `
         <section class="category-section">
