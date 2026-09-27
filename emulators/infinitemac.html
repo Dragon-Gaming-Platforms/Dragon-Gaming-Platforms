@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Mac - Classic Macintosh Emulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #090c10;
+      color: #f0f6fc;
+      font-family: 'Rajdhani', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    header {
+      background: linear-gradient(90deg, #0d1117 0%, #161b22 100%);
+      border-bottom: 2px solid #ff3b30;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      z-index: 10;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ff3b30;
+      letter-spacing: 1px;
+    }
+    .brand i {
+      font-size: 1.3rem;
+      color: #ff5252;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .select-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    select {
+      background: #0d1117;
+      color: #f0f6fc;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 7px 14px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    select:focus, select:hover {
+      border-color: #ff3b30;
+      box-shadow: 0 0 10px rgba(255, 59, 48, 0.3);
+    }
+    .btn {
+      background: #21262d;
+      color: #f0f6fc;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 7px 14px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: #ff3b30;
+      color: #ffffff;
+      border-color: #ff3b30;
+      box-shadow: 0 0 12px rgba(255, 59, 48, 0.4);
+    }
+    .btn-primary {
+      background: #ff3b30;
+      border-color: #ff3b30;
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: #e02820;
+    }
+    .frame-container {
+      flex: 1;
+      position: relative;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+    }
+    .info-bar {
+      background: #0d1117;
+      border-top: 1px solid #21262d;
+      padding: 6px 20px;
+      font-size: 0.85rem;
+      color: #8b949e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .info-bar a {
+      color: #ff5252;
+      text-decoration: none;
+    }
+    .info-bar a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <i class="fa-brands fa-apple"></i>
+      <span>INFINITE MAC</span>
+    </div>
+    <div class="controls">
+      <div class="select-wrap">
+        <select id="osSelect" onchange="changeOS()">
+          <option value="1999/Mac%20OS%209.0.4" selected>Mac OS 9.0.4 (1999) - Recommended</option>
+          <option value="2001/Mac%20OS%209.2.2">Mac OS 9.2.2 (2001)</option>
+          <option value="1997/Mac%20OS%208.1">Mac OS 8.1 (1997)</option>
+          <option value="1996/System%207.5.3">System 7.5.3 (1996)</option>
+          <option value="1991/System%207.0.1">System 7.0.1 (1991)</option>
+          <option value="1988/System%206.0.8">System 6.0.8 (1988)</option>
+          <option value="1984/System%201.0">System 1.0 (1984) - Original 128K Mac</option>
+        </select>
+      </div>
+      <button class="btn" onclick="reloadFrame()" title="Restart Macintosh"><i class="fa-solid fa-rotate-right"></i> Restart</button>
+      <button class="btn" onclick="toggleFullscreen()" title="Fullscreen"><i class="fa-solid fa-expand"></i> Fullscreen</button>
+      <a id="extLink" href="https://infinitemac.org/1999/Mac%20OS%209.0.4" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full</a>
+    </div>
+  </header>
+
+  <div class="frame-container" id="frameContainer">
+    <iframe
+      id="macFrame"
+      src="https://infinitemac.org/embed?disk=1999/Mac%20OS%209.0.4&infinite_hd=true"
+      allow="autoplay; fullscreen; clipboard-read; clipboard-write; cross-origin-isolated"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="info-bar">
+    <span>💡 Tip: Drag and drop files directly onto the emulator screen to mount disk images or transfer files.</span>
+    <span>Powered by <a href="https://github.com/mihaip/infinite-mac" target="_blank" rel="noopener noreferrer">Infinite Mac</a> (Basilisk II, SheepShaver, Mini vMac WebAssembly)</span>
+  </div>
+
+  <script>
+    function changeOS() {
+      const select = document.getElementById('osSelect');
+      const val = select.value;
+      const iframe = document.getElementById('macFrame');
+      const extLink = document.getElementById('extLink');
+      
+      iframe.src = `https://infinitemac.org/embed?disk=${val}&infinite_hd=true`;
+      extLink.href = `https://infinitemac.org/${val}`;
+    }
+
+    function reloadFrame() {
+      const iframe = document.getElementById('macFrame');
+      iframe.src = iframe.src;
+    }
+
+    function toggleFullscreen() {
+      const elem = document.getElementById('frameContainer');
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+  </script>
+</body>
+</html>
