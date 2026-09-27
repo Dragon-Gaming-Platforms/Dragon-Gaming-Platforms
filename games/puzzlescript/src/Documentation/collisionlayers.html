@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="ico/favicon.ico" />
+
+    <title>Collision Layers - PuzzleScript Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/doc-code.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html"><img src="../images/mascot_colorful.png"> PuzzleScript</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="../editor.html">Make A Game</a></li>
+              
+              <li class="active"><a href="documentation.html">Documentation</a></li>
+          </ul>          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://groups.google.com/g/puzzlescript">Forum</a></li>
+            <li><a href="https://github.com/increpare/puzzlescript">GitHub</a></li>
+            <li><a href="https://github.com/sponsors/increpare">Sponsor</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+
+<p>
+<ol class="breadcrumb">
+  <li><a href="documentation.html">Documentation</a></li>
+  <li>Bird's-eye View</li>
+  <li class="active">CollisionLayers</li>
+</ol>
+<p>
+
+
+<h1>Bird's-eye view of a PuzzleScript file</h1>
+<p>
+A puzzlescript file is divided into 8 sections:
+<p>
+
+  <ul class="nav nav-pills">
+    <li><a href="prelude.html">Prelude</a></li>
+    <li><a href="objects.html">Objects</a></li>
+    <li><a href="legend.html">Legend</a></li>
+    <li><a href="sounds.html">Sounds</a></li>
+    <li class="active"><a href="collisionlayers.html">CollisionLayers</a></li>
+    <li><a href="rules.html">Rules</a></li>
+    <li><a href="winconditions.html">WinConditions</a></li>
+    <li><a href="levels.html">Levels</a></li>
+  </ul>
+
+<p>
+    <h2>CollisionLayers</h2>
+    <p>
+    Objects can be placed on different layers:
+    <p>
+    <pre><code>================
+COLLISIONLAYERS
+================
+Background
+Target
+Player, Wall, Crate</code></pre>
+<p>
+By placing objects in different layers, two (or more) objects can exist in the same cell, without one overwriting or removing the other. 
+<p>
+<img src="images/collisionlayers.png" width="600px">
+<p>
+The main purpose of layers is in resolving movements: if one object is trying to move onto a space occupied by another object in the same layer, its movement is blocked unless that object is going to move away from it (i.e. it also has a movement on it right now and there's somewhere for it to go to that's not blocked).
+<p>
+Two objects from the same layer cannot coexist on the same cell (e.g. in the above set-up, if you create a <b>Player</b> where a <b>Crate</b> was before, the latter will be removed).
+<p>
+The order of layers also determines in what order things are drawn - from back to front.
+<p>
+<h3>The Background Layer</h3>
+<p>
+The background layer is a special layer, consisting of a single '<b>Background</b>' object (or property).  Every game must have one.
+<p>
+Every cell <em>must</em> contain some object from the background layer.
+<p>
+By defining 
+<p><pre><code>Background = Background1 or Background2</code></pre><p>
+in the <a href="legend.html">legend</a>, you can have several possible background objects.
+<p>
+If a background object isn't present in a cell for whatever reason, it is inferred based on what other background objects are used in the level it's in (e.g. if the level only uses <b>Grass</b> as its background, a cell lacking a background will have <b>Grass</b> added to it automatically).
+<p>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

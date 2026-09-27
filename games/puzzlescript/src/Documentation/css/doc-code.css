@@ -1,0 +1,26 @@
+/**
+ * Documentation layout: content width for code blocks and text.
+ */
+
+:root {
+  --doc-content-width: 600px;
+}
+
+div.container > pre {
+  min-width: var(--doc-content-width);
+  width: fit-content;
+}
+
+div.container > ul:not(.nav) {
+  width: var(--doc-content-width);
+}
+dl {
+  width: var(--doc-content-width);
+}
+
+p {
+  width: var(--doc-content-width);
+}
+blockquote {
+	max-width: var(--doc-content-width);
+}

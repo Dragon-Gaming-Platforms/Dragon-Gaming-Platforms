@@ -1,0 +1,16 @@
+bin/
+**/.DS_Store
+
+*.swp
+src - Kopie
+
+node_modules/
+.worktrees/
+.claude/worktrees/happy-mestorf/
+
+/src/demo_canonical
+/src/demo_rehydrated
+/.superpowers
+/build/action-noop-perf
+/build/action-noop-candidates
+/build
