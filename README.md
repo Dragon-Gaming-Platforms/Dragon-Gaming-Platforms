@@ -6,7 +6,7 @@
 
 ## Introduction
 
-*Dragon Gaming Platforms* is a website to play web based games and emulators as well as browse the web. It is also completely static so it can be hosted practically anywhere. 
+[*Dragon Gaming Platforms*](https://Dragon-Gaming-Platforms.github.io/Dragon-Gaming-Platforms) is a website to play web based games and emulators as well as browse the web. It is also completely static so it can be hosted practically anywhere. 
 
 ## Features
 
