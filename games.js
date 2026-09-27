@@ -1,7027 +1,3405 @@
-// Complete Verified Offline Catalog of Legal Open-Source Games, Emulators & Web Tools
+/**
+ * Dragon Gaming Platforms - Games & Emulators Database
+ * Complete Offline-First Single-Repo Catalog
+ */
+
 const GAMES_DATA = [
   {
-    "name": "1255 Burgomaster",
+    "category": "emulators",
+    "name": "AnuraOS Web Desktop Environment",
     "tags": [
-      "Strategy",
-      "Simulation",
-      "Retro"
-    ],
-    "path": "./games/1255-burgomaster/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse: Adjust municipal sliders, manage trade policies, review decrees"
-  },
-  {
-    "name": "2048 Original",
-    "tags": [
-      "Puzzle",
-      "Math",
-      "Casual"
-    ],
-    "path": "./games/2048/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Popular",
-    "description": "",
-    "controls": "Arrow Keys / WASD / Swipe: Slide all tiles in one direction"
-  },
-  {
-    "name": "3D City Engine",
-    "tags": [
-      "Simulation",
-      "3D",
-      "Sandbox"
-    ],
-    "path": "./games/3d.city/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "3D Sim",
-    "description": "",
-    "controls": "Mouse Drag: Rotate view | Scroll: Zoom | WASD: Pan camera | Click: Inspect district"
-  },
-  {
-    "name": "3D Hartwig Chess",
-    "tags": [
-      "Strategy",
-      "Board",
-      "3D"
-    ],
-    "path": "./games/3d-chess/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "3D Board",
-    "description": "",
-    "controls": "Mouse Click / Drag: Select piece and make legal moves"
-  },
-  {
-    "name": "3D Pinball: Space Cadet",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "3D",
-      "Classic"
-    ],
-    "path": "./games/space-cadet-pinball/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Popular",
-    "description": "",
-    "controls": "Space: Launch ball | Z / / : Left / Right flippers | Space: Bump table | F2: New Game"
-  },
-  {
-    "name": "A Dark Room",
-    "tags": [
-      "RPG",
-      "Adventure",
-      "Incremental"
-    ],
-    "path": "./games/adarkroom/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Story",
-    "description": "",
-    "controls": "Mouse: Click buttons to light fire, gather wood, explore outside"
-  },
-  {
-    "name": "Abyss Sonar Submarine",
-    "tags": [
-      "Simulator",
-      "Submarine",
-      "Sci-Fi",
-      "Audio"
-    ],
-    "path": "./games/singlefiles/Abyss-Sonar.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Simulator",
-    "description": "",
-    "controls": "WASD / Mouse: Steer Submarine Depth & Heading | Space: Pulse Active Sonar"
-  },
-  {
-    "name": "Adjustable Fireworks Lab",
-    "tags": [
-      "Physics",
-      "Particles",
-      "Sandbox",
-      "Creative"
-    ],
-    "path": "./games/singlefiles/Adjustable-Fireworks.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse Click: Launch Firework | Sliders: Adjust Velocity, Color & Gravity"
-  },
-  {
-    "name": "Aim Click Reflex Trainer",
-    "tags": [
-      "Reflex",
-      "FPS",
-      "Arcade",
-      "Aim"
-    ],
-    "path": "./games/singlefiles/Aim-Click-Challenge.html",
-    "shelf": "arcade-retro",
-    "badge": "Reflex",
-    "description": "",
-    "controls": "Mouse: Click emerging targets before they shrink away"
-  },
-  {
-    "name": "Air Hockey Championship",
-    "tags": [
-      "Arcade",
-      "Sports",
-      "2-Player",
-      "Physics"
-    ],
-    "path": "./games/singlefiles/Air-Hockey.html",
-    "shelf": "arcade-retro",
-    "badge": "Sports",
-    "description": "",
-    "controls": "Mouse / Touch / WASD: Control Mallet | Deflect the puck into the opponent's goal"
-  },
-  {
-    "name": "Air Traffic Control",
-    "tags": [
-      "Simulator",
-      "Strategy",
-      "Management",
-      "Radar"
-    ],
-    "path": "./games/singlefiles/Air-Traffic-Control.html",
-    "shelf": "strategy-tactics",
-    "badge": "Simulator",
-    "description": "",
-    "controls": "Mouse / Touch: Select Aircraft & Set Headings / Altitudes"
-  },
-  {
-    "name": "Alchemy Workshop",
-    "tags": [
-      "Puzzle",
-      "Crafting",
-      "Strategy",
-      "Fantasy"
-    ],
-    "path": "./games/singlefiles/Alchemy-Workshop.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Drag reagents, brew mixtures, and complete client orders"
-  },
-  {
-    "name": "Alges Escapade",
-    "tags": [
-      "Platformer",
-      "Adventure",
-      "Action"
-    ],
-    "path": "./games/alges-escapade/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Adventure",
-    "description": "",
-    "controls": "Arrow Keys / A/D: Move | Space / W: Jump | Down: Crouch"
-  },
-  {
-    "name": "Alien Invasion",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Shooter"
-    ],
-    "path": "./games/alien-invasion/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Move ship | Spacebar: Shoot lasers"
-  },
-  {
-    "name": "Ancient Beast",
-    "tags": [
-      "Strategy",
-      "Turn-Based",
-      "RPG"
-    ],
-    "path": "./games/AncientBeast/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Turn-Based",
-    "description": "",
-    "controls": "Mouse: Select creature, choose abilities, target enemy hexes"
-  },
-  {
-    "name": "Ant Colony Foraging Sim",
-    "tags": [
-      "Simulation",
-      "Cellular Automaton",
-      "Ecology",
-      "AI"
-    ],
-    "path": "./games/singlefiles/Ant-Colony-Sim.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Simulation",
-    "description": "",
-    "controls": "Mouse: Place food sources, draw obstacles, and release pheromone markers"
-  },
-  {
-    "name": "Anura OS",
-    "tags": [
-      "Emulator",
-      "OS",
-      "Sandbox"
+      "emulator",
+      "os",
+      "desktop",
+      "linux",
+      "system"
     ],
     "path": "./emulators/anuraOS.html",
-    "shelf": "emulators",
-    "badge": "Virtual OS",
-    "description": "",
-    "controls": "Mouse & Keyboard: Full desktop window manager, terminal, file system, and browser apps"
+    "shelf": "Emulators",
+    "badge": "OS",
+    "description": "Full-featured x86 web operating system with terminal, window manager, file system, and package installer.",
+    "controls": "Mouse & Keyboard"
   },
   {
-    "name": "Aquastax",
+    "category": "emulators",
+    "name": "BinjGB Game Boy Color (WASM)",
     "tags": [
-      "Puzzle",
-      "Physics",
-      "Casual"
-    ],
-    "path": "./games/aquastax/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse: Click pipes to rotate direction and seal leak points"
-  },
-  {
-    "name": "Arashi Tempest",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Shooter"
-    ],
-    "path": "./games/arashi-js/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Left / Right: Move along edge | Spacebar: Fire blaster | Enter: Superzapper"
-  },
-  {
-    "name": "ASCII Video Canvas",
-    "tags": [
-      "Tool",
-      "Creative",
-      "ASCII",
-      "Camera"
-    ],
-    "path": "./games/singlefiles/ASCII-Camera.html",
-    "shelf": "other",
-    "badge": "Creative",
-    "description": "",
-    "controls": "Camera Permission: Grant access to see live ASCII render"
-  },
-  {
-    "name": "ASDF Typing Arcade",
-    "tags": [
-      "Arcade",
-      "Casual",
-      "Retro"
-    ],
-    "path": "./games/asdf/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Typing",
-    "description": "",
-    "controls": "Keyboard: Press falling letters (A, S, D, F) in sequence"
-  },
-  {
-    "name": "Auction Fever",
-    "tags": [
-      "Strategy",
-      "Economy",
-      "Card",
-      "Multiplayer"
-    ],
-    "path": "./games/singlefiles/Auction-Fever.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Place Bids, Pass, and Manage Lot Valuation"
-  },
-  {
-    "name": "Auto Chess Forge",
-    "tags": [
-      "Strategy",
-      "Auto-Battler",
-      "Tactics",
-      "Fantasy"
-    ],
-    "path": "./games/singlefiles/Auto-Chess-Forge.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Buy Units, Combine Ranks, and Position Formation"
-  },
-  {
-    "name": "Avabranch",
-    "tags": [
-      "Puzzle",
-      "Physics",
-      "Casual"
-    ],
-    "path": "./games/avabranch/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse: Click branch joints to split and redirect energy flow"
-  },
-  {
-    "name": "Avoid the Bikes Highway",
-    "tags": [
-      "Arcade",
-      "Dodging",
-      "Reflex",
-      "Speed"
-    ],
-    "path": "./games/singlefiles/Avoid-The-Bikes.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "Left/Right Arrow or A/D: Dodge incoming traffic lanes"
-  },
-  {
-    "name": "Awesome Tanks 1",
-    "tags": [
-      "Action",
-      "Shooter",
-      "Tanks",
-      "Upgrades"
-    ],
-    "path": "./games/singlefiles/Awesome-Tanks.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD: Drive Tank | Mouse: Aim Turret & Fire"
-  },
-  {
-    "name": "Awesome Tanks 2",
-    "tags": [
-      "Action",
-      "Shooter",
-      "Tanks"
-    ],
-    "path": "./games/singlefiles/awesometanks2.html",
-    "shelf": "action-3d",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Drive tank | Mouse: Aim and fire cannons"
-  },
-  {
-    "name": "Backpack Arena",
-    "tags": [
-      "Roguelike",
-      "Inventory",
-      "Strategy",
-      "Auto-Battler"
-    ],
-    "path": "./games/singlefiles/Backpack-Arena.html",
-    "shelf": "strategy-tactics",
-    "badge": "Roguelike",
-    "description": "",
-    "controls": "Mouse / Touch: Drag, Rotate, and Slot Weapons into Grid"
-  },
-  {
-    "name": "Bagh-Chal (Tigers & Goats)",
-    "tags": [
-      "Board",
-      "Strategy",
-      "Traditional",
-      "Ancient"
-    ],
-    "path": "./games/baghchal/index.html",
-    "shelf": "puzzle-logic",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Select & Move Tiger or Place / Move Goat"
-  },
-  {
-    "name": "Balatro",
-    "tags": [
-      "Cards",
-      "Roguelike",
-      "Strategy"
-    ],
-    "path": "./games/singlefiles/Balatro.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Featured",
-    "description": "",
-    "controls": "Mouse / Touch: Select cards, buy jokers, open booster packs"
-  },
-  {
-    "name": "Ball & Wall Breakout",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Physics"
-    ],
-    "path": "./games/ball-and-wall/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Mouse / Left-Right Arrows: Move paddle | Space: Launch ball"
-  },
-  {
-    "name": "Ball Arena Bumpers",
-    "tags": [
-      "Arcade",
-      "Physics",
-      "Action",
-      "Multiplayer"
-    ],
-    "path": "./games/singlefiles/Ball-Arena.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "WASD / Mouse: Steer Sphere Momentum & Boost"
-  },
-  {
-    "name": "Banania",
-    "tags": [
-      "Arcade",
-      "Classic",
-      "Retro"
-    ],
-    "path": "./games/Banania/banania.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Arrow Keys: Move monkey | Esc: Pause"
-  },
-  {
-    "name": "Basin Flood Control Sim",
-    "tags": [
-      "Strategy",
-      "Management",
-      "Simulation",
-      "Engineering"
-    ],
-    "path": "./games/singlefiles/Basin-Control.html",
-    "shelf": "strategy-tactics",
-    "badge": "Simulator",
-    "description": "",
-    "controls": "Mouse / Touch: Adjust dam gate valves & monitor water sensors"
-  },
-  {
-    "name": "Basket Random",
-    "tags": [
-      "Sports",
-      "Physics",
-      "Ragdoll",
-      "2-Player"
-    ],
-    "path": "./games/singlefiles/Basket-Random.html",
-    "shelf": "arcade-retro",
-    "badge": "Sports",
-    "description": "",
-    "controls": "Up Arrow / W / Touch: Jump & Shoot | Local 2-Player Supported"
-  },
-  {
-    "name": "Battery Cycle Lab",
-    "tags": [
-      "Puzzle",
-      "Science",
-      "Energy",
-      "Logic"
-    ],
-    "path": "./games/singlefiles/Battery-Cycle.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Configure ion membrane pathways & charge cycles"
-  },
-  {
-    "name": "Beat Bento Cooking",
-    "tags": [
-      "Rhythm",
-      "Cooking",
-      "Casual",
-      "Cute"
-    ],
-    "path": "./games/singlefiles/Beat-Bento.html",
-    "shelf": "arcade-retro",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Space / Arrow Keys: Chop & pack bento ingredients on the beat"
-  },
-  {
-    "name": "Behind Asteroids",
-    "tags": [
-      "Arcade",
-      "Space",
-      "Sci-Fi"
-    ],
-    "path": "./games/behind-asteroids/index.html",
-    "shelf": "action-3d",
-    "badge": "JS13K",
-    "description": "",
-    "controls": "WASD / Arrows: Steer ship | Space / Click: Shoot lasers | Shift: Boost"
-  },
-  {
-    "name": "Big Tower Tiny Square",
-    "tags": [
-      "Platformer",
-      "Precision",
-      "Hardcore",
-      "Retro"
-    ],
-    "path": "./games/singlefiles/Big-Tower-Tiny-Square.html",
-    "shelf": "action-survival",
-    "badge": "Popular",
-    "description": "",
-    "controls": "A/D or Left/Right: Move | Space / Up: Jump & Wall-Slide"
-  },
-  {
-    "name": "BinjGB (Game Boy / Color WASM)",
-    "tags": [
-      "Emulator",
-      "GameBoy",
-      "GBC",
-      "WASM"
+      "emulator",
+      "gb",
+      "gbc",
+      "wasm",
+      "retro"
     ],
     "path": "./emulators/binjgb/index.html",
-    "shelf": "emulators",
-    "badge": "Emulator",
-    "description": "",
-    "controls": "Arrow Keys: D-Pad | X: A Button | Z: B Button | Enter: Start | Shift: Select"
+    "shelf": "Emulators",
+    "badge": "GBC",
+    "description": "Ultra-fast WebAssembly-powered Game Boy and Game Boy Color emulator featuring built-in Porklike homebrew.",
+    "controls": "Arrow Keys, X (A), Z (B), Enter (Start), Shift (Select)"
   },
   {
-    "name": "Black Hole Square",
-    "tags": [
-      "Puzzle",
-      "Physics",
-      "Spatial"
-    ],
-    "path": "./games/black-hole-square/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse: Place & rotate gravity deflector tiles | Space: Test orbit"
-  },
-  {
-    "name": "Block Forge Blacksmith",
-    "tags": [
-      "Puzzle",
-      "Crafting",
-      "Strategy",
-      "Fantasy"
-    ],
-    "path": "./games/singlefiles/Block-Forge.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Rotate & Place molten metal tiles into weapon outlines"
-  },
-  {
-    "name": "Blockrain Tetris",
-    "tags": [
-      "Arcade",
-      "Puzzle",
-      "Retro"
-    ],
-    "path": "./games/blockrain/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Left / Right: Move block | Up: Rotate | Down: Soft drop | Space: Hard drop"
-  },
-  {
-    "name": "Bloons TD 4",
-    "tags": [
-      "Strategy",
-      "Tower Defense",
-      "Classic"
-    ],
-    "path": "./games/singlefiles/Bloons-TD4.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Featured",
-    "description": "",
-    "controls": "Mouse: Select and place monkey defense towers on track"
-  },
-  {
-    "name": "Bomb Grid Tactical",
-    "tags": [
-      "Action",
-      "Arcade",
-      "Tactics",
-      "Grid"
-    ],
-    "path": "./games/singlefiles/Bomb-Grid.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move | Space: Plant Bomb"
-  },
-  {
-    "name": "Borg Games Hub",
-    "tags": [
-      "Retro",
-      "Arcade",
-      "Compilation"
-    ],
-    "path": "./games/singlefiles/Borg-Games.html",
-    "shelf": "arcade-retro",
-    "badge": "Hub",
-    "description": "",
-    "controls": "Mouse & Keyboard: Navigate catalog and play games"
-  },
-  {
-    "name": "BounceBack",
-    "tags": [
-      "Action",
-      "Adventure",
-      "Retro"
-    ],
-    "path": "./games/bounce-back/index.html",
-    "shelf": "action-3d",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD / Arrows: Move | Mouse / Space: Throw Boomerang | E: Interact"
-  },
-  {
-    "name": "Boxing Random",
-    "tags": [
-      "Sports",
-      "Physics",
-      "Ragdoll",
-      "2-Player"
-    ],
-    "path": "./games/singlefiles/Boxing-Random.html",
-    "shelf": "arcade-retro",
-    "badge": "Sports",
-    "description": "",
-    "controls": "Up Arrow / W / Touch: Punch & Hop | 2-Player Local Dual Mode"
-  },
-  {
-    "name": "Branching Tales Odyssey",
-    "tags": [
-      "Story",
-      "Sci-Fi",
-      "Narrative",
-      "Adventure"
-    ],
-    "path": "./games/singlefiles/Branching-Tales.html",
-    "shelf": "puzzle-logic",
-    "badge": "Story",
-    "description": "",
-    "controls": "Mouse / Touch: Select narrative choices & decrypt transmission logs"
-  },
-  {
-    "name": "BreakLock Mastermind",
-    "tags": [
-      "Puzzle",
-      "Logic",
-      "Brain",
-      "Pattern"
-    ],
-    "path": "./games/breaklock/index.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Drag pattern across nodes to submit guess"
-  },
-  {
-    "name": "ByteBot Lab",
-    "tags": [
-      "Puzzle",
-      "Coding",
-      "Logic",
-      "Educational"
-    ],
-    "path": "./games/singlefiles/Bytebot-Lab.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Arrange Logic Blocks & Execute Script"
-  },
-  {
-    "name": "Canvas Retro Platformer",
-    "tags": [
-      "Platformer",
-      "Action",
-      "Pixel",
-      "Retro"
-    ],
-    "path": "./games/platformer/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Platformer",
-    "description": "",
-    "controls": "A/D or Left/Right: Walk | Space / Up: Jump"
-  },
-  {
-    "name": "Canvas Speed Racer",
-    "tags": [
-      "Racing",
-      "Arcade",
-      "Retro",
-      "Speed"
-    ],
-    "path": "./games/racer/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Racing",
-    "description": "",
-    "controls": "Left/Right: Steer | Up: Accelerate | Down: Brake"
-  },
-  {
-    "name": "Canvas Tetris",
-    "tags": [
-      "Arcade",
-      "Puzzle",
-      "Classic"
-    ],
-    "path": "./games/canvas-tetris/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Left / Right: Shift | Up / X: Rotate | Down: Soft drop | Space: Hard drop"
-  },
-  {
-    "name": "Canvas Tower Defense",
-    "tags": [
-      "Strategy",
-      "Tower Defense",
-      "Arcade"
-    ],
-    "path": "./games/tower-defense/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse: Select tower type and place along the road | Space: Fast forward wave"
-  },
-  {
-    "name": "Canyon Runner",
-    "tags": [
-      "3D",
-      "Driving",
-      "Action"
-    ],
-    "path": "./games/canyon-runner/index.html",
-    "shelf": "driving-sports",
-    "badge": "3D Runner",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Steer & Pitch Jet | Space: Afterburner Boost"
-  },
-  {
-    "name": "Captain Callisto (JS13k)",
-    "tags": [
-      "Action",
-      "Sci-Fi",
-      "JS13k",
-      "Arcade"
-    ],
-    "path": "./games/captain-callisto/index.html",
-    "shelf": "action-survival",
-    "badge": "JS13k",
-    "description": "",
-    "controls": "WASD / Arrows: Thrusters & Move | Mouse: Aim Grappling Line"
-  },
-  {
-    "name": "Captain Rogers",
-    "tags": [
-      "Arcade",
-      "Action",
-      "Space"
-    ],
-    "path": "./games/captain-rogers/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Sci-Fi",
-    "description": "",
-    "controls": "Spacebar / Touch / Mouse Click: Thrust jetpack upward"
-  },
-  {
-    "name": "Castaway Island Survival",
-    "tags": [
-      "Survival",
-      "Crafting",
-      "Island",
-      "Adventure"
-    ],
-    "path": "./games/singlefiles/Island-Survival.html",
-    "shelf": "action-survival",
-    "badge": "Survival",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move | Space / E: Chop Trees, Forage, and Craft"
-  },
-  {
-    "name": "Cat Mario (Syobon Action)",
-    "tags": [
-      "Platformer",
-      "Comedy",
-      "Troll",
-      "Retro"
-    ],
-    "path": "./games/singlefiles/Cat-Mario.html",
-    "shelf": "action-survival",
-    "badge": "Comedy",
-    "description": "",
-    "controls": "Arrow Keys: Move & Jump | O: Self-Destruct | Esc: Return"
-  },
-  {
-    "name": "Cellmates",
-    "tags": [
-      "Puzzle",
-      "Stealth",
-      "Adventure"
-    ],
-    "path": "./games/cellmates/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Stealth",
-    "description": "",
-    "controls": "WASD / Arrows: Move active prisoner | Space: Switch prisoner | E: Interact"
-  },
-  {
-    "name": "Ceros Snake",
-    "tags": [
-      "Arcade",
-      "Snake",
-      "Retro"
-    ],
-    "path": "./games/ceros-snake/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Steer snake"
-  },
-  {
-    "name": "Chalk Billiards 8-Ball",
-    "tags": [
-      "Sports",
-      "Physics",
-      "Arcade",
-      "Pool"
-    ],
-    "path": "./games/singlefiles/Chalk-Billiards.html",
-    "shelf": "arcade-retro",
-    "badge": "Sports",
-    "description": "",
-    "controls": "Mouse / Touch: Aim Cue Line, Set Spin, Drag to Power Shot"
-  },
-  {
-    "name": "Charm Reels Roguelike",
-    "tags": [
-      "Roguelike",
-      "Cards",
-      "Slots",
-      "Strategy"
-    ],
-    "path": "./games/singlefiles/Charm-Reels.html",
-    "shelf": "strategy-tactics",
-    "badge": "Roguelike",
-    "description": "",
-    "controls": "Mouse / Touch: Spin reels, draft rune charms, and manage build synergy"
-  },
-  {
-    "name": "Checkpoint Border Inspector",
-    "tags": [
-      "Simulation",
-      "Mystery",
-      "Papers Please",
-      "Strategy"
-    ],
-    "path": "./games/singlefiles/Checkpoint-Inspector.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Inspect passport documents, cross-examine, approve or deny"
-  },
-  {
-    "name": "CHIP-8 Virtual Machine",
-    "tags": [
-      "Emulator",
-      "CHIP-8",
-      "Retro",
-      "Vintage"
-    ],
-    "path": "./emulators/chip8/index.html",
-    "shelf": "emulators",
-    "badge": "Emulator",
-    "description": "",
-    "controls": "1-4, Q-R, A-F, Z-V: Hex Keypad | Select Game from Dropdown"
-  },
-  {
-    "name": "Chromatic Print Press",
-    "tags": [
-      "Puzzle",
-      "Art",
-      "Colors",
-      "Creative"
-    ],
-    "path": "./games/singlefiles/Chromatic-Press.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Layer color plates & pull squeegee print"
-  },
-  {
-    "name": "Chromatography Separation",
-    "tags": [
-      "Science",
-      "Chemistry",
-      "Puzzle",
-      "Educational"
-    ],
-    "path": "./games/singlefiles/Chromatography-Lab.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Pipette chemical solutions & observe capillary rise"
-  },
-  {
-    "name": "Cipher Relay Signal",
-    "tags": [
-      "Puzzle",
-      "Cryptography",
-      "Audio",
-      "Sci-Fi"
-    ],
-    "path": "./games/singlefiles/Cipher-Relay.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Adjust frequency tuner & decode cipher keys"
-  },
-  {
-    "name": "Circus Charlie",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Classic"
-    ],
-    "path": "./games/circus-charlie/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro Arcade",
-    "description": "",
-    "controls": "Left / Right: Walk / Run | Space / Up: Jump through hoops"
-  },
-  {
-    "name": "Classic Klondike Solitaire",
-    "tags": [
-      "Cards",
-      "Solitaire",
-      "Classic",
-      "Casual"
-    ],
-    "path": "./games/singlefiles/Solitaire-Classic.html",
-    "shelf": "puzzle-logic",
-    "badge": "Cards",
-    "description": "",
-    "controls": "Mouse / Touch: Drag cards or double-click to auto-move to foundations"
-  },
-  {
-    "name": "Classic Pong 1972",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Sports",
-      "Classic"
-    ],
-    "path": "./games/pong/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Up/Down Arrows or Mouse: Move Left Paddle"
-  },
-  {
-    "name": "Claw Carnival Arcade",
-    "tags": [
-      "Arcade",
-      "Physics",
-      "Casual",
-      "Cute"
-    ],
-    "path": "./games/singlefiles/Claw-Carnival.html",
-    "shelf": "arcade-retro",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Arrow Keys / Mouse: Move crane carriage | Space: Drop Claw"
-  },
-  {
-    "name": "Clean Slate PowerWash",
-    "tags": [
-      "Casual",
-      "Relaxing",
-      "Cleaning",
-      "Satisfying"
-    ],
-    "path": "./games/singlefiles/Clean-Slate.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch Drag: Direct high-pressure water nozzle across grime"
-  },
-  {
-    "name": "Climbing Route Bouldering",
-    "tags": [
-      "Puzzle",
-      "Sports",
-      "Bouldering",
-      "Strategy"
-    ],
-    "path": "./games/singlefiles/Climbing-Route.html",
-    "shelf": "puzzle-logic",
-    "badge": "Sports",
-    "description": "",
-    "controls": "Mouse / Touch: Select hand & foot holds to ascend rock face"
-  },
-  {
-    "name": "Clockwork Room Escape",
-    "tags": [
-      "Puzzle",
-      "Escape Room",
-      "Point & Click",
-      "Mystery"
-    ],
-    "path": "./games/singlefiles/Clockwork-Escape.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Inspect items, combine inventory, and solve dials"
-  },
-  {
-    "name": "Clumsy Bird",
-    "tags": [
-      "Arcade",
-      "Casual",
-      "Retro"
-    ],
-    "path": "./games/clumsy-bird/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "Spacebar / Up Arrow / Mouse Click: Flap wings"
-  },
-  {
-    "name": "Coil",
-    "tags": [
-      "Arcade",
-      "Action",
-      "Minimal"
-    ],
-    "path": "./games/coil/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Minimal",
-    "description": "",
-    "controls": "Mouse Movement: Steer light trail and encircle energy nodes"
-  },
-  {
-    "name": "Comet Weaver",
-    "tags": [
-      "Arcade",
-      "Sci-Fi",
-      "Action",
-      "Cosmic"
-    ],
-    "path": "./games/singlefiles/Comet-Weaver.html",
-    "shelf": "action-survival",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "Arrow Keys / Mouse / Touch: Steer Comet Trajectory"
-  },
-  {
-    "name": "Connect Arena 4-in-a-Row",
-    "tags": [
-      "Strategy",
-      "Board Game",
-      "2-Player",
-      "Puzzle"
-    ],
-    "path": "./games/singlefiles/Connect-Arena.html",
-    "shelf": "puzzle-logic",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Select Column to Drop Disc"
-  },
-  {
-    "name": "Connect Four",
-    "tags": [
-      "Strategy",
-      "Board",
-      "Classic"
-    ],
-    "path": "./games/connect-four/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Board",
-    "description": "",
-    "controls": "Mouse: Click column slot to drop token"
-  },
-  {
-    "name": "Courier Grid Dispatch",
-    "tags": [
-      "Strategy",
-      "Management",
-      "Logistics",
-      "Fast"
-    ],
-    "path": "./games/singlefiles/Courier-Grid.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Assign delivery routes & optimize transit paths"
-  },
-  {
-    "name": "Courtroom Clash Defense",
-    "tags": [
-      "Mystery",
-      "Story",
-      "Ace Attorney",
-      "Puzzle"
-    ],
-    "path": "./games/singlefiles/Courtroom-Clash.html",
-    "shelf": "puzzle-logic",
-    "badge": "Story",
-    "description": "",
-    "controls": "Mouse / Touch: Review case file, press testimony, and present evidence"
-  },
-  {
-    "name": "Cozy Room Organizer",
-    "tags": [
-      "Casual",
-      "Relaxing",
-      "Unpacking",
-      "Cozy"
-    ],
-    "path": "./games/singlefiles/Cozy-Organizer.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch: Drag items out of boxes & arrange neatly on shelves"
-  },
-  {
-    "name": "CrappyBird",
-    "tags": [
-      "Arcade",
-      "Casual",
-      "Flappy"
-    ],
-    "path": "./games/CrappyBird/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "Spacebar / Mouse Click / Touch: Flap wings"
-  },
-  {
+    "category": "games",
     "name": "Crossword Cafe",
     "tags": [
-      "Puzzle",
-      "Word",
-      "Brain",
-      "Cozy"
+      "emulator",
+      "retro",
+      "system"
     ],
     "path": "./games/singlefiles/Crossword-Cafe.html",
-    "shelf": "puzzle-logic",
-    "badge": "Word",
-    "description": "",
-    "controls": "Keyboard: Type Letters | Mouse / Touch: Select Crossword Clue Cell"
+    "shelf": "Emulators",
+    "badge": "EMU",
+    "description": "Browser-based virtual system and hardware emulator.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "CrystalQuest",
+    "category": "games",
+    "name": "Ecosystem Keeper",
     "tags": [
-      "Arcade",
-      "Shooter",
-      "Retro"
-    ],
-    "path": "./games/CrystalQuest/index.html",
-    "shelf": "action-3d",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Mouse: Move ship | Mouse Click: Fire blaster | Space: Smart Bomb"
-  },
-  {
-    "name": "Curling Endgame",
-    "tags": [
-      "Sports",
-      "Physics",
-      "Strategy",
-      "Winter"
-    ],
-    "path": "./games/singlefiles/Curling-Endgame.html",
-    "shelf": "arcade-retro",
-    "badge": "Sports",
-    "description": "",
-    "controls": "Mouse / Touch: Aim stone angle, set delivery weight, and sweep ice"
-  },
-  {
-    "name": "Custom Tetris",
-    "tags": [
-      "Arcade",
-      "Puzzle",
-      "Tetris"
-    ],
-    "path": "./games/custom-tetris/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Left / Right: Shift block | Up: Rotate | Down: Drop"
-  },
-  {
-    "name": "CyberChef",
-    "tags": [
-      "Tools",
-      "Utility",
-      "Cryptography"
-    ],
-    "path": "./other/CyberChef/index.html",
-    "shelf": "other",
-    "badge": "Utility",
-    "description": "",
-    "controls": "Mouse: Drag operations into recipe pipeline, paste input, inspect output"
-  },
-  {
-    "name": "Dante (13K)",
-    "tags": [
-      "Action",
-      "3D",
-      "Hack & Slash"
-    ],
-    "path": "./games/dante-13k/index.html",
-    "shelf": "action-3d",
-    "badge": "3D Action",
-    "description": "",
-    "controls": "WASD / Arrows: Move | J / Space: Attack | K: Dash | L: Special"
-  },
-  {
-    "name": "Deep Space Observatory",
-    "tags": [
-      "Sci-Fi",
-      "Space",
-      "Astronomy",
-      "Puzzle"
-    ],
-    "path": "./games/singlefiles/Observatory-Watch.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Simulator",
-    "description": "",
-    "controls": "Mouse / Touch: Pan telescope coordinates & focus spectroscopic filters"
-  },
-  {
-    "name": "Detective Desk Noir",
-    "tags": [
-      "Mystery",
-      "Detective",
-      "Noir",
-      "Story"
-    ],
-    "path": "./games/singlefiles/Detective-Desk.html",
-    "shelf": "puzzle-logic",
-    "badge": "Mystery",
-    "description": "",
-    "controls": "Mouse / Touch: Pin evidence cards to corkboard & link connection strings"
-  },
-  {
-    "name": "Devil Glitches (JS13k)",
-    "tags": [
-      "Action",
-      "Arcade",
-      "JS13k",
-      "Glitch"
-    ],
-    "path": "./games/devil-glitches/index.html",
-    "shelf": "action-survival",
-    "badge": "JS13k",
-    "description": "",
-    "controls": "WASD: Move | Mouse: Aim & Shoot | Shift: Dash"
-  },
-  {
-    "name": "Diablo JS",
-    "tags": [
-      "RPG",
-      "Action",
-      "Isometric",
-      "Retro"
-    ],
-    "path": "./games/diablo-js/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "RPG",
-    "description": "",
-    "controls": "Mouse: Click to move, attack enemies, and pick up items"
-  },
-  {
-    "name": "Dice Delver Roguelike",
-    "tags": [
-      "Roguelike",
-      "Dice",
-      "Strategy",
-      "RPG"
-    ],
-    "path": "./games/singlefiles/Dice-Delver.html",
-    "shelf": "strategy-tactics",
-    "badge": "Roguelike",
-    "description": "",
-    "controls": "Mouse / Touch: Roll Dice & Drag Pips to Skill Slots"
-  },
-  {
-    "name": "Digger Remastered",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Classic"
-    ],
-    "path": "./games/digger/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Arrow Keys: Dig tunnels & steer digger | F1: Fire weapon"
-  },
-  {
-    "name": "Dojo Duel: Martial Arts",
-    "tags": [
-      "Action",
-      "Fighting",
-      "Arcade",
-      "Reflex"
-    ],
-    "path": "./games/singlefiles/Dojo-Duel.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD / Arrow Keys / Touch: Strike, Parry, Block, and Dash"
-  },
-  {
-    "name": "Doom 13K",
-    "tags": [
-      "Action",
-      "3D",
-      "FPS",
-      "Retro"
-    ],
-    "path": "./games/doom-13k/index.html",
-    "shelf": "action-3d",
-    "badge": "3D FPS",
-    "description": "",
-    "controls": "WASD / Arrows: Move & Turn | Space / Ctrl: Fire Weapon | E: Open Doors"
-  },
-  {
-    "name": "Drakonas",
-    "tags": [
-      "RPG",
-      "Action",
-      "Fantasy"
-    ],
-    "path": "./games/drakonas/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "RPG",
-    "description": "",
-    "controls": "WASD / Arrows: Move | Space: Attack | 1-3: Spells"
-  },
-  {
-    "name": "Dreadhead Parkour",
-    "tags": [
-      "Action",
-      "Platformer",
-      "Parkour"
-    ],
-    "path": "./games/singlefiles/dreadheadparkour.htm",
-    "shelf": "platformer-adventure",
-    "badge": "Parkour",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move, jump, slide, flip"
-  },
-  {
-    "name": "Drift Racer Grand Prix",
-    "tags": [
-      "Racing",
-      "Arcade",
-      "Drifting",
-      "Speed"
-    ],
-    "path": "./games/singlefiles/Drift-Racer.html",
-    "shelf": "arcade-retro",
-    "badge": "Racing",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Accelerate, Steer, and Initiate Drift"
-  },
-  {
-    "name": "Drive Mad",
-    "tags": [
-      "Driving",
-      "Physics",
-      "Action",
-      "3D"
-    ],
-    "path": "./games/singlefiles/Drive-Mad.html",
-    "shelf": "driving-sports",
-    "badge": "Popular",
-    "description": "",
-    "controls": "W / Up Arrow: Accelerate | S / Down Arrow: Reverse & Brake | A / D: Balance truck"
-  },
-  {
-    "name": "Drone Survey Recon",
-    "tags": [
-      "Simulator",
-      "Sci-Fi",
-      "Exploration",
-      "Flight"
-    ],
-    "path": "./games/singlefiles/Drone-Survey.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Simulator",
-    "description": "",
-    "controls": "WASD: Throttle / Pitch | Arrow Keys: Yaw / Roll | Space: Thermal Scan"
-  },
-  {
-    "name": "Duck Hunt",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Classic"
-    ],
-    "path": "./games/duck-hunt/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Mouse: Aim crosshair | Left Click: Pull trigger"
-  },
-  {
-    "name": "Dungeon Delver: Ember Throne",
-    "tags": [
-      "Roguelike",
-      "RPG",
-      "Action",
-      "Dungeon"
-    ],
-    "path": "./games/singlefiles/Dungeon-Delver.html",
-    "shelf": "action-survival",
-    "badge": "Roguelike",
-    "description": "",
-    "controls": "WASD / Touch: Move | Mouse / Tap: Attack & Cast Spells"
-  },
-  {
-    "name": "Eaglercraft 1.12.2 JS",
-    "tags": [
-      "Sandbox",
-      "Survival",
-      "3D"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-JS-1.12.2.html",
-    "shelf": "sandbox-simulation",
-    "badge": "3D",
-    "description": "",
-    "controls": "WASD: Move | Space: Jump | Mouse: Look / Mine | E: Inventory | Esc: Pause"
-  },
-  {
-    "name": "Eaglercraft 1.12.2 WASM",
-    "tags": [
-      "Sandbox",
-      "Survival",
-      "3D",
-      "WASM"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html",
-    "shelf": "sandbox-simulation",
-    "badge": "WASM",
-    "description": "",
-    "controls": "WASD: Move | Space: Jump | Left Click: Mine / Attack | Right Click: Place / Interact | E: Inventory | Esc: Pause"
-  },
-  {
-    "name": "Eaglercraft 1.5.2 Offline",
-    "tags": [
-      "Sandbox",
-      "Survival",
-      "3D",
-      "Retro"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-1.5.2-Offline.html",
-    "shelf": "sandbox-simulation",
-    "badge": "3D",
-    "description": "",
-    "controls": "WASD: Move | Space: Jump | Left/Right Click: Mine/Place | E: Inventory"
-  },
-  {
-    "name": "Eaglercraft 1.8.8 JS",
-    "tags": [
-      "Sandbox",
-      "Survival",
-      "3D",
-      "Multiplayer"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-JS-1.8.8.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Popular",
-    "description": "",
-    "controls": "WASD: Move | Space: Jump | Mouse: Look / Mine | E: Inventory | T: Chat"
-  },
-  {
-    "name": "Eaglercraft 1.8.8 WASM",
-    "tags": [
-      "Sandbox",
-      "Survival",
-      "3D",
-      "WASM"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html",
-    "shelf": "sandbox-simulation",
-    "badge": "WASM",
-    "description": "",
-    "controls": "WASD: Move | Space: Jump | Left/Right Click: Mine/Place | E: Inventory"
-  },
-  {
-    "name": "Eaglercraft Alpha 1.2.6",
-    "tags": [
-      "Sandbox",
-      "Survival",
-      "3D",
-      "Alpha"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-Alpha-1.2.6-Offline.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Retro",
-    "description": "",
-    "controls": "WASD: Move | Space: Jump | Left Click: Mine | Right Click: Place | I: Inventory"
-  },
-  {
-    "name": "Eaglercraft Beta 1.3",
-    "tags": [
-      "Sandbox",
-      "Survival",
-      "3D",
-      "Beta"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-Beta-1.3-Offline.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Retro",
-    "description": "",
-    "controls": "WASD: Move | Space: Jump | Left/Right Click: Mine/Place | E: Inventory"
-  },
-  {
-    "name": "Eaglercraft Indev",
-    "tags": [
-      "Sandbox",
-      "Retro",
-      "3D",
-      "Indev"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-Indev-Offline.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Retro",
-    "description": "",
-    "controls": "WASD: Move | Space: Jump | Left/Right Click: Mine/Place"
-  },
-  {
-    "name": "Ecosystem Terrarium Sim",
-    "tags": [
-      "Simulation",
-      "Nature",
-      "Ecology",
-      "Relaxing"
+      "emulator",
+      "retro",
+      "system"
     ],
     "path": "./games/singlefiles/Ecosystem-Keeper.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Simulation",
-    "description": "",
-    "controls": "Mouse / Touch: Introduce species, balance moisture, and adjust sunlight"
+    "shelf": "Emulators",
+    "badge": "EMU",
+    "description": "Browser-based virtual system and hardware emulator.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Edge Not Found",
+    "category": "emulators",
+    "name": "EmulatorJS Multi-System Retro Hub",
     "tags": [
-      "Puzzle",
-      "Sokoban",
-      "Logic"
-    ],
-    "path": "./games/edge-not-found/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move | Z / U: Undo | R: Restart level"
-  },
-  {
-    "name": "EKG Runner",
-    "tags": [
-      "Action",
-      "Endless",
-      "Rhythm"
-    ],
-    "path": "./games/ekg-runner/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Runner",
-    "description": "",
-    "controls": "Space / Up Arrow / Click: Jump across pulse spikes"
-  },
-  {
-    "name": "Elematter (JS13k)",
-    "tags": [
-      "Puzzle",
-      "Action",
-      "JS13k",
-      "Elements"
-    ],
-    "path": "./games/elematter/index.html",
-    "shelf": "puzzle-logic",
-    "badge": "JS13k",
-    "description": "",
-    "controls": "WASD / Arrows: Move & Jump | 1-4: Transmute Elemental Phase"
-  },
-  {
-    "name": "Elemental Sandbox",
-    "tags": [
-      "Simulation",
-      "Physics",
-      "Sandbox",
-      "Creative"
-    ],
-    "path": "./games/singlefiles/Elemental-Sandbox.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse / Touch: Select Element & Draw / Paint onto Canvas"
-  },
-  {
-    "name": "Ember Tactics Skirmish",
-    "tags": [
-      "Strategy",
-      "Turn-Based",
-      "Tactics",
-      "Fantasy"
-    ],
-    "path": "./games/singlefiles/Ember-Tactics.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Select units, movement tiles, and attack targets"
-  },
-  {
-    "name": "Emberwind",
-    "tags": [
-      "Platformer",
-      "Action",
-      "Adventure"
-    ],
-    "path": "./games/emberwind/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Platformer",
-    "description": "",
-    "controls": "Arrow Keys: Move & Crouch | Space / Z: Cane Attack | X: Jump"
-  },
-  {
-    "name": "EmulatorJS",
-    "tags": [
-      "Emulator",
-      "Retro",
-      "Multi-System"
+      "emulator",
+      "retro",
+      "nes",
+      "snes",
+      "gba",
+      "genesis",
+      "psx",
+      "arcade"
     ],
     "path": "./emulators/Emulatorjs/index.html",
-    "shelf": "emulators",
-    "badge": "Emulator",
-    "description": "",
-    "controls": "Drag & drop any ROM file or browse local files. Supports gamepad & custom keyboard mapping."
+    "shelf": "Emulators",
+    "badge": "RETRO",
+    "description": "Universal retro web emulator engine supporting NES, SNES, Genesis, GBA, N64, and PlayStation with built-in ROM dropzone.",
+    "controls": "Arrow Keys / Z, X, A, S / Gamepad"
   },
   {
-    "name": "Enduro",
+    "category": "emulators",
+    "name": "IodineGBA Game Boy Advance",
     "tags": [
-      "Racing",
-      "Retro",
-      "Classic"
-    ],
-    "path": "./games/enduro/index.html",
-    "shelf": "driving-sports",
-    "badge": "Atari Retro",
-    "description": "",
-    "controls": "Up Arrow: Accelerate | Down Arrow: Brake | Left / Right Arrows: Steer"
-  },
-  {
-    "name": "Escape Road",
-    "tags": [
-      "Driving",
-      "Action",
-      "3D",
-      "Endless"
-    ],
-    "path": "./games/singlefiles/Escape-Road.html",
-    "shelf": "driving-sports",
-    "badge": "3D Action",
-    "description": "",
-    "controls": "A / D or Left / Right: Steer vehicle | Space: Drift / Handbrake"
-  },
-  {
-    "name": "Escape Road 2",
-    "tags": [
-      "Action",
-      "Driving",
-      "Drifting",
-      "Police"
-    ],
-    "path": "./games/singlefiles/Escape-Road-2.html",
-    "shelf": "arcade-retro",
-    "badge": "Popular",
-    "description": "",
-    "controls": "A/D or Left/Right Arrow: Steer Car | Space: Handbrake Drift"
-  },
-  {
-    "name": "Executive Man",
-    "tags": [
-      "Action",
-      "Platformer",
-      "Retro"
-    ],
-    "path": "./games/executive-man/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Move & Jump | Space / Z: Shoot | X: Slide"
-  },
-  {
-    "name": "Fishing Harbor Voyage",
-    "tags": [
-      "Casual",
-      "Fishing",
-      "Cozy",
-      "Management"
-    ],
-    "path": "./games/singlefiles/Fishing-Harbor.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "WASD: Steer Trawler | Mouse / Space: Cast Net & Reel In Catch"
-  },
-  {
-    "name": "Flappy 2048",
-    "tags": [
-      "Arcade",
-      "Puzzle",
-      "Casual"
-    ],
-    "path": "./games/flappy-2048/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Spacebar / Click: Flap tile upward"
-  },
-  {
-    "name": "Flappy Canvas Deluxe",
-    "tags": [
-      "Arcade",
-      "Casual",
-      "Retro",
-      "Reflex"
-    ],
-    "path": "./games/flappy-canvas/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Space / Left Click / Touch: Flap Altitude"
-  },
-  {
-    "name": "Flappy Glider Flight",
-    "tags": [
-      "Arcade",
-      "Physics",
-      "Flight",
-      "Casual"
-    ],
-    "path": "./games/singlefiles/Flappy-Glider.html",
-    "shelf": "arcade-retro",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Space / Up Arrow / Touch: Adjust wing pitch & catch updrafts"
-  },
-  {
-    "name": "Fleet Duel: Naval War",
-    "tags": [
-      "Strategy",
-      "Naval",
-      "Grid",
-      "Battleship"
-    ],
-    "path": "./games/singlefiles/Fleet-Duel.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Place Ships & Click Coordinates to Fire"
-  },
-  {
-    "name": "Floppy Bird HTML5",
-    "tags": [
-      "Arcade",
-      "Casual",
-      "Flappy"
-    ],
-    "path": "./games/floppybird/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Spacebar / Mouse Click / Touch: Flap wings"
-  },
-  {
-    "name": "Forest Dash Endless Run",
-    "tags": [
-      "Arcade",
-      "Runner",
-      "Reflex",
-      "Action"
-    ],
-    "path": "./games/singlefiles/Forest-Dash.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "Up Arrow / Space: Jump | Down Arrow: Slide"
-  },
-  {
-    "name": "Frequency Bureau Radio",
-    "tags": [
-      "Puzzle",
-      "Sci-Fi",
-      "Audio",
-      "Mystery"
-    ],
-    "path": "./games/singlefiles/Frequency-Bureau.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse: Rotate oscilloscope dials & match wave frequencies"
-  },
-  {
-    "name": "Frontier Command Outpost",
-    "tags": [
-      "Strategy",
-      "Base Building",
-      "Sci-Fi",
-      "Survival"
-    ],
-    "path": "./games/singlefiles/Frontier-Command.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Construct buildings, assign workers, and trigger defense"
-  },
-  {
-    "name": "Fruit Slice Frenzy",
-    "tags": [
-      "Arcade",
-      "Reflex",
-      "Casual",
-      "Slice"
-    ],
-    "path": "./games/singlefiles/Fruit-Slice.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "Mouse / Touch Drag: Swipe Blade to Slice Fruit"
-  },
-  {
-    "name": "Garden Front Greenhouse",
-    "tags": [
-      "Casual",
-      "Gardening",
-      "Plants",
-      "Cozy"
-    ],
-    "path": "./games/singlefiles/Garden-Front.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch: Water, prune, pollinate, and propagate plants"
-  },
-  {
-    "name": "Gear Train Calibrator",
-    "tags": [
-      "Puzzle",
-      "Physics",
-      "Mechanics",
-      "Engineering"
-    ],
-    "path": "./games/singlefiles/Gear-Calibrator.html",
-    "shelf": "puzzle-logic",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse / Touch: Drag gear wheels onto axle pegs to complete transmission"
-  },
-  {
-    "name": "Gem Garden Match-3",
-    "tags": [
-      "Puzzle",
-      "Match-3",
-      "Casual",
-      "Jewels"
-    ],
-    "path": "./games/singlefiles/Gem-Garden.html",
-    "shelf": "puzzle-logic",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Mouse / Touch Drag: Swap adjacent jewel tiles"
-  },
-  {
-    "name": "Geometry Dash Classic",
-    "tags": [
-      "Rhythm",
-      "Platformer",
-      "Arcade",
-      "Hard"
-    ],
-    "path": "./games/singlefiles/Geometry-Dash-Scratch.html",
-    "shelf": "action-survival",
-    "badge": "Popular",
-    "description": "",
-    "controls": "Space / Up Arrow / Left Click / Touch: Jump & Fly Rocket"
-  },
-  {
-    "name": "Glyph Warden Magic",
-    "tags": [
-      "Action",
-      "Magic",
-      "Drawing",
-      "Reflex"
-    ],
-    "path": "./games/singlefiles/Glyph-Warden.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "Mouse / Touch Drag: Draw rune shape matching incoming enemy crests"
-  },
-  {
-    "name": "Green Mahjong",
-    "tags": [
-      "Puzzle",
-      "Board",
-      "Solitaire"
-    ],
-    "path": "./games/green-mahjong/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Relaxing",
-    "description": "",
-    "controls": "Mouse Click: Select unblocked matching tile pairs"
-  },
-  {
-    "name": "GUST",
-    "tags": [
-      "Browser",
-      "Proxy",
-      "Utility"
-    ],
-    "path": "./browsers/GUST.html",
-    "shelf": "other",
-    "badge": "Browser",
-    "description": "",
-    "controls": "Type any web address or search query in the address bar"
-  },
-  {
-    "name": "Heal Em All",
-    "tags": [
-      "Strategy",
-      "Puzzle",
-      "Casual"
-    ],
-    "path": "./games/heal-em-all/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse: Deploy cure syringes, set barricades, and guide survivors"
-  },
-  {
-    "name": "Heroine Dusk",
-    "tags": [
-      "RPG",
-      "Adventure",
-      "Retro"
-    ],
-    "path": "./games/heroine-dusk/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Retro",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Navigate dungeon grid | Mouse: Select combat actions"
-  },
-  {
-    "name": "HexGL",
-    "tags": [
-      "Racing",
-      "3D",
-      "Sci-Fi"
-    ],
-    "path": "./games/HexGL/index.html",
-    "shelf": "driving-sports",
-    "badge": "3D",
-    "description": "",
-    "controls": "Up / W: Accelerate | A / D or Left / Right: Steer | Q / E: Air brakes | Space: Boost"
-  },
-  {
-    "name": "Hextris",
-    "tags": [
-      "Puzzle",
-      "Arcade",
-      "Hexagonal"
-    ],
-    "path": "./games/Hextris/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Popular",
-    "description": "",
-    "controls": "Left / Right Arrows or A / D: Rotate hexagon | Down Arrow: Speed up block fall"
-  },
-  {
-    "name": "Hive Sovereign Ant RTS",
-    "tags": [
-      "Strategy",
-      "RTS",
-      "Insects",
-      "Management"
-    ],
-    "path": "./games/singlefiles/Hive-Sovereign.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Direct ant armies, order tunnel digging, and harvest nectar"
-  },
-  {
-    "name": "Hole.io",
-    "tags": [
-      "Action",
-      "Multiplayer",
-      "Physics",
-      "3D"
-    ],
-    "path": "./games/singlefiles/Hole.io.html",
-    "shelf": "action-3d",
-    "badge": "Popular",
-    "description": "",
-    "controls": "Mouse Drag / Arrow Keys / WASD: Move hole around city"
-  },
-  {
-    "name": "Hotfix",
-    "tags": [
-      "Action",
-      "Cyber",
-      "Puzzle"
-    ],
-    "path": "./games/hotfix/index.html",
-    "shelf": "action-3d",
-    "badge": "Sci-Fi",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Move avatar | Space: Deploy software patches"
-  },
-  {
-    "name": "HTML5 Chess",
-    "tags": [
-      "Strategy",
-      "Board",
-      "Classic"
-    ],
-    "path": "./games/chess/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Mouse Click / Drag: Pick up and move chess pieces"
-  },
-  {
-    "name": "Hurry!",
-    "tags": [
-      "Action",
-      "Speed",
-      "Casual"
-    ],
-    "path": "./games/hurry/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Speed",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move character | Dodge laser barriers"
-  },
-  {
-    "name": "Incognito",
-    "tags": [
-      "Browser",
-      "Proxy",
-      "Utility"
-    ],
-    "path": "./browsers/Incognito.html",
-    "shelf": "other",
-    "badge": "Browser",
-    "description": "",
-    "controls": "Enter search terms or URL in the navigation bar"
-  },
-  {
-    "name": "Interstellar",
-    "tags": [
-      "Browser",
-      "Proxy",
-      "Utility"
-    ],
-    "path": "./browsers/Interstellar.html",
-    "shelf": "other",
-    "badge": "Browser",
-    "description": "",
-    "controls": "Type search query or website destination into the bar"
-  },
-  {
-    "name": "IodineGBA (GBA Emulator)",
-    "tags": [
-      "Emulator",
-      "Retro",
-      "GBA"
+      "emulator",
+      "gba",
+      "nintendo",
+      "handheld",
+      "retro"
     ],
     "path": "./emulators/iodinegba/index.html",
-    "shelf": "emulators",
-    "badge": "GBA Emulator",
-    "description": "",
-    "controls": "Load ROM file from disk | Keyboard: Z (A), X (B), Enter (Start), Shift (Select), Arrows (D-Pad)"
+    "shelf": "Emulators",
+    "badge": "GBA",
+    "description": "Pure JavaScript Game Boy Advance emulator core with direct ROM drag & drop support.",
+    "controls": "Arrow Keys (D-pad), Z (A), X (B), A (L), S (R), Enter (Start), Shift (Select)"
   },
   {
-    "name": "Island Builder",
+    "category": "games",
+    "name": "Mosaic Jigsaw",
     "tags": [
-      "Simulation",
-      "Sandbox",
-      "3D"
-    ],
-    "path": "./games/island-builder/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Sandbox",
-    "description": "",
-    "controls": "Mouse Click / Drag: Place terrain, roads, houses, trees | Mouse Wheel: Zoom"
-  },
-  {
-    "name": "Island Not Found (JS13k)",
-    "tags": [
-      "Puzzle",
-      "3D",
-      "JS13k",
-      "Exploration"
-    ],
-    "path": "./games/island-not-found/index.html",
-    "shelf": "puzzle-logic",
-    "badge": "JS13k",
-    "description": "",
-    "controls": "WASD: Move | Mouse: Look / Interact with Monoliths"
-  },
-  {
-    "name": "IsoCity Builder Sim",
-    "tags": [
-      "Simulation",
-      "City Builder",
-      "Isometric",
-      "Strategy"
-    ],
-    "path": "./games/isocity/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse: Select zone tool & Click grid tiles to construct buildings"
-  },
-  {
-    "name": "IsoCity Tower Defense",
-    "tags": [
-      "Tower Defense",
-      "Isometric",
-      "Strategy",
-      "Action"
-    ],
-    "path": "./games/isocity-td/index.html",
-    "shelf": "strategy-tactics",
-    "badge": "Defense",
-    "description": "",
-    "controls": "Mouse: Place defender turrets & trigger special air strikes"
-  },
-  {
-    "name": "Jake Gordon's Outrun Racer",
-    "tags": [
-      "Racing",
-      "Pseudo-3D",
-      "Arcade",
-      "Retro"
-    ],
-    "path": "./games/outrun-racer/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Racing",
-    "description": "",
-    "controls": "Up Arrow: Accelerate | Down Arrow: Brake | Left/Right: Steer Car"
-  },
-  {
-    "name": "Jake Gordon's Snakes",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Snake",
-      "Classic"
-    ],
-    "path": "./games/jakes-snakes/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Steer Snake | Space: Pause Game"
-  },
-  {
-    "name": "Jake Gordon's Tiny Platformer",
-    "tags": [
-      "Platformer",
-      "Action",
-      "Retro",
-      "Pixel"
-    ],
-    "path": "./games/tiny-platformer/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Platformer",
-    "description": "",
-    "controls": "A/D or Left/Right: Run | Space / Up: Jump & Wall-Jump"
-  },
-  {
-    "name": "JavaScript European Roulette",
-    "tags": [
-      "Casino",
-      "Cards",
-      "Strategy",
-      "Table"
-    ],
-    "path": "./games/js-roulette/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Table",
-    "description": "",
-    "controls": "Mouse / Touch: Select chip denomination, place bets on grid, click Spin"
-  },
-  {
-    "name": "Jolly Jumper",
-    "tags": [
-      "Arcade",
-      "Casual",
-      "Endless"
-    ],
-    "path": "./games/jolly-jumper/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Left / Right Arrows or A / D: Steer jumper left and right"
-  },
-  {
-    "name": "Klondike Solitaire",
-    "tags": [
-      "Cards",
-      "Classic",
-      "Puzzle"
-    ],
-    "path": "./games/solitaire/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Mouse Drag / Double Click: Move cards to foundation piles"
-  },
-  {
-    "name": "Lantern Festival Memory",
-    "tags": [
-      "Casual",
-      "Memory",
-      "Aesthetic",
-      "Relaxing"
-    ],
-    "path": "./games/singlefiles/Lantern-Memory.html",
-    "shelf": "puzzle-logic",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch: Click floating lanterns in the demonstrated sequence"
-  },
-  {
-    "name": "Lockmaster Lockpick Sim",
-    "tags": [
-      "Simulator",
-      "Puzzle",
-      "Stealth",
-      "Physics"
-    ],
-    "path": "./games/singlefiles/Lockmaster-Shift.html",
-    "shelf": "puzzle-logic",
-    "badge": "Simulator",
-    "description": "",
-    "controls": "Mouse / Arrow Keys: Adjust Pick Height & Tension Wrench Torque"
-  },
-  {
-    "name": "Lode Runner",
-    "tags": [
-      "Arcade",
-      "Platformer",
-      "Retro"
-    ],
-    "path": "./games/loderunner/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Arrow Keys: Move & Climb Ladders | Z / X: Dig hole left / right"
-  },
-  {
-    "name": "Lunar Lander Module",
-    "tags": [
-      "Simulator",
-      "Physics",
-      "Retro",
-      "Space"
-    ],
-    "path": "./games/singlefiles/Moon-Lander.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Up / W: Main Thruster | Left/Right: Rotation RCS | Space: Deploy Landing Gear"
-  },
-  {
-    "name": "Mahjong Link Connect",
-    "tags": [
-      "Puzzle",
-      "Mahjong",
-      "Connect",
-      "Casual"
-    ],
-    "path": "./games/singlefiles/Mahjong-Link.html",
-    "shelf": "puzzle-logic",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Mouse / Touch: Click matching perimeter tile pairs to link and clear"
-  },
-  {
-    "name": "Marble Soccer 3D",
-    "tags": [
-      "Sports",
-      "3D",
-      "Physics"
-    ],
-    "path": "./games/marble-soccer/index.html",
-    "shelf": "driving-sports",
-    "badge": "3D Sports",
-    "description": "",
-    "controls": "WASD / Arrows: Steer soccer marble | Space: Boost dash"
-  },
-  {
-    "name": "Mario HTML5",
-    "tags": [
-      "Platformer",
-      "Retro",
-      "Classic"
-    ],
-    "path": "./games/mariohtml5/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Arrow Keys: Walk / Duck | S: Jump | A: Run / Shoot Fireballs"
-  },
-  {
-    "name": "Market Pulse Trading Sim",
-    "tags": [
-      "Strategy",
-      "Economy",
-      "Trading",
-      "Simulation"
-    ],
-    "path": "./games/singlefiles/Market-Pulse.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Buy, Sell, Short, and Set Stop-Loss Orders"
-  },
-  {
-    "name": "Maze Chase Neon",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Maze",
-      "Action"
-    ],
-    "path": "./games/singlefiles/Maze-Chase.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "WASD / Arrow Keys / Swipe: Move Character"
-  },
-  {
-    "name": "Merge Orbit Celestial",
-    "tags": [
-      "Puzzle",
-      "Physics",
-      "Suika",
-      "Space"
-    ],
-    "path": "./games/singlefiles/Merge-Orbit.html",
-    "shelf": "puzzle-logic",
-    "badge": "Popular",
-    "description": "",
-    "controls": "Mouse / Touch: Aim Drop Position & Release Planet"
-  },
-  {
-    "name": "Metro Weaver Transit",
-    "tags": [
-      "Strategy",
-      "Transit",
-      "Simulation",
-      "Minimal"
-    ],
-    "path": "./games/singlefiles/Metro-Weaver.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Drag color lines between station nodes & deploy trains"
-  },
-  {
-    "name": "MicropolisJS (SimCity)",
-    "tags": [
-      "Simulation",
-      "Strategy",
-      "Classic"
-    ],
-    "path": "./games/micropolisjs/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Classic Sim",
-    "description": "",
-    "controls": "Mouse: Select construction tools, zone residential/commercial/industrial, manage tax budget"
-  },
-  {
-    "name": "Midnight Security Monitor",
-    "tags": [
-      "Horror",
-      "Survival",
-      "Cameras",
-      "FNAF"
-    ],
-    "path": "./games/singlefiles/Midnight-Monitor.html",
-    "shelf": "action-survival",
-    "badge": "Survival",
-    "description": "",
-    "controls": "Mouse: Switch camera feeds & toggle corridor security doors"
-  },
-  {
-    "name": "Midnight Tactical Chess",
-    "tags": [
-      "Board",
-      "Chess",
-      "Puzzle",
-      "Strategy"
-    ],
-    "path": "./games/singlefiles/Midnight-Chess.html",
-    "shelf": "puzzle-logic",
-    "badge": "Board",
-    "description": "",
-    "controls": "Mouse / Touch: Drag and drop chess pieces to execute tactics"
-  },
-  {
-    "name": "Mine Matrix Tactical",
-    "tags": [
-      "Puzzle",
-      "Minesweeper",
-      "Sci-Fi",
-      "Logic"
-    ],
-    "path": "./games/singlefiles/Mine-Matrix.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Left Click: Reveal Sector | Right Click: Place Danger Flag"
-  },
-  {
-    "name": "Minesweeper Classic",
-    "tags": [
-      "Puzzle",
-      "Classic",
-      "Strategy"
-    ],
-    "path": "./games/minesweeper/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Left Click: Reveal cell | Right Click: Place flag | Both: Chording"
-  },
-  {
-    "name": "Mist Valley Herbarium",
-    "tags": [
-      "Casual",
-      "Foraging",
-      "Botanical",
-      "Cozy"
-    ],
-    "path": "./games/singlefiles/Mist-Valley-Herbarium.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "WASD / Mouse: Explore Glade & Harvest Wildflower Specimens"
-  },
-  {
-    "name": "MOBA Frontier 3v3",
-    "tags": [
-      "Action",
-      "MOBA",
-      "Tactics",
-      "Hero"
-    ],
-    "path": "./games/singlefiles/Moba-Frontier.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "Mouse / Touch: Move & Attack | Q, W, E, R: Cast Champion Skills"
-  },
-  {
-    "name": "Mole Market Burrow",
-    "tags": [
-      "Casual",
-      "Commerce",
-      "Mining",
-      "Cute"
-    ],
-    "path": "./games/singlefiles/Mole-Market.html",
-    "shelf": "strategy-tactics",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch: Dig tunnels, stock merchant shelves, and trade goods"
-  },
-  {
-    "name": "Monster Horde Defense",
-    "tags": [
-      "Strategy",
-      "Tower Defense",
-      "Action",
-      "Survival"
-    ],
-    "path": "./games/singlefiles/Monster-Horde.html",
-    "shelf": "strategy-tactics",
-    "badge": "Defense",
-    "description": "",
-    "controls": "Mouse / Touch: Deploy Defenders & Trigger Special Spells"
-  },
-  {
-    "name": "Monster Tamer RPG",
-    "tags": [
-      "RPG",
-      "Pokemon",
-      "Turn-Based",
-      "Retro"
-    ],
-    "path": "./games/singlefiles/Monster-Tamer.html",
-    "shelf": "action-survival",
-    "badge": "RPG",
-    "description": "",
-    "controls": "WASD / Arrows: Move Trainer | Space / Enter: Interact & Choose Moves"
-  },
-  {
-    "name": "Monster Wants Candy",
-    "tags": [
-      "Arcade",
-      "Casual",
-      "Match"
-    ],
-    "path": "./games/monster-candy/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Mouse Click / Touch: Catch candies before they hit the ground"
-  },
-  {
-    "name": "Moto X3M 2",
-    "tags": [
-      "Driving",
-      "Physics",
-      "Action"
-    ],
-    "path": "./games/singlefiles/Moto-x3m-2.html",
-    "shelf": "driving-sports",
-    "badge": "Popular",
-    "description": "",
-    "controls": "Up / W: Accelerate | Down / S: Brake | Left / Right or A / D: Tilt & Front/Backflips"
-  },
-  {
-    "name": "Mumuy Pacman Deluxe",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Classic",
-      "Maze"
-    ],
-    "path": "./games/mumuy-pacman/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Classic",
-    "description": "",
-    "controls": "WASD / Arrow Keys / Swipe: Guide Pacman"
-  },
-  {
-    "name": "Museum Climate Curator",
-    "tags": [
-      "Simulation",
-      "Management",
-      "Art",
-      "Strategy"
-    ],
-    "path": "./games/singlefiles/Museum-Climate.html",
-    "shelf": "strategy-tactics",
-    "badge": "Simulator",
-    "description": "",
-    "controls": "Mouse / Touch: Adjust thermostat, dehumidifier, and ventilation airflow"
-  },
-  {
-    "name": "Neon 2048 Synthwave",
-    "tags": [
-      "Puzzle",
-      "Numbers",
-      "Casual",
-      "Cyberpunk"
-    ],
-    "path": "./games/singlefiles/Neon-2048.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Arrow Keys / Swipe: Slide & Merge Matching Number Tiles"
-  },
-  {
-    "name": "Neon Blackjack Table",
-    "tags": [
-      "Cards",
-      "Casino",
-      "Strategy",
-      "Arcade"
-    ],
-    "path": "./games/singlefiles/Blackjack-Table.html",
-    "shelf": "arcade-retro",
-    "badge": "Cards",
-    "description": "",
-    "controls": "Mouse / Touch: Place Bets, Hit, Stand, Double Down, or Split"
-  },
-  {
-    "name": "Neon Glow Snake",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Snake",
-      "Neon"
-    ],
-    "path": "./games/singlefiles/Snake-Game.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Steer Snake"
-  },
-  {
-    "name": "Norman the Necromancer",
-    "tags": [
-      "Action",
-      "Roguelike",
-      "Pixel",
-      "JS13k"
-    ],
-    "path": "./games/norman-necromancer/index.html",
-    "shelf": "action-survival",
-    "badge": "Hot",
-    "description": "",
-    "controls": "WASD: Move | Mouse: Aim | Left Click: Fire Bone Spell | Space: Raise Undead Minions"
-  },
-  {
-    "name": "Octocat Jump",
-    "tags": [
-      "Arcade",
-      "Platformer",
-      "Endless"
-    ],
-    "path": "./games/octocat-jump/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Left / Right Arrow Keys: Move Octocat across floating ledges"
-  },
-  {
-    "name": "Offline Paradise (JS13k)",
-    "tags": [
-      "Platformer",
-      "Puzzle",
-      "JS13k",
-      "Adventure"
-    ],
-    "path": "./games/offline-paradise/index.html",
-    "shelf": "puzzle-logic",
-    "badge": "JS13k",
-    "description": "",
-    "controls": "WASD / Arrows: Move & Jump | E: Activate Network Node"
-  },
-  {
-    "name": "Onslaught Arena",
-    "tags": [
-      "Action",
-      "Arena",
-      "Medieval"
-    ],
-    "path": "./games/onslaught/index.html",
-    "shelf": "action-3d",
-    "badge": "Featured",
-    "description": "",
-    "controls": "WASD: Move hero | Mouse: Aim and fire arrows / magic spells"
-  },
-  {
-    "name": "OpenPanzer",
-    "tags": [
-      "Strategy",
-      "Wargame",
-      "Hex"
-    ],
-    "path": "./games/openpanzer/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Wargame",
-    "description": "",
-    "controls": "Mouse: Select armored divisions, give movement & bombardment orders"
-  },
-  {
-    "name": "OpenSC2K",
-    "tags": [
-      "Simulation",
-      "Classic",
-      "Retro"
-    ],
-    "path": "./games/OpenSC2K/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Retro Sim",
-    "description": "",
-    "controls": "Mouse: Select zoning tools, lay pipes, construct buildings and power grids"
-  },
-  {
-    "name": "Operius 3D SHMUP",
-    "tags": [
-      "Action",
-      "3D",
-      "Arcade",
-      "WASM"
-    ],
-    "path": "./games/singlefiles/Operius.html",
-    "shelf": "action-survival",
-    "badge": "WASM",
-    "description": "",
-    "controls": "WASD / Arrows: Move Ship | Space: Fire Dual Cannons"
-  },
-  {
-    "name": "Orbital Cargo Stowage",
-    "tags": [
-      "Puzzle",
-      "Space",
-      "Tetris",
-      "Physics"
-    ],
-    "path": "./games/singlefiles/Orbital-Stowage.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Rotate & Slot 3D cargo crates into airlock hold"
-  },
-  {
-    "name": "Orbital Pinball Odyssey",
-    "tags": [
-      "Arcade",
-      "Pinball",
-      "Physics",
-      "Sci-Fi"
-    ],
-    "path": "./games/singlefiles/Orbital-Pinball.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "Left/Right Shift or Arrows: Flippers | Down Arrow: Launch Plunger"
-  },
-  {
-    "name": "OS13k Game Hub",
-    "tags": [
-      "Sandbox",
-      "Retro",
-      "Compilation"
-    ],
-    "path": "./games/os13k/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Hub",
-    "description": "",
-    "controls": "Mouse / Keyboard: Click desktop icons and run mini apps"
-  },
-  {
-    "name": "Pacman Canvas",
-    "tags": [
-      "Arcade",
-      "Classic",
-      "Retro"
-    ],
-    "path": "./games/pacman-canvas/index.htm",
-    "shelf": "arcade-retro",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Steer Pac-Man | Space: Pause / Start"
-  },
-  {
-    "name": "Pacman Classic Canvas",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Classic",
-      "Maze"
-    ],
-    "path": "./games/pacman-dh/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Guide Pacman through maze"
-  },
-  {
-    "name": "Pacman JS",
-    "tags": [
-      "Arcade",
-      "Classic",
-      "Retro"
-    ],
-    "path": "./games/pacman/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Arrow Keys: Steer Pac-Man | Space: Start / Pause"
-  },
-  {
-    "name": "Paper.io 3D Arena",
-    "tags": [
-      "Arcade",
-      "IO Game",
-      "3D",
-      "Multiplayer"
-    ],
-    "path": "./games/singlefiles/Paper-io-3D.html",
-    "shelf": "arcade-retro",
-    "badge": "Popular",
-    "description": "",
-    "controls": "WASD / Mouse / Touch: Steer Painter Head"
-  },
-  {
-    "name": "Parable of the Polygons",
-    "tags": [
-      "Educational",
-      "Simulation",
-      "Sociology",
-      "Story"
-    ],
-    "path": "./games/polygons/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Interactive",
-    "description": "",
-    "controls": "Mouse / Touch: Drag unhappy triangles and squares into diverse neighborhoods"
-  },
-  {
-    "name": "Pathogen Defense Protocol",
-    "tags": [
-      "Strategy",
-      "Biology",
-      "Tower Defense",
-      "Science"
-    ],
-    "path": "./games/singlefiles/Pathogen-Protocol.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Deploy immune cells along capillary bloodstream tracks"
-  },
-  {
-    "name": "Penalty Rush Soccer",
-    "tags": [
-      "Sports",
-      "Soccer",
-      "Reflex",
-      "Arcade"
-    ],
-    "path": "./games/singlefiles/Penalty-Rush.html",
-    "shelf": "arcade-retro",
-    "badge": "Sports",
-    "description": "",
-    "controls": "Mouse / Touch: Swipe to shoot curve ball or dive as goalie"
-  },
-  {
-    "name": "Photo Safari Expedition",
-    "tags": [
-      "Casual",
-      "Relaxing",
-      "Exploration",
-      "Wildlife"
-    ],
-    "path": "./games/singlefiles/Photo-Safari.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Mouse / Touch: Pan Camera, Zoom Lens, and Snap Shutter"
-  },
-  {
-    "name": "Pixel Clues Nonogram",
-    "tags": [
-      "Puzzle",
-      "Picross",
-      "Nonogram",
-      "Logic"
-    ],
-    "path": "./games/singlefiles/Pixel-Clues.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Left Click: Fill Pixel | Right Click: Mark Empty X"
-  },
-  {
-    "name": "Pixel Platformer",
-    "tags": [
-      "Platformer",
-      "Action",
-      "Pixel"
-    ],
-    "path": "./games/pixel-platformer/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Platformer",
-    "description": "",
-    "controls": "Left / Right: Run | Space / Up: Jump | Down: Duck / Fall"
-  },
-  {
-    "name": "Pocket Empire Builder",
-    "tags": [
-      "Strategy",
-      "Management",
-      "Civilization",
-      "Idle"
-    ],
-    "path": "./games/singlefiles/Pocket-Empire.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Build, Upgrade, and Direct Population"
-  },
-  {
-    "name": "Pocket Farm Harvest",
-    "tags": [
-      "Casual",
-      "Farming",
-      "Relaxing",
-      "Simulator"
-    ],
-    "path": "./games/singlefiles/Pocket-Farm.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch: Plant Seeds, Water Crops, and Sell Harvest"
-  },
-  {
-    "name": "Pocket Mini-Golf",
-    "tags": [
-      "Sports",
-      "Physics",
-      "Casual",
-      "Golf"
-    ],
-    "path": "./games/singlefiles/Pocket-Golf.html",
-    "shelf": "arcade-retro",
-    "badge": "Sports",
-    "description": "",
-    "controls": "Mouse / Touch: Drag Back to Aim & Power Putt"
-  },
-  {
-    "name": "Pocket Virtual Pet",
-    "tags": [
-      "Casual",
-      "Pet",
-      "Tamagotchi",
-      "Cute"
-    ],
-    "path": "./games/singlefiles/Pocket-Companion.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch: Feed, Play, Clean, and Pet your companion"
-  },
-  {
-    "name": "Prim's Algorithmic Maze",
-    "tags": [
-      "Puzzle",
-      "Algorithms",
-      "Maze",
-      "Educational"
-    ],
-    "path": "./games/singlefiles/Prims-Maze-Generator.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Navigate Maze | Button: Generate New Maze"
-  },
-  {
-    "name": "Prism Breaker Deluxe",
-    "tags": [
-      "Arcade",
-      "Breakout",
-      "Action",
-      "Retro"
-    ],
-    "path": "./games/singlefiles/Prism-Breaker.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "Mouse / Arrow Keys / Touch: Move Paddle | Left Click: Launch Ball"
-  },
-  {
-    "name": "Prism Orchard Light",
-    "tags": [
-      "Puzzle",
-      "Optics",
-      "Lasers",
-      "Light"
-    ],
-    "path": "./games/singlefiles/Prism-Orchard.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Drag and rotate mirrors to redirect laser paths"
-  },
-  {
-    "name": "Progress Knight",
-    "tags": [
-      "Incremental",
-      "RPG",
-      "Strategy"
-    ],
-    "path": "./games/progress-knight/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Incremental",
-    "description": "",
-    "controls": "Mouse: Assign job tasks, study skills, manage daily schedule"
-  },
-  {
-    "name": "Protocol 390",
-    "tags": [
-      "Adventure",
-      "Sci-Fi",
-      "Cyberpunk"
-    ],
-    "path": "./games/protocol-390/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Sci-Fi",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move | E / Space: Interact with terminals and NPCs"
-  },
-  {
-    "name": "Pulse Modular Synth",
-    "tags": [
-      "Tool",
-      "Music",
-      "Audio",
-      "Creative"
-    ],
-    "path": "./games/singlefiles/Pulse-Studio.html",
-    "shelf": "other",
-    "badge": "Creative",
-    "description": "",
-    "controls": "Mouse / Touch: Connect patch cords & turn knob parameters"
-  },
-  {
-    "name": "PuzzleScript Gallery",
-    "tags": [
-      "Puzzle",
-      "Retro",
-      "Engine"
-    ],
-    "path": "./games/puzzlescript/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Move | Z / U: Undo step | R: Restart puzzle"
-  },
-  {
-    "name": "Q1K3 (Quake 13K)",
-    "tags": [
-      "Action",
-      "3D",
-      "FPS",
-      "Retro"
-    ],
-    "path": "./games/q1k3/index.html",
-    "shelf": "action-3d",
-    "badge": "3D FPS",
-    "description": "",
-    "controls": "WASD: Move | Mouse: Look & Shoot | Space: Jump | 1-2: Switch Weapons"
-  },
-  {
-    "name": "Radish Guard Defense",
-    "tags": [
-      "Strategy",
-      "Tower Defense",
-      "Casual",
-      "Cute"
-    ],
-    "path": "./games/singlefiles/Radish-Guard.html",
-    "shelf": "strategy-tactics",
-    "badge": "Defense",
-    "description": "",
-    "controls": "Mouse / Touch: Select & Plant Defender Towers"
-  },
-  {
-    "name": "Radius Raid",
-    "tags": [
-      "Action",
-      "Arcade",
-      "Shooter",
-      "Vector"
-    ],
-    "path": "./games/radius-raid/index.html",
-    "shelf": "action-3d",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "WASD / Arrows: Move | Mouse: Aim & Fire | Space: Bomb"
-  },
-  {
-    "name": "Ragdoll Archers",
-    "tags": [
-      "Action",
-      "Physics",
-      "Shooter"
-    ],
-    "path": "./games/singlefiles/Ragdoll-Archers.html",
-    "shelf": "action-3d",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse Drag & Release: Aim bow and fire arrow"
-  },
-  {
-    "name": "Raging Gardens",
-    "tags": [
-      "Action",
-      "Stealth",
-      "Retro"
-    ],
-    "path": "./games/raging-gardens/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Stealth",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Move ninja | Space: Sneak / Dash"
-  },
-  {
-    "name": "Ramen Noodle Shift",
-    "tags": [
-      "Arcade",
-      "Cooking",
-      "Fast",
-      "Casual"
-    ],
-    "path": "./games/singlefiles/Noodle-Shift.html",
-    "shelf": "arcade-retro",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch: Assemble custom ramen bowls to match order tickets"
-  },
-  {
-    "name": "Recoil",
-    "tags": [
-      "Action",
-      "Physics",
-      "Shooter"
-    ],
-    "path": "./games/singlefiles/Recoil.html",
-    "shelf": "action-3d",
-    "badge": "Action",
-    "description": "",
-    "controls": "Mouse: Aim | Click: Shoot weapon and propel yourself with recoil"
-  },
-  {
-    "name": "Risky Stakes High Roller",
-    "tags": [
-      "Casino",
-      "Cards",
-      "Strategy",
-      "Arcade"
-    ],
-    "path": "./games/singlefiles/Risky-Stakes.html",
-    "shelf": "arcade-retro",
-    "badge": "Cards",
-    "description": "",
-    "controls": "Mouse / Touch: Place bets, Double Down, or Cash Out"
-  },
-  {
-    "name": "River Poker Texas Hold'em",
-    "tags": [
-      "Cards",
-      "Poker",
-      "Strategy",
-      "Table"
-    ],
-    "path": "./games/singlefiles/River-Holdem.html",
-    "shelf": "arcade-retro",
-    "badge": "Cards",
-    "description": "",
-    "controls": "Mouse / Touch: Check, Bet, Raise, Fold, or Go All-In"
-  },
-  {
-    "name": "Roguish",
-    "tags": [
-      "RPG",
-      "Roguelike",
-      "Dungeon"
-    ],
-    "path": "./games/roguish/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Roguelike",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move & Bump Attack | 1-4: Cast Spells | I: Inventory"
-  },
-  {
-    "name": "Runway Fashion Stylist",
-    "tags": [
-      "Casual",
-      "Fashion",
-      "Dress Up",
-      "Creative"
-    ],
-    "path": "./games/singlefiles/Runway-Stylist.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch: Drag garments & accessories onto model mannequin"
-  },
-  {
-    "name": "Sandboxels Chemistry",
-    "tags": [
-      "Sandbox",
-      "Physics",
-      "Chemistry",
-      "Simulation"
-    ],
-    "path": "./games/singlefiles/Sandboxels.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Hot",
-    "description": "",
-    "controls": "Mouse / Touch: Select Element & Draw / Click on Canvas | Shift + Scroll: Change Brush"
-  },
-  {
-    "name": "Sandspiel",
-    "tags": [
-      "Simulation",
-      "Sandbox",
-      "Physics"
-    ],
-    "path": "./games/sandspiel/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse Left Click: Draw selected element | Right Click: Erase | 1-9: Select element"
-  },
-  {
-    "name": "Satellite Relay Network",
-    "tags": [
-      "Strategy",
-      "Sci-Fi",
-      "Space",
-      "Puzzle"
-    ],
-    "path": "./games/singlefiles/Relay-Coordination.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Align satellite dish headings & route data packets"
-  },
-  {
-    "name": "Save the Forest",
-    "tags": [
-      "Strategy",
-      "Tower Defense",
-      "Casual"
-    ],
-    "path": "./games/save-the-forest/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Defense",
-    "description": "",
-    "controls": "Mouse: Click to deploy water pumps and clear firebreak paths"
-  },
-  {
-    "name": "Scramjet",
-    "tags": [
-      "Browser",
-      "Proxy",
-      "Utility"
-    ],
-    "path": "./browsers/Scramjet.html",
-    "shelf": "other",
-    "badge": "Browser",
-    "description": "",
-    "controls": "Enter URL or search keyword into the navigation search bar"
-  },
-  {
-    "name": "Shadow Post Stealth",
-    "tags": [
-      "Action",
-      "Stealth",
-      "Puzzle",
-      "Tactics"
-    ],
-    "path": "./games/singlefiles/Shadow-Post.html",
-    "shelf": "action-survival",
-    "badge": "Stealth",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move | Space: Interact / Hide in Shadows"
-  },
-  {
-    "name": "Shan Hai Mythic Duel",
-    "tags": [
-      "Cards",
-      "Strategy",
-      "Mythology",
-      "Fantasy"
-    ],
-    "path": "./games/singlefiles/Shan-Hai.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Play creature cards & direct elemental attacks"
-  },
-  {
-    "name": "Sight & Light Raycaster",
-    "tags": [
-      "Physics",
-      "Lighting",
-      "Raycasting",
-      "Tech Demo"
-    ],
-    "path": "./games/sight-and-light/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse / Touch: Move Light Source Around Scene"
-  },
-  {
-    "name": "Signal Caravan Radio",
-    "tags": [
-      "Story",
-      "Adventure",
-      "Sci-Fi",
-      "Radio"
-    ],
-    "path": "./games/singlefiles/Signal-Caravan.html",
-    "shelf": "puzzle-logic",
-    "badge": "Story",
-    "description": "",
-    "controls": "Mouse / Touch: Tune radio dial & choose caravan destination routes"
-  },
-  {
-    "name": "Silent Rescue Deep Sea",
-    "tags": [
-      "Action",
-      "Submarine",
-      "Rescue",
-      "Physics"
-    ],
-    "path": "./games/singlefiles/Silent-Rescue.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD / Arrows: Thruster Propulsion | Space: Magnetic Docking Clamp"
-  },
-  {
-    "name": "Simon Memory Electronic",
-    "tags": [
-      "Casual",
-      "Memory",
-      "Audio",
-      "Retro"
-    ],
-    "path": "./games/simon/index.html",
-    "shelf": "puzzle-logic",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Mouse / Touch: Click Green, Red, Yellow, or Blue Tones"
-  },
-  {
-    "name": "SkiFree HTML5",
-    "tags": [
-      "Sports",
-      "Retro",
-      "Arcade"
-    ],
-    "path": "./games/skifree/index.html",
-    "shelf": "driving-sports",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Left / Right: Steer skier | Down: Accelerate | Up: Brake | Space: Jump"
-  },
-  {
-    "name": "Sky Hop Ascender",
-    "tags": [
-      "Arcade",
-      "Platformer",
-      "Casual",
-      "Jump"
-    ],
-    "path": "./games/singlefiles/Sky-Hop.html",
-    "shelf": "arcade-retro",
-    "badge": "Arcade",
-    "description": "",
-    "controls": "A/D or Left/Right Arrow / Tilt: Move Horizontal | Space: Boost"
-  },
-  {
-    "name": "Skyline City Planner",
-    "tags": [
-      "Simulation",
-      "City Builder",
-      "Grid",
-      "Strategy"
-    ],
-    "path": "./games/singlefiles/Skyline-Planner.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Select building type & place onto grid blueprint"
-  },
-  {
-    "name": "Slingstorm Physics",
-    "tags": [
-      "Arcade",
-      "Physics",
-      "Action",
-      "Destruction"
-    ],
-    "path": "./games/singlefiles/Slingstorm.html",
-    "shelf": "arcade-retro",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse / Touch Drag: Pull Slingshot, Aim Angle, and Release"
-  },
-  {
-    "name": "Slow Roads 3D",
-    "tags": [
-      "Driving",
-      "3D",
-      "Procedural",
-      "Relaxing"
-    ],
-    "path": "./games/singlefiles/Slow-Roads.html",
-    "shelf": "sandbox-simulation",
-    "badge": "3D",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Drive & Steer | C: Change Camera | R: Respawn | Esc: Settings"
-  },
-  {
-    "name": "Snake HTML5",
-    "tags": [
-      "Arcade",
-      "Classic",
-      "Retro"
-    ],
-    "path": "./games/snake/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Steer snake direction"
-  },
-  {
-    "name": "Snakes Classic HTML5",
-    "tags": [
-      "Arcade",
-      "Snake",
-      "Retro",
-      "Classic"
-    ],
-    "path": "./games/snakes/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Steer Snake"
-  },
-  {
-    "name": "Snow Rider 3D",
-    "tags": [
-      "Sports",
-      "3D",
-      "Endless"
-    ],
-    "path": "./games/singlefiles/Snowrider.html",
-    "shelf": "driving-sports",
-    "badge": "3D",
-    "description": "",
-    "controls": "Left / Right Arrows or A / D: Steer sled | Up Arrow or Space: Jump"
-  },
-  {
-    "name": "Snow Ridge Downhill",
-    "tags": [
-      "Sports",
-      "Arcade",
-      "Snowboard",
-      "Speed"
-    ],
-    "path": "./games/singlefiles/Snow-Ridge.html",
-    "shelf": "arcade-retro",
-    "badge": "Sports",
-    "description": "",
-    "controls": "A/D or Left/Right Arrow: Steer Snowboard | Space: Jump / Trick"
-  },
-  {
-    "name": "Sokoban",
-    "tags": [
-      "Puzzle",
-      "Classic",
-      "Retro"
-    ],
-    "path": "./games/sokoban/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move pusher | R: Restart level | U: Undo move"
-  },
-  {
-    "name": "Sokoban Quest Classic",
-    "tags": [
-      "Puzzle",
-      "Logic",
-      "Retro",
-      "Grid"
-    ],
-    "path": "./games/singlefiles/Sokoban-Quest.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move / Push Crate | U: Undo Move | R: Restart"
-  },
-  {
-    "name": "Space Company",
-    "tags": [
-      "Incremental",
-      "Sci-Fi",
-      "Strategy"
-    ],
-    "path": "./games/SpaceCompany/index.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Sci-Fi",
-    "description": "",
-    "controls": "Mouse: Manage industry, research technologies, build rockets"
-  },
-  {
-    "name": "Space Huggers",
-    "tags": [
-      "Action",
-      "Platformer",
-      "Shooter",
-      "Roguelike"
-    ],
-    "path": "./games/space-huggers/index.html",
-    "shelf": "action-3d",
-    "badge": "Roguelike",
-    "description": "",
-    "controls": "WASD / Arrows: Move & Jump | Mouse / Z: Aim & Shoot | R: Reload"
-  },
-  {
-    "name": "Space Invaders HTML5",
-    "tags": [
-      "Arcade",
-      "Retro",
-      "Shooter"
-    ],
-    "path": "./games/space-invaders/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Classic",
-    "description": "",
-    "controls": "Left / Right Arrows: Move cannon | Spacebar: Fire laser"
-  },
-  {
-    "name": "Space Shooter",
-    "tags": [
-      "Arcade",
-      "Shooter",
-      "Space"
-    ],
-    "path": "./games/space-shooter/index.html",
-    "shelf": "action-3d",
-    "badge": "Space",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Steer ship | Space / Mouse Click: Fire cannons"
-  },
-  {
-    "name": "SpacePi Arcade (JS13k)",
-    "tags": [
-      "Action",
-      "Arcade",
-      "JS13k",
-      "Sci-Fi"
-    ],
-    "path": "./games/spacepi/index.html",
-    "shelf": "action-survival",
-    "badge": "JS13k",
-    "description": "",
-    "controls": "WASD: Move Ship | Mouse: 360 Aim & Shoot"
-  },
-  {
-    "name": "Spashal",
-    "tags": [
-      "Arcade",
-      "Space",
-      "Physics"
-    ],
-    "path": "./games/spashal/index.html",
-    "shelf": "action-3d",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Left / Right: Rotate ship | Up Arrow / Space: Fire main rocket booster"
-  },
-  {
-    "name": "Spectrum 8-Bit Chiptune",
-    "tags": [
-      "Tool",
-      "Audio",
-      "Chiptune",
-      "Retro"
-    ],
-    "path": "./games/singlefiles/Spectrum-Console.html",
-    "shelf": "other",
-    "badge": "Creative",
-    "description": "",
-    "controls": "Keyboard / Touch: Play piano keys & tweak waveform parameters"
-  },
-  {
-    "name": "Spud Arena Survivor",
-    "tags": [
-      "Action",
-      "Roguelike",
-      "Survival",
-      "Shooter"
-    ],
-    "path": "./games/singlefiles/Spud-Arena.html",
-    "shelf": "action-survival",
-    "badge": "Hot",
-    "description": "",
-    "controls": "WASD / Mouse: Move Character | Weapons Auto-Fire"
-  },
-  {
-    "name": "Stack Tower Builder",
-    "tags": [
-      "Casual",
-      "Reflex",
-      "Arcade",
-      "Stacking"
-    ],
-    "path": "./games/singlefiles/Stack-Tower.html",
-    "shelf": "arcade-retro",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Space / Left Click / Tap: Drop & Trim Moving Block"
-  },
-  {
-    "name": "Stained Glass Mosaic",
-    "tags": [
-      "Puzzle",
-      "Art",
-      "Jigsaw",
-      "Relaxing"
+      "emulator",
+      "retro",
+      "system"
     ],
     "path": "./games/singlefiles/Mosaic-Jigsaw.html",
-    "shelf": "puzzle-logic",
-    "badge": "Cozy",
-    "description": "",
-    "controls": "Mouse / Touch: Drag and snap glass fragments into place"
+    "shelf": "Emulators",
+    "badge": "EMU",
+    "description": "Browser-based virtual system and hardware emulator.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Starforge Idle Galactic",
+    "category": "emulators",
+    "name": "PuzzleScript Game Creation Suite",
     "tags": [
-      "Idle",
-      "Sci-Fi",
-      "Incremental",
-      "Space"
+      "emulator",
+      "engine",
+      "puzzle",
+      "dev"
     ],
-    "path": "./games/singlefiles/Starforge-Idle.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Idle",
-    "description": "",
-    "controls": "Mouse / Touch: Click Stellar Core & Buy Industrial Upgrades"
+    "path": "./emulators/puzzlescript/index.html",
+    "shelf": "Emulators",
+    "badge": "ENGINE",
+    "description": "Open-source puzzle game engine and compiler by Stephen Lavelle (increpare).",
+    "controls": "Mouse / Arrow Keys"
   },
   {
-    "name": "Starline Freight Hyperlanes",
+    "category": "games",
+    "name": "Shadow Post",
     "tags": [
-      "Strategy",
-      "Sci-Fi",
-      "Space",
-      "Logistics"
+      "emulator",
+      "retro",
+      "system"
     ],
-    "path": "./games/singlefiles/Starline-Route.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Construct jump gates & dispatch cargo freighters"
+    "path": "./games/singlefiles/Shadow-Post.html",
+    "shelf": "Emulators",
+    "badge": "EMU",
+    "description": "Browser-based virtual system and hardware emulator.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Starship Sorades 13K",
+    "category": "games",
+    "name": "Time Post",
     "tags": [
-      "Arcade",
-      "Bullet Hell",
-      "Space"
-    ],
-    "path": "./games/sorades/index.html",
-    "shelf": "action-3d",
-    "badge": "JS13K",
-    "description": "",
-    "controls": "Arrow Keys / WASD: Steer fighter | Spacebar: Primary fire | Shift: Focus movement"
-  },
-  {
-    "name": "Starship Suspects",
-    "tags": [
-      "Strategy",
-      "Social Deduction",
-      "Multiplayer",
-      "Sci-Fi"
-    ],
-    "path": "./games/singlefiles/Starship-Suspects.html",
-    "shelf": "strategy-tactics",
-    "badge": "Party",
-    "description": "",
-    "controls": "WASD: Move Crewmate | E: Interact with Terminals | Report Body"
-  },
-  {
-    "name": "Stratigraphy Fossil Dig",
-    "tags": [
-      "Science",
-      "Geology",
-      "Fossils",
-      "Puzzle"
-    ],
-    "path": "./games/singlefiles/Stratigraphy-Lab.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Carefully chisel rock layers & assemble fossil bones"
-  },
-  {
-    "name": "Sudoku Master",
-    "tags": [
-      "Puzzle",
-      "Strategy",
-      "Classic"
-    ],
-    "path": "./games/sudoku/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Click cell: Select | 1-9: Enter number | Del / Backspace: Erase note"
-  },
-  {
-    "name": "Sudoku Studio Pro",
-    "tags": [
-      "Puzzle",
-      "Sudoku",
-      "Numbers",
-      "Brain"
-    ],
-    "path": "./games/singlefiles/Sudoku-Studio.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / 1-9 Keys: Select Cell & Enter Digit"
-  },
-  {
-    "name": "Survev.io Battle Royale",
-    "tags": [
-      "Action",
-      "Battle Royale",
-      "Shooter",
-      "Multiplayer"
-    ],
-    "path": "./games/singlefiles/Survev-io.html",
-    "shelf": "action-survival",
-    "badge": "Hot",
-    "description": "",
-    "controls": "WASD: Move | Mouse: Aim & Shoot | F: Loot | 1-4: Switch Weapons"
-  },
-  {
-    "name": "Survivor Arena",
-    "tags": [
-      "Action",
-      "Arena",
-      "Survival"
-    ],
-    "path": "./games/survivor/index.html",
-    "shelf": "action-3d",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD: Move | Mouse: Aim and shoot swarming zombies"
-  },
-  {
-    "name": "Switchyard Rail Dispatch",
-    "tags": [
-      "Puzzle",
-      "Trains",
-      "Railroad",
-      "Logistics"
-    ],
-    "path": "./games/singlefiles/Switchyard-Rush.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Click track switches to redirect train routing"
-  },
-  {
-    "name": "T-Rex Dino Runner",
-    "tags": [
-      "Arcade",
-      "Endless",
-      "Retro",
-      "Casual"
-    ],
-    "path": "./games/t-rex-runner/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Popular",
-    "description": "",
-    "controls": "Space / Up Arrow: Jump | Down Arrow: Duck"
-  },
-  {
-    "name": "Tank Arena 2D Battle",
-    "tags": [
-      "Action",
-      "Shooter",
-      "Tanks",
-      "Combat"
-    ],
-    "path": "./games/singlefiles/Tank-Arena.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD: Drive Hull | Mouse: Aim Turret & Fire Shells"
-  },
-  {
-    "name": "Tanuki Sunset",
-    "tags": [
-      "3D",
-      "Skateboarding",
-      "Synthwave",
-      "Casual"
-    ],
-    "path": "./games/singlefiles/Tanuki-Sunset.html",
-    "shelf": "arcade-retro",
-    "badge": "Popular",
-    "description": "",
-    "controls": "A/D: Steer | Space: Drift | S: Speed Brake"
-  },
-  {
-    "name": "Temple of Boom",
-    "tags": [
-      "Action",
-      "Platformer",
-      "Shooter",
-      "2-Player"
-    ],
-    "path": "./games/singlefiles/Temple-of-Boom.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Move & Jump | C / L: Shoot | V / K: Switch Weapon"
-  },
-  {
-    "name": "Territorial.io",
-    "tags": [
-      "Strategy",
-      "Multiplayer",
-      "Conquest",
-      "Fast"
-    ],
-    "path": "./games/singlefiles/Territorial-io.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Left Click / Touch: Set troop attack percentage & select target territory"
-  },
-  {
-    "name": "Teterjs",
-    "tags": [
-      "Arcade",
-      "Puzzle",
-      "Classic"
-    ],
-    "path": "./games/teterjs/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Left / Right: Move | Up: Rotate CW | Z: Rotate CCW | C: Hold | Space: Hard drop"
-  },
-  {
-    "name": "The Evolution of Trust",
-    "tags": [
-      "Game Theory",
-      "Story",
-      "Educational",
-      "Masterpiece"
-    ],
-    "path": "./games/trust/index.html",
-    "shelf": "strategy-tactics",
-    "badge": "Masterpiece",
-    "description": "",
-    "controls": "Mouse / Touch: Click Choices, Coin Slots, and Interactive Dialogue"
-  },
-  {
-    "name": "There Is No Game",
-    "tags": [
-      "Comedy",
-      "Meta",
-      "Point & Click",
-      "Puzzle"
-    ],
-    "path": "./games/singlefiles/There-Is-No-Game.html",
-    "shelf": "puzzle-logic",
-    "badge": "Popular",
-    "description": "",
-    "controls": "Mouse: Click, Drag, Drop, and Break Interface Elements"
-  },
-  {
-    "name": "Thunder Vanguard SHMUP",
-    "tags": [
-      "Action",
-      "Arcade",
-      "Shooter",
-      "Retro"
-    ],
-    "path": "./games/singlefiles/Thunder-Vanguard.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "Arrow Keys / Mouse: Fly Jet | Space / Auto: Fire Primary Lasers | X: Bomb"
-  },
-  {
-    "name": "Tic-Tac-Toe AI",
-    "tags": [
-      "Puzzle",
-      "Classic",
-      "Casual"
-    ],
-    "path": "./games/tictactoe/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Mouse: Click empty square to place X or O"
-  },
-  {
-    "name": "Tidal Grid Ocean Power",
-    "tags": [
-      "Strategy",
-      "Clean Energy",
-      "Engineering",
-      "Simulation"
-    ],
-    "path": "./games/singlefiles/Tidal-Grid.html",
-    "shelf": "strategy-tactics",
-    "badge": "Simulator",
-    "description": "",
-    "controls": "Mouse / Touch: Deploy subsea turbines & balance electrical grid load"
-  },
-  {
-    "name": "Tide Salvage Diver",
-    "tags": [
-      "Action",
-      "Underwater",
-      "Exploration",
-      "Casual"
-    ],
-    "path": "./games/singlefiles/Tide-Salvage.html",
-    "shelf": "action-survival",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD / Mouse: Swim & Dive | Space: Collect Treasure"
-  },
-  {
-    "name": "Time Post Paradox",
-    "tags": [
-      "Puzzle",
-      "Time Travel",
-      "Story",
-      "Brain"
+      "emulator",
+      "retro",
+      "system"
     ],
     "path": "./games/singlefiles/Time-Post.html",
-    "shelf": "puzzle-logic",
-    "badge": "Puzzle",
-    "description": "",
-    "controls": "Mouse / Touch: Schedule mail deliveries across past and future timeline nodes"
+    "shelf": "Emulators",
+    "badge": "EMU",
+    "description": "Browser-based virtual system and hardware emulator.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Time Shooter 2",
+    "category": "emulators",
+    "name": "v86 x86 PC Virtual Machine",
     "tags": [
-      "Action",
-      "3D",
-      "FPS",
-      "Superhot"
+      "emulator",
+      "x86",
+      "pc",
+      "linux",
+      "windows",
+      "dos",
+      "retro",
+      "wasm"
     ],
-    "path": "./games/singlefiles/Time-Shooter-2.html",
-    "shelf": "action-survival",
-    "badge": "3D",
-    "description": "",
-    "controls": "WASD: Move | Mouse: Aim | Left Click: Shoot / Throw Weapon | Right Click: Pick Up"
+    "path": "./emulators/v86/index.html",
+    "shelf": "Emulators",
+    "badge": "V86",
+    "description": "High-performance browser-based x86 PC hardware emulator with JIT compilation. Boot Linux, Windows 98/95/3.1, FreeDOS, KolibriOS, ReactOS, and custom floppy/ISO disk images in WebAssembly.",
+    "controls": "Keyboard / Mouse (Click canvas to lock cursor, ESC to release)"
   },
   {
-    "name": "Time Shooter 3: SWAT",
+    "category": "games",
+    "name": "Adarkroom",
     "tags": [
-      "Action",
-      "3D",
-      "FPS",
-      "Tactical"
+      "rpg",
+      "adventure",
+      "fantasy",
+      "dungeon"
     ],
-    "path": "./games/singlefiles/Time-Shooter-3.html",
-    "shelf": "action-survival",
-    "badge": "3D",
-    "description": "",
-    "controls": "WASD: Move | Mouse: Aim | Left Click: Fire / Strike | Right Click: Grab Riot Shield"
+    "path": "./games/adarkroom/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "",
+    "description": "Adarkroom playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Tiny Factory Automation",
+    "category": "games",
+    "name": "Bounce Back (Boomerang Roguelike)",
     "tags": [
-      "Strategy",
-      "Automation",
-      "Factorio",
-      "Puzzle"
+      "rpg",
+      "roguelike",
+      "adventure",
+      "boomerang",
+      "dungeon"
     ],
-    "path": "./games/singlefiles/Tiny-Factory.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Place conveyor belts, inserters, and assembly machines"
+    "path": "./games/bounce-back/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "ROGUELIKE",
+    "description": "Top-down dungeon-crawling action roguelike where your only weapon is an enchanted returning boomerang.",
+    "controls": "WASD to Walk, Mouse to Throw Boomerang, Space to Dash"
   },
   {
-    "name": "Touchline Soccer Tactics",
+    "category": "games",
+    "name": "Cellmates Prison Break",
     "tags": [
-      "Sports",
-      "Strategy",
-      "Management",
-      "Soccer"
+      "puzzle",
+      "stealth",
+      "adventure",
+      "prison"
     ],
-    "path": "./games/singlefiles/Touchline-Manager.html",
-    "shelf": "strategy-tactics",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Adjust Formation, Substitution & In-Match Tactics"
+    "path": "./games/cellmates/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "PUZZLE RPG",
+    "description": "Cooperative dual-character puzzle stealth game escaping high security cells.",
+    "controls": "WASD for Player 1, Arrow Keys for Player 2"
   },
   {
-    "name": "Tower Stacker",
+    "category": "games",
+    "name": "CrystalQuest",
     "tags": [
-      "Arcade",
-      "Physics",
-      "Casual"
+      "rpg",
+      "adventure",
+      "fantasy",
+      "dungeon"
     ],
-    "path": "./games/tower-game/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Casual",
-    "description": "",
-    "controls": "Click / Spacebar: Drop current tower block"
+    "path": "./games/CrystalQuest/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "",
+    "description": "CrystalQuest playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Truss Workshop Bridge",
+    "category": "games",
+    "name": "Dante's Inferno 3D",
     "tags": [
-      "Puzzle",
-      "Physics",
-      "Engineering",
-      "Building"
+      "3d",
+      "rpg",
+      "adventure",
+      "dungeon",
+      "raymarching"
     ],
-    "path": "./games/singlefiles/Truss-Workshop.html",
-    "shelf": "puzzle-logic",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse / Touch: Draw Nodes & Beams | Press Play to Test Physics Stress"
+    "path": "./games/dante-13k/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "3D RPG",
+    "description": "3D raymarched dark fantasy dungeon exploration through the circles of the underworld in 13KB.",
+    "controls": "WASD to Move, Mouse to Look, Left Click to Attack"
   },
   {
-    "name": "Underrun (Software 3D)",
+    "category": "games",
+    "name": "Diablo JS Web Engine",
     "tags": [
-      "Action",
-      "Shooter",
-      "JS13k",
-      "Retro"
+      "rpg",
+      "diablo",
+      "action",
+      "dungeon",
+      "loot"
     ],
-    "path": "./games/underrun/index.html",
-    "shelf": "action-survival",
-    "badge": "JS13k",
-    "description": "",
-    "controls": "WASD: Move | Mouse: Aim & Shoot Plasma Blaster"
+    "path": "./games/diablo-js/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "ACTION RPG",
+    "description": "HTML5 canvas web engine recreating classic isometric action-RPG dungeon exploring and loot mechanics.",
+    "controls": "Mouse Click to Move & Attack, Potions 1-4"
   },
   {
-    "name": "Vector Asteroids",
+    "category": "games",
+    "name": "Dice Delver",
     "tags": [
-      "Arcade",
-      "Retro",
-      "Shooter"
+      "rpg",
+      "adventure",
+      "fantasy",
+      "dungeon"
+    ],
+    "path": "./games/singlefiles/Dice-Delver.html",
+    "shelf": "RPG & Adventure",
+    "badge": "",
+    "description": "Dice Delver playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Dungeon Delver",
+    "tags": [
+      "rpg",
+      "adventure",
+      "fantasy",
+      "dungeon"
+    ],
+    "path": "./games/singlefiles/Dungeon-Delver.html",
+    "shelf": "RPG & Adventure",
+    "badge": "",
+    "description": "Dungeon Delver playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Ember Tactics",
+    "tags": [
+      "rpg",
+      "adventure",
+      "fantasy",
+      "dungeon"
+    ],
+    "path": "./games/singlefiles/Ember-Tactics.html",
+    "shelf": "RPG & Adventure",
+    "badge": "",
+    "description": "Ember Tactics playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Heroine Dusk",
+    "tags": [
+      "rpg",
+      "adventure",
+      "fantasy",
+      "dungeon"
+    ],
+    "path": "./games/heroine-dusk/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "",
+    "description": "Heroine Dusk playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Monster Tamer",
+    "tags": [
+      "rpg",
+      "adventure",
+      "fantasy",
+      "dungeon"
+    ],
+    "path": "./games/singlefiles/Monster-Tamer.html",
+    "shelf": "RPG & Adventure",
+    "badge": "",
+    "description": "Monster Tamer playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Norman the Necromancer",
+    "tags": [
+      "rpg",
+      "strategy",
+      "roguelike",
+      "necromancer",
+      "turn-based"
+    ],
+    "path": "./games/norman-necromancer/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "TACTICS",
+    "description": "Turn-based tactical dungeon crawler by Dan Prince where you raise fallen enemies into your skeletal army.",
+    "controls": "Mouse Click / Arrow Keys"
+  },
+  {
+    "category": "games",
+    "name": "Roguish Dungeon Crawler",
+    "tags": [
+      "rpg",
+      "roguelike",
+      "dungeon",
+      "retro"
+    ],
+    "path": "./games/roguish/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "ROGUELIKE",
+    "description": "Traditional ASCII/tile turn-based roguelike with procedural dungeons and permadeath.",
+    "controls": "Arrow Keys / Numpad to Walk & Attack"
+  },
+  {
+    "category": "games",
+    "name": "1255 Burgomaster",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/1255-burgomaster/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "1255 Burgomaster playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Abyss Sonar",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Abyss-Sonar.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Abyss Sonar playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Air Traffic Control",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Air-Traffic-Control.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Air Traffic Control playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Alien Invasion 2D",
+    "tags": [
+      "action",
+      "arcade",
+      "shooter",
+      "space"
+    ],
+    "path": "./games/alien-invasion/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "SHMUP",
+    "description": "Classic vertical space scrolling shooter defending Earth from alien armada attacks.",
+    "controls": "Left / Right Arrows to Move, Space to Fire"
+  },
+  {
+    "category": "games",
+    "name": "AncientBeast",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/AncientBeast/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "AncientBeast playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Aquastax",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/aquastax/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Aquastax playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Arashi JS",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/arashi-js/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Arashi JS playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Asdf",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/asdf/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Asdf playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Asteroids",
+    "tags": [
+      "games",
+      "html5"
     ],
     "path": "./games/asteroids/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Left / Right: Rotate ship | Up Arrow: Thruster | Spacebar: Fire laser blaster"
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Asteroids playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Vex 3 Parkour",
+    "category": "games",
+    "name": "Auction Fever",
     "tags": [
-      "Platformer",
-      "Parkour",
-      "Stickman",
-      "Action"
+      "games",
+      "html5"
     ],
-    "path": "./games/singlefiles/Vex-3.html",
-    "shelf": "action-survival",
-    "badge": "Popular",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Run, Jump, Slide, Wall-Jump & Swim"
+    "path": "./games/singlefiles/Auction-Fever.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Auction Fever playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Vex 4 Parkour",
+    "category": "games",
+    "name": "Awesometanks2",
     "tags": [
-      "Platformer",
-      "Parkour",
-      "Stickman",
-      "Action"
+      "games",
+      "html5"
     ],
-    "path": "./games/singlefiles/Vex-4.html",
-    "shelf": "action-survival",
-    "badge": "Popular",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Run, Jump, Slide, Wall-Jump & Swim"
+    "path": "./games/singlefiles/awesometanks2.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Awesometanks2 playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Vex 5 Parkour",
+    "category": "games",
+    "name": "Backpack Arena",
     "tags": [
-      "Platformer",
-      "Parkour",
-      "Stickman",
-      "Action"
+      "games",
+      "html5"
     ],
-    "path": "./games/singlefiles/Vex-5.html",
-    "shelf": "action-survival",
-    "badge": "Popular",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Run, Jump, Slide, Wall-Jump & Swim"
+    "path": "./games/singlefiles/Backpack-Arena.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Backpack Arena playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Vex 6 Parkour",
+    "category": "games",
+    "name": "Balatro",
     "tags": [
-      "Platformer",
-      "Parkour",
-      "Stickman",
-      "Action"
+      "games",
+      "html5"
     ],
-    "path": "./games/singlefiles/Vex-6.html",
-    "shelf": "action-survival",
-    "badge": "Popular",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Run, Jump, Slide, Wall-Jump & Swim"
+    "path": "./games/singlefiles/Balatro.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Balatro playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Vex 7 Parkour",
+    "category": "games",
+    "name": "Ball And Wall",
     "tags": [
-      "Platformer",
-      "Parkour",
-      "Stickman",
-      "Action"
+      "games",
+      "html5"
     ],
-    "path": "./games/singlefiles/Vex-7.html",
-    "shelf": "action-survival",
-    "badge": "Popular",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Run, Jump, Slide, Wall-Jump & Grapple"
+    "path": "./games/ball-and-wall/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Ball And Wall playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
+    "category": "games",
+    "name": "Ball Arena",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Ball-Arena.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Ball Arena playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Banania",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/Banania/banania.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Banania playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Basin Control",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Basin-Control.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Basin Control playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Battery Cycle",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Battery-Cycle.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Battery Cycle playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Beat Bento",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Beat-Bento.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Beat Bento playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Blackjack Table",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Blackjack-Table.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Blackjack Table playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Block Forge",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Block-Forge.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Block Forge playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Blockrain",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/blockrain/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Blockrain playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Bloons TD4",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Bloons-TD4.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Bloons TD4 playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Borg Games",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Borg-Games.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Borg Games playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Branching Tales",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Branching-Tales.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Branching Tales playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Bytebot Lab",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Bytebot-Lab.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Bytebot Lab playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Captain Rogers: Asteroid Belt",
+    "tags": [
+      "action",
+      "arcade",
+      "space",
+      "flying"
+    ],
+    "path": "./games/captain-rogers/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ACTION",
+    "description": "Endless arcade space avoider navigating Captain Rogers through chaotic asteroid storms.",
+    "controls": "Tap / Click / Space to Boost Rocket"
+  },
+  {
+    "category": "games",
+    "name": "Ceros Neon Snake",
+    "tags": [
+      "arcade",
+      "snake",
+      "neon",
+      "classic"
+    ],
+    "path": "./games/ceros-snake/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ARCADE",
+    "description": "Stylized glowing neon arcade snake with fluid acceleration and high score tracker.",
+    "controls": "Arrow Keys / WASD to Steer"
+  },
+  {
+    "category": "games",
+    "name": "Charm Reels",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Charm-Reels.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Charm Reels playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Checkpoint Inspector",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Checkpoint-Inspector.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Checkpoint Inspector playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Chromatic Press",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Chromatic-Press.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Chromatic Press playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Chromatography Lab",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Chromatography-Lab.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Chromatography Lab playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Cipher Relay",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Cipher-Relay.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Cipher Relay playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Claw Carnival",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Claw-Carnival.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Claw Carnival playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Clean Slate",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Clean-Slate.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Clean Slate playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Climbing Route",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Climbing-Route.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Climbing Route playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Clockwork Escape",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Clockwork-Escape.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Clockwork Escape playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Clumsy Bird",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/clumsy-bird/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Clumsy Bird playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Coil Enclosure",
+    "tags": [
+      "action",
+      "arcade",
+      "particles",
+      "flow"
+    ],
+    "path": "./games/coil/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ACTION",
+    "description": "Hypnotic particle trail arcade game where you enclose glowing energy orbs before they explode.",
+    "controls": "Mouse Movement to Circle & Trap Orbs"
+  },
+  {
+    "category": "games",
+    "name": "Comet Weaver",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Comet-Weaver.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Comet Weaver playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Connect Arena",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Connect-Arena.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Connect Arena playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "CouchFriends Space Shooter",
+    "tags": [
+      "action",
+      "arcade",
+      "shooter",
+      "space"
+    ],
+    "path": "./games/space-shooter/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ACTION",
+    "description": "Multi-weapon arcade spaceship dogfighter with shield upgrades and laser cannons.",
+    "controls": "Mouse or Arrow Keys to Move & Shoot"
+  },
+  {
+    "category": "games",
+    "name": "Courtroom Clash",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Courtroom-Clash.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Courtroom Clash playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Cozy Organizer",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Cozy-Organizer.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Cozy Organizer playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "CrappyBird",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/CrappyBird/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "CrappyBird playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Detective Desk",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Detective-Desk.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Detective Desk playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Digger Remastered (1983)",
+    "tags": [
+      "arcade",
+      "retro",
+      "digger",
+      "classic"
+    ],
+    "path": "./games/digger/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "RETRO",
+    "description": "Remaster of Windmill Software’s legendary 1983 gold tunneling arcade classic.",
+    "controls": "Arrow Keys to Dig, F1 to Shoot"
+  },
+  {
+    "category": "games",
+    "name": "Dojo Duel",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Dojo-Duel.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Dojo Duel playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Drakonas Dragon Flight",
+    "tags": [
+      "action",
+      "arcade",
+      "dragon",
+      "flight"
+    ],
+    "path": "./games/drakonas/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ACTION",
+    "description": "Fly a fire-breathing dragon through treacherous cavern obstacles.",
+    "controls": "Space / Tap to Fly & Breathe Fire"
+  },
+  {
+    "category": "games",
+    "name": "Drone Survey",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Drone-Survey.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Drone Survey playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Duck Hunt",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/duck-hunt/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Duck Hunt playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Eaglercraft 1.12.2 Offline WASM",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Eaglercraft 1.12.2 Offline WASM playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Eaglercraft 1.8.8 Offline WASM",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Eaglercraft 1.8.8 Offline WASM playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Eaglercraft JS 1.12.2",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Eaglercraft-JS-1.12.2.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Eaglercraft JS 1.12.2 playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Eaglercraft JS 1.8.8",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Eaglercraft-JS-1.8.8.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Eaglercraft JS 1.8.8 playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Elemental Sandbox",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Elemental-Sandbox.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Elemental Sandbox playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Emberwind HTML5",
+    "tags": [
+      "action",
+      "platformer",
+      "fantasy",
+      "adventure"
+    ],
+    "path": "./games/emberwind/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "PLATFORMER",
+    "description": "Charming storybook action platformer starring gnome watchman Kindle flying through gremlin-infested skies.",
+    "controls": "Arrow Keys to Move/Jump, Z/X to Attack with Cane"
+  },
+  {
+    "category": "games",
+    "name": "Enduro",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/enduro/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Enduro playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Fishing Harbor",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Fishing-Harbor.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Fishing Harbor playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Flappy Glider",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Flappy-Glider.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Flappy Glider playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Fleet Duel",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Fleet-Duel.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Fleet Duel playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Floppy Bird Canvas",
+    "tags": [
+      "arcade",
+      "casual",
+      "flappy",
+      "runner"
+    ],
+    "path": "./games/floppybird/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "CASUAL",
+    "description": "Crisp HTML5 canvas recreation of the viral pipe dodging flap game.",
+    "controls": "Space / Click / Tap to Flap Wings"
+  },
+  {
+    "category": "games",
+    "name": "Forest Dash",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Forest-Dash.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Forest Dash playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Frequency Bureau",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Frequency-Bureau.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Frequency Bureau playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Frontier Command",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Frontier-Command.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Frontier Command playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Fruit Slice",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Fruit-Slice.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Fruit Slice playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Garden Front",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Garden-Front.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Garden Front playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Gear Calibrator",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Gear-Calibrator.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Gear Calibrator playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Gem Garden",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Gem-Garden.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Gem Garden playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Glyph Warden",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Glyph-Warden.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Glyph Warden playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "HexGL",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/HexGL/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "HexGL playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Hextris",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/Hextris/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Hextris playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Hive Sovereign",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Hive-Sovereign.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Hive Sovereign playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Hole.Io",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Hole.io.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Hole.Io playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Hotfix Code Runner",
+    "tags": [
+      "action",
+      "arcade",
+      "programmer",
+      "fast"
+    ],
+    "path": "./games/hotfix/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ACTION",
+    "description": "Fast-paced cyber game patching server bugs under intense countdown pressure.",
+    "controls": "Keyboard Commands / Arrow Keys"
+  },
+  {
+    "category": "games",
+    "name": "HTML5 Classic Pacman",
+    "tags": [
+      "arcade",
+      "retro",
+      "pacman",
+      "maze"
+    ],
+    "path": "./games/pacman/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "RETRO",
+    "description": "Faithful open-source Pacman with authentic ghost personality algorithms (Blinky, Pinky, Inky, Clyde).",
+    "controls": "Arrow Keys / WASD"
+  },
+  {
+    "category": "games",
+    "name": "Hurry! 10-Second Panic",
+    "tags": [
+      "arcade",
+      "action",
+      "fast-paced",
+      "ludum-dare"
+    ],
+    "path": "./games/hurry/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ARCADE",
+    "description": "High-adrenaline mini-game where every level gives you exactly 10 seconds to survive.",
+    "controls": "Arrow Keys / WASD"
+  },
+  {
+    "category": "games",
+    "name": "Island Survival",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Island-Survival.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Island Survival playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Jolly Jumper Endless",
+    "tags": [
+      "arcade",
+      "casual",
+      "jumping",
+      "endless"
+    ],
+    "path": "./games/jolly-jumper/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "CASUAL",
+    "description": "Endless vertical platform jumper bouncing across fragile clouds and springs.",
+    "controls": "Left / Right Arrow Keys"
+  },
+  {
+    "category": "games",
+    "name": "Lantern Memory",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Lantern-Memory.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Lantern Memory playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Lockmaster Shift",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Lockmaster-Shift.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Lockmaster Shift playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Mahjong Link",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Mahjong-Link.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Mahjong Link playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Market Pulse",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Market-Pulse.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Market Pulse playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Merge Orbit",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Merge-Orbit.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Merge Orbit playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Metro Weaver",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Metro-Weaver.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Metro Weaver playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Midnight Monitor",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Midnight-Monitor.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Midnight Monitor playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Mine Matrix",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Mine-Matrix.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Mine Matrix playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Mist Valley Herbarium",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Mist-Valley-Herbarium.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Mist Valley Herbarium playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Moba Frontier",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Moba-Frontier.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Moba Frontier playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Mole Market",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Mole-Market.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Mole Market playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Monster Horde",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Monster-Horde.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Monster Horde playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Monster Wants Candy",
+    "tags": [
+      "arcade",
+      "casual",
+      "reflex",
+      "monsters"
+    ],
+    "path": "./games/monster-candy/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ARCADE",
+    "description": "Fast-paced candy catching arcade game by Enclave Games with vibrant animations.",
+    "controls": "Mouse / Touch to Catch Flying Candies"
+  },
+  {
+    "category": "games",
+    "name": "Moon Lander",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Moon-Lander.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Moon Lander playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Mumuy Pacman Deluxe",
+    "tags": [
+      "arcade",
+      "retro",
+      "pacman",
+      "classic"
+    ],
+    "path": "./games/mumuy-pacman/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ARCADE",
+    "description": "Pixel-perfect HTML5 Pacman with responsive touch controls, original sound effects, and ghosts AI.",
+    "controls": "Arrow Keys / Touch Swipe"
+  },
+  {
+    "category": "games",
+    "name": "Museum Climate",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Museum-Climate.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Museum Climate playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Noodle Shift",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Noodle-Shift.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Noodle Shift playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Observatory Watch",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Observatory-Watch.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Observatory Watch playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Octocat Jump",
+    "tags": [
+      "arcade",
+      "casual",
+      "jumping",
+      "doodle"
+    ],
+    "path": "./games/octocat-jump/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "CASUAL",
+    "description": "Endless vertical platform jumper starring GitHub’s mascot Octocat.",
+    "controls": "Left / Right Arrow Keys"
+  },
+  {
+    "category": "games",
+    "name": "OpenSC2K",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/OpenSC2K/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "OpenSC2K playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Orbital Pinball",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Orbital-Pinball.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Orbital Pinball playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Orbital Stowage",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Orbital-Stowage.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Orbital Stowage playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Pacman Canvas",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/pacman-canvas/index.htm",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Pacman Canvas playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Pathogen Protocol",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Pathogen-Protocol.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Pathogen Protocol playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Photo Safari",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Photo-Safari.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Photo Safari playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Pixel Clues",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Pixel-Clues.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Pixel Clues playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Pocket Companion",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Pocket-Companion.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Pocket Companion playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Pong",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/pong/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Pong playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Prism Breaker",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Prism-Breaker.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Prism Breaker playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Prism Orchard",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Prism-Orchard.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Prism Orchard playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Pulse Studio",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Pulse-Studio.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Pulse Studio playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Q1K3 (Quake in 13KB JS)",
+    "tags": [
+      "action",
+      "shooter",
+      "3d",
+      "fps",
+      "retro",
+      "quake"
+    ],
+    "path": "./games/q1k3/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "3D ACTION",
+    "description": "Full 3D Quake homage squeezed into 13KB JavaScript with software audio synthesis, monsters, and E1M1-inspired level design.",
+    "controls": "WASD to Move, Mouse to Look & Shoot, Space to Jump, 1-2 Weapons"
+  },
+  {
+    "category": "games",
+    "name": "Radish Guard",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Radish-Guard.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Radish Guard playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Radius Raid Survival",
+    "tags": [
+      "action",
+      "shooter",
+      "vector",
+      "space",
+      "arcade"
+    ],
+    "path": "./games/radius-raid/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "VECTOR",
+    "description": "Hypnotic space vector arena shooter with glowing neon particle explosions and endless waves.",
+    "controls": "WASD to Move, Mouse to Aim & Shoot"
+  },
+  {
+    "category": "games",
+    "name": "Ragdoll Archers",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Ragdoll-Archers.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Ragdoll Archers playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Raging Gardens Pac-Action",
+    "tags": [
+      "action",
+      "arcade",
+      "maze",
+      "gardening"
+    ],
+    "path": "./games/raging-gardens/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ACTION",
+    "description": "Harvest giant carrots across mazes while evading hungry rampaging rabbits.",
+    "controls": "Arrow Keys to Move Ninja Gardener"
+  },
+  {
+    "category": "games",
+    "name": "Recoil",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Recoil.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Recoil playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Relay Coordination",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Relay-Coordination.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Relay Coordination playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "River Holdem",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/River-Holdem.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "River Holdem playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Sandspiel",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/sandspiel/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Sandspiel playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Shan Hai",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Shan-Hai.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Shan Hai playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Signal Caravan",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Signal-Caravan.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Signal Caravan playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Silent Rescue",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Silent-Rescue.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Silent Rescue playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Skyline Planner",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Skyline-Planner.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Skyline Planner playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Slingstorm",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Slingstorm.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Slingstorm playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Snake",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/snake/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Snake playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Snake Game",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Snake-Game.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Snake Game playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Snow Ridge",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Snow-Ridge.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Snow Ridge playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Solitaire",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/solitaire/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Solitaire playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Solitaire Classic",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Solitaire-Classic.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Solitaire Classic playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Space Cadet Pinball",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/space-cadet-pinball/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Space Cadet Pinball playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Space Huggers Roguelite",
+    "tags": [
+      "action",
+      "platformer",
+      "roguelite",
+      "shooter",
+      "retro"
+    ],
+    "path": "./games/space-huggers/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ROGUELITE",
+    "description": "Procedural pixel-art run-and-gun roguelite action platformer by Frank Force with explosive destruction.",
+    "controls": "WASD / Arrow Keys to Move, Mouse to Aim & Shoot, Space to Jump"
+  },
+  {
+    "category": "games",
+    "name": "Space Invaders 1978",
+    "tags": [
+      "arcade",
+      "retro",
+      "space-invaders",
+      "shooter"
+    ],
+    "path": "./games/space-invaders/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "RETRO",
+    "description": "Authentic reproduction of the original Taito 1978 arcade bunker shooter.",
+    "controls": "Arrow Keys to Slide, Space to Fire Laser"
+  },
+  {
+    "category": "games",
+    "name": "Spashal Gravity Voyager",
+    "tags": [
+      "action",
+      "physics",
+      "space",
+      "gravity"
+    ],
+    "path": "./games/spashal/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "PHYSICS",
+    "description": "Gravitational orbital slingshot game navigating through planetary gravitational wells.",
+    "controls": "Mouse / Touch to Aim Thrusters"
+  },
+  {
+    "category": "games",
+    "name": "Spectrum Console",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Spectrum-Console.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Spectrum Console playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Spud Arena",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Spud-Arena.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Spud Arena playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Stack Tower",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Stack-Tower.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Stack Tower playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Starline Route",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Starline-Route.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Starline Route playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Starship Sorades 13K",
+    "tags": [
+      "action",
+      "shooter",
+      "shmup",
+      "retro",
+      "space"
+    ],
+    "path": "./games/sorades/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "SHMUP",
+    "description": "Fast vertical space shooter in 13KB JS with bullet hell bosses and weapon upgrades.",
+    "controls": "Arrow Keys / WASD to Fly, Space to Fire"
+  },
+  {
+    "category": "games",
+    "name": "Starship Suspects",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Starship-Suspects.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Starship Suspects playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Stratigraphy Lab",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Stratigraphy-Lab.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Stratigraphy Lab playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "SURVIVOR Sound Odyssey",
+    "tags": [
+      "arcade",
+      "audio",
+      "action",
+      "retro"
+    ],
+    "path": "./games/survivor/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "AUDIO ACTION",
+    "description": "Dynamic audio-driven space survival arcade game with interactive sound synthesis.",
+    "controls": "Arrow Keys / WASD to Pilot Ship"
+  },
+  {
+    "category": "games",
+    "name": "Tank Arena",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Tank-Arena.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Tank Arena playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Teterjs",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/teterjs/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Teterjs playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Thunder Vanguard",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Thunder-Vanguard.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Thunder Vanguard playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Tictactoe",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/tictactoe/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Tictactoe playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Tide Salvage",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Tide-Salvage.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Tide Salvage playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Touchline Manager",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Touchline-Manager.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Touchline Manager playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Tower Defense",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/tower-defense/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Tower Defense playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Tower Game",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/tower-game/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Tower Game playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Underrun (Twin-Stick Survival)",
+    "tags": [
+      "action",
+      "shooter",
+      "cyberpunk",
+      "twin-stick"
+    ],
+    "path": "./games/underrun/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "ACTION",
+    "description": "Intense sci-fi top-down shooter in 13KB JS by Dominic Szablewski. Fight alien arachnids with plasma guns and deploy sentry nodes.",
+    "controls": "WASD to Move, Mouse to Aim & Fire"
+  },
+  {
+    "category": "games",
     "name": "Vex 8",
     "tags": [
-      "Action",
-      "Platformer",
-      "Parkour"
+      "games",
+      "html5"
     ],
     "path": "./games/singlefiles/Vex-8.html",
-    "shelf": "platformer-adventure",
-    "badge": "Action",
-    "description": "",
-    "controls": "WASD / Arrow Keys: Run, jump, slide, wall-climb"
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Vex 8 playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Volley Random",
+    "category": "games",
+    "name": "Wind Tunnel Contracts",
     "tags": [
-      "Sports",
-      "Physics",
-      "Ragdoll",
-      "2-Player"
-    ],
-    "path": "./games/singlefiles/Volley-Random.html",
-    "shelf": "arcade-retro",
-    "badge": "Sports",
-    "description": "",
-    "controls": "Up Arrow / W / Touch: Jump & Spike | 2-Player Local Dual Mode"
-  },
-  {
-    "name": "We Become What We Behold",
-    "tags": [
-      "Story",
-      "Satire",
-      "Point & Click",
-      "Masterpiece"
-    ],
-    "path": "./games/wbwwb/index.html",
-    "shelf": "action-survival",
-    "badge": "Masterpiece",
-    "description": "",
-    "controls": "Mouse: Aim Camera Viewfinder & Click to Snap Photo"
-  },
-  {
-    "name": "Wind Tunnel Aero Lab",
-    "tags": [
-      "Physics",
-      "Aerodynamics",
-      "Simulation",
-      "Engineering"
+      "games",
+      "html5"
     ],
     "path": "./games/singlefiles/Wind-Tunnel-Contracts.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Physics",
-    "description": "",
-    "controls": "Mouse: Sculpt vehicle contour curves & toggle smoke particle streams"
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Wind Tunnel Contracts playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Wonder Park Tycoon",
+    "category": "games",
+    "name": "Wonder Park",
     "tags": [
-      "Simulation",
-      "Tycoon",
-      "Theme Park",
-      "Casual"
+      "games",
+      "html5"
     ],
     "path": "./games/singlefiles/Wonder-Park.html",
-    "shelf": "sandbox-simulation",
-    "badge": "Strategy",
-    "description": "",
-    "controls": "Mouse / Touch: Build rides, pave pathways, and set ticket pricing"
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "description": "Wonder Park playable in your web browser.",
+    "controls": "Keyboard / Mouse"
   },
   {
-    "name": "Word Grid Crossword",
+    "category": "games",
+    "name": "XX142-B2 Alien Infiltration",
     "tags": [
-      "Puzzle",
-      "Word",
-      "Educational",
-      "Brain"
-    ],
-    "path": "./games/singlefiles/Word-Grid.html",
-    "shelf": "puzzle-logic",
-    "badge": "Word",
-    "description": "",
-    "controls": "Mouse / Touch Drag: Connect Adjacent Letter Tiles"
-  },
-  {
-    "name": "Wordle Unlimited",
-    "tags": [
-      "Puzzle",
-      "Word",
-      "Logic"
-    ],
-    "path": "./games/wordle/index.html",
-    "shelf": "puzzle-strategy",
-    "badge": "Word",
-    "description": "",
-    "controls": "Keyboard: Type letters | Enter: Submit guess | Backspace: Erase letter"
-  },
-  {
-    "name": "xx142-b2.exe",
-    "tags": [
-      "Adventure",
-      "Sci-Fi",
-      "Retro"
+      "action",
+      "stealth",
+      "3d",
+      "sci-fi"
     ],
     "path": "./games/xx142-b2/index.html",
-    "shelf": "platformer-adventure",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Keyboard: Type terminal commands (help, scan, decode, access)"
+    "shelf": "Arcade & Action",
+    "badge": "3D STEALTH",
+    "description": "3D isometric sci-fi stealth infiltration mission inside an extraterrestrial base.",
+    "controls": "Arrow Keys / WASD to Sneak"
   },
   {
-    "name": "Zed Invaders",
+    "category": "games",
+    "name": "Zed Invaders 3D",
     "tags": [
-      "Arcade",
-      "Retro",
-      "Shooter"
+      "action",
+      "arcade",
+      "3d",
+      "shooter"
     ],
     "path": "./games/zedinvaders/index.html",
-    "shelf": "arcade-retro",
-    "badge": "Retro",
-    "description": "",
-    "controls": "Left / Right Arrows: Move | Spacebar: Fire rapid plasma beams"
+    "shelf": "Arcade & Action",
+    "badge": "SHMUP",
+    "description": "Pseudo-3D isometric invader defense with multiple alien unit types and explosive particle effects.",
+    "controls": "Arrow Keys to Move, Space to Shoot"
+  },
+  {
+    "category": "games",
+    "name": "2048",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/2048/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "2048 playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "3D Hartwig Chess Set",
+    "tags": [
+      "chess",
+      "3d",
+      "strategy",
+      "board-game"
+    ],
+    "path": "./games/3d-chess/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "3D CHESS",
+    "description": "Minimalist 3D Bauhaus Hartwig chess board with full 3D camera rotation and legal move validation.",
+    "controls": "Mouse Click to Select & Move, Drag to Rotate Board"
+  },
+  {
+    "category": "games",
+    "name": "Auto Chess Forge",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Auto-Chess-Forge.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Auto Chess Forge playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Bomb Grid",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Bomb-Grid.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Bomb Grid playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Breaklock",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/breaklock/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Breaklock playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Canvas Tetris",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/canvas-tetris/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Canvas Tetris playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Chess",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/chess/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Chess playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Connect Four",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/connect-four/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Connect Four playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Courier Grid",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Courier-Grid.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Courier Grid playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Custom Tetris Designer",
+    "tags": [
+      "puzzle",
+      "tetris",
+      "blocks",
+      "custom"
+    ],
+    "path": "./games/custom-tetris/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "TETRIS",
+    "description": "Highly customizable Tetris variant allowing custom tetromino shapes, board sizes, and gravity rules.",
+    "controls": "Arrow Keys to Move & Rotate, Space for Hard Drop"
+  },
+  {
+    "category": "games",
+    "name": "Flappy 2048",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/flappy-2048/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Flappy 2048 playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Maze Chase",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Maze-Chase.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Maze Chase playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Midnight Chess",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Midnight-Chess.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Midnight Chess playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Minesweeper",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/minesweeper/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Minesweeper playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Neon 2048",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Neon-2048.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Neon 2048 playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Sokoban",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/sokoban/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Sokoban playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Sokoban Quest",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Sokoban-Quest.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Sokoban Quest playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Sudoku",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/sudoku/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Sudoku playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Sudoku Studio",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Sudoku-Studio.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Sudoku Studio playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Tidal Grid",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Tidal-Grid.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Tidal Grid playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Word Grid",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/singlefiles/Word-Grid.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Word Grid playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Wordle",
+    "tags": [
+      "puzzle",
+      "logic",
+      "brain",
+      "strategy"
+    ],
+    "path": "./games/wordle/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "description": "Wordle playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "3D.City",
+    "tags": [
+      "strategy",
+      "idle",
+      "simulation",
+      "tycoon"
+    ],
+    "path": "./games/3d.city/index.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "description": "3D.City playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "IsoCity Urban Simulator",
+    "tags": [
+      "strategy",
+      "simulation",
+      "city-builder",
+      "isometric"
+    ],
+    "path": "./games/isocity/index.html",
+    "shelf": "Strategy & Idle",
+    "badge": "CITY SIM",
+    "description": "Isometric procedural city builder and traffic simulator by Victor Ribeiro.",
+    "controls": "Mouse to Zone & Construct Roads"
+  },
+  {
+    "category": "games",
+    "name": "Micropolisjs",
+    "tags": [
+      "strategy",
+      "idle",
+      "simulation",
+      "tycoon"
+    ],
+    "path": "./games/micropolisjs/index.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "description": "Micropolisjs playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Mykonos Island Builder 3D",
+    "tags": [
+      "strategy",
+      "creative",
+      "builder",
+      "3d",
+      "relaxing"
+    ],
+    "path": "./games/island-builder/index.html",
+    "shelf": "Strategy & Idle",
+    "badge": "VOXEL 3D",
+    "description": "3D procedural Mediterranean voxel island creator with real-time lighting and building placement.",
+    "controls": "Mouse to Place / Rotate / Pan"
+  },
+  {
+    "category": "games",
+    "name": "OpenPanzer WWII Hex Strategy",
+    "tags": [
+      "strategy",
+      "wargame",
+      "turn-based",
+      "history",
+      "hex"
+    ],
+    "path": "./games/openpanzer/index.html",
+    "shelf": "Strategy & Idle",
+    "badge": "TACTICS",
+    "description": "Deep turn-based hex-grid tactical WWII wargame featuring historical European campaigns and armored units.",
+    "controls": "Mouse to Select Units & Issue Attack Orders"
+  },
+  {
+    "category": "games",
+    "name": "Pocket Empire",
+    "tags": [
+      "strategy",
+      "idle",
+      "simulation",
+      "tycoon"
+    ],
+    "path": "./games/singlefiles/Pocket-Empire.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "description": "Pocket Empire playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Pocket Farm",
+    "tags": [
+      "strategy",
+      "idle",
+      "simulation",
+      "tycoon"
+    ],
+    "path": "./games/singlefiles/Pocket-Farm.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "description": "Pocket Farm playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Progress Knight",
+    "tags": [
+      "strategy",
+      "idle",
+      "simulation",
+      "tycoon"
+    ],
+    "path": "./games/progress-knight/index.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "description": "Progress Knight playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Simon",
+    "tags": [
+      "strategy",
+      "idle",
+      "simulation",
+      "tycoon"
+    ],
+    "path": "./games/simon/index.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "description": "Simon playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "SpaceCompany",
+    "tags": [
+      "strategy",
+      "idle",
+      "simulation",
+      "tycoon"
+    ],
+    "path": "./games/SpaceCompany/index.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "description": "SpaceCompany playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Starforge Idle",
+    "tags": [
+      "strategy",
+      "idle",
+      "simulation",
+      "tycoon"
+    ],
+    "path": "./games/singlefiles/Starforge-Idle.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "description": "Starforge Idle playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Tiny Factory",
+    "tags": [
+      "strategy",
+      "idle",
+      "simulation",
+      "tycoon"
+    ],
+    "path": "./games/singlefiles/Tiny-Factory.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "description": "Tiny Factory playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Air Hockey",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Air-Hockey.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Air Hockey playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Alchemy Workshop",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Alchemy-Workshop.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Alchemy Workshop playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Chalk Billiards",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Chalk-Billiards.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Chalk Billiards playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Curling Endgame",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Curling-Endgame.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Curling Endgame playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Dreadheadparkour",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/dreadheadparkour.htm",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Dreadheadparkour playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Drift Racer",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Drift-Racer.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Drift Racer playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Drive Mad",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Drive-Mad.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Drive Mad playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Escape Road",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Escape-Road.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Escape Road playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Marble Soccer 3D",
+    "tags": [
+      "sports",
+      "physics",
+      "3d",
+      "soccer"
+    ],
+    "path": "./games/marble-soccer/index.html",
+    "shelf": "Sports & Racing",
+    "badge": "SPORTS 3D",
+    "description": "Physics-based 3D marble soccer simulation with realistic momentum and goalposts.",
+    "controls": "WASD / Arrow Keys to Roll Marble"
+  },
+  {
+    "category": "games",
+    "name": "Moto X3m 2",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Moto-x3m-2.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Moto X3m 2 playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Penalty Rush",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Penalty-Rush.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Penalty Rush playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Pocket Golf",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Pocket-Golf.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Pocket Golf playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Runway Stylist",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Runway-Stylist.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Runway Stylist playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Skifree",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/skifree/index.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Skifree playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Sky Hop",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Sky-Hop.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Sky Hop playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Snowrider",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Snowrider.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Snowrider playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Switchyard Rush",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Switchyard-Rush.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Switchyard Rush playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "T Rex Runner",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/t-rex-runner/index.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "T Rex Runner playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Truss Workshop",
+    "tags": [
+      "sports",
+      "racing",
+      "fast-paced",
+      "arcade"
+    ],
+    "path": "./games/singlefiles/Truss-Workshop.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "description": "Truss Workshop playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "OS13k Retro Virtual OS",
+    "tags": [
+      "simulation",
+      "retro",
+      "os",
+      "arcade",
+      "synth"
+    ],
+    "path": "./games/os13k/index.html",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "RETRO OS",
+    "description": "Fictional 1980s WebGL operating system featuring built-in arcade games, tracker music, disk utilities, and easter eggs.",
+    "controls": "Mouse & Keyboard Terminal"
+  },
+  {
+    "category": "games",
+    "name": "Parable of the Polygons",
+    "tags": [
+      "simulation",
+      "sociology",
+      "interactive",
+      "explorable"
+    ],
+    "path": "./games/polygons/index.html",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "SIM",
+    "description": "An interactive post on the mechanics of systemic bias and segregation by Vi Hart and Nicky Case.",
+    "controls": "Mouse Drag & Drop"
+  },
+  {
+    "category": "games",
+    "name": "Sight & Light (2D Raycasting)",
+    "tags": [
+      "tech-demo",
+      "raycasting",
+      "lighting",
+      "interactive"
+    ],
+    "path": "./games/sight-and-light/index.html",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "TECH",
+    "description": "Interactive visualization of 2D visibility polygon casting and shadow geometry by Nicky Case.",
+    "controls": "Mouse Move & Drag Blocks"
+  },
+  {
+    "category": "games",
+    "name": "The Evolution of Trust",
+    "tags": [
+      "interactive",
+      "philosophy",
+      "game-theory",
+      "simulation"
+    ],
+    "path": "./games/trust/index.html",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "STORY",
+    "description": "Award-winning interactive exploration of game theory, trust, and betrayal by Nicky Case.",
+    "controls": "Mouse Click / Touch"
+  },
+  {
+    "category": "games",
+    "name": "We Become What We Behold",
+    "tags": [
+      "story",
+      "satire",
+      "social",
+      "interactive"
+    ],
+    "path": "./games/wbwwb/index.html",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "STORY",
+    "description": "A 5-minute satirical game by Nicky Case about news cycles, social media feedback loops, and outrage.",
+    "controls": "Mouse to Frame & Snap Photos"
+  },
+  {
+    "category": "other",
+    "name": "GUST Proxy Browser",
+    "tags": [
+      "browser",
+      "proxy",
+      "unblocked",
+      "utility"
+    ],
+    "path": "./browsers/GUST.html",
+    "shelf": "Web Browsers",
+    "badge": "PROXY",
+    "description": "Secure unblocked web proxy browser tab.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "other",
+    "name": "Incognito Proxy Browser",
+    "tags": [
+      "browser",
+      "proxy",
+      "unblocked",
+      "utility"
+    ],
+    "path": "./browsers/Incognito.html",
+    "shelf": "Web Browsers",
+    "badge": "PROXY",
+    "description": "Secure unblocked web proxy browser tab.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "other",
+    "name": "Interstellar Proxy Browser",
+    "tags": [
+      "browser",
+      "proxy",
+      "unblocked",
+      "utility"
+    ],
+    "path": "./browsers/Interstellar.html",
+    "shelf": "Web Browsers",
+    "badge": "PROXY",
+    "description": "Secure unblocked web proxy browser tab.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "other",
+    "name": "Scramjet Proxy Browser",
+    "tags": [
+      "browser",
+      "proxy",
+      "unblocked",
+      "utility"
+    ],
+    "path": "./browsers/Scramjet.html",
+    "shelf": "Web Browsers",
+    "badge": "PROXY",
+    "description": "Secure unblocked web proxy browser tab.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "other",
+    "name": "CyberChef",
+    "tags": [
+      "tool",
+      "utility",
+      "crypto",
+      "developer"
+    ],
+    "path": "./other/CyberChef/index.html",
+    "shelf": "Tools & Utilities",
+    "badge": "TOOL",
+    "description": "The Cyber Swiss Army Knife for encryption, encoding, compression and data analysis.",
+    "controls": "Keyboard / Mouse"
   }
 ];
 
 /* ================================================================
-   DRAGON GAMING PLATFORMS — CORE DATA & ENGINE
-   ================================================================ */
-
-/* ================================================================
-   1. GAME DATA CATALOG (60 Games, Emulators & Tools)
-   ================================================================ */
-const GAMES_DATA = [
-  {
-    id: "eaglercraft-1-12-2-wasm",
-    name: "Eaglercraft 1.12.2 WASM",
-    path: "./games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Sandbox","Survival","3D","WASM"],
-    badge: "WASM",
-    desc: "Full Minecraft 1.12.2 running offline directly in your browser via WebAssembly.",
-    controls: "WASD: Move | Space: Jump | Left Click: Mine / Attack | Right Click: Place / Interact | E: Inventory | Esc: Pause"
-  },
-  {
-    id: "eaglercraft-1-12-2-js",
-    name: "Eaglercraft 1.12.2 JS",
-    path: "./games/singlefiles/Eaglercraft-JS-1.12.2.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Sandbox","Survival","3D"],
-    badge: "3D",
-    desc: "JavaScript client for Minecraft 1.12.2 with online multiplayer and singleplayer worlds.",
-    controls: "WASD: Move | Space: Jump | Mouse: Look / Mine | E: Inventory | Esc: Pause"
-  },
-  {
-    id: "eaglercraft-1-8-8-js",
-    name: "Eaglercraft 1.8.8 JS",
-    path: "./games/singlefiles/Eaglercraft-JS-1.8.8.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Sandbox","Survival","3D","Multiplayer"],
-    badge: "Popular",
-    desc: "Classic Minecraft 1.8.8 with server browser, custom skins, and fluid combat.",
-    controls: "WASD: Move | Space: Jump | Mouse: Look / Mine | E: Inventory | T: Chat"
-  },
-  {
-    id: "eaglercraft-1-8-8-wasm",
-    name: "Eaglercraft 1.8.8 WASM",
-    path: "./games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Sandbox","Survival","3D","WASM"],
-    badge: "WASM",
-    desc: "Ultra-fast WebAssembly offline edition of Minecraft 1.8.8.",
-    controls: "WASD: Move | Space: Jump | Left/Right Click: Mine/Place | E: Inventory"
-  },
-  {
-    id: "balatro",
-    name: "Balatro",
-    path: "./games/singlefiles/Balatro.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Roguelike","Cards","Strategy"],
-    badge: "Hot",
-    desc: "The hit poker roguelike — combine valid poker hands with wild Joker cards for insane synergies.",
-    controls: "Mouse / Touch: Select Cards, Play Hand, Buy Jokers & Packs"
-  },
-  {
-    id: "bloons-td4",
-    name: "Bloons TD4",
-    path: "./games/singlefiles/Bloons-TD4.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Strategy","Tower Defense","Classic"],
-    badge: "Classic",
-    desc: "Pop relentless waves of bloons using dart monkeys, tack shooters, mortars, and super monkeys.",
-    controls: "Mouse: Drag & Place Towers, Upgrade, Target Priority"
-  },
-  {
-    id: "drive-mad",
-    name: "Drive Mad",
-    path: "./games/singlefiles/Drive-Mad.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Driving","Physics","3D"],
-    badge: "3D",
-    desc: "Drive custom 4x4 monster trucks across tricky stunt courses without flipping or smashing.",
-    controls: "W / Up / D / Right: Accelerate | S / Down / A / Left: Reverse / Tilt | R: Restart"
-  },
-  {
-    id: "escape-road",
-    name: "Escape Road",
-    path: "./games/singlefiles/Escape-Road.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Action","Driving","3D"],
-    badge: "Action",
-    desc: "High-octane endless police chase — dodge squad cars, SWAT trucks, and helicopters in city traffic.",
-    controls: "A / D or Left / Right Arrows: Steer | Space / Shift: Drift / Boost"
-  },
-  {
-    id: "hole-io",
-    name: "Hole.io",
-    path: "./games/singlefiles/Hole.io.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Multiplayer","3D"],
-    badge: "Popular",
-    desc: "Control a growing black hole, swallow pedestrians, cars, and whole skyscrapers to dominate the city.",
-    controls: "Mouse / Drag / Arrow Keys: Move Hole"
-  },
-  {
-    id: "moto-x3m-2",
-    name: "Moto x3m 2",
-    path: "./games/singlefiles/Moto-x3m-2.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Racing","Physics","Stunt"],
-    badge: "Stunt",
-    desc: "Extreme dirt bike trial racing across explosive stunt courses with backflips and speed traps.",
-    controls: "Up Arrow: Accelerate | Down Arrow: Brake | Left / Right Arrows: Lean / Flip | Space: Respawn"
-  },
-  {
-    id: "ragdoll-archers",
-    name: "Ragdoll Archers",
-    path: "./games/singlefiles/Ragdoll-Archers.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Action","Physics","Shooter"],
-    badge: "Physics",
-    desc: "Precision archery combat with dynamic ragdoll physics, custom arrow types, and armor upgrades.",
-    controls: "Mouse Drag & Release: Aim & Shoot Arrow | Space: Jump / Shield"
-  },
-  {
-    id: "recoil",
-    name: "Recoil",
-    path: "./games/singlefiles/Recoil.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Action","Shooter","Physics"],
-    badge: "Action",
-    desc: "Navigate hazardous arenas and eliminate enemies using only the explosive recoil of your weapons.",
-    controls: "Mouse Click: Aim & Fire weapon to propel yourself"
-  },
-  {
-    id: "snowrider-3d",
-    name: "Snowrider 3D",
-    path: "./games/singlefiles/Snowrider.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Sports","3D","Endless"],
-    badge: "3D",
-    desc: "Speed down massive snowy mountains, dodging pine trees, rolling snowballs, and giant cliffs.",
-    controls: "Left / Right Arrows or A / D: Steer | Up Arrow or W: Jump Sled"
-  },
-  {
-    id: "vex-8",
-    name: "Vex 8",
-    path: "./games/singlefiles/Vex-8.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Action","Platformer","Parkour"],
-    badge: "Platformer",
-    desc: "Precision stickman platformer packed with razor-sharp saws, moving lasers, and endless parkour.",
-    controls: "WASD / Arrow Keys: Run, Jump, Slide, Wall-jump | Down Arrow: Crouch / Enter Portal"
-  },
-  {
-    id: "awesome-tanks-2",
-    name: "Awesome Tanks 2",
-    path: "./games/singlefiles/awesometanks2.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Action","Shooter","Tanks"],
-    badge: "Action",
-    desc: "Top-down tank combat — blast enemy bunkers, collect cash, and upgrade armor, lasers, and cannons.",
-    controls: "WASD / Arrows: Drive Tank | Mouse: Aim & Fire Main Turret | 1-9: Switch Weapon"
-  },
-  {
-    id: "dreadhead-parkour",
-    name: "Dreadhead Parkour",
-    path: "./games/singlefiles/dreadheadparkour.htm",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Action","Runner","Parkour"],
-    badge: "Runner",
-    desc: "Vault over spikes, slide under bomb traps, and perform stunts in this high-energy parkour runner.",
-    controls: "D / Right Arrow: Run | W / Up Arrow: Jump & Vault | S / Down Arrow: Slide"
-  },
-  {
-    id: "borg-games",
-    name: "Borg Games",
-    path: "./games/singlefiles/Borg-Games.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Retro","Collection"],
-    badge: "Retro",
-    desc: "Classic browser arcade portal featuring a curated collection of lightweight mini-games.",
-    controls: "Mouse / Keyboard depending on selected mini-game"
-  },
-  {
-    id: "space-cadet-pinball",
-    name: "Space Cadet Pinball",
-    path: "./games/space-cadet-pinball/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Retro","WASM","3D"],
-    badge: "WASM 3D",
-    desc: "The legendary 3D Pinball for Windows - Space Cadet running natively in WebAssembly.",
-    controls: "Space: Launch Ball / Plunger | Z: Left Flipper | /: Right Flipper | Space / X / . : Nudge Table"
-  },
-  {
-    id: "heroine-dusk",
-    name: "Heroine Dusk",
-    path: "./games/heroine-dusk/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["RPG","Retro","Turn-Based","Adventure"],
-    badge: "RPG",
-    desc: "8-bit turn-based first-person dungeon crawler RPG — explore eerie maps and defeat fantasy monsters.",
-    controls: "Arrow Keys / WASD: Move & Turn | Mouse: Click Menu Actions & Spells"
-  },
-  {
-    id: "clumsy-bird",
-    name: "Clumsy Bird",
-    path: "./games/clumsy-bird/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Casual","One-Button"],
-    badge: "Casual",
-    desc: "Smooth, responsive MelonJS obstacle navigation arcade classic.",
-    controls: "Spacebar / Mouse Click / Touch: Flap wings"
-  },
-  {
-    id: "minesweeper",
-    name: "Minesweeper",
-    path: "./games/minesweeper/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Puzzle","Retro","Classic"],
-    badge: "Classic",
-    desc: "Classic Minesweeper with difficulty presets, custom boards, timer, and flag markers.",
-    controls: "Left Click: Reveal Tile | Right Click: Place / Remove Flag | Smiley Face: Restart"
-  },
-  {
-    id: "duck-hunt",
-    name: "Duck Hunt JS",
-    path: "./games/duck-hunt/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Retro","Shooter"],
-    badge: "Retro",
-    desc: "Authentic NES Duck Hunt recreation with retro dog animations, clay shooting, and arcade scoring.",
-    controls: "Mouse: Aim Crosshair | Left Click: Fire Shotgun"
-  },
-  {
-    id: "sokoban",
-    name: "Sokoban",
-    path: "./games/sokoban/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Puzzle","Retro","Classic"],
-    badge: "Puzzle",
-    desc: "Classic box-pushing puzzle game with multi-level challenges, step counter, and undo support.",
-    controls: "Arrow Keys / WASD: Push Boxes to Target Locations | U: Undo Step | R: Reset Level"
-  },
-  {
-    id: "snake",
-    name: "Snake",
-    path: "./games/snake/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Retro","Classic"],
-    badge: "Classic",
-    desc: "Smooth HTML5 canvas snake game — collect apples, grow your tail, and beat your high score.",
-    controls: "Arrow Keys / WASD: Change Snake Direction"
-  },
-  {
-    id: "sudoku",
-    name: "Sudoku",
-    path: "./games/sudoku/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Puzzle","Casual","Math"],
-    badge: "Brain",
-    desc: "Clean interactive Sudoku generator & player with difficulty levels from Very Easy to Very Hard.",
-    controls: "Click Cell + Type Number 1-9 | Use Hint and Solve buttons for guidance"
-  },
-  {
-    id: "chess",
-    name: "Chess vs AI",
-    path: "./games/chess/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Strategy","Turn-Based","Classic"],
-    badge: "AI Strategy",
-    desc: "Play chess against an intelligent minimax AI engine with alpha-beta pruning and board evaluation.",
-    controls: "Mouse: Drag & Drop Pieces to make moves"
-  },
-  {
-    id: "micropolisjs",
-    name: "MicropolisJS (SimCity)",
-    path: "./games/micropolisjs/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Simulation","Strategy","Classic"],
-    badge: "Retro Sim",
-    desc: "The open-source HTML5/JS port of the original SimCity city-building and zoning simulation.",
-    controls: "Mouse: Select Construction Tools, Zone Land, Build Infrastructure, Manage Budgets"
-  },
-  {
-    id: "solitaire",
-    name: "Solitaire",
-    path: "./games/solitaire/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Cards","Casual","Classic"],
-    badge: "Classic",
-    desc: "Classic Klondike Solitaire with smooth card dragging, auto-complete, timer, and win animations.",
-    controls: "Mouse: Drag & Drop Cards | Double Click: Auto-move to Foundation"
-  },
-  {
-    id: "asteroids",
-    name: "Asteroids",
-    path: "./games/asteroids/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Retro","Shooter"],
-    badge: "Vector",
-    desc: "Authentic vector-line space shooter — blast drifting space rocks and alien UFOs.",
-    controls: "Left / Right Arrows: Rotate Ship | Up Arrow: Thrust | Spacebar: Fire Blaster | Down Arrow: Hyperspace"
-  },
-  {
-    id: "skifree",
-    name: "SkiFree.js",
-    path: "./games/skifree/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Retro","Classic"],
-    badge: "DOS Retro",
-    desc: "The iconic Windows skiing classic — weave around slalom flags, jump ramps, and outrun the Abominable Snow Monster.",
-    controls: "Left / Right Arrows: Steer Skiier | Down Arrow: Accelerate | Up Arrow: Slow Down | F: Fast Mode"
-  },
-  {
-    id: "tower-defense",
-    name: "Canvas Tower Defense",
-    path: "./games/tower-defense/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Strategy","Tower Defense"],
-    badge: "Strategy",
-    desc: "Tactical desktop maze-building tower defense with cannon, laser, and missile turrets against waves of enemies.",
-    controls: "Mouse: Place Turrets, Build Mazes, Upgrade Firepower, Start Waves"
-  },
-  {
-    id: "2048",
-    name: "2048",
-    path: "./games/2048/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Puzzle","Casual","Math"],
-    badge: "Classic",
-    desc: "The addictive tile-sliding number puzzle — merge identical numbers to build the legendary 2048 tile.",
-    controls: "Arrow Keys / Swipe: Slide all tiles on the grid"
-  },
-  {
-    id: "1255-burgomaster",
-    name: "1255 Burgomaster",
-    path: "./games/1255-burgomaster/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Strategy","RPG","Medieval"],
-    badge: "Strategy",
-    desc: "Historical medieval city management, diplomacy, garrison defense, and economic tactical simulation.",
-    controls: "Mouse: Navigate UI, Manage Resources, Issue Decrees"
-  },
-  {
-    id: "3d-city",
-    name: "3D.City",
-    path: "./games/3d.city/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Simulation","3D","City Builder"],
-    badge: "3D",
-    desc: "Full 3D WebGL isometric city planning and zoning simulator running smoothly in the browser.",
-    controls: "Mouse: Place Roads & Zones | Middle Mouse / Right Click: Rotate & Zoom Camera"
-  },
-  {
-    id: "ancient-beast",
-    name: "Ancient Beast",
-    path: "./games/AncientBeast/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Strategy","Turn-Based","RPG"],
-    badge: "Turn-Based",
-    desc: "Turn-based tactical creature battling played on a hex grid with unique elemental beasts.",
-    controls: "Mouse: Select Units, Move, Cast Special Abilities"
-  },
-  {
-    id: "a-dark-room",
-    name: "A Dark Room",
-    path: "./games/adarkroom/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["RPG","Text","Incremental"],
-    badge: "Atmospheric",
-    desc: "Minimalist, mysterious text adventure that grows from a silent fire into a sprawling world.",
-    controls: "Mouse: Click choices and buttons to stoke fire and explore"
-  },
-  {
-    id: "aquastax",
-    name: "Aquastax",
-    path: "./games/aquastax/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Puzzle","Physics"],
-    badge: "Puzzle",
-    desc: "Satisfying physics puzzle where you balance and strategically place buoyant aquatic shapes.",
-    controls: "Mouse: Drop and arrange puzzle pieces"
-  },
-  {
-    id: "arashi-js",
-    name: "Arashi JS",
-    path: "./games/arashi-js/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Action","Retro"],
-    badge: "Retro",
-    desc: "Vector-style arcade space shooter tribute to the arcade legend Tempest.",
-    controls: "Left / Right Arrows: Rotate along web rim | Space: Fire blasters | Z: Superzapper"
-  },
-  {
-    id: "asdf",
-    name: "ASDF",
-    path: "./games/asdf/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Reflex","Typing"],
-    badge: "Reflex",
-    desc: "Test your lightning-quick reflexes in this rhythmic high-speed keyboard challenge.",
-    controls: "A, S, D, F Keys: Tap corresponding keys to match descending patterns"
-  },
-  {
-    id: "ball-and-wall",
-    name: "Ball and Wall",
-    path: "./games/ball-and-wall/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Classic","Breakout"],
-    badge: "Classic",
-    desc: "Enhanced brick-breaker arcade game with multi-balls, powerups, lasers, and custom level editor.",
-    controls: "Mouse / Left & Right Arrows: Move Paddle | Space / Click: Launch Ball"
-  },
-  {
-    id: "banania",
-    name: "Banania",
-    path: "./games/Banania/banania.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Retro","Puzzle","Classic"],
-    badge: "DOS Retro",
-    desc: "Authentic remake of the classic DOS game — collect every banana in the maze and dodge monsters.",
-    controls: "Arrow Keys: Move character through maze"
-  },
-  {
-    id: "blockrain",
-    name: "Blockrain",
-    path: "./games/blockrain/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Retro","Puzzle"],
-    badge: "Arcade",
-    desc: "Sleek retro-futuristic block falling puzzle with neon visual effects and smooth responsive controls.",
-    controls: "Left / Right: Move | Up Arrow: Rotate | Down Arrow: Soft Drop | Space: Hard Drop"
-  },
-  {
-    id: "canvas-tetris",
-    name: "Canvas Tetris",
-    path: "./games/canvas-tetris/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Classic","Puzzle"],
-    badge: "Classic",
-    desc: "Clean HTML5 canvas implementation of standard Tetris with scoring and line clears.",
-    controls: "Left / Right: Move | Up: Rotate | Down: Soft Drop | Space: Drop"
-  },
-  {
-    id: "crappybird",
-    name: "CrappyBird",
-    path: "./games/CrappyBird/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Casual","One-Button"],
-    badge: "Casual",
-    desc: "Humorous Flappy Bird parody — tap to flap your wings and weave through tricky pipe obstacles.",
-    controls: "Spacebar / Mouse Click / Touch: Flap wings"
-  },
-  {
-    id: "crystalquest",
-    name: "CrystalQuest",
-    path: "./games/CrystalQuest/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Shooter","Retro"],
-    badge: "Retro",
-    desc: "Classic arcade arena shooter — vacuum up all crystals while blasting invading alien swarms.",
-    controls: "Mouse: Move ship | Mouse Click: Fire blaster | Space: Smart Bomb"
-  },
-  {
-    id: "enduro",
-    name: "Enduro",
-    path: "./games/enduro/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Racing","Retro","Classic"],
-    badge: "Atari Retro",
-    desc: "Tribute to the classic Atari 2600 endurance racer with dynamic weather, fog, and day/night cycles.",
-    controls: "Up Arrow: Accelerate | Down Arrow: Brake | Left / Right Arrows: Steer"
-  },
-  {
-    id: "hexgl",
-    name: "HexGL",
-    path: "./games/HexGL/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Racing","3D","Sci-Fi"],
-    badge: "3D",
-    desc: "Futuristic high-speed anti-gravity 3D racer built in WebGL with stunning Three.js graphics.",
-    controls: "Up / W: Accelerate | A / D or Left / Right: Steer | Q / E: Air brakes | Space: Boost"
-  },
-  {
-    id: "hextris",
-    name: "Hextris",
-    path: "./games/Hextris/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Puzzle","Arcade","Hexagonal"],
-    badge: "Popular",
-    desc: "Fast-paced hexagonal puzzle — rotate the center hexagon to match 3 or more blocks of the same color.",
-    controls: "Left / Right Arrows or A / D: Rotate hexagon | Down Arrow: Speed up block fall"
-  },
-  {
-    id: "opensc2k",
-    name: "OpenSC2K",
-    path: "./games/OpenSC2K/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Simulation","Classic","Retro"],
-    badge: "Retro Sim",
-    desc: "Open-source WebGL recreation of the classic city simulator SimCity 2000.",
-    controls: "Mouse: Select zoning tools, lay pipes, construct buildings and power grids"
-  },
-  {
-    id: "pacman-canvas",
-    name: "Pacman Canvas",
-    path: "./games/pacman-canvas/index.htm",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Classic","Retro"],
-    badge: "Classic",
-    desc: "Faithful HTML5 canvas recreation of the legendary arcade Pac-Man with original sounds.",
-    controls: "Arrow Keys / WASD: Steer Pac-Man | Space: Pause / Start"
-  },
-  {
-    id: "sandspiel",
-    name: "Sandspiel",
-    path: "./games/sandspiel/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Simulation","Sandbox","Physics"],
-    badge: "Physics",
-    desc: "Falling sand cellular automata physics game written in Rust & WebAssembly.",
-    controls: "Mouse Left Click: Draw selected element | Right Click: Erase | 1-9: Select element"
-  },
-  {
-    id: "space-company",
-    name: "Space Company",
-    path: "./games/SpaceCompany/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Incremental","Sci-Fi","Strategy"],
-    badge: "Sci-Fi",
-    desc: "Deep sci-fi incremental simulation — harvest solar energy, colonize planets, and build Dyson spheres.",
-    controls: "Mouse: Manage industry, research technologies, build rockets"
-  },
-  {
-    id: "teterjs",
-    name: "Teterjs",
-    path: "./games/teterjs/index.html",
-    category: "games",
-    shelf: "undefined",
-    tags: ["Arcade","Puzzle","Classic"],
-    badge: "Puzzle",
-    desc: "Crisp JavaScript block puzzle with ghost piece preview, hold queue, and level progression.",
-    controls: "Left / Right: Move | Up: Rotate CW | Z: Rotate CCW | C: Hold | Space: Hard drop"
-  },
-  {
-    id: "emulatorjs",
-    name: "EmulatorJS",
-    path: "./emulators/Emulatorjs/index.html",
-    category: "emulators",
-    shelf: "undefined",
-    tags: ["Emulator","Retro","Multi-System"],
-    badge: "Emulator",
-    desc: "Multi-console retro emulator supporting NES, SNES, GBA, GBC, N64, Genesis, PS1 with ROM drag-and-drop.",
-    controls: "Drag & drop any ROM file or browse local files. Supports gamepad & custom keyboard mapping."
-  },
-  {
-    id: "anura-os",
-    name: "Anura OS",
-    path: "./emulators/anuraOS.html",
-    category: "emulators",
-    shelf: "undefined",
-    tags: ["Emulator","OS","Sandbox"],
-    badge: "Virtual OS",
-    desc: "Complete desktop operating system running directly in your browser with Linux/x86 app emulation.",
-    controls: "Mouse & Keyboard: Full desktop window manager, terminal, file system, and browser apps"
-  },
-  {
-    id: "cyberchef",
-    name: "CyberChef",
-    path: "./other/CyberChef/index.html",
-    category: "other",
-    shelf: "undefined",
-    tags: ["Tools","Utility","Cryptography"],
-    badge: "Utility",
-    desc: "The cyber Swiss Army knife by GCHQ for encoding, decoding, hashing, encryption, regex, and hex editing.",
-    controls: "Mouse: Drag operations into recipe pipeline, paste input, inspect output"
-  },
-  {
-    id: "gust-browser",
-    name: "GUST",
-    path: "./browsers/GUST.html",
-    category: "other",
-    shelf: "undefined",
-    tags: ["Browser","Proxy","Utility"],
-    badge: "Browser",
-    desc: "Full-featured web proxy browser client with tab management and stealth browsing.",
-    controls: "Type any web address or search query in the address bar"
-  },
-  {
-    id: "incognito-browser",
-    name: "Incognito",
-    path: "./browsers/Incognito.html",
-    category: "other",
-    shelf: "undefined",
-    tags: ["Browser","Proxy","Utility"],
-    badge: "Browser",
-    desc: "Fast, privacy-focused proxy gateway designed for unblocked web exploration.",
-    controls: "Enter search terms or URL in the navigation bar"
-  },
-  {
-    id: "interstellar-browser",
-    name: "Interstellar",
-    path: "./browsers/Interstellar.html",
-    category: "other",
-    shelf: "undefined",
-    tags: ["Browser","Proxy","Utility"],
-    badge: "Browser",
-    desc: "Modern, streamlined web proxy interface with fast loading and responsive controls.",
-    controls: "Type search query or website destination into the bar"
-  },
-  {
-    id: "scramjet-browser",
-    name: "Scramjet",
-    path: "./browsers/Scramjet.html",
-    category: "other",
-    shelf: "undefined",
-    tags: ["Browser","Proxy","Utility"],
-    badge: "Browser",
-    desc: "High-performance web proxy client built on modern service worker proxy technologies.",
-    controls: "Enter URL or search keyword into the navigation search bar"
-  },
-  {
-    id: "ascii-video-canvas",
-    name: "ASCII Video Canvas",
-    path: "./games/singlefiles/ASCII-Camera.html",
-    category: "games",
-    shelf: "other",
-    tags: ["Tool","Creative","ASCII","Camera"],
-    badge: "Creative",
-    desc: "Real-time webcam video stream converter rendering high-framerate dynamic ASCII character typography art.",
-    controls: "Camera Permission: Grant access to see live ASCII render"
-  },
-  {
-    id: "abyss-sonar-submarine",
-    name: "Abyss Sonar Submarine",
-    path: "./games/singlefiles/Abyss-Sonar.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Simulator","Submarine","Sci-Fi","Audio"],
-    badge: "Simulator",
-    desc: "Silent submarine navigation through deep oceanic trenches. Ping sonar frequencies, detect seabed anomalies, and navigate underwater volcanoes.",
-    controls: "WASD / Mouse: Steer Submarine Depth & Heading | Space: Pulse Active Sonar"
-  },
-  {
-    id: "adjustable-fireworks-lab",
-    name: "Adjustable Fireworks Lab",
-    path: "./games/singlefiles/Adjustable-Fireworks.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Physics","Particles","Sandbox","Creative"],
-    badge: "Physics",
-    desc: "Interactive particle pyrotechnics simulation. Customize burst radii, chemical luminescence color chemistry, and launch midnight fireworks shows.",
-    controls: "Mouse Click: Launch Firework | Sliders: Adjust Velocity, Color & Gravity"
-  },
-  {
-    id: "aim-click-reflex-trainer",
-    name: "Aim Click Reflex Trainer",
-    path: "./games/singlefiles/Aim-Click-Challenge.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Reflex","FPS","Arcade","Aim"],
-    badge: "Reflex",
-    desc: "High-precision FPS aim and target reaction trainer. Click emerging bullseye targets rapidly to benchmark mouse accuracy and response times.",
-    controls: "Mouse: Click emerging targets before they shrink away"
-  },
-  {
-    id: "air-hockey",
-    name: "Air Hockey",
-    path: "./games/singlefiles/Air-Hockey.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Air Hockey — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "air-traffic-control",
-    name: "Air Traffic Control",
-    path: "./games/singlefiles/Air-Traffic-Control.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Air Traffic Control — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "alchemy-workshop",
-    name: "Alchemy Workshop",
-    path: "./games/singlefiles/Alchemy-Workshop.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Alchemy Workshop — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "ant-colony-foraging-sim",
-    name: "Ant Colony Foraging Sim",
-    path: "./games/singlefiles/Ant-Colony-Sim.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Simulation","Cellular Automaton","Ecology","AI"],
-    badge: "Simulation",
-    desc: "Emergent pheromone trail foraging simulation. Observe thousands of worker ants optimize food transport pathways and defend the queen nest.",
-    controls: "Mouse: Place food sources, draw obstacles, and release pheromone markers"
-  },
-  {
-    id: "auction-fever",
-    name: "Auction Fever",
-    path: "./games/singlefiles/Auction-Fever.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Auction Fever — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "auto-chess-forge",
-    name: "Auto Chess Forge",
-    path: "./games/singlefiles/Auto-Chess-Forge.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Auto Chess Forge — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "avoid-the-bikes-highway",
-    name: "Avoid the Bikes Highway",
-    path: "./games/singlefiles/Avoid-The-Bikes.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Dodging","Reflex","Speed"],
-    badge: "Arcade",
-    desc: "High-speed highway obstacle evasion. Weave between incoming motorcycles, bicycles, and speed traps on a busy city avenue.",
-    controls: "Left/Right Arrow or A/D: Dodge incoming traffic lanes"
-  },
-  {
-    id: "backpack-arena",
-    name: "Backpack Arena",
-    path: "./games/singlefiles/Backpack-Arena.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Backpack Arena — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "ball-arena-bumpers",
-    name: "Ball Arena Bumpers",
-    path: "./games/singlefiles/Ball-Arena.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Physics","Action","Multiplayer"],
-    badge: "Arcade",
-    desc: "Kinetic billiard bumper battle arena. Ram opponent spheres off the magnetic ring edge while picking up super-mass powerups.",
-    controls: "WASD / Mouse: Steer Sphere Momentum & Boost"
-  },
-  {
-    id: "basin-flood-control-sim",
-    name: "Basin Flood Control Sim",
-    path: "./games/singlefiles/Basin-Control.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Management","Simulation","Engineering"],
-    badge: "Simulator",
-    desc: "Hydroelectric river basin management simulation. Regulate dam spillway gates during monsoon flood crests to protect downstream towns.",
-    controls: "Mouse / Touch: Adjust dam gate valves & monitor water sensors"
-  },
-  {
-    id: "battery-cycle-lab",
-    name: "Battery Cycle Lab",
-    path: "./games/singlefiles/Battery-Cycle.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Science","Energy","Logic"],
-    badge: "Puzzle",
-    desc: "Electrochemical battery cell engineering challenge. Balance cathode and anode ion flows, manage thermal cycles, and prevent degradation.",
-    controls: "Mouse / Touch: Configure ion membrane pathways & charge cycles"
-  },
-  {
-    id: "beat-bento-cooking",
-    name: "Beat Bento Cooking",
-    path: "./games/singlefiles/Beat-Bento.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Rhythm","Cooking","Casual","Cute"],
-    badge: "Cozy",
-    desc: "Satisfying rhythm bento assembly game. Chop tamagoyaki, roll sushi, and pack exquisite lunchboxes in sync with upbeat lofi melodies.",
-    controls: "Space / Arrow Keys: Chop & pack bento ingredients on the beat"
-  },
-  {
-    id: "blackjack-table",
-    name: "Blackjack Table",
-    path: "./games/singlefiles/Blackjack-Table.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Blackjack Table — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "block-forge-blacksmith",
-    name: "Block Forge Blacksmith",
-    path: "./games/singlefiles/Block-Forge.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Crafting","Strategy","Fantasy"],
-    badge: "Puzzle",
-    desc: "Tetromino blueprint blacksmith crafting puzzle. Fit molten metal polyomino blocks into weapon molds to forge legendary broadswords.",
-    controls: "Mouse / Touch: Rotate & Place molten metal tiles into weapon outlines"
-  },
-  {
-    id: "bomb-grid",
-    name: "Bomb Grid",
-    path: "./games/singlefiles/Bomb-Grid.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Bomb Grid — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "branching-tales-odyssey",
-    name: "Branching Tales Odyssey",
-    path: "./games/singlefiles/Branching-Tales.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Story","Sci-Fi","Narrative","Adventure"],
-    badge: "Story",
-    desc: "Sci-fi epistolary text narrative journey across deep space. Decode starship survivor logs and make critical survival decisions.",
-    controls: "Mouse / Touch: Select narrative choices & decrypt transmission logs"
-  },
-  {
-    id: "bytebot-lab",
-    name: "Bytebot Lab",
-    path: "./games/singlefiles/Bytebot-Lab.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Bytebot Lab — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "chalk-billiards",
-    name: "Chalk Billiards",
-    path: "./games/singlefiles/Chalk-Billiards.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Chalk Billiards — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "charm-reels-roguelike",
-    name: "Charm Reels Roguelike",
-    path: "./games/singlefiles/Charm-Reels.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Roguelike","Cards","Slots","Strategy"],
-    badge: "Roguelike",
-    desc: "Luck be a Landlord-inspired runic slot builder. Draft synergistic rune symbols, trigger compound multipliers, and pay cosmic rents.",
-    controls: "Mouse / Touch: Spin reels, draft rune charms, and manage build synergy"
-  },
-  {
-    id: "checkpoint-border-inspector",
-    name: "Checkpoint Border Inspector",
-    path: "./games/singlefiles/Checkpoint-Inspector.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Simulation","Mystery","Papers Please","Strategy"],
-    badge: "Strategy",
-    desc: "Border checkpoint documentation verification simulator. Compare entry permits, verify biometric seals, and catch contraband smugglers.",
-    controls: "Mouse / Touch: Inspect passport documents, cross-examine, approve or deny"
-  },
-  {
-    id: "chromatic-print-press",
-    name: "Chromatic Print Press",
-    path: "./games/singlefiles/Chromatic-Press.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Art","Colors","Creative"],
-    badge: "Puzzle",
-    desc: "Screen printing and lithography art puzzle. Mix primary pigment layers, align registration marks, and reproduce fine art prints.",
-    controls: "Mouse / Touch: Layer color plates & pull squeegee print"
-  },
-  {
-    id: "chromatography-separation",
-    name: "Chromatography Separation",
-    path: "./games/singlefiles/Chromatography-Lab.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Science","Chemistry","Puzzle","Educational"],
-    badge: "Puzzle",
-    desc: "Chemical mixture separation lab simulator. Calibrate solvent polarity and paper retention factors to isolate rare dye compounds.",
-    controls: "Mouse / Touch: Pipette chemical solutions & observe capillary rise"
-  },
-  {
-    id: "cipher-relay-signal",
-    name: "Cipher Relay Signal",
-    path: "./games/singlefiles/Cipher-Relay.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Cryptography","Audio","Sci-Fi"],
-    badge: "Puzzle",
-    desc: "Military radio frequency cryptography puzzle. Filter static noise, tune bandpass filters, and transcribe encoded morse transmissions.",
-    controls: "Mouse / Touch: Adjust frequency tuner & decode cipher keys"
-  },
-  {
-    id: "claw-carnival-arcade",
-    name: "Claw Carnival Arcade",
-    path: "./games/singlefiles/Claw-Carnival.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Physics","Casual","Cute"],
-    badge: "Casual",
-    desc: "Realistic 3D-feel physics claw crane machine. Position the mechanical claw over plush toys and prize capsules and drop with precision.",
-    controls: "Arrow Keys / Mouse: Move crane carriage | Space: Drop Claw"
-  },
-  {
-    id: "clean-slate-powerwash",
-    name: "Clean Slate PowerWash",
-    path: "./games/singlefiles/Clean-Slate.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Casual","Relaxing","Cleaning","Satisfying"],
-    badge: "Cozy",
-    desc: "Satisfying texture restoration cleaning simulator. Spray pressurized water to peel grime, moss, and rust off ancient stonework.",
-    controls: "Mouse / Touch Drag: Direct high-pressure water nozzle across grime"
-  },
-  {
-    id: "climbing-route-bouldering",
-    name: "Climbing Route Bouldering",
-    path: "./games/singlefiles/Climbing-Route.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Sports","Bouldering","Strategy"],
-    badge: "Sports",
-    desc: "Rock climbing and bouldering puzzle. Plan limb sequences across climbing wall holds, manage finger grip stamina, and reach the top hold.",
-    controls: "Mouse / Touch: Select hand & foot holds to ascend rock face"
-  },
-  {
-    id: "clockwork-escape",
-    name: "Clockwork Escape",
-    path: "./games/singlefiles/Clockwork-Escape.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Clockwork Escape — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "comet-weaver",
-    name: "Comet Weaver",
-    path: "./games/singlefiles/Comet-Weaver.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Comet Weaver — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "connect-arena",
-    name: "Connect Arena",
-    path: "./games/singlefiles/Connect-Arena.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Connect Arena — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "courier-grid-dispatch",
-    name: "Courier Grid Dispatch",
-    path: "./games/singlefiles/Courier-Grid.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Management","Logistics","Fast"],
-    badge: "Strategy",
-    desc: "High-speed city parcel dispatch logistics sim. Route delivery vans through rush hour avenues, balance parcel weight, and meet courier deadlines.",
-    controls: "Mouse / Touch: Assign delivery routes & optimize transit paths"
-  },
-  {
-    id: "courtroom-clash-defense",
-    name: "Courtroom Clash Defense",
-    path: "./games/singlefiles/Courtroom-Clash.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Mystery","Story","Ace Attorney","Puzzle"],
-    badge: "Story",
-    desc: "Ace Attorney-style courtroom defense trial. Cross-examine witness testimony, present conflicting physical evidence, and expose the true culprit.",
-    controls: "Mouse / Touch: Review case file, press testimony, and present evidence"
-  },
-  {
-    id: "cozy-room-organizer",
-    name: "Cozy Room Organizer",
-    path: "./games/singlefiles/Cozy-Organizer.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Casual","Relaxing","Unpacking","Cozy"],
-    badge: "Cozy",
-    desc: "Unpacking-inspired meditative room decoration game. Unbox books, plants, trinkets, and stationeries to organize the coziest aesthetic bedroom.",
-    controls: "Mouse / Touch: Drag items out of boxes & arrange neatly on shelves"
-  },
-  {
-    id: "crossword-cafe",
-    name: "Crossword Cafe",
-    path: "./games/singlefiles/Crossword-Cafe.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Word","Brain","Cozy"],
-    badge: "Word",
-    desc: "Relaxing cafe crossword puzzle solver with intelligent hint systems, thematic clues, and smooth dictionary letter input.",
-    controls: "Keyboard: Type Letters | Mouse / Touch: Select Crossword Clue Cell"
-  },
-  {
-    id: "curling-endgame",
-    name: "Curling Endgame",
-    path: "./games/singlefiles/Curling-Endgame.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Curling Endgame — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "detective-desk-noir",
-    name: "Detective Desk Noir",
-    path: "./games/singlefiles/Detective-Desk.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Mystery","Detective","Noir","Story"],
-    badge: "Mystery",
-    desc: "1940s noir detective desk investigation. Inspect bloodied crime scene photos, decipher suspect alibis, and connect clues with red yarn.",
-    controls: "Mouse / Touch: Pin evidence cards to corkboard & link connection strings"
-  },
-  {
-    id: "dice-delver",
-    name: "Dice Delver",
-    path: "./games/singlefiles/Dice-Delver.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Dice Delver — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "dojo-duel",
-    name: "Dojo Duel",
-    path: "./games/singlefiles/Dojo-Duel.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Dojo Duel — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "drift-racer",
-    name: "Drift Racer",
-    path: "./games/singlefiles/Drift-Racer.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Drift Racer — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "drone-survey",
-    name: "Drone Survey",
-    path: "./games/singlefiles/Drone-Survey.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Drone Survey — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "dungeon-delver",
-    name: "Dungeon Delver",
-    path: "./games/singlefiles/Dungeon-Delver.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Dungeon Delver — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "ecosystem-terrarium-sim",
-    name: "Ecosystem Terrarium Sim",
-    path: "./games/singlefiles/Ecosystem-Keeper.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Simulation","Nature","Ecology","Relaxing"],
-    badge: "Simulation",
-    desc: "Living terrarium ecosystem simulator. Balance plant photosynthesis, herbivore populations, and predator food webs in a glass dome.",
-    controls: "Mouse / Touch: Introduce species, balance moisture, and adjust sunlight"
-  },
-  {
-    id: "elemental-sandbox",
-    name: "Elemental Sandbox",
-    path: "./games/singlefiles/Elemental-Sandbox.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Elemental Sandbox — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "ember-tactics-skirmish",
-    name: "Ember Tactics Skirmish",
-    path: "./games/singlefiles/Ember-Tactics.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Turn-Based","Tactics","Fantasy"],
-    badge: "Strategy",
-    desc: "Turn-based tactical hex grid fantasy skirmish. Position archers on high ground, form shield walls, and cast devastating pyromancy spells.",
-    controls: "Mouse / Touch: Select units, movement tiles, and attack targets"
-  },
-  {
-    id: "fishing-harbor-voyage",
-    name: "Fishing Harbor Voyage",
-    path: "./games/singlefiles/Fishing-Harbor.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Casual","Fishing","Cozy","Management"],
-    badge: "Cozy",
-    desc: "Peaceful ocean trawler fishing voyage. Sail into open bays, cast deep nets for tuna and crab, upgrade your vessel, and sell catch at market.",
-    controls: "WASD: Steer Trawler | Mouse / Space: Cast Net & Reel In Catch"
-  },
-  {
-    id: "flappy-glider-flight",
-    name: "Flappy Glider Flight",
-    path: "./games/singlefiles/Flappy-Glider.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Physics","Flight","Casual"],
-    badge: "Casual",
-    desc: "Aerodynamics hang glider flight challenge. Catch thermal updrafts, glide over canyon cliffs, and land safely on target runways.",
-    controls: "Space / Up Arrow / Touch: Adjust wing pitch & catch updrafts"
-  },
-  {
-    id: "fleet-duel",
-    name: "Fleet Duel",
-    path: "./games/singlefiles/Fleet-Duel.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Fleet Duel — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "forest-dash",
-    name: "Forest Dash",
-    path: "./games/singlefiles/Forest-Dash.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Forest Dash — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "frequency-bureau-radio",
-    name: "Frequency Bureau Radio",
-    path: "./games/singlefiles/Frequency-Bureau.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Sci-Fi","Audio","Mystery"],
-    badge: "Puzzle",
-    desc: "Paranormal frequency analysis and radio surveillance puzzle. Tune analog oscilloscopes to intercept mysterious shortwave signals.",
-    controls: "Mouse: Rotate oscilloscope dials & match wave frequencies"
-  },
-  {
-    id: "frontier-command-outpost",
-    name: "Frontier Command Outpost",
-    path: "./games/singlefiles/Frontier-Command.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Base Building","Sci-Fi","Survival"],
-    badge: "Strategy",
-    desc: "Alien frontier colony base building and perimeter defense sim. Extract mineral ore, power oxygen domes, and fortify missile turrets.",
-    controls: "Mouse / Touch: Construct buildings, assign workers, and trigger defense"
-  },
-  {
-    id: "fruit-slice",
-    name: "Fruit Slice",
-    path: "./games/singlefiles/Fruit-Slice.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Fruit Slice — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "garden-front-greenhouse",
-    name: "Garden Front Greenhouse",
-    path: "./games/singlefiles/Garden-Front.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Casual","Gardening","Plants","Cozy"],
-    badge: "Cozy",
-    desc: "Botanical greenhouse management. Cross-pollinate rare hybrid orchid blossoms, regulate soil pH, and breed prize-winning floral exhibits.",
-    controls: "Mouse / Touch: Water, prune, pollinate, and propagate plants"
-  },
-  {
-    id: "gear-train-calibrator",
-    name: "Gear Train Calibrator",
-    path: "./games/singlefiles/Gear-Calibrator.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Physics","Mechanics","Engineering"],
-    badge: "Physics",
-    desc: "Mechanical clockwork gear transmission puzzle. Interlock brass spur gears, pinions, and pulleys to achieve target rotation ratios.",
-    controls: "Mouse / Touch: Drag gear wheels onto axle pegs to complete transmission"
-  },
-  {
-    id: "gem-garden-match-3",
-    name: "Gem Garden Match-3",
-    path: "./games/singlefiles/Gem-Garden.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Match-3","Casual","Jewels"],
-    badge: "Casual",
-    desc: "Gleaming match-3 botanical gem garden. Swap adjacent crystal blossoms to trigger cascading line clears and generate rainbow bloom bombs.",
-    controls: "Mouse / Touch Drag: Swap adjacent jewel tiles"
-  },
-  {
-    id: "glyph-warden-magic",
-    name: "Glyph Warden Magic",
-    path: "./games/singlefiles/Glyph-Warden.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Action","Magic","Drawing","Reflex"],
-    badge: "Action",
-    desc: "Gesture-drawing spellcasting defense. Draw magical runic symbols on screen with your mouse or finger to cast lightning, frost, and fire wards.",
-    controls: "Mouse / Touch Drag: Draw rune shape matching incoming enemy crests"
-  },
-  {
-    id: "hive-sovereign-ant-rts",
-    name: "Hive Sovereign Ant RTS",
-    path: "./games/singlefiles/Hive-Sovereign.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","RTS","Insects","Management"],
-    badge: "Strategy",
-    desc: "Real-time ant colony management and subterranean warfare RTS. Dig nursery chambers, hatch soldier broods, and raid rival termitaries.",
-    controls: "Mouse / Touch: Direct ant armies, order tunnel digging, and harvest nectar"
-  },
-  {
-    id: "castaway-island-survival",
-    name: "Castaway Island Survival",
-    path: "./games/singlefiles/Island-Survival.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Survival","Crafting","Island","Adventure"],
-    badge: "Survival",
-    desc: "Stranded island wilderness crafting survival sim. Forage coconuts, craft flint axes, build shelter campfires, and sail a raft to rescue.",
-    controls: "WASD / Arrow Keys: Move | Space / E: Chop Trees, Forage, and Craft"
-  },
-  {
-    id: "lantern-festival-memory",
-    name: "Lantern Festival Memory",
-    path: "./games/singlefiles/Lantern-Memory.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Casual","Memory","Aesthetic","Relaxing"],
-    badge: "Cozy",
-    desc: "Atmospheric floating water lantern memory puzzle. Follow the glowing chime sequences illuminating the night river festival.",
-    controls: "Mouse / Touch: Click floating lanterns in the demonstrated sequence"
-  },
-  {
-    id: "lockmaster-lockpick-sim",
-    name: "Lockmaster Lockpick Sim",
-    path: "./games/singlefiles/Lockmaster-Shift.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Simulator","Puzzle","Stealth","Physics"],
-    badge: "Simulator",
-    desc: "Precision mechanical pin-tumbler lockpicking simulation. Feel pin resistance with the pick, set sheer lines, and rotate the cylinder.",
-    controls: "Mouse / Arrow Keys: Adjust Pick Height & Tension Wrench Torque"
-  },
-  {
-    id: "mahjong-link-connect",
-    name: "Mahjong Link Connect",
-    path: "./games/singlefiles/Mahjong-Link.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Mahjong","Connect","Casual"],
-    badge: "Casual",
-    desc: "Classic Shisen-Sho 2-turn line-matching mahjong puzzle. Connect pairs of matching tiles with lines that make at most two 90-degree turns.",
-    controls: "Mouse / Touch: Click matching perimeter tile pairs to link and clear"
-  },
-  {
-    id: "market-pulse-trading-sim",
-    name: "Market Pulse Trading Sim",
-    path: "./games/singlefiles/Market-Pulse.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Economy","Trading","Simulation"],
-    badge: "Strategy",
-    desc: "High-frequency stock and commodity trading simulator. Analyze live candlestick charts, execute long/short orders, and manage portfolio risk.",
-    controls: "Mouse / Touch: Buy, Sell, Short, and Set Stop-Loss Orders"
-  },
-  {
-    id: "maze-chase",
-    name: "Maze Chase",
-    path: "./games/singlefiles/Maze-Chase.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Maze Chase — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "merge-orbit-celestial",
-    name: "Merge Orbit Celestial",
-    path: "./games/singlefiles/Merge-Orbit.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Physics","Suika","Space"],
-    badge: "Popular",
-    desc: "Suika-style cosmic drop and merge physics game. Drop celestial bodies from asteroids to moons, planets, and supermassive stars without overflowing.",
-    controls: "Mouse / Touch: Aim Drop Position & Release Planet"
-  },
-  {
-    id: "metro-weaver-transit",
-    name: "Metro Weaver Transit",
-    path: "./games/singlefiles/Metro-Weaver.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Transit","Simulation","Minimal"],
-    badge: "Strategy",
-    desc: "Minimalist subway transit network planning simulation. Draw rail lines between passenger stations and dispatch subway trains to prevent overcrowding.",
-    controls: "Mouse / Touch: Drag color lines between station nodes & deploy trains"
-  },
-  {
-    id: "midnight-tactical-chess",
-    name: "Midnight Tactical Chess",
-    path: "./games/singlefiles/Midnight-Chess.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Board","Chess","Puzzle","Strategy"],
-    badge: "Board",
-    desc: "Curated collection of brilliant chess endgame and tactical mate-in-2 / mate-in-3 puzzles in a moody dark-mode aesthetic.",
-    controls: "Mouse / Touch: Drag and drop chess pieces to execute tactics"
-  },
-  {
-    id: "midnight-security-monitor",
-    name: "Midnight Security Monitor",
-    path: "./games/singlefiles/Midnight-Monitor.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Horror","Survival","Cameras","FNAF"],
-    badge: "Survival",
-    desc: "Five Nights-style security camera surveillance horror. Monitor facility camera feeds, toggle security blast doors, and survive until 6 AM.",
-    controls: "Mouse: Switch camera feeds & toggle corridor security doors"
-  },
-  {
-    id: "mine-matrix",
-    name: "Mine Matrix",
-    path: "./games/singlefiles/Mine-Matrix.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Mine Matrix — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "mist-valley-herbarium",
-    name: "Mist Valley Herbarium",
-    path: "./games/singlefiles/Mist-Valley-Herbarium.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Casual","Foraging","Botanical","Cozy"],
-    badge: "Cozy",
-    desc: "Wholesome highland botanical foraging adventure. Explore misty alpine glades, press rare wildflowers, and catalogue your herbarium.",
-    controls: "WASD / Mouse: Explore Glade & Harvest Wildflower Specimens"
-  },
-  {
-    id: "moba-frontier-3v3",
-    name: "MOBA Frontier 3v3",
-    path: "./games/singlefiles/Moba-Frontier.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Action","MOBA","Tactics","Hero"],
-    badge: "Action",
-    desc: "Fast single-lane 3v3 MOBA battle arena. Last-hit minion waves, destroy defensive turrets, and coordinate hero ultimate combos to smash the nexus.",
-    controls: "Mouse / Touch: Move & Attack | Q, W, E, R: Cast Champion Skills"
-  },
-  {
-    id: "mole-market-burrow",
-    name: "Mole Market Burrow",
-    path: "./games/singlefiles/Mole-Market.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Casual","Commerce","Mining","Cute"],
-    badge: "Cozy",
-    desc: "Charming underground burrow market management. Mine sparkling gemstones, barter with badger traders, and expand your subterranean shop.",
-    controls: "Mouse / Touch: Dig tunnels, stock merchant shelves, and trade goods"
-  },
-  {
-    id: "monster-horde",
-    name: "Monster Horde",
-    path: "./games/singlefiles/Monster-Horde.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Monster Horde — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "monster-tamer-rpg",
-    name: "Monster Tamer RPG",
-    path: "./games/singlefiles/Monster-Tamer.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["RPG","Pokemon","Turn-Based","Retro"],
-    badge: "RPG",
-    desc: "Retro creature-collecting turn-based RPG. Explore tall grass, battle wild elemental beasts, tame them with capture spheres, and challenge arena masters.",
-    controls: "WASD / Arrows: Move Trainer | Space / Enter: Interact & Choose Moves"
-  },
-  {
-    id: "moon-lander",
-    name: "Moon Lander",
-    path: "./games/singlefiles/Moon-Lander.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Moon Lander — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "stained-glass-mosaic",
-    name: "Stained Glass Mosaic",
-    path: "./games/singlefiles/Mosaic-Jigsaw.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Art","Jigsaw","Relaxing"],
-    badge: "Cozy",
-    desc: "Luminous stained glass mosaic jigsaw puzzle. Piece together colorful glass shards to illuminate cathedral window masterpieces.",
-    controls: "Mouse / Touch: Drag and snap glass fragments into place"
-  },
-  {
-    id: "museum-climate-curator",
-    name: "Museum Climate Curator",
-    path: "./games/singlefiles/Museum-Climate.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Simulation","Management","Art","Strategy"],
-    badge: "Simulator",
-    desc: "Museum HVAC environmental curator simulation. Regulate temperature and humidity across gallery wings to protect Renaissance oil paintings.",
-    controls: "Mouse / Touch: Adjust thermostat, dehumidifier, and ventilation airflow"
-  },
-  {
-    id: "neon-2048",
-    name: "Neon 2048",
-    path: "./games/singlefiles/Neon-2048.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Neon 2048 — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "ramen-noodle-shift",
-    name: "Ramen Noodle Shift",
-    path: "./games/singlefiles/Noodle-Shift.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Cooking","Fast","Casual"],
-    badge: "Cozy",
-    desc: "Fast-paced ramen bar cooking frenzy. Boil handmade ramen noodles, ladle savory tonkotsu broth, arrange chashu pork, and serve hungry patrons.",
-    controls: "Mouse / Touch: Assemble custom ramen bowls to match order tickets"
-  },
-  {
-    id: "deep-space-observatory",
-    name: "Deep Space Observatory",
-    path: "./games/singlefiles/Observatory-Watch.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Sci-Fi","Space","Astronomy","Puzzle"],
-    badge: "Simulator",
-    desc: "Deep space radio telescope observatory simulation. Point telescope azimuths, focus optical arrays, and catalogue newly discovered exoplanets.",
-    controls: "Mouse / Touch: Pan telescope coordinates & focus spectroscopic filters"
-  },
-  {
-    id: "orbital-pinball",
-    name: "Orbital Pinball",
-    path: "./games/singlefiles/Orbital-Pinball.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Orbital Pinball — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "orbital-cargo-stowage",
-    name: "Orbital Cargo Stowage",
-    path: "./games/singlefiles/Orbital-Stowage.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Space","Tetris","Physics"],
-    badge: "Puzzle",
-    desc: "Zero-G space station supply module packing puzzle. Fit irregularly shaped oxygen tanks, solar cells, and rations into pressurized cargo holds.",
-    controls: "Mouse / Touch: Rotate & Slot 3D cargo crates into airlock hold"
-  },
-  {
-    id: "pathogen-defense-protocol",
-    name: "Pathogen Defense Protocol",
-    path: "./games/singlefiles/Pathogen-Protocol.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Biology","Tower Defense","Science"],
-    badge: "Strategy",
-    desc: "Microscopic immunology tower defense. Deploy macrophage sentries, B-cell antibody launchers, and T-cell killers to eradicate viral invasions.",
-    controls: "Mouse / Touch: Deploy immune cells along capillary bloodstream tracks"
-  },
-  {
-    id: "penalty-rush",
-    name: "Penalty Rush",
-    path: "./games/singlefiles/Penalty-Rush.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Penalty Rush — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "photo-safari",
-    name: "Photo Safari",
-    path: "./games/singlefiles/Photo-Safari.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Photo Safari — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "pixel-clues-nonogram",
-    name: "Pixel Clues Nonogram",
-    path: "./games/singlefiles/Pixel-Clues.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Picross","Nonogram","Logic"],
-    badge: "Puzzle",
-    desc: "Picross / Nonogram Japanese logic puzzle. Use numeric column and row clues to deduce pixel positions and reveal hidden retro pixel art illustrations.",
-    controls: "Left Click: Fill Pixel | Right Click: Mark Empty X"
-  },
-  {
-    id: "pocket-virtual-pet",
-    name: "Pocket Virtual Pet",
-    path: "./games/singlefiles/Pocket-Companion.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Casual","Pet","Tamagotchi","Cute"],
-    badge: "Cozy",
-    desc: "Virtual Tamagotchi pocket companion. Feed, pet, play mini-games, and watch your cute digital pet monster evolve through life stages.",
-    controls: "Mouse / Touch: Feed, Play, Clean, and Pet your companion"
-  },
-  {
-    id: "pocket-empire",
-    name: "Pocket Empire",
-    path: "./games/singlefiles/Pocket-Empire.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Pocket Empire — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "pocket-farm",
-    name: "Pocket Farm",
-    path: "./games/singlefiles/Pocket-Farm.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Pocket Farm — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "pocket-golf",
-    name: "Pocket Golf",
-    path: "./games/singlefiles/Pocket-Golf.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Pocket Golf — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "prim-s-algorithmic-maze",
-    name: "Prim's Algorithmic Maze",
-    path: "./games/singlefiles/Prims-Maze-Generator.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Algorithms","Maze","Educational"],
-    badge: "Puzzle",
-    desc: "Procedural maze generation and pathfinding visualizer powered by Prim's minimum spanning tree algorithm. Navigate to the exit portal.",
-    controls: "WASD / Arrow Keys: Navigate Maze | Button: Generate New Maze"
-  },
-  {
-    id: "prism-breaker",
-    name: "Prism Breaker",
-    path: "./games/singlefiles/Prism-Breaker.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Prism Breaker — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "prism-orchard-light",
-    name: "Prism Orchard Light",
-    path: "./games/singlefiles/Prism-Orchard.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Optics","Lasers","Light"],
-    badge: "Puzzle",
-    desc: "Optical laser beam redirection puzzle. Place and rotate angled glass mirrors and color splitters to illuminate crystal fruit trees.",
-    controls: "Mouse / Touch: Drag and rotate mirrors to redirect laser paths"
-  },
-  {
-    id: "pulse-modular-synth",
-    name: "Pulse Modular Synth",
-    path: "./games/singlefiles/Pulse-Studio.html",
-    category: "games",
-    shelf: "other",
-    tags: ["Tool","Music","Audio","Creative"],
-    badge: "Creative",
-    desc: "Modular synthesizer and step sequencer audio workstation. Patch virtual patch cords between VCO, VCF, LFO, and drum sequencers.",
-    controls: "Mouse / Touch: Connect patch cords & turn knob parameters"
-  },
-  {
-    id: "radish-guard",
-    name: "Radish Guard",
-    path: "./games/singlefiles/Radish-Guard.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Radish Guard — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "satellite-relay-network",
-    name: "Satellite Relay Network",
-    path: "./games/singlefiles/Relay-Coordination.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Sci-Fi","Space","Puzzle"],
-    badge: "Strategy",
-    desc: "Orbital satellite constellation communication network. Align laser line-of-sight relays across Earth orbit to route global internet data packets.",
-    controls: "Mouse / Touch: Align satellite dish headings & route data packets"
-  },
-  {
-    id: "risky-stakes-high-roller",
-    name: "Risky Stakes High Roller",
-    path: "./games/singlefiles/Risky-Stakes.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Casino","Cards","Strategy","Arcade"],
-    badge: "Cards",
-    desc: "High-stakes push-your-luck wagering game. Balance bankroll risk against escalating multiplier odds before the house busts.",
-    controls: "Mouse / Touch: Place bets, Double Down, or Cash Out"
-  },
-  {
-    id: "river-poker-texas-hold-em",
-    name: "River Poker Texas Hold'em",
-    path: "./games/singlefiles/River-Holdem.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Cards","Poker","Strategy","Table"],
-    badge: "Cards",
-    desc: "Authentic Texas Hold'em poker tournament simulation with intelligent AI bluffing profiles, chip pot calculations, and all-in side pots.",
-    controls: "Mouse / Touch: Check, Bet, Raise, Fold, or Go All-In"
-  },
-  {
-    id: "runway-fashion-stylist",
-    name: "Runway Fashion Stylist",
-    path: "./games/singlefiles/Runway-Stylist.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Casual","Fashion","Dress Up","Creative"],
-    badge: "Cozy",
-    desc: "High-fashion couture stylist studio. Mix and match avant-garde wardrobe outfits, color palettes, and accessories for the Paris runway showcase.",
-    controls: "Mouse / Touch: Drag garments & accessories onto model mannequin"
-  },
-  {
-    id: "shadow-post",
-    name: "Shadow Post",
-    path: "./games/singlefiles/Shadow-Post.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Shadow Post — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "shan-hai-mythic-duel",
-    name: "Shan Hai Mythic Duel",
-    path: "./games/singlefiles/Shan-Hai.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Cards","Strategy","Mythology","Fantasy"],
-    badge: "Strategy",
-    desc: "Card battler inspired by the Classic of Mountains and Seas. Summon ancient mythological dragons, phoenixes, and beasts in tactical duels.",
-    controls: "Mouse / Touch: Play creature cards & direct elemental attacks"
-  },
-  {
-    id: "signal-caravan-radio",
-    name: "Signal Caravan Radio",
-    path: "./games/singlefiles/Signal-Caravan.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Story","Adventure","Sci-Fi","Radio"],
-    badge: "Story",
-    desc: "Post-apocalyptic desert radio convoy journey. Tune shortwave frequencies, decode distress beacons, and guide traveler convoys safely.",
-    controls: "Mouse / Touch: Tune radio dial & choose caravan destination routes"
-  },
-  {
-    id: "silent-rescue-deep-sea",
-    name: "Silent Rescue Deep Sea",
-    path: "./games/singlefiles/Silent-Rescue.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Action","Submarine","Rescue","Physics"],
-    badge: "Action",
-    desc: "Deep sea bathyscaphe rescue mission. Pilot through pitch-black hydrothermal vent caverns to dock with disabled exploratory pods.",
-    controls: "WASD / Arrows: Thruster Propulsion | Space: Magnetic Docking Clamp"
-  },
-  {
-    id: "sky-hop",
-    name: "Sky Hop",
-    path: "./games/singlefiles/Sky-Hop.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Sky Hop — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "skyline-city-planner",
-    name: "Skyline City Planner",
-    path: "./games/singlefiles/Skyline-Planner.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Simulation","City Builder","Grid","Strategy"],
-    badge: "Strategy",
-    desc: "Minimalist city grid planner. Zone commercial skyscrapers, green parks, and high-speed rail to create the ultimate aesthetic metropolis.",
-    controls: "Mouse / Touch: Select building type & place onto grid blueprint"
-  },
-  {
-    id: "slingstorm",
-    name: "Slingstorm",
-    path: "./games/singlefiles/Slingstorm.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Slingstorm — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "neon-glow-snake",
-    name: "Neon Glow Snake",
-    path: "./games/singlefiles/Snake-Game.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Retro","Snake","Neon"],
-    badge: "Retro",
-    desc: "Sleek glowing canvas Snake arcade with responsive controls, apple combos, and speed tier escalation.",
-    controls: "WASD / Arrow Keys: Steer Snake"
-  },
-  {
-    id: "snow-ridge",
-    name: "Snow Ridge",
-    path: "./games/singlefiles/Snow-Ridge.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Snow Ridge — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "sokoban-quest",
-    name: "Sokoban Quest",
-    path: "./games/singlefiles/Sokoban-Quest.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Sokoban Quest — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "classic-klondike-solitaire",
-    name: "Classic Klondike Solitaire",
-    path: "./games/singlefiles/Solitaire-Classic.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Cards","Solitaire","Classic","Casual"],
-    badge: "Cards",
-    desc: "The timeless Klondike Solitaire card patience game. Build four foundation suits from Ace to King with draw-1 and draw-3 modes.",
-    controls: "Mouse / Touch: Drag cards or double-click to auto-move to foundations"
-  },
-  {
-    id: "spectrum-8-bit-chiptune",
-    name: "Spectrum 8-Bit Chiptune",
-    path: "./games/singlefiles/Spectrum-Console.html",
-    category: "games",
-    shelf: "other",
-    tags: ["Tool","Audio","Chiptune","Retro"],
-    badge: "Creative",
-    desc: "Authentic 8-bit ZX Spectrum audio sound chip synthesizer with square wave oscillators, noise channels, and piano roll editor.",
-    controls: "Keyboard / Touch: Play piano keys & tweak waveform parameters"
-  },
-  {
-    id: "spud-arena",
-    name: "Spud Arena",
-    path: "./games/singlefiles/Spud-Arena.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Spud Arena — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "stack-tower",
-    name: "Stack Tower",
-    path: "./games/singlefiles/Stack-Tower.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Stack Tower — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "starforge-idle",
-    name: "Starforge Idle",
-    path: "./games/singlefiles/Starforge-Idle.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Starforge Idle — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "starline-freight-hyperlanes",
-    name: "Starline Freight Hyperlanes",
-    path: "./games/singlefiles/Starline-Route.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Sci-Fi","Space","Logistics"],
-    badge: "Strategy",
-    desc: "Interstellar cargo trade empire simulation. Establish hyperlane warp gates between star systems and corner commodity markets.",
-    controls: "Mouse / Touch: Construct jump gates & dispatch cargo freighters"
-  },
-  {
-    id: "starship-suspects",
-    name: "Starship Suspects",
-    path: "./games/singlefiles/Starship-Suspects.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Starship Suspects — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "stratigraphy-fossil-dig",
-    name: "Stratigraphy Fossil Dig",
-    path: "./games/singlefiles/Stratigraphy-Lab.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Science","Geology","Fossils","Puzzle"],
-    badge: "Puzzle",
-    desc: "Geological stratum excavation and fossil reconstruction puzzle. Brush sediment layers to unearth prehistoric dinosaur skeletons.",
-    controls: "Mouse / Touch: Carefully chisel rock layers & assemble fossil bones"
-  },
-  {
-    id: "sudoku-studio-pro",
-    name: "Sudoku Studio Pro",
-    path: "./games/singlefiles/Sudoku-Studio.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Sudoku","Numbers","Brain"],
-    badge: "Puzzle",
-    desc: "Comprehensive Sudoku master puzzle with easy, medium, hard, and expert boards, pencil candidate notes, and error highlighting.",
-    controls: "Mouse / 1-9 Keys: Select Cell & Enter Digit"
-  },
-  {
-    id: "switchyard-rail-dispatch",
-    name: "Switchyard Rail Dispatch",
-    path: "./games/singlefiles/Switchyard-Rush.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Trains","Railroad","Logistics"],
-    badge: "Puzzle",
-    desc: "Railroad track switching and freight yard puzzle. Flip junction switches to route steam locomotives and boxcars to correct sidings.",
-    controls: "Mouse / Touch: Click track switches to redirect train routing"
-  },
-  {
-    id: "tank-arena",
-    name: "Tank Arena",
-    path: "./games/singlefiles/Tank-Arena.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Tank Arena — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "thunder-vanguard",
-    name: "Thunder Vanguard",
-    path: "./games/singlefiles/Thunder-Vanguard.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Thunder Vanguard — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "tidal-grid-ocean-power",
-    name: "Tidal Grid Ocean Power",
-    path: "./games/singlefiles/Tidal-Grid.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Clean Energy","Engineering","Simulation"],
-    badge: "Simulator",
-    desc: "Ocean wave and tidal stream energy grid simulator. Anchor subsea turbine arrays to power coastal cities through storm swells.",
-    controls: "Mouse / Touch: Deploy subsea turbines & balance electrical grid load"
-  },
-  {
-    id: "tide-salvage-diver",
-    name: "Tide Salvage Diver",
-    path: "./games/singlefiles/Tide-Salvage.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Action","Underwater","Exploration","Casual"],
-    badge: "Action",
-    desc: "Shipwreck scuba diver salvage expedition. Dive through sunken galleons, collect antique doubloons, and manage oxygen tanks.",
-    controls: "WASD / Mouse: Swim & Dive | Space: Collect Treasure"
-  },
-  {
-    id: "time-post-paradox",
-    name: "Time Post Paradox",
-    path: "./games/singlefiles/Time-Post.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Time Travel","Story","Brain"],
-    badge: "Puzzle",
-    desc: "Temporal paradox parcel delivery puzzle. Send mail through past and future timelines without creating destructive grandfather paradoxes.",
-    controls: "Mouse / Touch: Schedule mail deliveries across past and future timeline nodes"
-  },
-  {
-    id: "tiny-factory-automation",
-    name: "Tiny Factory Automation",
-    path: "./games/singlefiles/Tiny-Factory.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Strategy","Automation","Factorio","Puzzle"],
-    badge: "Strategy",
-    desc: "Factorio-inspired micro automation puzzle. Lay conveyor belts, robotic inserters, and smelters to manufacture circuit boards.",
-    controls: "Mouse / Touch: Place conveyor belts, inserters, and assembly machines"
-  },
-  {
-    id: "touchline-manager",
-    name: "Touchline Manager",
-    path: "./games/singlefiles/Touchline-Manager.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Touchline Manager — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "truss-workshop",
-    name: "Truss Workshop",
-    path: "./games/singlefiles/Truss-Workshop.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Truss Workshop — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "wind-tunnel-aero-lab",
-    name: "Wind Tunnel Aero Lab",
-    path: "./games/singlefiles/Wind-Tunnel-Contracts.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Physics","Aerodynamics","Simulation","Engineering"],
-    badge: "Physics",
-    desc: "Aerodynamics wind tunnel testing laboratory. Sculpt car chassis profiles, analyze laminar streamline smoke, and minimize drag coefficients.",
-    controls: "Mouse: Sculpt vehicle contour curves & toggle smoke particle streams"
-  },
-  {
-    id: "wonder-park-tycoon",
-    name: "Wonder Park Tycoon",
-    path: "./games/singlefiles/Wonder-Park.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Simulation","Tycoon","Theme Park","Casual"],
-    badge: "Strategy",
-    desc: "Charming theme park tycoon builder. Lay roller coaster tracks, build ferris wheels, open cotton candy stands, and delight park guests.",
-    controls: "Mouse / Touch: Build rides, pave pathways, and set ticket pricing"
-  },
-  {
-    id: "word-grid",
-    name: "Word Grid",
-    path: "./games/singlefiles/Word-Grid.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Word Grid — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "3d-chess",
-    name: "3d Chess",
-    path: "./games/3d-chess/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "3d Chess — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "alien-invasion",
-    name: "Alien Invasion",
-    path: "./games/alien-invasion/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Alien Invasion — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "avabranch",
-    name: "Avabranch",
-    path: "./games/avabranch/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Avabranch — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "behind-asteroids-vector",
-    name: "Behind Asteroids Vector",
-    path: "./games/behind-asteroids/index.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Action","Arcade","Vector","JS13k"],
-    badge: "Arcade",
-    desc: "Electrifying vector glow space arcade dogfighter by Gre. Turn the tables on incoming asteroid clusters with laser blasts and warp drives.",
-    controls: "Arrow Keys: Fly & Steer | Space: Fire Lasers"
-  },
-  {
-    id: "black-hole-square",
-    name: "Black Hole Square",
-    path: "./games/black-hole-square/index.html",
-    category: "games",
-    shelf: "puzzle-logic",
-    tags: ["Puzzle","Physics","Gravity","JS13k"],
-    badge: "Physics",
-    desc: "Gravitational physics puzzle. Place miniature black holes and gravity wells to deflect orbital light rays toward collector nodes.",
-    controls: "Mouse / Touch: Place and move gravity sources"
-  },
-  {
-    id: "bounce-back-boomerang-roguelike",
-    name: "Bounce Back (Boomerang Roguelike)",
-    path: "./games/bounce-back/index.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Roguelike","Zelda","Action","JS13k"],
-    badge: "Roguelike",
-    desc: "Zelda-homage procedural dungeon roguelike by Frank Force. Throw your enchanted boomerang to solve puzzles, deflect projectiles, and defeat bosses.",
-    controls: "WASD / Arrows: Move | Mouse: Throw Boomerang | Space: Dash"
-  },
-  {
-    id: "breaklock",
-    name: "Breaklock",
-    path: "./games/breaklock/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Breaklock — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "captain-rogers",
-    name: "Captain Rogers",
-    path: "./games/captain-rogers/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Captain Rogers — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "cellmates",
-    name: "Cellmates",
-    path: "./games/cellmates/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Cellmates — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "ceros-snake",
-    name: "Ceros Snake",
-    path: "./games/ceros-snake/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Ceros Snake — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "coil",
-    name: "Coil",
-    path: "./games/coil/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Coil — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "connect-four",
-    name: "Connect Four",
-    path: "./games/connect-four/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Connect Four — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "custom-tetris",
-    name: "Custom Tetris",
-    path: "./games/custom-tetris/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Custom Tetris — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "dante-s-inferno-3d",
-    name: "Dante's Inferno 3D",
-    path: "./games/dante-13k/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["3D","Dungeon","Raymarching","JS13k"],
-    badge: "3D",
-    desc: "Jaw-dropping 3D raymarched dungeon exploration engine in 13KB. Descend through the circles of Hell, solve puzzles, and slay demons.",
-    controls: "WASD: Move | Mouse: Look around | Space: Cast divine spell"
-  },
-  {
-    id: "diablo-js",
-    name: "Diablo Js",
-    path: "./games/diablo-js/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Diablo Js — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "digger",
-    name: "Digger",
-    path: "./games/digger/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Digger — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "drakonas",
-    name: "Drakonas",
-    path: "./games/drakonas/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Drakonas — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "emberwind",
-    name: "Emberwind",
-    path: "./games/emberwind/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Emberwind — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "flappy-2048",
-    name: "Flappy 2048",
-    path: "./games/flappy-2048/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Flappy 2048 — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "floppybird",
-    name: "Floppybird",
-    path: "./games/floppybird/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Floppybird — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "green-mahjong",
-    name: "Green Mahjong",
-    path: "./games/green-mahjong/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Green Mahjong — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "heal-em-all",
-    name: "Heal Em All",
-    path: "./games/heal-em-all/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Heal Em All — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "hotfix",
-    name: "Hotfix",
-    path: "./games/hotfix/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Hotfix — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "hurry",
-    name: "Hurry",
-    path: "./games/hurry/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Hurry — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "mykonos-island-builder-3d",
-    name: "Mykonos Island Builder 3D",
-    path: "./games/island-builder/index.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["3D","Sandbox","Isometric","Creative"],
-    badge: "3D",
-    desc: "Sun-drenched Mediterranean voxel island builder. Construct whitewashed Greek cliffside villas, plant olive trees, and sculpt beaches.",
-    controls: "Mouse: Orbit Camera & Place Voxel Blocks | 1-9: Select Building Materials"
-  },
-  {
-    id: "isocity-builder-sim",
-    name: "IsoCity Builder Sim",
-    path: "./games/isocity/index.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Simulation","City Builder","Isometric","Strategy"],
-    badge: "Strategy",
-    desc: "Isometric city construction simulation by Victor Ribeiro. Zone residential, commercial, and industrial districts, and manage city traffic.",
-    controls: "Mouse: Select zone tool & Click grid tiles to construct buildings"
-  },
-  {
-    id: "isocity-tower-defense",
-    name: "IsoCity Tower Defense",
-    path: "./games/isocity-td/index.html",
-    category: "games",
-    shelf: "strategy-tactics",
-    tags: ["Tower Defense","Isometric","Strategy","Action"],
-    badge: "Defense",
-    desc: "Isometric defense warfare. Construct heavy artillery, missile batteries, and laser towers to repel invading armor columns along highway grids.",
-    controls: "Mouse: Place defender turrets & trigger special air strikes"
-  },
-  {
-    id: "jolly-jumper",
-    name: "Jolly Jumper",
-    path: "./games/jolly-jumper/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Jolly Jumper — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "marble-soccer",
-    name: "Marble Soccer",
-    path: "./games/marble-soccer/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Marble Soccer — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "mariohtml5",
-    name: "Mariohtml5",
-    path: "./games/mariohtml5/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Mariohtml5 — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "monster-candy",
-    name: "Monster Candy",
-    path: "./games/monster-candy/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Monster Candy — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "mumuy-pacman-deluxe",
-    name: "Mumuy Pacman Deluxe",
-    path: "./games/mumuy-pacman/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Retro","Classic","Maze"],
-    badge: "Classic",
-    desc: "Smooth animated HTML5 canvas Pacman with high-precision cornering, original sound chirps, and smart ghost chase routines.",
-    controls: "WASD / Arrow Keys / Swipe: Guide Pacman"
-  },
-  {
-    id: "norman-the-necromancer",
-    name: "Norman the Necromancer",
-    path: "./games/norman-necromancer/index.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Action","Roguelike","Pixel","JS13k"],
-    badge: "Hot",
-    desc: "Hit JS13k top-down roguelike by Dan Prince. Raise fallen enemy skeletons to command an unstoppable undead army across monster crypts.",
-    controls: "WASD: Move | Mouse: Aim | Left Click: Fire Bone Spell | Space: Raise Undead Minions"
-  },
-  {
-    id: "octocat-jump",
-    name: "Octocat Jump",
-    path: "./games/octocat-jump/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Octocat Jump — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "onslaught",
-    name: "Onslaught",
-    path: "./games/onslaught/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Onslaught — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "openpanzer",
-    name: "Openpanzer",
-    path: "./games/openpanzer/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Openpanzer — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "os13k-virtual-os-games",
-    name: "OS13k Virtual OS & Games",
-    path: "./games/os13k/index.html",
-    category: "games",
-    shelf: "sandbox-simulation",
-    tags: ["Retro","Operating System","Sandbox","JS13k"],
-    badge: "Retro",
-    desc: "Virtual retro desktop operating system by Frank Force featuring a code editor, synth music tracker, paint canvas, and multiple playable games.",
-    controls: "Mouse: Click icons & windows | Keyboard: Type & interact with mini apps"
-  },
-  {
-    id: "pacman",
-    name: "Pacman",
-    path: "./games/pacman/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Pacman — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "pong",
-    name: "Pong",
-    path: "./games/pong/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Pong — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "progress-knight",
-    name: "Progress Knight",
-    path: "./games/progress-knight/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Progress Knight — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "q1k3-quake-in-13kb-js",
-    name: "Q1K3 (Quake in 13KB JS)",
-    path: "./games/q1k3/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["3D","FPS","WASM","JS13k","Action"],
-    badge: "3D",
-    desc: "Dominic Szablewski's legendary 3D Quake engine in pure JavaScript. Features WebGL rendering, monsters, dynamic lighting, weapons, and 2 full maps.",
-    controls: "WASD: Move | Mouse: Aim | Left Click: Shoot | Space: Jump | 1-2: Weapons | Esc: Lock/Unlock Mouse"
-  },
-  {
-    id: "radius-raid-survival",
-    name: "Radius Raid Survival",
-    path: "./games/radius-raid/index.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Action","Arcade","Space","JS13k"],
-    badge: "JS13k",
-    desc: "Fast-paced space survival shooter by Jack Rugile. Blast polymorphic enemy waves, collect power gems, and dodge bullet barrages.",
-    controls: "WASD: Move Ship | Mouse: 360 Aim & Shoot"
-  },
-  {
-    id: "raging-gardens",
-    name: "Raging Gardens",
-    path: "./games/raging-gardens/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Raging Gardens — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "roguish",
-    name: "Roguish",
-    path: "./games/roguish/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Roguish — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "save-the-forest",
-    name: "Save The Forest",
-    path: "./games/save-the-forest/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Save The Forest — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "simon",
-    name: "Simon",
-    path: "./games/simon/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Simon — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "sorades",
-    name: "Sorades",
-    path: "./games/sorades/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Sorades — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "space-huggers-roguelite",
-    name: "Space Huggers Roguelite",
-    path: "./games/space-huggers/index.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Platformer","Shooter","Roguelike","Destructible"],
-    badge: "Hot",
-    desc: "Frank Force's intense run-and-gun roguelike platformer featuring fully destructible terrain, procedural levels, and fluid pixel gunplay.",
-    controls: "WASD / Arrows: Move & Jump | Mouse: Aim & Shoot | R: Restart"
-  },
-  {
-    id: "space-invaders",
-    name: "Space Invaders",
-    path: "./games/space-invaders/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Space Invaders — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "space-shooter",
-    name: "Space Shooter",
-    path: "./games/space-shooter/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Space Shooter — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "spashal",
-    name: "Spashal",
-    path: "./games/spashal/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Spashal — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "survivor",
-    name: "Survivor",
-    path: "./games/survivor/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Survivor — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "t-rex-runner",
-    name: "T Rex Runner",
-    path: "./games/t-rex-runner/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "T Rex Runner — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "tictactoe",
-    name: "Tictactoe",
-    path: "./games/tictactoe/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Tictactoe — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "tower-game",
-    name: "Tower Game",
-    path: "./games/tower-game/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Tower Game — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "underrun-software-3d",
-    name: "Underrun (Software 3D)",
-    path: "./games/underrun/index.html",
-    category: "games",
-    shelf: "action-survival",
-    tags: ["Action","Shooter","JS13k","Retro"],
-    badge: "JS13k",
-    desc: "Atmospheric sci-fi twin-stick shooter by Dominic Szablewski. Reclaim a deserted subterranean colony overrun by arachnid swarms.",
-    controls: "WASD: Move | Mouse: Aim & Shoot Plasma Blaster"
-  },
-  {
-    id: "wordle",
-    name: "Wordle",
-    path: "./games/wordle/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Wordle — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  },
-  {
-    id: "xx142-b2-alien-infiltration",
-    name: "XX142-B2 Alien Infiltration",
-    path: "./games/xx142-b2/index.html",
-    category: "games",
-    shelf: "action-3d",
-    tags: ["3D","Stealth","Sci-Fi","JS13k"],
-    badge: "3D",
-    desc: "Real-time 3D stealth infiltration aboard an alien mothership. Evade security patrol bots, hack terminals, and plant EMP charges.",
-    controls: "WASD: Move | Mouse: Turn Camera | Space: Hack Terminal / Jump"
-  },
-  {
-    id: "zedinvaders",
-    name: "Zedinvaders",
-    path: "./games/zedinvaders/index.html",
-    category: "games",
-    shelf: "arcade-retro",
-    tags: ["Arcade","Casual","HTML5"],
-    badge: "Featured",
-    desc: "Zedinvaders — fully responsive legal open-source web application for mobile and desktop.",
-    controls: "Mouse / Touch / Keyboard supported"
-  }
-];
-
-/* ================================================================
-   2. CORE ENGINE & APPLICATION CONTROLLER
+   ENGINE
    ================================================================ */
 (function () {
   const CATEGORIES = [
