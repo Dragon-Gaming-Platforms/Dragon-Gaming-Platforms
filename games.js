@@ -4515,7 +4515,7 @@ const GAMES_DATA = [
     const tagsHTML = item.tags.slice(0, 3).map(t => `<span class="game-card__tag">${esc(t)}</span>`).join('');
 
     return `
-      <div class="game-card" data-id="${esc(item.id)}">
+      <div class="game-card" data-id="${esc(item.id)}" role="button" tabindex="0" aria-label="Play ${esc(item.name)}">
         <div class="game-card__image">
           <span class="game-card__badge">${esc(item.badge || item.category)}</span>
           <button class="game-card__fav-btn ${isFav ? 'is-fav' : ''}" title="${isFav ? 'Remove Favorite' : 'Add to Favorites'}" data-fav-id="${esc(item.id)}">
@@ -4683,6 +4683,14 @@ const GAMES_DATA = [
         if (e.target.closest('.game-card__fav-btn')) return;
         const id = card.dataset.id;
         openGame(id);
+      });
+      // Keyboard activation (Enter / Space) for accessibility and non-pointer input.
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          if (e.target.closest('.game-card__fav-btn')) return;
+          e.preventDefault();
+          openGame(card.dataset.id);
+        }
       });
     });
 

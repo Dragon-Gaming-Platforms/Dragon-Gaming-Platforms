@@ -533,15 +533,22 @@ body.crt-mode::before {
   opacity: 1 !important;
   visibility: visible !important;
   min-height: 200px;
+  touch-action: manipulation;
 }
-.game-card:hover {
-  border-color: var(--theme-primary);
-  background: var(--bg-card-hover);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(var(--theme-rgb), 0.2);
+@media (hover: hover) and (pointer: fine) {
+  .game-card:hover {
+    border-color: var(--theme-primary);
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(var(--theme-rgb), 0.2);
+  }
 }
 .game-card:active {
   transform: scale(0.98);
+}
+.game-card:focus-visible {
+  outline: 2px solid var(--theme-primary);
+  outline-offset: 2px;
 }
 
 .game-card__image {
@@ -559,8 +566,10 @@ body.crt-mode::before {
   font-size: 2.5rem; opacity: 0.65; filter: drop-shadow(0 0 10px rgba(var(--theme-rgb), 0.3));
   transition: var(--t-med);
 }
-.game-card:hover .game-card__placeholder-icon {
-  transform: scale(1.1); opacity: 0.95; filter: drop-shadow(0 0 16px rgba(var(--theme-rgb), 0.6));
+@media (hover: hover) and (pointer: fine) {
+  .game-card:hover .game-card__placeholder-icon {
+    transform: scale(1.1); opacity: 0.95; filter: drop-shadow(0 0 16px rgba(var(--theme-rgb), 0.6));
+  }
 }
 
 /* Card badges & favorite pin */
@@ -594,7 +603,9 @@ body.crt-mode::before {
   letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px;
   color: var(--text-primary); transition: var(--t-fast);
 }
-.game-card:hover .game-card__name { color: var(--theme-bright); }
+@media (hover: hover) and (pointer: fine) {
+  .game-card:hover .game-card__name { color: var(--theme-bright); }
+}
 
 .game-card__desc {
   font-size: 0.82rem; color: var(--text-secondary); line-height: 1.4;
@@ -5090,7 +5101,7 @@ const GAMES_DATA = [
   const CURRENT_VER = 'v1.1.0';
 
   const $ = (s, doc = document) => doc.querySelector(s);
-  const $ = (s, doc = document) => doc.querySelectorAll(s);
+  const $$ = (s, doc = document) => doc.querySelectorAll(s);
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({
     '&': '&amp;',
     '<': '&lt;',
@@ -5279,7 +5290,7 @@ const GAMES_DATA = [
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem(KEY_THEME, theme);
-    $('.theme-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.theme === theme));
+    $$('.theme-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.theme === theme));
   }
   function initTheme() {
     const saved = localStorage.getItem(KEY_THEME) || 'dragon';
@@ -5656,7 +5667,7 @@ const GAMES_DATA = [
     const tagsHTML = item.tags.slice(0, 3).map(t => `<span class="game-card__tag">${esc(t)}</span>`).join('');
 
     return `
-      <div class="game-card" data-id="${esc(item.id)}">
+      <div class="game-card" data-id="${esc(item.id)}" role="button" tabindex="0" aria-label="Play ${esc(item.name)}">
         <div class="game-card__image">
           <span class="game-card__badge">${esc(item.badge || item.category)}</span>
           <button class="game-card__fav-btn ${isFav ? 'is-fav' : ''}" title="${isFav ? 'Remove Favorite' : 'Add to Favorites'}" data-fav-id="${esc(item.id)}">
@@ -5819,15 +5830,22 @@ const GAMES_DATA = [
     const gridRoot = $('#catalogRoot');
     if (gridRoot) gridRoot.innerHTML = content;
 
-    $('.game-card', gridRoot).forEach(card => {
+    $$('.game-card', gridRoot).forEach(card => {
       card.addEventListener('click', (e) => {
         if (e.target.closest('.game-card__fav-btn')) return;
         const id = card.dataset.id;
         openGame(id);
       });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          if (e.target.closest('.game-card__fav-btn')) return;
+          e.preventDefault();
+          openGame(card.dataset.id);
+        }
+      });
     });
 
-    $('.game-card__fav-btn', gridRoot).forEach(btn => {
+    $$('.game-card__fav-btn', gridRoot).forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         const id = btn.dataset.favId;
@@ -5889,7 +5907,7 @@ const GAMES_DATA = [
     const randomBtn = $('#randomGameBtn');
     if (randomBtn) randomBtn.addEventListener('click', openRandomGame);
 
-    $('.filter-pill', filterRoot).forEach(pill => {
+    $$('.filter-pill', filterRoot).forEach(pill => {
       pill.addEventListener('click', () => {
         currentCategory = pill.dataset.cat;
         renderFilterBar();
@@ -5897,7 +5915,7 @@ const GAMES_DATA = [
       });
     });
 
-    $('.tag-pill', filterRoot).forEach(pill => {
+    $$('.tag-pill', filterRoot).forEach(pill => {
       pill.addEventListener('click', () => {
         currentTag = pill.dataset.tag;
         renderFilterBar();
@@ -6197,7 +6215,7 @@ const GAMES_DATA = [
 
   // ---- Attach Settings Handlers ----
   function attachSettingsHandlers() {
-    $('.theme-btn').forEach(btn => {
+    $$('.theme-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         setTheme(btn.dataset.theme);
       });
@@ -6321,7 +6339,7 @@ const GAMES_DATA = [
     if (cloakBtn) cloakBtn.addEventListener('click', handleCloakClick);
     if (panicBtn) panicBtn.addEventListener('click', triggerPanic);
 
-    $('.nav-section-link').forEach(link => {
+    $$('.nav-section-link').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href').substring(1);
