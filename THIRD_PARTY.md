@@ -106,13 +106,28 @@ All third-party projects, assets, engines, and ROM emulators retain their respec
 | **Eaglercraft 1.8.8 (Offline WASM & JS)** | `games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html`, `games/singlefiles/Eaglercraft-1.8.8-offline-JS.html` | lax1dude (EaglercraftX) & Eaglercraft Contributors, archived by [EymenWSMC/eaglerarchive](https://github.com/EymenWSMC/eaglerarchive) | **GPL-3.0 / MIT wrapper** |
 | **Balatro (HTML5 Port)** | `games/singlefiles/Balatro.html` | LocalThunk (Web Community Port) | **Fan Port / Community Web Client** |
 | **Bloons TD4** | `games/singlefiles/Bloons-TD4.html` | Ninja Kiwi | **Web Port** |
+| **Cookie Clicker** | `games/singlefiles/Cookie-Clicker.html` | Julien "Orteil" Thiennot | **Web Edition** |
 | **Drive Mad** | `games/singlefiles/Drive-Mad.html` | Martin Magni (Fancade) | **Web Port** |
+| **Eggy Car** | `games/singlefiles/Eggy-Car.html` | Beedo Games | **Web Edition** |
 | **Escape Road** | `games/singlefiles/Escape-Road.html` | TinyTap / Web Authors | **Web Port** |
+| **Friday Night Funkin'** | `games/singlefiles/Friday-Night-Funkin.html` | Funkin' Crew (ninjamuffin99, PhantomArcade, evilsk8r, kawaisprite), web port by IamDanteDev | **Open-Source Web Port** |
+| **Geometry Dash** | `games/singlefiles/Geometry-Dash.html` | RobTop Games | **Web Edition** |
+| **Getaway Shootout** | `games/singlefiles/Getaway-Shootout.html` | New Eich Games | **Web Edition** |
+| **Krunker.io** | `games/singlefiles/Krunker.html` | Sidney de Vries / FRVR | **Web Edition (Live Site)** |
 | **Moto X3M 2** | `games/singlefiles/Moto-x3m-2.html` | MadPuffers | **Web Edition** |
+| **Paper.io 2** | `games/singlefiles/Paper-io-2.html` | Voodoo | **Web Edition** |
 | **Ragdoll Archers** | `games/singlefiles/Ragdoll-Archers.html` | Ericetto | **Web Edition** |
 | **Ragdoll Hit** | `games/singlefiles/Ragdoll-Hit.html` | Ericetto | **Web Edition** |
 | **Recoil** | `games/singlefiles/Recoil.html` | Nitrome | **Web Edition** |
+| **Retro Bowl** | `games/singlefiles/Retro-Bowl.html` | New Star Games | **Web Edition** |
+| **Run 3** | `games/singlefiles/Run-3.html` | Player 03 | **Web Edition** |
+| **Shell Shockers** | `games/singlefiles/Shell-Shockers.html` | Blue Wizard Digital | **Web Edition (Live Site)** |
+| **Smash Karts** | `games/singlefiles/Smash-Karts.html` | Tall Team | **Web Edition (Live Site)** |
+| **Slope** | `games/singlefiles/Slope.html` | RobKayS (published by Y8) | **Web Edition** |
 | **Snowrider 3D** | `games/singlefiles/Snowrider.html` | Snowrider Authors | **Web Edition** |
+| **Subway Surfers** | `games/singlefiles/Subway-Surfers.html` | SYBO Games | **Web Edition** |
+| **Temple Run 2** | `games/singlefiles/Temple-Run-2.html` | Imangi Studios | **Web Edition** |
+| **Vex 7** | `games/singlefiles/Vex-7.html` | Amazing Adam Games | **Web Edition** |
 | **Awesome Tanks 2** | `games/singlefiles/awesometanks2.html` | Mad Pixel Creation | **Web Edition** |
 | **Dreadhead Parkour** | `games/singlefiles/dreadheadparkour.htm` | GameTornado | **Web Edition** |
 
