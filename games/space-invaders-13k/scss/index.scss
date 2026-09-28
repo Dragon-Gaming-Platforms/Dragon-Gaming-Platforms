@@ -1,0 +1,208 @@
+body, button {
+  font-family: "Courier New", "Courier", "monospace";
+  font-size: 20px;
+}
+
+h1, h2 {
+  margin-top: 0px;
+}
+
+button {
+  padding: 1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#debug {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: red;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+#canvas {
+  height: 100vmin;
+  width: 100vmin;
+}
+
+.score {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  user-select: none;
+  color: white;
+}
+
+.mobile {
+  $size: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &-joystick {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    width: $size;
+    height: $size;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      border: 1px solid lightgray;
+      width: $size / 2;
+      height: $size / 2;
+      transform: translate(-50%, -50%);
+    }
+
+    &-handle {
+      $handle-size: $size / 4;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: $handle-size;
+      height: $handle-size;
+      transform: translate($size * 3 / 8, 0);
+
+      &-image {
+        position: relative;
+        transform: translate(-50%, -50%);
+        background-color: lightgray;
+        border-radius: 50%;
+        border: 1px solid white;
+        height: $handle-size;
+        width: $handle-size;
+      }
+    }
+  }
+
+  &-actions {
+    position: absolute;
+    bottom: $size / 4;
+    right: $size / 4;
+
+    &-button {
+      user-select: none;
+      border-radius: 50%;
+      border: 1px solid white;
+      width: 100px;
+      height: 100px;
+      font-size: 40px;
+    }
+  }
+}
+
+.menu {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-panel {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+    padding: 2rem;
+    background-color: white;
+
+    button {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.game-over {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+
+  &-header {
+    font-size: 50px;
+  }
+
+  &-score {
+    font-size: 30px;
+  }
+}
+
+#input-source {
+  display: flex;
+  padding: 1rem;
+
+  input, label {
+    cursor: pointer;
+  }
+
+  label {
+    margin-left: 5px;
+  }
+
+  div {
+    display: flex;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+[hidden] {
+  display: none;
+}

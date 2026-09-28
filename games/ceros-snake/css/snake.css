@@ -1,0 +1,15 @@
+html, body {
+    background-color: #131019;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
+    display: block;
+}
+
+#game {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

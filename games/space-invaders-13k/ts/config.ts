@@ -1,0 +1,14 @@
+export const FIRE_COOLDOWN = 0.1;
+export const PROJECTILE_SPEED = 1000;
+export const PROJECTILE_SIZE = 5;
+export const PLAYER_SPEED = 10;
+export const GAMEPAD_EPSILON = 0.3;
+export const ENEMY_SIZE = 20;
+export const WORLD_SIZE = 1000;
+export const PLAYER_SIZE = 20;
+export const PLAYER_OFFSET = 50;
+export const PARTICLE_LIFESPAN = 1;
+export const PARTICLE_SIZE = 5;
+export const PARTICLE_SPEED = 5;
+export const CENTER_RADIUS = 70;
+export const ENEMY_SPAWN_COOLDOWN = 1;

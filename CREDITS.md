@@ -2,29 +2,38 @@
     
 Dragon Gaming Platforms is built with and powered by an incredible ecosystem of open-source games, web technologies, and emulators:
 
-### Core Tools & Engines
+### Core Tools & Emulators
 - [Eruda Developer Console](https://github.com/liriliri/eruda) (MIT)
 - [EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) (GPL-3.0)
+- [Infinite Mac](https://github.com/mihaip/infinite-mac) — Classic Macintosh WebAssembly emulator by Mihai Parparita (MIT / GPL-2.0)
 - [AnuraOS](https://github.com/MercuryWorkshop/anuraOS) (AGPL-3.0)
-- [binjgb (Game Boy WASM)](https://github.com/binji/binjgb) (MIT)
-- [CHIP-8 Virtual Machine](https://github.com/alexanderdickson/Chip-8-Emulator) (Public Domain / Open)
 - [CyberChef](https://github.com/gchq/CyberChef) (Apache-2.0)
+- [GUST Browser](https://gust.lol)
 - [Scramjet](https://github.com/mercuryworkshop/scramjet)
 - [Interstellar](https://github.com/useinterstellar/interstellar)
 - [Incognito](https://incog.works)
 
 ### Open Source Games
 - **SpaceCadetPinball (WASM)** — [k4zmu2a](https://github.com/k4zmu2a/SpaceCadetPinball) & [alula](https://github.com/alula/SpaceCadetPinball) (MIT / 2-Clause BSD)
-- **We Become What We Behold** — [Nicky Case](https://github.com/ncase/wbwwb) (CC0-1.0)
-- **The Evolution of Trust** — [Nicky Case](https://github.com/ncase/trust) (CC0-1.0)
-- **Parable of the Polygons** — [Vi Hart & Nicky Case](https://github.com/ncase/polygons) (CC0-1.0)
-- **Sight & Light** — [Nicky Case](https://github.com/ncase/sight-and-light) (MIT)
-- **Javascript Racer (OutRun 3D)** — [Jake Gordon](https://github.com/jakesgordon/javascript-racer) (MIT)
-- **Tiny Platformer** — [Jake Gordon](https://github.com/jakesgordon/javascript-tiny-platformer) (MIT)
-- **Retro Snakes** — [Jake Gordon](https://github.com/jakesgordon/javascript-snakes) (MIT)
-- **Floppy Bird** — [Nebez Briefkani](https://github.com/nebez/floppybird) (Apache-2.0)
-- **Flappy Bird Canvas** — [CodeExplained](https://github.com/CodeExplainedRepo/FlappyBird-JavaScript) (MIT)
-- **Classic Pacman Canvas** — [Dale Harvey](https://github.com/daleharvey/pacman) (MIT)
+- **Q1K3 (Quake 13k)** — [Dominic Szablewski / phoboslab](https://github.com/phoboslab/q1k3) (MIT)
+- **Underrun** — [Dominic Szablewski / phoboslab](https://github.com/phoboslab/underrun) (MIT)
+- **Dante (JS13k Winner)** — [Salvatore Previti](https://github.com/js13kGames/dante) (MIT)
+- **Behind Asteroids** — [Greweb](https://github.com/gre/behind-asteroids) (MIT)
+- **JavaScript Racer (Outrun 3D)** — [Jake Gordon](https://github.com/jakesgordon/javascript-racer) (MIT)
+- **Astray (3D WebGL Maze)** — [wwwtyro](https://github.com/wwwtyro/Astray) (MIT)
+- **0h h1** — [Martin Kool / Q42](https://github.com/florisluiten/0hh1) (MIT)
+- **0h n0** — [Martin Kool / Q42](https://github.com/Techdojo/0hn0) (MIT)
+- **Predecessors** — [Sami Heikkinen & Tero Jäntti](https://github.com/js13kGames/predecessors) (MIT)
+- **Space Invaders 13k** — [Konrad Linkowski](https://github.com/js13kGames/space-invaders) (MIT)
+- **Rescue Copter** — [gregpabian](https://github.com/gregpabian/rescuecopter-js13k) (MIT)
+- **Pac-Man Classic** — [Dale Harvey](https://github.com/daleharvey/pacman) (MIT)
+- **Doom 13K** — [Nicholas Carlini](https://github.com/carlini/js13k2019-yet-another-doom-clone) (MIT)
+- **Offline Paradise** — [Daniel C / daniely7](https://github.com/js13kGames/offline-paradise) (MIT)
+- **Devil Glitches** — [NonCho](https://github.com/js13kGames/devil-glitches) (MIT)
+- **Captain Callisto** — [Cody Ebberson](https://github.com/codyebberson/js13k-callisto) (MIT)
+- **Island Not Found** — [Jack Rugile](https://github.com/js13kGames/island-not-found) (MIT)
+- **SpacePi** — [Erik Rasmussen](https://github.com/js13kGames/spacepi) (MIT)
+- **Elematter** — [Remus C / remusc](https://github.com/js13kGames/elematter) (MIT)
 - **Tower Game** — [iamkun](https://github.com/iamkun/tower_game) (MIT)
 - **T-Rex Dino Runner** — [wayou](https://github.com/wayou/t-rex-runner) & Chromium Authors (BSD-3-Clause)
 - **BreakLock (Pattern Lock Mastermind)** — [maxwellito](https://github.com/maxwellito/breaklock) (MIT)
@@ -64,9 +73,6 @@ Dragon Gaming Platforms is built with and powered by an incredible ecosystem of 
 - **1255 Burgomaster** — [Burgomaster Team](https://github.com/1255-burgomaster) (GPL-3.0)
 - **CrappyBird** — [CrappyBird Team](https://github.com/crappybird) (MIT)
 - **CrystalQuest** — [CrystalQuest Team](https://github.com/crystalquest) (MIT)
-- **Slow Roads 3D** — [Anslo](https://slowroads.io)
-- **Sandboxels** — [R74n](https://sandboxels.r74n.com)
-- **There Is No Game** — [Pascal Cammisotto / Draw Me A Pixel](https://drawmeapixel.com)
 
 __NOTICE:__
 All third-party open-source projects, assets, and engines retain their respective licenses and copyrights.
