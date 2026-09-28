@@ -5181,7 +5181,15 @@ const GAMES_DATA = [
       dropdownToggle.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        if (window.innerWidth <= 768) dropdownRoot.classList.toggle('open');
+        // Toggle on any device that can't hover (touch phones AND tablets) or on the
+        // mobile drawer width. On hover-capable pointers CSS :hover reveals the menu.
+        if (window.matchMedia('(hover: none)').matches || window.innerWidth <= 768) {
+          dropdownRoot.classList.toggle('open');
+        }
+      });
+      // Tap/click outside the dropdown closes it (so it can't get stuck open on touch).
+      document.addEventListener('click', (e) => {
+        if (!dropdownRoot.contains(e.target)) dropdownRoot.classList.remove('open');
       });
     }
 
