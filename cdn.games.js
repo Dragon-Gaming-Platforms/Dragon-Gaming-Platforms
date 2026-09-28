@@ -1367,6 +1367,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "eaglercraft-1-8-8-offline-js",
+    "category": "games",
+    "name": "Eaglercraft 1.8.8 Offline JS",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-1.8.8-offline-JS.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "Eaglercraft 1.8.8 Offline JS (TeaVM JavaScript runtime) playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
     "id": "eaglercraft-1-8-8-offline-wasm",
     "category": "games",
     "name": "Eaglercraft 1.8.8 Offline WASM",
@@ -1378,20 +1392,6 @@ const GAMES_DATA = [
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Eaglercraft 1.8.8 Offline WASM playable in your web browser.",
-    "controls": "Keyboard / Mouse"
-  },
-  {
-    "id": "eaglercraft-js-1-8-8",
-    "category": "games",
-    "name": "Eaglercraft JS 1.8.8",
-    "tags": [
-      "games",
-      "html5"
-    ],
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-JS-1.8.8.html",
-    "shelf": "Arcade & Action",
-    "badge": "",
-    "desc": "Eaglercraft JS 1.8.8 playable in your web browser.",
     "controls": "Keyboard / Mouse"
   },
   {
