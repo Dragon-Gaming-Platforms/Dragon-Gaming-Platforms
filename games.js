@@ -1338,6 +1338,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "eaglercraft-1-12-2-offline-js",
+    "category": "games",
+    "name": "Eaglercraft 1.12.2 Offline JS",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Eaglercraft-1.12.2-offline-JS.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "Eaglercraft 1.12.2 Offline JS (TeaVM JavaScript runtime) playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
     "id": "eaglercraft-1-12-2-offline-wasm",
     "category": "games",
     "name": "Eaglercraft 1.12.2 Offline WASM",
@@ -1349,20 +1363,6 @@ const GAMES_DATA = [
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Eaglercraft 1.12.2 Offline WASM playable in your web browser.",
-    "controls": "Keyboard / Mouse"
-  },
-  {
-    "id": "eaglercraft-1-8-8-offline-wasm",
-    "category": "games",
-    "name": "Eaglercraft 1.8.8 Offline WASM",
-    "tags": [
-      "games",
-      "html5"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html",
-    "shelf": "Arcade & Action",
-    "badge": "",
-    "desc": "Eaglercraft 1.8.8 Offline WASM playable in your web browser.",
     "controls": "Keyboard / Mouse"
   },
   {
