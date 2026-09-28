@@ -6,6 +6,36 @@
 const GAMES_DATA = [
   {
     "category": "games",
+    "name": "0h h1",
+    "tags": [
+      "games",
+      "puzzle",
+      "logic",
+      "casual"
+    ],
+    "path": "./games/0hh1/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "Puzzle",
+    "description": "A lovely little binary logic puzzle game by Q42 / Martin Kool \u2014 fill the grid with red and blue tiles following 3 rules.",
+    "controls": "Mouse Click / Touch: Cycle Empty / Red / Blue Tiles"
+  },
+  {
+    "category": "games",
+    "name": "0h n0",
+    "tags": [
+      "games",
+      "puzzle",
+      "logic",
+      "casual"
+    ],
+    "path": "./games/0hn0/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "Puzzle",
+    "description": "Companion logic game to 0h h1 by Q42 \u2014 deduce tile counts and connect dots according to visibility rules.",
+    "controls": "Mouse Click / Touch: Cycle Blue / Red Dots"
+  },
+  {
+    "category": "games",
     "name": "1255 Burgomaster",
     "tags": [
       "games",
@@ -231,6 +261,22 @@ const GAMES_DATA = [
   },
   {
     "category": "games",
+    "name": "Astray (3D Maze)",
+    "tags": [
+      "games",
+      "3d",
+      "puzzle",
+      "webgl",
+      "physics"
+    ],
+    "path": "./games/astray/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "3D WebGL",
+    "description": "3D WebGL physics maze exploration powered by Three.js and Box2D \u2014 roll your sphere to find the exit portal.",
+    "controls": "WASD / Arrow Keys: Roll Sphere | Space: Jump | Mouse: Orbit Camera"
+  },
+  {
+    "category": "games",
     "name": "Auction Fever",
     "tags": [
       "games",
@@ -373,6 +419,22 @@ const GAMES_DATA = [
     "badge": "",
     "description": "Beat Bento playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Behind Asteroids",
+    "tags": [
+      "games",
+      "arcade",
+      "action",
+      "js13k",
+      "retro"
+    ],
+    "path": "./games/behind-asteroids/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "JS13k #1",
+    "description": "Play as the greedy arcade machine throwing asteroids at humans playing Asteroids to take their coins.",
+    "controls": "Mouse / Touch: Drag & Aim Asteroids | Release to Launch at Spaceship"
   },
   {
     "category": "emulators",
@@ -961,6 +1023,22 @@ const GAMES_DATA = [
     "badge": "TOOL",
     "description": "The Cyber Swiss Army Knife for encryption, encoding, compression and data analysis.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Dante",
+    "tags": [
+      "games",
+      "3d",
+      "action",
+      "adventure",
+      "js13k"
+    ],
+    "path": "./games/dante/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "JS13k #1",
+    "description": "1st Place Winner JS13k 2022 \u2014 guide Dante the little devil through a twisted 3D hell to save 13 lost souls.",
+    "controls": "WASD / Arrow Keys: Move Dante | Space / Click: Action & Levers"
   },
   {
     "category": "games",
@@ -1765,6 +1843,22 @@ const GAMES_DATA = [
   },
   {
     "category": "games",
+    "name": "JavaScript Racer (Outrun 3D)",
+    "tags": [
+      "games",
+      "racing",
+      "3d",
+      "retro",
+      "arcade"
+    ],
+    "path": "./games/javascript-racer/index.html",
+    "shelf": "Sports & Racing",
+    "badge": "Retro 3D",
+    "description": "Outrun-style pseudo-3D road racing game with hills, curves, sprite scaling, and high-speed traffic.",
+    "controls": "Up Arrow: Accelerate | Down Arrow: Brake | Left / Right Arrows: Steer"
+  },
+  {
+    "category": "games",
     "name": "Jolly Jumper Endless",
     "tags": [
       "arcade",
@@ -2439,6 +2533,22 @@ const GAMES_DATA = [
   },
   {
     "category": "games",
+    "name": "Predecessors",
+    "tags": [
+      "games",
+      "strategy",
+      "turn-based",
+      "js13k",
+      "medieval"
+    ],
+    "path": "./games/predecessors/index.html",
+    "shelf": "Strategy & Idle",
+    "badge": "JS13k",
+    "description": "Tactical medieval 13th-century strategy game \u2014 command knights, archers, and pikemen to conquer fortresses.",
+    "controls": "Mouse / Touch: Select Units and Orders | Space / Enter: End Turn"
+  },
+  {
+    "category": "games",
     "name": "Prism Breaker",
     "tags": [
       "games",
@@ -2605,6 +2715,22 @@ const GAMES_DATA = [
     "badge": "",
     "description": "Relay Coordination playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Rescue Copter",
+    "tags": [
+      "games",
+      "flight",
+      "simulation",
+      "action",
+      "js13k"
+    ],
+    "path": "./games/rescue-copter/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "Action",
+    "description": "Pilot a firefighting rescue helicopter \u2014 scoop water from lakes and extinguish raging forest fires.",
+    "controls": "WASD / Arrow Keys: Fly Helicopter | Space: Drop Water"
   },
   {
     "category": "games",
@@ -2954,6 +3080,22 @@ const GAMES_DATA = [
     "badge": "ROGUELITE",
     "description": "Procedural pixel-art run-and-gun roguelite action platformer by Frank Force with explosive destruction.",
     "controls": "WASD / Arrow Keys to Move, Mouse to Aim & Shoot, Space to Jump"
+  },
+  {
+    "category": "games",
+    "name": "Space Invaders 13k",
+    "tags": [
+      "games",
+      "arcade",
+      "retro",
+      "shooter",
+      "js13k"
+    ],
+    "path": "./games/space-invaders-13k/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "Retro",
+    "description": "Classic arcade Space Invaders recreated with smooth particles, shields, and escalating waves in 13KB.",
+    "controls": "Left / Right Arrows or A / D: Move Cannon | Space: Fire Laser"
   },
   {
     "category": "games",
@@ -4156,7 +4298,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 250 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 259 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>

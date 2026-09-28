@@ -2,17 +2,38 @@
     
 Dragon Gaming Platforms is built with and powered by an incredible ecosystem of open-source games, web technologies, and emulators:
 
-### Core Tools & Engines
+### Core Tools & Emulators
 - [Eruda Developer Console](https://github.com/liriliri/eruda) (MIT)
 - [EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) (GPL-3.0)
+- [Infinite Mac](https://github.com/mihaip/infinite-mac) — Classic Macintosh WebAssembly emulator by Mihai Parparita (MIT / GPL-2.0)
 - [AnuraOS](https://github.com/MercuryWorkshop/anuraOS) (AGPL-3.0)
 - [CyberChef](https://github.com/gchq/CyberChef) (Apache-2.0)
+- [GUST Browser](https://gust.lol)
 - [Scramjet](https://github.com/mercuryworkshop/scramjet)
 - [Interstellar](https://github.com/useinterstellar/interstellar)
 - [Incognito](https://incog.works)
 
 ### Open Source Games
 - **SpaceCadetPinball (WASM)** — [k4zmu2a](https://github.com/k4zmu2a/SpaceCadetPinball) & [alula](https://github.com/alula/SpaceCadetPinball) (MIT / 2-Clause BSD)
+- **Q1K3 (Quake 13k)** — [Dominic Szablewski / phoboslab](https://github.com/phoboslab/q1k3) (MIT)
+- **Underrun** — [Dominic Szablewski / phoboslab](https://github.com/phoboslab/underrun) (MIT)
+- **Dante (JS13k Winner)** — [Salvatore Previti](https://github.com/js13kGames/dante) (MIT)
+- **Behind Asteroids** — [Greweb](https://github.com/gre/behind-asteroids) (MIT)
+- **JavaScript Racer (Outrun 3D)** — [Jake Gordon](https://github.com/jakesgordon/javascript-racer) (MIT)
+- **Astray (3D WebGL Maze)** — [wwwtyro](https://github.com/wwwtyro/Astray) (MIT)
+- **0h h1** — [Martin Kool / Q42](https://github.com/florisluiten/0hh1) (MIT)
+- **0h n0** — [Martin Kool / Q42](https://github.com/Techdojo/0hn0) (MIT)
+- **Predecessors** — [Sami Heikkinen & Tero Jäntti](https://github.com/js13kGames/predecessors) (MIT)
+- **Space Invaders 13k** — [Konrad Linkowski](https://github.com/js13kGames/space-invaders) (MIT)
+- **Rescue Copter** — [gregpabian](https://github.com/gregpabian/rescuecopter-js13k) (MIT)
+- **Pac-Man Classic** — [Dale Harvey](https://github.com/daleharvey/pacman) (MIT)
+- **Doom 13K** — [Nicholas Carlini](https://github.com/carlini/js13k2019-yet-another-doom-clone) (MIT)
+- **Offline Paradise** — [Daniel C / daniely7](https://github.com/js13kGames/offline-paradise) (MIT)
+- **Devil Glitches** — [NonCho](https://github.com/js13kGames/devil-glitches) (MIT)
+- **Captain Callisto** — [Cody Ebberson](https://github.com/codyebberson/js13k-callisto) (MIT)
+- **Island Not Found** — [Jack Rugile](https://github.com/js13kGames/island-not-found) (MIT)
+- **SpacePi** — [Erik Rasmussen](https://github.com/js13kGames/spacepi) (MIT)
+- **Elematter** — [Remus C / remusc](https://github.com/js13kGames/elematter) (MIT)
 - **Tower Game** — [iamkun](https://github.com/iamkun/tower_game) (MIT)
 - **T-Rex Dino Runner** — [wayou](https://github.com/wayou/t-rex-runner) & Chromium Authors (BSD-3-Clause)
 - **BreakLock (Pattern Lock Mastermind)** — [maxwellito](https://github.com/maxwellito/breaklock) (MIT)

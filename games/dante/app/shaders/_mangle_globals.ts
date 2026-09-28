@@ -1,0 +1,21 @@
+/** Map of uniforms and globals to be renamed in all shaders at build time */
+export default {
+  projectionMatrix: "a",
+  viewMatrix: "b",
+  worldMatrix: "c",
+  aColor: "d",
+  aNormal: "e",
+  aPosition: "f",
+  csm_texture0: "g",
+  csm_texture1: "h",
+  csm_matrix0: "i",
+  csm_matrix1: "w",
+  viewPos: "j",
+  Color: "k",
+  FragPos: "l",
+  UntransformedFragPos: "m",
+  VNormal: "n",
+  modelId: "i",
+  groundTexture: "d",
+  iResolution: "c",
+};
