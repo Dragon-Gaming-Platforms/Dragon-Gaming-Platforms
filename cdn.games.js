@@ -2895,7 +2895,7 @@ const GAMES_DATA = [
       "games",
       "html5"
     ],
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Ragdoll-Hit.html",
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ragdoll-hit/",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Hilarious physics-based stickman fighting game — trade punches, kicks and grabs in wobbly ragdoll duels.",
