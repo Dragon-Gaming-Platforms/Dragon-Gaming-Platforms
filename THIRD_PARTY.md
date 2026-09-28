@@ -109,7 +109,8 @@ All third-party projects, assets, engines, and ROM emulators retain their respec
 | **Drive Mad** | `games/singlefiles/Drive-Mad.html` | Martin Magni (Fancade) | **Web Port** |
 | **Escape Road** | `games/singlefiles/Escape-Road.html` | TinyTap / Web Authors | **Web Port** |
 | **Moto X3M 2** | `games/singlefiles/Moto-x3m-2.html` | MadPuffers | **Web Edition** |
-| **Ragdoll Archers** | `games/singlefiles/Ragdoll-Archers.html` | Eric Gurt | **Web Edition** |
+| **Ragdoll Archers** | `games/singlefiles/Ragdoll-Archers.html` | Ericetto | **Web Edition** |
+| **Ragdoll Hit** | `games/singlefiles/Ragdoll-Hit.html` | Ericetto | **Web Edition** |
 | **Recoil** | `games/singlefiles/Recoil.html` | Nitrome | **Web Edition** |
 | **Snowrider 3D** | `games/singlefiles/Snowrider.html` | Snowrider Authors | **Web Edition** |
 | **Awesome Tanks 2** | `games/singlefiles/awesometanks2.html` | Mad Pixel Creation | **Web Edition** |
