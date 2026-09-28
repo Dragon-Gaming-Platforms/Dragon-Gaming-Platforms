@@ -545,6 +545,22 @@ const GAMES_DATA = [
   },
   {
     "category": "games",
+    "name": "Captain Callisto",
+    "tags": [
+      "games",
+      "adventure",
+      "sci-fi",
+      "mining",
+      "js13k"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/captain-callisto/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "JS13k",
+    "description": "Sci-fi mining and exploration adventure on Jupiter's moon Callisto with upgrades and alien defense.",
+    "controls": "WASD / Arrows: Move Thrusters | Mouse / Space: Mine & Laser | E / Enter: Shop & Upgrade"
+  },
+  {
+    "category": "games",
     "name": "Captain Rogers: Asteroid Belt",
     "tags": [
       "action",
@@ -978,6 +994,22 @@ const GAMES_DATA = [
   },
   {
     "category": "games",
+    "name": "Devil Glitches",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "retro",
+      "js13k"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/devil-glitches/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "JS13k",
+    "description": "Action arcade shooter with glitch aesthetics \u2014 fight waves of corrupted demons and collect data powerups.",
+    "controls": "WASD / Arrows: Move | Mouse: Aim & Shoot | Space: Dash / Glitch Pulse"
+  },
+  {
+    "category": "games",
     "name": "Diablo JS Web Engine",
     "tags": [
       "rpg",
@@ -1034,6 +1066,23 @@ const GAMES_DATA = [
     "badge": "",
     "description": "Dojo Duel playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Doom 13K",
+    "tags": [
+      "games",
+      "3d",
+      "fps",
+      "action",
+      "retro",
+      "js13k"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/doom-13k/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "3D FPS",
+    "description": "Raycasting 3D retro first-person shooter in 13KB JavaScript with enemies, doors, and classic Doom vibes.",
+    "controls": "WASD / Arrow Keys: Move & Turn | Space / Left Click: Shoot | E / Enter: Open Doors"
   },
   {
     "category": "games",
@@ -1201,6 +1250,22 @@ const GAMES_DATA = [
     "badge": "EMU",
     "description": "Browser-based virtual system and hardware emulator.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "Elematter",
+    "tags": [
+      "games",
+      "arcade",
+      "puzzle",
+      "action",
+      "js13k"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/elematter/index.html",
+    "shelf": "Puzzle & Logic",
+    "badge": "Arcade",
+    "description": "Fast elemental particle puzzle shooter \u2014 balance fire, water, earth, and air to clear cosmic energy.",
+    "controls": "Mouse: Aim & Shoot | 1-4 / Space: Switch Element | P: Pause"
   },
   {
     "category": "games",
@@ -1654,6 +1719,22 @@ const GAMES_DATA = [
     "badge": "GBA",
     "description": "Pure JavaScript Game Boy Advance emulator core with direct ROM drag & drop support.",
     "controls": "Arrow Keys (D-pad), Z (A), X (B), A (L), S (R), Enter (Start), Shift (Select)"
+  },
+  {
+    "category": "games",
+    "name": "Island Not Found",
+    "tags": [
+      "games",
+      "3d",
+      "adventure",
+      "survival",
+      "js13k"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/island-not-found/index.html",
+    "shelf": "RPG & Adventure",
+    "badge": "3D",
+    "description": "Atmospheric low-poly 3D island survival \u2014 explore dynamic procedural landscapes and solve island mysteries.",
+    "controls": "WASD: Move | Mouse: Look | Space: Jump | Left Click: Interact / Gather"
   },
   {
     "category": "games",
@@ -2116,6 +2197,22 @@ const GAMES_DATA = [
     "badge": "CASUAL",
     "description": "Endless vertical platform jumper starring GitHub\u2019s mascot Octocat.",
     "controls": "Left / Right Arrow Keys"
+  },
+  {
+    "category": "games",
+    "name": "Offline Paradise",
+    "tags": [
+      "games",
+      "platformer",
+      "action",
+      "js13k",
+      "speedrun"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/offline-paradise/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "JS13k",
+    "description": "Thrilling fast-paced 2D precision platformer \u2014 dash, double-jump, wall-slide, and dodge lethal lasers.",
+    "controls": "A / D or Left / Right: Move | Space / W / Up: Jump | Shift / K: Dash | R: Restart"
   },
   {
     "category": "games",
@@ -2888,6 +2985,22 @@ const GAMES_DATA = [
     "badge": "",
     "description": "SpaceCompany playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "category": "games",
+    "name": "SpacePi",
+    "tags": [
+      "games",
+      "arcade",
+      "space",
+      "shooter",
+      "js13k"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/spacepi/index.html",
+    "shelf": "Arcade & Action",
+    "badge": "Arcade",
+    "description": "Neon arcade space shooter \u2014 pilot your craft through asteroid fields and annihilate enemy squadrons.",
+    "controls": "WASD / Arrow Keys: Fly | Space / Left Click: Fire Lasers | Shift: Boost"
   },
   {
     "category": "games",
