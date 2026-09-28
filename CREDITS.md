@@ -77,6 +77,8 @@ Dragon Gaming Platforms is built with and powered by an incredible ecosystem of 
 - **1255 Burgomaster** — [Burgomaster Team](https://github.com/1255-burgomaster) (GPL-3.0)
 - **CrappyBird** — [CrappyBird Team](https://github.com/crappybird) (MIT)
 - **CrystalQuest** — [CrystalQuest Team](https://github.com/crystalquest) (MIT)
+- **Cellmates Prison Break** — [Matt Greer / city41](https://github.com/gamebytes/cellmates) (Global Game Jam 2013; runs on the open-source ImpactJS engine)
+- **Eaglercraft (1.5.2 / 1.8.8 / 1.12.2 offline clients)** — [lax1dude](https://github.com/lax1dude) & contributors; 1.12.2 JS client from the [EymenWSMC eaglerarchive](https://github.com/EymenWSMC/eaglerarchive) (GPL-3.0)
 
 __NOTICE:__
 All third-party open-source projects, assets, and engines retain their respective licenses and copyrights.

@@ -1338,6 +1338,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "eaglercraft-1-12-2-offline-js",
+    "category": "games",
+    "name": "Eaglercraft 1.12.2 Offline JS",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "./games/singlefiles/Eaglercraft-1.12.2-offline-JS.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "Eaglercraft 1.12.2 Offline JS (TeaVM JavaScript runtime) playable in your web browser.",
+    "controls": "Keyboard / Mouse"
+  },
+  {
     "id": "eaglercraft-1-12-2-offline-wasm",
     "category": "games",
     "name": "Eaglercraft 1.12.2 Offline WASM",
@@ -4453,7 +4467,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 252 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 253 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>
