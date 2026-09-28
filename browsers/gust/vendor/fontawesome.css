@@ -1,0 +1,115 @@
+/* Font Awesome 6 Local Offline Stylesheet & Icon Definitions for GUST */
+.fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  font-family: 'Font Awesome 6 Free', 'FontAwesome', sans-serif;
+  font-weight: 900;
+}
+.far, .fa-regular { font-weight: 400; }
+.fab, .fa-brands { font-family: 'Font Awesome 6 Brands', 'FontAwesome', sans-serif; font-weight: 400; }
+
+.fa-lg { font-size: 1.25em; line-height: 0.05em; vertical-align: -0.075em; }
+.fa-sm { font-size: 0.875em; }
+.fa-xs { font-size: 0.75em; }
+.fa-fw { text-align: center; width: 1.25em; }
+
+/* Icon Glyph Unicodes */
+.fa-magnifying-glass:before, .fa-search:before { content: "002"; }
+.fa-magnifying-glass-plus:before { content: "00e"; }
+.fa-magnifying-glass-minus:before { content: "010"; }
+.fa-gear:before, .fa-cog:before { content: "013"; }
+.fa-house:before, .fa-home:before { content: "015"; }
+.fa-lock:before { content: "023"; }
+.fa-bookmark:before { content: "02e"; }
+.fa-camera:before { content: "030"; }
+.fa-image:before, .fa-photo:before { content: "03e"; }
+.fa-pen:before, .fa-pencil:before { content: "304"; }
+.fa-arrow-left:before { content: "060"; }
+.fa-arrow-right:before { content: "061"; }
+.fa-arrow-up:before { content: "062"; }
+.fa-arrow-down:before { content: "063"; }
+.fa-plus:before { content: "067"; }
+.fa-minus:before { content: "068"; }
+.fa-xmark:before, .fa-times:before, .fa-close:before { content: "00d"; }
+.fa-check:before { content: "00c"; }
+.fa-check-circle:before, .fa-circle-check:before { content: "058"; }
+.fa-circle-xmark:before, .fa-circle-minus:before { content: "057"; }
+.fa-circle-info:before, .fa-info-circle:before { content: "05a"; }
+.fa-triangle-exclamation:before, .fa-warning:before { content: "071"; }
+.fa-shield-halved:before, .fa-shield:before { content: "3ed"; }
+.fa-rotate-right:before, .fa-rotate:before, .fa-redo:before { content: "01e"; }
+.fa-rotate-left:before, .fa-undo:before, .fa-arrow-rotate-left:before { content: "0e2"; }
+.fa-expand:before { content: "065"; }
+.fa-compress:before { content: "066"; }
+.fa-eye:before { content: "06e"; }
+.fa-eye-slash:before { content: "070"; }
+.fa-film:before { content: "008"; }
+.fa-download:before { content: "019"; }
+.fa-upload:before { content: "093"; }
+.fa-globe:before, .fa-earth-americas:before { content: "0ac"; }
+.fa-link:before { content: "0c1"; }
+.fa-copy:before { content: "0c5"; }
+.fa-sliders:before, .fa-sliders-h:before { content: "1de"; }
+.fa-table-cells-large:before, .fa-th-large:before { content: "009"; }
+.fa-table-columns:before, .fa-columns:before { content: "0db"; }
+.fa-list-check:before, .fa-tasks:before { content: "0ae"; }
+.fa-music:before { content: "001"; }
+.fa-heart:before { content: "004"; }
+.fa-star:before { content: "005"; }
+.fa-user-secret:before { content: "21b"; }
+.fa-trash:before, .fa-trash-can:before { content: "1f8"; }
+.fa-power-off:before { content: "011"; }
+.fa-volume-high:before, .fa-volume-up:before { content: "028"; }
+.fa-volume-xmark:before, .fa-volume-mute:before { content: "6a9"; }
+.fa-clock:before { content: "017"; }
+.fa-clock-rotate-left:before, .fa-history:before { content: "1da"; }
+.fa-code:before { content: "121"; }
+.fa-keyboard:before { content: "11c"; }
+.fa-language:before { content: "1ab"; }
+.fa-sun:before { content: "185"; }
+.fa-moon:before { content: "186"; }
+.fa-palette:before { content: "53f"; }
+.fa-plug:before { content: "1e6"; }
+.fa-plug-circle-xmark:before { content: "\e560"; }
+.fa-server:before { content: "233"; }
+.fa-database:before { content: "1c0"; }
+.fa-network-wired:before { content: "6ff"; }
+.fa-bolt:before { content: "0e7"; }
+.fa-ban:before { content: "05e"; }
+.fa-play:before { content: "04b"; }
+.fa-pause:before { content: "04c"; }
+.fa-stop:before { content: "04d"; }
+.fa-forward-step:before, .fa-step-forward:before { content: "051"; }
+.fa-backward-step:before, .fa-step-backward:before { content: "048"; }
+.fa-file-pdf:before { content: "1c1"; }
+.fa-file-code:before { content: "1c9"; }
+.fa-file-lines:before, .fa-file-text:before { content: "15c"; }
+.fa-file-arrow-down:before { content: "56d"; }
+.fa-file-circle-exclamation:before { content: "\e4eb"; }
+.fa-github:before { content: "09b"; }
+.fa-wind:before { content: "72e"; }
+.fa-wave-square:before { content: "83e"; }
+.fa-chevron-down:before { content: "078"; }
+.fa-chevron-up:before { content: "077"; }
+.fa-chevron-left:before { content: "053"; }
+.fa-chevron-right:before { content: "054"; }
+.fa-angles-down:before { content: "103"; }
+.fa-arrow-right-to-bracket:before { content: "090"; }
+.fa-arrow-right-arrow-left:before { content: "0ec"; }
+.fa-arrows-left-right:before { content: "07e"; }
+.fa-shuffle:before, .fa-random:before { content: "074"; }
+.fa-filter:before { content: "0b0"; }
+.fa-align-left:before { content: "036"; }
+.fa-text-width:before { content: "035"; }
+.fa-font:before { content: "031"; }
+.fa-spell-check:before { content: "891"; }
+.fa-cookie-bite:before { content: "564"; }
+.fa-address-card:before { content: "2bb"; }
+.fa-chart-bar:before, .fa-chart-simple:before { content: "080"; }
+.fa-layer-group:before { content: "5fd"; }
+.fa-map:before { content: "279"; }
