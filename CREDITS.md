@@ -10,8 +10,12 @@ Dragon Gaming Platforms is built with and powered by an incredible ecosystem of 
 - [CyberChef](https://github.com/gchq/CyberChef) (Apache-2.0)
 - [GUST Browser](https://gust.lol)
 - [Scramjet](https://github.com/mercuryworkshop/scramjet)
-- [Interstellar](https://github.com/useinterstellar/interstellar)
-- [Incognito](https://incog.works)
+- [IodineGBA](https://github.com/taisel/IodineGBA) — Game Boy Advance emulator by Grant Galitz (MIT)
+
+### Vendored Runtimes & Libraries
+- [ImpactJS 1.24](https://github.com/phoboslab/impact) — game engine vendored for Cellmates by Dominic Szablewski (MIT)
+- [jQuery 1.4.4](https://jquery.org) — vendored locally for Arashi JS, OpenJS Foundation (MIT)
+- [XAudioJS](https://github.com/taisel/XAudioJS) — audio layer for IodineGBA by Grant Galitz (MIT)
 
 ### Open Source Games
 - **SpaceCadetPinball (WASM)** — [k4zmu2a](https://github.com/k4zmu2a/SpaceCadetPinball) & [alula](https://github.com/alula/SpaceCadetPinball) (MIT / 2-Clause BSD)

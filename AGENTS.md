@@ -59,8 +59,6 @@ Dragon-Gaming-Platforms/
 │
 ├── browsers/                   # Web proxy frontend portals
 │   ├── GUST.html               # GUST unblocked browser portal
-│   ├── Incognito.html          # Stealth proxy wrapper
-│   ├── Interstellar.html       # Web proxy interface
 │   ├── Scramjet.html           # WebAssembly-powered proxy interface
 │   └── gust/                   # GUST browser supporting assets
 │
@@ -68,7 +66,7 @@ Dragon-Gaming-Platforms/
     └── CyberChef/              # The Cyber Swiss Army Knife for encryption, encoding, and analysis
 ```
 
-> **Catalog totals:** the `GAMES_DATA` catalog currently holds **259 items** (247 `games`, 7 `emulators`, 5 `other`). Keep the counts shown in `index.html`/`singlefile.html` (navbar, hero, meta description) in step with reality when the catalog changes.
+> **Catalog totals:** the `GAMES_DATA` catalog currently holds **252 items** (242 `games`, 7 `emulators`, 3 `other`). Keep the counts shown in `index.html`/`singlefile.html` (navbar, hero, meta description) in step with reality when the catalog changes.
 
 ---
 

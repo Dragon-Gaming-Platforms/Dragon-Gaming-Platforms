@@ -7,8 +7,7 @@
 <title>Escape Road</title>
 <link rel="shortcut icon" href="icon.png">
 <link rel="stylesheet" href="TemplateData/style.css">
-<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init()</script>
+<!-- eruda debug console removed: the platform ships its own -->
 </head>
 <style>
   @font-face {
@@ -37,7 +36,7 @@
       codeUrl: buildUrl + "/7b28c6f059eabf99b5ee87d37b2df90c.wasm.unityweb",
       streamingAssetsUrl: " -->
 <img id="azlogo" class="az" src="az_logo.png">
-<script type="57480f3f31f76c75506c83a0-text/javascript">
+<script>
     const container = document.querySelector("#unity-container");
     const canvas = document.querySelector("#unity-canvas");
     const loadingCover = document.querySelector("#loading-cover");
@@ -237,40 +236,6 @@
 
     document.body.appendChild(script);
   </script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js" type="57480f3f31f76c75506c83a0-text/javascript"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js" type="57480f3f31f76c75506c83a0-text/javascript"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js" type="57480f3f31f76c75506c83a0-text/javascript"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics-compat.js" type="57480f3f31f76c75506c83a0-text/javascript"></script>
-<script type="57480f3f31f76c75506c83a0-module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
-  import { getAuth  } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-  apiKey: "AIzaSyC2RwMfh0GMuQMtQdijjUo-MEffB4N9xVY",
-  authDomain: "escape-road-gm1.firebaseapp.com",
-  projectId: "escape-road-gm1",
-  storageBucket: "escape-road-gm1.appspot.com",
-  messagingSenderId: "713881704715",
-  appId: "1:713881704715:web:615cc93a73d9814b24ea0e",
-  measurementId: "G-E8C3TNJE0S"
-};
-window.dataLayer = window.dataLayer || [];
-window.gtag = function(){dataLayer.push(arguments);}
-
-window.gtag("config", firebaseConfig.measurementId, {
-    cookie_domain: location.hostname,
-    cookie_flags: "SameSite=None;Secure",
-});
-  // Initialize Firebase
-
-  const app = firebase.initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-</script>
-<script src="rocket-loader.min.js" data-cf-settings="57480f3f31f76c75506c83a0-|49" defer></script></body>
+<!-- Firebase analytics removed: this tracking belonged to the original escape-road site -->
+</body>
 </html>
