@@ -21,6 +21,7 @@ All third-party projects, assets, engines, and ROM emulators retain their respec
 | **Infinite Mac** | `emulators/infinitemac.html` | Mihai Parparita | [mihaip/infinite-mac](https://github.com/mihaip/infinite-mac) | **MIT / GPL-2.0** |
 | **EmulatorJS** | `emulators/Emulatorjs/` | EmulatorJS Team | [EmulatorJS/EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) | **GPL-3.0** |
 | **Anura OS** | `emulators/anuraOS.html` | Mercury Workshop | [MercuryWorkshop/anuraOS](https://github.com/MercuryWorkshop/anuraOS) | **AGPL-3.0** |
+| **IodineGBA** | `emulators/iodinegba/` | Grant Galitz (taisel fork) | [taisel/IodineGBA](https://github.com/taisel/IodineGBA) | **MIT** |
 
 ---
 
@@ -31,8 +32,6 @@ All third-party projects, assets, engines, and ROM emulators retain their respec
 | **CyberChef** | `other/CyberChef/` | GCHQ | [gchq/CyberChef](https://github.com/gchq/CyberChef) | **Apache-2.0** |
 | **GUST Browser** | `browsers/GUST.html`, `browsers/gust/` | Nautilus OS / GUST Authors | [nautilus-os/GUST](https://github.com/nautilus-os/GUST) | **MIT** |
 | **Scramjet** | `browsers/Scramjet.html` | Mercury Workshop | [MercuryWorkshop/scramjet](https://github.com/mercuryworkshop/scramjet) | **AGPL-3.0** |
-| **Interstellar** | `browsers/Interstellar.html` | UseInterstellar Team | [useinterstellar/interstellar](https://github.com/useinterstellar/interstellar) | **AGPL-3.0** |
-| **Incognito** | `browsers/Incognito.html` | Incognito Works | [incog.works](https://incog.works) | **MIT** |
 | **Eruda Console** | `games.js` (Engine runtime) | Feng Liriliri | [liriliri/eruda](https://github.com/liriliri/eruda) | **MIT** |
 
 ---
@@ -103,29 +102,26 @@ All third-party projects, assets, engines, and ROM emulators retain their respec
 
 | Title | Path | Original Creator / Publisher | License / Attribution |
 | :--- | :--- | :--- | :--- |
-| **Eaglercraft 1.12.2 (WASM & JS)** | `games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html` | lax1dude & Eaglercraft Contributors | **GPL-3.0 / MIT wrapper** |
-| **Eaglercraft 1.8.8 (WASM & JS)** | `games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html` | lax1dude & Eaglercraft Contributors | **GPL-3.0 / MIT wrapper** |
+| **Eaglercraft 1.12.2 (Offline WASM)** | `games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html` | lax1dude & Eaglercraft Contributors | **GPL-3.0 / MIT wrapper** |
+| **Eaglercraft 1.8.8 (Offline WASM & JS)** | `games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html` | lax1dude & Eaglercraft Contributors | **GPL-3.0 / MIT wrapper** |
 | **Balatro (HTML5 Port)** | `games/singlefiles/Balatro.html` | LocalThunk (Web Community Port) | **Fan Port / Community Web Client** |
 | **Bloons TD4** | `games/singlefiles/Bloons-TD4.html` | Ninja Kiwi | **Web Port** |
 | **Drive Mad** | `games/singlefiles/Drive-Mad.html` | Martin Magni (Fancade) | **Web Port** |
 | **Escape Road** | `games/singlefiles/Escape-Road.html` | TinyTap / Web Authors | **Web Port** |
-| **Hole.io** | `games/singlefiles/Hole.io.html` | Voodoo | **Web Port** |
 | **Moto X3M 2** | `games/singlefiles/Moto-x3m-2.html` | MadPuffers | **Web Edition** |
 | **Ragdoll Archers** | `games/singlefiles/Ragdoll-Archers.html` | Eric Gurt | **Web Edition** |
 | **Recoil** | `games/singlefiles/Recoil.html` | Nitrome | **Web Edition** |
 | **Snowrider 3D** | `games/singlefiles/Snowrider.html` | Snowrider Authors | **Web Edition** |
-| **Vex 8** | `games/singlefiles/Vex-8.html` | Azerion / Agame | **Web Edition** |
 | **Awesome Tanks 2** | `games/singlefiles/awesometanks2.html` | Mad Pixel Creation | **Web Edition** |
 | **Dreadhead Parkour** | `games/singlefiles/dreadheadparkour.htm` | GameTornado | **Web Edition** |
-| **Borg Games** | `games/singlefiles/Borg-Games.html` | Borg Games Team | **Collection Wrapper** |
 
 ---
 
 ## ⚖️ License Summary
 
-- **MIT License**: Asteroids, BreakLock, Captain Callisto, Canvas Tetris, Canvas Tower Defense, Chess AI, Connect Four, CyberChef, Devil Glitches, Duck Hunt JS, Elematter, Eruda Console, GUST Browser, HexGL, Incognito, Island Not Found, Minesweeper, Offline Paradise, Pacman Classic, Pong, Progress Knight, Q1K3, Sandspiel, Simon Says, SkiFree.js, Snake, Solitaire, Space Cadet Pinball, Space Company, SpacePi, Sudoku, 3D.City, T-Rex Runner, Tic Tac Toe, Tower Game, Wordle, 2048.
+- **MIT License**: Asteroids, BreakLock, Captain Callisto, Canvas Tetris, Canvas Tower Defense, Chess AI, Connect Four, CyberChef, Devil Glitches, Duck Hunt JS, Elematter, Eruda Console, GUST Browser, HexGL, ImpactJS (Cellmates engine), IodineGBA, Island Not Found, jQuery (Arashi JS runtime), Minesweeper, Offline Paradise, Pacman Classic, Pong, Progress Knight, Q1K3, Sandspiel, Simon Says, SkiFree.js, Snake, Solitaire, Space Cadet Pinball, Space Company, SpacePi, Sudoku, 3D.City, T-Rex Runner, Tic Tac Toe, Tower Game, Wordle, XAudioJS (IodineGBA audio), 2048.
 - **GNU General Public License (GPL-3.0 / GPL-2.0)**: 1255 Burgomaster, Clumsy Bird, Doom 13K, Eaglercraft, EmulatorJS, Hextris, Infinite Mac (Basilisk II/SheepShaver core), MicropolisJS, OpenSC2K.
-- **GNU Affero General Public License (AGPL-3.0)**: Ancient Beast, Anura OS, Interstellar, Scramjet.
+- **GNU Affero General Public License (AGPL-3.0)**: Ancient Beast, Anura OS, Scramjet.
 - **Apache License 2.0**: CyberChef.
 - **Mozilla Public License (MPL-2.0)**: A Dark Room.
 - **Creative Commons (CC-BY-SA 3.0 / 4.0)**: Ancient Beast, Heroine Dusk, Pacman Canvas.

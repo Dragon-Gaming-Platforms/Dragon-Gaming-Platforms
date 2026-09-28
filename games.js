@@ -557,20 +557,6 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
-    "id": "borg-games",
-    "category": "games",
-    "name": "Borg Games",
-    "tags": [
-      "games",
-      "html5"
-    ],
-    "path": "./games/singlefiles/Borg-Games.html",
-    "shelf": "Arcade & Action",
-    "badge": "",
-    "desc": "Borg Games playable in your web browser.",
-    "controls": "Keyboard / Mouse"
-  },
-  {
     "id": "bounce-back",
     "category": "games",
     "name": "Bounce Back (Boomerang Roguelike)",
@@ -1380,20 +1366,6 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
-    "id": "eaglercraft-js-1-12-2",
-    "category": "games",
-    "name": "Eaglercraft JS 1.12.2",
-    "tags": [
-      "games",
-      "html5"
-    ],
-    "path": "./games/singlefiles/Eaglercraft-JS-1.12.2.html",
-    "shelf": "Arcade & Action",
-    "badge": "",
-    "desc": "Eaglercraft JS 1.12.2 playable in your web browser.",
-    "controls": "Keyboard / Mouse"
-  },
-  {
     "id": "eaglercraft-js-1-8-8",
     "category": "games",
     "name": "Eaglercraft JS 1.8.8",
@@ -1796,36 +1768,6 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
-    "id": "hole-io",
-    "category": "games",
-    "name": "Hole.Io",
-    "tags": [
-      "games",
-      "html5"
-    ],
-    "path": "./games/singlefiles/Hole.io.html",
-    "shelf": "Arcade & Action",
-    "badge": "",
-    "desc": "Hole.Io playable in your web browser.",
-    "controls": "Keyboard / Mouse"
-  },
-  {
-    "id": "hotfix",
-    "category": "games",
-    "name": "Hotfix Code Runner",
-    "tags": [
-      "action",
-      "arcade",
-      "programmer",
-      "fast"
-    ],
-    "path": "./games/hotfix/index.html",
-    "shelf": "Arcade & Action",
-    "badge": "ACTION",
-    "desc": "Fast-paced cyber game patching server bugs under intense countdown pressure.",
-    "controls": "Keyboard Commands / Arrow Keys"
-  },
-  {
     "id": "pacman",
     "category": "games",
     "name": "HTML5 Classic Pacman",
@@ -1858,22 +1800,6 @@ const GAMES_DATA = [
     "controls": "Arrow Keys / WASD"
   },
   {
-    "id": "incognito",
-    "category": "other",
-    "name": "Incognito Proxy Browser",
-    "tags": [
-      "browser",
-      "proxy",
-      "unblocked",
-      "utility"
-    ],
-    "path": "./browsers/Incognito.html",
-    "shelf": "Web Browsers",
-    "badge": "PROXY",
-    "desc": "Secure unblocked web proxy browser tab.",
-    "controls": "Keyboard / Mouse"
-  },
-  {
     "id": "infinitemac",
     "category": "emulators",
     "name": "Infinite Mac (Classic Macintosh OS)",
@@ -1890,22 +1816,6 @@ const GAMES_DATA = [
     "badge": "WASM",
     "desc": "Classic Macintosh System 1.0 to Mac OS 9.2.2 emulator running smoothly in-browser with Basilisk II & SheepShaver.",
     "controls": "Mouse: Click / Drag | Keyboard: Type & Hotkeys | Drag & Drop disk images to mount"
-  },
-  {
-    "id": "interstellar",
-    "category": "other",
-    "name": "Interstellar Proxy Browser",
-    "tags": [
-      "browser",
-      "proxy",
-      "unblocked",
-      "utility"
-    ],
-    "path": "./browsers/Interstellar.html",
-    "shelf": "Web Browsers",
-    "badge": "PROXY",
-    "desc": "Secure unblocked web proxy browser tab.",
-    "controls": "Keyboard / Mouse"
   },
   {
     "id": "iodinegba",
@@ -3806,20 +3716,6 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse (Click canvas to lock cursor, ESC to release)"
   },
   {
-    "id": "vex-8",
-    "category": "games",
-    "name": "Vex 8",
-    "tags": [
-      "games",
-      "html5"
-    ],
-    "path": "./games/singlefiles/Vex-8.html",
-    "shelf": "Arcade & Action",
-    "badge": "",
-    "desc": "Vex 8 playable in your web browser.",
-    "controls": "Keyboard / Mouse"
-  },
-  {
     "id": "wbwwb",
     "category": "games",
     "name": "We Become What We Behold",
@@ -4557,7 +4453,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 259 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 252 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>
