@@ -102,8 +102,8 @@ All third-party projects, assets, engines, and ROM emulators retain their respec
 
 | Title | Path | Original Creator / Publisher | License / Attribution |
 | :--- | :--- | :--- | :--- |
-| **Eaglercraft 1.12.2 (Offline WASM)** | `games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html` | lax1dude & Eaglercraft Contributors | **GPL-3.0 / MIT wrapper** |
-| **Eaglercraft 1.8.8 (Offline WASM & JS)** | `games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html` | lax1dude & Eaglercraft Contributors | **GPL-3.0 / MIT wrapper** |
+| **Eaglercraft 1.12.2 (Offline WASM & JS)** | `games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html`, `games/singlefiles/Eaglercraft-1.12.2-offline-JS.html` | lax1dude, PeytonPlayz595/EymenWSMC port & Eaglercraft Contributors ([eaglerarchive](https://github.com/EymenWSMC/eaglerarchive)) | **GPL-3.0 / MIT wrapper** |
+| **Eaglercraft 1.8.8 (Offline WASM & JS)** | `games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html`, `games/singlefiles/Eaglercraft-1.8.8-offline-JS.html` | lax1dude (EaglercraftX) & Eaglercraft Contributors, archived by [EymenWSMC/eaglerarchive](https://github.com/EymenWSMC/eaglerarchive) | **GPL-3.0 / MIT wrapper** |
 | **Balatro (HTML5 Port)** | `games/singlefiles/Balatro.html` | LocalThunk (Web Community Port) | **Fan Port / Community Web Client** |
 | **Bloons TD4** | `games/singlefiles/Bloons-TD4.html` | Ninja Kiwi | **Web Port** |
 | **Drive Mad** | `games/singlefiles/Drive-Mad.html` | Martin Magni (Fancade) | **Web Port** |
