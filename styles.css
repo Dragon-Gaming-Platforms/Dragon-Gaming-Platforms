@@ -516,15 +516,27 @@ body.crt-mode::before {
   opacity: 1 !important;
   visibility: visible !important;
   min-height: 200px;
+  /* Remove the 300ms tap delay and prevent double-tap-zoom from swallowing taps on touch devices. */
+  touch-action: manipulation;
 }
-.game-card:hover {
-  border-color: var(--theme-primary);
-  background: var(--bg-card-hover);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(var(--theme-rgb), 0.2);
+/* Hover lift is guarded so it only applies on devices with a real hover-capable
+   pointer (mouse/trackpad). On touch screens a :hover rule causes "sticky hover":
+   the first tap only applies :hover (the card bobs up) and never fires the click,
+   so games could not be opened by tapping. */
+@media (hover: hover) and (pointer: fine) {
+  .game-card:hover {
+    border-color: var(--theme-primary);
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(var(--theme-rgb), 0.2);
+  }
 }
 .game-card:active {
   transform: scale(0.98);
+}
+.game-card:focus-visible {
+  outline: 2px solid var(--theme-primary);
+  outline-offset: 2px;
 }
 
 .game-card__image {
@@ -542,8 +554,10 @@ body.crt-mode::before {
   font-size: 2.5rem; opacity: 0.65; filter: drop-shadow(0 0 10px rgba(var(--theme-rgb), 0.3));
   transition: var(--t-med);
 }
-.game-card:hover .game-card__placeholder-icon {
-  transform: scale(1.1); opacity: 0.95; filter: drop-shadow(0 0 16px rgba(var(--theme-rgb), 0.6));
+@media (hover: hover) and (pointer: fine) {
+  .game-card:hover .game-card__placeholder-icon {
+    transform: scale(1.1); opacity: 0.95; filter: drop-shadow(0 0 16px rgba(var(--theme-rgb), 0.6));
+  }
 }
 
 /* Card badges & favorite pin */
@@ -577,7 +591,9 @@ body.crt-mode::before {
   letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px;
   color: var(--text-primary); transition: var(--t-fast);
 }
-.game-card:hover .game-card__name { color: var(--theme-bright); }
+@media (hover: hover) and (pointer: fine) {
+  .game-card:hover .game-card__name { color: var(--theme-bright); }
+}
 
 .game-card__desc {
   font-size: 0.82rem; color: var(--text-secondary); line-height: 1.4;
