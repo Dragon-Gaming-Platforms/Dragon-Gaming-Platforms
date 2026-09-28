@@ -1216,11 +1216,11 @@ const GAMES_DATA = [
       "fast-paced",
       "arcade"
     ],
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Drive-Mad.html",
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/drive-mad/index.html",
     "shelf": "Sports & Racing",
-    "badge": "",
-    "description": "Drive Mad playable in your web browser.",
-    "controls": "Keyboard / Mouse"
+    "badge": "3D",
+    "description": "Drive custom 4x4 monster trucks across tricky stunt courses without flipping or smashing.",
+    "controls": "W / Up / D / Right: Accelerate | S / Down / A / Left: Reverse / Tilt | R: Restart"
   },
   {
     "category": "games",
