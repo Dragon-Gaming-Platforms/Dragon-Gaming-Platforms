@@ -117,7 +117,7 @@ All third-party projects, assets, engines, and ROM emulators retain their respec
 | **Moto X3M 2** | `games/singlefiles/Moto-x3m-2.html` | MadPuffers | **Web Edition** |
 | **Paper.io 2** | `games/singlefiles/Paper-io-2.html` | Voodoo | **Web Edition** |
 | **Ragdoll Archers** | `games/singlefiles/Ragdoll-Archers.html` | Ericetto | **Web Edition** |
-| **Ragdoll Hit** | `games/singlefiles/Ragdoll-Hit.html` | Ericetto | **Web Edition** |
+| **Ragdoll Hit** | `games/ragdoll-hit/` — hosted in [Dragon-Gaming-Assets](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Assets) | Ericetto | **Web Edition (First-Party Hosted)** |
 | **Recoil** | `games/singlefiles/Recoil.html` | Nitrome | **Web Edition** |
 | **Retro Bowl** | `games/singlefiles/Retro-Bowl.html` | New Star Games | **Web Edition** |
 | **Run 3** | `games/singlefiles/Run-3.html` | Player 03 | **Web Edition** |
