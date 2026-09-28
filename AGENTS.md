@@ -66,7 +66,7 @@ Dragon-Gaming-Platforms/
     └── CyberChef/              # The Cyber Swiss Army Knife for encryption, encoding, and analysis
 ```
 
-> **Catalog totals:** the `GAMES_DATA` catalog currently holds **253 items** (243 `games`, 7 `emulators`, 3 `other`). Keep the counts shown in `index.html`/`singlefile.html` (navbar, hero, meta description) in step with reality when the catalog changes.
+> **Catalog totals:** the `GAMES_DATA` catalog currently holds **254 items** (244 `games`, 7 `emulators`, 3 `other`). Keep the counts shown in `index.html`/`singlefile.html` (navbar, hero, meta description) in step with reality when the catalog changes.
 
 ---
 

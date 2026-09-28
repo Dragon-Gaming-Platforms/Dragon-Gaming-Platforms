@@ -2790,6 +2790,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "ragdoll-hit",
+    "category": "games",
+    "name": "Ragdoll Hit",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Ragdoll-Hit.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "Hilarious physics-based stickman fighting game — trade punches, kicks and grabs in wobbly ragdoll duels.",
+    "controls": "A/D or Arrows to Move, W to Jump, S to Kick, Space to Grab & Throw"
+  },
+  {
     "id": "raging-gardens",
     "category": "games",
     "name": "Raging Gardens Pac-Action",
