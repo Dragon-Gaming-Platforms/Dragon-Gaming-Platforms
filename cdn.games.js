@@ -932,6 +932,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "cookie-clicker",
+    "category": "games",
+    "name": "Cookie Clicker",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Cookie-Clicker.html",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "desc": "The original idle baking empire by Orteil — click the big cookie, buy grandmas, farms and portals, and bake your way to infinity.",
+    "controls": "Mouse"
+  },
+  {
     "id": "space-shooter",
     "category": "games",
     "name": "CouchFriends Space Shooter",
@@ -1410,6 +1424,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "eggy-car",
+    "category": "games",
+    "name": "Eggy Car",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eggy-Car.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "Balance a fragile egg on the roof of your car while crawling over endless bumpy hills — steady throttle or omelette.",
+    "controls": "A/D or Left/Right Arrows to Drive"
+  },
+  {
     "id": "elematter",
     "category": "games",
     "name": "Elematter",
@@ -1625,6 +1653,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "friday-night-funkin",
+    "category": "games",
+    "name": "Friday Night Funkin'",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Friday-Night-Funkin.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "The open-source rhythm sensation — arrow-key beat battles against Daddy Dearest, Skid & Pump and the whole crew.",
+    "controls": "Arrow Keys / WASD to Hit Notes"
+  },
+  {
     "id": "frontier-command",
     "category": "games",
     "name": "Frontier Command",
@@ -1693,6 +1735,34 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Gem Garden playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "geometry-dash",
+    "category": "games",
+    "name": "Geometry Dash",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Geometry-Dash.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "The iconic rhythm platformer — one-touch jumps through spike-filled, music-synced obstacle courses.",
+    "controls": "Space / Click to Jump"
+  },
+  {
+    "id": "getaway-shootout",
+    "category": "games",
+    "name": "Getaway Shootout",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Getaway-Shootout.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "Two-player ragdoll racing shootout — hop toward the finish and grab weapons to blast your rival before the getaway.",
+    "controls": "WASD / Arrows to Hop, W to Jump, E to Grab & Shoot"
   },
   {
     "id": "glyph-warden",
@@ -1928,6 +1998,20 @@ const GAMES_DATA = [
     "badge": "CASUAL",
     "desc": "Endless vertical platform jumper bouncing across fragile clouds and springs.",
     "controls": "Left / Right Arrow Keys"
+  },
+  {
+    "id": "krunker",
+    "category": "games",
+    "name": "Krunker.io",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Krunker.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "The massively popular pixelated browser FPS — fast movement, classes, custom maps and full mod support.",
+    "controls": "WASD to Move, Mouse to Aim & Shoot, Space to Bunny-Hop"
   },
   {
     "id": "lantern-memory",
@@ -2486,6 +2570,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "paper-io-2",
+    "category": "games",
+    "name": "Paper.io 2",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Paper-io-2.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "Claim territory by drawing loops around rivals — expand your paper empire without getting cut off.",
+    "controls": "Arrow Keys / WASD to Steer"
+  },
+  {
     "id": "polygons",
     "category": "games",
     "name": "Parable of the Polygons",
@@ -2865,6 +2963,20 @@ const GAMES_DATA = [
     "controls": "WASD / Arrow Keys: Fly Helicopter | Space: Drop Water"
   },
   {
+    "id": "retro-bowl",
+    "category": "games",
+    "name": "Retro Bowl",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Retro-Bowl.html",
+    "shelf": "Sports & Racing",
+    "badge": "",
+    "desc": "Throwback Tecmo-style football — manage the roster, keep the fans happy and win the Retro Bowl.",
+    "controls": "Mouse / Keyboard"
+  },
+  {
     "id": "river-holdem",
     "category": "games",
     "name": "River Holdem",
@@ -2893,6 +3005,20 @@ const GAMES_DATA = [
     "badge": "ROGUELIKE",
     "desc": "Traditional ASCII/tile turn-based roguelike with procedural dungeons and permadeath.",
     "controls": "Arrow Keys / Numpad to Walk & Attack"
+  },
+  {
+    "id": "run-3",
+    "category": "games",
+    "name": "Run 3",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Run-3.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "Run, jump and rotate through crumbling tunnels in zero gravity in the classic endless platformer.",
+    "controls": "Arrow Keys / WASD to Move & Jump"
   },
   {
     "id": "runway-stylist",
@@ -2968,6 +3094,20 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Shan Hai playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "shell-shockers",
+    "category": "games",
+    "name": "Shell Shockers",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Shell-Shockers.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "The world's most advanced egg-based multiplayer FPS — crack the other team in shell-shooting arena battles.",
+    "controls": "WASD to Move, Mouse to Aim & Shoot"
   },
   {
     "id": "sight-and-light",
@@ -3088,6 +3228,34 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Slingstorm playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "slope",
+    "category": "games",
+    "name": "Slope",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Slope.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "The neon 3D endless runner — steer a ball down a collapsing slope at ever-increasing speed.",
+    "controls": "Left/Right Arrows or A/D to Steer"
+  },
+  {
+    "id": "smash-karts",
+    "category": "games",
+    "name": "Smash Karts",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Smash-Karts.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "3D multiplayer kart arena brawler — grab rockets, gatling guns and power-ups and blast the whole lobby.",
+    "controls": "WASD / Arrows to Drive, Space to Fire"
   },
   {
     "id": "snake",
@@ -3438,6 +3606,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "subway-surfers",
+    "category": "games",
+    "name": "Subway Surfers",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Subway-Surfers.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "Dodge oncoming trains and dash through the subway in the endless-running phenomenon.",
+    "controls": "Arrow Keys / WASD to Move, Jump & Roll"
+  },
+  {
     "id": "sudoku",
     "category": "games",
     "name": "Sudoku",
@@ -3530,6 +3712,20 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Tank Arena playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "temple-run-2",
+    "category": "games",
+    "name": "Temple Run 2",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Temple-Run-2.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "The legendary endless runner — sprint, slide and swing through crumbling temples with the cursed idol.",
+    "controls": "Arrow Keys / WASD to Turn, Jump & Slide"
   },
   {
     "id": "teterjs",
@@ -3743,6 +3939,20 @@ const GAMES_DATA = [
     "badge": "V86",
     "desc": "High-performance browser-based x86 PC hardware emulator with JIT compilation. Boot Linux, Windows 98/95/3.1, FreeDOS, KolibriOS, ReactOS, and custom floppy/ISO disk images in WebAssembly.",
     "controls": "Keyboard / Mouse (Click canvas to lock cursor, ESC to release)"
+  },
+  {
+    "id": "vex-7",
+    "category": "games",
+    "name": "Vex 7",
+    "tags": [
+      "games",
+      "html5"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Vex-7.html",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "The latest stickman platformer — run, wall-jump and swim through deadly acts of spikes, saws and traps.",
+    "controls": "Arrow Keys / WASD to Move & Jump"
   },
   {
     "id": "wbwwb",
