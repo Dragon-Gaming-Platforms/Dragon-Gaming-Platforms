@@ -26,13 +26,17 @@ Dragon-Gaming-Platforms/
 ├── cdn.games.js                # CDN edition of database using absolute base URLs
 ├── styles.css                  # Dark sci-fi theme stylesheet (Orbitron & Rajdhani fonts)
 ├── singlefile.html             # Fully bundled standalone single-file version of the entire platform
-├── secure-singlefile.html      # Secure isolated version of singlefile platform
+├── secure-singlefile.html      # Secure, self-contained single-file build of the GUST proxy browser
 ├── CREDITS.md                  # Comprehensive upstream open-source attributions and licenses
 ├── THIRD_PARTY.md              # Scope documentation detailing third-party vs original project code
 ├── AGENTS.md                   # This specification guide for AI agents and maintainers
 ├── LICENSE                     # MIT License for platform source code
+├── README.md                   # Project intro and live-demo links
+├── assets/                     # Shared site assets (e.g. dragon-login.png logo)
+├── icons/                      # Icon assets (currently placeholder only)
+├── scripts/                    # Maintainer helper scripts (e.g. add_10_games.py catalog authoring)
 │
-├── games/                      # Directory containing all standalone & multi-file games
+├── games/                      # Directory containing all standalone & multi-file games (~116 folders)
 │   ├── drive-mad/              # Standalone offline WASM release of Drive Mad
 │   ├── q1k3/                   # 3D Quake engine in 13KB WebGL (MIT)
 │   ├── underrun/               # Twin-stick top-down shooter in 13KB WebGL (MIT)
@@ -42,22 +46,29 @@ Dragon-Gaming-Platforms/
 │   ├── 0hh1/ & 0hn0/           # Binary and deduction logic puzzle games by Q42 (MIT)
 │   ├── 2048/                   # Sliding number merge puzzle (MIT)
 │   ├── singlefiles/            # Self-contained single-file HTML games (Eaglercraft, Balatro, etc.)
-│   └── ...                     # 250+ additional open-source games
+│   └── ...                     # 240+ additional cataloged open-source games
 │
 ├── emulators/                  # WebAssembly & in-browser retro console emulators
 │   ├── infinitemac.html        # Classic Macintosh emulator (System 1.0 - Mac OS 9.2.2) via WASM
+│   ├── anuraOS.html            # Web desktop OS emulator container
 │   ├── Emulatorjs/             # Universal multi-system emulator (NES, SNES, GBA, N64, Genesis, PS1)
-│   └── anuraOS.html            # Web desktop OS emulator container
+│   ├── binjgb/                 # Game Boy / Game Boy Color emulator (WASM)
+│   ├── iodinegba/              # Game Boy Advance emulator (JS)
+│   ├── puzzlescript/           # PuzzleScript game creation suite / player
+│   └── v86/                    # x86 PC virtual machine in the browser (WASM)
 │
 ├── browsers/                   # Web proxy frontend portals
 │   ├── GUST.html               # GUST unblocked browser portal
 │   ├── Incognito.html          # Stealth proxy wrapper
 │   ├── Interstellar.html       # Web proxy interface
-│   └── Scramjet.html           # WebAssembly-powered proxy interface
+│   ├── Scramjet.html           # WebAssembly-powered proxy interface
+│   └── gust/                   # GUST browser supporting assets
 │
 └── other/                      # Utilities & developer security tools
     └── CyberChef/              # The Cyber Swiss Army Knife for encryption, encoding, and analysis
 ```
+
+> **Catalog totals:** the `GAMES_DATA` catalog currently holds **259 items** (247 `games`, 7 `emulators`, 5 `other`). Keep the counts shown in `index.html`/`singlefile.html` (navbar, hero, meta description) in step with reality when the catalog changes.
 
 ---
 
