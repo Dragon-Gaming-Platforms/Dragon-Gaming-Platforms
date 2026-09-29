@@ -605,6 +605,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "brick-breaker",
+    "category": "games",
+    "name": "Brick Breaker",
+    "tags": [
+      "games",
+      "html5",
+      "arcade",
+      "breakout",
+      "action"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/brick-breaker/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A fast arcade brick-breaker: bounce the ball off your paddle to smash every brick, clear stages that grow harder, and chase a high score across three lives.",
+    "controls": "Mouse / touch / arrow keys to move the paddle, click or Space to launch"
+  },
+  {
     "id": "bytebot-lab",
     "category": "games",
     "name": "Bytebot Lab",
@@ -728,6 +745,24 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Charm Reels playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "checkers",
+    "category": "games",
+    "name": "Checkers",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "strategy",
+      "checkers",
+      "draughts"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/checkers/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Classic English draughts against a minimax computer opponent, with forced captures, multi-jumps and king promotion. Capture all the CPU's pieces to win.",
+    "controls": "Mouse / touch: tap a piece, then tap a highlighted square"
   },
   {
     "id": "checkpoint-inspector",
@@ -886,6 +921,23 @@ const GAMES_DATA = [
     "badge": "ACTION",
     "desc": "Hypnotic particle trail arcade game where you enclose glowing energy orbs before they explode.",
     "controls": "Mouse Movement to Circle & Trap Orbs"
+  },
+  {
+    "id": "color-flood",
+    "category": "games",
+    "name": "Color Flood",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "casual",
+      "color"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-flood/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Flood the whole board with a single color before you run out of moves. Pick a color to spread your region from the top-left corner across the grid.",
+    "controls": "Mouse / touch to pick a color from the palette"
   },
   {
     "id": "comet-weaver",
@@ -2102,6 +2154,40 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "maze-escape",
+    "category": "games",
+    "name": "Maze Escape",
+    "tags": [
+      "games",
+      "html5",
+      "maze",
+      "arcade",
+      "time-trial"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/maze-escape/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Race through procedurally generated mazes to reach the exit as fast as you can. Every maze is different, three sizes are available, and your best times are tracked.",
+    "controls": "Arrow keys / WASD, on-screen pad, or swipe to move"
+  },
+  {
+    "id": "memory-match",
+    "category": "games",
+    "name": "Memory Match",
+    "tags": [
+      "games",
+      "html5",
+      "memory",
+      "cards",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/memory-match/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Flip cards two at a time to find every matching pair in as few moves as possible. Three grid sizes and a move-and-time tracker for beating your own record.",
+    "controls": "Mouse / touch to flip cards"
+  },
+  {
     "id": "merge-orbit",
     "category": "games",
     "name": "Merge Orbit",
@@ -2978,6 +3064,24 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Throwback Tecmo-style football — manage the roster, keep the fans happy and win the Retro Bowl.",
     "controls": "Mouse / Keyboard"
+  },
+  {
+    "id": "reversi",
+    "category": "games",
+    "name": "Reversi",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "strategy",
+      "reversi",
+      "othello"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reversi/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The classic Reversi (Othello) board game against a computer opponent with three difficulty levels. Flank your opponent's discs to flip them and control the board.",
+    "controls": "Mouse / touch to place a disc on a highlighted square"
   },
   {
     "id": "river-holdem",
@@ -3972,6 +4076,23 @@ const GAMES_DATA = [
     "badge": "STORY",
     "desc": "A 5-minute satirical game by Nicky Case about news cycles, social media feedback loops, and outrage.",
     "controls": "Mouse to Frame & Snap Photos"
+  },
+  {
+    "id": "whack-a-mole",
+    "category": "games",
+    "name": "Whack-a-Mole",
+    "tags": [
+      "games",
+      "html5",
+      "arcade",
+      "casual",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/whack-a-mole/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "The arcade classic: bop as many moles as you can before the 30-second timer runs out. Moles pop faster the higher your score climbs. Beat your best.",
+    "controls": "Mouse / touch to whack the moles"
   },
   {
     "id": "wind-tunnel-contracts",
