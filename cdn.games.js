@@ -438,6 +438,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "battleship",
+    "category": "games",
+    "name": "Battleship",
+    "tags": [
+      "games",
+      "html5",
+      "strategy",
+      "board",
+      "battleship"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battleship/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "Place your fleet, then hunt down the enemy's ships before they sink yours. Features ship placement with rotation, a hunting AI, and hit/miss/sunk tracking.",
+    "controls": "Mouse / touch to place ships and fire on the enemy grid"
+  },
+  {
     "id": "beat-bento",
     "category": "games",
     "name": "Beat Bento",
@@ -1297,6 +1314,23 @@ const GAMES_DATA = [
     "controls": "WASD / Arrow Keys: Move & Turn | Space / Left Click: Shoot | E / Enter: Open Doors"
   },
   {
+    "id": "dots-and-boxes",
+    "category": "games",
+    "name": "Dots and Boxes",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "strategy",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dots-and-boxes/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The classic pen-and-paper game against a computer opponent. Draw lines to complete boxes, claim them, and take an extra turn each time you close one.",
+    "controls": "Mouse / touch to draw a line between two dots"
+  },
+  {
     "id": "drakonas",
     "category": "games",
     "name": "Drakonas Dragon Flight",
@@ -1831,6 +1865,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "gomoku",
+    "category": "games",
+    "name": "Gomoku",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "strategy",
+      "gomoku"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gomoku/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Five-in-a-row on a 15x15 board against a computer opponent with three difficulty levels. Place stones and be the first to line up five in a row.",
+    "controls": "Mouse / touch to place a stone"
+  },
+  {
     "id": "gust",
     "category": "other",
     "name": "GUST Proxy Browser",
@@ -1845,6 +1896,23 @@ const GAMES_DATA = [
     "badge": "PROXY",
     "desc": "Secure unblocked web proxy browser tab.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "hangman",
+    "category": "games",
+    "name": "Hangman",
+    "tags": [
+      "games",
+      "html5",
+      "word",
+      "puzzle",
+      "classic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hangman/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Guess the hidden word one letter at a time before the drawing is complete. Choose a category and use the on-screen keyboard or your physical keyboard.",
+    "controls": "Click on-screen letters or type on your keyboard"
   },
   {
     "id": "heroine-dusk",
@@ -2080,6 +2148,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "lights-out",
+    "category": "games",
+    "name": "Lights Out",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lights-out/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A classic toggle puzzle: tapping a tile flips it and its neighbors. Turn every light off in as few moves as possible across three grid sizes.",
+    "controls": "Mouse / touch to toggle a tile"
+  },
+  {
     "id": "lockmaster-shift",
     "category": "games",
     "name": "Lockmaster Shift",
@@ -2106,6 +2191,23 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Mahjong Link playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "mancala",
+    "category": "games",
+    "name": "Mancala",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "strategy",
+      "mancala"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mancala/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The ancient sowing game (Kalah rules) versus a minimax computer opponent. Scoop up stones, land in your store for an extra turn, and capture across the board.",
+    "controls": "Mouse / touch to pick one of your pits"
   },
   {
     "id": "marble-soccer",
@@ -3323,6 +3425,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "sliding-puzzle",
+    "category": "games",
+    "name": "Sliding Puzzle",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sliding-puzzle/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The timeless 15-puzzle. Slide numbered tiles into the empty gap to arrange them in order. Three sizes, with a move counter and timer to beat your record.",
+    "controls": "Mouse / touch a tile next to the gap to slide it"
+  },
+  {
     "id": "slingstorm",
     "category": "games",
     "name": "Slingstorm",
@@ -3495,6 +3614,23 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Space Cadet Pinball playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "space-dodger",
+    "category": "games",
+    "name": "Space Dodger",
+    "tags": [
+      "games",
+      "html5",
+      "arcade",
+      "action",
+      "endless"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/space-dodger/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Pilot your ship through an endless asteroid field that speeds up the longer you survive. Grab glowing shards for bonus points and chase a new high score.",
+    "controls": "Mouse / touch / arrow keys to steer"
   },
   {
     "id": "space-huggers",
@@ -3996,6 +4132,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "tower-of-hanoi",
+    "category": "games",
+    "name": "Tower of Hanoi",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "classic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tower-of-hanoi/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The famous math puzzle: move the whole stack of disks to the far peg, never placing a larger disk on a smaller one. Choose 3 to 7 disks and chase the minimum-move solution.",
+    "controls": "Mouse / touch a peg to pick up or drop a disk"
+  },
+  {
     "id": "truss-workshop",
     "category": "games",
     "name": "Truss Workshop",
@@ -4137,6 +4290,23 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Word Grid playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "word-search",
+    "category": "games",
+    "name": "Word Search",
+    "tags": [
+      "games",
+      "html5",
+      "word",
+      "puzzle",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-search/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Find every hidden word in the letter grid, running in any direction including diagonals and backwards. Pick a theme and drag across letters to score.",
+    "controls": "Click / touch and drag across letters to select a word"
   },
   {
     "id": "wordle",
