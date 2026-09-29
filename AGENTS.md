@@ -70,6 +70,8 @@ Dragon-Gaming-Platforms/
 
 > **Asset hosting:** large or heavy games may live in the companion repository [Dragon-Gaming-Platforms/Dragon-Gaming-Assets](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Assets) instead of this repository. It is served by GitHub Pages from the **same origin** at `https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/`, has its own independent 1 GB Pages budget, and no 20 MB-per-file cap (GitHub allows up to 100 MB per file; never use Git LFS — Pages does not serve LFS files). Catalog entries for games hosted there use **absolute** paths in all three catalogs, e.g. `"path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/<slug>/"`. Attribution still lives in this repository's `THIRD_PARTY.md` / `CREDITS.md`.
 
+> **Catalog auto-sync:** the [Sync Assets-Repo Games to Catalog](.github/workflows/sync-assets-catalog.yml) workflow (manual trigger from the **Actions** tab) scans the assets repository's `games/` folders and adds any missing entries to all three catalogs with absolute asset-repo URLs, bumping all counts, committing as `github-actions[bot]`, and redeploying Pages (it deploys itself because pushes made with `GITHUB_TOKEN` do not trigger `static.yml`). It is **add-only** — it never edits or removes existing entries; id conflicts, orphaned entries and unreadable manifests are reported as warnings instead. Optional per-game metadata lives in `games/<slug>/game.json` in the assets repo (keys: `name`, `desc`, `controls`, `shelf`, `tags`, `badge`, `creator` — all optional, sensible defaults otherwise). Attribution rows in `THIRD_PARTY.md` are not automated — add them manually for new games.
+
 ---
 
 ## 3. Database Catalog Schema (`GAMES_DATA`)
