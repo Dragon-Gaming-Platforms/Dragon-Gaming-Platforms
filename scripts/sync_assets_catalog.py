@@ -168,6 +168,14 @@ def update_counts(contents):
                                    "Search %d games, emulators & tools" % total, fname)
     for fname in ("index.html", "singlefile.html"):
         contents[fname] = sub_once(contents[fname], r">Games \(\d+\)</a>", ">Games (%d)</a>" % g_n, fname)
+    hero_n = (total // 10) * 10
+    for fname in ("index.html", "singlefile.html"):
+        contents[fname] = sub_once(
+            contents[fname], r"library of \d+\+ legal open-source browser games",
+            "library of %d+ legal open-source browser games" % hero_n, fname)
+        contents[fname] = sub_once(
+            contents[fname], r"Play \d+\+ classic games, emulators, and unblocked tools",
+            "Play %d+ classic games, emulators, and unblocked tools" % hero_n, fname)
     contents["AGENTS.md"] = sub_once(
         contents["AGENTS.md"],
         r"\*\*\d+ items\*\* \(\d+ `games`, \d+ `emulators`, \d+ `other`\)",
