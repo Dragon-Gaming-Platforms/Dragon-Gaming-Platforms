@@ -2873,20 +2873,6 @@ const GAMES_DATA = [
     "controls": "WASD to Move, Mouse to Aim & Shoot"
   },
   {
-    "id": "ragdoll-archers",
-    "category": "games",
-    "name": "Ragdoll Archers",
-    "tags": [
-      "games",
-      "html5"
-    ],
-    "path": "./games/singlefiles/Ragdoll-Archers.html",
-    "shelf": "Arcade & Action",
-    "badge": "",
-    "desc": "Ragdoll Archers playable in your web browser.",
-    "controls": "Keyboard / Mouse"
-  },
-  {
     "id": "ragdoll-hit",
     "category": "games",
     "name": "Ragdoll Hit",
