@@ -72,6 +72,8 @@ Dragon-Gaming-Platforms/
 
 > **Catalog auto-sync:** the [Sync Assets-Repo Games to Catalog](.github/workflows/sync-assets-catalog.yml) workflow (manual trigger from the **Actions** tab) scans the assets repository's `games/` folders and adds any missing entries to all three catalogs with absolute asset-repo URLs, bumping all counts, committing as `github-actions[bot]`, and redeploying Pages (it deploys itself because pushes made with `GITHUB_TOKEN` do not trigger `static.yml`). It is **add-only** — it never edits or removes existing entries; id conflicts, orphaned entries and unreadable manifests are reported as warnings instead. Optional per-game metadata lives in `games/<slug>/game.json` in the assets repo (keys: `name`, `desc`, `controls`, `shelf`, `tags`, `badge`, `creator` — all optional, sensible defaults otherwise). Attribution rows in `THIRD_PARTY.md` are not automated — add them manually for new games.
 
+> **Pages deploys publish only site files:** both deploy workflows (`static.yml` on push, and the sync workflow's self-deploy) strip repo plumbing from the runner's working tree before packaging the Pages artifact: `scripts`, `.github`, `games-to-add.md`, `AGENTS.md`, `README.md`, `.gitignore` plus Git metadata stay in the repository but are never published. `.nojekyll` (required — it disables Jekyll processing), `LICENSE`, `THIRD_PARTY.md`, and `CREDITS.md` are intentionally published. If a new non-site file lands at the repo root, add it to the removal list in **both** workflows.
+
 ---
 
 ## 3. Database Catalog Schema (`GAMES_DATA`)
