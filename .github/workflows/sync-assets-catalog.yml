@@ -1,0 +1,83 @@
+# Syncs games from the Dragon-Gaming-Assets companion repository into the main
+# catalog. Manual trigger only (Actions tab -> "Sync Assets-Repo Games to Catalog"
+# -> Run workflow). Add-only: never edits or removes existing entries. Optional
+# per-game metadata lives in games/<slug>/game.json in the assets repo
+# (keys: name, desc, controls, shelf, tags, badge, creator).
+name: Sync Assets-Repo Games to Catalog
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (report only — no commit, no deploy)"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sync-assets-catalog
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+
+      - name: Checkout assets repository (public companion repo)
+        uses: actions/checkout@v4
+        with:
+          repository: Dragon-Gaming-Platforms/Dragon-Gaming-Assets
+          path: assets-repo
+
+      - name: Sync catalog
+        id: sync
+        run: >
+          python3 scripts/sync_assets_catalog.py
+          --assets assets-repo/games
+          ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Syntax-check catalogs
+        if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
+        run: |
+          node --check games.js
+          node --check cdn.games.js
+
+      - name: Commit and push catalog update
+        if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games.js cdn.games.js singlefile.html index.html AGENTS.md
+          git commit -m "Sync catalog with Dragon-Gaming-Assets games (${{ steps.sync.outputs.added }})"
+          git push
+
+      # A push made with GITHUB_TOKEN does not trigger other workflows, so this
+      # workflow deploys Pages itself instead of relying on static.yml.
+      - name: Remove assets checkout from the site tree
+        if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
+        run: rm -rf assets-repo
+
+      - name: Setup Pages
+        if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
+        uses: actions/deploy-pages@v5
