@@ -2874,6 +2874,23 @@ const GAMES_DATA = [
     "controls": "WASD to Move, Mouse to Aim & Shoot"
   },
   {
+    "id": "ragdoll-archers",
+    "category": "games",
+    "name": "Ragdoll Archers",
+    "tags": [
+      "games",
+      "html5",
+      "archery",
+      "physics",
+      "ragdoll"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ragdoll-archers/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Physics-based archery duels where wobbly stickman archers trade arrows. Aim your bow, manage stamina, dodge incoming shots, and spend skulls on upgrades across solo, PvP, and co-op modes.",
+    "controls": "Mouse to aim and shoot, keyboard to move and jump"
+  },
+  {
     "id": "ragdoll-hit",
     "category": "games",
     "name": "Ragdoll Hit",
