@@ -3153,20 +3153,6 @@ const GAMES_DATA = [
     "controls": "WASD / Arrow Keys: Fly Helicopter | Space: Drop Water"
   },
   {
-    "id": "retro-bowl",
-    "category": "games",
-    "name": "Retro Bowl",
-    "tags": [
-      "games",
-      "html5"
-    ],
-    "path": "./games/singlefiles/Retro-Bowl.html",
-    "shelf": "Sports & Racing",
-    "badge": "",
-    "desc": "Throwback Tecmo-style football — manage the roster, keep the fans happy and win the Retro Bowl.",
-    "controls": "Mouse / Keyboard"
-  },
-  {
     "id": "reversi",
     "category": "games",
     "name": "Reversi",
@@ -4985,7 +4971,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 286 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 285 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>

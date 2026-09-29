@@ -63,9 +63,10 @@ jobs:
 
       # A push made with GITHUB_TOKEN does not trigger other workflows, so this
       # workflow deploys Pages itself instead of relying on static.yml.
-      - name: Remove assets checkout from the site tree
+      - name: Remove assets checkout and non-site files from the deploy tree
         if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
-        run: rm -rf assets-repo
+        # Keep this list in sync with the removal step in static.yml.
+        run: rm -rf assets-repo scripts .github games-to-add.md AGENTS.md README.md .gitignore .git
 
       - name: Setup Pages
         if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}

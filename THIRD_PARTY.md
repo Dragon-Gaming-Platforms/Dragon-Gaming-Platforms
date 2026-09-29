@@ -119,7 +119,6 @@ All third-party projects, assets, engines, and ROM emulators retain their respec
 | **Ragdoll Archers** | `games/singlefiles/Ragdoll-Archers.html` | Ericetto | **Web Edition** |
 | **Ragdoll Hit** | `games/ragdoll-hit/` — hosted in [Dragon-Gaming-Assets](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Assets) | Ericetto | **Web Edition (First-Party Hosted)** |
 | **Recoil** | `games/singlefiles/Recoil.html` | Nitrome | **Web Edition** |
-| **Retro Bowl** | `games/singlefiles/Retro-Bowl.html` | New Star Games | **Web Edition** |
 | **Run 3** | `games/singlefiles/Run-3.html` | Player 03 | **Web Edition** |
 | **Shell Shockers** | `games/singlefiles/Shell-Shockers.html` | Blue Wizard Digital | **Web Edition (Live Site)** |
 | **Smash Karts** | `games/singlefiles/Smash-Karts.html` | Tall Team | **Web Edition (Live Site)** |
