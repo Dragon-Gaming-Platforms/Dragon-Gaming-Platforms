@@ -3154,20 +3154,6 @@ const GAMES_DATA = [
     "controls": "WASD / Arrow Keys: Fly Helicopter | Space: Drop Water"
   },
   {
-    "id": "retro-bowl",
-    "category": "games",
-    "name": "Retro Bowl",
-    "tags": [
-      "games",
-      "html5"
-    ],
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Retro-Bowl.html",
-    "shelf": "Sports & Racing",
-    "badge": "",
-    "desc": "Throwback Tecmo-style football — manage the roster, keep the fans happy and win the Retro Bowl.",
-    "controls": "Mouse / Keyboard"
-  },
-  {
     "id": "reversi",
     "category": "games",
     "name": "Reversi",
