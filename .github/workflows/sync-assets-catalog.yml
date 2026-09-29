@@ -3,6 +3,8 @@
 # -> Run workflow). Add-only: never edits or removes existing entries. Optional
 # per-game metadata lives in games/<slug>/game.json in the assets repo
 # (keys: name, desc, controls, shelf, tags, badge, creator).
+# Inputs: dry_run (report only), recount_only (refresh count strings, add
+# nothing), deploy_pages (default true; deploys only when something changed).
 name: Sync Assets-Repo Games to Catalog
 
 on:
@@ -13,6 +15,18 @@ on:
         type: boolean
         required: false
         default: false
+
+      recount_only:
+        description: "Recount only (refresh all count strings; adds no games)"
+        type: boolean
+        required: false
+        default: false
+
+      deploy_pages:
+        description: "Deploy to GitHub Pages after the run (when anything changed)"
+        type: boolean
+        required: false
+        default: true
 
 permissions:
   contents: write
@@ -34,6 +48,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Checkout assets repository (public companion repo)
+        if: ${{ !inputs.recount_only }}
         uses: actions/checkout@v4
         with:
           repository: Dragon-Gaming-Platforms/Dragon-Gaming-Assets
@@ -43,7 +58,7 @@ jobs:
         id: sync
         run: >
           python3 scripts/sync_assets_catalog.py
-          --assets assets-repo/games
+          ${{ inputs.recount_only && '--recount-only' || '--assets assets-repo/games' }}
           ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Syntax-check catalogs
@@ -58,7 +73,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add games.js cdn.games.js singlefile.html index.html AGENTS.md
-          git commit -m "Sync catalog with Dragon-Gaming-Assets games (${{ steps.sync.outputs.added }})"
+          git commit -m "${{ steps.sync.outputs.commit_message }}"
           git push
 
       # A push made with GITHUB_TOKEN does not trigger other workflows, so this
@@ -69,16 +84,16 @@ jobs:
         run: rm -rf assets-repo scripts .github games-to-add.md AGENTS.md README.md .gitignore .git
 
       - name: Setup Pages
-        if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
+        if: ${{ !inputs.dry_run && inputs.deploy_pages && steps.sync.outputs.changed == 'true' }}
         uses: actions/configure-pages@v5
 
       - name: Upload site artifact
-        if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
+        if: ${{ !inputs.dry_run && inputs.deploy_pages && steps.sync.outputs.changed == 'true' }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
+        if: ${{ !inputs.dry_run && inputs.deploy_pages && steps.sync.outputs.changed == 'true' }}
         uses: actions/deploy-pages@v5
