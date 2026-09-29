@@ -66,7 +66,7 @@ Dragon-Gaming-Platforms/
     └── CyberChef/              # The Cyber Swiss Army Knife for encryption, encoding, and analysis
 ```
 
-> **Catalog totals:** the `GAMES_DATA` catalog currently holds **285 items** (275 `games`, 7 `emulators`, 3 `other`). Keep the counts shown in `index.html`/`singlefile.html` (navbar, hero, meta description) in step with reality when the catalog changes.
+> **Catalog totals:** the `GAMES_DATA` catalog currently holds **346 items** (336 `games`, 7 `emulators`, 3 `other`). Keep the counts shown in `index.html`/`singlefile.html` (navbar, hero, meta description) in step with reality when the catalog changes.
 
 > **Asset hosting:** large or heavy games may live in the companion repository [Dragon-Gaming-Platforms/Dragon-Gaming-Assets](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Assets) instead of this repository. It is served by GitHub Pages from the **same origin** at `https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/`, has its own independent 1 GB Pages budget, and no 20 MB-per-file cap (GitHub allows up to 100 MB per file; never use Git LFS — Pages does not serve LFS files). Catalog entries for games hosted there use **absolute** paths in all three catalogs, e.g. `"path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/<slug>/"`. Attribution still lives in this repository's `THIRD_PARTY.md` / `CREDITS.md`.
 
