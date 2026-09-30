@@ -9,6 +9,7 @@ as the main site), so all three catalogs get the identical absolute path.
 
 Usage:
     python3 scripts/sync_assets_catalog.py --assets <path-to-assets-games-dir> [--dry-run]
+    python3 scripts/sync_assets_catalog.py --recount-only [--dry-run]
 
 Per-game metadata (all keys optional) may be provided in games/<slug>/game.json:
     { "name": "...", "desc": "...", "controls": "...", "shelf": "...",
@@ -17,6 +18,11 @@ Per-game metadata (all keys optional) may be provided in games/<slug>/game.json:
 This script is ADD-ONLY: it never edits or removes existing catalog entries.
 Orphaned assets-repo entries, id conflicts and metadata problems are reported
 as warnings (and THIRD_PARTY.md attribution is left to the maintainer).
+
+Recount-only mode (--recount-only) refreshes every hard-coded count string
+(search placeholder, navbar counts, the N+ marketing numbers, AGENTS.md
+totals) from the actual catalog contents without adding games or needing an
+assets checkout.
 """
 import argparse
 import json
@@ -168,6 +174,14 @@ def update_counts(contents):
                                    "Search %d games, emulators & tools" % total, fname)
     for fname in ("index.html", "singlefile.html"):
         contents[fname] = sub_once(contents[fname], r">Games \(\d+\)</a>", ">Games (%d)</a>" % g_n, fname)
+    hero_n = (total // 10) * 10
+    for fname in ("index.html", "singlefile.html"):
+        contents[fname] = sub_once(
+            contents[fname], r"library of \d+\+ legal open-source browser games",
+            "library of %d+ legal open-source browser games" % hero_n, fname)
+        contents[fname] = sub_once(
+            contents[fname], r"Play \d+\+ classic games, emulators, and unblocked tools",
+            "Play %d+ classic games, emulators, and unblocked tools" % hero_n, fname)
     contents["AGENTS.md"] = sub_once(
         contents["AGENTS.md"],
         r"\*\*\d+ items\*\* \(\d+ `games`, \d+ `emulators`, \d+ `other`\)",
@@ -176,11 +190,60 @@ def update_counts(contents):
     return total, g_n, e_n, o_n
 
 
+def recount_only(args):
+    """Recount mode: refresh every hard-coded count string from the actual
+    catalog contents. Adds nothing; needs no assets checkout. Use after
+    manual catalog edits (e.g. removals) that leave counts stale."""
+    contents = {f: load(f) for f in CATALOGS}
+    contents["AGENTS.md"] = load("AGENTS.md")
+    contents["index.html"] = load("index.html")
+    id_lists = [[x["id"] for x in parse_data(contents[f], f)] for f in CATALOGS]
+    if not (id_lists[0] == id_lists[1] == id_lists[2]):
+        fail("catalog id lists diverge — fix the catalogs before recounting")
+    before = {f: contents[f] for f in contents}
+    counts = update_counts(contents)
+    changed = [f for f in contents if contents[f] != before[f]]
+    msg = "Recount catalog totals (%d items: %d games, %d emulators, %d other)" % counts
+    print("Recount-only: %d items (%d games, %d emulators, %d other)" % counts)
+    if changed:
+        print("  stale count strings fixed in: " + ", ".join(changed))
+    else:
+        print("  all count strings already correct")
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a") as f:
+            f.write("changed=%s\n" % ("true" if changed else "false"))
+            f.write("added=\n")
+            f.write("commit_message=%s\n" % msg)
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a") as f:
+            f.write("\n### Catalog recount\n\n")
+            f.write("- Catalog counted at %d items (%d games, %d emulators, %d other)\n" % counts)
+            f.write("- Count strings updated: %s\n"
+                    % (", ".join("`%s`" % x for x in changed) if changed else "none — already correct"))
+    if changed and not args.dry_run:
+        for fname in changed:
+            save(fname, contents[fname])
+        print("Recounted and written (%d file(s))." % len(changed))
+    elif changed:
+        print("Dry run — no files written.")
+    else:
+        print("No files written.")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--assets", required=True, help="path to the assets repo's games/ directory")
+    group = ap.add_mutually_exclusive_group(required=True)
+    group.add_argument("--assets", help="path to the assets repo's games/ directory")
+    group.add_argument("--recount-only", action="store_true",
+                       help="only refresh count strings; adds no games, needs no assets checkout")
     ap.add_argument("--dry-run", action="store_true", help="report only; write nothing")
     args = ap.parse_args()
+
+    if args.recount_only:
+        recount_only(args)
+        return
 
     warnings = []
     asset_games = scan_assets(args.assets, warnings)
@@ -245,6 +308,8 @@ def main():
         with open(out, "a") as f:
             f.write("changed=%s\n" % ("true" if added else "false"))
             f.write("added=" + ",".join(a["id"] for a in added) + "\n")
+            f.write("commit_message=Sync catalog with Dragon-Gaming-Assets games (%s)\n"
+                    % ",".join(a["id"] for a in added))
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a") as f:
