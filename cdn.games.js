@@ -100,6 +100,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "a-dark-room",
+    "category": "games",
+    "name": "A Dark Room",
+    "tags": [
+      "games",
+      "idle",
+      "incremental",
+      "text",
+      "adventure"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/a-dark-room/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A minimalist text adventure that starts with stoking a fire in a dark room and slowly unfolds into a survival, settlement-building odyssey. The cult classic incremental game by Doublespeak Games.",
+    "controls": "Mouse: Click buttons and links / Some keyboard shortcuts in later stages"
+  },
+  {
     "id": "abyss-sonar",
     "category": "games",
     "name": "Abyss Sonar",
@@ -283,6 +300,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Steady your aim against a swaying reticle and shifting wind. Loose six arrows and read the drift to plant them in the gold. Ring scoring rewards precision, so hold your breath and hit the bullseye.",
     "controls": "Tap or click to release the arrow at the right moment"
+  },
+  {
+    "id": "arcomage",
+    "category": "games",
+    "name": "Arcomage HD",
+    "tags": [
+      "games",
+      "strategy",
+      "cards",
+      "remake",
+      "fantasy",
+      "pwa"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/arcomage/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A free, open-source remaster of Arcomage, the classic card game from Might & Magic VII: build your tower, tear down your rival's, or hoard resources to win. Play vs AI in 16 languages - offline-capable PWA build.",
+    "controls": "Mouse: Play cards, end turn"
   },
   {
     "id": "asdf",
@@ -523,6 +558,22 @@ const GAMES_DATA = [
     "controls": "Mouse / touch to place ships and fire on the enemy grid"
   },
   {
+    "id": "bearing",
+    "category": "games",
+    "name": "Bearing",
+    "tags": [
+      "games",
+      "puzzle",
+      "logic",
+      "daily"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bearing/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A daily direction-finding puzzle. Rotate a compass heading and listen: hidden sound sources pull left or right like a real ear would hear. Two listens from different headings triangulate the truth - mark every source's bearing in as few listens as par allows.",
+    "controls": "Left / Right Arrows or A / D: Rotate heading / Space: Listen / Click a compass point: Mark or unmark / K: Check"
+  },
+  {
     "id": "beat-bento",
     "category": "games",
     "name": "Beat Bento",
@@ -588,6 +639,24 @@ const GAMES_DATA = [
     "controls": "Arrow Keys, X (A), Z (B), Enter (Start), Shift (Select)"
   },
   {
+    "id": "black-hole-square",
+    "category": "games",
+    "name": "Black Hole Square",
+    "tags": [
+      "games",
+      "puzzle",
+      "grid",
+      "js13k",
+      "space",
+      "minimal"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/black-hole-square/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A minimal space-themed puzzle game from js13k 2021: on a 6x6 grid, tap squares to shunt them into your black hole. Arrows push, X-squares swap and neutron stars transform - clean the entire universe in as few moves as you can.",
+    "controls": "Mouse / Touch: Tap a square · Swipe left/right (or wheel): next / previous puzzle"
+  },
+  {
     "id": "blackjack",
     "category": "games",
     "name": "Blackjack",
@@ -617,6 +686,22 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Blackjack Table playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "blind-corners",
+    "category": "games",
+    "name": "Blind Corners",
+    "tags": [
+      "games",
+      "puzzle",
+      "logic",
+      "daily"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/blind-corners/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A daily optics puzzle. Fire laser beams into a dark box and watch where they exit - then deduce where the hidden mirrors are. Work out the whole layout from the beam paths alone.",
+    "controls": "Mouse / Touch: Aim and fire beams / Keyboard also supported"
   },
   {
     "id": "block-blast",
@@ -712,6 +797,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "bobby",
+    "category": "games",
+    "name": "Bobby",
+    "tags": [
+      "games",
+      "puzzle",
+      "grid",
+      "levels",
+      "sokoban-like",
+      "french"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bobby/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A grid-based puzzle game in French: collect all the coins and reach the exit. Rocks block you, conveyor belts push you, turnstiles rotate, buttons wear out and ice makes you slide. 40 hand-made levels with keyboard, mouse and touch controls.",
+    "controls": "Arrows / WASD (ZQSD): Move · Mouse / touch: on-screen joystick · R: Retry level"
+  },
+  {
     "id": "bomb-grid",
     "category": "games",
     "name": "Bomb Grid",
@@ -726,6 +829,23 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Bomb Grid playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "bombergirl",
+    "category": "games",
+    "name": "Bombergirl",
+    "tags": [
+      "games",
+      "bomberman",
+      "arcade",
+      "retro",
+      "two-player"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bombergirl/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A polished HTML5 remake of the classic Bomberman formula. Blow up walls, grab power-ups and out-blast AI bots - solo or with a friend on the same keyboard.",
+    "controls": "Player 1: W A S D to move, Space to place bomb / Player 2: Arrow keys to move, Enter to place bomb"
   },
   {
     "id": "bounce-back",
@@ -857,6 +977,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "candy-box-2",
+    "category": "games",
+    "name": "Candy Box 2",
+    "tags": [
+      "games",
+      "idle",
+      "text",
+      "rpg",
+      "adventure",
+      "humor"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/candy-box-2/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "The legendary ASCII text adventure: it starts with a bowl of candy and slowly unfolds into an epic quest with lollipops, swords, quests, a talking candy and a whole world to explore. An idle-RPG classic by aniwey.",
+    "controls": "Mouse: Click buttons and links / Keyboard for some mini-games"
+  },
+  {
     "id": "canvas-tetris",
     "category": "games",
     "name": "Canvas Tetris",
@@ -904,6 +1042,22 @@ const GAMES_DATA = [
     "badge": "ACTION",
     "desc": "Endless arcade space avoider navigating Captain Rogers through chaotic asteroid storms.",
     "controls": "Tap / Click / Space to Boost Rocket"
+  },
+  {
+    "id": "catch-the-cat",
+    "category": "games",
+    "name": "Catch The Cat",
+    "tags": [
+      "games",
+      "puzzle",
+      "logic",
+      "strategy"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/catch-the-cat/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Trap the crafty cat before it escapes to the edge! Click tiles to block its path in this Phaser 3 remake of the classic Circle the Cat puzzle. Every move counts - the cat finds the shortest way out.",
+    "controls": "Mouse / Touch: Click a tile to block it"
   },
   {
     "id": "cellmates",
@@ -1243,6 +1397,25 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "commando",
+    "category": "games",
+    "name": "CommandoJS",
+    "tags": [
+      "games",
+      "shooter",
+      "run-and-gun",
+      "retro",
+      "arcade",
+      "remake",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/commando/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A nostalgic HTML5 canvas remake of the Commodore 64 classic Commando: run and gun through enemy territory, mow down troopers, snipers and bikers, rescue prisoners of war and blast your way to the exit. Built with CoffeeScript on melonJS.",
+    "controls": "Arrows: Move · Space: Shoot · C: Throw grenade · Enter: Start / Confirm"
+  },
+  {
     "id": "connect-arena",
     "category": "games",
     "name": "Connect Arena",
@@ -1574,6 +1747,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "The pub favourite. Start on 501 and throw your way down to exactly zero, finishing on a double or the bullseye. A wobbling crosshair tests your timing on a fully scored dartboard.",
     "controls": "Tap the board to throw a dart at the crosshair"
+  },
+  {
+    "id": "datacenter-survival",
+    "category": "games",
+    "name": "Datacenter Survival",
+    "tags": [
+      "games",
+      "strategy",
+      "simulation",
+      "datacenter",
+      "education",
+      "3d"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/datacenter-survival/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "The physical-layer sister game to Server Survival: design and run a whole datacenter - power chains, UPS units, heat, airflow, cooling and PUE. Keep the racks humming through heat waves, power cuts and equipment failures.",
+    "controls": "Mouse: Place and connect equipment, drag the camera · Click machines to inspect"
   },
   {
     "id": "detective-desk",
@@ -1954,6 +2145,22 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "echo-sounding",
+    "category": "games",
+    "name": "Echo Sounding",
+    "tags": [
+      "games",
+      "puzzle",
+      "logic",
+      "daily"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/echo-sounding/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A daily sonar puzzle. Ping a hidden grid and study the echoes that come back - each ping reveals clues about the shapes below. Deduce the full hidden layout in as few pings as you can.",
+    "controls": "Mouse / Touch: Place pings / Keyboard also supported"
+  },
+  {
     "id": "ecosystem-keeper",
     "category": "games",
     "name": "Ecosystem Keeper",
@@ -2029,6 +2236,23 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Elemental Sandbox playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "elevator-saga",
+    "category": "games",
+    "name": "Elevator Saga",
+    "tags": [
+      "games",
+      "programming",
+      "puzzle",
+      "simulation",
+      "educational"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/elevator-saga/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A programming puzzle game: write JavaScript to control a building's elevators and transport people as efficiently as possible. Progress through ever-tougher challenges with a live simulation and leaderboards for your best solutions.",
+    "controls": "Type JavaScript in the code editor, click Apply to run the simulation"
   },
   {
     "id": "ember-tactics",
@@ -2890,6 +3114,22 @@ const GAMES_DATA = [
     "controls": "Mouse: Click / Drag | Keyboard: Type & Hotkeys | Drag & Drop disk images to mount"
   },
   {
+    "id": "ink-side-down",
+    "category": "games",
+    "name": "Ink Side Down",
+    "tags": [
+      "games",
+      "puzzle",
+      "logic",
+      "daily"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ink-side-down/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A daily rolling-cube puzzle. Roll the cube across the paper so its inked face prints marks only where they belong - every tilt leaves a print, so plan the path and the orientation together.",
+    "controls": "Arrow Keys or WASD: Roll the cube / Mouse and touch also supported"
+  },
+  {
     "id": "iodinegba",
     "category": "emulators",
     "name": "IodineGBA Game Boy Advance",
@@ -3180,6 +3420,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Sprint down the runway building speed, then hit the board and pick your take-off angle. Aim for a forty-five degree launch to soar the furthest into the pit. Foul-free jumps only — nail the timing for a record.",
     "controls": "Mash RUN (or ← →) then press JUMP to lock the angle"
+  },
+  {
+    "id": "lose-your-marbles",
+    "category": "games",
+    "name": "Lose Your Marbles",
+    "tags": [
+      "games",
+      "puzzle",
+      "match-3",
+      "retro"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lose-your-marbles/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A web remake of the 1995 Sega puzzle hit. Line up falling marbles into rows of three or more before the stack overwhelms you - playable with mouse or touch.",
+    "controls": "Mouse / Touch: Swipe to move marble columns"
   },
   {
     "id": "magic-square",
@@ -3547,6 +3803,22 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "mkjs",
+    "category": "games",
+    "name": "mk.js",
+    "tags": [
+      "games",
+      "fighting",
+      "arcade",
+      "retro"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mkjs/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A canvas implementation of a Mortal Kombat-style fighting game by Minko Gechev. Spar as Sub-Zero against Kano in the throne room - move, block, punch and kick your way to a flawless victory.",
+    "controls": "Arrows: Move / Jump / Crouch / Shift: Block / A: High Punch / S: Low Punch / D: Low Kick / F: High Kick / Space: Restart"
+  },
+  {
     "id": "moba-frontier",
     "category": "games",
     "name": "Moba Frontier",
@@ -3729,6 +4001,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "ngon",
+    "category": "games",
+    "name": "n-gon",
+    "tags": [
+      "games",
+      "shooter",
+      "roguelite",
+      "physics",
+      "arena"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ngon/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A single-player arena shooter roguelite with realistic physics. Fight waves of mobs, collect tech and gun upgrades, and build wild synergistic combos - every run is different. Made with matter.js physics.",
+    "controls": "A / D: Move / W: Jump / Mouse: Aim / Left Click: Shoot / Right Click: Use tech / Q / E: Cycle weapons"
+  },
+  {
     "id": "nim",
     "category": "games",
     "name": "Nim",
@@ -3892,6 +4181,22 @@ const GAMES_DATA = [
     "controls": "Tap one of the computer’s cards to draw it"
   },
   {
+    "id": "one-step-late",
+    "category": "games",
+    "name": "One Step Late",
+    "tags": [
+      "games",
+      "puzzle",
+      "logic",
+      "daily"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/one-step-late/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A daily puzzle with a twist: your shadow copies every move you make, one turn behind. Reach the goals while dodging your own delayed echo - and think several steps ahead.",
+    "controls": "Arrow Keys or WASD: Move / Mouse and touch also supported"
+  },
+  {
     "id": "open-panzer",
     "category": "games",
     "name": "Open Panzer",
@@ -4047,6 +4352,23 @@ const GAMES_DATA = [
     "controls": "Arrow Keys / WASD to Steer"
   },
   {
+    "id": "particle-clicker",
+    "category": "games",
+    "name": "Particle Clicker",
+    "tags": [
+      "games",
+      "idle",
+      "incremental",
+      "science",
+      "educational"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/particle-clicker/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "The CERN-made particle physics idle game. Click to collide particles, run experiments, hire researchers and staff, and upgrade your detector to unlock real discoveries from the history of high-energy physics.",
+    "controls": "Mouse: Click particles, buttons and upgrades"
+  },
+  {
     "id": "polygons",
     "category": "games",
     "name": "Parable of the Polygons",
@@ -4190,6 +4512,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Rotate the scrambled pipe tiles so water flows all the way from the green source to the pink sink. Every tile lights up once it joins the connected network. Solve ever-larger grids.",
     "controls": "Tap a tile to rotate it 90 degrees"
+  },
+  {
+    "id": "pipe-puzzle",
+    "category": "games",
+    "name": "Pipe Puzzle",
+    "tags": [
+      "games",
+      "puzzle",
+      "pipes",
+      "retro"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pipe-puzzle/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A web-playable clone of the classic Pipe Dream. Lay pipes fast before the water starts flowing, then watch your network carry the stream - build the longest pipeline you can.",
+    "controls": "Mouse: Click to place the next pipe piece"
   },
   {
     "id": "pixel-clues",
@@ -4442,6 +4780,40 @@ const GAMES_DATA = [
     "controls": "WASD to Move, Mouse to Look & Shoot, Space to Jump, 1-2 Weapons"
   },
   {
+    "id": "racer",
+    "category": "games",
+    "name": "Racer",
+    "tags": [
+      "games",
+      "sports",
+      "racing",
+      "retro",
+      "pseudo-3d",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/racer/",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "An OutRun-style pseudo-3D racing game: drive as fast as you can along a challenging road with curves, hills and rival traffic, complete laps against the clock and enjoy the retro synth soundtrack.",
+    "controls": "Arrows / WASD: Steer, accelerate & brake · M: Mute music"
+  },
+  {
+    "id": "racer-js",
+    "category": "games",
+    "name": "Racer JS",
+    "tags": [
+      "games",
+      "racing",
+      "retro",
+      "arcade"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/racer-js/",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A top-down racing tribute to the Lotus series on Amiga. Each race is randomly generated - accelerate, brake and steer through the track as fast as you can. Built for the 10K Apart contest.",
+    "controls": "Arrow Up: Accelerate / Arrow Down: Brake / Arrow Left & Right: Steer"
+  },
+  {
     "id": "radish-guard",
     "category": "games",
     "name": "Radish Guard",
@@ -4520,6 +4892,22 @@ const GAMES_DATA = [
     "controls": "Arrow Keys to Move Ninja Gardener"
   },
   {
+    "id": "rapid-dominance",
+    "category": "games",
+    "name": "Rapid Dominance",
+    "tags": [
+      "games",
+      "strategy",
+      "turn-based",
+      "tiles"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rapid-dominance/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A fast turn-based strategy game built with Phaser 3. Capture territories, outmaneuver the AI and dominate the map before your opponents do.",
+    "controls": "Mouse: Click to select and move units / R: Restart"
+  },
+  {
     "id": "reaction-test",
     "category": "games",
     "name": "Reaction Test",
@@ -4563,6 +4951,24 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Relay Coordination playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "reqbert",
+    "category": "games",
+    "name": "ReQbert",
+    "tags": [
+      "games",
+      "arcade",
+      "remake",
+      "qbert",
+      "retro",
+      "isometric"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reqbert/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A faithful modern remake of the 1982 arcade classic Q*bert: hop on cubes to flip their color, dodge Coily and friends, and grab floating discs for a ride back to the top.",
+    "controls": "Mouse / Touch: Click a square to hop"
   },
   {
     "id": "rescue-copter",
@@ -4681,6 +5087,22 @@ const GAMES_DATA = [
     "controls": "Arrow Keys / Numpad to Walk & Attack"
   },
   {
+    "id": "rot-magus",
+    "category": "games",
+    "name": "Rot Magus",
+    "tags": [
+      "games",
+      "roguelike",
+      "rpg",
+      "turn-based"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rot-magus/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A classic 8-bit roguelike RPG about a hero descending into the realm of the Dark One. Infinite procedurally generated lands, 17 monsters, 90 items, melee and ranged combat. An extended browser remake of Ronny Wester's Magus built with rot.js and Phaser.",
+    "controls": "Mouse: Click terrain to move, click monsters to attack, click your hero to rest, click inventory slots to equip items"
+  },
+  {
     "id": "roulette",
     "category": "games",
     "name": "Roulette",
@@ -4696,6 +5118,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Spin the wheel and test your luck at the casino table. Place chips on straight numbers, red or black, odds or evens, dozens and more, then watch the ball settle. Straight numbers pay 35 to 1.",
     "controls": "Pick a chip value, tap the table to place bets, then SPIN"
+  },
+  {
+    "id": "rubiks-cube",
+    "category": "games",
+    "name": "Rubik's Cube",
+    "tags": [
+      "games",
+      "puzzle",
+      "3d",
+      "webgl",
+      "cube"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rubiks-cube/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A WebGL Rubik's Cube - drag faces to twist, scramble and solve the classic 3D puzzle from any angle.",
+    "controls": "Mouse Drag: Rotate the cube / Drag across a face: Twist that layer / Scramble button: Shuffle"
   },
   {
     "id": "run-3",
@@ -4773,6 +5212,25 @@ const GAMES_DATA = [
     "badge": "PROXY",
     "desc": "Secure unblocked web proxy browser tab.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "server-survival",
+    "category": "games",
+    "name": "Server Survival",
+    "tags": [
+      "games",
+      "strategy",
+      "simulation",
+      "tower-defense",
+      "cloud",
+      "education",
+      "3d"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/server-survival/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A 3D strategy game where you play as a cloud architect: build load balancers, caches, auto-scaling compute fleets and multi-region failover to survive escalating traffic, DDoS attacks and random outages. 25 campaign levels, survival and sandbox modes, 11 languages.",
+    "controls": "Mouse: Place and connect services, drag the camera · Click nodes to configure"
   },
   {
     "id": "shadow-post",
@@ -4992,6 +5450,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "slay-the-web",
+    "category": "games",
+    "name": "Slay the Web",
+    "tags": [
+      "games",
+      "strategy",
+      "cards",
+      "deckbuilder",
+      "roguelike",
+      "dungeon"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slay-the-web/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A single-player deck-building roguelike card crawl for the web, inspired by Slay the Spire: fight through a dungeon map, build your deck from weird and wonderful cards, and slay the web itself.",
+    "controls": "Mouse: Play cards, pick map routes, manage your deck"
+  },
+  {
     "id": "sliding-puzzle",
     "category": "games",
     "name": "Sliding Puzzle",
@@ -5007,6 +5483,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "The timeless 15-puzzle. Slide numbered tiles into the empty gap to arrange them in order. Three sizes, with a move counter and timer to beat your record.",
     "controls": "Mouse / touch a tile next to the gap to slide it"
+  },
+  {
+    "id": "slime-volleyball",
+    "category": "games",
+    "name": "Slime Volleyball",
+    "tags": [
+      "games",
+      "sports",
+      "volleyball",
+      "two-player",
+      "retro"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slime-volleyball/",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "The classic two-player slime volleyball showdown, revived for HTML5 canvas. Bounce the ball over the net with your gelatinous half-circle - first to out-rally their rival wins.",
+    "controls": "Left Player: A / W / D / Right Player: Arrow Keys"
   },
   {
     "id": "slingstorm",
@@ -5186,6 +5679,22 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "sootl",
+    "category": "games",
+    "name": "Sootl",
+    "tags": [
+      "games",
+      "arcade",
+      "retro",
+      "dodge"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sootl/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Stay out of the light! An Elm-built arcade dodger where you navigate dark corridors while avoiding deadly light beams. Simple premise, relentless difficulty.",
+    "controls": "Arrow Keys / WASD: Move"
+  },
+  {
     "id": "space-cadet-pinball",
     "category": "games",
     "name": "Space Cadet Pinball",
@@ -5345,6 +5854,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Make as many words as you can from seven letters, and every word must use the centre letter. Words are four letters or longer; using all seven letters scores a bonus pangram. Climb the ranks to Genius.",
     "controls": "Tap the letter hive or type; Enter to submit, Delete to erase, Shuffle to rearrange"
+  },
+  {
+    "id": "spelunky-classic",
+    "category": "games",
+    "name": "Spelunky Classic HD",
+    "tags": [
+      "games",
+      "platformer",
+      "roguelike",
+      "retro"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spelunky-classic/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "The legendary 2009 roguelike platformer by Derek Yu, remastered in HD and compiled to WebAssembly. Explore procedurally generated caves full of traps, treasure, snakes and shops - every run is different, death is permanent.",
+    "controls": "Arrow Keys: Move / Climb / Enter doors / Z: Jump / X: Whip / Throw / C: Switch held item"
   },
   {
     "id": "spider-solitaire",
@@ -5580,6 +6105,24 @@ const GAMES_DATA = [
     "controls": "Arrow Keys / WASD to Pilot Ship"
   },
   {
+    "id": "svelte-space",
+    "category": "games",
+    "name": "Svelte Space",
+    "tags": [
+      "games",
+      "strategy",
+      "tower-defense",
+      "clicker",
+      "svelte",
+      "svg"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/svelte-space/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A tower-defense clicker built entirely with Svelte 5 - no canvas. Defend your throne from waves of enemies: click for loot, place and upgrade towers, and watch SVG projectiles fly. 4th place in SvelteHack 2024's Wizzbangery Wizard category.",
+    "controls": "Mouse: Click enemies for loot, place & upgrade towers"
+  },
+  {
     "id": "switchyard-rush",
     "category": "games",
     "name": "Switchyard Rush",
@@ -5722,6 +6265,22 @@ const GAMES_DATA = [
     "controls": "← → move · ↑ rotate · ↓ soft drop · Space hard drop"
   },
   {
+    "id": "the-house",
+    "category": "games",
+    "name": "The House",
+    "tags": [
+      "games",
+      "adventure",
+      "escape",
+      "point-and-click"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/the-house/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A eerie point-and-click escape adventure. Explore the rooms of a strange house, collect items, solve puzzles and find your way out. Atmospheric audio and hand-crafted pixel art rooms.",
+    "controls": "Mouse: Click to look around, interact and pick up items"
+  },
+  {
     "id": "trust",
     "category": "games",
     "name": "The Evolution of Trust",
@@ -5844,6 +6403,44 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "tippy-coco",
+    "category": "games",
+    "name": "Tippy Coco",
+    "tags": [
+      "games",
+      "sports",
+      "volleyball",
+      "two-player",
+      "hotseat",
+      "slime",
+      "gamepad"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tippy-coco/",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A frantic slime-volleyball showdown for one or two players: dive, jump, grow and shrink your blob to keep the ball off your sand. Features bundled AI opponents, gamepad support and head-to-head play on one keyboard.",
+    "controls": "Player 1: A/D move, W jump, Q/E grow/shrink · Player 2: Arrows + O/P · Space: Launch · Gamepads supported"
+  },
+  {
+    "id": "tis-100",
+    "category": "games",
+    "name": "TIS-100",
+    "tags": [
+      "games",
+      "puzzle",
+      "programming",
+      "assembly",
+      "logic",
+      "education",
+      "zachlike"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tis-100/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "An open-source web port of the assembly programming puzzle game: rewrite corrupted segments of a mysterious 1980s computer by programming its nodes in a simplified assembly language. Solve signal routing and arithmetic puzzles across four segments.",
+    "controls": "Click node: Edit code · Type: Assembly instructions · Esc: Leave node · Run/Stop: Execute program"
+  },
+  {
     "id": "touchline-manager",
     "category": "games",
     "name": "Touchline Manager",
@@ -5954,6 +6551,22 @@ const GAMES_DATA = [
     "controls": "Tap a card adjacent in rank to the waste; tap the stock to draw"
   },
   {
+    "id": "trunk-line",
+    "category": "games",
+    "name": "Trunk Line",
+    "tags": [
+      "games",
+      "puzzle",
+      "logic",
+      "daily"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/trunk-line/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A daily network puzzle. Ping the hidden telephone network and use the response times to trace every line between the jacks. Map the whole switchboard before you run out of probes.",
+    "controls": "Mouse / Touch: Probe the network / Keyboard also supported"
+  },
+  {
     "id": "truss-workshop",
     "category": "games",
     "name": "Truss Workshop",
@@ -6052,6 +6665,42 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Jacks or Better video poker. You're dealt five cards — hold the ones you want, draw the rest, and get paid on pairs of jacks or better up to a royal flush.",
     "controls": "Mouse / touch to hold cards and press Deal / Draw"
+  },
+  {
+    "id": "voidcall",
+    "category": "games",
+    "name": "Voidcall",
+    "tags": [
+      "games",
+      "strategy",
+      "cards",
+      "auto-battler",
+      "fantasy",
+      "js13k"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/voidcall/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A Real-Time Strategic Card Dueler: summon creatures in lane-based auto-battles, weigh every card's attack and health against its mana cost, and out-trade your rival across a dark fantasy void. js13k 2022 winner.",
+    "controls": "Mouse: Summon cards to lanes, drag units to rearrange"
+  },
+  {
+    "id": "volley",
+    "category": "games",
+    "name": "Volley",
+    "tags": [
+      "games",
+      "sports",
+      "volleyball",
+      "two-player",
+      "hotseat",
+      "phaser"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/volley/",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A two-player beach volleyball duel on one keyboard: jump, spike and outplay your friend across the net. Simple physics, instant fun - made with Phaser.",
+    "controls": "Left player: A/D move, W jump · Right player: Arrow keys"
   },
   {
     "id": "war-card",
