@@ -2179,6 +2179,20 @@ const GAMES_DATA = [
     "controls": "Mouse / Touch: Place pings / Keyboard also supported"
   },
   {
+    "id": "echoed-path",
+    "category": "games",
+    "name": "Echoed Path",
+    "tags": [
+      "games",
+      "adventure"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/Echoed-Path/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A pixelated adventure game",
+    "controls": "WASD"
+  },
+  {
     "id": "ecosystem-keeper",
     "category": "games",
     "name": "Ecosystem Keeper",

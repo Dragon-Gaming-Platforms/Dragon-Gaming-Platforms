@@ -2178,6 +2178,20 @@ const GAMES_DATA = [
     "controls": "Mouse / Touch: Place pings / Keyboard also supported"
   },
   {
+    "id": "echoed-path",
+    "category": "games",
+    "name": "Echoed Path",
+    "tags": [
+      "games",
+      "adventure"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/Echoed-Path/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A pixelated adventure game",
+    "controls": "WASD"
+  },
+  {
     "id": "ecosystem-keeper",
     "category": "games",
     "name": "Ecosystem Keeper",
@@ -7682,7 +7696,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 444 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 445 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>
