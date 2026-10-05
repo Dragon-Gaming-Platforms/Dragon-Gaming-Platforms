@@ -1445,6 +1445,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "consomaton",
+    "category": "games",
+    "name": "Consomaton",
+    "tags": [
+      "games",
+      "puzzle",
+      "cellular-automaton",
+      "programming",
+      "logic",
+      "simulation"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/consomaton/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A cellular automaton programming puzzle from prolific shmup developer Kenta Cho: place evolution rules on a grid of cells and make the automaton consume target patterns across 20 built-in quizzes, then build your own in the editor.",
+    "controls": "Mouse: Place cells and rules · Menu buttons to run, pause and step the automaton"
+  },
+  {
     "id": "cookie-clicker",
     "category": "games",
     "name": "Cookie Clicker",
@@ -2337,6 +2355,24 @@ const GAMES_DATA = [
     "controls": "Arrow keys to steer, accelerate and brake"
   },
   {
+    "id": "epoh",
+    "category": "games",
+    "name": "EPOH",
+    "tags": [
+      "games",
+      "strategy",
+      "turn-based",
+      "hex",
+      "sci-fi",
+      "singleplayer"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/epoh/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A turn-based hex strategy game of space colonization: at the end of the 21st century, settle a hostile earth-like planet. Ungarrison workers from your base, capture sectors, harvest resources and build a rover army in this open-source single-player demo.",
+    "controls": "Mouse: Select units, choose actions, move one tile per turn · End Turn button to resolve orders"
+  },
+  {
     "id": "escape-road",
     "category": "games",
     "name": "Escape Road",
@@ -2351,6 +2387,24 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Escape Road playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "et-demake",
+    "category": "games",
+    "name": "E.T. Demake",
+    "tags": [
+      "games",
+      "retro",
+      "atari",
+      "arcade",
+      "remake",
+      "classic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/et-demake/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A faithful HTML5 recreation of the infamous 1982 Atari 2600 classic E.T.: guide the stranded alien through pits and forests, collect the three phone parts, dodge the scientist and FBI agent, and phone home before your energy runs out.",
+    "controls": "Arrows / WASD: Move · Space: Action"
   },
   {
     "id": "exolon",
@@ -3129,6 +3183,23 @@ const GAMES_DATA = [
     "controls": "Arrow Keys or WASD: Roll the cube / Mouse and touch also supported"
   },
   {
+    "id": "invincible-man",
+    "category": "games",
+    "name": "Invincible Man",
+    "tags": [
+      "games",
+      "action",
+      "one-button",
+      "arcade",
+      "score-attack"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/invincible-man/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A one-button arena auto-battler from Kenta Cho's crisp-game-lib collection: you cannot be hurt, so fearlessly weave through swarms of enemies, touching them to build attack chains and rack up the score.",
+    "controls": "Tap / Click: Turn · Hold: Walk outward"
+  },
+  {
     "id": "iodinegba",
     "category": "emulators",
     "name": "IodineGBA Game Boy Advance",
@@ -3452,6 +3523,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "The classic three-by-three number puzzle. Place the digits one through nine so every row, column, and diagonal adds up to fifteen. A few numbers are given to start; live line totals turn green when they are correct. Each puzzle is a randomly rotated and mirrored magic square.",
     "controls": "Tap a cell to cycle through the remaining digits"
+  },
+  {
+    "id": "magnet-blocks",
+    "category": "games",
+    "name": "Magnet Blocks",
+    "tags": [
+      "games",
+      "puzzle",
+      "physics",
+      "magnets",
+      "logic",
+      "minimalist"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/magnet-blocks/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A minimalist physics puzzler from Kenta Cho's crisp-game-lib collection: drag to place magnets and pull the drifting blocks onto their goal markers using attraction, repulsion and momentum.",
+    "controls": "Mouse / Touch: Drag to place magnets"
   },
   {
     "id": "mahjong-link",
@@ -4905,6 +4994,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A fast turn-based strategy game built with Phaser 3. Capture territories, outmaneuver the AI and dominate the map before your opponents do.",
     "controls": "Mouse: Click to select and move units / R: Restart"
+  },
+  {
+    "id": "rb-drive",
+    "category": "games",
+    "name": "RB Drive",
+    "tags": [
+      "games",
+      "racing",
+      "driving",
+      "one-button",
+      "arcade",
+      "endless"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rb-drive/",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A snappy one-button lane-changing racer from Kenta Cho's crisp-game-lib collection: tap to switch lanes, thread your roadster through endless traffic and push your distance record higher.",
+    "controls": "Tap / Click: Change lane"
   },
   {
     "id": "reaction-test",
@@ -7575,7 +7682,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 438 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 444 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>
