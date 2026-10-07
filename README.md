@@ -19,5 +19,6 @@ visit the live demo [Here](https://dragon-gaming-platforms.github.io/Dragon-Gami
 3. Eruda Developer Consle
 4. Export and import buttons for local storage
 5. A whole host of games!
+6. Easy GitHub Pages deployment through (static.yml)[./.github/workflows/static.yml] after forking.
 
 [__Credits__](./CREDITS.md)
