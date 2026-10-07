@@ -2,6 +2,8 @@
 
 <div align="center">
   <img src="https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png" height="425" />
+
+[![Sync Assets-Repo Games to Catalog](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-assets-catalog.yml/badge.svg)](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-assets-catalog.yml)
 </div>
 
 ## Introduction
