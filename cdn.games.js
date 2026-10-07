@@ -52,6 +52,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "1x111",
+    "category": "games",
+    "name": "1x111",
+    "tags": [
+      "games",
+      "action",
+      "minigames",
+      "one-button",
+      "wario-ware",
+      "arcade"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/1x111/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "One times one-one-one: a frantic one-minute frenzy of five random one-button minigames drawn from 111 unique challenges by legendary shmup developer Kenta Cho. Press anything - each round explains itself, then dares you to survive it.",
+    "controls": "Any key / click / touch: The one button (hold and release sometimes matter)"
+  },
+  {
     "id": "2048",
     "category": "games",
     "name": "2048",
@@ -380,6 +398,23 @@ const GAMES_DATA = [
     "badge": "3D WebGL",
     "desc": "3D WebGL physics maze exploration powered by Three.js and Box2D \u2014 roll your sphere to find the exit portal.",
     "controls": "WASD / Arrow Keys: Roll Sphere | Space: Jump | Mouse: Orbit Camera"
+  },
+  {
+    "id": "attack-chain",
+    "category": "games",
+    "name": "Attack Chain",
+    "tags": [
+      "games",
+      "strategy",
+      "cards",
+      "tactics",
+      "one-button"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/attack-chain/",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A one-button tactical card skirmish from Kenta Cho: tap to select cards and string attacks into chains, trading tempo and resources against a rival deck.",
+    "controls": "Tap / Click: Select card"
   },
   {
     "id": "auction-fever",
@@ -829,6 +864,24 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Bomb Grid playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "bomb-snake",
+    "category": "games",
+    "name": "Bomb Snake",
+    "tags": [
+      "games",
+      "arcade",
+      "snake",
+      "bombs",
+      "retro",
+      "fantasy-console"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bomb-snake/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "The flagship game for PEEKPOKE, Kenta Cho's tiny retro fantasy console with only two commands: peek and poke. Steer your snake, drop bombs to clear your own trail, and outgrow the buzzer.",
+    "controls": "Arrows: Steer · X: Drop bomb"
   },
   {
     "id": "bombergirl",
@@ -1765,6 +1818,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "The pub favourite. Start on 501 and throw your way down to exactly zero, finishing on a double or the bullseye. A wobbling crosshair tests your timing on a fully scored dartboard.",
     "controls": "Tap the board to throw a dart at the crosshair"
+  },
+  {
+    "id": "dash-racket",
+    "category": "games",
+    "name": "Dash Racket",
+    "tags": [
+      "games",
+      "sports",
+      "arcade",
+      "pong",
+      "racket",
+      "retro"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dash-racket/",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A pocket racket rally from Kenta Cho's PEEKPOKE fantasy console: dash your paddle to smash incoming balls, keep the rally alive and clear each wave before your buzzer sounds.",
+    "controls": "Arrows: Move racket · X: Dash"
   },
   {
     "id": "datacenter-survival",
@@ -4583,6 +4654,23 @@ const GAMES_DATA = [
     "controls": "Press Roll to add the die, or Hold to bank your points"
   },
   {
+    "id": "pin-climb",
+    "category": "games",
+    "name": "Pin Climb",
+    "tags": [
+      "games",
+      "action",
+      "physics",
+      "climbing",
+      "one-button"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pin-climb/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A rope-physics climbing game from Kenta Cho: hold to stretch your cord to the next pin, release to latch on, and rack up altitude bonuses without swinging into oblivion.",
+    "controls": "Hold: Stretch cord · Release: Latch"
+  },
+  {
     "id": "pinball",
     "category": "games",
     "name": "Pinball",
@@ -6402,6 +6490,23 @@ const GAMES_DATA = [
     "controls": "Mouse: Click to look around, interact and pick up items"
   },
   {
+    "id": "thunder",
+    "category": "games",
+    "name": "Thunder",
+    "tags": [
+      "games",
+      "shooter",
+      "one-button",
+      "arcade",
+      "retro"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/thunder/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A one-button arena shooter from Kenta Cho: your ship fires automatically - tap to turn as enemies stream in from every side and chain kills for score in this crisp retro blaster.",
+    "controls": "Tap / Click / any key: Turn"
+  },
+  {
     "id": "trust",
     "category": "games",
     "name": "The Evolution of Trust",
@@ -6737,6 +6842,23 @@ const GAMES_DATA = [
     "controls": "WASD to Move, Mouse to Aim & Fire"
   },
   {
+    "id": "up-1-way",
+    "category": "games",
+    "name": "Up 1 Way",
+    "tags": [
+      "games",
+      "action",
+      "climber",
+      "one-button",
+      "arcade"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/up-1-way/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A snappy one-button vertical climber from Kenta Cho: tap to hop upward, thread the ever-narrowing gaps and outrun the rising pressure.",
+    "controls": "Tap / Click / any key: Go up"
+  },
+  {
     "id": "v86",
     "category": "emulators",
     "name": "v86 x86 PC Virtual Machine",
@@ -6822,6 +6944,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A two-player beach volleyball duel on one keyboard: jump, spike and outplay your friend across the net. Simple physics, instant fun - made with Phaser.",
     "controls": "Left player: A/D move, W jump · Right player: Arrow keys"
+  },
+  {
+    "id": "volt-keeper",
+    "category": "games",
+    "name": "Volt Keeper",
+    "tags": [
+      "games",
+      "action",
+      "puzzle",
+      "arcade",
+      "survival"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/volt-keeper/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A capacitor economy action-puzzle from Kenta Cho: your charge drains constantly and the only refill is standing in the path of sparks while grounded. Arrows and bumpers reshape the harvest terrain - read the field, ride the income, survive the waves.",
+    "controls": "Tap / Drag: Move the keeper"
   },
   {
     "id": "war-card",
@@ -7066,5 +7205,22 @@ const GAMES_DATA = [
     "badge": "SHMUP",
     "desc": "Pseudo-3D isometric invader defense with multiple alien unit types and explosive particle effects.",
     "controls": "Arrow Keys to Move, Space to Shoot"
+  },
+  {
+    "id": "zigzag-pressure",
+    "category": "games",
+    "name": "Zig-Zag Pressure",
+    "tags": [
+      "games",
+      "action",
+      "runner",
+      "one-button",
+      "arcade"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/zigzag-pressure/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A hypnotic one-button zigzag runner from Kenta Cho: tap to turn, trace the winding path without overshooting, and keep your nerve as the speed mounts.",
+    "controls": "Tap / Click / any key: Turn"
   }
 ];
