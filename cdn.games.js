@@ -118,6 +118,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "3d-graphing-calculator",
+    "category": "games",
+    "name": "3d Graphing Calculator",
+    "tags": [
+      "tool",
+      "utility"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/3d-graphing-calculator/",
+    "shelf": "Tools & Utilities",
+    "badge": "Tool",
+    "desc": "A 3d Graphing calculator compiled by turbowarp from scratch",
+    "controls": "simple plane: x+y+z=0 sphere: x*x+y*y+z*z=2 donut: sqrt((sqrt(x*x+y*y)-1)^2+z*z)-0.5=0 heart: x^2 + 9/4*y^2 + z^2 - 1 - z*cbrt(x^2+9/200*y^2) = 0"
+  },
+  {
     "id": "a-dark-room",
     "category": "games",
     "name": "A Dark Room",
@@ -7109,6 +7123,21 @@ const GAMES_DATA = [
     "badge": "V86",
     "desc": "High-performance browser-based x86 PC hardware emulator with JIT compilation. Boot Linux, Windows 98/95/3.1, FreeDOS, KolibriOS, ReactOS, and custom floppy/ISO disk images in WebAssembly.",
     "controls": "Keyboard / Mouse (Click canvas to lock cursor, ESC to release)"
+  },
+  {
+    "id": "vectoid-td-3d-v1.4",
+    "category": "games",
+    "name": "Vectoid TD 3D v1.4",
+    "tags": [
+      "games",
+      "strategy",
+      "tower-defense"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/vectoid-td-3d-v1.4/",
+    "shelf": "Strategy & Idle",
+    "badge": "TD",
+    "desc": "Build and upgrade towers , prevent enemies from reaching the goal. Beat all waves to win.",
+    "controls": "0-9 - Buy tower hotkey. Space - Start wave / Fast forward hotkey"
   },
   {
     "id": "vex-7",
