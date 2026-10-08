@@ -7443,7 +7443,7 @@ const GAMES_DATA = [
   const REPO_OWNER = 'Dragon-Gaming-Platforms';
   const REPO_NAME  = 'Dragon-Gaming-Platforms';
   const API_BASE   = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`;
-  const CURRENT_VER = 'v1.1.0';
+  const CURRENT_VER = 'v1.2.2';
 
   const $ = (s, doc = document) => doc.querySelector(s);
   const $$ = (s, doc = document) => doc.querySelectorAll(s);
