@@ -3063,6 +3063,20 @@ const GAMES_DATA = [
     "controls": "Arrow keys / A and D or tap left and right to dodge"
   },
   {
+    "id": "guardians-of-the-hollow",
+    "category": "games",
+    "name": "GUARDIANS OF THE HOLLOW",
+    "tags": [
+      "games",
+      "adventure"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/Guardians-of-the-Hollow/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A stickman adventure game",
+    "controls": "WASD to move, 1 to swap to stickman and 2 to swap to spider"
+  },
+  {
     "id": "gust",
     "category": "other",
     "name": "GUST Proxy Browser",
