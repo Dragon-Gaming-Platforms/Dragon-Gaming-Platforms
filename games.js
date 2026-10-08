@@ -6938,7 +6938,7 @@ const GAMES_DATA = [
     ],
     "path": "./games/tower-defense/index.html",
     "shelf": "Arcade & Action",
-    "badge": "",
+    "badge": "TD",
     "desc": "Tower Defense playable in your web browser.",
     "controls": "Keyboard / Mouse"
   },
