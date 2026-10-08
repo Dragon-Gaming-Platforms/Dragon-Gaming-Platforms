@@ -6479,6 +6479,20 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "submersible",
+    "category": "games",
+    "name": "Submersible",
+    "tags": [
+      "games",
+      "adventure"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/submersible/",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A pixelated underwater adventure game",
+    "controls": "WASD - movement mouse - aim/use tool E - view inventory L - toggle light P - add waypoint I - toggle waypoint visibility  M - map X - delete"
+  },
+  {
     "id": "subway-surfers",
     "category": "games",
     "name": "Subway Surfers",
