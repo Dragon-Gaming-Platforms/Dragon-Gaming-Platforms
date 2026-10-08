@@ -107,6 +107,30 @@ All games, emulators, and tools are cataloged in `games.js`, `cdn.games.js`, and
 
 ---
 
+### Game Thumbnails (`"image"` field)
+
+Catalog entries may carry an optional `"image"` field - thumbnail art shown in
+the card grid instead of the default category emoji:
+
+- `games.js` / `singlefile.html` use site-relative paths (`thumbs/<id>.jpg`);
+  `cdn.games.js` uses the absolute Pages URL
+  (`https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/thumbs/<id>.jpg`).
+- Local art lives in `thumbs/` at the repo root: one `<id>.jpg` per game,
+  roughly 800x260 (3:1) JPEG, max ~40 KB, cover-cropped for the 125px card
+  image box. `thumbs/` is published by the Pages deploy (not in the strip list).
+- Games hosted in the assets repo may instead point at a screenshot shipped
+  with the game (absolute `.../games/<id>/screenshots/...` URL).
+- Rendering: `<img class="game-card__thumb" loading="lazy" decoding="async">`
+  sits above the emoji, below the badge/pin/bottom fade. A missing field or a
+  404 (handled by `onerror`) falls back to the emoji - never a broken-image
+  icon, never a layout shift. Keep thumbnails lazy and small.
+- The auto-sync reads `"image"` from a game's `game.json` (relative paths are
+  resolved against the game's assets-repo URL) and refreshes the thumbnail of
+  games already in the catalog - the single exception to add-only behaviour.
+  It never removes or blanks an existing image.
+- Only use artwork you have the right to display (own builds, official
+  screenshots, or freely licensed art).
+
 ## 4. Mandatory Synchronization Rules
 
 Whenever adding, updating, or fixing a game, emulator, or utility, **ALL THREE catalog files must be updated together**:

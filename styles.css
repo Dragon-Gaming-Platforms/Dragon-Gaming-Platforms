@@ -560,6 +560,21 @@ body.crt-mode::before {
   }
 }
 
+/* Card thumbnail art (catalog "image" field). The img is absolutely positioned
+   so it paints above the placeholder emoji but below the badge, favourite pin
+   and the bottom fade. onerror removes a broken/404 img, which uncovers the
+   emoji fallback - no broken-image icon, no layout shift, no clipping. */
+.game-card__thumb {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block;
+  transition: transform var(--t-med);
+}
+@media (hover: hover) and (pointer: fine) {
+  .game-card:hover .game-card__thumb { transform: scale(1.05); }
+}
+
 /* Card badges & favorite pin */
 .game-card__badge {
   position: absolute; top: 10px; left: 10px; z-index: 2;
