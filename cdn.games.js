@@ -3689,6 +3689,21 @@ const GAMES_DATA = [
     "controls": "Mouse / touch to toggle a tile"
   },
   {
+    "id": "linux-6.1.14-rv32ima-on-scratch",
+    "category": "games",
+    "name": "Linux 6.1.14-rv32ima on scratch",
+    "tags": [
+      "emulator",
+      "os",
+      "linux"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/linux-6.1.14-rv32ima-on-scratch/",
+    "shelf": "Emulators",
+    "badge": "OS",
+    "desc": "A real build of the Linux 6.1.14 kernel running in pure scratch code compiled by turbowarp into javascript",
+    "controls": "Run cat readme.txt for info using keyboard"
+  },
+  {
     "id": "lockmaster-shift",
     "category": "games",
     "name": "Lockmaster Shift",
@@ -5327,6 +5342,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "How fast are your reflexes? Wait for the screen to flash green, then tap as quickly as you can. Tap too early and you have to restart. Tracks your best and average reaction time.",
     "controls": "Tap / click anywhere (or press Space)"
+  },
+  {
+    "id": "real-dos-windows-on-scratch",
+    "category": "games",
+    "name": "REAL DOS/Windows on Scratch",
+    "tags": [
+      "emulator",
+      "os",
+      "system",
+      "scratch"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/real-dos-windows-on-scratch/",
+    "shelf": "Emulators",
+    "badge": "OS",
+    "desc": "A mostly functional 8086 emulator running in scratch, compiled by turbowarp",
+    "controls": "Run windows by going to the C drive (C: + enter), then cd windows, then win."
   },
   {
     "id": "recoil",
