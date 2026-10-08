@@ -2343,7 +2343,7 @@ const GAMES_DATA = [
       "games",
       "adventure"
     ],
-    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/Echoed-Path/",
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/echoed-path/",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A pixelated adventure game",
