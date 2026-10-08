@@ -13,9 +13,14 @@ Usage:
 
 Per-game metadata (all keys optional) may be provided in games/<slug>/game.json:
     { "name": "...", "desc": "...", "controls": "...", "shelf": "...",
-      "tags": ["games", "html5"], "badge": "", "creator": "..." }
+      "tags": ["games", "html5"], "badge": "", "creator": "...",
+      "image": "screenshots/1.jpg" }
 
 This script is ADD-ONLY: it never edits or removes existing catalog entries.
+The single exception is the thumbnail "image" field: when game.json supplies an
+image for a game already in the catalog, the sync refreshes just that one field
+(relative paths are resolved against the game's assets-repo URL; an existing
+image is never removed or blanked).
 Orphaned assets-repo entries, id conflicts and metadata problems are reported
 as warnings (and THIRD_PARTY.md attribution is left to the maintainer).
 
@@ -96,6 +101,9 @@ def scan_assets(games_dir, warnings):
         if not (isinstance(tags, list) and tags):
             tags = ["games", "html5"]
         name = str(meta.get("name") or title_from_slug(gid))
+        image = str(meta.get("image") or "").strip()
+        if image and not image.startswith(("http://", "https://")):
+            image = ASSETS_BASE + entry + "/" + image.lstrip("/")
         games.append({
             "id": gid,
             "folder": entry,
@@ -107,6 +115,7 @@ def scan_assets(games_dir, warnings):
             "badge": str(meta.get("badge") or ""),
             "creator": str(meta.get("creator") or ""),
             "path": ASSETS_BASE + entry + "/",
+            "image": image,
         })
     return games
 
@@ -120,6 +129,7 @@ def entry_block(g):
         + '    "name": ' + json.dumps(g["name"], ensure_ascii=False) + ",\n"
         + '    "tags": [\n' + tag_lines + "\n    ],\n"
         + '    "path": ' + json.dumps(g["path"], ensure_ascii=False) + ",\n"
+        + ('    "image": ' + json.dumps(g["image"], ensure_ascii=False) + ",\n" if g.get("image") else "")
         + '    "shelf": ' + json.dumps(g["shelf"], ensure_ascii=False) + ",\n"
         + '    "badge": ' + json.dumps(g["badge"], ensure_ascii=False) + ",\n"
         + '    "desc": ' + json.dumps(g["desc"], ensure_ascii=False) + ",\n"
@@ -156,6 +166,23 @@ def insert_entry(content, g, fname):
     if content.count(anchor) != 1:
         fail("%s: anchor for '%s' found %dx" % (fname, best[1], content.count(anchor)))
     return content.replace(anchor, entry_block(g) + anchor, 1)
+
+
+def set_entry_image(content, gid, image, fname):
+    """Refresh only the thumbnail field of one existing entry (the single
+    add-only exception). Inserts after the "path" line; never removes."""
+    m = re.search(r'(  \{\n    "id": "%s",\n.*?\n  \},)' % re.escape(gid), content, re.S) \
+        or re.search(r'(  \{\n    "id": "%s",\n.*?\n  \}\n\];)' % re.escape(gid), content, re.S)
+    if not m:
+        fail("%s: entry '%s' not found for image update" % (fname, gid))
+    block = m.group(1)
+    if '"image": ' in block:
+        new_block = re.sub(r'"image": "[^"]*"', '"image": "%s"' % image, block, count=1)
+    else:
+        new_block = re.sub(r'("path": "[^"]*",\n)', r'\1    "image": "%s",\n' % image, block, count=1)
+    if new_block == block:
+        fail("%s: could not set image for '%s'" % (fname, gid))
+    return content[:m.start()] + new_block + content[m.end():]
 
 
 def sub_once(text, pattern, repl, fname):
@@ -253,12 +280,16 @@ def main():
     data = parse_data(contents["games.js"], "games.js")
     by_id = {x["id"]: x for x in data}
 
-    added, already, conflicts = [], [], []
+    added, already, conflicts, image_updates = [], [], [], []
     for g in sorted(asset_games, key=lambda x: x["id"]):
         existing = by_id.get(g["id"])
         if existing is not None:
             if existing.get("path") == g["path"]:
                 already.append(g["id"])
+                if g.get("image") and existing.get("image") != g["image"]:
+                    for fname in CATALOGS:
+                        contents[fname] = set_entry_image(contents[fname], g["id"], g["image"], fname)
+                    image_updates.append(g["id"])
             else:
                 conflicts.append(g["id"])
                 warnings.append("'%s' already in catalog with a different path (%s) — SKIPPED"
@@ -279,7 +310,7 @@ def main():
                 warnings.append("orphaned entry '%s': no matching folder in the assets repository"
                                 % entry["id"])
 
-    if added:
+    if added or image_updates:
         counts = update_counts(contents)
         # Post-verify: all three catalogs must stay in sync.
         id_lists = [[x["id"] for x in parse_data(contents[f], f)] for f in CATALOGS]
@@ -293,6 +324,7 @@ def main():
     print("  already in catalog : %d %s" % (len(already), ("(" + ", ".join(already) + ")") if already else ""))
     print("  newly added        : %d %s" % (len(added), ("(" + ", ".join(a["id"] for a in added) + ")") if added else ""))
     print("  id conflicts       : %d %s" % (len(conflicts), ("(" + ", ".join(conflicts) + ")") if conflicts else ""))
+    print("  thumbnails updated : %d %s" % (len(image_updates), ("(" + ", ".join(image_updates) + ")") if image_updates else ""))
     if added:
         print("  new totals         : %d items (%d games, %d emulators, %d other)" % counts)
     if warnings:
@@ -306,10 +338,13 @@ def main():
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a") as f:
-            f.write("changed=%s\n" % ("true" if added else "false"))
+            f.write("changed=%s\n" % ("true" if (added or image_updates) else "false"))
             f.write("added=" + ",".join(a["id"] for a in added) + "\n")
-            f.write("commit_message=Sync catalog with Dragon-Gaming-Assets games (%s)\n"
-                    % ",".join(a["id"] for a in added))
+            if added:
+                msg = "Sync catalog with Dragon-Gaming-Assets games (%s)" % ",".join(a["id"] for a in added)
+            else:
+                msg = "Update game thumbnails (%s)" % ", ".join(image_updates)
+            f.write("commit_message=%s\n" % msg)
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a") as f:
@@ -317,16 +352,18 @@ def main():
             f.write("- Scanned: %d game folder(s)\n- Already in catalog: %d\n- **Added: %d** %s\n- Conflicts: %d\n"
                     % (len(asset_games), len(already), len(added),
                        ("`" + "`, `".join(a["id"] for a in added) + "`") if added else "", len(conflicts)))
+            f.write("- Thumbnails updated: %d %s\n"
+                    % (len(image_updates), ("(`" + "`, `".join(image_updates) + "`)") if image_updates else ""))
             if warnings:
                 f.write("\n**Warnings:**\n\n" + "\n".join("- " + w for w in warnings) + "\n")
             if added:
                 f.write("\n_Remember to add THIRD_PARTY.md attribution for the new game(s) above._\n")
 
-    if added and not args.dry_run:
+    if (added or image_updates) and not args.dry_run:
         for fname in ("games.js", "cdn.games.js", "singlefile.html", "index.html", "AGENTS.md"):
             save(fname, contents[fname])
         print("Catalog updated and written (5 files).")
-    elif added:
+    elif added or image_updates:
         print("Dry run — no files written.")
     else:
         print("Nothing to add — catalog is already in sync. No files written.")

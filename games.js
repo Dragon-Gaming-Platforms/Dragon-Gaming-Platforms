@@ -1611,6 +1611,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Cookie-Clicker.html",
+    "image": "thumbs/cookie-clicker.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "The original idle baking empire by Orteil — click the big cookie, buy grandmas, farms and portals, and bake your way to infinity.",
@@ -2373,6 +2374,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Eggy-Car.html",
+    "image": "thumbs/eggy-car.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Balance a fragile egg on the roof of your car while crawling over endless bumpy hills — steady throttle or omelette.",
@@ -2791,6 +2793,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Friday-Night-Funkin.html",
+    "image": "thumbs/friday-night-funkin.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "The open-source rhythm sensation — arrow-key beat battles against Daddy Dearest, Skid & Pump and the whole crew.",
@@ -2943,6 +2946,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Geometry-Dash.html",
+    "image": "thumbs/geometry-dash.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "The iconic rhythm platformer — one-touch jumps through spike-filled, music-synced obstacle courses.",
@@ -2957,6 +2961,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Getaway-Shootout.html",
+    "image": "thumbs/getaway-shootout.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Two-player ragdoll racing shootout — hop toward the finish and grab weapons to blast your rival before the getaway.",
@@ -3628,6 +3633,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Krunker.html",
+    "image": "thumbs/krunker.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "The massively popular pixelated browser FPS — fast movement, classes, custom maps and full mod support.",
@@ -4705,6 +4711,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Paper-io-2.html",
+    "image": "thumbs/paper-io-2.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Claim territory by drawing loops around rivals — expand your paper empire without getting cut off.",
@@ -5232,6 +5239,7 @@ const GAMES_DATA = [
       "ragdoll"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ragdoll-archers/",
+    "image": "thumbs/ragdoll-archers.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Physics-based archery duels where wobbly stickman archers trade arrows. Aim your bow, manage stamina, dodge incoming shots, and spend skulls on upgrades across solo, PvP, and co-op modes.",
@@ -5246,6 +5254,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ragdoll-hit/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ragdoll-hit/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Hilarious physics-based stickman fighting game — trade punches, kicks and grabs in wobbly ragdoll duels.",
@@ -5539,6 +5548,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Run-3.html",
+    "image": "thumbs/run-3.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Run, jump and rotate through crumbling tunnels in zero gravity in the classic endless platformer.",
@@ -5664,6 +5674,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Shell-Shockers.html",
+    "image": "thumbs/shell-shockers.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "The world's most advanced egg-based multiplayer FPS — crack the other team in shell-shooting arena battles.",
@@ -5918,6 +5929,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Slope.html",
+    "image": "thumbs/slope.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "The neon 3D endless runner — steer a ball down a collapsing slope at ever-increasing speed.",
@@ -5932,6 +5944,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Smash-Karts.html",
+    "image": "thumbs/smash-karts.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "3D multiplayer kart arena brawler — grab rockets, gatling guns and power-ups and blast the whole lobby.",
@@ -6428,6 +6441,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Subway-Surfers.html",
+    "image": "thumbs/subway-surfers.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Dodge oncoming trains and dash through the subway in the endless-running phenomenon.",
@@ -6605,6 +6619,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Temple-Run-2.html",
+    "image": "thumbs/temple-run-2.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "The legendary endless runner — sprint, slide and swing through crumbling temples with the cursed idol.",
@@ -7072,6 +7087,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/singlefiles/Vex-7.html",
+    "image": "thumbs/vex-7.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "The latest stickman platformer — run, wall-jump and swim through deadly acts of spikes, saws and traps.",
@@ -8002,6 +8018,7 @@ const GAMES_DATA = [
           <button class="game-card__fav-btn ${isFav ? 'is-fav' : ''}" title="${isFav ? 'Remove Favorite' : 'Add to Favorites'}" data-fav-id="${esc(item.id)}">
             ${isFav ? '★' : '☆'}
           </button>
+          ${item.image ? `<img class="game-card__thumb" src="${esc(item.image)}" alt="" loading="lazy" decoding="async" width="800" height="260" onerror="this.remove()">` : ''}
           <span class="game-card__placeholder-icon">${icons[item.category] || "🎮"}</span>
         </div>
         <div class="game-card__body">
