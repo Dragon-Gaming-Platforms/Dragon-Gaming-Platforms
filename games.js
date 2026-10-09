@@ -63,6 +63,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/1x111/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/1x111/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "One times one-one-one: a frantic one-minute frenzy of five random one-button minigames drawn from 111 unique challenges by legendary shmup developer Kenta Cho. Press anything - each round explains itself, then dares you to survive it.",
@@ -142,6 +143,7 @@ const GAMES_DATA = [
       "adventure"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/a-dark-room/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/a-dark-room/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A minimalist text adventure that starts with stoking a fire in a dark room and slowly unfolds into a survival, settlement-building odyssey. The cult classic incremental game by Doublespeak Games.",
@@ -175,6 +177,7 @@ const GAMES_DATA = [
       "curve"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/achtung-die-kurve/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/achtung-die-kurve/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "The legendary Zatacka curve duel: every player steers an ever-moving line that never stops turning. Cut off your friends, survive the gaps and the walls, and be the last line standing - up to six players on one keyboard.",
@@ -254,6 +257,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/alien-invaders/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/alien-invaders/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Defend Earth from marching waves of aliens. Slide your cannon left and right, dodge falling bombs, and blast the formation before it reaches the ground. The fewer invaders left, the faster they charge.",
@@ -346,6 +350,7 @@ const GAMES_DATA = [
       "skill"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/archery-master/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/archery-master/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Steady your aim against a swaying reticle and shifting wind. Loose six arrows and read the drift to plant them in the gold. Ring scoring rewards precision, so hold your breath and hit the bullseye.",
@@ -364,6 +369,7 @@ const GAMES_DATA = [
       "pwa"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/arcomage/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/arcomage/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A free, open-source remaster of Arcomage, the classic card game from Might & Magic VII: build your tower, tear down your rival's, or hoard resources to win. Play vs AI in 16 languages - offline-capable PWA build.",
@@ -395,6 +401,7 @@ const GAMES_DATA = [
       "shooter"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/asteroid-belt/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/asteroid-belt/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Pilot a lone ship through a field of tumbling space rocks. Rotate, thrust, and shoot — every big asteroid you hit splits into smaller, faster fragments. Clear the belt wave after wave with three lives.",
@@ -443,6 +450,7 @@ const GAMES_DATA = [
       "one-button"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/attack-chain/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/attack-chain/screenshots/1.gif",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A one-button tactical card skirmish from Kenta Cho: tap to select cards and string attacks into chains, trading tempo and resources against a rival deck.",
@@ -504,6 +512,7 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/baccarat/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/baccarat/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "The elegant card game of Player versus Banker. Bet on either hand or a tie, then watch the deal play out under authentic third-card drawing rules, with the closest total to nine winning. Banker bets pay with the customary five percent commission. Bankroll saves locally.",
@@ -580,6 +589,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "banebox",
+    "category": "games",
+    "name": "Banebox",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "platformer",
+      "8-bit"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/banebox/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/banebox/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A tiny PEEKPOKE console game by Kenta Cho: leap across descending floors, shoot the boxes in your way and climb as far as you can.",
+    "controls": "Arrows / buttons: Move + jump; Z / A: Shoot"
+  },
+  {
     "id": "basin-control",
     "category": "games",
     "name": "Basin Control",
@@ -619,6 +646,7 @@ const GAMES_DATA = [
       "battleship"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battleship/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battleship/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "Place your fleet, then hunt down the enemy's ships before they sink yours. Features ship placement with rotation, a hunting AI, and hit/miss/sunk tracking.",
@@ -635,6 +663,7 @@ const GAMES_DATA = [
       "daily"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bearing/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bearing/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A daily direction-finding puzzle. Rotate a compass heading and listen: hidden sound sources pull left or right like a real ear would hear. Two listens from different headings triangulate the truth - mark every source's bearing in as few listens as par allows.",
@@ -653,6 +682,24 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Beat Bento playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "beebees",
+    "category": "games",
+    "name": "Bee Bees",
+    "tags": [
+      "games",
+      "arcade",
+      "retro",
+      "fantasy-console",
+      "dodge"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/beebees/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/beebees/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A nectar-gathering arcade game from Kenta Cho's PEEKPOKE fantasy console: guide your bee between flowers, dodge the hornets and keep the hive stocked.",
+    "controls": "Arrows: Steer the bee"
   },
   {
     "id": "behind-asteroids",
@@ -683,6 +730,7 @@ const GAMES_DATA = [
       "brain"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/binairo/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/binairo/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A binary logic puzzle, also known as Takuzu. Fill the grid with two colours so each row and column holds an equal number of both, never more than two of the same colour in a row, and no two lines are identical. Every board is freshly generated with a unique solution.",
@@ -718,6 +766,7 @@ const GAMES_DATA = [
       "minimal"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/black-hole-square/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/black-hole-square/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A minimal space-themed puzzle game from js13k 2021: on a 6x6 grid, tap squares to shunt them into your black hole. Arrows push, X-squares swap and neutron stars transform - clean the entire universe in as few moves as you can.",
@@ -735,6 +784,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/blackjack/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/blackjack/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Play 21 against the dealer. Hit to draw closer to 21 without busting, stand to hold, and beat the dealer's hand. Blackjack pays 3:2 and the dealer stands on 17. Manage your chip stack across hands.",
@@ -765,6 +815,7 @@ const GAMES_DATA = [
       "daily"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/blind-corners/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/blind-corners/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A daily optics puzzle. Fire laser beams into a dark box and watch where they exit - then deduce where the hidden mirrors are. Work out the whole layout from the beam paths alone.",
@@ -782,6 +833,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/block-blast/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/block-blast/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A grid-filling block puzzle in the 1010 tradition. Drop three offered shapes onto a ten-by-ten board and clear complete rows and columns to score. There is no gravity and no timer, only clever placement, until no piece fits and the game ends.",
@@ -813,6 +865,7 @@ const GAMES_DATA = [
       "sliding"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/block-slide/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/block-slide/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A sliding-block escape puzzle. Shift the wooden blocks out of the way so the red block can slide free to the exit on the right. Solve each layout in as few moves as you can.",
@@ -830,6 +883,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/block-stacker/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/block-stacker/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The classic falling-blocks puzzle. Rotate and slide the descending tetromino pieces to complete solid rows, which then clear. The game speeds up as you level up — how high can you score?",
@@ -876,6 +930,7 @@ const GAMES_DATA = [
       "french"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bobby/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bobby/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A grid-based puzzle game in French: collect all the coins and reach the exit. Rocks block you, conveyor belts push you, turnstiles rotate, buttons wear out and ice makes you slide. 40 hand-made levels with keyboard, mouse and touch controls.",
@@ -910,6 +965,7 @@ const GAMES_DATA = [
       "fantasy-console"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bomb-snake/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bomb-snake/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "The flagship game for PEEKPOKE, Kenta Cho's tiny retro fantasy console with only two commands: peek and poke. Steer your snake, drop bombs to clear your own trail, and outgrow the buzzer.",
@@ -927,6 +983,7 @@ const GAMES_DATA = [
       "two-player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bombergirl/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bombergirl/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A polished HTML5 remake of the classic Bomberman formula. Blow up walls, grab power-ups and out-blast AI bots - solo or with a friend on the same keyboard.",
@@ -961,10 +1018,29 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/boxing/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/boxing/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A reaction-based boxing duel. Read your opponent's wind-up, block the correct side or dodge to avoid the blow, then counter with a jab while they are open. Manage both health bars and outbox the computer to score a knockout.",
     "controls": "Buttons or keys: Jab, Block Left, Block Right, Dodge"
+  },
+  {
+    "id": "boxsnake",
+    "category": "games",
+    "name": "Box Snake",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "snake",
+      "pixel-art"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/boxsnake/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/boxsnake/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A stretchy pixel snake from Kenta Cho: hold to extend your boxy body across the grid, dodge the turret's fire and survive as long as you can.",
+    "controls": "Hold: Stretch the snake"
   },
   {
     "id": "branching-tales",
@@ -1008,6 +1084,7 @@ const GAMES_DATA = [
       "action"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/brick-breaker/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/brick-breaker/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A fast arcade brick-breaker: bounce the ball off your paddle to smash every brick, clear stages that grow harder, and chase a high score across three lives.",
@@ -1025,6 +1102,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bubble-shooter/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bubble-shooter/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Aim and fire bubbles to match three or more of the same color and pop them off the board. Clear every bubble and don't let them reach the bottom line.",
@@ -1042,6 +1120,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bug-blaster/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bug-blaster/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A retro arcade shooter inspired by the classics. Blast the centipede as it winds down through a mushroom field — hit a middle segment and it splits into two. Don't let it reach your zone!",
@@ -1074,6 +1153,7 @@ const GAMES_DATA = [
       "humor"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/candy-box-2/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/candy-box-2/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "The legendary ASCII text adventure: it starts with a bowl of candy and slowly unfolds into an epic quest with lollipops, swords, quests, a talking candy and a whole world to explore. An idle-RPG classic by aniwey.",
@@ -1140,6 +1220,7 @@ const GAMES_DATA = [
       "one-button"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/card-q/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/card-q/screenshots/1.gif",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A one-button card puzzler from Kenta Cho: pull cards from the queue and slot them into the right lanes to clear hands and chain combos before the deck runs dry.",
@@ -1156,6 +1237,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/catch-the-cat/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/catch-the-cat/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Trap the crafty cat before it escapes to the edge! Click tiles to block its path in this Phaser 3 remake of the classic Circle the Cat puzzle. Every move counts - the cat finds the shortest way out.",
@@ -1189,6 +1271,7 @@ const GAMES_DATA = [
       "shooter"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/centipede/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/centipede/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A retro-style shooter. Blast the centipede as it winds down through a field of mushrooms; every hit splits it and sprouts new mushrooms. Clear a wave and a longer, faster centipede returns. Defend your zone across three lives.",
@@ -1238,6 +1321,7 @@ const GAMES_DATA = [
       "pixel"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/charge-beam/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/charge-beam/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A charge-and-release blaster from Kenta Cho rendered in a chunky pixel theme: tap to pepper shots, hold to charge a piercing beam, release to sweep the field.",
@@ -1270,6 +1354,7 @@ const GAMES_DATA = [
       "draughts"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/checkers/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/checkers/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Classic English draughts against a minimax computer opponent, with forced captures, multi-jumps and king promotion. Capture all the CPU's pieces to win.",
@@ -1373,6 +1458,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/clean-robo/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/clean-robo/screenshots/1.gif",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A one-button robot janitor arcade game from Kenta Cho: hold to speed up and sweep every tile of the floor clean while hazards roam - momentum is your only steering.",
@@ -1418,6 +1504,7 @@ const GAMES_DATA = [
       "luck"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/clock-solitaire/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/clock-solitaire/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A luck-driven classic laid out like a clock face. Flip a card and send it to its hour, then keep going from that pile. Turn up all fifty-two cards before the fourth King appears to beat the clock.",
@@ -1435,6 +1522,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/clock-turret/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/clock-turret/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A one-button turret defense from Kenta Cho: hold to stop the rotating cannon and shoot, release to keep spinning - time your stops to snipe the incoming swarm.",
@@ -1496,6 +1584,7 @@ const GAMES_DATA = [
       "color"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-flood/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-flood/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Flood the whole board with a single color before you run out of moves. Pick a color to spread your region from the top-left corner across the grid.",
@@ -1513,6 +1602,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-lines/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-lines/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Move coloured balls around the 9x9 board to line up five or more of the same colour and clear them. Three new balls appear each turn — keep the board from filling up and chase a high score.",
@@ -1530,6 +1620,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-switch/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-switch/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Hop a bouncing ball up through spinning rings, but only pass through the arc that matches your colour. Grab the stars to switch colours and time every tap to climb as high as you can without a mismatch.",
@@ -1563,6 +1654,7 @@ const GAMES_DATA = [
       "canvas"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/commando/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/commando/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A nostalgic HTML5 canvas remake of the Commodore 64 classic Commando: run and gun through enemy territory, mow down troopers, snipers and bikers, rescue prisoners of war and blast your way to the exit. Built with CoffeeScript on melonJS.",
@@ -1611,6 +1703,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/consomaton/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/consomaton/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A cellular automaton programming puzzle from prolific shmup developer Kenta Cho: place evolution rules on a grid of cells and make the automaton consume target patterns across 20 built-in quizzes, then build your own in the editor.",
@@ -1643,6 +1736,7 @@ const GAMES_DATA = [
       "endless"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/copter-cave/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/copter-cave/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Pilot a helicopter through a twisting, narrowing cave. Hold to rise, release to fall, and thread between stalactites and stalagmites. The further you fly, the faster and tighter it gets.",
@@ -1660,6 +1754,7 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cornhole/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cornhole/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "The backyard bag-toss game brought to your screen. Aim your throw, charge the power meter to its sweet spot, and land bags on the board for one point or in the hole for three. Play cancellation scoring against the computer and race to twenty-one.",
@@ -1751,6 +1846,7 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/craps/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/craps/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A streamlined casino craps table built around the pass line. Place a pass or don't-pass bet, roll the come-out, and chase your point before a seven ends the round. Your bankroll is saved on your device so you can build a streak over time.",
@@ -1768,6 +1864,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/crazy-eights/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/crazy-eights/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Race to empty your hand in this classic shedding card game. Match the top card by suit or rank, and unleash a wild eight to change the suit whenever you like. Outplay the computer and go out first.",
@@ -1816,6 +1913,7 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/curling/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/curling/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Slide stones down the ice against the computer. Aim your line, hold to build power, and release to send your stone gliding toward the button, using collisions to knock rivals out of the house. Closest stones score. Play out a full eight-stone end and beyond.",
@@ -1870,6 +1968,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "dango",
+    "category": "games",
+    "name": "Dango",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "one-button",
+      "food"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dango/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dango/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A one-button dango-skewering arcade game from Kenta Cho: stretch the stick to spear falling sweets and stack them into perfect skewers without dropping a treat.",
+    "controls": "Tap / Click / any key: Stretch the stick"
+  },
+  {
     "id": "dante",
     "category": "games",
     "name": "Dante",
@@ -1915,6 +2031,7 @@ const GAMES_DATA = [
       "aim"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/darts-501/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/darts-501/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "The pub favourite. Start on 501 and throw your way down to exactly zero, finishing on a double or the bullseye. A wobbling crosshair tests your timing on a fully scored dartboard.",
@@ -1933,6 +2050,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dash-racket/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dash-racket/screenshots/1.gif",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A pocket racket rally from Kenta Cho's PEEKPOKE fantasy console: dash your paddle to smash incoming balls, keep the rally alive and clear each wave before your buzzer sounds.",
@@ -1951,6 +2069,7 @@ const GAMES_DATA = [
       "3d"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/datacenter-survival/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/datacenter-survival/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "The physical-layer sister game to Server Survival: design and run a whole datacenter - power chains, UPS units, heat, airflow, cooling and PUE. Keep the racks humming through heat waves, power cuts and equipment failures.",
@@ -2032,6 +2151,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dice-poker/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dice-poker/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A poker-dice scorecard game. Roll five dice up to three times, holding the ones you want, then bank the result in a category — three of a kind, full house, straights, and more. Fill the whole card for your best total.",
@@ -2079,6 +2199,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dominoes/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dominoes/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "Play the classic tile game against the computer. Match your dominoes to the open ends of the line and be the first to empty your hand. Draw from the boneyard when stuck, and win on low pips if the game blocks.",
@@ -2096,6 +2217,7 @@ const GAMES_DATA = [
       "endless"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/doodle-hop/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/doodle-hop/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Bounce endlessly upward from platform to platform, dodging gaps and using moving and breakable ledges. The screen wraps side to side — just don't fall off the bottom.",
@@ -2131,6 +2253,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dots-and-boxes/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dots-and-boxes/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The classic pen-and-paper game against a computer opponent. Draw lines to complete boxes, claim them, and take an extra turn each time you close one.",
@@ -2148,6 +2271,7 @@ const GAMES_DATA = [
       "reaction"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/drag-race/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/drag-race/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Launch on the green light and nail every gear shift in the RPM sweet spot to hit top speed. React too slow or over-rev and the computer leaves you behind. Burn down the quarter mile for your best time.",
@@ -2257,6 +2381,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/duck-shoot/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/duck-shoot/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A fast-paced shooting gallery. Ducks dart across the sky and you have thirty seconds to bag as many as you can. Speedy birds are worth more points, so aim quick and keep your accuracy high.",
@@ -2345,6 +2470,7 @@ const GAMES_DATA = [
       "daily"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/echo-sounding/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/echo-sounding/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A daily sonar puzzle. Ping a hidden grid and study the echoes that come back - each ping reveals clues about the shapes below. Deduce the full hidden layout in as few pings as you can.",
@@ -2406,6 +2532,7 @@ const GAMES_DATA = [
       "physics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/eight-ball-pool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/eight-ball-pool/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Two-player pool on a felt table with realistic ball physics. Break the rack, claim solids or stripes, and pocket all your balls before sinking the 8-ball to win. Drag to aim and control your power.",
@@ -2454,6 +2581,7 @@ const GAMES_DATA = [
       "educational"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/elevator-saga/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/elevator-saga/screenshots/1.png",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A programming puzzle game: write JavaScript to control a building's elevators and transport people as efficiently as possible. Progress through ever-tougher challenges with a live simulation and leaderboards for your best solutions.",
@@ -2537,6 +2665,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/enduro-tribute/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/enduro-tribute/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A tribute to the classic Atari 2600 racer Enduro. Race a pseudo-3D highway from dawn to dusk, passing as many cars as you can each day while dodging traffic, fog and nightfall across nine grueling laps.",
@@ -2555,6 +2684,7 @@ const GAMES_DATA = [
       "singleplayer"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/epoh/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/epoh/screenshots/1.png",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A turn-based hex strategy game of space colonization: at the end of the 21st century, settle a hostile earth-like planet. Ungarrison workers from your base, capture sectors, harvest resources and build a rover army in this open-source single-player demo.",
@@ -2589,6 +2719,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/et-demake/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/et-demake/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A faithful HTML5 recreation of the infamous 1982 Atari 2600 classic E.T.: guide the stranded alien through pits and forests, collect the three phone parts, dodge the scientist and FBI agent, and phone home before your energy runs out.",
@@ -2606,6 +2737,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/exolon/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/exolon/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A browser tribute to the classic side-scrolling run-and-gun. Advance your armoured trooper across hostile alien terrain, blasting enemies and obstacles while collecting gear. Retro arcade action rebuilt for the web.",
@@ -2623,6 +2755,7 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/farkle/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/farkle/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "The classic press-your-luck dice game against the computer. Roll six dice, set aside the ones that score, and decide whether to bank your points or risk it all on another roll. Roll no scoring dice and you farkle, losing the turn. First to four thousand wins.",
@@ -2684,6 +2817,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flappy-wing/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flappy-wing/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Tap to keep your little bird airborne and thread the gaps between pipes. One touch is all it takes to fall, so find your rhythm and see how far you can fly. Every pipe cleared adds to your score.",
@@ -2702,6 +2836,24 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Fleet Duel playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "flipo",
+    "category": "games",
+    "name": "Flip O",
+    "tags": [
+      "games",
+      "platformer",
+      "action",
+      "one-button",
+      "gravity"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flipo/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flipo/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A gravity-flipping one-button platformer from Kenta Cho rendered in a sharp shape theme: tap to flip between floor and ceiling and thread the hazards.",
+    "controls": "Tap / Click / any key: Flip gravity"
   },
   {
     "id": "floppybird",
@@ -2731,6 +2883,7 @@ const GAMES_DATA = [
       "flow"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flow-connect/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flow-connect/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Connect every pair of matching coloured dots by drawing pipes across the grid without crossing paths. A relaxing, brain-teasing flow puzzle.",
@@ -2748,10 +2901,29 @@ const GAMES_DATA = [
       "physics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fluid-table-tennis/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fluid-table-tennis/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A mesmerising Plasma-Pong-style table tennis game running a full-colour, real-time fluid simulation at 60 FPS. Bat the ball back and forth while the ball churns swirling, colourful currents across the canvas. As much a toy as a game.",
     "controls": "Move the mouse to control your paddle"
+  },
+  {
+    "id": "foot-laser",
+    "category": "games",
+    "name": "Foot Laser",
+    "tags": [
+      "games",
+      "platformer",
+      "action",
+      "shooter",
+      "one-button"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/foot-laser/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/foot-laser/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A laser-footed vertical climber from Kenta Cho: jump, double jump and descend between platforms while your feet blast everything beneath you.",
+    "controls": "Tap / Click / any key: Jump · Double tap: Double jump · Hold: Descend"
   },
   {
     "id": "forest-dash",
@@ -2779,6 +2951,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/freecell/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/freecell/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The beloved solitaire where nearly every deal is winnable. Use four free cells to shuffle cards around as you build the foundations from Ace to King. Plan your supermoves carefully to clear the tableau.",
@@ -2853,6 +3026,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fruit-slots/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fruit-slots/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A classic three-reel fruit machine. Set your bet and spin the reels — match three symbols across the middle row for a payout, with rarer symbols paying more. Sevens hit the 100x jackpot.",
@@ -2870,6 +3044,7 @@ const GAMES_DATA = [
       "brain"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/futoshiki/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/futoshiki/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A Latin-square logic puzzle. Fill every row and column with the numbers one to five with no repeats, while satisfying all the greater-than and less-than signs between cells. Each new puzzle is freshly generated.",
@@ -2915,6 +3090,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gem-crush/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gem-crush/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A sparkling match-3 puzzle. Swap adjacent gems to line up three or more, trigger cascading combos, and rack up the highest score before your moves run out.",
@@ -2946,6 +3122,7 @@ const GAMES_DATA = [
       "runner"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/geo-dash/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/geo-dash/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A rhythm-flavoured auto-runner. Your square hurtles forward at ever-increasing speed, so jump spikes, hop onto blocks, and keep your reflexes sharp. One collision ends the run and resets your distance. Simple to learn, brutal to master.",
@@ -2993,6 +3170,7 @@ const GAMES_DATA = [
       "family"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gift-grabber/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gift-grabber/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A cheerful festive arcade game. Steer left and right to catch the presents tumbling down the screen while dodging the lumps of coal. Rack up your score before the timer runs out in this quick, family-friendly seasonal romp.",
@@ -3024,6 +3202,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/go-fish/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/go-fish/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Ask the computer for the ranks you need and collect all four to complete a book. Guess wrong and it is Go Fish, so draw from the pool and hope for luck. The player with the most books wins.",
@@ -3041,6 +3220,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/golf-solitaire/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/golf-solitaire/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Clear seven columns by sending cards to the waste one rank up or down. Around-the-corner play means Aces link Kings and twos. Draw from the stock when you stall and try to empty the whole tableau.",
@@ -3058,6 +3238,7 @@ const GAMES_DATA = [
       "gomoku"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gomoku/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gomoku/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Five-in-a-row on a 15x15 board against a computer opponent with three difficulty levels. Place stones and be the first to line up five in a row.",
@@ -3075,10 +3256,29 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gridiron-blitz/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gridiron-blitz/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Take the handoff and rush for glory. Juke left and right to slip past charging defenders, break tackles, and sprint into the end zone. Rack up yards and touchdowns across the drive before three tackles end your run.",
     "controls": "Arrow keys / A and D or tap left and right to dodge"
+  },
+  {
+    "id": "growth",
+    "category": "games",
+    "name": "Growth",
+    "tags": [
+      "games",
+      "puzzle",
+      "one-button",
+      "pixel",
+      "plants"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/growth/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/growth/screenshots/1.gif",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A patient one-button growth puzzler from Kenta Cho in a chunky pixel theme: hold to grow your vine upward, release to stop, and reach the goal without brushing the hazards.",
+    "controls": "Hold: Grow · Release: Stop"
   },
   {
     "id": "guardians-of-the-hollow",
@@ -3122,6 +3322,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hangman/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hangman/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Guess the hidden word one letter at a time before the drawing is complete. Choose a category and use the on-screen keyboard or your physical keyboard.",
@@ -3139,6 +3340,7 @@ const GAMES_DATA = [
       "reflex"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/helix-jump/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/helix-jump/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Guide a bouncing ball down a spiralling tower. Rotate the platforms so the ball drops through the gaps and descends level after level, but never let it land on a red segment. How deep can you fall?",
@@ -3157,6 +3359,7 @@ const GAMES_DATA = [
       "vocabulary"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hello-wordl/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hello-wordl/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A slick open-source Wordle variant with a twist: choose your word length from 4 to 11 letters and play unlimited puzzles. The definitive word-guessing sandbox, fully offline.",
@@ -3218,6 +3421,7 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/high-jump/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/high-jump/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A track-and-field high jump challenge in two phases. First hammer the button to build run-up speed, then time your leap on a sweeping power meter to soar over the bar. Clear it and the bar rises higher; miss three times and the meet is over.",
@@ -3235,6 +3439,7 @@ const GAMES_DATA = [
       "luck"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/higher-lower/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/higher-lower/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A quick-fire card guessing game. Will the next card be higher or lower than the current one? Build the longest streak you can and beat your best score.",
@@ -3266,6 +3471,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/home-run-derby/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/home-run-derby/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Time your swing and launch balls into the bleachers. Every pitch is a chance to go deep, but ten swinging strikes ends your session. Chase distance, stack up dingers, and beat your best score.",
@@ -3283,6 +3489,7 @@ const GAMES_DATA = [
       "physics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hoop-shot/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hoop-shot/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A physics basketball challenge. Drag back from the ball to set your angle and power, then release to shoot. Sink it through the hoop and the basket moves to a tougher spot. Chase a shooting streak.",
@@ -3300,6 +3507,7 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/horse-race/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/horse-race/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Back a runner and watch the field thunder to the finish. Each of five horses carries its own odds, so weigh the risk, place your stake, and cheer your pick home. Winnings pay out at the posted odds, and your balance is saved on your device.",
@@ -3317,6 +3525,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/html5-pacman/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/html5-pacman/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "An HTML5 canvas rendition of the arcade maze classic. Gobble every pellet while dodging the four ghosts, grab a power pill to turn the tables, and clear the board for a high score. A well-known open-source browser implementation.",
@@ -3334,6 +3543,7 @@ const GAMES_DATA = [
       "timing"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hurdles/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hurdles/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A 100-metre hurdle sprint where speed meets timing. Mash to run flat out, then jump each barrier at just the right moment. Clip a hurdle and you stumble and slow, so find the rhythm and chase a fast time.",
@@ -3400,6 +3610,7 @@ const GAMES_DATA = [
       "daily"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ink-side-down/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ink-side-down/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A daily rolling-cube puzzle. Roll the cube across the paper so its inked face prints marks only where they belong - every tilt leaves a print, so plan the path and the orientation together.",
@@ -3417,6 +3628,7 @@ const GAMES_DATA = [
       "score-attack"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/invincible-man/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/invincible-man/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A one-button arena auto-battler from Kenta Cho's crisp-game-lib collection: you cannot be hurt, so fearlessly weave through swarms of enemies, touching them to build attack chains and rack up the score.",
@@ -3498,6 +3710,7 @@ const GAMES_DATA = [
       "adventure"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/javascript-et/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/javascript-et/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A browser remake paying tribute to the infamous Atari 2600 game. Guide the little alien around the map, avoid the agent and scientist, collect the pieces of your phone, and try to call home.",
@@ -3532,6 +3745,7 @@ const GAMES_DATA = [
       "runner"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jetpack-dash/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jetpack-dash/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Strap in and blast through a hazard-filled corridor. Hold to fire your jetpack and rise, release to fall, and thread between the laser walls while scooping up coins. The further you fly the faster it gets. One hit and the run is over.",
@@ -3549,6 +3763,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jezzball/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jezzball/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A remake of the addictive DOS/Windows puzzle arcade game. Build walls to partition the playfield and trap the bouncing atoms into ever-smaller spaces. Clear the required area of each level without getting hit while a wall is forming.",
@@ -3582,6 +3797,7 @@ const GAMES_DATA = [
       "physics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jumpinbox/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jumpinbox/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A one-button box-hopping platformer from Kenta Cho's crisp-game-lib collection, rendered in a sharp shape theme: tap to jump between stacked crates and ride them to the top.",
@@ -3599,6 +3815,7 @@ const GAMES_DATA = [
       "numbers"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kakuro/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kakuro/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A number crossword puzzle. Fill the white cells with digits 1–9 so each horizontal and vertical run adds up to its clue, with no digit repeated inside a run. A logic challenge for math lovers.",
@@ -3616,6 +3833,7 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/keno/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/keno/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A lottery-style numbers game. Pick up to ten spots from a field of eighty, set your bet, and watch twenty numbers get drawn. The more of your picks that hit, the bigger the payout, scaling all the way to a thousand-to-one jackpot. Credits are saved on your device.",
@@ -3633,6 +3851,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/klondike-solitaire/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/klondike-solitaire/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The definitive solitaire card game. Build the four foundations up by suit from Ace to King, stacking the tableau down in alternating colours. Draw from the stock and plan your moves to clear the board.",
@@ -3668,6 +3887,25 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "laserlaser",
+    "category": "games",
+    "name": "Laser Laser",
+    "tags": [
+      "games",
+      "puzzle",
+      "lasers",
+      "mirrors",
+      "retro",
+      "fantasy-console"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/laserlaser/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/laserlaser/screenshots/1.gif",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A mirror-bending laser puzzler from Kenta Cho's PEEKPOKE fantasy console: rotate the reflectors and route the twin beams to their targets before the clock runs out.",
+    "controls": "Arrows: Aim · X: Rotate mirror"
+  },
+  {
     "id": "light-cycles",
     "category": "games",
     "name": "Light Cycles",
@@ -3679,6 +3917,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/light-cycles/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/light-cycles/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A neon Tron-style duel. Leave a wall of light behind you and force the CPU rider to crash into a trail or the arena walls — but don't box yourself in first.",
@@ -3696,6 +3935,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lights-out/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lights-out/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A classic toggle puzzle: tapping a tile flips it and its neighbors. Turn every light off in as few moves as possible across three grid sizes.",
@@ -3742,6 +3982,7 @@ const GAMES_DATA = [
       "timing"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/long-jump/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/long-jump/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Sprint down the runway building speed, then hit the board and pick your take-off angle. Aim for a forty-five degree launch to soar the furthest into the pit. Foul-free jumps only — nail the timing for a record.",
@@ -3758,6 +3999,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lose-your-marbles/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lose-your-marbles/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A web remake of the 1995 Sega puzzle hit. Line up falling marbles into rows of three or more before the stack overwhelms you - playable with mouse or touch.",
@@ -3775,6 +4017,7 @@ const GAMES_DATA = [
       "math"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/magic-square/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/magic-square/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The classic three-by-three number puzzle. Place the digits one through nine so every row, column, and diagonal adds up to fifteen. A few numbers are given to start; live line totals turn green when they are correct. Each puzzle is a randomly rotated and mirrored magic square.",
@@ -3793,6 +4036,7 @@ const GAMES_DATA = [
       "minimalist"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/magnet-blocks/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/magnet-blocks/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A minimalist physics puzzler from Kenta Cho's crisp-game-lib collection: drag to place magnets and pull the drifting blocks onto their goal markers using attraction, repulsion and momentum.",
@@ -3824,6 +4068,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mahjong-match/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mahjong-match/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Clear the layered pyramid by matching pairs of identical tiles. Only free tiles with an open side and nothing on top can be removed, so plan ahead. Shuffle the remaining tiles if you run out of moves.",
@@ -3841,6 +4086,7 @@ const GAMES_DATA = [
       "mancala"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mancala/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mancala/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The ancient sowing game (Kalah rules) versus a minimax computer opponent. Scoop up stones, land in your store for an extra turn, and capture across the board.",
@@ -3877,6 +4123,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "marusansi",
+    "category": "games",
+    "name": "Marusansi",
+    "tags": [
+      "games",
+      "puzzle",
+      "match-3",
+      "arcade",
+      "blocks"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/marusansi/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/marusansi/screenshots/1.gif",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A falling-block match puzzle from Kenta Cho: rows of colored blocks press up from below - mark horizontal and vertical runs of three or more to clear them before the stack reaches the top.",
+    "controls": "Tap / Click / arrows + X: Mark blocks; hold to chain"
+  },
+  {
     "id": "mastermind",
     "category": "games",
     "name": "Mastermind",
@@ -3888,6 +4152,7 @@ const GAMES_DATA = [
       "deduction"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mastermind/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mastermind/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Crack the hidden four-colour code in ten guesses. After each row, black pegs mark right colour in the right spot and white pegs mark right colour in the wrong spot. Deduce your way to victory.",
@@ -3905,6 +4170,7 @@ const GAMES_DATA = [
       "math"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mathdoku/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mathdoku/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "An arithmetic logic puzzle in the KenKen style. Fill a four-by-four grid so every row and column contains one to four with no repeats, and each outlined cage combines to its target using the shown plus, minus, times, or divide operation. Cages and solutions are generated fresh each round.",
@@ -3938,6 +4204,7 @@ const GAMES_DATA = [
       "time-trial"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/maze-escape/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/maze-escape/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Race through procedurally generated mazes to reach the exit as fast as you can. Every maze is different, three sizes are available, and your best times are tracked.",
@@ -3955,6 +4222,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/maze-muncher/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/maze-muncher/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Gobble every dot in the maze while ghosts hunt you down. Grab a power pellet to turn the tables and chase them for big points. Clear the board to advance, but each level the ghosts get faster.",
@@ -3972,6 +4240,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/memory-match/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/memory-match/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Flip cards two at a time to find every matching pair in as few moves as possible. Three grid sizes and a move-and-time tracker for beating your own record.",
@@ -4004,6 +4273,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/meteo-planet/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/meteo-planet/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A one-button asteroid dodger from Kenta Cho: tap to shift your orbit around the planet, thread the meteor storm and collect stars for score.",
@@ -4111,6 +4381,7 @@ const GAMES_DATA = [
       "brain"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mini-crossword/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mini-crossword/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A bite-sized five-by-five crossword built on an interlocking word square. Read the across and down clues, type your answers, and check your work when the grid is full. A quick, satisfying vocabulary workout you can finish in a couple of minutes.",
@@ -4128,6 +4399,7 @@ const GAMES_DATA = [
       "physics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mini-putt/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mini-putt/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A three-hole mini golf course with bouncing walls and obstacles. Drag to aim and set power, then putt the ball into the cup in as few strokes as possible. Beat par for birdies and eagles.",
@@ -4146,6 +4418,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/missile-command/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/missile-command/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "An open-source HTML5 recreation of Atari's 1980 classic: defend your cities from waves of incoming missiles with a limited stock of interceptors, chaining explosions and rationing ammo between waves.",
@@ -4163,6 +4436,7 @@ const GAMES_DATA = [
       "defense"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/missile-defense/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/missile-defense/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Defend your cities from waves of incoming missiles. Click the sky to launch interceptors that explode into blast radiuses, taking out the descending warheads before they level your towns.",
@@ -4193,6 +4467,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mkjs/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mkjs/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A canvas implementation of a Mortal Kombat-style fighting game by Minko Gechev. Spar as Sub-Zero against Kano in the throne room - move, block, punch and kick your way to a flawless victory.",
@@ -4406,6 +4681,7 @@ const GAMES_DATA = [
       "arena"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ngon/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ngon/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A single-player arena shooter roguelite with realistic physics. Fight waves of mobs, collect tech and gun upgrades, and build wild synergistic combos - every run is different. Made with matter.js physics.",
@@ -4423,6 +4699,7 @@ const GAMES_DATA = [
       "logic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nim/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nim/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "The ancient mathematical strategy game. Take any number of objects from a single row on your turn — grab the very last object to win. Play a perfect-strategy CPU and learn the winning pattern.",
@@ -4440,6 +4717,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nine-mens-morris/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nine-mens-morris/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A classic strategy board game from antiquity. Place and slide your pieces to form mills of three in a row, then remove your opponent's men. Reduce the CPU to two pieces to win.",
@@ -4457,6 +4735,7 @@ const GAMES_DATA = [
       "reflex"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ninja-fruit/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ninja-fruit/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Slice the flying fruit before it falls back down. Swipe through juicy targets to rack up points, but never touch the bombs and try not to let fruit slip past. A fast, reflex-driven arcade slasher with escalating chaos.",
@@ -4474,6 +4753,7 @@ const GAMES_DATA = [
       "picross"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nonogram/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nonogram/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Picross-style logic puzzles: use the number clues along each row and column to work out which squares to fill in and reveal the hidden picture.",
@@ -4569,6 +4849,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/old-maid/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/old-maid/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "The classic card game with one Queen missing. Draw from the computer, discard every rank pair you form, and pass along cards you do not need. Whoever is stuck holding the lone Queen at the end loses.",
@@ -4585,6 +4866,7 @@ const GAMES_DATA = [
       "daily"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/one-step-late/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/one-step-late/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A daily puzzle with a twist: your shadow copies every move you make, one turn behind. Reach the goals while dodging your own delayed echo - and think several steps ahead.",
@@ -4602,6 +4884,7 @@ const GAMES_DATA = [
       "hex"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/open-panzer/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/open-panzer/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A turn-based strategy wargame in the spirit of Panzer General. Command tanks, infantry and aircraft across historical hex-map battles, manage your core units, and outmaneuver the enemy to seize victory hexes.",
@@ -4678,6 +4961,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/orbium/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/orbium/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A remake of the classic tile-rotation puzzler Logical. Spin the coloured rotators to route bouncing balls into their matching pots before the board fills up. Dozens of increasingly devious levels of pipe-and-marble logic.",
@@ -4726,10 +5010,29 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/paddle-battle/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/paddle-battle/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A retro table-tennis duel. Keep the ball in play and slip it past the computer's paddle. Choose your difficulty and race to seven points. Simple to learn, tricky to master.",
     "controls": "Mouse / touch or ↑ ↓ to move your paddle, Serve button / Space to launch"
+  },
+  {
+    "id": "paint-ball",
+    "category": "games",
+    "name": "Paint Ball",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "one-button",
+      "paint"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/paint-ball/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/paint-ball/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A splash-happy one-button arcade game from Kenta Cho: throw paint balls to color the field and tag targets while dodging return fire.",
+    "controls": "Tap / Click / any key: Throw"
   },
   {
     "id": "paper-io-2",
@@ -4758,6 +5061,7 @@ const GAMES_DATA = [
       "educational"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/particle-clicker/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/particle-clicker/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "The CERN-made particle physics idle game. Click to collide particles, run experiments, hire researchers and staff, and upgrade your detector to unlock real discoveries from the history of high-energy physics.",
@@ -4805,6 +5109,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/peg-solitaire/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/peg-solitaire/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The timeless single-player puzzle on the English cross board. Jump one peg over an adjacent peg into an empty hole to remove it. Clear the board down to a single peg to solve it.",
@@ -4822,6 +5127,7 @@ const GAMES_DATA = [
       "sports"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/penalty-kicks/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/penalty-kicks/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Step up to the spot in a best-of-five shootout. Aim your shot, pick your power, and beat the diving keeper. Then switch sides and guess where the striker will place it. Nerves of steel win the shootout.",
@@ -4869,6 +5175,7 @@ const GAMES_DATA = [
       "luck"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pig-dice/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pig-dice/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A press-your-luck dice duel to one hundred. Keep rolling to pile up points, but bank them before a dreaded one wipes your whole turn. Outguess the computer and know exactly when to hold.",
@@ -4886,6 +5193,7 @@ const GAMES_DATA = [
       "one-button"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pin-climb/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pin-climb/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A rope-physics climbing game from Kenta Cho: hold to stretch your cord to the next pin, release to latch on, and rack up altitude bonuses without swinging into oblivion.",
@@ -4903,6 +5211,7 @@ const GAMES_DATA = [
       "physics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pinball/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pinball/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A compact pinball table with bouncy bumpers, posts, and a pair of responsive flippers. Launch the ball, rack up points off the bumpers, and keep it alive across three balls for a high score.",
@@ -4920,6 +5229,7 @@ const GAMES_DATA = [
       "pipes"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pipe-connect/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pipe-connect/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Rotate the scrambled pipe tiles so water flows all the way from the green source to the pink sink. Every tile lights up once it joins the connected network. Solve ever-larger grids.",
@@ -4936,6 +5246,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pipe-puzzle/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pipe-puzzle/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A web-playable clone of the classic Pipe Dream. Lay pipes fast before the water starts flowing, then watch your network carry the stream - build the longest pipeline you can.",
@@ -4967,6 +5278,7 @@ const GAMES_DATA = [
       "endless"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pixel-runner/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pixel-runner/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "An endless dash through a neon night. Leap over cacti and duck beneath birds as the world scrolls faster and faster. Hold jump to clear the tall ones and chase a new distance record every run.",
@@ -5121,6 +5433,7 @@ const GAMES_DATA = [
       "1player"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/puck-duel/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/puck-duel/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Fast-paced air hockey against a scrappy computer opponent. Slide your paddle to smack the puck into the far net while defending your own. Physics-driven rebounds and paddle spin keep every rally unpredictable. First to seven goals takes the match.",
@@ -5168,6 +5481,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pyramid-solitaire/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pyramid-solitaire/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Peel away a pyramid of cards by removing pairs that add up to 13. Kings clear on their own, and the stock keeps the options flowing. Plan your matches and expose the cards beneath to reach the top.",
@@ -5204,6 +5518,7 @@ const GAMES_DATA = [
       "canvas"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/racer/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/racer/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "An OutRun-style pseudo-3D racing game: drive as fast as you can along a challenging road with curves, hills and rival traffic, complete laps against the clock and enjoy the retro synth soundtrack.",
@@ -5220,6 +5535,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/racer-js/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/racer-js/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A top-down racing tribute to the Lotus series on Amiga. Each race is randomly generated - accelerate, brake and steer through the track as fast as you can. Built for the 10K Apart contest.",
@@ -5268,7 +5584,7 @@ const GAMES_DATA = [
       "ragdoll"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ragdoll-archers/",
-    "image": "thumbs/ragdoll-archers.jpg",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ragdoll-archers/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Physics-based archery duels where wobbly stickman archers trade arrows. Aim your bow, manage stamina, dodge incoming shots, and spend skulls on upgrades across solo, PvP, and co-op modes.",
@@ -5316,6 +5632,7 @@ const GAMES_DATA = [
       "tiles"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rapid-dominance/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rapid-dominance/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A fast turn-based strategy game built with Phaser 3. Capture territories, outmaneuver the AI and dominate the map before your opponents do.",
@@ -5334,6 +5651,7 @@ const GAMES_DATA = [
       "endless"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rb-drive/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rb-drive/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A snappy one-button lane-changing racer from Kenta Cho's crisp-game-lib collection: tap to switch lanes, thread your roadster through endless traffic and push your distance record higher.",
@@ -5351,6 +5669,7 @@ const GAMES_DATA = [
       "test"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reaction-test/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reaction-test/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "How fast are your reflexes? Wait for the screen to flash green, then tap as quickly as you can. Tap too early and you have to restart. Tracks your best and average reaction time.",
@@ -5413,6 +5732,7 @@ const GAMES_DATA = [
       "isometric"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reqbert/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reqbert/screenshots/1.png",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A faithful modern remake of the 1982 arcade classic Q*bert: hop on cubes to flip their color, dodge Coily and friends, and grab floating discs for a ride back to the top.",
@@ -5448,6 +5768,7 @@ const GAMES_DATA = [
       "othello"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reversi/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reversi/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The classic Reversi (Othello) board game against a computer opponent with three difficulty levels. Flank your opponent's discs to flip them and control the board.",
@@ -5465,10 +5786,29 @@ const GAMES_DATA = [
       "reflex"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rhythm-tap/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rhythm-tap/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Keep the beat as notes stream down four lanes. Tap each one right as it hits the line for a perfect, and string together combos for a bigger score. The tempo creeps up the longer you can stay on rhythm.",
     "controls": "Keys D F J K or tap the lane buttons in time"
+  },
+  {
+    "id": "ring-blast",
+    "category": "games",
+    "name": "Ring Blast",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "artillery",
+      "one-button"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ring-blast/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ring-blast/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "An artillery duel from Kenta Cho: slide to aim and power your stone thrower and blast apart the closing rings before enemy stones knock yours out of the sky.",
+    "controls": "Slide / drag: Change angle and speed"
   },
   {
     "id": "river-holdem",
@@ -5496,6 +5836,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/road-hopper/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/road-hopper/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Hop across a busy multi-lane highway without getting flattened. Time your moves between the traffic, reach the far side, and go as far as you can for a high score.",
@@ -5513,6 +5854,7 @@ const GAMES_DATA = [
       "quick"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rock-paper-scissors/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rock-paper-scissors/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "The hand game everyone knows, against a computer that adapts to your habits. Rock beats scissors, scissors beat paper, paper beats rock. First to five rounds wins the match.",
@@ -5535,6 +5877,24 @@ const GAMES_DATA = [
     "controls": "Arrow Keys / Numpad to Walk & Attack"
   },
   {
+    "id": "roll-hold",
+    "category": "games",
+    "name": "Roll Hold",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "one-button",
+      "precision"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/roll-hold/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/roll-hold/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A precision one-button roller from Kenta Cho: hold to lock your rolling angle, release to roll, and climb the ledges without overshooting into the void.",
+    "controls": "Hold: Hold an angle · Release: Roll"
+  },
+  {
     "id": "rot-magus",
     "category": "games",
     "name": "Rot Magus",
@@ -5545,6 +5905,7 @@ const GAMES_DATA = [
       "turn-based"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rot-magus/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rot-magus/screenshots/1.png",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A classic 8-bit roguelike RPG about a hero descending into the realm of the Dark One. Infinite procedurally generated lands, 17 monsters, 90 items, melee and ranged combat. An extended browser remake of Ronny Wester's Magus built with rot.js and Phaser.",
@@ -5562,6 +5923,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/roulette/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/roulette/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Spin the wheel and test your luck at the casino table. Place chips on straight numbers, red or black, odds or evens, dozens and more, then watch the ball settle. Straight numbers pay 35 to 1.",
@@ -5579,6 +5941,7 @@ const GAMES_DATA = [
       "cube"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rubiks-cube/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rubiks-cube/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A WebGL Rubik's Cube - drag faces to twist, scramble and solve the classic 3D puzzle from any angle.",
@@ -5611,6 +5974,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/runfield/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/runfield/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A fast, one-button endless runner with a hand-drawn look. Time your jumps to clear gaps and obstacles as the world scrolls by ever faster. Simple to pick up, hard to put down, and set to an upbeat soundtrack.",
@@ -5676,6 +6040,7 @@ const GAMES_DATA = [
       "3d"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/server-survival/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/server-survival/screenshots/1.gif",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A 3D strategy game where you play as a cloud architect: build load balancers, caches, auto-scaling compute fleets and multi-region failover to survive escalating traffic, DDoS attacks and random outages. 25 campaign levels, survival and sandbox modes, 11 languages.",
@@ -5724,6 +6089,24 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "The world's most advanced egg-based multiplayer FPS — crack the other team in shell-shooting arena battles.",
     "controls": "WASD to Move, Mouse to Aim & Shoot"
+  },
+  {
+    "id": "shiny",
+    "category": "games",
+    "name": "Shiny",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "weather",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/shiny/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/shiny/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A weather-wielding arcade toy from Kenta Cho: drift your cloud between rainy and shiny moods and drop soft or heavy rain on the humans scurrying below.",
+    "controls": "Hold: Turn rainy (drop rain on people)"
   },
   {
     "id": "sight-and-light",
@@ -5797,6 +6180,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/simon-says/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/simon-says/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The classic memory game. Watch the pattern of colors and tones, then repeat it back. Each round adds another step — how long a sequence can you remember?",
@@ -5814,6 +6198,7 @@ const GAMES_DATA = [
       "timing"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ski-jump/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ski-jump/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Launch off the ramp with perfect timing, then lean into the flight for maximum distance. Push too far and you tumble on landing, so balance daring and control to stick it and post your longest jump.",
@@ -5831,6 +6216,7 @@ const GAMES_DATA = [
       "endless"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ski-slalom/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ski-slalom/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Carve down an endless mountain, threading every flag gate while dodging trees and rocks. Speed climbs the longer you survive, so lean into tight turns and chase the longest run down the slope.",
@@ -5864,6 +6250,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skifreejs/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skifreejs/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A loving browser remake of the Windows classic SkiFree. Slalom downhill through trees and ramps, pull tricks off jumps, and see how far you can get before the legendary Abominable Snowman catches up and eats you.",
@@ -5912,6 +6299,7 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slay-the-web/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slay-the-web/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A single-player deck-building roguelike card crawl for the web, inspired by Slay the Spire: fight through a dungeon map, build your deck from weird and wonderful cards, and slay the web itself.",
@@ -5929,6 +6317,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sliding-puzzle/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sliding-puzzle/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The timeless 15-puzzle. Slide numbered tiles into the empty gap to arrange them in order. Three sizes, with a move counter and timer to beat your record.",
@@ -5946,6 +6335,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slime-volleyball/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slime-volleyball/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "The classic two-player slime volleyball showdown, revived for HTML5 canvas. Bounce the ball over the net with your gelatinous half-circle - first to out-rally their rival wins.",
@@ -6035,6 +6425,7 @@ const GAMES_DATA = [
       "dice"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/snakes-ladders/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/snakes-ladders/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Roll the die and race the computer up the board to square 100. Climb the ladders to leap ahead, but land on a snake and slide right back down. Pure luck and plenty of swings all the way to the finish.",
@@ -6141,6 +6532,7 @@ const GAMES_DATA = [
       "dodge"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sootl/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sootl/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Stay out of the light! An Elm-built arcade dodger where you navigate dark corridors while avoiding deadly light beams. Simple premise, relentless difficulty.",
@@ -6172,6 +6564,7 @@ const GAMES_DATA = [
       "endless"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/space-dodger/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/space-dodger/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Pilot your ship through an endless asteroid field that speeds up the longer you survive. Grab glowing shards for bonus points and chase a new high score.",
@@ -6302,6 +6695,7 @@ const GAMES_DATA = [
       "vocabulary"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spelling-bee/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spelling-bee/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Make as many words as you can from seven letters, and every word must use the centre letter. Words are four letters or longer; using all seven letters scores a bonus pangram. Climb the ranks to Genius.",
@@ -6318,6 +6712,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spelunky-classic/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spelunky-classic/screenshots/1.png",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "The legendary 2009 roguelike platformer by Derek Yu, remastered in HD and compiled to WebAssembly. Explore procedurally generated caves full of traps, treasure, snakes and shops - every run is different, death is permanent.",
@@ -6335,6 +6730,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spider-solitaire/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spider-solitaire/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Build descending runs of a single suit and clear eight complete King-to-Ace sequences to win. Choose one, two, or four suits for the difficulty you want, and deal a fresh row whenever you get stuck.",
@@ -6352,6 +6748,7 @@ const GAMES_DATA = [
       "reaction"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sprint-runner/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sprint-runner/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A 100-metre dash decided by your fingers. Alternate the buttons as fast as you can to build speed and pip the computer to the line. Smooth, rapid rhythm beats frantic mashing every time.",
@@ -6397,6 +6794,7 @@ const GAMES_DATA = [
       "space"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/star-fighter/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/star-fighter/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A fast vertical space shooter. Weave between enemy fighters, dodge their fire, and blast waves of invaders that grow tougher as your score climbs. Auto-fire keeps the lasers flowing.",
@@ -6550,6 +6948,7 @@ const GAMES_DATA = [
       "action"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/supaxl/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/supaxl/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A snappy pixel-art action platformer. Dash, jump and duck through tight rooms packed with hazards, timing every move as you push toward the exit in this compact arcade challenge.",
@@ -6584,6 +6983,7 @@ const GAMES_DATA = [
       "svg"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/svelte-space/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/svelte-space/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A tower-defense clicker built entirely with Svelte 5 - no canvas. Defend your throne from waves of enemies: click for loot, place and upgrade towers, and watch SVG projectiles fly. 4th place in SvelteHack 2024's Wizzbangery Wizard category.",
@@ -6633,6 +7033,7 @@ const GAMES_DATA = [
       "brain"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tangram/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tangram/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The ancient Chinese dissection puzzle. Slide, rotate, and flip all seven geometric pieces to fill the square outline with no gaps or overlaps. Pieces snap into place when positioned correctly.",
@@ -6664,6 +7065,7 @@ const GAMES_DATA = [
       "tanks"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tank-duel/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tank-duel/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Turn-based artillery combat over destructible terrain. Set your angle and power, factor in the wind, and lob a shell at the enemy tank. First to knock out the other tank wins the duel.",
@@ -6696,6 +7098,7 @@ const GAMES_DATA = [
       "physics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ten-pin-bowling/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ten-pin-bowling/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "Roll for strikes and spares across a full ten-frame game. Time the swinging aim, bowl down the lane, and watch the pins scatter with proper bowling scoring including bonus balls in the tenth frame.",
@@ -6727,6 +7130,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tetra-stack/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tetra-stack/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Steer falling blocks into tidy rows and clear them before the stack tops out. Rotate and drop seven classic shapes, chase four-line clears, and survive as the pace ramps up every ten lines.",
@@ -6743,6 +7147,7 @@ const GAMES_DATA = [
       "point-and-click"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/the-house/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/the-house/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A eerie point-and-click escape adventure. Explore the rooms of a strange house, collect items, solve puzzles and find your way out. Atmospheric audio and hand-crafted pixel art rooms.",
@@ -6760,6 +7165,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/thunder/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/thunder/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A one-button arena shooter from Kenta Cho: your ship fires automatically - tap to turn as enemies stream in from every side and chain kills for score in this crisp retro blaster.",
@@ -6807,6 +7213,7 @@ const GAMES_DATA = [
       "ai"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tic-tac-toe/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tic-tac-toe/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The timeless noughts-and-crosses game. Get three in a row before the computer does. Choose Easy for a beatable opponent or Unbeatable for a perfect minimax AI that never loses.",
@@ -6857,6 +7264,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "timber-test",
+    "category": "games",
+    "name": "Timber Test",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "timing",
+      "lumberjack"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/timber-test/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/timber-test/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A lumberjack timing game from Kenta Cho: tap to saw each log at just the right spot, stack up piece scores and finish every turn in profit.",
+    "controls": "Tap / Click / any key: Cut a log"
+  },
+  {
     "id": "time-post",
     "category": "games",
     "name": "Time Post",
@@ -6901,6 +7326,7 @@ const GAMES_DATA = [
       "gamepad"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tippy-coco/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tippy-coco/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A frantic slime-volleyball showdown for one or two players: dive, jump, grow and shrink your blob to keep the ball off your sand. Features bundled AI opponents, gamepad support and head-to-head play on one keyboard.",
@@ -6920,6 +7346,7 @@ const GAMES_DATA = [
       "zachlike"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tis-100/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tis-100/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "An open-source web port of the assembly programming puzzle game: rewrite corrupted segments of a mysterious 1980s computer by programming its nodes in a simplified assembly language. Solve signal routing and arithmetic puzzles across four segments.",
@@ -6951,6 +7378,7 @@ const GAMES_DATA = [
       "stacking"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tower-building-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tower-building-game/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A one-tap stacking arcade game. Drop each moving block as precisely as you can to build the tallest tower possible; misjudge the timing and your platform shrinks until there is nothing left to land on.",
@@ -6996,6 +7424,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tower-of-hanoi/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tower-of-hanoi/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The famous math puzzle: move the whole stack of disks to the far peg, never placing a larger disk on a smaller one. Choose 3 to 7 disks and chase the minimum-move solution.",
@@ -7013,6 +7442,7 @@ const GAMES_DATA = [
       "brain"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/traffic-jam/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/traffic-jam/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A sliding block puzzle in a crowded parking lot. Shuffle the cars and trucks forwards and backwards to open a lane, then steer the red car out through the exit. Solve each level in as few moves as you can.",
@@ -7030,6 +7460,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tri-peaks/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tri-peaks/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Scale three peaks of cards by playing any card one rank above or below the waste pile. Chain long runs for a bigger score and clear every peak. Aces wrap around from King to two for extra options.",
@@ -7046,6 +7477,7 @@ const GAMES_DATA = [
       "daily"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/trunk-line/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/trunk-line/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A daily network puzzle. Ping the hidden telephone network and use the response times to trace every line between the jacks. Map the whole switchboard before you run out of probes.",
@@ -7079,6 +7511,7 @@ const GAMES_DATA = [
       "skill"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/typing-rush/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/typing-rush/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "Words rain down the screen — type them and hit Space or Enter to blast them before they land. A fast, addictive typing game that tracks your score and WPM.",
@@ -7112,6 +7545,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/up-1-way/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/up-1-way/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A snappy one-button vertical climber from Kenta Cho: tap to hop upward, thread the ever-narrowing gaps and outrun the rising pressure.",
@@ -7179,6 +7613,7 @@ const GAMES_DATA = [
       "casino"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/video-poker/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/video-poker/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Jacks or Better video poker. You're dealt five cards — hold the ones you want, draw the rest, and get paid on pairs of jacks or better up to a royal flush.",
@@ -7197,6 +7632,7 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/voidcall/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/voidcall/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "A Real-Time Strategic Card Dueler: summon creatures in lane-based auto-battles, weigh every card's attack and health against its mana cost, and out-trade your rival across a dark fantasy void. js13k 2022 winner.",
@@ -7215,6 +7651,7 @@ const GAMES_DATA = [
       "phaser"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/volley/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/volley/screenshots/1.jpg",
     "shelf": "Sports & Racing",
     "badge": "New",
     "desc": "A two-player beach volleyball duel on one keyboard: jump, spike and outplay your friend across the net. Simple physics, instant fun - made with Phaser.",
@@ -7232,6 +7669,7 @@ const GAMES_DATA = [
       "survival"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/volt-keeper/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/volt-keeper/screenshots/1.gif",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A capacitor economy action-puzzle from Kenta Cho: your charge drains constantly and the only refill is standing in the path of sparks while grounded. Arrows and bumpers reshape the harvest terrain - read the field, ride the income, survive the waves.",
@@ -7249,6 +7687,7 @@ const GAMES_DATA = [
       "luck"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/war-card/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/war-card/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "The classic luck-of-the-draw card game. You and the CPU each flip the top card — highest card wins the pile. Ties trigger a dramatic WAR. Capture all 52 cards to win.",
@@ -7282,6 +7721,7 @@ const GAMES_DATA = [
       "reflex"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/whack-a-mole/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/whack-a-mole/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "The arcade classic: bop as many moles as you can before the 30-second timer runs out. Moles pop faster the higher your score climbs. Beat your best.",
@@ -7343,6 +7783,7 @@ const GAMES_DATA = [
       "logic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-guess/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-guess/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Guess the hidden five-letter word in six tries. After each guess, tiles turn green for a correct letter in the right spot and yellow for a right letter in the wrong spot. An on-screen keyboard tracks your clues.",
@@ -7360,6 +7801,7 @@ const GAMES_DATA = [
       "logic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-ladder/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-ladder/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Transform the start word into the goal word one letter at a time. Every rung of the ladder has to be a real four-letter word. A classic word puzzle invented by Lewis Carroll.",
@@ -7377,6 +7819,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-scramble/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-scramble/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Unscramble the jumbled letters to find the hidden word. Use the hint, reveal a letter if you're stuck, and build a streak across animal, food, and space themes.",
@@ -7394,6 +7837,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-search/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-search/screenshots/1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Find every hidden word in the letter grid, running in any direction including diagonals and backwards. Pick a theme and drag across letters to score.",
@@ -7427,6 +7871,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/www/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/www/screenshots/1.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A tough, minimalist precision platformer built on the melonJS engine. Dash and leap across spike-lined rooms, hit checkpoints, and learn each hazard by trial and error. Short levels, brutal difficulty, pure old-school challenge.",
@@ -7460,6 +7905,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/yahtzee/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/yahtzee/screenshots/1.jpg",
     "shelf": "Strategy & Idle",
     "badge": "New",
     "desc": "Roll five dice up to three times each turn, holding the ones you like, then bank them in the best scoring category. Chase full houses, straights, and the elusive fifty-point Yahtzee across all thirteen boxes.",
@@ -7493,6 +7939,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/zigzag-pressure/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/zigzag-pressure/screenshots/1.gif",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A hypnotic one-button zigzag runner from Kenta Cho: tap to turn, trace the winding path without overshooting, and keep your nerve as the speed mounts.",
@@ -8129,7 +8576,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 470 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 484 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>
