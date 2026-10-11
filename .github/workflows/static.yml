@@ -36,7 +36,7 @@ jobs:
       # Repo plumbing stays in the repository but must not ship to the site.
       # Keep this list in sync with the removal step in sync-assets-catalog.yml.
       - name: Remove non-site files from the deploy tree
-        run: rm -rf scripts .github games-to-add.md AGENTS.md README.md .gitignore .git
+        run: rm -rf scripts .github AGENTS.md README.md .gitignore .git
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
