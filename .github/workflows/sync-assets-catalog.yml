@@ -81,7 +81,7 @@ jobs:
       - name: Remove assets checkout and non-site files from the deploy tree
         if: ${{ !inputs.dry_run && steps.sync.outputs.changed == 'true' }}
         # Keep this list in sync with the removal step in static.yml.
-        run: rm -rf assets-repo scripts .github games-to-add.md AGENTS.md README.md .gitignore .git
+        run: rm -rf assets-repo scripts .github AGENTS.md README.md .gitignore .git
 
       - name: Setup Pages
         if: ${{ !inputs.dry_run && inputs.deploy_pages && steps.sync.outputs.changed == 'true' }}
