@@ -1092,6 +1092,24 @@ const GAMES_DATA = [
     "controls": "Mouse / touch / arrow keys to move the paddle, click or Space to launch"
   },
   {
+    "id": "brick-rebound",
+    "category": "games",
+    "name": "Brick Rebound",
+    "tags": [
+      "games",
+      "arcade",
+      "breakout",
+      "bricks",
+      "power-ups"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/brick-rebound/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/brick-rebound/screenshots/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "An Arkai breakout: bounce the ball, smash every brick and grab power-ups - wide paddle, multi-ball and slow motion - across six levels that loop faster and tougher each time.",
+    "controls": "Mouse / arrows: Move paddle; tap / click / Space: Launch"
+  },
+  {
     "id": "bubble-shooter",
     "category": "games",
     "name": "Bubble Shooter",
@@ -1126,6 +1144,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A retro arcade shooter inspired by the classics. Blast the centipede as it winds down through a mushroom field — hit a middle segment and it splits into two. Don't let it reach your zone!",
     "controls": "Arrow keys to move in the bottom zone, Space to fire (or on-screen buttons)"
+  },
+  {
+    "id": "bullet-hell",
+    "category": "games",
+    "name": "Bullet Hell",
+    "tags": [
+      "games",
+      "action",
+      "shmup",
+      "bullet-hell",
+      "arcade"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bullet-hell/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bullet-hell/screenshots/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A p5.js bullet hell by Amelia Clarke: thread your ship through dense bullet patterns, fire back, slow down time and bomb the screen clear when it all gets too close.",
+    "controls": "Arrows / WASD: Move; Z: Fire; X: Slow time; C: Bomb; P: Pause"
   },
   {
     "id": "bytebot-lab",
@@ -1293,6 +1329,24 @@ const GAMES_DATA = [
     "badge": "ARCADE",
     "desc": "Stylized glowing neon arcade snake with fluid acceleration and high score tracker.",
     "controls": "Arrow Keys / WASD to Steer"
+  },
+  {
+    "id": "chain-drift",
+    "category": "games",
+    "name": "Chain Drift",
+    "tags": [
+      "games",
+      "arcade",
+      "retro",
+      "single-screen",
+      "one-button"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chain-drift/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chain-drift/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A fixed-screen cabinet game from Kenta Cho: shove inert drift mines around an 8-way arena - but every mine you arm becomes the only thing that can kill you.",
+    "controls": "Arrows / WASD: Move; Z / X: Shove"
   },
   {
     "id": "chalk-billiards",
@@ -1626,6 +1680,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Hop a bouncing ball up through spinning rings, but only pass through the arc that matches your colour. Grab the stars to switch colours and time every tap to climb as high as you can without a mismatch.",
     "controls": "Tap, click, or press Space to hop upward"
+  },
+  {
+    "id": "comet-slash",
+    "category": "games",
+    "name": "Comet Slash",
+    "tags": [
+      "games",
+      "arcade",
+      "retro",
+      "shooter",
+      "action"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/comet-slash/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/comet-slash/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A 1980-style fixed-screen arcade game from Kenta Cho: slash the comets' tails with timed sword swings while dodging their heads.",
+    "controls": "Arrows / WASD: Move; Space / Z / X: Slash"
   },
   {
     "id": "comet-weaver",
@@ -2173,6 +2245,24 @@ const GAMES_DATA = [
     "badge": "RETRO",
     "desc": "Remaster of Windmill Software\u2019s legendary 1983 gold tunneling arcade classic.",
     "controls": "Arrow Keys to Dig, F1 to Shoot"
+  },
+  {
+    "id": "dinos",
+    "category": "games",
+    "name": "Dino's Desert Dash",
+    "tags": [
+      "games",
+      "action",
+      "runner",
+      "dinosaur",
+      "pixel-art"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dinos/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dinos/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A desert dash from Kenta Cho: tap to jump and double-tap to crush cacti as your dino sprints through an endless scorching wasteland.",
+    "controls": "Tap: Jump; Double tap: Crush cactus"
   },
   {
     "id": "dojo-duel",
@@ -3787,6 +3877,24 @@ const GAMES_DATA = [
     "controls": "Left / Right Arrow Keys"
   },
   {
+    "id": "jugglingchain",
+    "category": "games",
+    "name": "Juggling Chain",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "physics",
+      "one-button"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jugglingchain/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jugglingchain/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A chain-juggling arcade toy from Kenta Cho: tap to change direction and keep the linked balls swinging without dropping the chain.",
+    "controls": "Tap / Click / any key: Change direction"
+  },
+  {
     "id": "jumpinbox",
     "category": "games",
     "name": "Jumpinbox",
@@ -3839,6 +3947,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A lottery-style numbers game. Pick up to ten spots from a field of eighty, set your bet, and watch twenty numbers get drawn. The more of your picks that hit, the bigger the payout, scaling all the way to a thousand-to-one jackpot. Credits are saved on your device.",
     "controls": "Tap numbers to pick, set your bet, then press Draw"
+  },
+  {
+    "id": "kickpunch",
+    "category": "games",
+    "name": "KickPunch",
+    "tags": [
+      "games",
+      "action",
+      "beat-em-up",
+      "retro",
+      "game-boy"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kickpunch/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kickpunch/screenshots/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Team Kickpunch's Game Boy-styled beat 'em up: fight down Shaker St. through three levels of thugs to rescue Gloria and Dido from your old rival Arkian Joel.",
+    "controls": "Arrows: Move; Z / X: Kick and punch; Space / Enter: Confirm"
   },
   {
     "id": "klondike-solitaire",
@@ -4503,6 +4629,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "mole-rush",
+    "category": "games",
+    "name": "Mole Rush",
+    "tags": [
+      "games",
+      "arcade",
+      "reflex",
+      "whack-a-mole",
+      "family"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mole-rush/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mole-rush/screenshots/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "An Arkai whack-a-mole sprint: moles pop from nine burrows in a sixty-second run - bonk them back to back for a climbing multiplier, gold moles pay big, and bomb moles steal three seconds.",
+    "controls": "Tap a burrow / keys 1-9 (numpad layout): Bonk; arrows + Space: Aim and swing"
+  },
+  {
     "id": "monster-horde",
     "category": "games",
     "name": "Monster Horde",
@@ -5036,6 +5180,42 @@ const GAMES_DATA = [
     "controls": "Tap / Click / any key: Throw"
   },
   {
+    "id": "pair-flip",
+    "category": "games",
+    "name": "Pair Flip",
+    "tags": [
+      "games",
+      "puzzle",
+      "memory",
+      "cards",
+      "family"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pair-flip/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pair-flip/screenshots/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "An Arkai memory game: flip two cards at a time and match every pair across three board sizes, from a gentle 4x3 warm-up to a twenty-four card test of nerve.",
+    "controls": "Tap / click / arrows + Enter: Flip cards"
+  },
+  {
+    "id": "pakupaku",
+    "category": "games",
+    "name": "Paku Paku",
+    "tags": [
+      "games",
+      "arcade",
+      "retro",
+      "maze",
+      "one-button"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pakupaku/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pakupaku/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A single-screen dot-muncher from Kenta Cho: tap to turn through the maze, gobble every dot and slip past the roaming ghosts.",
+    "controls": "Tap / Click / any key: Turn"
+  },
+  {
     "id": "paper-io-2",
     "category": "games",
     "name": "Paper.io 2",
@@ -5181,6 +5361,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A press-your-luck dice duel to one hundred. Keep rolling to pile up points, but bank them before a dreaded one wipes your whole turn. Outguess the computer and know exactly when to hold.",
     "controls": "Press Roll to add the die, or Hold to bank your points"
+  },
+  {
+    "id": "pillars3d",
+    "category": "games",
+    "name": "Pillars 3D",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "runner",
+      "3d"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pillars3d/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pillars3d/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A pseudo-3D obstacle run from Kenta Cho: slide left and right to weave between oncoming pillars at ever-increasing speed.",
+    "controls": "Slide / drag: Move"
   },
   {
     "id": "pin-climb",
@@ -6274,6 +6472,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "skygolf",
+    "category": "games",
+    "name": "Sky Golf",
+    "tags": [
+      "games",
+      "sports",
+      "golf",
+      "physics",
+      "one-button"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skygolf/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skygolf/screenshots/1.gif",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A minimalist golf puzzler from Kenta Cho: hold to charge your swing and putt the ball across floating platforms to reach each hole.",
+    "controls": "Hold: Adjust power; release to shoot"
+  },
+  {
     "id": "skyline-planner",
     "category": "games",
     "name": "Skyline Planner",
@@ -6305,6 +6521,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A single-player deck-building roguelike card crawl for the web, inspired by Slay the Spire: fight through a dungeon map, build your deck from weird and wonderful cards, and slay the web itself.",
     "controls": "Mouse: Play cards, pick map routes, manage your deck"
+  },
+  {
+    "id": "slide-merge",
+    "category": "games",
+    "name": "Slide Merge",
+    "tags": [
+      "games",
+      "puzzle",
+      "2048",
+      "numbers",
+      "sliding"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slide-merge/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slide-merge/screenshots/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "An Arkai number-slider: slide every tile at once and merge equal numbers into their sum as the board heats up - reach 2048 and keep chasing the biggest tile you can.",
+    "controls": "Arrows / WASD / swipe: Slide tiles"
   },
   {
     "id": "sliding-puzzle",
@@ -6922,6 +7156,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "sudoku-sixes",
+    "category": "games",
+    "name": "Sudoku Sixes",
+    "tags": [
+      "games",
+      "puzzle",
+      "sudoku",
+      "logic",
+      "numbers"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sudoku-sixes/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sudoku-sixes/screenshots/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "An Arkai coffee-break sudoku: a six-by-six grid with two-by-three boxes, every puzzle generated fresh and guaranteed to have exactly one solution, in three difficulties.",
+    "controls": "Tap / click / arrows: Select and place digits"
+  },
+  {
     "id": "sudoku-studio",
     "category": "games",
     "name": "Sudoku Studio",
@@ -7138,6 +7390,24 @@ const GAMES_DATA = [
     "controls": "← → move · ↑ rotate · ↓ soft drop · Space hard drop"
   },
   {
+    "id": "the-binding",
+    "category": "games",
+    "name": "The Binding",
+    "tags": [
+      "games",
+      "action",
+      "roguelike",
+      "dungeon-crawler",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/the-binding/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/the-binding/screenshots/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A code-drawn homage to The Binding of Isaac by liyupi: a top-down roguelike dungeon crawl with twelve floors, thirteen bosses and fifty-five items - every graphic drawn by canvas, zero external assets.",
+    "controls": "WASD: Move; Arrows: Shoot tears"
+  },
+  {
     "id": "the-house",
     "category": "games",
     "name": "The House",
@@ -7153,6 +7423,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A eerie point-and-click escape adventure. Explore the rooms of a strange house, collect items, solve puzzles and find your way out. Atmospheric audio and hand-crafted pixel art rooms.",
     "controls": "Mouse: Click to look around, interact and pick up items"
+  },
+  {
+    "id": "thruststrafe",
+    "category": "games",
+    "name": "Thrust Strafe",
+    "tags": [
+      "games",
+      "action",
+      "arcade",
+      "shooter",
+      "thrust"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/thruststrafe/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/thruststrafe/screenshots/1.gif",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A gravity-bound strafing shooter from Kenta Cho: hold to thrust upward, dodge the terrain and blast threats in your strafing path.",
+    "controls": "Hold: Thrust up"
   },
   {
     "id": "thunder",
