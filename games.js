@@ -5483,6 +5483,19 @@ const GAMES_DATA = [
     "controls": "Space / tap to jump (hold for higher) · ↓ to duck"
   },
   {
+    "id": "play-obsidian",
+    "category": "games",
+    "name": "Play Obsidian",
+    "tags": [
+      "Website"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/play-obsidian/",
+    "shelf": "Arcade & Action",
+    "badge": "Website",
+    "desc": "Embed of PlayObsidian.com",
+    "controls": "none"
+  },
+  {
     "id": "pocket-companion",
     "category": "games",
     "name": "Pocket Companion",
@@ -8864,7 +8877,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 500 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 501 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>

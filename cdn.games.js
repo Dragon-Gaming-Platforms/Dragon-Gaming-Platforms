@@ -5484,6 +5484,19 @@ const GAMES_DATA = [
     "controls": "Space / tap to jump (hold for higher) · ↓ to duck"
   },
   {
+    "id": "play-obsidian",
+    "category": "games",
+    "name": "Play Obsidian",
+    "tags": [
+      "Website"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/play-obsidian/",
+    "shelf": "Arcade & Action",
+    "badge": "Website",
+    "desc": "Embed of PlayObsidian.com",
+    "controls": "none"
+  },
+  {
     "id": "pocket-companion",
     "category": "games",
     "name": "Pocket Companion",
