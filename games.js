@@ -200,6 +200,25 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "aim-trainer",
+    "category": "games",
+    "name": "Aim Trainer",
+    "tags": [
+      "games",
+      "aim",
+      "trainer",
+      "fps",
+      "threejs",
+      "practice"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/aim-trainer/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/aim-trainer/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "A web-based aim trainer with four difficulty levels and 60-second timed rounds. Track your score, misses and live accuracy percentage as you click targets - a quick daily warm-up for FPS players, rendered in 3D with three.js.",
+    "controls": "Mouse: aim - Click: shoot targets - Start with a difficulty button"
+  },
+  {
     "id": "air-hockey",
     "category": "games",
     "name": "Air Hockey",
@@ -682,6 +701,25 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Beat Bento playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "bee-kind",
+    "category": "games",
+    "name": "Bee Kind",
+    "tags": [
+      "games",
+      "js13k",
+      "bees",
+      "arcade",
+      "shooter",
+      "defense"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bee-kind/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bee-kind/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "js13k 2022 entry: play as BeeKeeper Bunny defending a bee colony from the zombie ZomBee menace. Grow flowers, protect the hives, clear toadstools before grubs turn evil, and grab the honey gun to blast enemies - all in under 13KB of code.",
+    "controls": "WASD / arrows: move - Space / Enter / Shift: fire honey gun - Gamepad supported"
   },
   {
     "id": "beebees",
@@ -1485,6 +1523,25 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Cipher Relay playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "classic-pool",
+    "category": "games",
+    "name": "Classic Pool",
+    "tags": [
+      "games",
+      "pool",
+      "billiards",
+      "8-ball",
+      "physics",
+      "sports"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/classic-pool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/classic-pool/1.jpg",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "Classic 8-ball pool on a HTML5 canvas with proper collision physics, an AI opponent or hot-seat two-player mode, and a smooth bossa-nova jazz soundtrack while you line up your shots.",
+    "controls": "Mouse: aim and set shot power - Buttons: 1-player (vs AI) or 2-player"
   },
   {
     "id": "claw-carnival",
@@ -3077,6 +3134,25 @@ const GAMES_DATA = [
     "controls": "Arrow Keys / WASD to Hit Notes"
   },
   {
+    "id": "frogger",
+    "category": "games",
+    "name": "Frogr",
+    "tags": [
+      "games",
+      "frogger",
+      "arcade",
+      "retro",
+      "crossing",
+      "kaios"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/frogger/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/frogger/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A Frogger-inspired arcade game originally built for KaiOS devices: hop your frog across lanes of traffic and a river of logs and turtles to reach the lily pads, all rendered in a chunky retro pixel style. Works with keyboard on desktop too.",
+    "controls": "Arrow keys / WASD: hop one tile - Reach all lily pads to clear the level"
+  },
+  {
     "id": "frontier-command",
     "category": "games",
     "name": "Frontier Command",
@@ -3219,6 +3295,25 @@ const GAMES_DATA = [
     "controls": "Tap, click, or press Space to jump"
   },
   {
+    "id": "geography-quizzity",
+    "category": "games",
+    "name": "Quizzity",
+    "tags": [
+      "games",
+      "geography",
+      "quiz",
+      "maps",
+      "education",
+      "leaflet"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/geography-quizzity/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/geography-quizzity/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A fast-paced geography quiz by sharkdp (author of bat and fd): six cities, one world map - click where you think each city is and score points by proximity. Zoom in for precision and chain bonus points for near-perfect guesses. The full world map ships with the game, so it plays completely offline.",
+    "controls": "Mouse: click the map to guess each city's location - Scroll / +- buttons: zoom - Typeahead search box to pick a new game city"
+  },
+  {
     "id": "geometry-dash",
     "category": "games",
     "name": "Geometry Dash",
@@ -3333,6 +3428,25 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Five-in-a-row on a 15x15 board against a computer opponent with three difficulty levels. Place stones and be the first to line up five in a row.",
     "controls": "Mouse / touch to place a stone"
+  },
+  {
+    "id": "gorillas",
+    "category": "games",
+    "name": "Gorillas",
+    "tags": [
+      "games",
+      "artillery",
+      "multiplayer",
+      "retro",
+      "qbasic",
+      "classic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gorillas/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gorillas/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A near pixel-perfect browser recreation of the classic QBasic game Gorillas: two giant apes stand on skyscrapers, players take turns setting the angle and velocity of explosive bananas, and the city skyline does the rest. Hot-seat local multiplayer (plus optional online play) and mobile support.",
+    "controls": "Keyboard: follow on-screen prompts to set angle and velocity for each throw (on-screen keyboard on touch devices)"
   },
   {
     "id": "gridiron-blitz",
@@ -3454,6 +3568,25 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A slick open-source Wordle variant with a twist: choose your word length from 4 to 11 letters and play unlimited puzzles. The definitive word-guessing sandbox, fully offline.",
     "controls": "Keyboard: Type letters · Enter: Submit guess"
+  },
+  {
+    "id": "hels-trial",
+    "category": "games",
+    "name": "Hel's Trial",
+    "tags": [
+      "games",
+      "js13k",
+      "turn-based",
+      "tactics",
+      "strategy",
+      "norse"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hels-trial/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hels-trial/1.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A turn-based js13k 2022 tactics game built on the LittleJS engine: a warrior's soul must clear Hel's trial to escape Niflheim and reach Valhalla. Fight across tile-based levels, switch between attacks, and end your turn wisely - the dead do not fight fair.",
+    "controls": "Mouse: select tiles and buttons - 1 / 2 / 3: switch attacks - E: end turn - Esc: pause"
   },
   {
     "id": "heroine-dusk",
@@ -4097,6 +4230,26 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "lode-runner-2099",
+    "category": "games",
+    "name": "Lode Runner 2099",
+    "tags": [
+      "games",
+      "platformer",
+      "puzzle",
+      "procedural",
+      "retro",
+      "cyberpunk",
+      "phaser"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lode-runner-2099/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lode-runner-2099/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A cyberpunk reimagining of Lode Runner: dig through platforms, collect the gold, outrun the pursuit droids. Every level is procedurally generated from a seed, with speed adjustment, retro CRT effects, multiple themes and generated chiptune music.",
+    "controls": "Arrows: move - Z: dig left - X: dig right - +/-: speed - P: pause - T: theme - C: CRT - M: mute - R: restart level"
+  },
+  {
     "id": "long-jump",
     "category": "games",
     "name": "Long Jump",
@@ -4199,6 +4352,25 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Clear the layered pyramid by matching pairs of identical tiles. Only free tiles with an open side and nothing on top can be removed, so plan ahead. Shuffle the remaining tiles if you run out of moves.",
     "controls": "Tap two matching free tiles to remove them"
+  },
+  {
+    "id": "mahjong-solitaire",
+    "category": "games",
+    "name": "Mahjong Solitaire",
+    "tags": [
+      "games",
+      "mahjong",
+      "solitaire",
+      "tiles",
+      "puzzle",
+      "svg"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mahjong-solitaire/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mahjong-solitaire/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Classic mahjong solitaire with a full 144-tile set drawn as crisp SVG: pick from six boards including Turtle, Terraces, Butterfly and Fortress, and match free tile pairs to clear the layout. Every generated deal is guaranteed to be solvable, with hints and shuffle available when you get stuck.",
+    "controls": "Mouse: click two matching free tiles to remove them - Menu: choose board layout, hint and shuffle"
   },
   {
     "id": "mancala",
@@ -5483,6 +5655,25 @@ const GAMES_DATA = [
     "controls": "Space / tap to jump (hold for higher) · ↓ to duck"
   },
   {
+    "id": "pixelcraft",
+    "category": "games",
+    "name": "PixelCraft",
+    "tags": [
+      "games",
+      "pixel-art",
+      "editor",
+      "drawing",
+      "tools",
+      "gif"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pixelcraft/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pixelcraft/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "A full-featured pixel art editor that runs entirely in the browser: draw with brush, eraser and fill, add shapes, mirror and transform, pick from a palette or eyedropper, and export your art as PNG or even animated GIF. Supports grids, undo/redo and multiple canvas sizes.",
+    "controls": "Mouse: draw / use tools - Toolbar buttons: brush, eraser, fill, shapes, transformation, GIF export - Ctrl+Z: undo"
+  },
+  {
     "id": "play-obsidian",
     "category": "games",
     "name": "Play Obsidian",
@@ -6618,6 +6809,24 @@ const GAMES_DATA = [
     "controls": "Left/Right Arrows or A/D to Steer"
   },
   {
+    "id": "slot-machine",
+    "category": "games",
+    "name": "SlotJS",
+    "tags": [
+      "games",
+      "slot-machine",
+      "casino",
+      "arcade",
+      "emoji"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slot-machine/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slot-machine/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A circular slot machine mobile-first SPA by GMZcodes: 12 figures spin around a ring of 9 reels - drop a coin to spin, tap to stop each reel, and match 3+ consecutive figures to win a share of the jackpot. Includes a pay table, sound and vibration toggles, all rendered with emojis and CSS variables.",
+    "controls": "Click / tap anywhere: insert a coin and spin - Click / tap again: stop one reel at a time - Footer buttons: pay table, instructions, sound, vibration"
+  },
+  {
     "id": "smash-karts",
     "category": "games",
     "name": "Smash Karts",
@@ -6659,6 +6868,25 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Snake Game playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "snakeball",
+    "category": "games",
+    "name": "Snakeball",
+    "tags": [
+      "games",
+      "snake",
+      "arcade",
+      "reflex",
+      "casual",
+      "matter-js"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/snakeball/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/snakeball/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A casual reflex game where you steer a snake made of balls with your mouse. Its body resets at random intervals, changing your speed and turning lag while waves of bullet-balls flood the screen - bump the right ones, dodge the rest, and ride the leaderboard.",
+    "controls": "Mouse / touch: steer the ball-snake - Bump good balls for points, avoid the rest"
   },
   {
     "id": "snakes-ladders",
@@ -7028,6 +7256,25 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Stack Tower playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "star-battle",
+    "category": "games",
+    "name": "Star Battle",
+    "tags": [
+      "games",
+      "space",
+      "shooter",
+      "arcade",
+      "canvas",
+      "fuel"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/star-battle/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/star-battle/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A space shooter built on a custom canvas engine: pilot your ship with WASD, blast enemy craft with Space, and keep one eye on the fuel gauge - it drains every second, and only the fuel bottles raining down can top you back up. Menus and instructions are in Chinese.",
+    "controls": "W/A/S/D: move ship - Space: fire - Catch falling fuel bottles to survive"
   },
   {
     "id": "star-fighter",
@@ -7817,6 +8064,25 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Words rain down the screen — type them and hit Space or Enter to blast them before they land. A fast, addictive typing game that tracks your score and WPM.",
     "controls": "Type on your keyboard; Space / Enter to submit a word"
+  },
+  {
+    "id": "typing-speed-test",
+    "category": "games",
+    "name": "Typing Speed Test",
+    "tags": [
+      "games",
+      "typing",
+      "test",
+      "wpm",
+      "practice",
+      "tools"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/typing-speed-test/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/typing-speed-test/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "A clean typing speed trainer: pick 30 or 60 second tests in beginner or pro word modes, then type the stream of words as fast as you can. Live counters track your WPM, accuracy and characters as you go.",
+    "controls": "Keyboard: type the highlighted words - Buttons: choose 30s / 60s and beginner / pro difficulty"
   },
   {
     "id": "underrun",
@@ -8877,7 +9143,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 501 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 515 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>
