@@ -13,6 +13,8 @@
 
 visit the live demo [Here](https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms)
 
+It is recommended that you [Fork](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/fork) this repo for a more stable experience with github pages.
+
 ## Features
 
 1. A singlefile version at [singlefile.html](./singlefile.html)
@@ -21,5 +23,6 @@ visit the live demo [Here](https://dragon-gaming-platforms.github.io/Dragon-Gami
 4. Export and import buttons for local storage
 5. A whole host of games!
 6. Easy GitHub Pages deployment through [static.yml](./.github/workflows/static.yml) after [forking.](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/fork)
+7. Additional game hosting at [Dragon Gaming Platforms Assets](https://Dragon-Gaming-Platforms/Dragon-Gaming-Assets)
 
 [__Credits__](./CREDITS.md)
