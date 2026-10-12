@@ -1,4 +1,4 @@
-[<h1 align="center">Dragon Gaming Platforms</h1>](https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms)
+# [<div align="center">Dragon Gaming Platforms</div>](https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms)
 
 <div align="center">
   <img src="https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png" height="425" />
