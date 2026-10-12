@@ -23,6 +23,6 @@ It is recommended that you [Fork](https://github.com/Dragon-Gaming-Platforms/Dra
 4. Export and import buttons for local storage
 5. A whole host of games!
 6. Easy GitHub Pages deployment through [static.yml](./.github/workflows/static.yml) after [forking.](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/fork)
-7. Additional game hosting at [Dragon Gaming Platforms Assets](https://Dragon-Gaming-Platforms/Dragon-Gaming-Assets)
+7. Additional game hosting at [Dragon Gaming Platforms Assets](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Assets)
 
 [__Credits__](./CREDITS.md)
