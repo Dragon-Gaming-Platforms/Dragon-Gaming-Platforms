@@ -133,6 +133,23 @@ const GAMES_DATA = [
     "controls": "simple plane: x+y+z=0 sphere: x*x+y*y+z*z=2 donut: sqrt((sqrt(x*x+y*y)-1)^2+z*z)-0.5=0 heart: x^2 + 9/4*y^2 + z^2 - 1 - z*cbrt(x^2+9/200*y^2) = 0"
   },
   {
+    "id": "8086-emulator",
+    "category": "games",
+    "name": "8086.js",
+    "tags": [
+      "emulator",
+      "8086",
+      "assembly",
+      "education"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/8086-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/8086-emulator/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser-based Intel 8086 emulator and assembly playground. Write or load 8086 assembly, assemble it and step through registers, memory and output without distributing any ROMs.",
+    "controls": "Mouse: use the editor and run controls - Keyboard: type assembly in the editor - Use the register and memory panels to inspect execution"
+  },
+  {
     "id": "a-dark-room",
     "category": "games",
     "name": "A Dark Room",
@@ -312,6 +329,40 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "AncientBeast playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "andromeda-invaders",
+    "category": "games",
+    "name": "Andromeda Invaders",
+    "tags": [
+      "arcade",
+      "shooter",
+      "space",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/andromeda-invaders/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/andromeda-invaders/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A tiny arcade shooter inspired by classic space invaders, with a pixel-art canvas, escalating waves and Web Audio effects.",
+    "controls": "Arrow keys or A/D: move - Space: fire - P: pause"
+  },
+  {
+    "id": "anti-pacman",
+    "category": "games",
+    "name": "Anti-Pac-Man",
+    "tags": [
+      "arcade",
+      "maze",
+      "pac-man",
+      "touch"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/anti-pacman/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/anti-pacman/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A reverse maze arcade game: control the ghosts, collect the pellets and catch Pac-Man before he clears the board.",
+    "controls": "Arrow keys: move the ghost - Touch controls are available on mobile - Start: begin a round"
   },
   {
     "id": "anuraos",
@@ -646,6 +697,24 @@ const GAMES_DATA = [
     "controls": "Arrows / buttons: Move + jump; Z / A: Shoot"
   },
   {
+    "id": "bash-emulator",
+    "category": "games",
+    "name": "TryBash Emulator",
+    "tags": [
+      "emulator",
+      "shell",
+      "bash",
+      "terminal",
+      "programming"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bash-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bash-emulator/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A self-contained Bash-like shell emulator that runs in the browser with an in-memory filesystem, command history, completion and common shell commands.",
+    "controls": "Keyboard: type shell commands - Enter: run - Up/Down: command history and completion"
+  },
+  {
     "id": "basin-control",
     "category": "games",
     "name": "Basin Control",
@@ -849,6 +918,23 @@ const GAMES_DATA = [
     "badge": "GBC",
     "desc": "Ultra-fast WebAssembly-powered Game Boy and Game Boy Color emulator featuring built-in Porklike homebrew.",
     "controls": "Arrow Keys, X (A), Z (B), Enter (Start), Shift (Select)"
+  },
+  {
+    "id": "binjnes",
+    "category": "games",
+    "name": "binjnes",
+    "tags": [
+      "emulator",
+      "NES",
+      "retro",
+      "upload"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/binjnes/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/binjnes/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser NES emulator with a local cartridge loader and controller support. No copyrighted ROMs are distributed.",
+    "controls": "Load a local .nes cartridge - Keyboard: use the configured NES controls - Use the emulator controls for pause and reset"
   },
   {
     "id": "black-hole-square",
@@ -1170,6 +1256,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "breakout",
+    "category": "games",
+    "name": "Breakout",
+    "tags": [
+      "arcade",
+      "brick breaker",
+      "power-ups",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/breakout/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/breakout/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A colorful canvas brick breaker with power-ups, multiple brick types, a paddle cannon and local sound effects.",
+    "controls": "Mouse or arrow keys: move the paddle - Space: launch and fire - P: pause"
+  },
+  {
     "id": "brick-breaker",
     "category": "games",
     "name": "Brick Breaker",
@@ -1445,6 +1548,22 @@ const GAMES_DATA = [
     "controls": "Arrows / WASD: Move; Z / X: Shove"
   },
   {
+    "id": "chain-reaction",
+    "category": "games",
+    "name": "Chain Reaction",
+    "tags": [
+      "puzzle",
+      "reaction",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chain-reaction/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chain-reaction/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Click a starting point and create a cascade of expanding circles to clear each level.",
+    "controls": "Mouse: click the playfield to start a chain"
+  },
+  {
     "id": "chalk-billiards",
     "category": "games",
     "name": "Chalk Billiards",
@@ -1542,6 +1661,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "chip8",
+    "category": "games",
+    "name": "Chip8.js",
+    "tags": [
+      "emulator",
+      "chip-8",
+      "retro",
+      "roms"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chip8/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chip8/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A tiny in-browser CHIP-8 emulator with a pixel display. Load a CHIP-8 ROM from your own device to play it; no ROM files are distributed.",
+    "controls": "Choose a local .ch8, .rom or .bin file - CHIP-8 keypad: 1-4, Q-R, A-F, Z-V"
+  },
+  {
     "id": "chromatic-press",
     "category": "games",
     "name": "Chromatic Press",
@@ -1601,6 +1737,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Classic 8-ball pool on a HTML5 canvas with proper collision physics, an AI opponent or hot-seat two-player mode, and a smooth bossa-nova jazz soundtrack while you line up your shots.",
     "controls": "Mouse: aim and set shot power - Buttons: 1-player (vs AI) or 2-player"
+  },
+  {
+    "id": "classic-tetris",
+    "category": "games",
+    "name": "Classic Tetris",
+    "tags": [
+      "puzzle",
+      "blocks",
+      "tetris"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/classic-tetris/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/classic-tetris/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A compact falling-block puzzle with rotating tetrominoes, line clears and increasing speed.",
+    "controls": "Arrow keys: move and rotate - Space: drop"
   },
   {
     "id": "claw-carnival",
@@ -1759,6 +1911,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Flood the whole board with a single color before you run out of moves. Pick a color to spread your region from the top-left corner across the grid.",
     "controls": "Mouse / touch to pick a color from the palette"
+  },
+  {
+    "id": "color-guess",
+    "category": "games",
+    "name": "Color Guess",
+    "tags": [
+      "puzzle",
+      "color",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-guess/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-guess/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Test your color perception by identifying the swatch that matches the target RGB color.",
+    "controls": "Mouse: choose the matching color"
   },
   {
     "id": "color-lines",
@@ -1931,6 +2099,22 @@ const GAMES_DATA = [
     "controls": "Hold click / tap / Space to thrust upward, release to descend"
   },
   {
+    "id": "coreball",
+    "category": "games",
+    "name": "CoreBall",
+    "tags": [
+      "arcade",
+      "timing",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/coreball/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/coreball/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A precise timing game: fire pins into the rotating core without touching the pins already embedded.",
+    "controls": "Mouse or Space: launch a pin"
+  },
+  {
     "id": "cornhole",
     "category": "games",
     "name": "Cornhole",
@@ -2007,6 +2191,23 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Cozy Organizer playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "cpcbasic",
+    "category": "games",
+    "name": "CPCBasic",
+    "tags": [
+      "emulator",
+      "BASIC",
+      "Amstrad",
+      "programming"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cpcbasic/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cpcbasic/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser-based Amstrad CPC BASIC interpreter and emulator. Write BASIC programs and run them locally with emulated graphics, sound and keyboard input.",
+    "controls": "Keyboard: type BASIC in the editor - Mouse: use Run, Stop and emulator controls"
   },
   {
     "id": "crappybird",
@@ -2262,6 +2463,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "The physical-layer sister game to Server Survival: design and run a whole datacenter - power chains, UPS units, heat, airflow, cooling and PUE. Keep the racks humming through heat waves, power cuts and equipment failures.",
     "controls": "Mouse: Place and connect equipment, drag the camera · Click machines to inspect"
+  },
+  {
+    "id": "dcpu16-emulator",
+    "category": "games",
+    "name": "DCPU-16 IDE",
+    "tags": [
+      "emulator",
+      "assembler",
+      "DCPU-16",
+      "programming"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dcpu16-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dcpu16-emulator/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser-based DCPU-16 emulator and assembler with an interactive editor, virtual display, keyboard, clock and hardware panels. No ROMs are distributed.",
+    "controls": "Keyboard: edit assembly in the IDE - Mouse: use assemble, run, pause and hardware controls - Use the virtual keyboard and display panels"
   },
   {
     "id": "detective-desk",
@@ -2932,6 +3150,22 @@ const GAMES_DATA = [
     "controls": "Arrows / WASD: Move · Space: Action"
   },
   {
+    "id": "evade-destroy",
+    "category": "games",
+    "name": "Evade and Destroy",
+    "tags": [
+      "arcade",
+      "shooter",
+      "action"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/evade-destroy/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/evade-destroy/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A top-down action game combining enemy evasion, pickups and precise shooting across procedural arenas.",
+    "controls": "Keyboard: move and aim - Mouse: fire"
+  },
+  {
     "id": "exolon",
     "category": "games",
     "name": "Exolon",
@@ -2948,6 +3182,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A browser tribute to the classic side-scrolling run-and-gun. Advance your armoured trooper across hostile alien terrain, blasting enemies and obstacles while collecting gear. Retro arcade action rebuilt for the web.",
     "controls": "Arrow keys to move, key to fire"
+  },
+  {
+    "id": "factorish",
+    "category": "games",
+    "name": "FactorishJS",
+    "tags": [
+      "strategy",
+      "factory",
+      "simulation"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/factorish/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/factorish/1.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A compact factory-building sandbox: mine resources, place machines and automate production on an island.",
+    "controls": "Mouse: pan, zoom and place buildings"
   },
   {
     "id": "farkle",
@@ -2968,6 +3218,22 @@ const GAMES_DATA = [
     "controls": "Click scoring dice to set aside, then Roll or Bank"
   },
   {
+    "id": "farm-sim",
+    "category": "games",
+    "name": "Farm Sim",
+    "tags": [
+      "simulation",
+      "farming",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/farm-sim/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/farm-sim/1.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A small farming simulator: till soil, plant crops, water them and harvest a growing field.",
+    "controls": "Mouse: interact with soil, crops and tools"
+  },
+  {
     "id": "fishing-harbor",
     "category": "games",
     "name": "Fishing Harbor",
@@ -2980,6 +3246,22 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Fishing Harbor playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "flapcopy",
+    "category": "games",
+    "name": "Flapcopy",
+    "tags": [
+      "arcade",
+      "flappy",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flapcopy/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flapcopy/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A lightweight one-button flying game inspired by classic obstacle-dodging arcade games.",
+    "controls": "Mouse or Space: flap"
   },
   {
     "id": "flappy-2048",
@@ -3472,6 +3754,22 @@ const GAMES_DATA = [
     "controls": "Tap a rank button to ask the computer for cards"
   },
   {
+    "id": "go-game",
+    "category": "games",
+    "name": "Go Game",
+    "tags": [
+      "strategy",
+      "board",
+      "go"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/go-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/go-game/1.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A browser implementation of the ancient board game Go with local two-player play.",
+    "controls": "Mouse: click an intersection to place a stone"
+  },
+  {
     "id": "golf-solitaire",
     "category": "games",
     "name": "Golf Solitaire",
@@ -3591,6 +3889,23 @@ const GAMES_DATA = [
     "badge": "PROXY",
     "desc": "Secure unblocked web proxy browser tab.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "hack-emulator",
+    "category": "games",
+    "name": "Hack CPU Emulator",
+    "tags": [
+      "emulator",
+      "CPU",
+      "nand2tetris",
+      "education"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hack-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hack-emulator/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "An educational in-browser emulator for the Hack computer platform from nand2tetris, with a visual CPU and memory interface and no ROMs included.",
+    "controls": "Use the editor and run controls to execute Hack instructions - Mouse: inspect CPU and memory panels"
   },
   {
     "id": "hangman",
@@ -3813,6 +4128,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Back a runner and watch the field thunder to the finish. Each of five horses carries its own odds, so weigh the risk, place your stake, and cheer your pick home. Winnings pay out at the posted odds, and your balance is saved on your device.",
     "controls": "Tap a horse, choose your bet, then press Race"
+  },
+  {
+    "id": "html5-maze",
+    "category": "games",
+    "name": "HTML5 Maze",
+    "tags": [
+      "puzzle",
+      "maze",
+      "canvas",
+      "mobile"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/html5-maze/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/html5-maze/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A responsive canvas maze game that adapts its interface to the screen orientation and challenges you to find the exit.",
+    "controls": "Keyboard or touch: move through the maze"
   },
   {
     "id": "html5-pacman",
@@ -4573,6 +4905,23 @@ const GAMES_DATA = [
     "controls": "Pick a colour, tap slots to place it, then Check"
   },
   {
+    "id": "match-3",
+    "category": "games",
+    "name": "Match 3",
+    "tags": [
+      "puzzle",
+      "match-3",
+      "canvas",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/match-3/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/match-3/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A compact canvas match-three puzzle: swap neighboring gems to make rows and columns of three or more, then watch the board cascade.",
+    "controls": "Mouse: click or drag neighboring gems to swap them"
+  },
+  {
     "id": "mathdoku",
     "category": "games",
     "name": "MathDoku",
@@ -5102,6 +5451,41 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "nes-js",
+    "category": "games",
+    "name": "NES.js",
+    "tags": [
+      "emulator",
+      "NES",
+      "retro",
+      "upload",
+      "debugger"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nes-js/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nes-js/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A standalone JavaScript NES emulator with a local cartridge loader, drag-and-drop support, debugging panels and controller input. No ROMs are distributed.",
+    "controls": "Choose a local .nes file or drag one onto the page - Buttons: use the on-screen NES controller - Debug controls: inspect CPU and memory state"
+  },
+  {
+    "id": "nesjs-alt",
+    "category": "games",
+    "name": "NES.js Classic",
+    "tags": [
+      "emulator",
+      "NES",
+      "retro",
+      "upload"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nesjs-alt/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nesjs-alt/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A second standalone JavaScript NES emulator with local cartridge upload, ZIP support and mapper implementations. No game ROMs are distributed.",
+    "controls": "Choose a local NES ROM - Keyboard: use the controller controls shown in the page - ZIP cartridges are supported"
+  },
+  {
     "id": "ngon",
     "category": "games",
     "name": "n-gon",
@@ -5172,6 +5556,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Slice the flying fruit before it falls back down. Swipe through juicy targets to rack up points, but never touch the bombs and try not to let fruit slip past. A fast, reflex-driven arcade slasher with escalating chaos.",
     "controls": "Swipe or drag across fruit to slice, avoid the bombs"
+  },
+  {
+    "id": "node-gameboy",
+    "category": "games",
+    "name": "Node Gameboy",
+    "tags": [
+      "emulator",
+      "Game Boy",
+      "retro",
+      "upload"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/node-gameboy/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/node-gameboy/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser Game Boy emulator with a local .gb cartridge picker, canvas display and keyboard controls. No cartridges are distributed.",
+    "controls": "Choose a local .gb file - Keyboard: use the Game Boy controls shown in the page - Mouse: use the emulator panel"
   },
   {
     "id": "nonogram",
@@ -7060,6 +7461,23 @@ const GAMES_DATA = [
     "controls": "Tap Roll to throw the die"
   },
   {
+    "id": "snesjs",
+    "category": "games",
+    "name": "SNES.js",
+    "tags": [
+      "emulator",
+      "SNES",
+      "retro",
+      "upload"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/snesjs/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/snesjs/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser Super Nintendo emulator with local cartridge upload, HiROM support and a canvas display. No game ROMs are distributed.",
+    "controls": "Choose a local SNES ROM - Checkbox: select HiROM when needed - Keyboard: use the controller keys shown in the page"
+  },
+  {
     "id": "snow-ridge",
     "category": "games",
     "name": "Snow Ridge",
@@ -8449,6 +8867,23 @@ const GAMES_DATA = [
     "controls": "Mouse to Frame & Snap Photos"
   },
   {
+    "id": "web-jjy",
+    "category": "games",
+    "name": "Web JJY",
+    "tags": [
+      "audio",
+      "radio",
+      "signal",
+      "simulator"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/web-jjy/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/web-jjy/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "A browser-based standard-wave simulator that generates Japan's JJY time signal through Web Audio for experimenting with radio-controlled clocks.",
+    "controls": "Mouse: click Start - Checkbox: enable summer time - Connect an earphone near a radio-controlled clock"
+  },
+  {
     "id": "whack-a-mole",
     "category": "games",
     "name": "Whack-a-Mole",
@@ -8545,6 +8980,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Transform the start word into the goal word one letter at a time. Every rung of the ladder has to be a real four-letter word. A classic word puzzle invented by Lewis Carroll.",
     "controls": "Type a four-letter word and press Add or Enter"
+  },
+  {
+    "id": "word-pluck",
+    "category": "games",
+    "name": "Word Pluck",
+    "tags": [
+      "typing",
+      "words",
+      "speed",
+      "education"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-pluck/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-pluck/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A fast browser typing game where words rain down the screen. Type them before they hit the bottom and track your speed, accuracy and streak.",
+    "controls": "Keyboard: type the falling words - Space: pause or resume - Mouse: toggle tips and sound"
   },
   {
     "id": "word-scramble",
