@@ -1,0 +1,244 @@
+# Bumps the CURRENT_VER constant that powers the site's "Current Site Version"
+# box and the saved-game metadata. Manual trigger only (Actions tab ->
+# "Update Site Version" -> Run workflow).
+#
+# Inputs:
+#   version      - semantic version, with or without the "v" prefix
+#                  ("v1.2.4" and "1.2.4" both store "v1.2.4"). Pre-release /
+#                  build suffixes are rejected.
+#   deploy_pages - default true. A push made with GITHUB_TOKEN does not trigger
+#                  static.yml (whose push trigger is disabled anyway), so this
+#                  workflow deploys Pages itself.
+#
+# Rewrites only the `const CURRENT_VER = '...';` declaration line in games.js and
+# singlefile.html (exactly one match per file, or the run aborts before writing),
+# then commits to main as github-actions[bot] and creates a lightweight tag.
+# Re-running with the version already in the files is a successful no-op.
+# cdn.games.js carries no version constant, so it is intentionally untouched.
+name: Update Site Version
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "New version (semver, e.g. v1.2.4 or 1.2.4)"
+        type: string
+        required: true
+
+      deploy_pages:
+        description: "Deploy to GitHub Pages after the bump"
+        type: boolean
+        required: false
+        default: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Shares the "pages" group with static.yml / sync-assets-catalog.yml so version
+# bumps and deploys never race each other.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Always edit main's tip, regardless of which branch the dispatch came from.
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Validate version and update CURRENT_VER
+        id: bump
+        env:
+          # Passed through the environment, never interpolated into the script.
+          VERSION_INPUT: ${{ inputs.version }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import re
+          import sys
+
+          FILES = ["games.js", "singlefile.html"]
+          DECL = re.compile(r"^([ \t]*)const CURRENT_VER = '([^']*)';[ \t]*$", re.MULTILINE)
+
+          gh_output = os.environ.get("GITHUB_OUTPUT")
+          gh_summary = os.environ.get("GITHUB_STEP_SUMMARY")
+          state = {}
+
+
+          def fail(message):
+              print(f"::error::{message}")
+              sys.exit(1)
+
+
+          def emit(key, value):
+              state[key] = value
+              if gh_output:
+                  with open(gh_output, "a", encoding="utf-8") as handle:
+                      handle.write(f"{key}={value}\n")
+
+
+          def summarize(line):
+              if gh_summary:
+                  with open(gh_summary, "a", encoding="utf-8") as handle:
+                      handle.write(line + "\n")
+
+
+          def as_tuple(version):
+              return tuple(int(part) for part in version.lstrip("vV").split("."))
+
+
+          # ---- 1. Validate + normalize the requested version -----------------
+          raw = os.environ.get("VERSION_INPUT", "")
+          candidate = raw.strip()
+          match = re.fullmatch(r"[vV]?(\d+\.\d+\.\d+)", candidate)
+          if not match:
+              fail(
+                  f"Invalid version input {raw!r}. Expected a semantic version such as "
+                  "'v1.2.4' or '1.2.4' (MAJOR.MINOR.PATCH only - no pre-release or "
+                  "build suffixes)."
+              )
+          new_version = "v" + match.group(1)
+
+          # ---- 2. Read both files and confirm they are in sync ---------------
+          texts = {}
+          current = {}
+          for path in FILES:
+              if not os.path.isfile(path):
+                  fail(f"Expected file not found: {path}")
+              # newline="" keeps the file byte-for-byte (no line-ending translation).
+              with open(path, encoding="utf-8", newline="") as handle:
+                  text = handle.read()
+              texts[path] = text
+              found = DECL.findall(text)
+              if len(found) != 1:
+                  fail(
+                      f"Expected exactly 1 'const CURRENT_VER' declaration in {path}, "
+                      f"found {len(found)}. The file layout changed - update this "
+                      "workflow before bumping the version."
+                  )
+              current[path] = found[0][1]
+
+          if len(set(current.values())) != 1:
+              detail = ", ".join(f"{path}={value!r}" for path, value in current.items())
+              fail(f"CURRENT_VER is already out of sync across the catalogs ({detail}). "
+                   "Reconcile them by hand before running this workflow.")
+          old_version = current[FILES[0]]
+
+          print(f"Current version : {old_version}")
+          print(f"Requested input : {raw!r}")
+          print(f"Normalized      : {new_version}")
+
+          emit("version", new_version)
+          emit("old_version", old_version)
+
+          # ---- 3. No-op guard ------------------------------------------------
+          if new_version == old_version:
+              print(f"::notice::{' and '.join(FILES)} are already at {new_version} - nothing to do.")
+              summarize(f"### Version bump skipped\n\n`{new_version}` is already the current "
+                        "version. No commit, tag, or deploy was made.")
+              emit("changed", "false")
+              sys.exit(0)
+
+          if as_tuple(new_version) < as_tuple(old_version):
+              print(f"::notice::Downgrade detected ({old_version} -> {new_version}). Proceeding.")
+
+          # ---- 4. Rewrite the declaration line only --------------------------
+          for path in FILES:
+              text = texts[path]
+              replacement = lambda m: f"{m.group(1)}const CURRENT_VER = '{new_version}';"
+              updated, count = DECL.subn(replacement, text)
+              if count != 1:
+                  fail(f"Replacement matched {count} declarations in {path}; expected exactly 1. "
+                       "Nothing was written.")
+
+              # Invariants proving only that one line changed.
+              if len(updated) - len(text) != len(new_version) - len(old_version):
+                  fail(f"Unexpected length delta in {path}; aborting before write.")
+              if updated.count("CURRENT_VER") != text.count("CURRENT_VER"):
+                  fail(f"CURRENT_VER reference count changed in {path}; aborting before write.")
+              remaining = DECL.findall(updated)
+              if len(remaining) != 1 or remaining[0][1] != new_version:
+                  fail(f"Post-edit verification failed for {path}: {remaining}")
+
+              with open(path, "w", encoding="utf-8", newline="") as handle:
+                  handle.write(updated)
+              texts[path] = updated
+              print(f"Updated {path}: '{old_version}' -> '{new_version}'")
+
+          emit("changed", "true")
+          summarize(f"### Version bumped\n\n`{old_version}` -> **`{new_version}`** in "
+                    + ", ".join(f"`{path}`" for path in FILES) + ".")
+          PY
+
+      - name: Verify the edit
+        if: steps.bump.outputs.changed == 'true'
+        run: |
+          echo "== CURRENT_VER declarations =="
+          grep -n "const CURRENT_VER" games.js singlefile.html
+          echo
+          echo "== games.js syntax check =="
+          node --check games.js && echo "games.js OK"
+          echo
+          echo "== changed files (must be exactly the two catalogs) =="
+          git diff --name-only
+          test "$(git diff --name-only | sort | tr '\n' ' ')" = "games.js singlefile.html " \
+            || { echo "::error::Unexpected files were modified."; exit 1; }
+          echo
+          echo "== diff =="
+          git --no-pager diff --unified=1 -- games.js singlefile.html
+
+      - name: Commit and push to main
+        if: steps.bump.outputs.changed == 'true'
+        env:
+          NEW_VERSION: ${{ steps.bump.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games.js singlefile.html
+          git commit -m "Update CURRENT_VER to ${NEW_VERSION}"
+          git push origin HEAD:main
+
+      # Lightweight tag on the bump commit. An existing tag is a warning, not a
+      # failure - the commit has already landed on main.
+      - name: Tag the release version
+        if: steps.bump.outputs.changed == 'true'
+        env:
+          TAG: ${{ steps.bump.outputs.version }}
+        run: |
+          if git ls-remote --exit-code --tags origin "refs/tags/${TAG}" >/dev/null 2>&1; then
+            echo "::warning::Tag ${TAG} already exists on origin - skipping tag push."
+          else
+            git tag "${TAG}"
+            git push origin "refs/tags/${TAG}"
+            echo "Pushed tag ${TAG}"
+          fi
+
+      # Repo plumbing stays in the repository but must not ship to the site.
+      # Keep this list in sync with static.yml and sync-assets-catalog.yml.
+      - name: Remove non-site files from the deploy tree
+        if: inputs.deploy_pages && steps.bump.outputs.changed == 'true'
+        run: rm -rf scripts .github AGENTS.md README.md .gitignore .git
+
+      - name: Setup Pages
+        if: inputs.deploy_pages && steps.bump.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        if: inputs.deploy_pages && steps.bump.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: inputs.deploy_pages && steps.bump.outputs.changed == 'true'
+        uses: actions/deploy-pages@v5
