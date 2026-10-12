@@ -12,6 +12,19 @@ on:
   # themselves instead of relying on this trigger.
   push:
     branches: ["main"]
+    # Skip redeploying for changes that cannot alter the published site: every
+    # path below is stripped from the Pages artifact by the "Remove non-site
+    # files" step anyway. The run is skipped only when EVERY file in the push
+    # matches one of these patterns - a docs commit that also touches index.html
+    # or games.js still deploys normally.
+    paths-ignore:
+      - '.gitignore'
+      - 'scripts/**'
+      # Root-level Markdown only: "*" does not match "/", so the many nested
+      # game docs that DO ship to the site (games/*/README.md, CONTRIBUTING.md)
+      # still trigger a deploy. Current root files: AGENTS.md, CREDITS.md,
+      # README.md, THIRD_PARTY.md.
+      - '*.md'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
