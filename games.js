@@ -538,6 +538,25 @@ const GAMES_DATA = [
     "controls": "Choose a chip and a bet, then press Deal"
   },
   {
+    "id": "backgammon",
+    "category": "games",
+    "name": "Backgammon",
+    "tags": [
+      "games",
+      "backgammon",
+      "board",
+      "dice",
+      "classic",
+      "ai"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/backgammon/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/backgammon/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The classic racing board game, playable against a simple AI opponent: roll the dice, drag your fifteen white checkers home past the black army, and bear off first to win. Built on binarymax's backgammon.js engine with a jQuery drag-and-drop board.",
+    "controls": "Mouse: drag your white checkers to the highlighted points after each roll - First to bear all checkers off wins"
+  },
+  {
     "id": "backpack-arena",
     "category": "games",
     "name": "Backpack Arena",
@@ -740,6 +759,25 @@ const GAMES_DATA = [
     "controls": "Arrows: Steer the bee"
   },
   {
+    "id": "beepbox",
+    "category": "games",
+    "name": "BeepBox",
+    "tags": [
+      "tools",
+      "music",
+      "chiptune",
+      "tracker",
+      "synth",
+      "editor"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/beepbox/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/beepbox/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "An online tool for sketching chiptune melodies by John Nesky: paint notes on a pattern grid across multiple instrument channels, tweak the synth engine, and hear your song immediately. Songs save as shareable URLs, export to WAV or MP3, and everything runs locally in the browser.",
+    "controls": "Mouse: paint notes on the pattern grid - Bottom panel: instrument and synth settings - Top bar: play, loop and export"
+  },
+  {
     "id": "behind-asteroids",
     "category": "games",
     "name": "Behind Asteroids",
@@ -755,6 +793,26 @@ const GAMES_DATA = [
     "badge": "JS13k #1",
     "desc": "Play as the greedy arcade machine throwing asteroids at humans playing Asteroids to take their coins.",
     "controls": "Mouse / Touch: Drag & Aim Asteroids | Release to Launch at Spaceship"
+  },
+  {
+    "id": "besogo",
+    "category": "games",
+    "name": "BesoGo",
+    "tags": [
+      "games",
+      "go",
+      "baduk",
+      "weiqi",
+      "sgf",
+      "editor",
+      "board"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/besogo/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/besogo/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "An embeddable SGF editor and viewer for the game of Go (Weiqi/Baduk): play stones on any board size, edit and navigate game trees, load and save SGF records, and study games with branching variations. Zero dependencies, by Ye Wang.",
+    "controls": "Mouse: click to play a stone - Tool palette: auto-move, add marks, navigate - Arrow keys: previous / next move"
   },
   {
     "id": "binairo",
@@ -3217,6 +3275,25 @@ const GAMES_DATA = [
     "controls": "Tap a cell to cycle its value from 1 to 5 and back to blank"
   },
   {
+    "id": "game-of-life",
+    "category": "games",
+    "name": "Game of Life",
+    "tags": [
+      "games",
+      "conway",
+      "cellular-automata",
+      "simulation",
+      "sandbox",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/game-of-life/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/game-of-life/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Conway's Game of Life by pmav, the classic canvas implementation: draw your own cell patterns or load famous ones, then watch zero-player cellular-automaton life emerge across an essentially infinite grid. Speed, color and rules all adjustable.",
+    "controls": "Mouse: draw / erase cells - Buttons: run, pause, step, clear - Patterns library and zoom controls in the toolbar"
+  },
+  {
     "id": "garden-front",
     "category": "games",
     "name": "Garden Front",
@@ -4007,6 +4084,44 @@ const GAMES_DATA = [
     "badge": "CASUAL",
     "desc": "Endless vertical platform jumper bouncing across fragile clouds and springs.",
     "controls": "Left / Right Arrow Keys"
+  },
+  {
+    "id": "jsfxr",
+    "category": "games",
+    "name": "jsfxr",
+    "tags": [
+      "tools",
+      "sound",
+      "sfx",
+      "generator",
+      "retro",
+      "chiptune"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jsfxr/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jsfxr/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "The classic retro sound effect generator ported to the browser: click a preset (pickup, laser, explosion, power-up, jump, blip), randomize and mutate it, then tune the waveform, envelope, slide and filter sliders until it sounds right - and export as a WAV for your game.",
+    "controls": "Mouse: click presets and drag the parameter sliders - Buttons: randomize, mutate, play, export WAV"
+  },
+  {
+    "id": "jspaint",
+    "category": "games",
+    "name": "JSPaint",
+    "tags": [
+      "tools",
+      "paint",
+      "drawing",
+      "ms-paint",
+      "retro",
+      "editor"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jspaint/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jspaint/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "A pixel-perfect remake of MS Paint in the browser by 1j01: every classic tool (pencil, brush, airbrush, fill, text, curves, cloning) plus modern extras - themes from Windows 95 to Vista, transparency, layered GIF support, unlimited history, and even pressure-sensitive tablets. Opens and saves PNG, JPEG, GIF, BMP, WEBP, SVG and more.",
+    "controls": "Mouse: draw and use tools - Menus (File/Edit/Image/Colors/Extras): everything else - Right-click canvas: tool options"
   },
   {
     "id": "jugglingchain",
@@ -5655,6 +5770,24 @@ const GAMES_DATA = [
     "controls": "Space / tap to jump (hold for higher) · ↓ to duck"
   },
   {
+    "id": "pixel-sprite-generator",
+    "category": "games",
+    "name": "Pixel Sprite Generator",
+    "tags": [
+      "tools",
+      "pixel-art",
+      "sprites",
+      "procedural",
+      "generator"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pixel-sprite-generator/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pixel-sprite-generator/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "ZFedoran's procedural pixel sprite generator: generates randomized ships, creatures and other sprites from template data with adjustable colors, saturation, and variation - click through thousands of unique designs, resize them, and copy the results for your games.",
+    "controls": "Mouse: click the canvas to generate a new random sprite - Links: switch template sets (ships, low saturation, many colors)"
+  },
+  {
     "id": "pixelcraft",
     "category": "games",
     "name": "PixelCraft",
@@ -5854,6 +5987,25 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Pulse Studio playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "puyo-puyo",
+    "category": "games",
+    "name": "Puyo Puyo",
+    "tags": [
+      "games",
+      "puyo",
+      "puzzle",
+      "match",
+      "versus",
+      "falling"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/puyo-puyo/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/puyo-puyo/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A JavaScript implementation of the Puyo Puyo falling-blob puzzler: rotate colored pairs as they drop, chain same-color groups of four or more to pop them, and send garbage to your CPU opponent. Fast, colorful versus puzzle action.",
+    "controls": "Arrows: move and rotate the falling pair - Groups of 4+ same-color puyos pop"
   },
   {
     "id": "puzzlescript",
@@ -7502,6 +7654,25 @@ const GAMES_DATA = [
     "controls": "Mouse: Click enemies for loot, place & upgrade towers"
   },
   {
+    "id": "svgedit",
+    "category": "games",
+    "name": "SVG-Edit",
+    "tags": [
+      "tools",
+      "svg",
+      "vector",
+      "editor",
+      "drawing",
+      "graphics"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/svgedit/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/svgedit/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "A full-featured SVG vector graphics editor that runs entirely in the browser: draw shapes, paths and text, edit nodes with the path tool, apply gradients, group and align elements, and import or hand-edit SVG source - then save standards-compliant SVG files.",
+    "controls": "Mouse: select and draw with the left toolbar tools - Right panel: fill/stroke, layers, alignment - Menu: source editor, import/export"
+  },
+  {
     "id": "switchyard-rush",
     "category": "games",
     "name": "Switchyard Rush",
@@ -8445,6 +8616,25 @@ const GAMES_DATA = [
     "controls": "Arrow keys to move, up to jump"
   },
   {
+    "id": "xiuxian-idle",
+    "category": "games",
+    "name": "Xiuxian Idle",
+    "tags": [
+      "games",
+      "idle",
+      "xiuxian",
+      "cultivation",
+      "incremental",
+      "chinese"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/xiuxian-idle/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/xiuxian-idle/1.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "My Idle Immortal Journey (Wo De Fang Zhi Xian Tu): a Chinese-language idle cultivation game - meditate to grow cultivation, refine pills, explore secret realms, draw prizes and ascend through realms from Qi Refining onward. Saves locally in your browser.",
+    "controls": "Mouse: navigate the cultivation, inventory, lottery, alchemy and exploration menus - All in Chinese"
+  },
+  {
     "id": "xx142-b2",
     "category": "games",
     "name": "XX142-B2 Alien Infiltration",
@@ -8477,6 +8667,25 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Roll five dice up to three times each turn, holding the ones you like, then bank them in the best scoring category. Chase full houses, straights, and the elusive fifty-point Yahtzee across all thirteen boxes.",
     "controls": "Tap dice to hold, press Roll, then tap a category to score"
+  },
+  {
+    "id": "yet-another-idle-rpg",
+    "category": "games",
+    "name": "Yet Another Idle RPG",
+    "tags": [
+      "games",
+      "idle",
+      "rpg",
+      "incremental",
+      "skills",
+      "text"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/yet-another-idle-rpg/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/yet-another-idle-rpg/1.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A text-based idle RPG inspired by Proto23 with a heavy focus on progression through skill leveling: combat, gathering, crafting and a dozen interlocking skills that keep training while you're away. Known as Nya-iRPG or yair.",
+    "controls": "Mouse: click PLAY and navigate the skill / action menus - Progress continues offline between sessions"
   },
   {
     "id": "zedinvaders",
@@ -9143,7 +9352,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 515 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 526 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>
