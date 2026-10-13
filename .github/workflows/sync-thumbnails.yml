@@ -1,0 +1,255 @@
+# Wires published thumbnails from the companion Thumbnail-Assets repository into
+# the platform catalog. Manual trigger (Actions tab -> "Sync Thumbnails to
+# Catalog") plus a nightly cron so new art lands without a human.
+#
+# Source of truth: https://dragon-gaming-platforms.github.io/Thumbnail-Assets/
+#   checked out read-only at thumb-assets/; the published set lives in
+#   thumb-assets/thumbnails/jpg/<slug>.<jpg|gif> where <slug> is the game id.
+#
+# Behaviour:
+#   - fills entries that have NO image today (252 at time of writing);
+#   - with force_refresh=true it also re-points entries that already have an
+#     image (local thumbs/ refs or assets-repo screenshots);
+#   - filenames that match no catalog id are reported as warnings and skipped
+#     (add-only philosophy, same as sync-assets-catalog.yml);
+#   - image URLs are ABSOLUTE in all three catalogs because the file lives in
+#     another repository (unlike this repo's own relative thumbs/ refs).
+#
+# Inputs: force_refresh (re-point existing images), dry_run (report only).
+name: Sync Thumbnails to Catalog
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_refresh:
+        description: "Also re-point entries that already have an image"
+        type: boolean
+        required: false
+        default: false
+
+      dry_run:
+        description: "Dry run (report only - no commit, no deploy)"
+        type: boolean
+        required: false
+        default: false
+
+  # Nightly sweep for newly published thumbnails. Only active once this file
+  # exists on main.
+  schedule:
+    - cron: "23 5 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Shares the "pages" group with static.yml / sync-assets-catalog.yml /
+# UpdateVersion.yml so deploys never race.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # Read-only public clone. continue-on-error so the nightly cron reports
+      # politely instead of failing while the companion repo does not exist.
+      - name: Checkout Thumbnail-Assets repository
+        id: thumbrepo
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: Dragon-Gaming-Platforms/Thumbnail-Assets
+          path: thumb-assets
+
+      - name: Sync catalog image fields
+        id: sync
+        env:
+          FORCE_REFRESH: ${{ inputs.force_refresh && '1' || '0' }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+        run: |
+          python3 - <<'PY'
+          import glob
+          import json
+          import os
+          import re
+          import sys
+
+          FILES = ["games.js", "cdn.games.js", "singlefile.html"]
+          PUB = "thumb-assets/thumbnails/jpg"
+          BASE = "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/"
+          PUB_EXTS = (".jpg", ".gif")
+          DECL_ID = re.compile(r'^    "id": "(.*)",$')
+          PATH_LINE = re.compile(r'^    "path": ".*",$', re.M)
+          IMG_LINE = re.compile(r'^    "image": ".*",$', re.M)
+
+          force = os.environ.get("FORCE_REFRESH") == "1"
+          dry = os.environ.get("DRY_RUN") == "1"
+          gh_output = os.environ.get("GITHUB_OUTPUT")
+          gh_summary = os.environ.get("GITHUB_STEP_SUMMARY")
+
+
+          def emit(key, value):
+              if gh_output:
+                  with open(gh_output, "a", encoding="utf-8") as fh:
+                      fh.write(f"{key}={value}\n")
+
+
+          def note(line):
+              print(line)
+              if gh_summary:
+                  with open(gh_summary, "a", encoding="utf-8") as fh:
+                      fh.write(line + "\n")
+
+
+          def warn(msg):
+              print(f"::warning::{msg}")
+
+
+          if not os.path.isdir(PUB):
+              note("### Thumbnail sync skipped\n\n`Thumbnail-Assets` published set not "
+                   "found (repo missing or never built). Nothing to do.")
+              emit("changed", "false")
+              sys.exit(0)
+
+          published = {}
+          for path in sorted(glob.glob(os.path.join(PUB, "*"))):
+              if not os.path.isfile(path):
+                  continue
+              name = os.path.basename(path)
+              stem, ext = os.path.splitext(name)
+              if ext.lower() not in PUB_EXTS:
+                  continue
+              published[stem] = name
+
+          note(f"Published thumbnails found: {len(published)}")
+
+          texts = {f: open(f, encoding="utf-8", newline="").read() for f in FILES}
+          data = {f: json.loads(re.search(r'const GAMES_DATA = (\[.*?\]);',
+                                          texts[f], re.DOTALL).group(1)) for f in FILES}
+          ids = [d["id"] for d in data[FILES[0]]]
+          known = set(ids)
+
+          orphans = sorted(slug for slug in published if slug not in known)
+          for slug in orphans:
+              warn(f"Orphan thumbnail with no catalog id: {slug} (skipped)")
+
+          targets = [(slug, published[slug]) for slug in ids if slug in published]
+          current = {d["id"]: d.get("image") for d in data[FILES[0]]}
+          to_add = [(s, f) for s, f in targets if not current[s]]
+          to_refresh = [(s, f) for s, f in targets
+                        if current[s] and current[s] != BASE + f]
+          if force:
+              skipped = 0
+          else:
+              skipped = len(to_refresh)
+              to_refresh = []
+
+          note(f"Matching catalog ids : {len(targets)}")
+          note(f"Will add image      : {len(to_add)}")
+          note(f"Will refresh image  : {len(to_refresh)}"
+               + ("" if force else f" ({skipped} existing left alone; use force_refresh)"))
+
+          if not to_add and not to_refresh:
+              emit("changed", "false")
+              emit("added", "0")
+              emit("refreshed", "0")
+              note("### Thumbnail sync\n\nNothing to change.")
+              sys.exit(0)
+
+          plan = {slug: BASE + fname for slug, fname in to_add + to_refresh}
+          adding = {slug for slug, _ in to_add}
+
+          for fname in FILES:
+              text = texts[fname]
+              for slug, url in plan.items():
+                  # locate the entry block precisely
+                  anchor = f'    "id": "{slug}",\n'
+                  start = text.find(anchor)
+                  if start == -1:
+                      warn(f"{fname}: entry {slug} not found; skipped")
+                      continue
+                  nxt = re.search(r'^  \{$', text[start + len(anchor):], re.M)
+                  bound = start + len(anchor) + nxt.start() if nxt else len(text)
+                  block = text[start:bound]
+                  if slug in adding:
+                      mp = PATH_LINE.search(block)
+                      if not mp:
+                          warn(f"{fname}: no path line for {slug}; skipped")
+                          continue
+                      at = start + mp.end()
+                      text = text[:at] + f'\n    "image": "{url}",' + text[at:]
+                  else:
+                      new_block, n = IMG_LINE.subn(f'    "image": "{url}",', block, count=1)
+                      if n != 1:
+                          warn(f"{fname}: expected 1 image line for {slug}; skipped")
+                          continue
+                      text = text[:start] + new_block + text[bound:]
+              texts[fname] = text
+              if not dry:
+                  open(fname, "w", encoding="utf-8", newline="").write(text)
+
+          emit("changed", "true")
+          emit("added", str(len(to_add)))
+          emit("refreshed", str(len(to_refresh)))
+          note(f"\n### Thumbnail sync\n\nAdded {len(to_add)} image field(s), refreshed "
+               f"{len(to_refresh)}, skipped {len(orphans)} orphan(s)."
+               + (" DRY RUN - catalog files left untouched." if dry else ""))
+          PY
+
+      - name: Verify the edit
+        if: steps.sync.outputs.changed == 'true' && !inputs.dry_run
+        run: |
+          node --check games.js
+          node --check cdn.games.js
+          echo "== changed files (must be exactly the three catalogs) =="
+          git diff --name-only
+          test "$(git diff --name-only | sort | tr '\n' ' ')" = "cdn.games.js games.js singlefile.html " \
+            || { echo "::error::Unexpected files were modified."; exit 1; }
+          echo "== Thumbnail-Assets image refs per catalog =="
+          for f in games.js cdn.games.js singlefile.html; do
+            printf '  %s: %s\n' "$f" "$(grep -c 'Thumbnail-Assets/thumbnails/jpg/' $f)"
+          done
+
+      - name: Commit and push catalog update
+        if: steps.sync.outputs.changed == 'true' && !inputs.dry_run
+        env:
+          ADDED: ${{ steps.sync.outputs.added }}
+          REFRESHED: ${{ steps.sync.outputs.refreshed }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games.js cdn.games.js singlefile.html
+          git commit -m "Sync thumbnails: add ${ADDED}, refresh ${REFRESHED} catalog image(s)"
+          git push origin HEAD:main
+
+      # A push made with GITHUB_TOKEN does not trigger static.yml, so this
+      # workflow deploys Pages itself.
+      - name: Remove non-site files from the deploy tree
+        if: steps.sync.outputs.changed == 'true' && !inputs.dry_run
+        # Keep this list in sync with static.yml and UpdateVersion.yml.
+        run: rm -rf thumb-assets scripts .github AGENTS.md README.md .gitignore .git
+
+      - name: Setup Pages
+        if: steps.sync.outputs.changed == 'true' && !inputs.dry_run
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        if: steps.sync.outputs.changed == 'true' && !inputs.dry_run
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: steps.sync.outputs.changed == 'true' && !inputs.dry_run
+        uses: actions/deploy-pages@v5
