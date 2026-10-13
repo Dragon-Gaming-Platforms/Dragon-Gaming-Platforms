@@ -1,0 +1,188 @@
+# Repoints a FORK's hard-coded site URLs at the fork's own GitHub Pages site.
+#
+# Why: a fork deploys its own Pages site, but cdn.games.js (290 absolute URLs +
+# the CDN_BASE constant) and secure-singlefile.html (targetUrl) still point at
+# the ORIGIN's in-development deployment, so the fork silently tracks upstream
+# churn. Rewriting the base URL makes the fork self-contained and stable.
+#
+# Safety gate: the boolean input "Are You SURE this workflow should run?"
+# defaults to false, and false skips EVERY step (the run still exits green with
+# a notice). Only an explicit true performs any work.
+#
+# Rewrites, in exactly these four files:
+#   https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/
+#   http://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/
+# to  http://<owner>.github.io/<case-sensitive repo>/
+# (owner lowercased for the subdomain, repo case preserved because Pages paths
+# are case-sensitive). Deeper paths (games/..., thumbs/...) ride along because
+# the trailing slash is part of the match.
+#
+# NEVER touched: .../Dragon-Gaming-Assets/... URLs (511 of them live in
+# cdn.games.js / games.js / singlefile.html) - the repo segment differs, so the
+# match cannot reach them, and the script asserts their count is unchanged.
+#
+# Running this on the origin repo itself is detected and skipped with a notice.
+name: Repoint Fork URLs
+
+on:
+  workflow_dispatch:
+    inputs:
+      sure:
+        description: "Are You SURE this workflow should run?"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+# Two people ticking the box at once on the same branch must not race.
+concurrency:
+  group: repoint-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  repoint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Safety gate
+        id: gate
+        env:
+          SURE: ${{ inputs.sure && '1' || '0' }}
+        run: |
+          if [ "$SURE" = "1" ]; then
+            echo "Gate open: proceeding."
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::\"Are You SURE this workflow should run?\" is false (the default). Skipping ALL steps - nothing was changed, committed or pushed."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.gate.outputs.proceed == 'true'
+        uses: actions/checkout@v4
+
+      - name: Repoint site URLs at this repository's Pages site
+        id: repoint
+        if: steps.gate.outputs.proceed == 'true'
+        run: |
+          python3 - <<'PY'
+          import os
+          import sys
+
+          # One-line policy switch: every rewritten URL uses this scheme.
+          TARGET_SCHEME = "http"
+
+          ORIGIN_SOURCES = (
+              "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/",
+              "http://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/",
+          )
+          ASSETS_MARKER = "dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/"
+          FILES = ["index.html", "singlefile.html", "secure-singlefile.html", "cdn.games.js"]
+
+          gh_output = os.environ.get("GITHUB_OUTPUT")
+          gh_summary = os.environ.get("GITHUB_STEP_SUMMARY")
+
+
+          def emit(key, value):
+              if gh_output:
+                  with open(gh_output, "a", encoding="utf-8") as fh:
+                      fh.write(f"{key}={value}\n")
+
+
+          def note(line):
+              print(line)
+              if gh_summary:
+                  with open(gh_summary, "a", encoding="utf-8") as fh:
+                      fh.write(line + "\n")
+
+
+          def stop_noticed(message):
+              note(f"### Repoint skipped\n\n{message}")
+              emit("changed", "false")
+              sys.exit(0)
+
+
+          owner, _, repo = os.environ.get("GITHUB_REPOSITORY", "").partition("/")
+          if not owner or not repo:
+              print("::error::GITHUB_REPOSITORY is unset; cannot compute the target URL.")
+              sys.exit(1)
+          owner_lc = owner.lower()
+          if (owner_lc, repo) == ("dragon-gaming-platforms", "Dragon-Gaming-Platforms"):
+              stop_noticed("This IS the origin repository (Dragon-Gaming-Platforms/"
+                           "Dragon-Gaming-Platforms); the rewrite would replace the URL "
+                           "with itself. Nothing to do.")
+
+          target = f"{TARGET_SCHEME}://{owner_lc}.github.io/{repo}/"
+          note(f"Detected repository : {owner}/{repo}")
+          note(f"Target Pages base   : {target}")
+
+          total = 0
+          per_file = []
+          for path in FILES:
+              if not os.path.isfile(path):
+                  print(f"::error::Expected file not found: {path}")
+                  sys.exit(1)
+              with open(path, encoding="utf-8", newline="") as fh:
+                  text = fh.read()
+              assets_before = text.count(ASSETS_MARKER)
+              hits = sum(text.count(src) for src in ORIGIN_SOURCES)
+              updated = text
+              for src in ORIGIN_SOURCES:
+                  updated = updated.replace(src, target)
+              if updated.count(ASSETS_MARKER) != assets_before:
+                  print(f"::error::{path}: Dragon-Gaming-Assets URL count changed "
+                        f"({assets_before} -> {updated.count(ASSETS_MARKER)}); aborting.")
+                  sys.exit(1)
+              if hits:
+                  with open(path, "w", encoding="utf-8", newline="") as fh:
+                      fh.write(updated)
+              total += hits
+              per_file.append((path, hits))
+              note(f"- `{path}`: {hits} URL(s) repointed")
+
+          if total == 0:
+              stop_noticed("No origin URLs found in the four files - this repository is "
+                           "already repointed (or never contained them). No commit made.")
+
+          emit("changed", "true")
+          emit("count", str(total))
+          emit("target", target)
+          note(f"\n### Repoint complete\n\n{total} URL(s) rewritten to `{target}`.")
+          PY
+
+      - name: Verify the rewrite
+        if: steps.repoint.outputs.changed == 'true'
+        env:
+          TARGET: ${{ steps.repoint.outputs.target }}
+        run: |
+          echo "== changed files (must be a subset of the four) =="
+          git diff --name-only
+          test -z "$(git diff --name-only | grep -v -E '^(index|singlefile|secure-singlefile)\.html$|^cdn\.games\.js$')" \
+            || { echo "::error::Unexpected files were modified."; exit 1; }
+          echo "== origin prefix remaining in the four files (must be 0) =="
+          grep -c 'dragon-gaming-platforms\.github\.io/Dragon-Gaming-Platforms/' \
+            index.html singlefile.html secure-singlefile.html cdn.games.js | sed 's/^/  /' \
+            | grep -v ':0$' && { echo "::error::origin URLs remain."; exit 1; } || true
+          echo "== Dragon-Gaming-Assets URLs unchanged vs HEAD =="
+          for f in index.html singlefile.html secure-singlefile.html cdn.games.js; do
+            before=$(git show "HEAD:$f" | grep -o 'Dragon-Gaming-Assets/' | wc -l)
+            after=$(grep -o 'Dragon-Gaming-Assets/' "$f" | wc -l)
+            printf '  %s before=%s after=%s\n' "$f" "$before" "$after"
+            [ "$before" = "$after" ] || { echo "::error::$f assets URL count changed."; exit 1; }
+          done
+          echo "== new target present =="
+          grep -c -F "$TARGET" cdn.games.js secure-singlefile.html | sed 's/^/  /'
+          node --check cdn.games.js && echo "  cdn.games.js syntax OK"
+
+      - name: Commit and push
+        if: steps.repoint.outputs.changed == 'true'
+        env:
+          TARGET: ${{ steps.repoint.outputs.target }}
+          COUNT: ${{ steps.repoint.outputs.count }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html singlefile.html secure-singlefile.html cdn.games.js
+          git commit -m "Repoint site URLs to ${TARGET} (${COUNT} URL(s))"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
