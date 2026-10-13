@@ -742,6 +742,22 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "battle-tank",
+    "category": "games",
+    "name": "Battle Tank",
+    "tags": [
+      "arcade",
+      "tank",
+      "shooter"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battle-tank/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battle-tank/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A browser tank battle with destructible obstacles, projectiles, power-ups and local sound effects.",
+    "controls": "Arrow keys or WASD: move - Mouse or Space: fire"
+  },
+  {
     "id": "battleship",
     "category": "games",
     "name": "Battleship",
@@ -1878,6 +1894,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "coffee-playground",
+    "category": "games",
+    "name": "CoffeeScript Playground",
+    "tags": [
+      "tools",
+      "CoffeeScript",
+      "programming",
+      "editor"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/coffee-playground/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/coffee-playground/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Compile and experiment with CoffeeScript directly in a local browser playground using an included compiler and editor.",
+    "controls": "Keyboard: edit CoffeeScript - Mouse: run or inspect the generated JavaScript"
+  },
+  {
     "id": "coil",
     "category": "games",
     "name": "Coil Enclosure",
@@ -2827,6 +2860,22 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "dungeon-game",
+    "category": "games",
+    "name": "Dungeon Game",
+    "tags": [
+      "dungeon",
+      "adventure",
+      "action"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dungeon-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dungeon-game/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Explore a small canvas dungeon, fight enemies and navigate an interactive top-down adventure.",
+    "controls": "Arrow keys: move - Keyboard: use the game actions"
+  },
+  {
     "id": "eaglercraft-1-12-2-offline-js",
     "category": "games",
     "name": "Eaglercraft 1.12.2 Offline JS",
@@ -3233,6 +3282,22 @@ const GAMES_DATA = [
     "controls": "Mouse: interact with soil, crops and tools"
   },
   {
+    "id": "fighting-game",
+    "category": "games",
+    "name": "JavaScript Fighting Game",
+    "tags": [
+      "fighting",
+      "arcade",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fighting-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fighting-game/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A canvas fighting game with a playable arena, sprite animations and local keyboard controls.",
+    "controls": "Keyboard: use the on-screen player controls"
+  },
+  {
     "id": "fishing-harbor",
     "category": "games",
     "name": "Fishing Harbor",
@@ -3323,6 +3388,22 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Fleet Duel playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "fling",
+    "category": "games",
+    "name": "Fling",
+    "tags": [
+      "physics",
+      "puzzle",
+      "aim"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fling/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fling/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Aim and fling a ball through physics puzzles, using momentum and careful timing to reach each target.",
+    "controls": "Mouse: aim and click to fling"
   },
   {
     "id": "flipo",
@@ -3636,6 +3717,22 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "genius",
+    "category": "games",
+    "name": "Genius",
+    "tags": [
+      "memory",
+      "music",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/genius/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/genius/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A colorful memory game using a radial control: repeat the growing sequence of lights and sounds for as long as you can.",
+    "controls": "Mouse or touch: repeat the illuminated sequence"
+  },
+  {
     "id": "geo-dash",
     "category": "games",
     "name": "Geo Dash",
@@ -3719,6 +3816,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A cheerful festive arcade game. Steer left and right to catch the presents tumbling down the screen while dodging the lumps of coal. Rack up your score before the timer runs out in this quick, family-friendly seasonal romp.",
     "controls": "Left/right arrows or tap to move"
+  },
+  {
+    "id": "glade-game",
+    "category": "games",
+    "name": "Glade",
+    "tags": [
+      "games",
+      "html5",
+      "3d",
+      "adventure"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/glade-game/",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A Zelda-inspired tiny third-person 3D adventure: explore a minimalist overworld, swing your sword against six monster types, and defeat the Lake Guardian.",
+    "controls": "WASD/Arrows to move, Space sword, B arrow, F dragon fire, Shift flap (×6 to reach the Sky), U upgrade, 1-6 tunic, drag to orbit"
   },
   {
     "id": "glyph-warden",
@@ -4490,6 +4603,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A one-button box-hopping platformer from Kenta Cho's crisp-game-lib collection, rendered in a sharp shape theme: tap to jump between stacked crates and ride them to the top.",
     "controls": "Tap / Click / any key: Jump"
+  },
+  {
+    "id": "jv1010-tool",
+    "category": "games",
+    "name": "JV-1010 Tool",
+    "tags": [
+      "tools",
+      "MIDI",
+      "synthesizer",
+      "SysEx"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jv1010-tool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jv1010-tool/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Inspect, edit and exchange Roland JV-1010 synthesizer patches through a browser MIDI and SysEx utility.",
+    "controls": "MIDI device: connect a JV-1010 - Mouse: edit patches and save SysEx files"
   },
   {
     "id": "kakuro",
@@ -5356,6 +5486,23 @@ const GAMES_DATA = [
     "controls": "WASD"
   },
   {
+    "id": "morse-tool",
+    "category": "games",
+    "name": "Morse Tool",
+    "tags": [
+      "tools",
+      "Morse",
+      "audio",
+      "encoding"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/morse-tool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/morse-tool/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Convert text to Morse code and play or inspect the corresponding audio signal with a fully local browser tool.",
+    "controls": "Keyboard: enter text - Mouse: convert and play Morse audio"
+  },
+  {
     "id": "mosaic-jigsaw",
     "category": "games",
     "name": "Mosaic Jigsaw",
@@ -6030,6 +6177,22 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Photo Safari playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "piano-tiles",
+    "category": "games",
+    "name": "Piano Tiles",
+    "tags": [
+      "arcade",
+      "music",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/piano-tiles/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/piano-tiles/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Tap the moving black tiles and avoid the white ones in this fast reflex game rendered with HTML5 canvas.",
+    "controls": "Mouse or touch: tap black tiles"
   },
   {
     "id": "pig-dice",
@@ -6982,6 +7145,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "sdf-maker",
+    "category": "games",
+    "name": "SDF Maker",
+    "tags": [
+      "tools",
+      "graphics",
+      "SDF",
+      "textures"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sdf-maker/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sdf-maker/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Generate and combine 2D signed distance field shapes, tune their parameters and export a texture-ready result in the browser.",
+    "controls": "Mouse: choose shapes and adjust parameters - Keyboard: use the editor controls"
+  },
+  {
     "id": "server-survival",
     "category": "games",
     "name": "Server Survival",
@@ -7246,6 +7426,22 @@ const GAMES_DATA = [
     "controls": "Hold: Adjust power; release to shoot"
   },
   {
+    "id": "skyhop",
+    "category": "games",
+    "name": "Skyhop",
+    "tags": [
+      "platformer",
+      "arcade",
+      "action"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skyhop/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skyhop/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A side-scrolling aerial platform game where you hop between ledges and survive the scrolling level.",
+    "controls": "Arrow keys: move and jump"
+  },
+  {
     "id": "skyline-planner",
     "category": "games",
     "name": "Skyline Planner",
@@ -7345,6 +7541,23 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Slingstorm playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "slip39-tool",
+    "category": "games",
+    "name": "SLIP-39 Tool",
+    "tags": [
+      "tools",
+      "security",
+      "cryptography",
+      "mnemonics"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slip39-tool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slip39-tool/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Create and recover Shamir Secret Sharing mnemonic sets using SLIP-39 entirely in the browser. Keep sensitive secrets local.",
+    "controls": "Mouse and keyboard: enter shares and configure thresholds - Never share secrets with a third party"
   },
   {
     "id": "slope",
@@ -7727,6 +7940,23 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "Spectrum Console playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "spectrum-tool",
+    "category": "games",
+    "name": "Spectrum",
+    "tags": [
+      "tools",
+      "audio",
+      "visualizer",
+      "spectrum"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spectrum-tool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spectrum-tool/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Load an audio file and explore its frequency spectrum with an interactive browser visualization.",
+    "controls": "Mouse: choose a local audio file and adjust the display"
   },
   {
     "id": "spelling-bee",
@@ -8204,6 +8434,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Roll for strikes and spares across a full ten-frame game. Time the swinging aim, bowl down the lane, and watch the pins scatter with proper bowling scoring including bonus balls in the tenth frame.",
     "controls": "Tap Bowl to release the ball at the current aim"
+  },
+  {
+    "id": "tennis",
+    "category": "games",
+    "name": "Tennis",
+    "tags": [
+      "sports",
+      "tennis",
+      "arcade",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tennis/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tennis/1.jpg",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A simple browser tennis game with canvas physics, a player paddle and a computer opponent. Keep the ball in play and score points.",
+    "controls": "Arrow keys: move your player - Space: serve"
   },
   {
     "id": "teterjs",
@@ -8776,6 +9023,22 @@ const GAMES_DATA = [
     "controls": "Mouse / touch to hold cards and press Deal / Draw"
   },
   {
+    "id": "void-runner",
+    "category": "games",
+    "name": "Void Runner",
+    "tags": [
+      "runner",
+      "arcade",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/void-runner/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/void-runner/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A fast endless runner through a neon void with obstacles, score chasing and responsive keyboard controls.",
+    "controls": "Arrow keys or A/D: steer and dodge"
+  },
+  {
     "id": "voidcall",
     "category": "games",
     "name": "Voidcall",
@@ -9085,6 +9348,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "My Idle Immortal Journey (Wo De Fang Zhi Xian Tu): a Chinese-language idle cultivation game - meditate to grow cultivation, refine pills, explore secret realms, draw prizes and ascend through realms from Qi Refining onward. Saves locally in your browser.",
     "controls": "Mouse: navigate the cultivation, inventory, lottery, alchemy and exploration menus - All in Chinese"
+  },
+  {
+    "id": "xonix",
+    "category": "games",
+    "name": "Xonix",
+    "tags": [
+      "arcade",
+      "territory",
+      "puzzle"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/xonix/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/xonix/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Claim territory by drawing lines through the open field while avoiding roaming enemies in this classic arcade puzzle.",
+    "controls": "Arrow keys: draw paths and capture territory"
   },
   {
     "id": "xx142-b2",
@@ -9804,7 +10083,7 @@ const GAMES_DATA = [
         <div class="filter-bar__row-top">
           <div class="filter-bar__search-wrap">
             <span class="filter-bar__search-icon">🔍</span>
-            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 553 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
+            <input type="text" class="filter-bar__search-input" id="gameSearchInput" placeholder="Search 570 games, emulators & tools… (Press '/' to search)" value="${esc(currentSearchQuery)}" autocomplete="off" />
             <button class="filter-bar__search-clear" id="searchClearBtn" title="Clear Search">✕</button>
             <span class="filter-bar__search-shortcut">/</span>
           </div>
