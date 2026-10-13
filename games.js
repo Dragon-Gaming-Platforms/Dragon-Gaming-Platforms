@@ -15,6 +15,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "./games/0hh1/index.html",
+    "image": "thumbs/0hh1.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "Puzzle",
     "desc": "A lovely little binary logic puzzle game by Q42 / Martin Kool \u2014 fill the grid with red and blue tiles following 3 rules.",
@@ -31,6 +32,7 @@ const GAMES_DATA = [
       "casual"
     ],
     "path": "./games/0hn0/index.html",
+    "image": "thumbs/0hn0.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "Puzzle",
     "desc": "Companion logic game to 0h h1 by Q42 \u2014 deduce tile counts and connect dots according to visibility rules.",
@@ -80,6 +82,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "./games/2048/index.html",
+    "image": "thumbs/2048.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "2048 playable in your web browser.",
@@ -2184,6 +2187,7 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "./games/dante/index.html",
+    "image": "thumbs/dante.jpg",
     "shelf": "RPG & Adventure",
     "badge": "JS13k #1",
     "desc": "1st Place Winner JS13k 2022 \u2014 guide Dante the little devil through a twisted 3D hell to save 13 lost souls.",
@@ -2541,6 +2545,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "./games/drive-mad/index.html",
+    "image": "thumbs/drive-mad.jpg",
     "shelf": "Sports & Racing",
     "badge": "3D",
     "desc": "Drive custom 4x4 monster trucks across tricky stunt courses without flipping or smashing.",
@@ -4717,6 +4722,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "./games/micropolisjs/index.html",
+    "image": "thumbs/micropolisjs.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Micropolisjs playable in your web browser.",
@@ -6054,6 +6060,7 @@ const GAMES_DATA = [
       "quake"
     ],
     "path": "./games/q1k3/index.html",
+    "image": "thumbs/q1k3.jpg",
     "shelf": "Arcade & Action",
     "badge": "3D ACTION",
     "desc": "Full 3D Quake homage squeezed into 13KB JavaScript with software audio synthesis, monsters, and E1M1-inspired level design.",
@@ -7174,6 +7181,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/space-cadet-pinball/index.html",
+    "image": "thumbs/space-cadet-pinball.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Space Cadet Pinball playable in your web browser.",
@@ -8266,6 +8274,7 @@ const GAMES_DATA = [
       "twin-stick"
     ],
     "path": "./games/underrun/index.html",
+    "image": "thumbs/underrun.jpg",
     "shelf": "Arcade & Action",
     "badge": "ACTION",
     "desc": "Intense sci-fi top-down shooter in 13KB JS by Dominic Szablewski. Fight alien arachnids with plasma guns and deploy sentry nodes.",
