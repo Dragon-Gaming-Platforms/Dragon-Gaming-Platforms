@@ -1,9 +1,9 @@
-# ingnore ide config files 
-.vscode/
-.cursor/
 # These files are for my reference so it does not need to be added to the repository.
 games.json
 games-to-add.md
+# OS / editor junk
+*.pyc
+__pycache__/
 .DS_Store
 .DS_Store?
 ehthumbs.db

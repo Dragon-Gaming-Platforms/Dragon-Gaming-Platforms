@@ -1,0 +1,301 @@
+# Builds, optimizes and publishes the Dragon Gaming Platforms thumbnail set.
+#
+# Drop zone  : thumbnails/<slug>.<ext>   (flat; ext in png/jpg/jpeg/webp/svg/gif)
+# Published  : thumbnails/jpg/<slug>.jpg (generated here: 800x260, <=40 KB)
+#              animated .gif sources are copied through unchanged as .gif
+# Deployed to: https://dragon-gaming-platforms.github.io/Thumbnail-Assets/
+#
+# Trigger: push to main + manual dispatch. The commit of generated JPEGs uses
+# GITHUB_TOKEN, so it does not retrigger this workflow (no loop). The platform
+# repo picks the published set up via its own sync-thumbnails.yml (manual
+# dispatch + nightly cron).
+#
+# SVG rasterizer tiers, best fidelity first: rsvg-convert (apt librsvg2-bin),
+# svglib+reportlab, cairosvg, ImageMagick. A runner missing one tier falls
+# through to the next instead of failing the build.
+name: Build & Publish Thumbnails
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Pinned so re-runs on identical sources produce identical bytes.
+      - name: Install image toolchain
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pillow svglib==1.5.1 reportlab==3.6.13 cairosvg
+
+      - name: Install librsvg (rsvg-convert)
+        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends librsvg2-bin || echo "::warning::librsvg2-bin unavailable; using fallback SVG rasterizers"
+
+      - name: Convert drop zone to published JPEGs
+        id: convert
+        run: |
+          python3 - <<'PY'
+          import os
+          import re
+          import shutil
+          import subprocess
+          import sys
+
+          from PIL import Image
+
+          SRC = "thumbnails"
+          OUT = os.path.join(SRC, "jpg")
+          SIZES = [(800, 260), (640, 208), (480, 156)]   # AGENTS.md card spec first
+          MAX_BYTES = 40 * 1024                          # AGENTS.md ~40 KB cap
+          BG = (9, 9, 15)                                # site background #09090f
+          EXTS = [".svg", ".png", ".webp", ".jpg", ".jpeg", ".gif"]
+          SLUG_RE = re.compile(r"^[a-z0-9._-]+$")
+
+          os.makedirs(OUT, exist_ok=True)
+          gh_output = os.environ.get("GITHUB_OUTPUT")
+          gh_summary = os.environ.get("GITHUB_STEP_SUMMARY")
+
+
+          def emit(key, value):
+              if gh_output:
+                  with open(gh_output, "a", encoding="utf-8") as fh:
+                      fh.write(f"{key}={value}\n")
+
+
+          def note(line):
+              print(line)
+              if gh_summary:
+                  with open(gh_summary, "a", encoding="utf-8") as fh:
+                      fh.write(line + "\n")
+
+
+          def warn(msg):
+              print(f"::warning::{msg}")
+
+
+          def fail(msg):
+              print(f"::error::{msg}")
+              sys.exit(1)
+
+
+          def cover_crop(img, w, h):
+              scale = max(w / img.width, h / img.height)
+              nw, nh = max(w, round(img.width * scale)), max(h, round(img.height * scale))
+              img = img.resize((nw, nh), Image.LANCZOS)
+              left, top = (nw - w) // 2, (nh - h) // 2
+              return img.crop((left, top, left + w, top + h))
+
+
+          def flatten(img):
+              if img.mode == "RGB":
+                  return img
+              base = Image.new("RGB", img.size, BG)
+              if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
+                  img = img.convert("RGBA")
+                  base.paste(img, mask=img.split()[-1])
+              else:
+                  base.paste(img.convert("RGB"))
+              return base
+
+
+          def load_tmp(path, producer):
+              tmp = path + ".raster.png"
+              try:
+                  producer(tmp)
+                  if not os.path.exists(tmp) or os.path.getsize(tmp) == 0:
+                      return None
+                  img = Image.open(tmp)
+                  img.load()
+                  return img
+              except Exception as exc:
+                  warn(f"{producer.__name__} failed on {os.path.basename(path)}: {exc}")
+                  return None
+              finally:
+                  if os.path.exists(tmp):
+                      os.remove(tmp)
+
+
+          def via_rsvg(src):
+              def run(tmp):
+                  r = subprocess.run(["rsvg-convert", "-w", "1600", src, "-o", tmp],
+                                     capture_output=True, text=True)
+                  if r.returncode != 0:
+                      raise RuntimeError(r.stderr.strip()[:200])
+              return run
+
+
+          def via_svglib(src):
+              def run(tmp):
+                  from svglib.svglib import svg2rlg
+                  from reportlab.graphics import renderPM
+                  drawing = svg2rlg(src)
+                  if drawing is None:
+                      raise RuntimeError("svg2rlg returned None")
+                  scale = 1600.0 / drawing.width if drawing.width else 1.0
+                  drawing.width *= scale
+                  drawing.height *= scale
+                  drawing.scale(scale, scale)
+                  renderPM.drawToFile(drawing, tmp, fmt="PNG")
+              return run
+
+
+          def via_cairosvg(src):
+              def run(tmp):
+                  import cairosvg
+                  cairosvg.svg2png(url=src, write_to=tmp, output_width=1600)
+              return run
+
+
+          def via_imagemagick(src):
+              def run(tmp):
+                  r = subprocess.run(["convert", "-background", "none", src,
+                                      "-resize", "1600x", "PNG32:" + tmp],
+                                     capture_output=True, text=True)
+                  if r.returncode != 0:
+                      raise RuntimeError(r.stderr.strip()[:200])
+              return run
+
+
+          def rasterize_svg(src):
+              for producer in (via_rsvg(src), via_svglib(src),
+                               via_cairosvg(src), via_imagemagick(src)):
+                  img = load_tmp(src, producer)
+                  if img is not None:
+                      return img
+              fail(f"No SVG rasterizer could handle {src}")
+
+
+          def save_jpeg(img, dst):
+              for w, h in SIZES:
+                  cropped = cover_crop(img, w, h)
+                  for quality in range(85, 39, -5):
+                      cropped.save(dst, "JPEG", quality=quality,
+                                   optimize=True, progressive=True)
+                      size = os.path.getsize(dst)
+                      if size <= MAX_BYTES:
+                          return size, (w, h, quality)
+              return os.path.getsize(dst), (w, h, quality)
+
+
+          # ---- scan the flat drop zone (files directly in thumbnails/ only) ----
+          sources = {}
+          for entry in sorted(os.listdir(SRC)):
+              path = os.path.join(SRC, entry)
+              if not os.path.isfile(path):
+                  continue                       # skips the generated jpg/ subdir
+              stem, ext = os.path.splitext(entry)
+              ext = ext.lower()
+              if ext not in EXTS:
+                  continue
+              slug = stem.lower()
+              if not SLUG_RE.match(slug):
+                  warn(f"Skipping {entry}: slug {slug!r} has characters outside [a-z0-9._-]")
+                  continue
+              if entry != stem + ext:
+                  warn(f"{entry}: upper-case name; published as lowercase {slug}{ext}")
+              sources.setdefault(slug, {})[ext] = path
+
+          produced = {}
+          for slug, variants in sorted(sources.items()):
+              if len(variants) > 1:
+                  warn(f"{slug}: multiple sources ({', '.join(sorted(variants))}); "
+                       f"applying precedence {'>'.join(EXTS)}")
+              ext = next(e for e in EXTS if e in variants)
+              src = variants[ext]
+
+              if ext == ".gif":
+                  dst = os.path.join(OUT, slug + ".gif")
+                  shutil.copyfile(src, dst)
+                  produced[slug] = dst
+                  size = os.path.getsize(dst)
+                  if size > 256 * 1024:
+                      warn(f"{slug}.gif is {size/1024:.0f} KB - heavy for a lazy-loaded card")
+                  note(f"- `{slug}` gif passthrough ({size/1024:.0f} KB)")
+                  continue
+
+              img = rasterize_svg(src) if ext == ".svg" else None
+              if img is None and ext != ".svg":
+                  raw = Image.open(src)
+                  raw.load()
+                  img = raw
+              dst = os.path.join(OUT, slug + ".jpg")
+              size, (w, h, q) = save_jpeg(flatten(img), dst)
+              produced[slug] = dst
+              over = "" if size <= MAX_BYTES else " (OVER CAP)"
+              note(f"- `{slug}` {ext} -> jpg {w}x{h} q{q} ({size/1024:.1f} KB){over}")
+
+          # ---- prune derivatives whose source is gone or whose ext changed ----
+          removed = 0
+          for entry in sorted(os.listdir(OUT)):
+              path = os.path.join(OUT, entry)
+              if not os.path.isfile(path):
+                  continue
+              stem, ext = os.path.splitext(entry)
+              if ext.lower() not in EXTS:
+                  continue                       # e.g. .gitkeep
+              if produced.get(stem.lower()) != path:
+                  os.remove(path)
+                  removed += 1
+                  note(f"- pruned stale `{entry}`")
+
+          dirty = subprocess.run(["git", "status", "--porcelain", OUT],
+                                 capture_output=True, text=True).stdout.strip()
+          changed = bool(dirty)
+          emit("changed", "true" if changed else "false")
+          emit("count", str(len(produced)))
+          note(f"\n### Thumbnails built\n\n{len(produced)} published, {removed} pruned, "
+               f"{sum(len(v) for v in sources.values())} source file(s) scanned.")
+          PY
+
+      - name: Commit generated JPEGs
+        if: steps.convert.outputs.changed == 'true'
+        env:
+          COUNT: ${{ steps.convert.outputs.count }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add thumbnails/jpg
+          git commit -m "Regenerate published thumbnail set (${COUNT} image(s))"
+          git push
+
+      # Repo plumbing stays in the repository but must not ship to the site.
+      - name: Remove non-site files from the deploy tree
+        if: steps.convert.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: rm -rf .github .gitignore README.md .git
+
+      - name: Setup Pages
+        if: steps.convert.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        if: steps.convert.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: steps.convert.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/deploy-pages@v5
