@@ -17,6 +17,20 @@
 # are case-sensitive). Deeper paths (games/..., thumbs/...) ride along because
 # the trailing slash is part of the match.
 #
+# Optional inputs for non-default deployments:
+#   Domain Override       - replaces the auto-detected <owner>.github.io host
+#                           (custom domains). A scheme or path in the value is
+#                           stripped/ignored with a notice; host part is kept.
+#   Root Directory Override - replaces the auto-detected repository-name path
+#                           segment. Slashes are normalized; an empty result
+#                           means "serve from the domain root".
+#   Special repos         - if the repository IS <owner>/<owner>.github.io (a
+#                           user/org Pages site), Pages serves it from the
+#                           domain ROOT, so the path segment is dropped
+#                           automatically unless Root Directory Override says
+#                           otherwise.
+#   Explicit overrides always win over auto-detection.
+#
 # NEVER touched: .../Dragon-Gaming-Assets/... URLs (511 of them live in
 # cdn.games.js / games.js / singlefile.html) - the repo segment differs, so the
 # match cannot reach them, and the script asserts their count is unchanged.
@@ -32,6 +46,18 @@ on:
         type: boolean
         required: false
         default: false
+
+      domain_override:
+        description: "Domain Override - leave empty to auto-detect <owner>.github.io; set for custom domains (e.g. games.example.com)"
+        type: string
+        required: false
+        default: ""
+
+      root_override:
+        description: "Root Directory Override - leave empty to auto-detect the repository name; replaces the path segment (use / or empty-after-trim for the domain root)"
+        type: string
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -65,9 +91,13 @@ jobs:
       - name: Repoint site URLs at this repository's Pages site
         id: repoint
         if: steps.gate.outputs.proceed == 'true'
+        env:
+          DOMAIN_OVERRIDE: ${{ inputs.domain_override }}
+          ROOT_OVERRIDE: ${{ inputs.root_override }}
         run: |
           python3 - <<'PY'
           import os
+          import re
           import sys
 
           # One-line policy switch: every rewritten URL uses this scheme.
@@ -108,13 +138,57 @@ jobs:
               print("::error::GITHUB_REPOSITORY is unset; cannot compute the target URL.")
               sys.exit(1)
           owner_lc = owner.lower()
-          if (owner_lc, repo) == ("dragon-gaming-platforms", "Dragon-Gaming-Platforms"):
-              stop_noticed("This IS the origin repository (Dragon-Gaming-Platforms/"
-                           "Dragon-Gaming-Platforms); the rewrite would replace the URL "
-                           "with itself. Nothing to do.")
 
-          target = f"{TARGET_SCHEME}://{owner_lc}.github.io/{repo}/"
+          # ---- domain: override wins, else auto-detect ----
+          domain_override = os.environ.get("DOMAIN_OVERRIDE", "").strip()
+          root_override = os.environ.get("ROOT_OVERRIDE", "").strip()
+          if domain_override:
+              domain = domain_override
+              for prefix in ("http://", "https://"):
+                  if domain.lower().startswith(prefix):
+                      domain = domain[len(prefix):]
+              if "/" in domain:
+                  host, rest = domain.split("/", 1)
+                  if rest.strip("/"):
+                      note(f"::warning::Domain Override contained a path "
+                           f"('/{rest.strip('/')}'); paths belong in Root Directory "
+                           "Override - ignoring it.")
+                  domain = host
+              domain = domain.rstrip("/")
+              if not re.fullmatch(r"[A-Za-z0-9.-]+(:\d+)?", domain):
+                  print(f"::error::Domain Override {domain_override!r} is not a valid host.")
+                  sys.exit(1)
+              domain_src = "override"
+          else:
+              domain = f"{owner_lc}.github.io"
+              domain_src = "auto"
+
+          # ---- path segment: override wins, else special-repo detection, else repo name ----
+          special = repo.lower() == f"{owner_lc}.github.io"
+          if root_override:
+              root = root_override.strip("/")
+              if root and not re.fullmatch(r"[A-Za-z0-9._~-]+(/[A-Za-z0-9._~-]+)*", root):
+                  print(f"::error::Root Directory Override {root_override!r} is not a valid path.")
+                  sys.exit(1)
+              root_src = "override"
+          elif special:
+              root = ""
+              root_src = "auto (special user/org site repo: Pages serves it from the domain root)"
+          else:
+              root = repo
+              root_src = "auto"
+
+          target = f"{TARGET_SCHEME}://{domain}/" + (f"{root}/" if root else "")
           note(f"Detected repository : {owner}/{repo}")
+          note(f"Domain              : {domain} ({domain_src})")
+          note(f"Root directory      : {root or '(domain root)'} ({root_src})")
+          if special and not root_override:
+              note("::notice::Special Pages repository (<owner>/<owner>.github.io) detected: "
+                   "URLs are repointed at the domain root with no path segment.")
+          if target in ORIGIN_SOURCES:
+              stop_noticed("The computed target equals the origin URL this workflow rewrites "
+                           f"({target}); running here would replace the URL with itself. "
+                           "Nothing to do.")
           note(f"Target Pages base   : {target}")
 
           total = 0
