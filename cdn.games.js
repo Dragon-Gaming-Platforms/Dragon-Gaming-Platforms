@@ -100,6 +100,7 @@ const GAMES_DATA = [
       "board-game"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/3d-chess/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/3d-chess.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "3D CHESS",
     "desc": "Minimalist 3D Bauhaus Hartwig chess board with full 3D camera rotation and legal move validation.",
@@ -116,6 +117,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/3d.city/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/3d-city.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "3D.City playable in your web browser.",
@@ -179,6 +181,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Abyss-Sonar.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/abyss-sonar.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Abyss Sonar playable in your web browser.",
@@ -215,6 +218,7 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/adarkroom/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/adarkroom.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "Adarkroom playable in your web browser.",
@@ -250,6 +254,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Air-Hockey.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/air-hockey.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Air Hockey playable in your web browser.",
@@ -264,6 +269,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Air-Traffic-Control.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/air-traffic-control.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Air Traffic Control playable in your web browser.",
@@ -280,6 +286,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Alchemy-Workshop.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/alchemy-workshop.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Alchemy Workshop playable in your web browser.",
@@ -314,6 +321,7 @@ const GAMES_DATA = [
       "space"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/alien-invasion/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/alien-invasion.jpg",
     "shelf": "Arcade & Action",
     "badge": "SHMUP",
     "desc": "Classic vertical space scrolling shooter defending Earth from alien armada attacks.",
@@ -407,6 +415,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/arashi-js/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/arashi-js.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Arashi JS playable in your web browser.",
@@ -458,6 +467,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/asdf/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/asdf.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Asdf playable in your web browser.",
@@ -490,6 +500,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/asteroids/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/asteroids.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Asteroids playable in your web browser.",
@@ -507,6 +518,7 @@ const GAMES_DATA = [
       "physics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/astray/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/astray.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "3D WebGL",
     "desc": "3D WebGL physics maze exploration powered by Three.js and Box2D \u2014 roll your sphere to find the exit portal.",
@@ -4723,6 +4735,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Lantern-Memory.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/lantern-memory.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Lantern Memory playable in your web browser.",
@@ -4807,6 +4820,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Lockmaster-Shift.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/lockmaster-shift.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Lockmaster Shift playable in your web browser.",
@@ -4913,6 +4927,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mahjong-Link.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mahjong-link.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Mahjong Link playable in your web browser.",
@@ -5247,6 +5262,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mine-Matrix.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mine-matrix.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Mine Matrix playable in your web browser.",
@@ -5350,6 +5366,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mist-Valley-Herbarium.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mist-valley-herbarium.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Mist Valley Herbarium playable in your web browser.",
@@ -5381,6 +5398,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Moba-Frontier.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/moba-frontier.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Moba Frontier playable in your web browser.",
@@ -5395,6 +5413,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mole-Market.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mole-market.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Mole Market playable in your web browser.",
@@ -5427,6 +5446,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Monster-Horde.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/monster-horde.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Monster Horde playable in your web browser.",
@@ -5443,6 +5463,7 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Monster-Tamer.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/monster-tamer.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "Monster Tamer playable in your web browser.",
@@ -5473,6 +5494,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Moon-Lander.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/moon-lander.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Moon Lander playable in your web browser.",
@@ -5519,6 +5541,7 @@ const GAMES_DATA = [
       "system"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mosaic-Jigsaw.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mosaic-jigsaw.jpg",
     "shelf": "Emulators",
     "badge": "EMU",
     "desc": "Browser-based virtual system and hardware emulator.",
@@ -5565,6 +5588,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Museum-Climate.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/museum-climate.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Museum Climate playable in your web browser.",
@@ -5598,6 +5622,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Neon-2048.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/neon-2048.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Neon 2048 playable in your web browser.",
@@ -5754,6 +5779,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Noodle-Shift.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/noodle-shift.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Noodle Shift playable in your web browser.",
@@ -5785,6 +5811,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Observatory-Watch.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/observatory-watch.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Observatory Watch playable in your web browser.",
@@ -5916,6 +5943,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Orbital-Pinball.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/orbital-pinball.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Orbital Pinball playable in your web browser.",
@@ -5930,6 +5958,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Orbital-Stowage.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/orbital-stowage.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Orbital Stowage playable in your web browser.",
@@ -6114,6 +6143,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pathogen-Protocol.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pathogen-protocol.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pathogen Protocol playable in your web browser.",
@@ -6166,6 +6196,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Penalty-Rush.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/penalty-rush.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Penalty Rush playable in your web browser.",
@@ -6180,6 +6211,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Photo-Safari.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/photo-safari.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Photo Safari playable in your web browser.",
@@ -6317,6 +6349,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pixel-Clues.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pixel-clues.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pixel Clues playable in your web browser.",
@@ -6399,6 +6432,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pocket-Companion.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pocket-companion.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pocket Companion playable in your web browser.",
@@ -6415,6 +6449,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pocket-Empire.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pocket-empire.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Pocket Empire playable in your web browser.",
@@ -6431,6 +6466,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pocket-Farm.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pocket-farm.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Pocket Farm playable in your web browser.",
@@ -6447,6 +6483,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pocket-Golf.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pocket-golf.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Pocket Golf playable in your web browser.",
@@ -6492,6 +6529,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Prism-Breaker.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/prism-breaker.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Prism Breaker playable in your web browser.",
@@ -6506,6 +6544,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Prism-Orchard.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/prism-orchard.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Prism Orchard playable in your web browser.",
@@ -6554,6 +6593,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pulse-Studio.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pulse-studio.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pulse Studio playable in your web browser.",
@@ -6676,6 +6716,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Radish-Guard.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/radish-guard.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Radish Guard playable in your web browser.",
@@ -6693,6 +6734,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/radius-raid/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/radius-raid.jpg",
     "shelf": "Arcade & Action",
     "badge": "VECTOR",
     "desc": "Hypnotic space vector arena shooter with glowing neon particle explosions and endless waves.",
@@ -6840,6 +6882,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Relay-Coordination.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/relay-coordination.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Relay Coordination playable in your web browser.",
@@ -6945,6 +6988,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/River-Holdem.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/river-holdem.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "River Holdem playable in your web browser.",
@@ -7117,6 +7161,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Runway-Stylist.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/runway-stylist.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Runway Stylist playable in your web browser.",
@@ -7131,6 +7176,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sandspiel/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sandspiel.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Sandspiel playable in your web browser.",
@@ -7199,6 +7245,7 @@ const GAMES_DATA = [
       "system"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Shadow-Post.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/shadow-post.jpg",
     "shelf": "Emulators",
     "badge": "EMU",
     "desc": "Browser-based virtual system and hardware emulator.",
@@ -7213,6 +7260,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Shan-Hai.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/shan-hai.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Shan Hai playable in your web browser.",
@@ -7276,6 +7324,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Signal-Caravan.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/signal-caravan.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Signal Caravan playable in your web browser.",
@@ -7290,6 +7339,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Silent-Rescue.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/silent-rescue.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Silent Rescue playable in your web browser.",
@@ -7410,6 +7460,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Sky-Hop.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sky-hop.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Sky Hop playable in your web browser.",
@@ -7458,6 +7509,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Skyline-Planner.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/skyline-planner.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Skyline Planner playable in your web browser.",
@@ -7545,6 +7597,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Slingstorm.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/slingstorm.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Slingstorm playable in your web browser.",
@@ -7638,6 +7691,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Snake-Game.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/snake-game.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Snake Game playable in your web browser.",
@@ -7706,6 +7760,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Snow-Ridge.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/snow-ridge.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Snow Ridge playable in your web browser.",
@@ -7754,6 +7809,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Sokoban-Quest.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sokoban-quest.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Sokoban Quest playable in your web browser.",
@@ -7782,6 +7838,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Solitaire-Classic.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/solitaire-classic.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Solitaire Classic playable in your web browser.",
@@ -7882,6 +7939,7 @@ const GAMES_DATA = [
       "shooter"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/space-invaders/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/space-invaders.jpg",
     "shelf": "Arcade & Action",
     "badge": "RETRO",
     "desc": "Authentic reproduction of the original Taito 1978 arcade bunker shooter.",
@@ -7915,6 +7973,7 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/spacepi/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/spacepi.jpg",
     "shelf": "Arcade & Action",
     "badge": "Arcade",
     "desc": "Neon arcade space shooter \u2014 pilot your craft through asteroid fields and annihilate enemy squadrons.",
@@ -7945,6 +8004,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Spectrum-Console.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/spectrum-console.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Spectrum Console playable in your web browser.",
@@ -8047,6 +8107,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Spud-Arena.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/spud-arena.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Spud Arena playable in your web browser.",
@@ -8061,6 +8122,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Stack-Tower.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/stack-tower.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Stack Tower playable in your web browser.",
@@ -8114,6 +8176,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Starforge-Idle.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/starforge-idle.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Starforge Idle playable in your web browser.",
@@ -8128,6 +8191,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Starline-Route.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/starline-route.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Starline Route playable in your web browser.",
@@ -8145,6 +8209,7 @@ const GAMES_DATA = [
       "space"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sorades/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sorades.jpg",
     "shelf": "Arcade & Action",
     "badge": "SHMUP",
     "desc": "Fast vertical space shooter in 13KB JS with bullet hell bosses and weapon upgrades.",
@@ -8159,6 +8224,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Starship-Suspects.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/starship-suspects.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Starship Suspects playable in your web browser.",
@@ -8173,6 +8239,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Stratigraphy-Lab.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/stratigraphy-lab.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Stratigraphy Lab playable in your web browser.",
@@ -8252,6 +8319,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Sudoku-Studio.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sudoku-studio.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Sudoku Studio playable in your web browser.",
@@ -8340,6 +8408,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Switchyard-Rush.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/switchyard-rush.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Switchyard Rush playable in your web browser.",
@@ -8356,6 +8425,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/t-rex-runner/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/t-rex-runner.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "T Rex Runner playable in your web browser.",
@@ -8388,6 +8458,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Tank-Arena.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tank-arena.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Tank Arena playable in your web browser.",
@@ -8470,6 +8541,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/teterjs/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/teterjs.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Teterjs playable in your web browser.",
@@ -8575,6 +8647,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/trust/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/trust.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "STORY",
     "desc": "Award-winning interactive exploration of game theory, trust, and betrayal by Nicky Case.",
@@ -8589,6 +8662,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Thunder-Vanguard.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/thunder-vanguard.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Thunder Vanguard playable in your web browser.",
@@ -8621,6 +8695,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tictactoe/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tictactoe.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Tictactoe playable in your web browser.",
@@ -8637,6 +8712,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Tidal-Grid.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tidal-grid.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Tidal Grid playable in your web browser.",
@@ -8651,6 +8727,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Tide-Salvage.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tide-salvage.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Tide Salvage playable in your web browser.",
@@ -8684,6 +8761,7 @@ const GAMES_DATA = [
       "system"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Time-Post.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/time-post.jpg",
     "shelf": "Emulators",
     "badge": "EMU",
     "desc": "Browser-based virtual system and hardware emulator.",
@@ -8700,6 +8778,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Tiny-Factory.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tiny-factory.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Tiny Factory playable in your web browser.",
@@ -8754,6 +8833,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Touchline-Manager.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/touchline-manager.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Touchline Manager playable in your web browser.",
@@ -8786,6 +8866,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tower-defense/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tower-defense.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Tower Defense playable in your web browser.",
@@ -8800,6 +8881,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tower-game/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tower-game.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Tower Game playable in your web browser.",
@@ -8887,6 +8969,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Truss-Workshop.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/truss-workshop.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Truss Workshop playable in your web browser.",
@@ -9133,6 +9216,7 @@ const GAMES_DATA = [
       "interactive"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/wbwwb/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/wbwwb.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "STORY",
     "desc": "A 5-minute satirical game by Nicky Case about news cycles, social media feedback loops, and outrage.",
@@ -9182,6 +9266,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Wind-Tunnel-Contracts.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/wind-tunnel-contracts.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Wind Tunnel Contracts playable in your web browser.",
@@ -9196,6 +9281,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Wonder-Park.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/wonder-park.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Wonder Park playable in your web browser.",
@@ -9212,6 +9298,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Word-Grid.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/word-grid.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Word Grid playable in your web browser.",
@@ -9386,6 +9473,7 @@ const GAMES_DATA = [
       "sci-fi"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/xx142-b2/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/xx142-b2.jpg",
     "shelf": "Arcade & Action",
     "badge": "3D STEALTH",
     "desc": "3D isometric sci-fi stealth infiltration mission inside an extraterrestrial base.",
