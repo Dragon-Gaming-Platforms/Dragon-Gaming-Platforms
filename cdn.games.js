@@ -8732,3 +8732,12 @@ const GAMES_DATA = [
     "controls": "Tap / Click / any key: Turn"
   }
 ];
+
+// Expose the catalog on the global object as well as the global lexical scope.
+// `const GAMES_DATA` above is visible to later classic scripts but NOT as a
+// window property; loaders/consumers (cdn.singlefile.html, embeds, debugging
+// consoles) get a stable handle either way.
+if (typeof window !== "undefined") {
+  window.GAMES_DATA = GAMES_DATA;
+  window.CDN_BASE = CDN_BASE;
+}
