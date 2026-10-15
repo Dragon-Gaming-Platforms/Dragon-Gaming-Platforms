@@ -1172,13 +1172,11 @@ body.crt-mode::before {
 
   <!-- JS: data + engine -->
   <script>
-/* ================================================================
-   DRAGON GAMING PLATFORMS — CORE DATA & ENGINE
-   ================================================================ */
+/**
+ * Dragon Gaming Platforms - Games & Emulators Database
+ * Complete Offline-First Single-Repo Catalog
+ */
 
-/* ================================================================
-   1. GAME DATA CATALOG (60 Games, Emulators & Tools)
-   ================================================================ */
 const GAMES_DATA = [
   {
     "id": "0hh1",
@@ -7308,7 +7306,7 @@ const GAMES_DATA = [
     "badge": "VECTOR",
     "desc": "Hypnotic space vector arena shooter with glowing neon particle explosions and endless waves.",
     "controls": "WASD to Move, Mouse to Aim & Shoot"
-  }, 
+  },
   {
     "id": "ragdoll-archers",
     "category": "games",
@@ -9909,7 +9907,7 @@ const GAMES_DATA = [
 ];
 
 /* ================================================================
-   2. CORE ENGINE & APPLICATION CONTROLLER
+   ENGINE
    ================================================================ */
 (function () {
   const CATEGORIES = [
@@ -10664,6 +10662,7 @@ const GAMES_DATA = [
         const id = card.dataset.id;
         openGame(id);
       });
+      // Keyboard activation (Enter / Space) for accessibility and non-pointer input.
       card.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
           if (e.target.closest('.game-card__fav-btn')) return;
@@ -11160,10 +11159,13 @@ const GAMES_DATA = [
       dropdownToggle.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+        // Toggle on any device that can't hover (touch phones AND tablets) or on the
+        // mobile drawer width. On hover-capable pointers CSS :hover reveals the menu.
         if (window.matchMedia('(hover: none)').matches || window.innerWidth <= 768) {
           dropdownRoot.classList.toggle('open');
         }
       });
+      // Tap/click outside the dropdown closes it (so it can't get stuck open on touch).
       document.addEventListener('click', (e) => {
         if (!dropdownRoot.contains(e.target)) dropdownRoot.classList.remove('open');
       });
@@ -11220,7 +11222,6 @@ const GAMES_DATA = [
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
-
 </script>
 </body>
 </html>

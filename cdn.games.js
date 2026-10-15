@@ -8122,7 +8122,7 @@ const GAMES_DATA = [
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tower-defense/index.html",
     "shelf": "Arcade & Action",
-    "badge": "",
+    "badge": "TD",
     "desc": "Tower Defense playable in your web browser.",
     "controls": "Keyboard / Mouse"
   },
