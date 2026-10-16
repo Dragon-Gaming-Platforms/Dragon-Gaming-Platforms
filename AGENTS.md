@@ -26,6 +26,7 @@ Dragon-Gaming-Platforms/
 ├── cdn.games.js                # CDN edition of database using absolute base URLs
 ├── styles.css                  # Dark sci-fi theme stylesheet (Orbitron & Rajdhani fonts)
 ├── singlefile.html             # Fully bundled standalone single-file version of the entire platform
+├── cdn.singlefile.html         # Standalone player with the engine inlined; catalog streamed from cdn.games.js via JS CDN
 ├── secure-singlefile.html      # Secure, self-contained single-file build of the GUST proxy browser
 ├── CREDITS.md                  # Comprehensive upstream open-source attributions and licenses
 ├── THIRD_PARTY.md              # Scope documentation detailing third-party vs original project code
@@ -33,8 +34,8 @@ Dragon-Gaming-Platforms/
 ├── LICENSE                     # MIT License for platform source code
 ├── README.md                   # Project intro and live-demo links
 ├── assets/                     # Shared site assets (e.g. dragon-login.png logo)
-├── icons/                      # Icon assets (currently placeholder only)
-├── scripts/                    # Maintainer helper scripts (e.g. add_10_games.py catalog authoring)
+├── scripts/                    # Maintainer helper scripts (e.g. add_10_games.py catalog authoring,
+│                               #   sync_assets_catalog.py, thumbnail-assets-starter/ companion-repo kit)
 │
 ├── games/                      # Directory containing all standalone & multi-file games (~116 folders)
 │   ├── drive-mad/              # Standalone offline WASM release of Drive Mad
@@ -72,7 +73,7 @@ Dragon-Gaming-Platforms/
 
 > **Catalog auto-sync:** the [Sync Assets-Repo Games to Catalog](.github/workflows/sync-assets-catalog.yml) workflow (manual trigger from the **Actions** tab) scans the assets repository's `games/` folders and adds any missing entries to all three catalogs with absolute asset-repo URLs, bumping every count string (search placeholder, navbar `Games (N)`, the `N+` numbers in the meta description and hero subtitle, and the AGENTS.md totals), committing as `github-actions[bot]`, and redeploying Pages (it deploys itself because pushes made with `GITHUB_TOKEN` do not trigger `static.yml`). Inputs: **Dry run** (report only), **Recount only** (refreshes every count string without adding games — run it after manual catalog edits or removals), and **Deploy to GitHub Pages** (on by default; uncheck to commit without deploying). It is **add-only** — it never edits or removes existing entries; id conflicts, orphaned entries and unreadable manifests are reported as warnings instead. Optional per-game metadata lives in `games/<slug>/game.json` in the assets repo (keys: `name`, `desc`, `controls`, `shelf`, `tags`, `badge`, `creator` — all optional, sensible defaults otherwise). Attribution rows in `THIRD_PARTY.md` are not automated — add them manually for new games.
 
-> **Pages deploys publish only site files:** both deploy workflows (`static.yml` on push, and the sync workflow's self-deploy) strip repo plumbing from the runner's working tree before packaging the Pages artifact: `scripts`, `.github`, `games-to-add.md`, `AGENTS.md`, `README.md`, `.gitignore` plus Git metadata stay in the repository but are never published. `.nojekyll` (required — it disables Jekyll processing), `LICENSE`, `THIRD_PARTY.md`, and `CREDITS.md` are intentionally published. If a new non-site file lands at the repo root, add it to the removal list in **both** workflows.
+> **Pages deploys publish only site files:** both deploy workflows (`static.yml` on push, and the sync workflow's self-deploy) strip repo plumbing from the runner's working tree before packaging the Pages artifact: `scripts`, `.github`, `AGENTS.md`, `README.md`, `.gitignore` plus Git metadata stay in the repository but are never published. (`games-to-add.md` is gitignored, so it never reaches a runner; `cdn.singlefile.html` IS published.) `.nojekyll` (required — it disables Jekyll processing), `LICENSE`, `THIRD_PARTY.md`, and `CREDITS.md` are intentionally published. If a new non-site file lands at the repo root, add it to the removal list in **both** workflows.
 
 ---
 
@@ -137,7 +138,8 @@ Whenever adding, updating, or fixing a game, emulator, or utility, **ALL THREE c
 
 1. **`games.js`**: Standard relative paths (e.g. `"path": "./games/drive-mad/index.html"`).
 2. **`cdn.games.js`**: Absolute CDN paths using `CDN_BASE + "games/..."` (e.g. `"https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/drive-mad/index.html"`).
-3. **`singlefile.html`**: The inline `const GAMES_DATA = [...]` array inside `singlefile.html` must match `games.js`.
+3. **`singlefile.html`**: The inline `const GAMES_DATA = [...]` array inside `singlefile.html` must match `games.js`. The inline *engine* must match `games.js` byte-for-byte as well.
+   **`cdn.singlefile.html`** is the exception to the inline-array rule: it inlines the engine (identical to `games.js` minus the `GAMES_DATA` literal) and streams the catalog from `cdn.games.js` over a JS CDN with a GitHub Pages fallback, so it carries no inline catalog to keep in sync.
 4. **`CREDITS.md`**: Add upstream author attribution, repository URL, and license.
 
 ---
@@ -186,7 +188,9 @@ match = re.search(r'const GAMES_DATA = (\[.*?\]);', text, re.DOTALL)
 data = json.loads(match.group(1))
 print(f'Total catalog items: {len(data)}')
 
-missing = [d for d in data if not os.path.exists(d['path'].lstrip('./'))]
+missing = [d for d in data
+           if not d['path'].startswith('http')          # assets-repo entries live in another repo
+           and not os.path.exists(d['path'].lstrip('./'))]
 if missing:
     print(f'ERROR: {len(missing)} missing files:')
     for m in missing:
