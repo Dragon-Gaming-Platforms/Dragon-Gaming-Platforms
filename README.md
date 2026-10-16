@@ -24,6 +24,6 @@ It is recommended that you [Fork](https://github.com/Dragon-Gaming-Platforms/Dra
 5. A whole host of games!
 6. Easy GitHub Pages deployment through [static.yml](./.github/workflows/static.yml) after [forking.](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/fork)
 7. Additional game hosting at [Dragon Gaming Platforms Assets](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Assets)
-8. Thumbnail hosting at [Dragon Gaming Platforms Thumbnail Assets repository](https://github.com/Dragon-Gaming-Platforms/Thumbnail-Assets)
+8. Thumbnail hosting at [Dragon Gaming Platforms Thumbnail Assets repository](https://github.com/Dragon-Gaming-Platforms/Thumbnail-Assets/)
 
 [__Credits__](./CREDITS.md)
