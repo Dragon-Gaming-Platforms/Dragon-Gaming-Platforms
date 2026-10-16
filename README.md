@@ -5,6 +5,7 @@
 
 [![Deploy Dragon Gaming Platforms](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/static.yml/badge.svg?branch=main)](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/static.yml)
 [![Sync Assets-Repo Games to Catalog](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-assets-catalog.yml/badge.svg)](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-assets-catalog.yml)
+[![Sync Thumbnails to Catalog](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-thumbnails.yml/badge.svg)](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-thumbnails.yml)
 </div>
 
 ## Introduction
