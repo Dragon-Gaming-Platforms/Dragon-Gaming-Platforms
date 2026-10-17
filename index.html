@@ -165,5 +165,34 @@
 
   <!-- JS: data + engine -->
   <script src="games.js"></script>
+  <!-- Optional site-shell caching; single-file distributions are intentionally untouched. -->
+  <script>
+    if ('serviceWorker' in navigator && window.isSecureContext) {
+      const workerUrl = new URL('./sw.js', location.href).href;
+      const pageUrl = new URL(location.href);
+      if (pageUrl.searchParams.has('dgp-reset')) {
+        (async () => {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations
+            .filter((registration) => [registration.active, registration.waiting, registration.installing]
+              .some((worker) => worker && worker.scriptURL === workerUrl))
+            .map((registration) => registration.unregister()));
+          if ('caches' in window) {
+            const names = await caches.keys();
+            await Promise.all(names
+              .filter((name) => name.startsWith('dgp-runtime-') || name.startsWith('dgp-shell-'))
+              .map((name) => caches.delete(name)));
+          }
+        })().catch((error) => console.warn('Could not clear the offline cache:', error))
+          .finally(() => {
+            pageUrl.searchParams.delete('dgp-reset');
+            location.replace(pageUrl.href);
+          });
+      } else {
+        navigator.serviceWorker.register(workerUrl, { scope: new URL('./', location.href).href })
+          .catch((error) => console.warn('Offline caching could not be enabled:', error));
+      }
+    }
+  </script>
 </body>
 </html>

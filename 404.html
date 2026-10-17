@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" data-theme="dragon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="robots" content="noindex, follow">
+  <title>Portal Lost — Dragon Gaming Platforms</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --accent: #ff1a2e;
+      --accent-glow: rgba(255, 26, 46, .36);
+      --accent-2: #ff4d5a;
+      --ink: #f0f0f0;
+      --muted: #a7a7ad;
+      --panel: rgba(16, 16, 20, .88);
+      --line: rgba(255, 255, 255, .1);
+      --void: #070708;
+    }
+    html[data-theme="cyberpunk"] { --accent: #00e5ff; --accent-glow: rgba(0,229,255,.32); --accent-2: #ff007f; }
+    html[data-theme="purple"] { --accent: #9d4edd; --accent-glow: rgba(157,78,221,.38); --accent-2: #e0aaff; }
+    html[data-theme="matrix"] { --accent: #00ff66; --accent-glow: rgba(0,255,102,.3); --accent-2: #a3ff00; }
+    html[data-theme="amoled"] { --accent: #e2e8f0; --accent-glow: rgba(148,163,184,.3); --accent-2: #38bdf8; --void: #000; --panel: rgba(8,8,8,.94); }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 24px;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 50% 43%, var(--accent-glow) 0, transparent 32rem),
+        linear-gradient(145deg, #111114 0%, var(--void) 58%, #10090b 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body::before, body::after {
+      position: fixed;
+      z-index: 0;
+      content: "";
+      pointer-events: none;
+    }
+    body::before {
+      inset: 0;
+      opacity: .15;
+      background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, transparent, #000 25%, #000 75%, transparent);
+    }
+    body::after {
+      width: min(72vw, 620px);
+      aspect-ratio: 1;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      opacity: .12;
+      box-shadow: 0 0 55px var(--accent-glow), inset 0 0 55px var(--accent-glow);
+      transform: scaleY(.42) rotate(-18deg);
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 620px);
+      padding: clamp(30px, 7vw, 58px);
+      border: 1px solid var(--line);
+      border-top: 2px solid var(--accent);
+      border-radius: 20px;
+      background: var(--panel);
+      box-shadow: 0 24px 90px rgba(0,0,0,.58), 0 0 52px var(--accent-glow);
+      text-align: center;
+      backdrop-filter: blur(16px);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 34px;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 750;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .sigil {
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border: 1px solid var(--accent);
+      border-radius: 8px 3px 8px 3px;
+      color: var(--accent);
+      font-size: 16px;
+      box-shadow: 0 0 18px var(--accent-glow);
+    }
+    .code {
+      margin: 0;
+      color: var(--accent);
+      font-size: clamp(6.5rem, 24vw, 10rem);
+      font-weight: 900;
+      letter-spacing: -.09em;
+      line-height: .82;
+      text-shadow: 0 0 28px var(--accent-glow), 0 0 72px var(--accent-glow);
+    }
+    .eyebrow {
+      margin: 25px 0 10px;
+      color: var(--accent-2);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .23em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.55rem, 5vw, 2.25rem);
+      letter-spacing: -.035em;
+    }
+    .copy {
+      max-width: 410px;
+      margin: 14px auto 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .missing-path {
+      display: inline-block;
+      max-width: 100%;
+      margin-top: 19px;
+      padding: 7px 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: #c7c7ce;
+      background: rgba(0,0,0,.24);
+      font: 500 .78rem/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .button {
+      min-width: 150px;
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 19px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      color: var(--ink);
+      background: rgba(255,255,255,.045);
+      font: inherit;
+      font-size: .9rem;
+      font-weight: 750;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .button:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 7px 24px var(--accent-glow); }
+    .button--primary { border-color: var(--accent); color: #090909; background: var(--accent); }
+    .button--primary:hover { background: var(--accent-2); }
+    .button:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; }
+    .button[disabled] { opacity: .45; cursor: default; transform: none; }
+    .footnote { margin: 26px 0 0; color: #73737c; font-size: .74rem; letter-spacing: .04em; }
+    .reset-link { margin-left: 5px; color: var(--accent-2); text-underline-offset: 3px; }
+    @media (max-width: 420px) {
+      main { padding: 30px 21px; }
+      .brand { margin-bottom: 29px; font-size: .65rem; letter-spacing: .14em; }
+      .button { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main aria-labelledby="title">
+    <div class="brand"><span class="sigil" aria-hidden="true">ϟ</span> Dragon Gaming Platforms</div>
+    <p class="code" aria-label="Error 404">404</p>
+    <p class="eyebrow">Portal signal lost</p>
+    <h1 id="title">This level isn't here.</h1>
+    <p class="copy">The link may be outdated, or this portal may have moved. Let's get you back to the arcade.</p>
+    <code class="missing-path" id="missingPath" aria-label="Requested address"></code>
+    <nav class="actions" aria-label="Recovery options">
+      <a class="button button--primary" id="homeLink" href="./">Return to the platform <span aria-hidden="true">↗</span></a>
+      <button class="button" id="backButton" type="button">Go back <span aria-hidden="true">←</span></button>
+    </nav>
+    <p class="footnote">No lives lost. Your saved games are still safe. <a class="reset-link" id="resetLink" href="./?dgp-reset=1">Reset offline cache</a></p>
+  </main>
+  <script>
+    (() => {
+      const themes = new Set(['dragon', 'cyberpunk', 'purple', 'matrix', 'amoled']);
+      try {
+        const saved = localStorage.getItem('dgp_theme');
+        if (themes.has(saved)) document.documentElement.dataset.theme = saved;
+      } catch (_) { /* Storage may be disabled; the default theme still works. */ }
+
+      const requestedPath = document.getElementById('missingPath');
+      requestedPath.textContent = location.pathname + location.search;
+      const homeLink = document.getElementById('homeLink');
+      const resetLink = document.getElementById('resetLink');
+      const setHomeBase = (base) => {
+        homeLink.href = base;
+        resetLink.href = new URL('?dgp-reset=1', location.origin + base).href;
+      };
+      const backButton = document.getElementById('backButton');
+      backButton.addEventListener('click', () => {
+        if (history.length > 1) history.back();
+        else location.assign(homeLink.href);
+      });
+      if (history.length <= 1) backButton.setAttribute('aria-label', 'No previous page; return to the platform');
+
+      const pieces = location.pathname.split('/').filter(Boolean);
+      const isGitHubPages = location.hostname.endsWith('.github.io');
+      const projectGuess = isGitHubPages && pieces.length ? `/${pieces[0]}/` : '/';
+      const candidates = [...new Set([projectGuess, '/'])];
+
+      (async () => {
+        for (const base of candidates) {
+          try {
+            const response = await fetch(new URL('index.html', location.origin + base), {
+              method: 'HEAD',
+              cache: 'no-store',
+            });
+            if (response.ok) {
+              setHomeBase(base);
+              return;
+            }
+          } catch (_) { /* Offline: use the best path guess below. */ }
+        }
+        setHomeBase(projectGuess);
+      })();
+    })();
+  </script>
+</body>
+</html>

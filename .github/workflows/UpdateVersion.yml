@@ -10,8 +10,8 @@
 #                  static.yml (whose push trigger is disabled anyway), so this
 #                  workflow deploys Pages itself.
 #
-# Rewrites only the `const CURRENT_VER = '...';` declaration line in games.js and
-# singlefile.html (exactly one match per file, or the run aborts before writing),
+# Rewrites only the `const CURRENT_VER = '...';` declaration line in games.js,
+# singlefile.html, and sw.js (exactly one match per file, or the run aborts before writing),
 # then commits to main as github-actions[bot] and creates a lightweight tag.
 # Re-running with the version already in the files is a successful no-op.
 # cdn.games.js carries no version constant, so it is intentionally untouched.
@@ -66,7 +66,7 @@ jobs:
           import re
           import sys
 
-          FILES = ["games.js", "singlefile.html"]
+          FILES = ["games.js", "singlefile.html", "sw.js"]
           DECL = re.compile(r"^([ \t]*)const CURRENT_VER = '([^']*)';[ \t]*$", re.MULTILINE)
 
           gh_output = os.environ.get("GITHUB_OUTPUT")
@@ -183,18 +183,18 @@ jobs:
         if: steps.bump.outputs.changed == 'true'
         run: |
           echo "== CURRENT_VER declarations =="
-          grep -n "const CURRENT_VER" games.js singlefile.html
+          grep -n "const CURRENT_VER" games.js singlefile.html sw.js
           echo
-          echo "== games.js syntax check =="
-          node --check games.js && echo "games.js OK"
+          echo "== JavaScript syntax checks =="
+          node --check games.js && node --check sw.js && echo "games.js and sw.js OK"
           echo
-          echo "== changed files (must be exactly the two catalogs) =="
+          echo "== changed files (must be exactly the versioned files) =="
           git diff --name-only
-          test "$(git diff --name-only | sort | tr '\n' ' ')" = "games.js singlefile.html " \
+          test "$(git diff --name-only | sort | tr '\n' ' ')" = "games.js singlefile.html sw.js " \
             || { echo "::error::Unexpected files were modified."; exit 1; }
           echo
           echo "== diff =="
-          git --no-pager diff --unified=1 -- games.js singlefile.html
+          git --no-pager diff --unified=1 -- games.js singlefile.html sw.js
 
       - name: Commit and push to main
         if: steps.bump.outputs.changed == 'true'
@@ -203,7 +203,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add games.js singlefile.html
+          git add games.js singlefile.html sw.js
           git commit -m "Update CURRENT_VER to ${NEW_VERSION}"
           git push origin HEAD:main
 

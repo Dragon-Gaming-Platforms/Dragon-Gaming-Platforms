@@ -21,5 +21,11 @@ visit the live demo [Here](https://dragon-gaming-platforms.github.io/Dragon-Gami
 4. Export and import buttons for local storage
 5. A whole host of games!
 6. Easy GitHub Pages deployment through [static.yml](./.github/workflows/static.yml) after [forking.](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/fork)
+7. Optional offline support for the main site through a scope-limited service worker
+8. A custom, fork-aware GitHub Pages 404 page
+
+## Offline access
+
+The main site (`index.html`) registers a service worker on HTTPS/localhost. After the first online visit it keeps the site shell available, then caches local game pages and assets as you use them (soft budget: about 150 MB / 300 resources, refreshed in the background after 24 hours). Visit a game online at least once before expecting it to work offline. Cross-origin games and proxy traffic are not cached. The `singlefile.html`, `cdn.singlefile.html`, and `secure-singlefile.html` distributions are unchanged and do not depend on the worker. To unregister the worker and clear its caches, open the site with `?dgp-reset=1` appended to the URL; the 404 page also provides a reset link.
 
 [__Credits__](./CREDITS.md)
