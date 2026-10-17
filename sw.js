@@ -6,10 +6,18 @@
  * assets. Cross-origin game hosts (including Dragon-Gaming-Assets) are bypassed.
  */
 const CURRENT_VER = 'v1.2.2';
-const SHELL_CACHE = `dgp-shell-${CURRENT_VER}`;
+const CACHE_SCHEMA = 3;
+const SHELL_CACHE = `dgp-shell-${CACHE_SCHEMA}-${CURRENT_VER}`;
 const RUNTIME_CACHE = 'dgp-runtime-v1';
 const SITE_ROOT = new URL(self.registration.scope);
-const SHELL_URLS = ['index.html', 'styles.css', 'games.js', '404.html']
+const SHELL_URLS = [
+  'index.html',
+  'styles.css',
+  'games.js',
+  'site-enhancements.css',
+  'site-enhancements.js',
+  '404.html',
+]
   .map((path) => new URL(path, SITE_ROOT).href);
 
 // Soft bounds for this worker's runtime cache. The byte count uses the response

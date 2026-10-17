@@ -1,0 +1,86 @@
+/* Progressive improvements used by index.html only; portable single-file pages stay self-contained. */
+.skip-link {
+  position: fixed;
+  z-index: 20000;
+  top: 12px;
+  left: 12px;
+  padding: 11px 16px;
+  transform: translateY(calc(-100% - 18px));
+  border: 1px solid var(--theme-bright, #ff1a2e);
+  border-radius: 8px;
+  color: var(--text-primary, #f0f0f0);
+  background: var(--bg-card, #0d0d0d);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 24px rgba(var(--theme-rgb, 230, 0, 18), .3);
+  transition: transform .18s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid var(--theme-bright, #ff1a2e);
+  outline-offset: 3px;
+}
+
+.site-connection-status {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 5px 10px;
+  border: 1px solid var(--border-color, #2a2a2a);
+  border-radius: 999px;
+  color: var(--text-secondary, #aaa);
+  background: rgba(255, 255, 255, .035);
+  font-size: .76rem;
+  line-height: 1.35;
+}
+.site-connection-status::before {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #f0b34b;
+  content: "";
+}
+.site-connection-status[data-state="ready"]::before { background: #39d98a; box-shadow: 0 0 9px rgba(57, 217, 138, .6); }
+.site-connection-status[data-state="offline"]::before { background: #ff6b6b; box-shadow: 0 0 9px rgba(255, 107, 107, .55); }
+.site-connection-status[data-state="limited"]::before { background: #9ba3af; }
+
+.site-share-button:disabled { opacity: .45; cursor: not-allowed; }
+.game-viewer__btn:focus-visible {
+  outline: 2px solid var(--theme-bright, #ff1a2e);
+  outline-offset: 2px;
+}
+.site-toast {
+  position: fixed;
+  z-index: 20;
+  right: 16px;
+  bottom: 16px;
+  max-width: min(90vw, 360px);
+  padding: 11px 15px;
+  border: 1px solid var(--theme-primary, #e60012);
+  border-radius: 9px;
+  color: var(--text-primary, #f0f0f0);
+  background: var(--bg-surface, #121212);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .45), 0 0 18px rgba(var(--theme-rgb, 230, 0, 18), .22);
+  font-size: .88rem;
+}
+.site-toast[hidden] { display: none; }
+
+@media (max-width: 520px) {
+  .game-viewer__toolbar { gap: 4px; padding-right: 5px; padding-left: 5px; }
+  .game-viewer__actions { gap: 2px; }
+  .game-viewer__btn { min-width: 30px; padding-right: 6px; padding-left: 6px; }
+  .game-viewer__game-name { max-width: 88px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
