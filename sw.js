@@ -5,7 +5,7 @@
  * workers. It only stores same-origin site-shell files and visited local game
  * assets. Cross-origin game hosts (including Dragon-Gaming-Assets) are bypassed.
  */
-const CURRENT_VER = 'v2.0.0';
+const CURRENT_VER = 'v2.1.0';
 const CACHE_SCHEMA = 4;
 const SHELL_CACHE = `dgp-shell-${CACHE_SCHEMA}-${CURRENT_VER}`;
 const RUNTIME_CACHE = 'dgp-runtime-v1';
