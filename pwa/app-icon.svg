@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Dragon Gaming Platforms</title>
+  <desc id="desc">A crimson angular dragon crest on a dark arcade background.</desc>
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#e60012" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#09090f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff3344"/>
+      <stop offset="1" stop-color="#8b0000"/>
+    </linearGradient>
+    <linearGradient id="dragon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5b68"/>
+      <stop offset="1" stop-color="#e60012"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#09090f"/>
+  <rect x="12" y="12" width="488" height="488" rx="104" fill="url(#halo)" stroke="#261116" stroke-width="3"/>
+  <path d="M256 57 411 117 396 280Q389 352 256 441 123 352 116 280L101 117Z" fill="url(#shield)"/>
+  <path d="M256 97 374 143 362 272Q356 326 256 393 156 326 150 272L138 143Z" fill="#0d0d14" stroke="#42131b" stroke-width="5"/>
+  <path d="m157 257 48-41-1-53 43 36 53-48 3 50 52-1 28 20-20 24 46 20-42 17 28 15-46 7-10 45-38-26-38 42-19-44-48 17 11-45-48-8Z" fill="url(#dragon)"/>
+  <path d="m328 230 36 4-31 17Z" fill="#fff0f1"/>
+  <path d="m218 291 55 7-22 23-40-9Z" fill="#9e0718"/>
+  <path d="m176 220 22-38 35 28-28 22Z" fill="#ff7781" opacity=".9"/>
+  <path d="m311 320 29 20-43-14Z" fill="#ff8991"/>
+</svg>

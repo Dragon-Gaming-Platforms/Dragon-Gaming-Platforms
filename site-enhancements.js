@@ -268,7 +268,12 @@
   function updateConnectionStatus() {
     if (!status) return;
     const serviceWorkersAvailable = 'serviceWorker' in navigator && window.isSecureContext;
-    if (!navigator.onLine) {
+    if (isRunningStandalone()) {
+      status.textContent = !navigator.onLine
+        ? 'Installed app — offline'
+        : (navigator.serviceWorker?.controller ? 'Installed app — offline cache active' : 'Installed app — online');
+      status.dataset.state = navigator.onLine ? 'ready' : 'offline';
+    } else if (!navigator.onLine) {
       status.textContent = 'Offline — previously cached pages may still work';
       status.dataset.state = 'offline';
     } else if (!serviceWorkersAvailable) {
@@ -281,6 +286,53 @@
       status.textContent = 'Online — preparing offline cache';
       status.dataset.state = 'pending';
     }
+  }
+
+  const installButton = document.getElementById('installAppButton');
+  let deferredInstallPrompt = null;
+  function isRunningStandalone() {
+    if (navigator.standalone === true) return true;
+    try { return window.matchMedia('(display-mode: standalone)').matches; } catch (_) { return false; }
+  }
+
+  if (installButton) {
+    installButton.hidden = true;
+    installButton.addEventListener('click', async () => {
+      if (!deferredInstallPrompt) return;
+      const promptEvent = deferredInstallPrompt;
+      deferredInstallPrompt = null;
+      installButton.disabled = true;
+      installButton.textContent = 'Opening install prompt…';
+      try {
+        await promptEvent.prompt();
+        const choice = await promptEvent.userChoice;
+        installButton.hidden = true;
+        if (choice?.outcome === 'accepted' && status) {
+          status.textContent = 'App installed — connection status updates here';
+          status.dataset.state = 'ready';
+        }
+      } catch (_) {
+        installButton.hidden = true;
+      } finally {
+        installButton.disabled = false;
+        installButton.textContent = 'Install app';
+      }
+    });
+
+    window.addEventListener('beforeinstallprompt', (event) => {
+      if (isRunningStandalone()) return;
+      event.preventDefault();
+      deferredInstallPrompt = event;
+      installButton.hidden = false;
+    });
+    window.addEventListener('appinstalled', () => {
+      deferredInstallPrompt = null;
+      installButton.hidden = true;
+      if (status) {
+        status.textContent = 'Installed app — connection status updates here';
+        status.dataset.state = 'ready';
+      }
+    });
   }
 
   updateConnectionStatus();

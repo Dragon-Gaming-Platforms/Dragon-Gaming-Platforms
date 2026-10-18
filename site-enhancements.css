@@ -47,6 +47,27 @@
 .site-connection-status[data-state="offline"]::before { background: #ff6b6b; box-shadow: 0 0 9px rgba(255, 107, 107, .55); }
 .site-connection-status[data-state="limited"]::before { background: #9ba3af; }
 
+.site-install-button {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 7px 13px;
+  border: 1px solid var(--theme-primary, #e60012);
+  border-radius: 7px;
+  color: var(--theme-bright, #ff1a2e);
+  background: rgba(var(--theme-rgb, 230, 0, 18), .08);
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.site-install-button:hover { background: rgba(var(--theme-rgb, 230, 0, 18), .16); }
+.site-install-button:focus-visible { outline: 2px solid var(--theme-bright, #ff1a2e); outline-offset: 3px; }
+.site-install-button:disabled { opacity: .6; cursor: wait; }
+.site-install-button[hidden] { display: none; }
+
 .site-share-button:disabled { opacity: .45; cursor: not-allowed; }
 .game-viewer__btn:focus-visible {
   outline: 2px solid var(--theme-bright, #ff1a2e);
