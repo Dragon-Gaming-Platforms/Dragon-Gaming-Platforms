@@ -4779,6 +4779,7 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "./games/heroine-dusk/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/heroine-dusk.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "Heroine Dusk playable in your web browser.",
@@ -4811,6 +4812,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/HexGL/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hexgl.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "HexGL playable in your web browser.",
@@ -4825,6 +4827,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "./games/Hextris/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hextris.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Hextris playable in your web browser.",
@@ -6623,6 +6626,7 @@ const GAMES_DATA = [
       "relaxing"
     ],
     "path": "./games/island-builder/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/island-builder.jpg",
     "shelf": "Strategy & Idle",
     "badge": "VOXEL 3D",
     "desc": "3D procedural Mediterranean voxel island creator with real-time lighting and building placement.",
@@ -7028,6 +7032,7 @@ const GAMES_DATA = [
       "synth"
     ],
     "path": "./games/os13k/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/os13k.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "RETRO OS",
     "desc": "Fictional 1980s WebGL operating system featuring built-in arcade games, tracker music, disk utilities, and easter eggs.",
@@ -7180,6 +7185,7 @@ const GAMES_DATA = [
       "explorable"
     ],
     "path": "./games/polygons/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/polygons.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "SIM",
     "desc": "An interactive post on the mechanics of systemic bias and segregation by Vi Hart and Nicky Case.",
@@ -7653,6 +7659,7 @@ const GAMES_DATA = [
       "medieval"
     ],
     "path": "./games/predecessors/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/predecessors.jpg",
     "shelf": "Strategy & Idle",
     "badge": "JS13k",
     "desc": "Tactical medieval 13th-century strategy game \u2014 command knights, archers, and pikemen to conquer fortresses.",
@@ -7974,6 +7981,7 @@ const GAMES_DATA = [
       "gardening"
     ],
     "path": "./games/raging-gardens/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/raging-gardens.jpg",
     "shelf": "Arcade & Action",
     "badge": "ACTION",
     "desc": "Harvest giant carrots across mazes while evading hungry rampaging rabbits.",
@@ -9616,6 +9624,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "./games/sudoku/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sudoku.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Sudoku playable in your web browser.",
