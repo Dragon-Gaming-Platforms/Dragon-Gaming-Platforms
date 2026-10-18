@@ -6,7 +6,7 @@
  * assets. Cross-origin game hosts (including Dragon-Gaming-Assets) are bypassed.
  */
 const CURRENT_VER = 'v1.2.2';
-const CACHE_SCHEMA = 4;
+const CACHE_SCHEMA = 5;
 const SHELL_CACHE = `dgp-shell-${CACHE_SCHEMA}-${CURRENT_VER}`;
 const RUNTIME_CACHE = 'dgp-runtime-v1';
 const SITE_ROOT = new URL(self.registration.scope);
@@ -157,6 +157,17 @@ self.addEventListener('activate', (event) => {
       .map((name) => caches.delete(name)));
     await self.clients.claim();
   })());
+});
+
+// A waiting update is activated only after an explicit click in the main site's
+// "Update ready" control. Normal installs never skip the active game's session.
+self.addEventListener('message', (event) => {
+  if (event.data?.type !== 'DGP_ACTIVATE_UPDATE' || !event.source?.url) return;
+  let sourceUrl;
+  try { sourceUrl = new URL(event.source.url); } catch (_) { return; }
+  const mainPagePaths = [SITE_ROOT.pathname, new URL('index.html', SITE_ROOT).pathname];
+  if (sourceUrl.origin !== SITE_ROOT.origin || !mainPagePaths.includes(sourceUrl.pathname)) return;
+  event.waitUntil(self.skipWaiting());
 });
 
 async function handleNavigation(request) {

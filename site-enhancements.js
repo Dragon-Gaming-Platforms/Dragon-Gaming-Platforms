@@ -335,11 +335,91 @@
     });
   }
 
+  const updateButton = document.getElementById('updateAppButton');
+  let updateRegistration = null;
+  let updateRequested = false;
+  let updateActivationTimer = 0;
+  let lastUpdateCheck = 0;
+
+  function refreshUpdateButton() {
+    if (!updateButton) return;
+    const updateWaiting = updateRegistration?.waiting && navigator.serviceWorker.controller;
+    updateButton.hidden = !updateWaiting;
+    if (updateWaiting) {
+      updateButton.disabled = false;
+      updateButton.textContent = 'Update ready';
+      updateButton.title = 'A newer site worker is ready; reload when convenient.';
+    }
+  }
+
+  function observeUpdateRegistration(registration) {
+    updateRegistration = registration;
+    lastUpdateCheck = Date.now();
+    refreshUpdateButton();
+    registration.addEventListener('updatefound', () => {
+      const installing = registration.installing;
+      if (!installing) return;
+      installing.addEventListener('statechange', () => {
+        if (installing.state === 'installed') refreshUpdateButton();
+      });
+    });
+  }
+
+  async function applyWaitingUpdate() {
+    const waiting = updateRegistration?.waiting;
+    if (!waiting || !updateButton) return;
+    const accepted = window.confirm(
+      'A site update is ready. Applying it reloads this page and can end an active game or lose unsaved progress. Continue?'
+    );
+    if (!accepted) return;
+
+    updateRequested = true;
+    updateButton.disabled = true;
+    updateButton.textContent = 'Applying update…';
+    try {
+      waiting.postMessage({ type: 'DGP_ACTIVATE_UPDATE' });
+      updateActivationTimer = window.setTimeout(() => {
+        if (!updateRequested) return;
+        updateRequested = false;
+        updateButton.disabled = false;
+        updateButton.textContent = 'Update ready — retry';
+      }, 15000);
+    } catch (_) {
+      updateRequested = false;
+      updateButton.disabled = false;
+      updateButton.textContent = 'Update ready — retry';
+    }
+  }
+
+  if (updateButton && 'serviceWorker' in navigator && window.isSecureContext) {
+    updateButton.hidden = true;
+    updateButton.addEventListener('click', applyWaitingUpdate);
+    const checkForUpdate = () => {
+      if (!updateRegistration || document.visibilityState !== 'visible') return;
+      if (Date.now() - lastUpdateCheck < 10 * 60 * 1000) return;
+      lastUpdateCheck = Date.now();
+      updateRegistration.update().catch(() => {});
+    };
+    document.addEventListener('visibilitychange', checkForUpdate);
+    window.addEventListener('focus', checkForUpdate);
+  }
+
   updateConnectionStatus();
   window.addEventListener('online', updateConnectionStatus);
   window.addEventListener('offline', updateConnectionStatus);
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.addEventListener('controllerchange', updateConnectionStatus);
-    navigator.serviceWorker.ready.then(updateConnectionStatus).catch(() => {});
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      updateConnectionStatus();
+      refreshUpdateButton();
+      if (updateRequested) {
+        updateRequested = false;
+        window.clearTimeout(updateActivationTimer);
+        location.reload();
+      }
+    });
+    navigator.serviceWorker.ready.then((registration) => {
+      updateConnectionStatus();
+      if (updateButton && window.isSecureContext) observeUpdateRegistration(registration);
+    }).catch(() => {});
   }
 })();

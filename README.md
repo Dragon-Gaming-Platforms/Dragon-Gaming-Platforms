@@ -33,4 +33,10 @@ The main site (`index.html`) registers a service worker on HTTPS/localhost. Afte
 
 Open a game and choose **Share** for a direct link; links use `?play=<game-id>` and launch the selected catalog entry automatically. On browsers that support installation, the footer reveals an **Install app** button when the browser is ready to offer it. The main site also provides a keyboard skip link, announces search-result changes to screen readers, keeps focus inside the game viewer, and honors reduced-motion preferences.
 
+## Service-worker update lifecycle
+
+The browser checks `sw.js` when the page registers the worker and periodically afterward. The main page also calls the browser's update check when a hidden tab becomes visible or regains focus, with a 10-minute cooldown. A changed worker installs beside the active one and waits rather than taking over an open game session. The footer then shows **Update ready**; confirming it sends the waiting worker an activation message and reloads this tab after control changes. If you do nothing, the old worker keeps serving the current session.
+
+The precached shell is keyed by both `CURRENT_VER` and `CACHE_SCHEMA`; the version workflow updates the former, while maintainers increment the latter when worker cache behavior or the shell list changes. Activation removes old shell caches. The separate runtime cache survives releases: a visited game asset is considered fresh for 24 hours; its next use after that triggers a background refresh while the cached copy remains usable offline if the network fails. The 150 MB/300-entry limits are soft estimates. `?dgp-reset=1` removes this worker and its caches if recovery is needed.
+
 [__Credits__](./CREDITS.md)
