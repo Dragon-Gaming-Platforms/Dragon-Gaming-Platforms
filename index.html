@@ -12,20 +12,25 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#09090f" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="description" content="Dragon Gaming Platforms — Ultimate library of 570+ legal open-source browser games, emulators, and tools. Optimized for mobile, tablet, and desktop." />
+  <meta name="apple-mobile-web-app-title" content="Dragon Games" />
+  <meta name="description" content="Dragon Gaming Platforms — Ultimate library of 520+ legal open-source browser games, emulators, and tools. Optimized for mobile, tablet, and desktop." />
   <meta name="keywords" content="games, game site, gaming site, unblocked games, free online games, browser gaming, emulators, classic games, retro gaming, play games online, gaming platforms, nostalgic games, web-based games, wasm games, eaglercraft, balatro" />
   <meta name="author" content="Dragon Gaming Platforms" />
   <title>Dragon Gaming Platforms</title>
-  <link rel="icon" type="image/png" href="assets/dragon-login.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./pwa/app-icon-192.png" />
+  <link rel="apple-touch-icon" href="./pwa/app-icon-192.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="site-enhancements.css" />
 </head>
 <body>
+  <a class="skip-link" href="#filterBarRoot">Skip to the game library</a>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
@@ -159,11 +164,43 @@
         <img class="footer__logo" src="assets/dragon-login.png" alt="Dragon Gaming Platforms" />
         <span class="footer__name">Dragon Gaming Platforms</span>
       </div>
-      <p class="footer__copy">2026 Dragon Gaming Platforms. MIT Licensed Web Gaming.</p>
+      <p class="footer__copy"> 2026 Dragon Gaming Platforms. MIT Licensed Web Gaming.</p>
+      <p class="site-connection-status" id="siteConnectionStatus" role="status" aria-live="polite">Checking connection…</p>
+      <button class="site-install-button" id="installAppButton" type="button" hidden>Install app</button>
     </div>
   </footer>
 
-  <!-- JS: data + engine -->
+  <!-- JS: data + engine + main-site-only progressive enhancements -->
   <script src="games.js"></script>
+  <script src="site-enhancements.js"></script>
+  <!-- Optional site-shell caching; single-file distributions are intentionally untouched. -->
+  <script>
+    if ('serviceWorker' in navigator && window.isSecureContext) {
+      const workerUrl = new URL('./sw.js', location.href).href;
+      const pageUrl = new URL(location.href);
+      if (pageUrl.searchParams.has('dgp-reset')) {
+        (async () => {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations
+            .filter((registration) => [registration.active, registration.waiting, registration.installing]
+              .some((worker) => worker && worker.scriptURL === workerUrl))
+            .map((registration) => registration.unregister()));
+          if ('caches' in window) {
+            const names = await caches.keys();
+            await Promise.all(names
+              .filter((name) => name.startsWith('dgp-runtime-') || name.startsWith('dgp-shell-'))
+              .map((name) => caches.delete(name)));
+          }
+        })().catch((error) => console.warn('Could not clear the offline cache:', error))
+          .finally(() => {
+            pageUrl.searchParams.delete('dgp-reset');
+            location.replace(pageUrl.href);
+          });
+      } else {
+        navigator.serviceWorker.register(workerUrl, { scope: new URL('./', location.href).href })
+          .catch((error) => console.warn('Offline caching could not be enabled:', error));
+      }
+    }
+  </script>
 </body>
 </html>

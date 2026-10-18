@@ -14,6 +14,7 @@ Welcome to the **Dragon Gaming Platforms** codebase. This document is an extensi
 3. **Single-File Distribution:** Supports standalone single-file distribution (`singlefile.html` / `secure-singlefile.html`) for offline play and restricted network environments.
 4. **Legality & Open-Source First:** Only strictly legal, permissively licensed open-source (MIT, BSD, Apache-2.0, GPL, CC-BY-SA) or authorized freeware software is included. **Zero pirated ROMs or proprietary rips are permitted.**
 5. **Offline Reliability:** Game assets, wasm engines, audio, and styles must be vendored locally with relative paths to prevent external CDN 404s and network failures.
+6. **Progressive Offline Support:** The main `index.html` may register the root `sw.js` on secure origins. The worker caches the site shell and a bounded set of visited same-origin game assets; it must never intercept cross-origin game hosts or rewrite proxy traffic.
 
 ---
 
@@ -22,6 +23,12 @@ Welcome to the **Dragon Gaming Platforms** codebase. This document is an extensi
 ```
 Dragon-Gaming-Platforms/
 ├── index.html                  # Main web portal entry point (Navbar, Hero, Game Viewer, Shelves)
+├── 404.html                    # Custom GitHub Pages not-found page; resolves the site base for forks
+├── sw.js                       # Optional site-scoped offline shell/runtime cache (index.html only)
+├── manifest.webmanifest       # Fork-safe install metadata for the main-site PWA
+├── pwa/                        # Lightweight install icons plus their editable SVG source
+├── site-enhancements.js        # Main-site-only share links, modal accessibility, and connection state
+├── site-enhancements.css       # Main-site-only accessibility and motion-preference styling
 ├── games.js                    # Core client database (GAMES_DATA), search, filtering, and engine logic
 ├── cdn.games.js                # CDN edition of database using absolute base URLs
 ├── styles.css                  # Dark sci-fi theme stylesheet (Orbitron & Rajdhani fonts)
@@ -74,6 +81,8 @@ Dragon-Gaming-Platforms/
 > **Catalog auto-sync:** the [Sync Assets-Repo Games to Catalog](.github/workflows/sync-assets-catalog.yml) workflow (manual trigger from the **Actions** tab) scans the assets repository's `games/` folders and adds any missing entries to all three catalogs with absolute asset-repo URLs, bumping every count string (search placeholder, navbar `Games (N)`, the `N+` numbers in the meta description and hero subtitle, and the AGENTS.md totals), committing as `github-actions[bot]`, and redeploying Pages (it deploys itself because pushes made with `GITHUB_TOKEN` do not trigger `static.yml`). Inputs: **Dry run** (report only), **Recount only** (refreshes every count string without adding games — run it after manual catalog edits or removals), and **Deploy to GitHub Pages** (on by default; uncheck to commit without deploying). It is **add-only** — it never edits or removes existing entries; id conflicts, orphaned entries and unreadable manifests are reported as warnings instead. Optional per-game metadata lives in `games/<slug>/game.json` in the assets repo (keys: `name`, `desc`, `controls`, `shelf`, `tags`, `badge`, `creator` — all optional, sensible defaults otherwise). Attribution rows in `THIRD_PARTY.md` are not automated — add them manually for new games.
 
 > **Pages deploys publish only site files:** both deploy workflows (`static.yml` on push, and the sync workflow's self-deploy) strip repo plumbing from the runner's working tree before packaging the Pages artifact: `scripts`, `.github`, `AGENTS.md`, `README.md`, `.gitignore` plus Git metadata stay in the repository but are never published. (`games-to-add.md` is gitignored, so it never reaches a runner; `cdn.singlefile.html` IS published.) `.nojekyll` (required — it disables Jekyll processing), `LICENSE`, `THIRD_PARTY.md`, and `CREDITS.md` are intentionally published. If a new non-site file lands at the repo root, add it to the removal list in **both** workflows.
+
+> **Offline worker and 404 page:** `sw.js` is registered only by `index.html`, with `./` scope so it works on project Pages, user Pages, and forks. It precaches `index.html`, `styles.css`, `games.js`, `site-enhancements.css`, `site-enhancements.js`, `manifest.webmanifest`, both PWA PNG icons, and `404.html`; only visited same-origin files below `games/`, `emulators/`, `other/`, `browsers/`, `thumbs/`, and `assets/` enter its bounded runtime cache. It skips the three portable single-file documents and `cdn.games.js`, does not cache cross-origin asset-repository games, and never rewrites proxy traffic. `manifest.webmanifest` uses relative `./` paths for forks, and the main-site install button is revealed only after `beforeinstallprompt`; the manifest's app icons stay inside the maskable safe area. The app version workflow keeps `sw.js`'s `CURRENT_VER` in sync with `games.js` and `singlefile.html`; bump `CACHE_SCHEMA` when changing worker cache behavior so an update stages a fresh shell cache. Do not hand-edit any single-file distribution as part of worker changes. The main page's `?dgp-reset=1` recovery path unregisters this worker and deletes only its `dgp-*` caches; the custom 404 page links to it. The custom `404.html` is a published site file and contains its own styling/scripts so the error page works without the app shell.
 
 ---
 
