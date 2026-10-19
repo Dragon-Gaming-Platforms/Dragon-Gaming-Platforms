@@ -47,7 +47,46 @@
 .site-connection-status[data-state="offline"]::before { background: #ff6b6b; box-shadow: 0 0 9px rgba(255, 107, 107, .55); }
 .site-connection-status[data-state="limited"]::before { background: #9ba3af; }
 
-.site-install-button {
+.site-search-share-button {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 50px;
+  min-height: 30px;
+  padding: 4px 9px;
+  transform: translateY(-50%);
+  border: 1px solid var(--theme-primary, #e60012);
+  border-radius: 6px;
+  color: var(--theme-bright, #ff1a2e);
+  background: var(--bg-card, #0d0d0d);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.site-search-share-button:hover { background: rgba(var(--theme-rgb, 230, 0, 18), .16); }
+.site-search-share-button:focus-visible { outline: 2px solid var(--theme-bright, #ff1a2e); outline-offset: 2px; }
+.site-search-share-button[hidden] { display: none; }
+.filter-bar__search-input.site-search-has-text { padding-right: 112px; }
+.filter-bar__search-input.site-search-has-text ~ .filter-bar__search-shortcut { display: none; }
+
+.site-recent-shelf { margin: 22px 0 28px; }
+.site-recent-shelf[hidden] { display: none; }
+.site-recent-shelf__header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.site-recent-shelf__header h2 { margin: 0; color: var(--text-primary, #f0f0f0); font: 700 1.15rem/1.3 var(--font-heading, sans-serif); }
+.site-recent-shelf__clear { padding: 6px 9px; border: 1px solid var(--border-color, #2a2a2a); border-radius: 6px; color: var(--text-secondary, #aaa); background: var(--bg-card, #0d0d0d); font: inherit; font-size: .78rem; cursor: pointer; }
+.site-recent-shelf__clear:hover { border-color: var(--theme-primary, #e60012); color: var(--theme-bright, #ff1a2e); }
+.site-recent-shelf__clear:focus-visible, .site-recent-shelf__item:focus-visible { outline: 2px solid var(--theme-bright, #ff1a2e); outline-offset: 3px; }
+.site-recent-shelf__list { display: flex; gap: 10px; overflow-x: auto; padding: 2px 3px 10px; overscroll-behavior-inline: contain; scrollbar-color: var(--theme-primary, #e60012) transparent; }
+.site-recent-shelf__item { display: flex; flex: 0 0 min(230px, 74vw); min-width: 0; min-height: 70px; align-items: center; gap: 11px; padding: 8px; overflow: hidden; border: 1px solid var(--border-color, #2a2a2a); border-radius: 9px; color: var(--text-primary, #f0f0f0); background: var(--bg-card, #0d0d0d); text-decoration: none; transition: border-color .16s ease, background-color .16s ease; }
+.site-recent-shelf__item:hover { border-color: var(--theme-primary, #e60012); background: rgba(var(--theme-rgb, 230, 0, 18), .08); }
+.site-recent-shelf__thumb { position: relative; display: grid; width: 78px; height: 52px; flex: 0 0 78px; place-items: center; overflow: hidden; border-radius: 6px; background: rgba(255, 255, 255, .06); font-size: 1.4rem; }
+.site-recent-shelf__thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.site-recent-shelf__thumb span[hidden] { display: none; }
+.site-recent-shelf__name { overflow: hidden; font-size: .88rem; font-weight: 700; line-height: 1.25; text-overflow: ellipsis; }
+
+.site-install-button,
+.site-update-button {
   display: inline-flex;
   min-height: 36px;
   align-items: center;
@@ -63,10 +102,10 @@
   font-weight: 700;
   cursor: pointer;
 }
-.site-install-button:hover { background: rgba(var(--theme-rgb, 230, 0, 18), .16); }
-.site-install-button:focus-visible { outline: 2px solid var(--theme-bright, #ff1a2e); outline-offset: 3px; }
-.site-install-button:disabled { opacity: .6; cursor: wait; }
-.site-install-button[hidden] { display: none; }
+.site-install-button:hover, .site-update-button:hover { background: rgba(var(--theme-rgb, 230, 0, 18), .16); }
+.site-install-button:focus-visible, .site-update-button:focus-visible { outline: 2px solid var(--theme-bright, #ff1a2e); outline-offset: 3px; }
+.site-install-button:disabled, .site-update-button:disabled { opacity: .6; cursor: wait; }
+.site-install-button[hidden], .site-update-button[hidden] { display: none; }
 
 .site-share-button:disabled { opacity: .45; cursor: not-allowed; }
 .game-viewer__btn:focus-visible {
