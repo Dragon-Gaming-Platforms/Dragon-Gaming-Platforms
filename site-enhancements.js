@@ -18,16 +18,51 @@
     }
   })();
 
-  // Improve the dynamically rendered search controls without changing the shared
+  // Improve dynamically rendered search controls without changing the shared
   // game engine that is also embedded in the portable single-file releases.
+  function syncSearchShareButton(input, button) {
+    const hasQuery = Boolean(input.value.trim());
+    input.classList.toggle('site-search-has-text', hasQuery);
+    button.hidden = !hasQuery;
+  }
+
   function patchSearchAccessibility() {
     if (filterRoot && !filterRoot.hasAttribute('tabindex')) filterRoot.setAttribute('tabindex', '-1');
     const input = document.getElementById('gameSearchInput');
     if (input && !input.hasAttribute('aria-label')) {
       input.setAttribute('aria-label', 'Search games, emulators, and tools');
     }
+    const searchWrap = input?.closest('.filter-bar__search-wrap');
+    let shareSearchButton = searchWrap?.querySelector('.site-search-share-button');
+    if (input && searchWrap && !shareSearchButton) {
+      shareSearchButton = document.createElement('button');
+      shareSearchButton.type = 'button';
+      shareSearchButton.className = 'site-search-share-button';
+      shareSearchButton.textContent = 'Share';
+      shareSearchButton.setAttribute('aria-label', 'Share this search query');
+      shareSearchButton.title = 'Share a link to this search query';
+      searchWrap.appendChild(shareSearchButton);
+      input.addEventListener('input', () => syncSearchShareButton(input, shareSearchButton));
+      shareSearchButton.addEventListener('click', async () => {
+        const query = input.value.trim();
+        if (!query) return;
+        const url = new URL(location.href);
+        url.search = '';
+        url.hash = '';
+        url.searchParams.set('search', query);
+        await shareOrCopyLink(url.href, `Search: ${query} — Dragon Gaming Platforms`, 'Search link copied to clipboard.');
+      });
+    }
+    if (input && shareSearchButton) syncSearchShareButton(input, shareSearchButton);
+
     const clear = document.getElementById('searchClearBtn');
     if (clear && !clear.hasAttribute('aria-label')) clear.setAttribute('aria-label', 'Clear search');
+    if (clear && input && shareSearchButton && clear.dataset.siteShareSync !== 'true') {
+      clear.dataset.siteShareSync = 'true';
+      clear.addEventListener('click', () => {
+        window.setTimeout(() => syncSearchShareButton(input, shareSearchButton), 0);
+      });
+    }
     const results = document.getElementById('resultsCountLabel');
     if (results) {
       results.setAttribute('role', 'status');
@@ -221,12 +256,10 @@
     if (!copied) throw new Error('Clipboard copy was blocked');
   }
 
-  shareButton.addEventListener('click', async () => {
-    if (!activeGame) return;
-    const url = shareUrlFor(activeGame);
+  async function shareOrCopyLink(url, title, copiedMessage) {
     if (navigator.share) {
       try {
-        await navigator.share({ title: `${activeGame.name} — Dragon Gaming Platforms`, url });
+        await navigator.share({ title, url });
         return;
       } catch (error) {
         if (error && error.name === 'AbortError') return;
@@ -234,32 +267,60 @@
     }
     try {
       await copyShareUrl(url);
-      announce('Game link copied to clipboard.');
+      announce(copiedMessage);
     } catch (_) {
       announce('Could not copy automatically. Try the browser share menu.');
     }
+  }
+
+  shareButton.addEventListener('click', async () => {
+    if (!activeGame) return;
+    await shareOrCopyLink(
+      shareUrlFor(activeGame),
+      `${activeGame.name} — Dragon Gaming Platforms`,
+      'Game link copied to clipboard.'
+    );
   });
 
   const shareObserver = new MutationObserver(refreshShareTarget);
   shareObserver.observe(iframe, { attributes: true, attributeFilter: ['src'] });
   shareObserver.observe(viewer, { attributes: true, attributeFilter: ['class'] });
 
-  const sharedId = new URLSearchParams(location.search).get('play');
-  if (sharedId) {
-    const launchSharedGame = () => {
+  const pageParams = new URLSearchParams(location.search);
+  const sharedId = pageParams.get('play');
+  const sharedSearch = pageParams.get('search');
+  const randomShortcut = pageParams.get('random') === '1';
+  if (sharedId || sharedSearch !== null || randomShortcut) {
+    const launchUrlIntent = () => {
+      if (!sharedId && !randomShortcut && sharedSearch !== null) {
+        const input = document.getElementById('gameSearchInput');
+        if (input) {
+          input.value = sharedSearch;
+          input.dispatchEvent(new Event('input', { bubbles: true }));
+          input.focus({ preventScroll: true });
+        }
+        return;
+      }
+
+      let targetId = sharedId;
+      if (!targetId && randomShortcut) {
+        const games = catalog.filter((item) => item.category === 'games');
+        if (games.length) targetId = games[Math.floor(Math.random() * games.length)].id;
+      }
+      if (!targetId) return;
       const card = [...document.querySelectorAll('.game-card[data-id]')]
-        .find((element) => element.dataset.id === sharedId);
+        .find((element) => element.dataset.id === targetId);
       if (card) {
         card.focus({ preventScroll: true });
         card.click();
-      } else if (catalog.some((item) => item.id === sharedId)) {
+      } else if (catalog.some((item) => item.id === targetId)) {
         announce('That game is in the catalog, but its card is not available in the current view.');
       }
     };
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', launchSharedGame, { once: true });
+      document.addEventListener('DOMContentLoaded', launchUrlIntent, { once: true });
     } else {
-      launchSharedGame();
+      launchUrlIntent();
     }
   }
 
