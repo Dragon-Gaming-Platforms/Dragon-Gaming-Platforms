@@ -76,6 +76,120 @@
     new MutationObserver(patchSearchAccessibility).observe(filterRoot, { childList: true, subtree: true });
   }
 
+  // Keep a short, private-on-this-device list so players can quickly return to
+  // games they've opened before. Only catalog IDs are stored, never game URLs.
+  const RECENT_GAMES_KEY = 'dgp.recent-games.v1';
+  const RECENT_GAMES_LIMIT = 6;
+  const catalogIds = new Set(catalog.map((item) => item.id));
+  let recentGameIds = [];
+  let recentShelf = null;
+  let recentList = null;
+  let renderRecentGames = () => {};
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(RECENT_GAMES_KEY) || '[]');
+    if (Array.isArray(saved)) {
+      recentGameIds = [...new Set(saved.filter((id) => typeof id === 'string' && catalogIds.has(id)))].slice(0, RECENT_GAMES_LIMIT);
+    }
+  } catch (_) { /* Local storage may be disabled or unavailable. */ }
+
+  const catalogRoot = document.getElementById('catalogRoot');
+  if (catalogRoot?.parentNode) {
+    recentShelf = document.createElement('section');
+    recentShelf.className = 'site-recent-shelf';
+    recentShelf.setAttribute('aria-labelledby', 'siteRecentTitle');
+    recentShelf.hidden = true;
+
+    const recentHeader = document.createElement('div');
+    recentHeader.className = 'site-recent-shelf__header';
+    const recentTitle = document.createElement('h2');
+    recentTitle.id = 'siteRecentTitle';
+    recentTitle.textContent = 'Recently played';
+    const clearRecent = document.createElement('button');
+    clearRecent.type = 'button';
+    clearRecent.className = 'site-recent-shelf__clear';
+    clearRecent.textContent = 'Clear history';
+    clearRecent.setAttribute('aria-label', 'Clear recently played games from this device');
+    recentHeader.append(recentTitle, clearRecent);
+
+    recentList = document.createElement('div');
+    recentList.className = 'site-recent-shelf__list';
+    recentList.setAttribute('role', 'list');
+    recentShelf.append(recentHeader, recentList);
+    catalogRoot.parentNode.insertBefore(recentShelf, catalogRoot);
+
+    renderRecentGames = function renderRecentGames() {
+      recentList.replaceChildren();
+      const recentGames = recentGameIds
+        .map((id) => catalog.find((item) => item.id === id))
+        .filter(Boolean);
+      recentShelf.hidden = recentGames.length === 0;
+      for (const item of recentGames) {
+        const link = document.createElement('a');
+        link.className = 'site-recent-shelf__item';
+        link.setAttribute('role', 'listitem');
+        link.setAttribute('aria-label', `Play ${item.name} again`);
+        const url = new URL(location.href);
+        url.search = '';
+        url.hash = '';
+        url.searchParams.set('play', item.id);
+        link.href = url.href;
+
+        const thumb = document.createElement('span');
+        thumb.className = 'site-recent-shelf__thumb';
+        thumb.setAttribute('aria-hidden', 'true');
+        const placeholder = document.createElement('span');
+        placeholder.textContent = '🎮';
+        thumb.appendChild(placeholder);
+        if (item.image) {
+          const image = document.createElement('img');
+          image.src = item.image;
+          image.alt = '';
+          image.loading = 'lazy';
+          image.decoding = 'async';
+          image.addEventListener('load', () => { placeholder.hidden = true; }, { once: true });
+          image.addEventListener('error', () => image.remove(), { once: true });
+          thumb.appendChild(image);
+        }
+        const name = document.createElement('span');
+        name.className = 'site-recent-shelf__name';
+        name.textContent = item.name;
+        link.append(thumb, name);
+        recentList.appendChild(link);
+      }
+    };
+
+    function clearRecentGames() {
+      recentGameIds = [];
+      try { localStorage.removeItem(RECENT_GAMES_KEY); } catch (_) { /* Keep the in-page clear usable. */ }
+      renderRecentGames();
+      if (recentShelf.hidden) {
+        const fallbackFocus = document.getElementById('gameSearchInput') || filterRoot;
+        fallbackFocus?.focus({ preventScroll: true });
+      }
+    }
+
+    clearRecent.addEventListener('click', clearRecentGames);
+    window.addEventListener('storage', (event) => {
+      if (event.key !== RECENT_GAMES_KEY && event.key !== null) return;
+      try {
+        const saved = JSON.parse(event.newValue || '[]');
+        recentGameIds = Array.isArray(saved)
+          ? [...new Set(saved.filter((id) => typeof id === 'string' && catalogIds.has(id)))].slice(0, RECENT_GAMES_LIMIT)
+          : [];
+      } catch (_) { recentGameIds = []; }
+      renderRecentGames();
+    });
+    renderRecentGames();
+  }
+
+  function rememberRecentGame(item) {
+    if (!item || !recentShelf || recentGameIds[0] === item.id) return;
+    recentGameIds = [item.id, ...recentGameIds.filter((id) => id !== item.id)].slice(0, RECENT_GAMES_LIMIT);
+    try { localStorage.setItem(RECENT_GAMES_KEY, JSON.stringify(recentGameIds)); } catch (_) { /* Recent games still work until this page closes. */ }
+    renderRecentGames();
+  }
+
   // Give the overlay dialog semantics, isolate the background for assistive
   // technology, trap focus, and return focus to the control that opened it.
   viewer.setAttribute('role', 'dialog');
@@ -227,6 +341,7 @@
     if (!viewer.classList.contains('active')) return;
     activeGame = getActiveCatalogItem();
     shareButton.disabled = !activeGame;
+    rememberRecentGame(activeGame);
   }
 
   function shareUrlFor(item) {

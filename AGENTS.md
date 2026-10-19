@@ -27,7 +27,7 @@ Dragon-Gaming-Platforms/
 ├── sw.js                       # Optional site-scoped offline shell/runtime cache (index.html only)
 ├── manifest.webmanifest       # Fork-safe install metadata for the main-site PWA
 ├── pwa/                        # Lightweight install icons plus their editable SVG source
-├── site-enhancements.js        # Main-site-only game/search links, PWA shortcuts, modal accessibility, and connection state
+├── site-enhancements.js        # Main-site-only game/search links, recent-game shelf, PWA shortcuts, modal accessibility, and connection state
 ├── site-enhancements.css       # Main-site-only accessibility and motion-preference styling
 ├── games.js                    # Core client database (GAMES_DATA), search, filtering, and engine logic
 ├── cdn.games.js                # CDN edition of database using absolute base URLs

@@ -6,7 +6,7 @@
  * assets. Cross-origin game hosts (including Dragon-Gaming-Assets) are bypassed.
  */
 const CURRENT_VER = 'v1.2.2';
-const CACHE_SCHEMA = 6;
+const CACHE_SCHEMA = 7;
 const SHELL_CACHE = `dgp-shell-${CACHE_SCHEMA}-${CURRENT_VER}`;
 const RUNTIME_CACHE = 'dgp-runtime-v1';
 const SITE_ROOT = new URL(self.registration.scope);
