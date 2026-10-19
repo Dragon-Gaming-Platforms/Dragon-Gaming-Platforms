@@ -4,6 +4,7 @@
   <img src="https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/assets/dragon-login.png" height="425" />
 
 [![Deploy Dragon Gaming Platforms](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/static.yml/badge.svg?branch=main)](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/static.yml)
+[![Site CI](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/ci.yml)
 [![Sync Assets-Repo Games to Catalog](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-assets-catalog.yml/badge.svg)](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-assets-catalog.yml)
 [![Sync Thumbnails to Catalog](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-thumbnails.yml/badge.svg)](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/actions/workflows/sync-thumbnails.yml)
 </div>
@@ -24,12 +25,13 @@ It is recommended that you [Fork](https://github.com/Dragon-Gaming-Platforms/Dra
 5. A whole host of games!
 6. Easy GitHub Pages deployment through [static.yml](./.github/workflows/static.yml) after [forking.](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/fork)
 7. Optional offline support for the main site through a scope-limited service worker
-8. Shareable game links that open directly to a catalog entry
+8. Shareable game/search links and a recently played shelf
 9. Keyboard/screen-reader improvements and a live connection indicator
 10. Installable progressive web app (where supported by the browser)
 11. A custom, fork-aware GitHub Pages 404 page
 12. Additional game hosting at [Dragon Gaming Platforms Assets](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Assets)
 13. Thumbnail hosting at [Dragon Gaming Platforms Thumbnail Assets repository](https://github.com/Dragon-Gaming-Platforms/Thumbnail-Assets/)
+14. Automated catalog, manifest, service-worker, and browser-flow checks in [Site CI](./.github/workflows/ci.yml)
 ## Offline access
 
 The main site (`index.html`) registers a service worker on HTTPS/localhost. After the first online visit it keeps the site shell available, then caches local game pages and assets as you use them (soft budget: about 150 MB / 300 resources, refreshed in the background after 24 hours). Visit a game online at least once before expecting it to work offline. Cross-origin games and proxy traffic are not cached. The `singlefile.html`, `cdn.singlefile.html`, and `secure-singlefile.html` distributions are unchanged and do not depend on the worker. To unregister the worker and clear its caches, open the site with `?dgp-reset=1` appended to the URL; the 404 page also provides a reset link.

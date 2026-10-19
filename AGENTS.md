@@ -74,7 +74,7 @@ Dragon-Gaming-Platforms/
     └── CyberChef/              # The Cyber Swiss Army Knife for encryption, encoding, and analysis
 ```
 
-> **Catalog totals:** the `GAMES_DATA` catalog currently holds **651 items** (641 `games`, 7 `emulators`, 3 `other`). Keep the counts shown in `index.html`/`singlefile.html` (navbar, hero, meta description) in step with reality when the catalog changes.
+> **Catalog totals:** the main-site `GAMES_DATA` catalog currently holds **651 items** (641 `games`, 7 `emulators`, 3 `other`). Keep `index.html`'s counts current when the catalog changes. Portable single-file distributions are separate snapshots; leave them untouched unless their updates are specifically requested.
 
 > **Asset hosting:** large or heavy games may live in the companion repository [Dragon-Gaming-Platforms/Dragon-Gaming-Assets](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Assets) instead of this repository. It is served by GitHub Pages from the **same origin** at `https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/`, has its own independent 1 GB Pages budget, and no 20 MB-per-file cap (GitHub allows up to 100 MB per file; never use Git LFS — Pages does not serve LFS files). Catalog entries for games hosted there use **absolute** paths in all three catalogs, e.g. `"path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/<slug>/"`. Attribution still lives in this repository's `THIRD_PARTY.md` / `CREDITS.md`.
 
@@ -88,7 +88,7 @@ Dragon-Gaming-Platforms/
 
 ## 3. Database Catalog Schema (`GAMES_DATA`)
 
-All games, emulators, and tools are cataloged in `games.js`, `cdn.games.js`, and embedded in `singlefile.html`. Every entry in the `GAMES_DATA` array must strictly follow this object structure:
+The main site's canonical game, emulator, and tool catalog is `games.js`. `cdn.games.js` and the portable single-file documents are separate snapshots; only update them when explicitly requested, and do not include them in main-site-only work. Every entry in the `GAMES_DATA` array must strictly follow this object structure:
 
 ```javascript
 {
@@ -143,13 +143,7 @@ the card grid instead of the default category emoji:
 
 ## 4. Mandatory Synchronization Rules
 
-Whenever adding, updating, or fixing a game, emulator, or utility, **ALL THREE catalog files must be updated together**:
-
-1. **`games.js`**: Standard relative paths (e.g. `"path": "./games/drive-mad/index.html"`).
-2. **`cdn.games.js`**: Absolute CDN paths using `CDN_BASE + "games/..."` (e.g. `"https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/drive-mad/index.html"`).
-3. **`singlefile.html`**: The inline `const GAMES_DATA = [...]` array inside `singlefile.html` must match `games.js`. The inline *engine* must match `games.js` byte-for-byte as well.
-   **`cdn.singlefile.html`** is the exception to the inline-array rule: it inlines the engine (identical to `games.js` minus the `GAMES_DATA` literal) and streams the catalog from `cdn.games.js` over a JS CDN with a GitHub Pages fallback, so it carries no inline catalog to keep in sync.
-4. **`CREDITS.md`**: Add upstream author attribution, repository URL, and license.
+The main-site catalog lives in **`games.js`**; keep its IDs, categories, and `index.html` counts consistent when changing that catalog. `cdn.games.js`, `singlefile.html`, `cdn.singlefile.html`, and `secure-singlefile.html` are separate release artifacts—do not edit or regenerate them as part of main-site-only work; update them only when their changes are explicitly requested. When adding third-party games or tools, add the required upstream author, repository URL, and license information to **`CREDITS.md`**.
 
 ---
 
@@ -181,10 +175,16 @@ Before committing any change, run the following verification steps:
 
 ### A. JavaScript Syntax Check
 ```bash
-node -c games.js && node -c cdn.games.js
+node --check games.js && node --check site-enhancements.js && node --check sw.js
 ```
 
-### B. Catalog Path Resolution Check
+### B. Site Tests
+```bash
+node --test scripts/tests/site.test.cjs
+```
+The workflow `.github/workflows/ci.yml` installs its pinned `jsdom` dependency into the runner's temporary directory, then runs this suite on pushes, pull requests, and manual dispatches. The tests validate catalog IDs/counts, PWA manifest assets and fork-relative paths, the service-worker shell, and recent/shared/random game flows.
+
+### C. Catalog Path Resolution Check
 Ensure every single game path declared in `GAMES_DATA` exists on disk:
 ```bash
 python3 -c "
@@ -210,7 +210,7 @@ else:
 "
 ```
 
-### C. Repository & Site Size Check
+### D. Repository & Site Size Check
 Ensure the published site is well within the 1,000 MB GitHub Pages limit:
 ```bash
 python3 -c "
@@ -236,7 +236,7 @@ print(f'Published Site Size (without .git): {site_size:.2f} MB / 1000.00 MB limi
 "
 ```
 
-### D. Local Web Server Test
+### E. Local Web Server Test
 ```bash
 python3 -m http.server 8080 --bind 0.0.0.0
 # Test via browser at http://localhost:8080 or curl endpoints:
@@ -266,7 +266,8 @@ curl -I http://localhost:8080/index.html
 - [ ] Vendored game is 100% legal open-source / permissive license.
 - [ ] Nested `.git` folder removed from vendored directory.
 - [ ] `index.html` entrypoint verified and tested with local HTTP server (`200 OK`).
-- [ ] `games.js`, `cdn.games.js`, and `singlefile.html` updated and in sync.
+- [ ] Main-site catalog and displayed counts are current; leave `cdn.games.js` and portable single-file distributions untouched unless their updates are explicitly requested.
+- [ ] `node --test scripts/tests/site.test.cjs` passes.
 - [ ] `CREDITS.md` updated with author, project URL, and license.
 - [ ] Published site size verified under 1,000 MB limit.
 - [ ] All code committed cleanly to branch

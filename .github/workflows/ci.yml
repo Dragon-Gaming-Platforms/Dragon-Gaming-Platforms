@@ -1,0 +1,74 @@
+name: Site CI
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - '.github/workflows/ci.yml'
+      - '404.html'
+      - 'games.js'
+      - 'index.html'
+      - 'manifest.webmanifest'
+      - 'pwa/**'
+      - 'scripts/tests/**'
+      - 'site-enhancements.css'
+      - 'site-enhancements.js'
+      - 'styles.css'
+      - 'sw.js'
+  pull_request:
+    paths:
+      - '.github/workflows/ci.yml'
+      - '404.html'
+      - 'games.js'
+      - 'index.html'
+      - 'manifest.webmanifest'
+      - 'pwa/**'
+      - 'scripts/tests/**'
+      - 'site-enhancements.css'
+      - 'site-enhancements.js'
+      - 'styles.css'
+      - 'sw.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Validate site and browser flows
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out files used by the tests
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/*/
+            /pwa/
+            /pwa/**
+            /scripts/
+            /scripts/**
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install temporary browser-test dependency
+        run: npm install --prefix "$RUNNER_TEMP/dgp-site-test-deps" --no-save --no-audit --no-fund jsdom@26.1.0
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check games.js
+          node --check site-enhancements.js
+          node --check sw.js
+
+      - name: Run catalog, manifest, shell, and browser tests
+        env:
+          NODE_PATH: ${{ runner.temp }}/dgp-site-test-deps/node_modules
+        run: node --test scripts/tests/site.test.cjs
