@@ -5366,6 +5366,7 @@ const GAMES_DATA = [
       "ai"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jungle-chess/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/jungle-chess.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Animal chess against a local computer opponent: use ranks, traps, swimming rats and lion/tiger river jumps to reach the enemy den. Traditional Chinese interface.",
@@ -5490,6 +5491,7 @@ const GAMES_DATA = [
       "logic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/killer-sudoku/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/killer-sudoku.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Ian’s Killer Sudoku: fill each row, column and 3×3 box with 1–9 while meeting the dotted cages’ sums without repeats. Includes generated difficulties, pencil candidates, undo/redo and a sum calculator. Desktop keyboard and mouse required.",
@@ -5576,6 +5578,7 @@ const GAMES_DATA = [
       "kuromasu"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kuromasu/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/kuromasu.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Shade cells so every numbered cell sees exactly that many white cells along its row and column. Black cells cannot touch orthogonally and all white cells stay connected. Generated puzzles with hints and local saves. Chinese-language interface.",
@@ -5889,6 +5892,7 @@ const GAMES_DATA = [
       "numbers"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/make-24/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/make-24.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Combine four numbers with addition, subtraction, multiplication and division to reach a target of 24, 36 or 48. Solo puzzle mode with undo and solution reveal.",
@@ -5992,6 +5996,7 @@ const GAMES_DATA = [
       "masyu"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/masyu/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/masyu.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Draw one loop through every pearl: turn at black pearls and go straight through white ones. Generated puzzles with hints and local saves. Original Chinese-language interface.",
@@ -6818,6 +6823,7 @@ const GAMES_DATA = [
       "turn-based"
     ],
     "path": "./games/norman-necromancer/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/norman-necromancer.jpg",
     "shelf": "RPG & Adventure",
     "badge": "TACTICS",
     "desc": "Turn-based tactical dungeon crawler by Dan Prince where you raise fallen enemies into your skeletal army.",
@@ -8117,6 +8123,7 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "./games/rescue-copter/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/rescue-copter.jpg",
     "shelf": "Arcade & Action",
     "badge": "Action",
     "desc": "Pilot a firefighting rescue helicopter \u2014 scoop water from lakes and extinguish raging forest fires.",
