@@ -5,6 +5,8 @@ on:
     branches: ["**"]
     paths:
       - '.github/workflows/ci.yml'
+      - 'AGENTS.md'
+      - 'README.md'
       - '404.html'
       - 'games.js'
       - 'index.html'
@@ -18,6 +20,8 @@ on:
   pull_request:
     paths:
       - '.github/workflows/ci.yml'
+      - 'AGENTS.md'
+      - 'README.md'
       - '404.html'
       - 'games.js'
       - 'index.html'

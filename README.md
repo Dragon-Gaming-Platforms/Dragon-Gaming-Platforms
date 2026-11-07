@@ -15,7 +15,10 @@
 
 visit the live demo [Here](https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms)
 
-It is recommended that you [Fork](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/fork) this repo for a more stable experience with GitHub Pages
+It is recommended that you [Fork](https://github.com/Dragon-Gaming-Platforms/Dragon-Gaming-Platforms/fork) this repo for a more stable experience with GitHub Pages.
+
+For architecture, catalog rules, test commands, and workflow runbooks, see the [maintainer handbook](./AGENTS.md).
+
 ## Features
 
 1. A singlefile version at [singlefile.html](./singlefile.html)
