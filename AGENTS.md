@@ -182,7 +182,7 @@ node --check games.js && node --check site-enhancements.js && node --check sw.js
 ```bash
 node --test scripts/tests/site.test.cjs
 ```
-The workflow `.github/workflows/ci.yml` installs its pinned `jsdom` dependency into the runner's temporary directory, then runs this suite on pushes, pull requests, and manual dispatches. The tests validate catalog IDs/counts, PWA manifest assets and fork-relative paths, the service-worker shell, and recent/shared/random game flows.
+The workflow `.github/workflows/ci.yml` installs its pinned `jsdom` dependency into the runner's temporary directory, then runs this suite on pushes, pull requests, and manual dispatches. The tests validate catalog IDs/counts, PWA manifest assets and fork-relative paths, the service-worker shell, and relevance-ranked, paginated search plus recent/shared/random game flows.
 
 ### C. Catalog Path Resolution Check
 Ensure every single game path declared in `GAMES_DATA` exists on disk:

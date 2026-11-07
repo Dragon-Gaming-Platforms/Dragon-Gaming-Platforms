@@ -178,6 +178,11 @@ test('recent, shared, and random game links work in the browser shell', async (t
     return dom;
   }
 
+  async function closePage(dom) {
+    await new Promise((resolve) => dom.window.setTimeout(resolve, 0));
+    dom.window.close();
+  }
+
   const savedPage = await boot('', ['2048', 'not-a-catalog-id', '2048']);
   const savedWindow = savedPage.window;
   const shelf = savedWindow.document.querySelector('.site-recent-shelf');
@@ -188,13 +193,41 @@ test('recent, shared, and random game links work in the browser shell', async (t
   assert.equal(savedWindow.localStorage.getItem('dgp.recent-games.v1'), null, 'clear history should remove local storage');
   assert.ok(shelf.hidden, 'clear history should hide the empty shelf');
   assert.equal(savedWindow.document.activeElement.id, 'gameSearchInput', 'clearing history should preserve keyboard focus');
-  savedPage.window.close();
+
+  const searchInput = savedWindow.document.getElementById('gameSearchInput');
+  const previousCount = savedWindow.document.getElementById('resultsCountLabel').textContent;
+  searchInput.value = 'a';
+  searchInput.dispatchEvent(new savedWindow.Event('input', { bubbles: true }));
+  assert.equal(savedWindow.document.getElementById('resultsCountLabel').textContent, previousCount, 'typing should debounce the expensive grid update');
+  await new Promise((resolve) => savedWindow.setTimeout(resolve, 150));
+  assert.ok(savedWindow.document.querySelectorAll('#catalogRoot .game-card').length <= 36, 'broad one-character searches should render only the first result page');
+  assert.match(savedWindow.document.getElementById('resultsCountLabel').textContent, /Showing 36 of \d+ matches/, 'result count should explain that more matches exist');
+  savedWindow.document.getElementById('loadMoreSearchResults').click();
+  assert.equal(savedWindow.document.querySelectorAll('#catalogRoot .game-card').length, 72, 'show-more should reveal the next result page');
+  assert.equal(savedWindow.document.activeElement.id, 'loadMoreSearchResults', 'show-more should keep keyboard focus on the next page control');
+
+  searchInput.value = '2048';
+  searchInput.dispatchEvent(new savedWindow.Event('input', { bubbles: true }));
+  await new Promise((resolve) => savedWindow.setTimeout(resolve, 150));
+  assert.equal(savedWindow.document.querySelector('#catalogRoot .game-card')?.dataset.id, '2048', 'best title match should rank first');
+  savedWindow.document.querySelector('#catalogRoot .game-card__fav-btn').click();
+  assert.ok(JSON.parse(savedWindow.localStorage.getItem('dgp_favorites')).includes('2048'), 'delegated favorite action should still work after search rendering');
+  savedWindow.document.querySelector('.filter-pill[data-cat="games"]').click();
+  savedWindow.document.getElementById('resetFiltersBtn').click();
+  assert.equal(savedWindow.document.getElementById('gameSearchInput').value, '', 'reset filters should still work after delegated grid events');
+  await closePage(savedPage);
+
+  const searchLinkPage = await boot('?search=2048');
+  const searchLinkWindow = searchLinkPage.window;
+  assert.equal(searchLinkWindow.document.getElementById('gameSearchInput').value, '2048', 'shared search URL should restore its query');
+  assert.equal(searchLinkWindow.document.querySelector('#catalogRoot .game-card')?.dataset.id, '2048', 'restored search should rank the matching title first');
+  await closePage(searchLinkPage);
 
   const sharedPage = await boot('?play=2048');
   const sharedWindow = sharedPage.window;
   assert.ok(sharedWindow.document.getElementById('gameViewer').classList.contains('active'), 'shared-game URL should launch the game');
   assert.equal(JSON.parse(sharedWindow.localStorage.getItem('dgp.recent-games.v1'))[0], '2048', 'launched game should be remembered');
-  sharedPage.window.close();
+  await closePage(sharedPage);
 
   const randomPage = await boot('?random=1');
   const randomWindow = randomPage.window;
@@ -202,5 +235,5 @@ test('recent, shared, and random game links work in the browser shell', async (t
   assert.ok(randomWindow.document.getElementById('gameViewer').classList.contains('active'), 'random shortcut should launch a game');
   assert.ok(remembered.length === 1 && catalogIds.has(remembered[0]), 'random game should be recorded as a valid catalog ID');
   assert.ok(!randomWindow.document.querySelector('.site-recent-shelf').hidden, 'recent shelf should appear after launching a game');
-  randomPage.window.close();
+  await closePage(randomPage);
 });

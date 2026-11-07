@@ -85,6 +85,11 @@
 .site-recent-shelf__thumb span[hidden] { display: none; }
 .site-recent-shelf__name { overflow: hidden; font-size: .88rem; font-weight: 700; line-height: 1.25; text-overflow: ellipsis; }
 
+.search-results-more { display: flex; justify-content: center; margin: 20px 0 30px; }
+.search-results-more__button { min-height: 42px; padding: 9px 17px; border: 1px solid var(--theme-primary, #e60012); border-radius: 8px; color: var(--theme-bright, #ff1a2e); background: rgba(var(--theme-rgb, 230, 0, 18), .08); font: inherit; font-weight: 700; cursor: pointer; }
+.search-results-more__button:hover { background: rgba(var(--theme-rgb, 230, 0, 18), .18); }
+.search-results-more__button:focus-visible { outline: 2px solid var(--theme-bright, #ff1a2e); outline-offset: 3px; }
+
 .site-install-button,
 .site-update-button {
   display: inline-flex;
