@@ -587,8 +587,8 @@ After a real release, verify the GitHub Actions tag/run, Pages deployment, curre
 2. Keep a scoped diff. Check `git status`, `git diff --check`, and protected-path changes before staging.
 3. Run the CI suite locally when dependencies are available. If jsdom is absent, report that clearly rather than treating the skipped integration test as a pass.
 4. Stage explicit file paths, especially when a task forbids edits to portable files or large assets.
-5. Push the task branch and open a PR from that branch into `main` when the task calls for a PR. A PR must summarize behavior, scope, tests, and any intentionally excluded distributions.
-6. Wait for required CI/review checks. Do not merge a failing or still-running PR. Use a deliberate merge method and an explicit PR number; never use automatic merge when an immediate merge was requested.
+5. Push the task branch and open a PR from that branch into `main` when the task or maintainer requests one; there is no blanket prohibition on opening PRs. A PR must summarize behavior, scope, tests, and any intentionally excluded distributions.
+6. Wait for required CI/review checks. Merge only when explicitly requested or otherwise authorized, and never merge a failing or still-running PR. Use a deliberate merge method and an explicit PR number; do not enable automatic merging.
 7. After merge, verify the PR state and the main deployment workflow separately. Leave the session branch status and final commit clear to the user.
 
 For Arena tasks, `git` is used for local status/diff/commit/push, and `gh` is used for PRs, issues, checks, and releases. Never ask a user to provide GitHub credentials in chat; request reconnection through the platform if authentication fails.
