@@ -56,7 +56,7 @@ Dragon Gaming Platforms (DGP) is a static browser-gaming portal and utility hub.
 
 ### Current catalog snapshot
 
-At the time this guide was expanded, the main `GAMES_DATA` catalog contained **651 entries**: **641 games, 7 emulators, and 3 tools/other entries**. The total and displayed counts change as the catalog changes. `scripts/tests/site.test.cjs` checks ID uniqueness and verifies the main navigation count against the catalog; it also checks that the hero's approximate count does not exceed the catalog total.
+The main `GAMES_DATA` catalog currently contains **744 entries**: **734 games, 7 emulators, and 3 tools/other entries**. The total and displayed counts change as the catalog changes. `scripts/tests/site.test.cjs` checks ID uniqueness and verifies the main navigation count against the catalog; it also checks that the hero's approximate count does not exceed the catalog total.
 
 ---
 

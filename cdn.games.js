@@ -48,6 +48,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/1255-burgomaster/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/1255-burgomaster.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "1255 Burgomaster playable in your web browser.",
@@ -100,6 +101,7 @@ const GAMES_DATA = [
       "board-game"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/3d-chess/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/3d-chess.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "3D CHESS",
     "desc": "Minimalist 3D Bauhaus Hartwig chess board with full 3D camera rotation and legal move validation.",
@@ -116,6 +118,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/3d.city/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/3d-city.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "3D.City playable in your web browser.",
@@ -130,10 +133,46 @@ const GAMES_DATA = [
       "utility"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/3d-graphing-calculator/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/3d-graphing-calculator.jpg",
     "shelf": "Tools & Utilities",
     "badge": "Tool",
     "desc": "A 3d Graphing calculator compiled by turbowarp from scratch",
     "controls": "simple plane: x+y+z=0 sphere: x*x+y*y+z*z=2 donut: sqrt((sqrt(x*x+y*y)-1)^2+z*z)-0.5=0 heart: x^2 + 9/4*y^2 + z^2 - 1 - z*cbrt(x^2+9/200*y^2) = 0"
+  },
+  {
+    "id": "8086-emulator",
+    "category": "games",
+    "name": "8086.js",
+    "tags": [
+      "emulator",
+      "8086",
+      "assembly",
+      "education"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/8086-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/8086-emulator/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser-based Intel 8086 emulator and assembly playground. Write or load 8086 assembly, assemble it and step through registers, memory and output without distributing any ROMs.",
+    "controls": "Mouse: use the editor and run controls - Keyboard: type assembly in the editor - Use the register and memory panels to inspect execution"
+  },
+  {
+    "id": "90s-games",
+    "category": "games",
+    "name": "90s Games",
+    "tags": [
+      "games",
+      "arcade",
+      "collection",
+      "retro",
+      "multi-game"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/90s-games/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/90s-games/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A hub of 114 single-file HTML5 arcade games - asteroids, tetris, snake and a hundred more - each one a complete canvas game with zero dependencies.",
+    "controls": "Pick any game from the hub, then follow that game's on-screen instructions"
   },
   {
     "id": "a-dark-room",
@@ -162,6 +201,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Abyss-Sonar.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/abyss-sonar.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Abyss Sonar playable in your web browser.",
@@ -198,10 +238,63 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/adarkroom/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/adarkroom.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "Adarkroom playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "aether-clash",
+    "category": "games",
+    "name": "Aether Clash",
+    "tags": [
+      "arcade",
+      "fighter",
+      "2d",
+      "versus"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/aether-clash/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/aether-clash/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A 2D arcade fighting game — Mecha vs Demi-Human: twelve chibi fighters with distinct move sets, cinematic ultimates, and a CPU that reads your moves. First to two rounds wins.",
+    "controls": "A/D to move, W to jump, Space for the 3-hit attack chain, I/O skills, P ultimate, Esc to pause (touch + mobile shell supported)"
+  },
+  {
+    "id": "afterglow",
+    "category": "games",
+    "name": "Afterglow",
+    "tags": [
+      "games",
+      "light",
+      "endless",
+      "relaxing",
+      "creative"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/afterglow/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/afterglow/1.png",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "Hold the shutter open and steer glowing lights to burn shimmering trails onto the night sky - an endless light-painting game where the light you leave on is the gameplay.",
+    "controls": "Hold the mouse button or touch to open the shutter, then move to paint light"
+  },
+  {
+    "id": "aim-and-shoot",
+    "category": "games",
+    "name": "Aim & Shoot",
+    "tags": [
+      "games",
+      "html5",
+      "experiment",
+      "neuroevolution"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/aim-and-shoot/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/aim-and-shoot/1.png",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "A neuroevolution experiment: aim and shoot while enemy turret brains evolve, round after round.",
+    "controls": "Mouse to aim, click to shoot, M to mute"
   },
   {
     "id": "aim-trainer",
@@ -233,6 +326,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Air-Hockey.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/air-hockey.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Air Hockey playable in your web browser.",
@@ -247,10 +341,45 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Air-Traffic-Control.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/air-traffic-control.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Air Traffic Control playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "airplane-battle",
+    "category": "games",
+    "name": "Airplane Battle",
+    "tags": [
+      "arcade",
+      "shooter",
+      "air-combat",
+      "plane"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/airplane-battle/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/airplane-battle/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A dynamic air-combat arcade shooter: fly the hero plane through streams of bullets from nine enemy types and chase a high score on desktop or mobile.",
+    "controls": "Arrow keys, mouse, or touch to steer — weapons fire automatically"
+  },
+  {
+    "id": "akari",
+    "category": "games",
+    "name": "Akari — Light Up",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "akari"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/akari/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Place bulbs to illuminate every white cell without lighting another bulb. Generated puzzles with difficulty settings, hints, undo and local saves.",
+    "controls": "Click / tap white cells for bulbs; Shift-click or right-click for marks; toolbar for hints and undo"
   },
   {
     "id": "alchemy-workshop",
@@ -263,6 +392,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Alchemy-Workshop.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/alchemy-workshop.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Alchemy Workshop playable in your web browser.",
@@ -297,6 +427,7 @@ const GAMES_DATA = [
       "space"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/alien-invasion/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/alien-invasion.jpg",
     "shelf": "Arcade & Action",
     "badge": "SHMUP",
     "desc": "Classic vertical space scrolling shooter defending Earth from alien armada attacks.",
@@ -311,10 +442,45 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/AncientBeast/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ancientbeast.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "AncientBeast playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "andromeda-invaders",
+    "category": "games",
+    "name": "Andromeda Invaders",
+    "tags": [
+      "arcade",
+      "shooter",
+      "space",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/andromeda-invaders/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/andromeda-invaders/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A tiny arcade shooter inspired by classic space invaders, with a pixel-art canvas, escalating waves and Web Audio effects.",
+    "controls": "Arrow keys or A/D: move - Space: fire - P: pause"
+  },
+  {
+    "id": "anti-pacman",
+    "category": "games",
+    "name": "Anti-Pac-Man",
+    "tags": [
+      "arcade",
+      "maze",
+      "pac-man",
+      "touch"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/anti-pacman/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/anti-pacman/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A reverse maze arcade game: control the ghosts, collect the pellets and catch Pac-Man before he clears the board.",
+    "controls": "Arrow keys: move the ghost - Touch controls are available on mobile - Start: begin a round"
   },
   {
     "id": "anuraos",
@@ -342,6 +508,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/aquastax/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/aquastax.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Aquastax playable in your web browser.",
@@ -356,6 +523,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/arashi-js/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/arashi-js.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Arashi JS playable in your web browser.",
@@ -399,6 +567,23 @@ const GAMES_DATA = [
     "controls": "Mouse: Play cards, end turn"
   },
   {
+    "id": "ascii-art-studio",
+    "category": "games",
+    "name": "ASCII Art Studio",
+    "tags": [
+      "tools",
+      "ascii",
+      "image",
+      "text-art",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ascii-art-studio/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Convert a local image into copyable monochrome ASCII art. Adjust output width, character density, contrast, brightness and inversion; download the result as plain text.",
+    "controls": "Choose or drop a local image, adjust the sliders and character set, then copy the ASCII output or download a .txt file."
+  },
+  {
     "id": "asdf",
     "category": "games",
     "name": "Asdf",
@@ -407,6 +592,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/asdf/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/asdf.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Asdf playable in your web browser.",
@@ -439,6 +625,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/asteroids/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/asteroids.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Asteroids playable in your web browser.",
@@ -456,10 +643,27 @@ const GAMES_DATA = [
       "physics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/astray/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/astray.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "3D WebGL",
     "desc": "3D WebGL physics maze exploration powered by Three.js and Box2D \u2014 roll your sphere to find the exit portal.",
     "controls": "WASD / Arrow Keys: Roll Sphere | Space: Jump | Mouse: Orbit Camera"
+  },
+  {
+    "id": "atari-2600-emulator",
+    "category": "games",
+    "name": "Atari 2600 Emulator",
+    "tags": [
+      "emulator",
+      "atari-2600",
+      "local-files",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/atari-2600-emulator/",
+    "shelf": "Emulators",
+    "badge": "",
+    "desc": "A locally hosted Javatari emulator for the Atari 2600. It contains no cartridge ROMs; load a game file you are entitled to use from your device. Local play works without an account or server.",
+    "controls": "Use the built-in on-screen controls, keyboard or a gamepad. Open a local .bin, .a26 or .rom file from the emulator menu, or drag it onto the screen."
   },
   {
     "id": "attack-chain",
@@ -488,6 +692,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Auction-Fever.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/auction-fever.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Auction Fever playable in your web browser.",
@@ -504,6 +709,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Auto-Chess-Forge.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/auto-chess-forge.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Auto Chess Forge playable in your web browser.",
@@ -518,6 +724,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/awesometanks2.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/awesometanks2.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Awesometanks2 playable in your web browser.",
@@ -569,6 +776,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Backpack-Arena.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/backpack-arena.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Backpack Arena playable in your web browser.",
@@ -583,6 +791,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Balatro.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/balatro.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Balatro playable in your web browser.",
@@ -597,6 +806,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/ball-and-wall/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ball-and-wall.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Ball And Wall playable in your web browser.",
@@ -611,6 +821,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Ball-Arena.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ball-arena.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Ball Arena playable in your web browser.",
@@ -625,6 +836,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/Banania/banania.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/banania.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Banania playable in your web browser.",
@@ -649,6 +861,24 @@ const GAMES_DATA = [
     "controls": "Arrows / buttons: Move + jump; Z / A: Shoot"
   },
   {
+    "id": "bash-emulator",
+    "category": "games",
+    "name": "TryBash Emulator",
+    "tags": [
+      "emulator",
+      "shell",
+      "bash",
+      "terminal",
+      "programming"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bash-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bash-emulator/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A self-contained Bash-like shell emulator that runs in the browser with an in-memory filesystem, command history, completion and common shell commands.",
+    "controls": "Keyboard: type shell commands - Enter: run - Up/Down: command history and completion"
+  },
+  {
     "id": "basin-control",
     "category": "games",
     "name": "Basin Control",
@@ -657,6 +887,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Basin-Control.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/basin-control.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Basin Control playable in your web browser.",
@@ -671,10 +902,44 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Battery-Cycle.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/battery-cycle.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Battery Cycle playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "battle-city",
+    "category": "games",
+    "name": "Battle City",
+    "tags": [
+      "arcade",
+      "tank",
+      "shooter",
+      "classic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battle-city/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battle-city/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "The classic destructible-walls tank arcade: fight through waves of enemy tanks, protect your base, and clear every stage.",
+    "controls": "WASD to move, Space to shoot (arrow keys + Enter for player 2)"
+  },
+  {
+    "id": "battle-tank",
+    "category": "games",
+    "name": "Battle Tank",
+    "tags": [
+      "arcade",
+      "tank",
+      "shooter"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battle-tank/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battle-tank/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A browser tank battle with destructible obstacles, projectiles, power-ups and local sound effects.",
+    "controls": "Arrow keys or WASD: move - Mouse or Space: fire"
   },
   {
     "id": "battleship",
@@ -693,6 +958,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Place your fleet, then hunt down the enemy's ships before they sink yours. Features ship placement with rotation, a hunting AI, and hit/miss/sunk tracking.",
     "controls": "Mouse / touch to place ships and fire on the enemy grid"
+  },
+  {
+    "id": "battleship-solitaire",
+    "category": "games",
+    "name": "Battleship Solitaire",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "battleship-solitaire"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battleship-solitaire/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Deduce the positions of a fleet from row and column totals. Straight ships must not touch, even diagonally. Campaign and daily puzzles; not the two-player Battleship game. Original Simplified Chinese interface; English help included.",
+    "controls": "Drag along rows or columns to place ships; tap a ship to remove it. Use the Water pen button to mark every remaining cell as water. Right-click or long-press adds a question mark. English help link above game."
   },
   {
     "id": "bearing",
@@ -720,6 +1002,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Beat-Bento.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/beat-bento.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Beat Bento playable in your web browser.",
@@ -793,6 +1076,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/behind-asteroids/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/behind-asteroids.jpg",
     "shelf": "Arcade & Action",
     "badge": "JS13k #1",
     "desc": "Play as the greedy arcade machine throwing asteroids at humans playing Asteroids to take their coins.",
@@ -837,6 +1121,23 @@ const GAMES_DATA = [
     "controls": "Tap a cell to cycle blank, blue, orange"
   },
   {
+    "id": "bingo",
+    "category": "games",
+    "name": "Bingo 90",
+    "tags": [
+      "games",
+      "bingo",
+      "board-game",
+      "local-multiplayer"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bingo/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bingo/1.png",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "Italian 90-ball tombola for 1-8 players at one screen: draw numbers 1-90, cards mark themselves, and race for Ambo, Terno, Quaterna, Cinquina and the full Tombola.",
+    "controls": "Choose players, then click the draw button for each number - winning is detected automatically"
+  },
+  {
     "id": "binjgb",
     "category": "emulators",
     "name": "BinjGB Game Boy Color (WASM)",
@@ -852,6 +1153,23 @@ const GAMES_DATA = [
     "badge": "GBC",
     "desc": "Ultra-fast WebAssembly-powered Game Boy and Game Boy Color emulator featuring built-in Porklike homebrew.",
     "controls": "Arrow Keys, X (A), Z (B), Enter (Start), Shift (Select)"
+  },
+  {
+    "id": "binjnes",
+    "category": "games",
+    "name": "binjnes",
+    "tags": [
+      "emulator",
+      "NES",
+      "retro",
+      "upload"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/binjnes/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/binjnes/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser NES emulator with a local cartridge loader and controller support. No copyrighted ROMs are distributed.",
+    "controls": "Load a local .nes cartridge - Keyboard: use the configured NES controls - Use the emulator controls for pause and reset"
   },
   {
     "id": "black-hole-square",
@@ -899,6 +1217,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Blackjack-Table.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/blackjack-table.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Blackjack Table playable in your web browser.",
@@ -948,6 +1267,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Block-Forge.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/block-forge.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Block Forge playable in your web browser.",
@@ -998,6 +1318,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/blockrain/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/blockrain.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Blockrain playable in your web browser.",
@@ -1012,10 +1333,29 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Bloons-TD4.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/bloons-td4.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Bloons TD4 playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "bloxorz",
+    "category": "games",
+    "name": "Bloxorz",
+    "tags": [
+      "games",
+      "bloxorz",
+      "3d",
+      "puzzle",
+      "webgl"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bloxorz/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bloxorz/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The classic 3D cube puzzle: roll the elongated block across floating islands and fit it exactly into its matching hole. Raw WebGL with no engine, multiple levels, and a free camera you can swing around.",
+    "controls": "Arrow keys to roll the block, WASD/QE to orbit the camera, R to reset the view"
   },
   {
     "id": "bobby",
@@ -1037,6 +1377,42 @@ const GAMES_DATA = [
     "controls": "Arrows / WASD (ZQSD): Move · Mouse / touch: on-screen joystick · R: Retry level"
   },
   {
+    "id": "boggle",
+    "category": "games",
+    "name": "Boggle",
+    "tags": [
+      "games",
+      "boggle",
+      "word",
+      "puzzle",
+      "timed"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/boggle/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/boggle/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The classic word hunt: a 4x4 cube of letters, three minutes on the clock, and a dictionary that knows whether your squiggly path is a real word. Find as many as you can.",
+    "controls": "Click and drag across touching letters to trace a word, then submit it before time runs out"
+  },
+  {
+    "id": "boids-lab",
+    "category": "games",
+    "name": "Boids Lab",
+    "tags": [
+      "simulation",
+      "boids",
+      "flocking",
+      "physics",
+      "experiments"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/boids-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/boids-lab.jpg",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "Shape a living flock with alignment, cohesion, and separation. Tune the rules, shepherd the birds, and watch patterns emerge.",
+    "controls": "Drag to attract; use the field button or Shift/right-drag to repel. Space pauses; 1–3 selects a flock preset."
+  },
+  {
     "id": "bomb-grid",
     "category": "games",
     "name": "Bomb Grid",
@@ -1047,6 +1423,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Bomb-Grid.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/bomb-grid.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Bomb Grid playable in your web browser.",
@@ -1101,6 +1478,7 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/bounce-back/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/bounce-back.jpg",
     "shelf": "RPG & Adventure",
     "badge": "ROGUELIKE",
     "desc": "Top-down dungeon-crawling action roguelike where your only weapon is an enchanted returning boomerang.",
@@ -1151,6 +1529,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Branching-Tales.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/branching-tales.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Branching Tales playable in your web browser.",
@@ -1167,10 +1546,28 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/breaklock/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/breaklock.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Breaklock playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "breakout",
+    "category": "games",
+    "name": "Breakout",
+    "tags": [
+      "arcade",
+      "brick breaker",
+      "power-ups",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/breakout/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/breakout/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A colorful canvas brick breaker with power-ups, multiple brick types, a paddle cannon and local sound effects.",
+    "controls": "Mouse or arrow keys: move the paddle - Space: launch and fire - P: pause"
   },
   {
     "id": "brick-breaker",
@@ -1191,6 +1588,24 @@ const GAMES_DATA = [
     "controls": "Mouse / touch / arrow keys to move the paddle, click or Space to launch"
   },
   {
+    "id": "brick-game",
+    "category": "games",
+    "name": "Brick Game (9999-in-1)",
+    "tags": [
+      "games",
+      "html5",
+      "arcade",
+      "retro",
+      "compilation"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/brick-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/brick-game/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A faithful HTML5 revival of the classic 9999-in-1 brick handheld: 49 mini-games — Tetris, Snake, Racer, Frogger and more — with neon pixel art and chiptune audio.",
+    "controls": "On-screen D-pad and action buttons (touch or mouse); keyboard on desktop"
+  },
+  {
     "id": "brick-rebound",
     "category": "games",
     "name": "Brick Rebound",
@@ -1207,6 +1622,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "An Arkai breakout: bounce the ball, smash every brick and grab power-ups - wide paddle, multi-ball and slow motion - across six levels that loop faster and tougher each time.",
     "controls": "Mouse / arrows: Move paddle; tap / click / Space: Launch"
+  },
+  {
+    "id": "bridge-builder",
+    "category": "games",
+    "name": "Dodge The Log",
+    "tags": [
+      "games",
+      "bridge-builder",
+      "timing",
+      "arcade"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bridge-builder/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bridge-builder/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A stick-hero style timing game: hold to grow your bridge stick, release to lay it, and land it across the gap before the platforms scroll on and reset your run.",
+    "controls": "Hold the mouse button to extend the stick, release to drop it across the next platform"
   },
   {
     "id": "bubble-shooter",
@@ -1245,6 +1677,23 @@ const GAMES_DATA = [
     "controls": "Arrow keys to move in the bottom zone, Space to fire (or on-screen buttons)"
   },
   {
+    "id": "bulgarian-solitaire",
+    "category": "games",
+    "name": "Bulgarian Solitaire",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "bulgarian-solitaire"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bulgarian-solitaire/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Deal, merge and split piles to reach a target partition; shortest routes and campaign boards are included. English help included; original interface partly Chinese.",
+    "controls": "Mouse / touch; see the linked English rules and controls guide."
+  },
+  {
     "id": "bullet-hell",
     "category": "games",
     "name": "Bullet Hell",
@@ -1263,6 +1712,23 @@ const GAMES_DATA = [
     "controls": "Arrows / WASD: Move; Z: Fire; X: Slow time; C: Bomb; P: Pause"
   },
   {
+    "id": "bullethell",
+    "category": "games",
+    "name": "Bullet Hell",
+    "tags": [
+      "arcade",
+      "shooter",
+      "danmaku",
+      "bullet-hell"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bullethell/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bullethell/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A classic bullet-hell (danmaku) shooter: weave through walls of bullets, pick up power-ups, and survive escalating enemy waves and boss assaults.",
+    "controls": "Arrow keys to move, Z to fire"
+  },
+  {
     "id": "bytebot-lab",
     "category": "games",
     "name": "Bytebot Lab",
@@ -1271,10 +1737,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Bytebot-Lab.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/bytebot-lab.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Bytebot Lab playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "c64-emulator",
+    "category": "games",
+    "name": "Commodore 64 Emulator",
+    "tags": [
+      "emulator",
+      "commodore-64",
+      "c64",
+      "local-files",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/c64-emulator/",
+    "shelf": "Emulators",
+    "badge": "",
+    "desc": "A self-contained Commodore 64 emulator with keyboard, touch and gamepad controls. It intentionally includes no copyrighted C64 system ROMs or commercial programs; add files you have the right to use from your device.",
+    "controls": "Use the on-screen keyboard or your keyboard/gamepad. Add BASIC, KERNAL and character-generator ROMs, then open a local PRG, D64 or ZIP file."
   },
   {
     "id": "candy-box-2",
@@ -1306,6 +1790,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/canvas-tetris/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/canvas-tetris.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Canvas Tetris playable in your web browser.",
@@ -1323,6 +1808,7 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/captain-callisto/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/captain-callisto.jpg",
     "shelf": "RPG & Adventure",
     "badge": "JS13k",
     "desc": "Sci-fi mining and exploration adventure on Jupiter's moon Callisto with upgrades and alien defense.",
@@ -1339,6 +1825,7 @@ const GAMES_DATA = [
       "flying"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/captain-rogers/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/captain-rogers.jpg",
     "shelf": "Arcade & Action",
     "badge": "ACTION",
     "desc": "Endless arcade space avoider navigating Captain Rogers through chaotic asteroid storms.",
@@ -1390,6 +1877,7 @@ const GAMES_DATA = [
       "prison"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/cellmates/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/cellmates.jpg",
     "shelf": "RPG & Adventure",
     "badge": "PUZZLE RPG",
     "desc": "Cooperative dual-character puzzle stealth game escaping high security cells.",
@@ -1424,6 +1912,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/ceros-snake/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ceros-snake.jpg",
     "shelf": "Arcade & Action",
     "badge": "ARCADE",
     "desc": "Stylized glowing neon arcade snake with fluid acceleration and high score tracker.",
@@ -1448,6 +1937,22 @@ const GAMES_DATA = [
     "controls": "Arrows / WASD: Move; Z / X: Shove"
   },
   {
+    "id": "chain-reaction",
+    "category": "games",
+    "name": "Chain Reaction",
+    "tags": [
+      "puzzle",
+      "reaction",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chain-reaction/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chain-reaction/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Click a starting point and create a cascade of expanding circles to clear each level.",
+    "controls": "Mouse: click the playfield to start a chain"
+  },
+  {
     "id": "chalk-billiards",
     "category": "games",
     "name": "Chalk Billiards",
@@ -1458,6 +1963,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Chalk-Billiards.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/chalk-billiards.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Chalk Billiards playable in your web browser.",
@@ -1490,6 +1996,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Charm-Reels.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/charm-reels.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Charm Reels playable in your web browser.",
@@ -1523,10 +2030,46 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Checkpoint-Inspector.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/checkpoint-inspector.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Checkpoint Inspector playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "cheesetoast",
+    "category": "games",
+    "name": "Cheese Toast",
+    "tags": [
+      "games",
+      "arcade",
+      "teapot",
+      "shooter",
+      "retro"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cheesetoast/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cheesetoast/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Jim Bumgardner's teapot-in-space arcade game - from the Mac in 1993, CT II in 1995 and CT III in 2003-04 - ported to JavaScript and canvas. Steer your trusty teapot, fire, and endure: single-player by default, with optional peer-to-peer multiplayer for duels and melees.",
+    "controls": "Left/right arrows to turn, Z or X to thrust, Space to fire (hold to autofire) - touch controls on mobile"
+  },
+  {
+    "id": "chef",
+    "category": "games",
+    "name": "Chef",
+    "tags": [
+      "games",
+      "cooking",
+      "arcade",
+      "reflexes"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chef/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chef/screenshot.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A one-file cooking arcade: catch flying ingredients in your pan, cook each to the golden point - raw scores nothing, burnt costs a life - and serve through the right window for combos.",
+    "controls": "Arrow keys or mouse to slide the pan, Space to start, P to pause"
   },
   {
     "id": "chess",
@@ -1539,10 +2082,80 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/chess/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/chess.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Chess playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "chinese-ludo",
+    "category": "games",
+    "name": "Chinese Ludo",
+    "tags": [
+      "games",
+      "board-game",
+      "ludo",
+      "local-multiplayer"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chinese-ludo/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chinese-ludo/1.png",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "飞行棋 (Flight Chess) for 2-4 players on one screen: roll the dice, take off your planes, trigger the flight shortcuts, bounce opponents back, and land all four planes first - bilingual UI.",
+    "controls": "Roll the dice, then click a plane to move it - trigger the flight shortcuts to race home"
+  },
+  {
+    "id": "chinese-rings",
+    "category": "games",
+    "name": "Chinese Rings",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "chinese-rings"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chinese-rings/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Unlink interlocking rings under the classic Chinese-rings rule. Includes exhaustive shortest-path targets, campaign boards, hints and daily/seeded challenges. Original Simplified Chinese interface; English help included.",
+    "controls": "Tap a movable ring. U undo, H hint, R restart, D demonstration."
+  },
+  {
+    "id": "chip8",
+    "category": "games",
+    "name": "Chip8.js",
+    "tags": [
+      "emulator",
+      "chip-8",
+      "retro",
+      "roms"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chip8/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chip8/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A tiny in-browser CHIP-8 emulator with a pixel display. Load a CHIP-8 ROM from your own device to play it; no ROM files are distributed.",
+    "controls": "Choose a local .ch8, .rom or .bin file - CHIP-8 keypad: 1-4, Q-R, A-F, Z-V"
+  },
+  {
+    "id": "chomp",
+    "category": "games",
+    "name": "Chomp",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "strategy",
+      "chomp"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chomp/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/chomp.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Take bites from a chocolate grid, removing the chosen square and everything below and to its right. Avoid the poisoned upper-left square. Play against the computer or solve built-in strategy challenges. Chinese-language interface.",
+    "controls": "Click or drag to choose a bite; arrows move the cursor; Enter bites; U undo; R restart; P pause; H opens rules"
   },
   {
     "id": "chromatic-press",
@@ -1553,6 +2166,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Chromatic-Press.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/chromatic-press.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Chromatic Press playable in your web browser.",
@@ -1567,6 +2181,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Chromatography-Lab.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/chromatography-lab.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Chromatography Lab playable in your web browser.",
@@ -1581,6 +2196,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Cipher-Relay.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/cipher-relay.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Cipher Relay playable in your web browser.",
@@ -1606,6 +2222,22 @@ const GAMES_DATA = [
     "controls": "Mouse: aim and set shot power - Buttons: 1-player (vs AI) or 2-player"
   },
   {
+    "id": "classic-tetris",
+    "category": "games",
+    "name": "Classic Tetris",
+    "tags": [
+      "puzzle",
+      "blocks",
+      "tetris"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/classic-tetris/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/classic-tetris/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A compact falling-block puzzle with rotating tetrominoes, line clears and increasing speed.",
+    "controls": "Arrow keys: move and rotate - Space: drop"
+  },
+  {
     "id": "claw-carnival",
     "category": "games",
     "name": "Claw Carnival",
@@ -1614,6 +2246,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Claw-Carnival.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/claw-carnival.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Claw Carnival playable in your web browser.",
@@ -1646,6 +2279,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Clean-Slate.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/clean-slate.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Clean Slate playable in your web browser.",
@@ -1660,6 +2294,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Climbing-Route.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/climbing-route.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Climbing Route playable in your web browser.",
@@ -1710,6 +2345,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Clockwork-Escape.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/clockwork-escape.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Clockwork Escape playable in your web browser.",
@@ -1724,10 +2360,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/clumsy-bird/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/clumsy-bird.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Clumsy Bird playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "coffee-playground",
+    "category": "games",
+    "name": "CoffeeScript Playground",
+    "tags": [
+      "tools",
+      "CoffeeScript",
+      "programming",
+      "editor"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/coffee-playground/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/coffee-playground/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Compile and experiment with CoffeeScript directly in a local browser playground using an included compiler and editor.",
+    "controls": "Keyboard: edit CoffeeScript - Mouse: run or inspect the generated JavaScript"
   },
   {
     "id": "coil",
@@ -1740,6 +2394,7 @@ const GAMES_DATA = [
       "flow"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/coil/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/coil.jpg",
     "shelf": "Arcade & Action",
     "badge": "ACTION",
     "desc": "Hypnotic particle trail arcade game where you enclose glowing energy orbs before they explode.",
@@ -1762,6 +2417,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Flood the whole board with a single color before you run out of moves. Pick a color to spread your region from the top-left corner across the grid.",
     "controls": "Mouse / touch to pick a color from the palette"
+  },
+  {
+    "id": "color-guess",
+    "category": "games",
+    "name": "Color Guess",
+    "tags": [
+      "puzzle",
+      "color",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-guess/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-guess/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Test your color perception by identifying the swatch that matches the target RGB color.",
+    "controls": "Mouse: choose the matching color"
   },
   {
     "id": "color-lines",
@@ -1826,6 +2497,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Comet-Weaver.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/comet-weaver.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Comet Weaver playable in your web browser.",
@@ -1860,6 +2532,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Connect-Arena.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/connect-arena.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Connect Arena playable in your web browser.",
@@ -1876,6 +2549,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/connect-four/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/connect-four.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Connect Four playable in your web browser.",
@@ -1934,6 +2608,22 @@ const GAMES_DATA = [
     "controls": "Hold click / tap / Space to thrust upward, release to descend"
   },
   {
+    "id": "coreball",
+    "category": "games",
+    "name": "CoreBall",
+    "tags": [
+      "arcade",
+      "timing",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/coreball/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/coreball/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A precise timing game: fire pins into the rotating core without touching the pins already embedded.",
+    "controls": "Mouse or Space: launch a pin"
+  },
+  {
     "id": "cornhole",
     "category": "games",
     "name": "Cornhole",
@@ -1962,6 +2652,7 @@ const GAMES_DATA = [
       "space"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/space-shooter/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/space-shooter.jpg",
     "shelf": "Arcade & Action",
     "badge": "ACTION",
     "desc": "Multi-weapon arcade spaceship dogfighter with shield upgrades and laser cannons.",
@@ -1978,6 +2669,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Courier-Grid.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/courier-grid.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Courier Grid playable in your web browser.",
@@ -1992,6 +2684,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Courtroom-Clash.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/courtroom-clash.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Courtroom Clash playable in your web browser.",
@@ -2006,10 +2699,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Cozy-Organizer.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/cozy-organizer.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Cozy Organizer playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "cpcbasic",
+    "category": "games",
+    "name": "CPCBasic",
+    "tags": [
+      "emulator",
+      "BASIC",
+      "Amstrad",
+      "programming"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cpcbasic/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cpcbasic/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser-based Amstrad CPC BASIC interpreter and emulator. Write BASIC programs and run them locally with emulated graphics, sound and keyboard input.",
+    "controls": "Keyboard: type BASIC in the editor - Mouse: use Run, Stop and emulator controls"
   },
   {
     "id": "crappybird",
@@ -2020,6 +2731,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/CrappyBird/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/crappybird.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "CrappyBird playable in your web browser.",
@@ -2042,6 +2754,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A streamlined casino craps table built around the pass line. Place a pass or don't-pass bet, roll the come-out, and chase your point before a seven ends the round. Your bankroll is saved on your device so you can build a streak over time.",
     "controls": "Pick a chip and line, then press Roll Dice"
+  },
+  {
+    "id": "crayon-contraptions",
+    "category": "games",
+    "name": "Crayon Contraptions",
+    "tags": [
+      "games",
+      "rube-goldberg",
+      "physics",
+      "drawing"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/crayon-contraptions/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/crayon-contraptions/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Draw Rube Goldberg machines in crayon: sketch your contraption with limited ink, then press GO and watch the real Box2D physics carry it through 100 levels - including boss machines.",
+    "controls": "Pick a crayon and draw on the canvas (Undo, Clear and Hint buttons), then GO to run the simulation"
   },
   {
     "id": "crazy-eights",
@@ -2071,6 +2800,7 @@ const GAMES_DATA = [
       "system"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Crossword-Cafe.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/crossword-cafe.jpg",
     "shelf": "Emulators",
     "badge": "EMU",
     "desc": "Browser-based virtual system and hardware emulator.",
@@ -2087,6 +2817,7 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/CrystalQuest/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/crystalquest.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "CrystalQuest playable in your web browser.",
@@ -2121,6 +2852,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Curling-Endgame.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/curling-endgame.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Curling Endgame playable in your web browser.",
@@ -2137,6 +2869,7 @@ const GAMES_DATA = [
       "custom"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/custom-tetris/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/custom-tetris.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "TETRIS",
     "desc": "Highly customizable Tetris variant allowing custom tetromino shapes, board sizes, and gravity rules.",
@@ -2157,6 +2890,23 @@ const GAMES_DATA = [
     "badge": "TOOL",
     "desc": "The Cyber Swiss Army Knife for encryption, encoding, compression and data analysis.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "cybervoid-overdrive",
+    "category": "games",
+    "name": "Cybervoid Overdrive",
+    "tags": [
+      "arcade",
+      "twin-stick",
+      "shooter",
+      "roguelite"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cybervoid-overdrive/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cybervoid-overdrive/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A neon cyberpunk twin-stick bullet-hell roguelite: survive escalating enemy waves, grab upgrades, and chase a high score.",
+    "controls": "WASD or arrow keys to move, mouse to aim, hold click to fire"
   },
   {
     "id": "dango",
@@ -2206,6 +2956,7 @@ const GAMES_DATA = [
       "raymarching"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/dante-13k/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/dante-13k.jpg",
     "shelf": "RPG & Adventure",
     "badge": "3D RPG",
     "desc": "3D raymarched dark fantasy dungeon exploration through the circles of the underworld in 13KB.",
@@ -2268,6 +3019,40 @@ const GAMES_DATA = [
     "controls": "Mouse: Place and connect equipment, drag the camera · Click machines to inspect"
   },
   {
+    "id": "dcpu16-emulator",
+    "category": "games",
+    "name": "DCPU-16 IDE",
+    "tags": [
+      "emulator",
+      "assembler",
+      "DCPU-16",
+      "programming"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dcpu16-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dcpu16-emulator/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser-based DCPU-16 emulator and assembler with an interactive editor, virtual display, keyboard, clock and hardware panels. No ROMs are distributed.",
+    "controls": "Keyboard: edit assembly in the IDE - Mouse: use assemble, run, pause and hardware controls - Use the virtual keyboard and display panels"
+  },
+  {
+    "id": "deepfeesh",
+    "category": "games",
+    "name": "DeepFeesh",
+    "tags": [
+      "games",
+      "fishing",
+      "maze",
+      "pathfinding"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/deepfeesh/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/deepfeesh/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Drop your lure into a procedurally generated 25x25 underwater maze, steer it to the target fish, or let the built-in BFS auto-jig solve the shortest route for you.",
+    "controls": "Arrow keys or WASD to swim the lure; Auto-Jig button to watch the solver finish it"
+  },
+  {
     "id": "detective-desk",
     "category": "games",
     "name": "Detective Desk",
@@ -2276,6 +3061,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Detective-Desk.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/detective-desk.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Detective Desk playable in your web browser.",
@@ -2293,6 +3079,7 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/devil-glitches/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/devil-glitches.jpg",
     "shelf": "Arcade & Action",
     "badge": "JS13k",
     "desc": "Action arcade shooter with glitch aesthetics \u2014 fight waves of corrupted demons and collect data powerups.",
@@ -2310,10 +3097,26 @@ const GAMES_DATA = [
       "loot"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/diablo-js/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/diablo-js.jpg",
     "shelf": "RPG & Adventure",
     "badge": "ACTION RPG",
     "desc": "HTML5 canvas web engine recreating classic isometric action-RPG dungeon exploring and loot mechanics.",
     "controls": "Mouse Click to Move & Attack, Potions 1-4"
+  },
+  {
+    "id": "diagonal-junctions",
+    "category": "games",
+    "name": "Diagonal Junctions",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/diagonal-junctions/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Draw diagonals so every numbered junction has exactly the required number of line ends; a count-only Slant variant.",
+    "controls": "Mouse / touch; rules and controls linked in-game."
   },
   {
     "id": "dice-delver",
@@ -2326,6 +3129,7 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Dice-Delver.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/dice-delver.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "Dice Delver playable in your web browser.",
@@ -2360,6 +3164,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/digger/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/digger.jpg",
     "shelf": "Arcade & Action",
     "badge": "RETRO",
     "desc": "Remaster of Windmill Software\u2019s legendary 1983 gold tunneling arcade classic.",
@@ -2384,6 +3189,24 @@ const GAMES_DATA = [
     "controls": "Tap: Jump; Double tap: Crush cactus"
   },
   {
+    "id": "dog-playground",
+    "category": "games",
+    "name": "Dog Playground",
+    "tags": [
+      "games",
+      "physics",
+      "sandbox",
+      "dogs",
+      "toys"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dog-playground/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dog-playground/1.png",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "A pocket physics petting zoo: a big pan-and-zoom lawn full of dogs who chase whatever you throw - balls, frisbees and bones. Pure HTML5 canvas, no engine, no dependencies.",
+    "controls": "Drag to pan, scroll to zoom, and drag-throw toys at the dogs to watch them chase"
+  },
+  {
     "id": "dojo-duel",
     "category": "games",
     "name": "Dojo Duel",
@@ -2392,10 +3215,26 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Dojo-Duel.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/dojo-duel.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Dojo Duel playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "domineering",
+    "category": "games",
+    "name": "Domineering",
+    "tags": [
+      "games",
+      "html5",
+      "board"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/domineering/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "You place red vertical dominoes on an 8×8 board; the computer places blue horizontal dominoes.",
+    "controls": "Mouse / touch; English rules and controls linked in-game."
   },
   {
     "id": "dominoes",
@@ -2416,6 +3255,23 @@ const GAMES_DATA = [
     "controls": "Tap a tile to play it; use Draw and Pass when stuck"
   },
   {
+    "id": "dominosa",
+    "category": "games",
+    "name": "Dominosa",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "dominosa"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dominosa/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Partition a number grid into dominoes, using each unordered number pair exactly once. English help included; original interface partly Chinese.",
+    "controls": "Mouse / touch; see the linked English rules and controls guide."
+  },
+  {
     "id": "doodle-hop",
     "category": "games",
     "name": "Doodle Hop",
@@ -2434,6 +3290,23 @@ const GAMES_DATA = [
     "controls": "Mouse / touch / arrow keys to move left and right"
   },
   {
+    "id": "doodle-jump",
+    "category": "games",
+    "name": "Doodle Jump",
+    "tags": [
+      "games",
+      "html5",
+      "arcade",
+      "platformer"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/doodle-jump/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/doodle-jump/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A JavaScript take on Doodle Jump: bounce up the platforms, dodge monsters and grab power-ups.",
+    "controls": "Left/Right arrows to steer the doodler"
+  },
+  {
     "id": "doom-13k",
     "category": "games",
     "name": "Doom 13K",
@@ -2446,10 +3319,28 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/doom-13k/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/doom-13k.jpg",
     "shelf": "Arcade & Action",
     "badge": "3D FPS",
     "desc": "Raycasting 3D retro first-person shooter in 13KB JavaScript with enemies, doors, and classic Doom vibes.",
     "controls": "WASD / Arrow Keys: Move & Turn | Space / Left Click: Shoot | E / Enter: Open Doors"
+  },
+  {
+    "id": "dosun-fuwari",
+    "category": "games",
+    "name": "Dosun-Fuwari",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "dosun-fuwari"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dosun-fuwari/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Place one balloon and one iron ball per region, obeying upward and downward support rules. English help included; original interface partly Chinese.",
+    "controls": "Mouse / touch; see the linked English rules and controls guide."
   },
   {
     "id": "dots-and-boxes",
@@ -2468,6 +3359,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "The classic pen-and-paper game against a computer opponent. Draw lines to complete boxes, claim them, and take an extra turn each time you close one.",
     "controls": "Mouse / touch to draw a line between two dots"
+  },
+  {
+    "id": "double-choco",
+    "category": "games",
+    "name": "Double Choco",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "double-choco"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/double-choco/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Divide a two-tone grid into blocks whose connected light and dark halves are congruent. Number clues give the size of each half. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Tap internal edges to draw/remove borders; drag to edit multiple edges. See English help for keyboard controls."
   },
   {
     "id": "drag-race",
@@ -2498,6 +3406,7 @@ const GAMES_DATA = [
       "flight"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/drakonas/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/drakonas.jpg",
     "shelf": "Arcade & Action",
     "badge": "ACTION",
     "desc": "Fly a fire-breathing dragon through treacherous cavern obstacles.",
@@ -2514,6 +3423,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/dreadheadparkour.htm",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/dreadheadparkour.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Dreadheadparkour playable in your web browser.",
@@ -2530,6 +3440,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Drift-Racer.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/drift-racer.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Drift Racer playable in your web browser.",
@@ -2561,10 +3472,29 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Drone-Survey.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/drone-survey.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Drone Survey playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "drop7",
+    "category": "games",
+    "name": "Drop7",
+    "tags": [
+      "games",
+      "puzzle",
+      "disc",
+      "arcade",
+      "single-player"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/drop7/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/drop7/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The Drop7 disc puzzle: drop discs into a 7-by-7 grid, match runs of numbered discs to explode them, and crack the solids hiding numbers underneath - Classic, Blitz and Sequence modes.",
+    "controls": "Click a column to drop the next disc - numbered discs explode in matching runs and crack nearby solids"
   },
   {
     "id": "duck-hunt",
@@ -2575,6 +3505,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/duck-hunt/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/duck-hunt.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Duck Hunt playable in your web browser.",
@@ -2609,10 +3540,44 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Dungeon-Delver.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/dungeon-delver.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "Dungeon Delver playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "dungeon-game",
+    "category": "games",
+    "name": "Dungeon Game",
+    "tags": [
+      "dungeon",
+      "adventure",
+      "action"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dungeon-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dungeon-game/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Explore a small canvas dungeon, fight enemies and navigate an interactive top-down adventure.",
+    "controls": "Arrow keys: move - Keyboard: use the game actions"
+  },
+  {
+    "id": "dungeons",
+    "category": "games",
+    "name": "Dungeons",
+    "tags": [
+      "games",
+      "roguelike",
+      "dungeon-crawler",
+      "rpg"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dungeons/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dungeons/1.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A classic canvas roguelike: procedurally generated dungeons, monsters, gold, magic and music - in the spirit of the old ASCII crawlers, fully in the browser.",
+    "controls": "Arrow keys to move, Shift to turn in place, Enter to pass the turn, i for inventory"
   },
   {
     "id": "eaglercraft-1-12-2-offline-js",
@@ -2623,6 +3588,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-1.12.2-offline-JS.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/eaglercraft-1-12-2-offline-js.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Eaglercraft 1.12.2 Offline JS (TeaVM JavaScript runtime) playable in your web browser.",
@@ -2637,6 +3603,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-1.12.2-offline-WASM.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/eaglercraft-1-12-2-offline-wasm.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Eaglercraft 1.12.2 Offline WASM playable in your web browser.",
@@ -2651,6 +3618,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-1.8.8-offline-JS.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/eaglercraft-1-8-8-offline-js.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Eaglercraft 1.8.8 Offline JS (TeaVM JavaScript runtime) playable in your web browser.",
@@ -2665,6 +3633,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Eaglercraft-1.8.8-offline-WASM.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/eaglercraft-1-8-8-offline-wasm.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Eaglercraft 1.8.8 Offline WASM playable in your web browser.",
@@ -2711,6 +3680,7 @@ const GAMES_DATA = [
       "system"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Ecosystem-Keeper.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ecosystem-keeper.jpg",
     "shelf": "Emulators",
     "badge": "EMU",
     "desc": "Browser-based virtual system and hardware emulator.",
@@ -2761,6 +3731,7 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/elematter/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/elematter.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "Arcade",
     "desc": "Fast elemental particle puzzle shooter \u2014 balance fire, water, earth, and air to clear cosmic energy.",
@@ -2775,10 +3746,29 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Elemental-Sandbox.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/elemental-sandbox.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Elemental Sandbox playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "elevator-100",
+    "category": "games",
+    "name": "Elevator 100",
+    "tags": [
+      "games",
+      "horror",
+      "story",
+      "one-button",
+      "single-player"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/elevator-100/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/elevator-100/1.png",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "The lower shaft has collapsed and something is ascending: ride the emergency elevator toward floor 100, respond to the passengers, and survive the jumpscares on the way up.",
+    "controls": "Click or tap to advance the story and react when the entity closes in"
   },
   {
     "id": "elevator-saga",
@@ -2809,6 +3799,7 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Ember-Tactics.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ember-tactics.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "Ember Tactics playable in your web browser.",
@@ -2825,6 +3816,7 @@ const GAMES_DATA = [
       "adventure"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/emberwind/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/emberwind.jpg",
     "shelf": "Arcade & Action",
     "badge": "PLATFORMER",
     "desc": "Charming storybook action platformer starring gnome watchman Kindle flying through gremlin-infested skies.",
@@ -2859,6 +3851,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/enduro/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/enduro.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Enduro playable in your web browser.",
@@ -2902,6 +3895,23 @@ const GAMES_DATA = [
     "controls": "Mouse: Select units, choose actions, move one tile per turn · End Turn button to resolve orders"
   },
   {
+    "id": "erosion-lab",
+    "category": "games",
+    "name": "Erosion Lab",
+    "tags": [
+      "terrain",
+      "erosion",
+      "simulation",
+      "water",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/erosion-lab/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "Sculpt a procedural terrain and run a local water-and-sediment experiment. Tune rainfall and erodibility, then watch downhill channels reshape the height field.",
+    "controls": "Mouse/touch: drag to raise; hold Shift or set Brush mode to Carve channel to lower. Adjust rainfall, erodibility, and brush controls; Run, Rain one step, or Reset."
+  },
+  {
     "id": "escape-road",
     "category": "games",
     "name": "Escape Road",
@@ -2912,6 +3922,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Escape-Road.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/escape-road.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Escape Road playable in your web browser.",
@@ -2937,6 +3948,56 @@ const GAMES_DATA = [
     "controls": "Arrows / WASD: Move · Space: Action"
   },
   {
+    "id": "euclid-game",
+    "category": "games",
+    "name": "Euclid Game",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "euclid-game"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/euclid-game/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Cut squares from a gold rectangle in a two-player Euclidean subtraction game against a perfect opponent. Baked strategy tables, campaign and daily/seeded boards. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Tap a block boundary or a k button to cut k squares. U undo, H hint, R restart."
+  },
+  {
+    "id": "euler-trails",
+    "category": "games",
+    "name": "Euler Trails",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "euler-trails"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/euler-trails/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Draw every graph edge exactly once within the minimum stroke budget. Includes 48 baked puzzles, daily/seeded boards and independent graph-theory checks. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Drag from pin to pin; release to end a stroke. U undo, H hint, R restart."
+  },
+  {
+    "id": "evade-destroy",
+    "category": "games",
+    "name": "Evade and Destroy",
+    "tags": [
+      "arcade",
+      "shooter",
+      "action"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/evade-destroy/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/evade-destroy/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A top-down action game combining enemy evasion, pickups and precise shooting across procedural arenas.",
+    "controls": "Keyboard: move and aim - Mouse: fire"
+  },
+  {
     "id": "exolon",
     "category": "games",
     "name": "Exolon",
@@ -2953,6 +4014,40 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A browser tribute to the classic side-scrolling run-and-gun. Advance your armoured trooper across hostile alien terrain, blasting enemies and obstacles while collecting gear. Retro arcade action rebuilt for the web.",
     "controls": "Arrow keys to move, key to fire"
+  },
+  {
+    "id": "factorish",
+    "category": "games",
+    "name": "FactorishJS",
+    "tags": [
+      "strategy",
+      "factory",
+      "simulation"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/factorish/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/factorish/1.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A compact factory-building sandbox: mine resources, place machines and automate production on an island.",
+    "controls": "Mouse: pan, zoom and place buildings"
+  },
+  {
+    "id": "falling-sand-lab",
+    "category": "games",
+    "name": "Falling Sand Lab",
+    "tags": [
+      "simulation",
+      "sandbox",
+      "physics",
+      "pixel",
+      "experiments"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/falling-sand-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/falling-sand-lab.jpg",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "Paint a living pixel sandbox and watch sand pile, water flow, plants grow, and fire reshape the world.",
+    "controls": "Click or drag to paint; right-click to erase; Space to pause; 1–8 select elements; E selects the eraser."
   },
   {
     "id": "farkle",
@@ -2973,6 +4068,91 @@ const GAMES_DATA = [
     "controls": "Click scoring dice to set aside, then Roll or Bank"
   },
   {
+    "id": "farm-sim",
+    "category": "games",
+    "name": "Farm Sim",
+    "tags": [
+      "simulation",
+      "farming",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/farm-sim/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/farm-sim/1.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A small farming simulator: till soil, plant crops, water them and harvest a growing field.",
+    "controls": "Mouse: interact with soil, crops and tools"
+  },
+  {
+    "id": "fighting-game",
+    "category": "games",
+    "name": "JavaScript Fighting Game",
+    "tags": [
+      "fighting",
+      "arcade",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fighting-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fighting-game/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A canvas fighting game with a playable arena, sprite animations and local keyboard controls.",
+    "controls": "Keyboard: use the on-screen player controls"
+  },
+  {
+    "id": "fillomino",
+    "category": "games",
+    "name": "Fillomino",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "regions"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fillomino/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/fillomino.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Fill the grid with connected numbered regions: each region must contain exactly its number of cells, and equal-sized regions cannot share a side. Generated puzzles with hints and local saves. Chinese-language interface.",
+    "controls": "Press a number key or choose a digit, then click or drag to fill cells; 0 erases; H hint; Z undo; use the new-puzzle controls to start again"
+  },
+  {
+    "id": "final-ending",
+    "category": "games",
+    "name": "The Final Ending",
+    "tags": [
+      "shooter",
+      "battle-royale",
+      "building",
+      "procedural"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/final-ending/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/final-ending/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "An original top-down angled procedural robot shooter: drop in with your skiff, harvest shards from the world, forge walls, floors, ramps and roofs under your feet, upgrade from luminous caches and outlast 39 machines as the violet Collapse contracts. Seven experiences — battle royale, Skyspires, the Sinkhole, duels, box fights, zone wars and team deathmatch — with bot fill, three difficulties, synthesized sound and a Canvas 2D fallback when WebGL2 is unavailable. No ads, no analytics, no downloaded assets.",
+    "controls": "WASD move, pointer aims, click fires, Space jump, Shift sprint, C crouch; Q/Z/X/V forge wall/floor/ramp/roof, G door/window, M material; 1-5 or scroll switch weapons, E/F collect loot, B jump pad, T spike trap, H shield cell, J heal kit (touch: left stick + right-half aim + FIRE)"
+  },
+  {
+    "id": "fishing",
+    "category": "games",
+    "name": "Deep Blue",
+    "tags": [
+      "games",
+      "fishing",
+      "3d",
+      "cozy",
+      "progression"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fishing/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fishing/1.png",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A 3D fishing sim in your browser tab: charge a cast, follow the hook down through eighty metres of water, strike when something bites, fight it to the boat, sell the catch and buy better tackle.",
+    "controls": "Hold to charge your cast, follow the hook down, and strike when it bites - then work the reel to land the fish"
+  },
+  {
     "id": "fishing-harbor",
     "category": "games",
     "name": "Fishing Harbor",
@@ -2981,10 +4161,27 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Fishing-Harbor.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/fishing-harbor.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Fishing Harbor playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "flapcopy",
+    "category": "games",
+    "name": "Flapcopy",
+    "tags": [
+      "arcade",
+      "flappy",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flapcopy/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flapcopy/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A lightweight one-button flying game inspired by classic obstacle-dodging arcade games.",
+    "controls": "Mouse or Space: flap"
   },
   {
     "id": "flappy-2048",
@@ -2997,6 +4194,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/flappy-2048/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/flappy-2048.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Flappy 2048 playable in your web browser.",
@@ -3011,6 +4209,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Flappy-Glider.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/flappy-glider.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Flappy Glider playable in your web browser.",
@@ -3043,10 +4242,27 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Fleet-Duel.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/fleet-duel.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Fleet Duel playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "fling",
+    "category": "games",
+    "name": "Fling",
+    "tags": [
+      "physics",
+      "puzzle",
+      "aim"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fling/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fling/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Aim and fling a ball through physics puzzles, using momentum and careful timing to reach each target.",
+    "controls": "Mouse: aim and click to fling"
   },
   {
     "id": "flipo",
@@ -3077,6 +4293,7 @@ const GAMES_DATA = [
       "runner"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/floppybird/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/floppybird.jpg",
     "shelf": "Arcade & Action",
     "badge": "CASUAL",
     "desc": "Crisp HTML5 canvas recreation of the viral pipe dodging flap game.",
@@ -3145,10 +4362,26 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Forest-Dash.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/forest-dash.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Forest Dash playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "fox-and-hounds",
+    "category": "games",
+    "name": "Fox and Hounds",
+    "tags": [
+      "games",
+      "html5",
+      "board"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fox-and-hounds/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Outrun four forward-only hounds, or trap the fox, with local two-player and configurable computer play.",
+    "controls": "Mouse / touch; rules and controls linked in-game."
   },
   {
     "id": "freecell",
@@ -3177,6 +4410,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Frequency-Bureau.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/frequency-bureau.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Frequency Bureau playable in your web browser.",
@@ -3196,6 +4430,40 @@ const GAMES_DATA = [
     "badge": "",
     "desc": "The open-source rhythm sensation — arrow-key beat battles against Daddy Dearest, Skid & Pump and the whole crew.",
     "controls": "Arrow Keys / WASD to Hit Notes"
+  },
+  {
+    "id": "frodos-quest",
+    "category": "games",
+    "name": "Frodo's Quest",
+    "tags": [
+      "games",
+      "point-and-click",
+      "adventure",
+      "classic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/frodos-quest/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/frodos-quest/1.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A Hobbit's adventure in 1980s Sierra On-Line style: a pre-rendered point-and-click world of puzzles, inventory and collectibles, compiled entirely to JavaScript.",
+    "controls": "Mouse only: click hotspots to move, talk, grab and use items"
+  },
+  {
+    "id": "frog-swap",
+    "category": "games",
+    "name": "Frog Swap",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "frog-swap"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/frog-swap/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Swap two groups of forward-only frogs using adjacent slides and jumps over an opposing frog. English help included; original interface partly Chinese.",
+    "controls": "Mouse / touch; see the linked English rules and controls guide."
   },
   {
     "id": "frogger",
@@ -3225,10 +4493,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Frontier-Command.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/frontier-command.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Frontier Command playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "frontier-conquest",
+    "category": "games",
+    "name": "Frontier Conquest",
+    "tags": [
+      "strategy",
+      "territory",
+      "turn-based",
+      "offline",
+      "original"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/frontier-conquest/",
+    "shelf": "Strategy & Idle",
+    "badge": "",
+    "desc": "A compact, original territory-control strategy game. Reinforce your borders, roll tactical battles against a local rival, and claim enough of the map to win. Includes no external map or game assets.",
+    "controls": "During Reinforce, click one of your territories to place an army. During Attack, click a friendly territory, then an adjacent rival or neutral territory. End Turn to let the rival move."
   },
   {
     "id": "fruit-slice",
@@ -3239,6 +4525,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Fruit-Slice.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/fruit-slice.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Fruit Slice playable in your web browser.",
@@ -3281,6 +4568,23 @@ const GAMES_DATA = [
     "controls": "Tap a cell to cycle its value from 1 to 5 and back to blank"
   },
   {
+    "id": "galaxia",
+    "category": "games",
+    "name": "GALAXIA",
+    "tags": [
+      "arcade",
+      "shooter",
+      "space",
+      "free-roam"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/galaxia/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/galaxia/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "An original fixed-screen arcade space shooter for the browser: hold off diving alien formations, rescue captured fighters, and clear challenging stages in Classic Mode — or fly freely through open space in Free Roam, charting real-galaxy systems from the Andromeda to the Milky Way. Keyboard, touch, or gamepad. Every sprite procedural, every note synthesized.",
+    "controls": "WASD/arrows move, Space fire, Enter pause/menu (or touch controls / gamepad). Pick Classic Mode for fixed-screen arcade action or Free Roam for open-space flight."
+  },
+  {
     "id": "game-of-life",
     "category": "games",
     "name": "Game of Life",
@@ -3308,10 +4612,46 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Garden-Front.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/garden-front.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Garden Front playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "gasteroids",
+    "category": "games",
+    "name": "Gasteroids",
+    "tags": [
+      "arcade",
+      "shooter",
+      "asteroids",
+      "wave"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gasteroids/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gasteroids/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A Galaga-meets-Asteroids wave shooter: slide your ship across the screen and blast the incoming asteroid horde before it reaches Earth.",
+    "controls": "Move the mouse to steer — weapons fire automatically"
+  },
+  {
+    "id": "gauntlet",
+    "category": "games",
+    "name": "Gauntlet",
+    "tags": [
+      "games",
+      "html5",
+      "roguelike",
+      "action",
+      "arcade"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gauntlet/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gauntlet/1.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "An HTML5 Gauntlet-style dungeon crawler (single player): battle waves of demons, grab treasures and keys, and find the way out.",
+    "controls": "Arrow keys to move, Space to attack"
   },
   {
     "id": "gear-calibrator",
@@ -3322,6 +4662,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Gear-Calibrator.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/gear-calibrator.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Gear Calibrator playable in your web browser.",
@@ -3354,10 +4695,44 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Gem-Garden.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/gem-garden.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Gem Garden playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "genesis-emulator",
+    "category": "games",
+    "name": "Mega Drive / Genesis Emulator",
+    "tags": [
+      "emulator",
+      "genesis",
+      "megadrive",
+      "webassembly",
+      "local-files"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/genesis-emulator/",
+    "shelf": "Emulators",
+    "badge": "Experimental",
+    "desc": "An experimental, browser-based Mega Drive / Genesis emulator. Choose a ROM you are entitled to use; it is read locally and never uploaded. Only Sonic 1 and Sonic 2 have been tested by the core authors.",
+    "controls": "Arrow keys: D-pad; Z/X/C or A/S/D: A/B/C; Q/W/E: X/Y/Z; Enter: Start; Right Shift: Mode; standard gamepads are detected."
+  },
+  {
+    "id": "genius",
+    "category": "games",
+    "name": "Genius",
+    "tags": [
+      "memory",
+      "music",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/genius/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/genius/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A colorful memory game using a radial control: repeat the growing sequence of lights and sounds for as long as you can.",
+    "controls": "Mouse or touch: repeat the illuminated sequence"
   },
   {
     "id": "geo-dash",
@@ -3445,6 +4820,39 @@ const GAMES_DATA = [
     "controls": "Left/right arrows or tap to move"
   },
   {
+    "id": "glade-game",
+    "category": "games",
+    "name": "Glade",
+    "tags": [
+      "games",
+      "html5",
+      "3d",
+      "adventure"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/glade-game/",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A Zelda-inspired tiny third-person 3D adventure: explore a minimalist overworld, swing your sword against six monster types, and defeat the Lake Guardian.",
+    "controls": "WASD/Arrows to move, Space sword, B arrow, F dragon fire, Shift flap (×6 to reach the Sky), U upgrade, 1-6 tunic, drag to orbit"
+  },
+  {
+    "id": "glasswing",
+    "category": "games",
+    "name": "Glasswing",
+    "tags": [
+      "action",
+      "platformer",
+      "boss-rush",
+      "parry"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/glasswing/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/glasswing/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A dark action game where you break a boss's mask — then wear it. The Hub campaign holds six bosses and their wearable forms, perfect-parry guards, charge blasters and a glass-mask life system: at zero points your mask shatters (damage ×3, speed +20%, the next hit is fatal). EN/FR in-game language setting, full key remapping, gamepad + touch, solo or two players. Original MIT sprite art, synthesized sound, level editor included.",
+    "controls": "Arrows/WASD move, Space/W jump (again double-jumps, hold glides), J punch, K needle-sword (down+K in air pogos), L fire/charge, Shift/I dodge, U/Ctrl guard (tap for perfect parry), Esc/P pause; keys remappable, gamepad + touch supported"
+  },
+  {
     "id": "glyph-warden",
     "category": "games",
     "name": "Glyph Warden",
@@ -3453,10 +4861,29 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Glyph-Warden.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/glyph-warden.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Glyph Warden playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "glyphbound-tactics",
+    "category": "games",
+    "name": "Glyphbound Tactics",
+    "tags": [
+      "tactics",
+      "strategy",
+      "turn-based",
+      "grid",
+      "skirmish"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/glyphbound-tactics/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/glyphbound-tactics.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A small, turn-based tactics skirmish. Lead a warden, ranger and seer across a cover-filled grid, combine movement with attacks and hold the central beacon to win.",
+    "controls": "Click a friendly unit, move to a highlighted tile, then click an enemy in range. Use Mend with the Seer; End Turn gives the enemy its move."
   },
   {
     "id": "go-fish",
@@ -3475,6 +4902,22 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Ask the computer for the ranks you need and collect all four to complete a book. Guess wrong and it is Go Fish, so draw from the pool and hope for luck. The player with the most books wins.",
     "controls": "Tap a rank button to ask the computer for cards"
+  },
+  {
+    "id": "go-game",
+    "category": "games",
+    "name": "Go Game",
+    "tags": [
+      "strategy",
+      "board",
+      "go"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/go-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/go-game/1.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "A browser implementation of the ancient board game Go with local two-player play.",
+    "controls": "Mouse: click an intersection to place a stone"
   },
   {
     "id": "golf-solitaire",
@@ -3532,6 +4975,23 @@ const GAMES_DATA = [
     "controls": "Keyboard: follow on-screen prompts to set angle and velocity for each throw (on-screen keyboard on touch devices)"
   },
   {
+    "id": "graph-theory-lab",
+    "category": "games",
+    "name": "Graph Theory Lab",
+    "tags": [
+      "graph-theory",
+      "algorithms",
+      "education",
+      "visualization",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/graph-theory-lab/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Build a small weighted network and step through breadth-first search, depth-first search, or Dijkstra's shortest-path algorithm. Compare visited order, frontier, path, and cost.",
+    "controls": "Choose an algorithm, start, and goal; Run search, then Step or Play. Drag nodes, click empty space to add one, right-click to remove, or enable Edit connections and click two nodes."
+  },
+  {
     "id": "gridiron-blitz",
     "category": "games",
     "name": "Gridiron Blitz",
@@ -3548,6 +5008,21 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Take the handoff and rush for glory. Juke left and right to slip past charging defenders, break tackles, and sprint into the end zone. Rack up yards and touchdowns across the drive before three tackles end your run.",
     "controls": "Arrow keys / A and D or tap left and right to dodge"
+  },
+  {
+    "id": "gridlock-chess",
+    "category": "games",
+    "name": "Gridlock Chess",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gridlock-chess/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Guide chess pieces to marked targets while landings toggle a cross of blocking lights.",
+    "controls": "Mouse / touch; English rules and controls linked in-game."
   },
   {
     "id": "growth",
@@ -3576,6 +5051,7 @@ const GAMES_DATA = [
       "adventure"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/Guardians-of-the-Hollow/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/guardians-of-the-hollow.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A stickman adventure game",
@@ -3598,6 +5074,41 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "hack-emulator",
+    "category": "games",
+    "name": "Hack CPU Emulator",
+    "tags": [
+      "emulator",
+      "CPU",
+      "nand2tetris",
+      "education"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hack-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hack-emulator/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "An educational in-browser emulator for the Hack computer platform from nand2tetris, with a visual CPU and memory interface and no ROMs included.",
+    "controls": "Use the editor and run controls to execute Hack instructions - Mouse: inspect CPU and memory panels"
+  },
+  {
+    "id": "halma",
+    "category": "games",
+    "name": "Halma",
+    "tags": [
+      "games",
+      "halma",
+      "board-game",
+      "jump",
+      "two-player"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/halma/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/halma/1.png",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "The classic jumping board game: two players race to get all of their pieces to the opposite home corner, and any piece in the way can be hopped over - chain jumps to fly across the board. Hot-seat play on one screen.",
+    "controls": "Click one of your pieces, then a legal square - a jump lets you fly and keep moving"
+  },
+  {
     "id": "hangman",
     "category": "games",
     "name": "Hangman",
@@ -3614,6 +5125,59 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Guess the hidden word one letter at a time before the drawing is complete. Choose a category and use the on-screen keyboard or your physical keyboard.",
     "controls": "Click on-screen letters or type on your keyboard"
+  },
+  {
+    "id": "hashi",
+    "category": "games",
+    "name": "Hashi",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "bridges"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hashi/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hashi.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Connect numbered islands with one or two bridges. Match every island’s number, avoid crossing bridges, and connect all islands in one network. Built-in campaign, hints and local saves. Chinese-language interface.",
+    "controls": "Drag between aligned islands to cycle 0, 1 or 2 bridges; U undo; R restart; H hint"
+  },
+  {
+    "id": "hearts",
+    "category": "games",
+    "name": "Hearts",
+    "tags": [
+      "games",
+      "html5",
+      "cards",
+      "hearts",
+      "single-player"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hearts/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hearts.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Classic Hearts against three computer opponents, with passing, shoot-the-moon scoring, three AI difficulties and local statistics.",
+    "controls": "Click three cards to pass, then Pass Cards; click a legal card to play; Game starts a new match"
+  },
+  {
+    "id": "hebi-ichigo",
+    "category": "games",
+    "name": "Hebi-Ichigo",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "hebi-ichigo"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hebi-ichigo/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Place non-touching 1–5 snakes using directional number clues. Every white cell must be assigned a number or explicitly marked empty. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Select a white cell, then choose Empty or 1–5. Arrows navigate, 0/Space marks empty, Delete clears; H hint, Z undo."
   },
   {
     "id": "helix-jump",
@@ -3682,10 +5246,47 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/heroine-dusk/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/heroine-dusk.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "Heroine Dusk playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "herugolf",
+    "category": "games",
+    "name": "Herugolf",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "herugolf"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/herugolf/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Guide every numbered ball to a different hole using strokes that shorten by one cell each time. Routes cannot cross; water may be crossed but not landed on. Original Simplified Chinese interface; English help included.",
+    "controls": "Select a ball and tap each stroke endpoint; arrow keys play a full stroke, Space selects another ball, Z undo, H hint, R restart."
+  },
+  {
+    "id": "hex",
+    "category": "games",
+    "name": "Hex",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "hex",
+      "ai",
+      "local-multiplayer"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hex/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hex.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Connect opposite edges of a hexagonal board before your opponent. Play locally with two players or against three AI difficulty levels, on boards from 7×7 to 13×13. Includes the pie rule. Italian-language interface.",
+    "controls": "Click an empty hex to place a stone; Red connects top to bottom, Cyan left to right; Nuova partita starts a new game"
   },
   {
     "id": "hexgl",
@@ -3696,6 +5297,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/HexGL/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hexgl.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "HexGL playable in your web browser.",
@@ -3710,10 +5312,45 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/Hextris/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hextris.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Hextris playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "heyawake",
+    "category": "games",
+    "name": "Heyawake",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "heyawake"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/heyawake/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Shade cells to satisfy room counts, keep white cells connected, and break white corridors spanning three rooms. Fifty levels with hints and completion tracking.",
+    "controls": "Tap or drag cells; choose Cycle, Stone or Dot; Undo / Reset / Hint"
+  },
+  {
+    "id": "hidato",
+    "category": "games",
+    "name": "Hidato",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "hidato"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hidato/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Complete a consecutive number chain using horizontal, vertical and diagonal neighbors. Seeded 5×5, 6×6 and 7×7 puzzles with logical hints and local saves. Original Simplified Chinese interface; English help included.",
+    "controls": "Select a cell, then use the on-screen number pad; arrow keys move, R restarts; on-screen Hint, Undo and Check buttons. English help link above game."
   },
   {
     "id": "high-jump",
@@ -3752,6 +5389,23 @@ const GAMES_DATA = [
     "controls": "Tap Higher or Lower to guess the next card"
   },
   {
+    "id": "hitori",
+    "category": "games",
+    "name": "Hitori",
+    "tags": [
+      "games",
+      "hitori",
+      "logic",
+      "pencil-puzzle"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hitori/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hitori/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A pencil-and-paper logic puzzle: shade out every number that repeats in its row or column, but keep the white cells connected and avoid two shaded cells sitting next to each other.",
+    "controls": "Click a cell to shade it or mark it as safe - the puzzle checks the Hitori rules as you go"
+  },
+  {
     "id": "hive-sovereign",
     "category": "games",
     "name": "Hive Sovereign",
@@ -3760,6 +5414,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Hive-Sovereign.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hive-sovereign.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Hive Sovereign playable in your web browser.",
@@ -3820,6 +5475,23 @@ const GAMES_DATA = [
     "controls": "Tap a horse, choose your bet, then press Race"
   },
   {
+    "id": "html5-maze",
+    "category": "games",
+    "name": "HTML5 Maze",
+    "tags": [
+      "puzzle",
+      "maze",
+      "canvas",
+      "mobile"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/html5-maze/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/html5-maze/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A responsive canvas maze game that adapts its interface to the screen orientation and challenges you to find the exit.",
+    "controls": "Keyboard or touch: move through the maze"
+  },
+  {
     "id": "html5-pacman",
     "category": "games",
     "name": "HTML5 Pac-Man",
@@ -3836,6 +5508,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "An HTML5 canvas rendition of the arcade maze classic. Gobble every pellet while dodging the four ghosts, grab a power pill to turn the tables, and clear the board for a high score. A well-known open-source browser implementation.",
     "controls": "Arrow keys to steer through the maze"
+  },
+  {
+    "id": "human-middleware",
+    "category": "games",
+    "name": "Human Middleware",
+    "tags": [
+      "arcade",
+      "survival",
+      "comedy",
+      "single-file"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/human-middleware/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/human-middleware/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A dark-comedy office survival arcade: as Greta, chief accountant, print, retype, floppy-disk, and stamp every €8 invoice from your nephew's AI SaaS by hand — and survive as many days as you can.",
+    "controls": "Arrows/WASD to move, Shift to sprint, Space to act, 1-7 to buy upgrades, Y/N for calls, P to pause"
   },
   {
     "id": "hurdles",
@@ -3866,6 +5555,7 @@ const GAMES_DATA = [
       "maze"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/pacman/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pacman.jpg",
     "shelf": "Arcade & Action",
     "badge": "RETRO",
     "desc": "Faithful open-source Pacman with authentic ghost personality algorithms (Blinky, Pinky, Inky, Clyde).",
@@ -3882,6 +5572,7 @@ const GAMES_DATA = [
       "ludum-dare"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/hurry/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hurry.jpg",
     "shelf": "Arcade & Action",
     "badge": "ARCADE",
     "desc": "High-adrenaline mini-game where every level gives you exactly 10 seconds to survive.",
@@ -3906,6 +5597,24 @@ const GAMES_DATA = [
     "controls": "Mouse: Click / Drag | Keyboard: Type & Hotkeys | Drag & Drop disk images to mount"
   },
   {
+    "id": "ink-drift",
+    "category": "games",
+    "name": "Ink Drift",
+    "tags": [
+      "simulation",
+      "fluid",
+      "ink",
+      "art",
+      "sandbox"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ink-drift/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ink-drift.jpg",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "A quiet, hands-on fluid art toy. Stir bright ink through a soft current, blend colors, and leave a trail that slowly fades.",
+    "controls": "Click or drag to inject ink and stir the current. Choose a pigment, adjust brush and flow, or press Space to pause."
+  },
+  {
     "id": "ink-side-down",
     "category": "games",
     "name": "Ink Side Down",
@@ -3921,6 +5630,40 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A daily rolling-cube puzzle. Roll the cube across the paper so its inked face prints marks only where they belong - every tilt leaves a print, so plan the path and the orientation together.",
     "controls": "Arrow Keys or WASD: Roll the cube / Mouse and touch also supported"
+  },
+  {
+    "id": "interference-studio",
+    "category": "games",
+    "name": "Interference Studio",
+    "tags": [
+      "physics",
+      "waves",
+      "interference",
+      "simulation",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/interference-studio/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "Arrange local point emitters and explore constructive and destructive wave interference. Tune wavelength, phase, propagation speed, and color map in an original canvas-based physics visualizer.",
+    "controls": "Mouse or touch: click to add an emitter, drag to move it, Shift-click to remove. Space: run/pause. Adjust wavelength, alternate phase, speed, and presets."
+  },
+  {
+    "id": "inversion",
+    "category": "games",
+    "name": "Inversion",
+    "tags": [
+      "puzzle",
+      "platformer",
+      "co-op",
+      "2p"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/inversion/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/inversion/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A two-player co-op puzzle platformer built on the theme of duality: you steer one of two factory workers at a time — Space or I flips to the other worker and mirrors their movement, so you must juggle the pair through pipes, crates and spikes until they collide to clear the level.",
+    "controls": "WASD or arrow keys: move & jump (controls the active worker) · Space/I: switch active worker & mirror movement · R: restart"
   },
   {
     "id": "invincible-man",
@@ -3969,6 +5712,7 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/island-not-found/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/island-not-found.jpg",
     "shelf": "RPG & Adventure",
     "badge": "3D",
     "desc": "Atmospheric low-poly 3D island survival \u2014 explore dynamic procedural landscapes and solve island mysteries.",
@@ -3983,6 +5727,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Island-Survival.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/island-survival.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Island Survival playable in your web browser.",
@@ -3999,6 +5744,7 @@ const GAMES_DATA = [
       "isometric"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/isocity/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/isocity.jpg",
     "shelf": "Strategy & Idle",
     "badge": "CITY SIM",
     "desc": "Isometric procedural city builder and traffic simulator by Victor Ribeiro.",
@@ -4023,6 +5769,23 @@ const GAMES_DATA = [
     "controls": "Arrow keys to move"
   },
   {
+    "id": "javascript-metroidvania",
+    "category": "games",
+    "name": "JavaScript Metroidvania",
+    "tags": [
+      "metroidvania",
+      "platformer",
+      "action",
+      "exploration"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/javascript-metroidvania/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/javascript-metroidvania/title.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A compact metroidvania in Kaboom.js: explore two connected caves, fight drones and health-hungry set pieces, and take down the boss — whose defeat unlocks the double jump that opens the remaining passages.",
+    "controls": "Arrows/WASD to move, X to jump, Z to attack"
+  },
+  {
     "id": "javascript-racer",
     "category": "games",
     "name": "JavaScript Racer (Outrun 3D)",
@@ -4034,6 +5797,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/javascript-racer/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/javascript-racer.jpg",
     "shelf": "Sports & Racing",
     "badge": "Retro 3D",
     "desc": "Outrun-style pseudo-3D road racing game with hills, curves, sprite scaling, and high-speed traffic.",
@@ -4076,6 +5840,23 @@ const GAMES_DATA = [
     "controls": "Click to place and orient walls"
   },
   {
+    "id": "jigsaw",
+    "category": "games",
+    "name": "Jigsaw",
+    "tags": [
+      "games",
+      "jigsaw",
+      "puzzle",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jigsaw/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jigsaw/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Canvas jigsaw puzzler with irregular piece cuts, piece snapping, a timer, confetti and synthesized sound - three built-in themes or drop in your own picture.",
+    "controls": "Drag pieces onto the board; use the controls to change theme, difficulty and piece count"
+  },
+  {
     "id": "jolly-jumper",
     "category": "games",
     "name": "Jolly Jumper Endless",
@@ -4086,10 +5867,45 @@ const GAMES_DATA = [
       "endless"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/jolly-jumper/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/jolly-jumper.jpg",
     "shelf": "Arcade & Action",
     "badge": "CASUAL",
     "desc": "Endless vertical platform jumper bouncing across fragile clouds and springs.",
     "controls": "Left / Right Arrow Keys"
+  },
+  {
+    "id": "joust",
+    "category": "games",
+    "name": "Joust",
+    "tags": [
+      "arcade",
+      "classic",
+      "platformer",
+      "joust"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/joust/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/joust/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A modern reimplementation of the 1982 arcade classic: ride a war goose across the platforms and flip enemy knights out of the sky by ramming them from above.",
+    "controls": "Arrow keys to fly — hit enemies from a higher position to flip them"
+  },
+  {
+    "id": "js-playground",
+    "category": "games",
+    "name": "JS Playground",
+    "tags": [
+      "tools",
+      "javascript",
+      "coding",
+      "playground",
+      "sandbox"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/js-playground/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Write JavaScript, inspect console output, and build a small DOM preview in a sandboxed iframe with an opaque origin and restrictive Content Security Policy. No packages or server execution.",
+    "controls": "Edit the code and press Run or Ctrl+Enter. Choose a starter snippet, inspect console output, and download your source. Code runs inside a sandboxed iframe."
   },
   {
     "id": "jsfxr",
@@ -4166,6 +5982,93 @@ const GAMES_DATA = [
     "controls": "Tap / Click / any key: Jump"
   },
   {
+    "id": "jungle-chess",
+    "category": "games",
+    "name": "Jungle Chess",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "jungle-chess",
+      "ai"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jungle-chess/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/jungle-chess.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Animal chess against a local computer opponent: use ranks, traps, swimming rats and lion/tiger river jumps to reach the enemy den. Traditional Chinese interface.",
+    "controls": "Click or tap your animal, then a highlighted destination; 新局 starts again; 音效 toggles sound"
+  },
+  {
+    "id": "jv1010-tool",
+    "category": "games",
+    "name": "JV-1010 Tool",
+    "tags": [
+      "tools",
+      "MIDI",
+      "synthesizer",
+      "SysEx"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jv1010-tool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/jv1010-tool/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Inspect, edit and exchange Roland JV-1010 synthesizer patches through a browser MIDI and SysEx utility.",
+    "controls": "MIDI device: connect a JV-1010 - Mouse: edit patches and save SysEx files"
+  },
+  {
+    "id": "k1945",
+    "category": "games",
+    "name": "K1945",
+    "tags": [
+      "arcade",
+      "shooter",
+      "shmup",
+      "vertical",
+      "co-op"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/k1945/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/k1945/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A vertically scrolling WWII bomber shoot 'em up in the 1945 style: fight through the gauntlet, blast ground defenses, and take down the stage boss — solo or in two-player co-op.",
+    "controls": "WASD to fly, U to fire, I for bomb, 1 to start (arrow keys + K/L for player 2)"
+  },
+  {
+    "id": "kaboom",
+    "category": "games",
+    "name": "Kaboom",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "minesweeper"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kaboom/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kaboom/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A cruel-but-fair Minesweeper: mines are only created as you play, so guesses are punished — unless you are forced to guess, in which case it is safe.",
+    "controls": "Click to reveal a cell, right-click to flag it"
+  },
+  {
+    "id": "kakurasu",
+    "category": "games",
+    "name": "Kakurasu",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "kakurasu"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kakurasu/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Select cells to satisfy every weighted row and column sum. A cell contributes its column number to its row and its row number to its column. Campaign, daily puzzles and hints. Original Simplified Chinese interface; English help included.",
+    "controls": "Tap cells to toggle selection; N note mode, U undo, H hint, R restart. English help link above game."
+  },
+  {
     "id": "kakuro",
     "category": "games",
     "name": "Kakuro",
@@ -4182,6 +6085,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A number crossword puzzle. Fill the white cells with digits 1–9 so each horizontal and vertical run adds up to its clue, with no digit repeated inside a run. A logic challenge for math lovers.",
     "controls": "Tap a white cell and type a digit 1–9; Check to verify"
+  },
+  {
+    "id": "kaze-no-michi",
+    "category": "games",
+    "name": "Kaze no Michi",
+    "tags": [
+      "action",
+      "open-world",
+      "samurai",
+      "adventure"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kaze-no-michi/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kaze-no-michi/title.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "An open-world samurai journey across a procedurally generated autumn island in the browser: explore shrines, ginkgo valleys and cliffside pagodas, ride a horse, and duel enemies with combos, parries and dodges. Every texture, mesh, animation and sound is generated in code at runtime — the game ships no asset files at all.",
+    "controls": "WASD/arrows move, mouse look, left-click 3-hit combo, right-click/F heavy attack, Q block (parry on impact), Space/C dodge, R heal, E interact, H whistle for the horse, Esc pause (gamepad supported; UI Italian/English with a language setting)"
   },
   {
     "id": "keno",
@@ -4220,6 +6140,25 @@ const GAMES_DATA = [
     "controls": "Arrows: Move; Z / X: Kick and punch; Space / Enter: Confirm"
   },
   {
+    "id": "killer-sudoku",
+    "category": "games",
+    "name": "Killer Sudoku",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "sudoku",
+      "killer-sudoku",
+      "logic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/killer-sudoku/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/killer-sudoku.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Ian’s Killer Sudoku: fill each row, column and 3×3 box with 1–9 while meeting the dotted cages’ sums without repeats. Includes generated difficulties, pencil candidates, undo/redo and a sum calculator. Desktop keyboard and mouse required.",
+    "controls": "Hover a cell or use arrows; 1–9 toggle candidates; Shift+1–9 sets a value; C clears; Z undo; Y redo; S sum calculator; Go generates a puzzle"
+  },
+  {
     "id": "klondike-solitaire",
     "category": "games",
     "name": "Klondike Solitaire",
@@ -4238,6 +6177,89 @@ const GAMES_DATA = [
     "controls": "Tap a card to select, tap a destination to move; double-tap sends a card to its foundation; tap the stock to draw"
   },
   {
+    "id": "klotski",
+    "category": "games",
+    "name": "Klotski",
+    "tags": [
+      "games",
+      "klotski",
+      "sliding",
+      "puzzle",
+      "classic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/klotski/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/klotski/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "The classic sliding-block puzzle (Hua Gu Shan): manoeuvre the General and his guard out through the bottom gap with as few moves as possible - a solver is built in if you get stuck.",
+    "controls": "Drag the blocks around the 5x4 board to free the General - use the built-in solver if you are stuck"
+  },
+  {
+    "id": "knights-and-knaves",
+    "category": "games",
+    "name": "Knights and Knaves",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "knights-and-knaves"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/knights-and-knaves/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Deduce who always tells the truth and who always lies from logical testimony. Five generated tiers with English testimony and independent truth-table verification. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Tap Knight, Knave or ? on each card. Arrows navigate; 1 Knight, 2 Knave, 0 unknown; H hint, U undo, R restart."
+  },
+  {
+    "id": "knights-out",
+    "category": "games",
+    "name": "Knights Out",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/knights-out/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Move your knight in an L (two squares one way, one the other), landing only on a lit, unoccupied square.",
+    "controls": "Mouse / touch; English rules and controls linked in-game."
+  },
+  {
+    "id": "konane",
+    "category": "games",
+    "name": "Kōnane",
+    "tags": [
+      "games",
+      "html5",
+      "board"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/konane/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Capture stones with straight orthogonal jumps in Hawaiian checkers; computer or local two-player play.",
+    "controls": "Mouse / touch; rules and controls linked in-game."
+  },
+  {
+    "id": "kritikshoot",
+    "category": "games",
+    "name": "KritikShoot",
+    "tags": [
+      "arcade",
+      "shooter",
+      "arena",
+      "wave",
+      "survival"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kritikshoot/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kritikshoot/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A top-down 'crimson void' arena survival shooter: fight procedural waves, build your weapon loadout, survive the corruption zones, and race your ghost in Daily Challenge runs.",
+    "controls": "WASD to move, mouse or arrows to aim, click or Space to fire, E to switch weapons, Esc to pause"
+  },
+  {
     "id": "krunker",
     "category": "games",
     "name": "Krunker.io",
@@ -4253,6 +6275,41 @@ const GAMES_DATA = [
     "controls": "WASD to Move, Mouse to Aim & Shoot, Space to Bunny-Hop"
   },
   {
+    "id": "kuromasu",
+    "category": "games",
+    "name": "Kuromasu",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "kuromasu"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kuromasu/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/kuromasu.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Shade cells so every numbered cell sees exactly that many white cells along its row and column. Black cells cannot touch orthogonally and all white cells stay connected. Generated puzzles with hints and local saves. Chinese-language interface.",
+    "controls": "Select black (B) or white (W), then click or drag over cells; H hint; Z undo; R restart"
+  },
+  {
+    "id": "kurotto",
+    "category": "games",
+    "name": "Kurotto",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "kurotto"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kurotto/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Shade cells so each numbered circle touches black components whose combined size equals its clue. Four generated board sizes. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Tap cells to cycle unknown/black/white. B black, W white, 0 clears; H hint, Z undo, N new puzzle."
+  },
+  {
     "id": "lantern-memory",
     "category": "games",
     "name": "Lantern Memory",
@@ -4261,6 +6318,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Lantern-Memory.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/lantern-memory.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Lantern Memory playable in your web browser.",
@@ -4322,6 +6380,21 @@ const GAMES_DATA = [
     "controls": "Mouse / touch to toggle a tile"
   },
   {
+    "id": "lines-of-action",
+    "category": "games",
+    "name": "Lines of Action",
+    "tags": [
+      "games",
+      "html5",
+      "board"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lines-of-action/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Connect all of your pieces into one group, including diagonal neighbors.",
+    "controls": "Mouse / touch; English rules and controls linked in-game."
+  },
+  {
     "id": "linux-6.1.14-rv32ima-on-scratch",
     "category": "games",
     "name": "Linux 6.1.14-rv32ima on scratch",
@@ -4331,10 +6404,28 @@ const GAMES_DATA = [
       "linux"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/linux-6.1.14-rv32ima-on-scratch/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/linux-6.1.14-rv32ima-on-scratch.jpg",
     "shelf": "Emulators",
     "badge": "OS",
     "desc": "A real build of the Linux 6.1.14 kernel running in pure scratch code compiled by turbowarp into javascript",
     "controls": "Run cat readme.txt for info using keyboard"
+  },
+  {
+    "id": "lits",
+    "category": "games",
+    "name": "LITS",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "lits"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lits/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Shade one L, I, T or S tetromino in every room. Keep all shaded cells connected, avoid 2×2 blocks, and never let identical tetromino types touch across rooms.",
+    "controls": "Click or tap to cycle cells; use Shade or Dot tools to paint; Undo, Hint, Reset and level selection are on screen."
   },
   {
     "id": "lockmaster-shift",
@@ -4345,10 +6436,29 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Lockmaster-Shift.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/lockmaster-shift.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Lockmaster Shift playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "lode-runner",
+    "category": "games",
+    "name": "Lode Runner",
+    "tags": [
+      "games",
+      "lode-runner",
+      "classic",
+      "arcade",
+      "dig"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lode-runner/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lode-runner/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "The 1983 classic: dig through gold-bearing ground, collect the lodes in your sack, and race back before the goblins catch you - fall in the moat and you lose a life. Classic rules plus a built-in level editor.",
+    "controls": "Arrow keys or WASD to move, Z/Q to dig left, X/E to dig right, R to restart - dodge the goblins"
   },
   {
     "id": "lode-runner-2099",
@@ -4369,6 +6479,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A cyberpunk reimagining of Lode Runner: dig through platforms, collect the gold, outrun the pursuit droids. Every level is procedurally generated from a seed, with speed adjustment, retro CRT effects, multiple themes and generated chiptune music.",
     "controls": "Arrows: move - Z: dig left - X: dig right - +/-: speed - P: pause - T: theme - C: CRT - M: mute - R: restart level"
+  },
+  {
+    "id": "logic-gate-playground",
+    "category": "games",
+    "name": "Logic Gate Playground",
+    "tags": [
+      "logic",
+      "circuits",
+      "boolean",
+      "education",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/logic-gate-playground/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Build a four-stage Boolean circuit from common logic gates. Toggle three inputs, wire earlier outputs into later gates, and compare all eight truth-table rows against a target function.",
+    "controls": "Click Input A/B/C to toggle bits. Select each gate's inputs and operator, choose an output tap, and select a target truth table."
   },
   {
     "id": "long-jump",
@@ -4404,6 +6531,57 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A web remake of the 1995 Sega puzzle hit. Line up falling marbles into rows of three or more before the stack overwhelms you - playable with mouse or touch.",
     "controls": "Mouse / Touch: Swipe to move marble columns"
+  },
+  {
+    "id": "lsystem-garden",
+    "category": "games",
+    "name": "L-System Garden",
+    "tags": [
+      "generative-art",
+      "l-system",
+      "fractals",
+      "procedural",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lsystem-garden/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "Grow procedural branching art from simple rewrite rules. Explore fern, tree, Koch, Sierpinski, and dragon-curve grammars with adjustable iterations, turns, stroke weight, and palette.",
+    "controls": "Choose a recipe, adjust iterations and turn angle, then Grow again. Change line weight and palette to restyle the generated paths."
+  },
+  {
+    "id": "ludo",
+    "category": "games",
+    "name": "Ludo",
+    "tags": [
+      "games",
+      "ludo",
+      "board-game",
+      "local-multiplayer"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ludo/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ludo/1.png",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "Full Ludo rules on a canvas 15x15 board: 2-4 players, each human or bot, safe squares, captures, finishing lanes and the extra turn on a six.",
+    "controls": "Pick 2-4 players (human or bot) on the setup screen, then roll the dice and click a token to move it"
+  },
+  {
+    "id": "lunar-lander",
+    "category": "games",
+    "name": "Lunar Lander",
+    "tags": [
+      "games",
+      "html5",
+      "arcade",
+      "space"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lunar-lander/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lunar-lander/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A plain-JavaScript lunar lander: glide the ship to the landing zone with limited fuel and a steady attitude.",
+    "controls": "Left/Right arrows to tilt, Up arrow to thrust"
   },
   {
     "id": "magic-square",
@@ -4443,6 +6621,23 @@ const GAMES_DATA = [
     "controls": "Mouse / Touch: Drag to place magnets"
   },
   {
+    "id": "magnetism-bench",
+    "category": "games",
+    "name": "Magnetism Bench",
+    "tags": [
+      "physics",
+      "magnetism",
+      "field",
+      "simulation",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/magnetism-bench/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "Arrange bar magnets and inspect a locally computed magnetic-field vector map. Move the probe, compare like and unlike poles, and rotate the selected magnet.",
+    "controls": "Drag magnets to move them. Click empty canvas to add one; right-click or use Remove selected to remove one. Rotate selected turns it 45 degrees; adjust global strength."
+  },
+  {
     "id": "mahjong-link",
     "category": "games",
     "name": "Mahjong Link",
@@ -4451,6 +6646,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mahjong-Link.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mahjong-link.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Mahjong Link playable in your web browser.",
@@ -4494,6 +6690,24 @@ const GAMES_DATA = [
     "controls": "Mouse: click two matching free tiles to remove them - Menu: choose board layout, hint and shuffle"
   },
   {
+    "id": "make-24",
+    "category": "games",
+    "name": "Make 24",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "math",
+      "numbers"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/make-24/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/make-24.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Combine four numbers with addition, subtraction, multiplication and division to reach a target of 24, 36 or 48. Solo puzzle mode with undo and solution reveal.",
+    "controls": "Click a card, an operation, then another card; 1–4 pick cards; + − * / choose operations; Backspace undo; R reset"
+  },
+  {
     "id": "mancala",
     "category": "games",
     "name": "Mancala",
@@ -4512,6 +6726,23 @@ const GAMES_DATA = [
     "controls": "Mouse / touch to pick one of your pits"
   },
   {
+    "id": "mandelbrot-explorer",
+    "category": "games",
+    "name": "Mandelbrot Explorer",
+    "tags": [
+      "math",
+      "fractals",
+      "interactive",
+      "offline",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mandelbrot-explorer/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Explore the Mandelbrot and Julia sets with an interactive, locally rendered complex-plane explorer. Zoom, pan, tune iteration detail, change palettes and copy a shareable view link.",
+    "controls": "Click to zoom in; scroll to zoom around the pointer; drag to pan. Use +/− to zoom, arrow keys to pan and R to reset. Presets, iteration count, palettes and Julia constants are adjustable."
+  },
+  {
     "id": "marble-soccer",
     "category": "games",
     "name": "Marble Soccer 3D",
@@ -4522,6 +6753,7 @@ const GAMES_DATA = [
       "soccer"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/marble-soccer/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/marble-soccer.jpg",
     "shelf": "Sports & Racing",
     "badge": "SPORTS 3D",
     "desc": "Physics-based 3D marble soccer simulation with realistic momentum and goalposts.",
@@ -4536,6 +6768,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Market-Pulse.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/market-pulse.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Market Pulse playable in your web browser.",
@@ -4578,6 +6811,59 @@ const GAMES_DATA = [
     "controls": "Pick a colour, tap slots to place it, then Check"
   },
   {
+    "id": "masyu",
+    "category": "games",
+    "name": "Masyu",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "loop",
+      "masyu"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/masyu/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/masyu.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Draw one loop through every pearl: turn at black pearls and go straight through white ones. Generated puzzles with hints and local saves. Original Chinese-language interface.",
+    "controls": "Drag between adjacent cells to draw; right-click an edge to mark it excluded; H hint; Z undo; N new puzzle"
+  },
+  {
+    "id": "match-3",
+    "category": "games",
+    "name": "Match 3",
+    "tags": [
+      "puzzle",
+      "match-3",
+      "canvas",
+      "casual"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/match-3/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/match-3/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A compact canvas match-three puzzle: swap neighboring gems to make rows and columns of three or more, then watch the board cascade.",
+    "controls": "Mouse: click or drag neighboring gems to swap them"
+  },
+  {
+    "id": "matchstick-arithmetic",
+    "category": "games",
+    "name": "Matchstick Arithmetic",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "matchstick-arithmetic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/matchstick-arithmetic/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Repair seven-segment equations by moving matches without changing the total match count. Sixty campaign puzzles plus daily and seeded challenges. Original Simplified Chinese interface; English help included.",
+    "controls": "Drag a lit match to an unlit segment. U undo, H hint, R restart; Escape closes the result card."
+  },
+  {
     "id": "mathdoku",
     "category": "games",
     "name": "MathDoku",
@@ -4606,6 +6892,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Maze-Chase.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/maze-chase.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Maze Chase playable in your web browser.",
@@ -4674,6 +6961,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Merge-Orbit.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/merge-orbit.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Merge Orbit playable in your web browser.",
@@ -4707,10 +6995,29 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Metro-Weaver.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/metro-weaver.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Metro Weaver playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "metroidvania",
+    "category": "games",
+    "name": "Metroidvania",
+    "tags": [
+      "games",
+      "html5",
+      "rpg",
+      "platformer",
+      "metroidvania"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/metroidvania/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/metroidvania/1.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A simple metroidvania in JavaScript and Kaboom.js: explore connected rooms, defeat enemies and collect the keys you need to go further.",
+    "controls": "A/D or arrows to move, W/Up to jump, J/X to shoot"
   },
   {
     "id": "micropolisjs",
@@ -4730,6 +7037,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "midloop",
+    "category": "games",
+    "name": "Mid-loop",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "midloop"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/midloop/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Draw one closed loop through all dots. Every dot must be the midpoint of the straight segment that passes through it. Four grid sizes, hints and local saves. Original Simplified Chinese interface; English help included.",
+    "controls": "Drag between adjacent cell centers; right-click an edge to exclude it. E switches pen, H hint, C check, Z undo, N new. English help link above game."
+  },
+  {
     "id": "midnight-chess",
     "category": "games",
     "name": "Midnight Chess",
@@ -4740,6 +7064,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Midnight-Chess.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/midnight-chess.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Midnight Chess playable in your web browser.",
@@ -4754,10 +7079,29 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Midnight-Monitor.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/midnight-monitor.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Midnight Monitor playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "mine-cart-carnage",
+    "category": "games",
+    "name": "Mine Cart Carnage",
+    "tags": [
+      "games",
+      "runner",
+      "endless",
+      "arcade",
+      "mobile"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mine-cart-carnage/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mine-cart-carnage/1.png",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A pixel-art endless mine-cart runner in the spirit of the SNES classic: switch lanes, mine bananas, and dodge monkeys, barrels and rival carts.",
+    "controls": "Tap, click or use the arrow keys to steer the cart and mine bananas"
   },
   {
     "id": "mine-matrix",
@@ -4768,6 +7112,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mine-Matrix.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mine-matrix.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Mine Matrix playable in your web browser.",
@@ -4784,6 +7129,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/minesweeper/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/minesweeper.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Minesweeper playable in your web browser.",
@@ -4871,6 +7217,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mist-Valley-Herbarium.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mist-valley-herbarium.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Mist Valley Herbarium playable in your web browser.",
@@ -4902,6 +7249,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Moba-Frontier.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/moba-frontier.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Moba Frontier playable in your web browser.",
@@ -4916,6 +7264,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mole-Market.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mole-market.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Mole Market playable in your web browser.",
@@ -4948,6 +7297,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Monster-Horde.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/monster-horde.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Monster Horde playable in your web browser.",
@@ -4964,6 +7314,7 @@ const GAMES_DATA = [
       "dungeon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Monster-Tamer.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/monster-tamer.jpg",
     "shelf": "RPG & Adventure",
     "badge": "",
     "desc": "Monster Tamer playable in your web browser.",
@@ -4980,6 +7331,7 @@ const GAMES_DATA = [
       "monsters"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/monster-candy/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/monster-candy.jpg",
     "shelf": "Arcade & Action",
     "badge": "ARCADE",
     "desc": "Fast-paced candy catching arcade game by Enclave Games with vibrant animations.",
@@ -4994,6 +7346,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Moon-Lander.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/moon-lander.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Moon Lander playable in your web browser.",
@@ -5008,10 +7361,63 @@ const GAMES_DATA = [
       "platformer"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/Moon-Light-Platformer/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/moon-light-platformer.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A pixelated platformer game",
     "controls": "WASD"
+  },
+  {
+    "id": "moonlander",
+    "category": "games",
+    "name": "Moonlander",
+    "tags": [
+      "games",
+      "html5",
+      "arcade",
+      "3d",
+      "space"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/moonlander/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/moonlander/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A 3D lunar-lander inspired arcade game: rotate the ship, manage fuel and land safely on the marked pads.",
+    "controls": "Left/Right arrows to rotate, Up arrow to thrust, P to pause"
+  },
+  {
+    "id": "moonsun",
+    "category": "games",
+    "name": "Moon-or-Sun",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "moonsun"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/moonsun/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Make one loop through every room, choosing either all its moons or all its suns. Visited rooms must alternate between moon and sun. Three sizes with logical hints. Original Simplified Chinese interface; English help included.",
+    "controls": "Tap a cell to cycle its line shape; right-click cycles backward. Arrow keys move; Enter cycles; 0–6 select a shape, H hint, Z undo. English help link above game."
+  },
+  {
+    "id": "morse-tool",
+    "category": "games",
+    "name": "Morse Tool",
+    "tags": [
+      "tools",
+      "Morse",
+      "audio",
+      "encoding"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/morse-tool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/morse-tool/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Convert text to Morse code and play or inspect the corresponding audio signal with a fully local browser tool.",
+    "controls": "Keyboard: enter text - Mouse: convert and play Morse audio"
   },
   {
     "id": "mosaic-jigsaw",
@@ -5023,10 +7429,29 @@ const GAMES_DATA = [
       "system"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Mosaic-Jigsaw.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mosaic-jigsaw.jpg",
     "shelf": "Emulators",
     "badge": "EMU",
     "desc": "Browser-based virtual system and hardware emulator.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "mosslight-roguelike",
+    "category": "games",
+    "name": "Mosslight Roguelike",
+    "tags": [
+      "roguelike",
+      "ascii",
+      "survival",
+      "turn-based",
+      "exploration"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mosslight-roguelike/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mosslight-roguelike.jpg",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A turn-based ASCII expedition through an overgrown conservatory. Read the terrain, forage for amber seeds, manage your lantern and fend off tiny spirits as you cross five living clearings.",
+    "controls": "WASD or arrow keys to move. F pulses the lantern, R uses a herb, and E waits. Collect two seeds per clearing, then reach the gate."
   },
   {
     "id": "moto-x3m-2",
@@ -5039,6 +7464,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Moto-x3m-2.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/moto-x3m-2.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Moto X3m 2 playable in your web browser.",
@@ -5055,6 +7481,7 @@ const GAMES_DATA = [
       "classic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/mumuy-pacman/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mumuy-pacman.jpg",
     "shelf": "Arcade & Action",
     "badge": "ARCADE",
     "desc": "Pixel-perfect HTML5 Pacman with responsive touch controls, original sound effects, and ghosts AI.",
@@ -5069,6 +7496,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Museum-Climate.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/museum-climate.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Museum Climate playable in your web browser.",
@@ -5086,6 +7514,7 @@ const GAMES_DATA = [
       "relaxing"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/island-builder/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/island-builder.jpg",
     "shelf": "Strategy & Idle",
     "badge": "VOXEL 3D",
     "desc": "3D procedural Mediterranean voxel island creator with real-time lighting and building placement.",
@@ -5102,10 +7531,64 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Neon-2048.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/neon-2048.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Neon 2048 playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "neon-drift",
+    "category": "games",
+    "name": "Neon-Drift",
+    "tags": [
+      "arcade",
+      "racing",
+      "drift",
+      "open-world",
+      "3d"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/neon-drift/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/neon-drift/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A neon-lit open-world drift arcade: explore the city, master high-speed drifts, evade the police, unlock new cars, and chase the high score.",
+    "controls": "WASD or arrows to drive, Shift to drift"
+  },
+  {
+    "id": "nes-js",
+    "category": "games",
+    "name": "NES.js",
+    "tags": [
+      "emulator",
+      "NES",
+      "retro",
+      "upload",
+      "debugger"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nes-js/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nes-js/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A standalone JavaScript NES emulator with a local cartridge loader, drag-and-drop support, debugging panels and controller input. No ROMs are distributed.",
+    "controls": "Choose a local .nes file or drag one onto the page - Buttons: use the on-screen NES controller - Debug controls: inspect CPU and memory state"
+  },
+  {
+    "id": "nesjs-alt",
+    "category": "games",
+    "name": "NES.js Classic",
+    "tags": [
+      "emulator",
+      "NES",
+      "retro",
+      "upload"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nesjs-alt/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nesjs-alt/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A second standalone JavaScript NES emulator with local cartridge upload, ZIP support and mapper implementations. No game ROMs are distributed.",
+    "controls": "Choose a local NES ROM - Keyboard: use the controller controls shown in the page - ZIP cartridges are supported"
   },
   {
     "id": "ngon",
@@ -5180,6 +7663,23 @@ const GAMES_DATA = [
     "controls": "Swipe or drag across fruit to slice, avoid the bombs"
   },
   {
+    "id": "node-gameboy",
+    "category": "games",
+    "name": "Node Gameboy",
+    "tags": [
+      "emulator",
+      "Game Boy",
+      "retro",
+      "upload"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/node-gameboy/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/node-gameboy/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser Game Boy emulator with a local .gb cartridge picker, canvas display and keyboard controls. No cartridges are distributed.",
+    "controls": "Choose a local .gb file - Keyboard: use the Game Boy controls shown in the page - Mouse: use the emulator panel"
+  },
+  {
     "id": "nonogram",
     "category": "games",
     "name": "Nonogram",
@@ -5206,10 +7706,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Noodle-Shift.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/noodle-shift.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Noodle Shift playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "norinori",
+    "category": "games",
+    "name": "Norinori",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "norinori"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/norinori/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Shade exactly two cells in each region, forming isolated dominoes that may cross region boundaries. Generated boards run in a local worker. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Choose Black/White and tap cells to mark or erase. Arrows navigate, Space/Enter marks, E erases; 1/2 tools, U undo, H hint."
   },
   {
     "id": "norman-necromancer",
@@ -5223,10 +7741,46 @@ const GAMES_DATA = [
       "turn-based"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/norman-necromancer/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/norman-necromancer.jpg",
     "shelf": "RPG & Adventure",
     "badge": "TACTICS",
     "desc": "Turn-based tactical dungeon crawler by Dan Prince where you raise fallen enemies into your skeletal army.",
     "controls": "Mouse Click / Arrow Keys"
+  },
+  {
+    "id": "null-sector",
+    "category": "games",
+    "name": "Null Sector",
+    "tags": [
+      "fps",
+      "wave-survival",
+      "shooter",
+      "mod-editor"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/null-sector/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/null-sector/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A single-file first-person wave-survival shooter with a military-sci-fi TAC-UI: escalating hostile-signal waves across a generated facility, an arsenal with heat/reload management, score streaks and endless mode — plus a built-in visual MOD editor (mod-studio) for reskinning weapons and effects. Bilingual EN/ZH HUD with a language setting (default ZH).",
+    "controls": "WASD to move, mouse to aim, left-click to fire, R to reload, Shift to sprint, E to interact (touch controls on mobile)"
+  },
+  {
+    "id": "nurikabe",
+    "category": "games",
+    "name": "Nurikabe",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "islands"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nurikabe/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/nurikabe.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Build numbered white islands separated by a connected black sea, without any 2×2 black squares. Built-in puzzles, hints, undo and local saves. Chinese-language interface.",
+    "controls": "Choose sea (1) or land (2), then click or drag over cells; H hint; Z undo; use the new-puzzle controls to start again"
   },
   {
     "id": "observatory-watch",
@@ -5237,6 +7791,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Observatory-Watch.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/observatory-watch.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Observatory Watch playable in your web browser.",
@@ -5253,6 +7808,7 @@ const GAMES_DATA = [
       "doodle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/octocat-jump/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/octocat-jump.jpg",
     "shelf": "Arcade & Action",
     "badge": "CASUAL",
     "desc": "Endless vertical platform jumper starring GitHub\u2019s mascot Octocat.",
@@ -5270,6 +7826,7 @@ const GAMES_DATA = [
       "speedrun"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/offline-paradise/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/offline-paradise.jpg",
     "shelf": "Arcade & Action",
     "badge": "JS13k",
     "desc": "Thrilling fast-paced 2D precision platformer \u2014 dash, double-jump, wall-slide, and dodge lethal lasers.",
@@ -5340,6 +7897,7 @@ const GAMES_DATA = [
       "hex"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/openpanzer/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/openpanzer.jpg",
     "shelf": "Strategy & Idle",
     "badge": "TACTICS",
     "desc": "Deep turn-based hex-grid tactical WWII wargame featuring historical European campaigns and armored units.",
@@ -5354,10 +7912,62 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/OpenSC2K/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/opensc2k.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "OpenSC2K playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "operation-ironhold",
+    "category": "games",
+    "name": "Operation Ironhold",
+    "tags": [
+      "fps",
+      "shooter",
+      "action",
+      "single-file"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/operation-ironhold/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/operation-ironhold/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A complete first-person shooter in one HTML file: clear the container yard of ten hostiles in three minutes with four weapons, double jumps, and mantles — every visual, sound, and model is generated at runtime.",
+    "controls": "WASD to move, mouse to aim, left click to fire, 1-4 for weapons, Space to jump (double jump / mantle)"
+  },
+  {
+    "id": "optics-bench",
+    "category": "games",
+    "name": "Optics Bench",
+    "tags": [
+      "physics",
+      "optics",
+      "lenses",
+      "simulation",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/optics-bench/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "Explore image formation with an interactive thin-lens ray bench. Change object distance, height, focal length, and lens type; compare real and virtual images and principal rays.",
+    "controls": "Use sliders and the lens selector to change the optical setup. The diagram and image readouts update immediately."
+  },
+  {
+    "id": "orbit-garden",
+    "category": "games",
+    "name": "Orbit Garden",
+    "tags": [
+      "simulation",
+      "gravity",
+      "space",
+      "physics",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/orbit-garden/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "An interactive gravity sandbox for arranging small orbital systems. Choose a preset, pause the motion, or drag on the canvas to launch a new body. Uses a local softened Newtonian simulation with no external assets.",
+    "controls": "Pick a preset and press Play/Pause. Drag on the space canvas to place a body; the drag direction and length set its launch velocity. Adjust gravity and time scale locally."
   },
   {
     "id": "orbital-pinball",
@@ -5368,6 +7978,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Orbital-Pinball.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/orbital-pinball.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Orbital Pinball playable in your web browser.",
@@ -5382,6 +7993,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Orbital-Stowage.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/orbital-stowage.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Orbital Stowage playable in your web browser.",
@@ -5417,6 +8029,7 @@ const GAMES_DATA = [
       "synth"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/os13k/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/os13k.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "RETRO OS",
     "desc": "Fictional 1980s WebGL operating system featuring built-in arcade games, tracker music, disk utilities, and easter eggs.",
@@ -5431,6 +8044,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/pacman-canvas/index.htm",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pacman-canvas.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pacman Canvas playable in your web browser.",
@@ -5509,6 +8123,23 @@ const GAMES_DATA = [
     "controls": "Tap / Click / any key: Turn"
   },
   {
+    "id": "pancake-sorting",
+    "category": "games",
+    "name": "Pancake Sorting",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "pancake-sorting"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pancake-sorting/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Sort a stack using prefix reversals: flip the top k pancakes together. Includes burnt-side puzzles and exact shortest-path targets. Original Simplified Chinese interface; English help included.",
+    "controls": "Tap below a pancake to flip the prefix; focus the canvas for arrows and Enter, or keys 1–9. U undo, H hint, R restart."
+  },
+  {
     "id": "paper-io-2",
     "category": "games",
     "name": "Paper.io 2",
@@ -5542,6 +8173,24 @@ const GAMES_DATA = [
     "controls": "Mouse: Click particles, buttons and upgrades"
   },
   {
+    "id": "particle-life-lab",
+    "category": "games",
+    "name": "Particle Life Lab",
+    "tags": [
+      "simulation",
+      "particles",
+      "chemistry",
+      "sandbox",
+      "experiments"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/particle-life-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/particle-life-lab.jpg",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "Build a tiny chemistry of motion. Tune how four colored species attract and repel one another, then watch new patterns emerge.",
+    "controls": "Click a matrix cell to cycle its force. Drag on the field to attract; use the field button or Shift/right-drag to repel. Space pauses."
+  },
+  {
     "id": "polygons",
     "category": "games",
     "name": "Parable of the Polygons",
@@ -5552,6 +8201,7 @@ const GAMES_DATA = [
       "explorable"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/polygons/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/polygons.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "SIM",
     "desc": "An interactive post on the mechanics of systemic bias and segregation by Vi Hart and Nicky Case.",
@@ -5566,6 +8216,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pathogen-Protocol.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pathogen-protocol.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pathogen Protocol playable in your web browser.",
@@ -5618,10 +8269,81 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Penalty-Rush.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/penalty-rush.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Penalty Rush playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "pendulum-studio",
+    "category": "games",
+    "name": "Pendulum Studio",
+    "tags": [
+      "physics",
+      "pendulum",
+      "simulation",
+      "education",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pendulum-studio/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "Explore a damped pendulum with an interactive local physics workbench. Set its release angle, length, gravity, and damping; drag the bob and compare the motion trace and energy.",
+    "controls": "Mouse/touch: drag the bob to set its angle. Use sliders for angle, length, gravity, and damping; Start, Step, and Reset control the simulation."
+  },
+  {
+    "id": "pentapack",
+    "category": "games",
+    "name": "Pentapack",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "pentapack"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pentapack/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Fit pentomino pieces into shaped trays without gaps or overlaps. Thirty campaign puzzles plus date-based and seeded challenges, with hints and local records. Original Simplified Chinese interface; English help included.",
+    "controls": "Drag pieces into the tray; double-tap/click a piece to rotate; right-click or long-press mirrors it. U undo, H hint, R restart."
+  },
+  {
+    "id": "pente",
+    "category": "games",
+    "name": "Pente",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "pente",
+      "ai",
+      "local-multiplayer"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pente/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pente.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Place stones on a 19×19 board. Win by making five in a row or capturing five pairs of opposing stones. Play against a computer opponent or a friend on the same device.",
+    "controls": "Click an empty intersection to place a stone; flank exactly two opponent stones to capture them; New restarts; +/− zoom"
+  },
+  {
+    "id": "phase",
+    "category": "games",
+    "name": "PHASE",
+    "tags": [
+      "rhythm",
+      "shooter",
+      "twin-stick",
+      "vaporwave"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/phase/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/phase/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A vaporwave rhythm twin-stick shooter: your guns fire on the beat, every enemy you destroy plays a note in key, and your dashes are judged against the music to within 40 ms. Twenty-five sectors and five guardians, with a soundtrack composed live as you play — every pixel and every sound generated at runtime (zero asset files).",
+    "controls": "WASD/arrows move, mouse aims (always firing), left-click/Space dash, hold right-click/Shift for bullet time, Q/E/middle-click bomb, Esc pause (gamepad + touch supported)"
   },
   {
     "id": "photo-safari",
@@ -5632,10 +8354,27 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Photo-Safari.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/photo-safari.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Photo Safari playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "piano-tiles",
+    "category": "games",
+    "name": "Piano Tiles",
+    "tags": [
+      "arcade",
+      "music",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/piano-tiles/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/piano-tiles/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Tap the moving black tiles and avoid the white ones in this fast reflex game rendered with HTML5 canvas.",
+    "controls": "Mouse or touch: tap black tiles"
   },
   {
     "id": "pig-dice",
@@ -5672,6 +8411,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A pseudo-3D obstacle run from Kenta Cho: slide left and right to weave between oncoming pillars at ever-increasing speed.",
     "controls": "Slide / drag: Move"
+  },
+  {
+    "id": "pimenta",
+    "category": "games",
+    "name": "Pimenta",
+    "tags": [
+      "games",
+      "shooter",
+      "vertical",
+      "arcade"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pimenta/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pimenta/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A one-file vertical space shooter: weave through the waves, auto-fire keeps you busy, and every run is five lives long. Built in vanilla JavaScript - no engine, no assets to load.",
+    "controls": "Arrow keys or WASD to move - firing is automatic, P to pause"
   },
   {
     "id": "pin-climb",
@@ -5753,10 +8509,29 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pixel-Clues.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pixel-clues.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pixel Clues playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "pixel-princess-platformer",
+    "category": "games",
+    "name": "Pixel Princess Platformer",
+    "tags": [
+      "games",
+      "platformer",
+      "arcade",
+      "levels",
+      "mobile"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pixel-princess-platformer/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pixel-princess-platformer/1.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "Pick a heroine and race across six themed worlds - forest, coral abyss, oriental rooftops, snowy peaks, twilight garden and the royal castle - past a multi-phase stone guardian to the Sala da Ballo finale.",
+    "controls": "Arrow keys or WASD to run and jump (touch controls on mobile)"
   },
   {
     "id": "pixel-runner",
@@ -5821,10 +8596,28 @@ const GAMES_DATA = [
       "Website"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/play-obsidian/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/play-obsidian.jpg",
     "shelf": "Arcade & Action",
     "badge": "Website",
     "desc": "Embed of PlayObsidian.com",
     "controls": "none"
+  },
+  {
+    "id": "plinko",
+    "category": "games",
+    "name": "Plinko",
+    "tags": [
+      "games",
+      "plinko",
+      "arcade",
+      "physics"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/plinko/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/plinko/screenshot.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Drop chips down a glowing peg pyramid with real physics: every bounce is random, edge slots pay best, and your best run is saved in the browser.",
+    "controls": "Click or tap anywhere on the board to drop a chip"
   },
   {
     "id": "pocket-companion",
@@ -5835,6 +8628,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pocket-Companion.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pocket-companion.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pocket Companion playable in your web browser.",
@@ -5851,6 +8645,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pocket-Empire.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pocket-empire.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Pocket Empire playable in your web browser.",
@@ -5867,6 +8662,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pocket-Farm.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pocket-farm.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Pocket Farm playable in your web browser.",
@@ -5883,10 +8679,46 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pocket-Golf.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pocket-golf.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Pocket Golf playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "pocketborough",
+    "category": "games",
+    "name": "Pocketborough",
+    "tags": [
+      "city-builder",
+      "strategy",
+      "simulation",
+      "town-planning",
+      "economy"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pocketborough/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pocketborough.jpg",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "Plan a compact, living neighborhood one block at a time. Connect homes to the street grid, balance food, jobs and parks, then grow a town that can pay its own way.",
+    "controls": "Choose a blueprint, then click an empty connected block to build. Advance Quarter to grow the town."
+  },
+  {
+    "id": "pocketleaf-pip",
+    "category": "games",
+    "name": "Pip & the Pocket Kingdom",
+    "tags": [
+      "arcade",
+      "platformer",
+      "pixel",
+      "console"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pocketleaf-pip/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pocketleaf-pip/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A tiny original pixel platformer inside POCKETLEAF, a handheld console in your browser: guide sprout Pip across three hand-made levels — stomp Mossbugs, dodge Snappers, collect Glimmers, and reach the Beacon before the clock runs out.",
+    "controls": "Arrows or WASD to move, Z/K to jump, X/J to run (touch d-pad and gamepad supported)"
   },
   {
     "id": "pong",
@@ -5897,6 +8729,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/pong/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pong.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pong playable in your web browser.",
@@ -5914,10 +8747,28 @@ const GAMES_DATA = [
       "medieval"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/predecessors/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/predecessors.jpg",
     "shelf": "Strategy & Idle",
     "badge": "JS13k",
     "desc": "Tactical medieval 13th-century strategy game \u2014 command knights, archers, and pikemen to conquer fortresses.",
     "controls": "Mouse / Touch: Select Units and Orders | Space / Enter: End Turn"
+  },
+  {
+    "id": "prime-spiral-lab",
+    "category": "games",
+    "name": "Prime Spiral Lab",
+    "tags": [
+      "number-theory",
+      "primes",
+      "ulam-spiral",
+      "mathematics",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/prime-spiral-lab/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Plot consecutive integers on a Ulam spiral and highlight primes to reveal diagonal patterns. Change the range, cell scale, and residue coloring with a local sieve.",
+    "controls": "Adjust the largest integer and cell scale sliders; choose prime highlighting, prime classes modulo 6, or all residues modulo 10."
   },
   {
     "id": "prism-breaker",
@@ -5928,6 +8779,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Prism-Breaker.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/prism-breaker.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Prism Breaker playable in your web browser.",
@@ -5942,10 +8794,45 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Prism-Orchard.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/prism-orchard.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Prism Orchard playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "prism-relay",
+    "category": "games",
+    "name": "Prism Relay",
+    "tags": [
+      "puzzle",
+      "logic",
+      "optics",
+      "light",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/prism-relay/",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "A code-drawn beam-routing puzzle. Rotate mirrors to guide a light pulse around blockers and into the receiver across five original circuits.",
+    "controls": "Click or tap a mirror to rotate it. Route the beam from the emitter to the receiver; Reset Mirrors restores the current circuit."
+  },
+  {
+    "id": "prison-break",
+    "category": "games",
+    "name": "AI Prison Break",
+    "tags": [
+      "games",
+      "stealth",
+      "ai",
+      "top-down"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/prison-break/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/prison-break/1.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A top-down stealth escape: reach the exit while guards hunt you with real finite-state-machine brains that switch between DFS, BFS and A* pathfinding - three difficulty levels.",
+    "controls": "WASD or arrow keys to move; dodge guard vision cones and reach the EXIT tile"
   },
   {
     "id": "progress-knight",
@@ -5958,6 +8845,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/progress-knight/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/progress-knight.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Progress Knight playable in your web browser.",
@@ -5982,6 +8870,24 @@ const GAMES_DATA = [
     "controls": "Drag your paddle with mouse or finger"
   },
   {
+    "id": "pulley-lab",
+    "category": "games",
+    "name": "Pulley Lab",
+    "tags": [
+      "simulation",
+      "physics",
+      "pulley",
+      "mechanics",
+      "experiments"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pulley-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pulley-lab.jpg",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "A hands-on rope-and-pulley sandbox. Compare fixed, movable, and block-and-tackle rigs as you trade pulling distance for lifting force.",
+    "controls": "Choose a pulley rig and set the load and effort. Drag the rope handle down or press Pull Rope; Space also pulls."
+  },
+  {
     "id": "pulse-studio",
     "category": "games",
     "name": "Pulse Studio",
@@ -5990,6 +8896,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Pulse-Studio.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pulse-studio.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Pulse Studio playable in your web browser.",
@@ -6068,6 +8975,55 @@ const GAMES_DATA = [
     "controls": "WASD to Move, Mouse to Look & Shoot, Space to Jump, 1-2 Weapons"
   },
   {
+    "id": "qr-code-studio",
+    "category": "games",
+    "name": "QR Code Studio",
+    "tags": [
+      "tools",
+      "qr-code",
+      "generator",
+      "offline",
+      "privacy"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/qr-code-studio/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Generate QR codes for text or links entirely in the browser. Adjust error correction, quiet zone, module size and colors, then download a PNG or SVG. No QR API or network request is used.",
+    "controls": "Enter text, choose error correction and colors, then download PNG or SVG. The live preview updates as you edit."
+  },
+  {
+    "id": "quarto",
+    "category": "games",
+    "name": "Quarto",
+    "tags": [
+      "games",
+      "html5",
+      "board"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/quarto/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Choose a piece for your opponent, then place the piece they give you on an empty square.",
+    "controls": "Mouse / touch; English rules and controls linked in-game."
+  },
+  {
+    "id": "quoridor",
+    "category": "games",
+    "name": "Quoridor",
+    "tags": [
+      "games",
+      "quoridor",
+      "board-game",
+      "strategy"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/quoridor/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/quoridor/1.png",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "The wall-building board game: race across a 9x9 grid and lay walls in the way of up to three friends - or beat a built-in artificial intelligence alone.",
+    "controls": "Click a square to move, then click an edge to place a wall; auto-rematch on win"
+  },
+  {
     "id": "racer",
     "category": "games",
     "name": "Racer",
@@ -6112,6 +9068,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Radish-Guard.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/radish-guard.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Radish Guard playable in your web browser.",
@@ -6129,6 +9086,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/radius-raid/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/radius-raid.jpg",
     "shelf": "Arcade & Action",
     "badge": "VECTOR",
     "desc": "Hypnotic space vector arena shooter with glowing neon particle explosions and endless waves.",
@@ -6178,6 +9136,7 @@ const GAMES_DATA = [
       "gardening"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/raging-gardens/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/raging-gardens.jpg",
     "shelf": "Arcade & Action",
     "badge": "ACTION",
     "desc": "Harvest giant carrots across mazes while evading hungry rampaging rabbits.",
@@ -6220,6 +9179,23 @@ const GAMES_DATA = [
     "controls": "Tap / Click: Change lane"
   },
   {
+    "id": "reaction-field",
+    "category": "games",
+    "name": "Reaction Field",
+    "tags": [
+      "simulation",
+      "chemistry",
+      "patterns",
+      "reaction-diffusion",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reaction-field/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "Explore a self-organizing reaction-diffusion field. Seed reagent B, tune feed and kill rates, and watch spots, branches, mazes, and waves emerge in a local Gray–Scott simulation.",
+    "controls": "Mouse or touch: drag to seed reagent B; Shift-drag to erase. Space: run or pause. Use Step once, Reset pattern, presets, feed/kill sliders, and color maps."
+  },
+  {
     "id": "reaction-test",
     "category": "games",
     "name": "Reaction Test",
@@ -6248,6 +9224,7 @@ const GAMES_DATA = [
       "scratch"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/real-dos-windows-on-scratch/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/real-dos-windows-on-scratch.jpg",
     "shelf": "Emulators",
     "badge": "OS",
     "desc": "A mostly functional 8086 emulator running in scratch, compiled by turbowarp",
@@ -6262,6 +9239,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Recoil.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/recoil.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Recoil playable in your web browser.",
@@ -6276,6 +9254,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Relay-Coordination.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/relay-coordination.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Relay Coordination playable in your web browser.",
@@ -6312,10 +9291,29 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/rescue-copter/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/rescue-copter.jpg",
     "shelf": "Arcade & Action",
     "badge": "Action",
     "desc": "Pilot a firefighting rescue helicopter \u2014 scoop water from lakes and extinguish raging forest fires.",
     "controls": "WASD / Arrow Keys: Fly Helicopter | Space: Drop Water"
+  },
+  {
+    "id": "retro-games",
+    "category": "games",
+    "name": "Retro Arcade",
+    "tags": [
+      "games",
+      "html5",
+      "arcade",
+      "retro",
+      "compilation"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/retro-games/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/retro-games/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Four retro arcade classics in one cabinet: Asteroids, Lunar Lander, Snake and Space Invaders — all plain JavaScript.",
+    "controls": "Pick a game, then mouse + keyboard (each game shows its controls)"
   },
   {
     "id": "reversi",
@@ -6373,6 +9371,23 @@ const GAMES_DATA = [
     "controls": "Slide / drag: Change angle and speed"
   },
   {
+    "id": "river-crossing",
+    "category": "games",
+    "name": "River Crossing",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "river-crossing"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/river-crossing/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Ferry people and cargo across a river while respecting capacity and forbidden pairings. Includes supervised and free-boat variants with shortest-route targets. Original Simplified Chinese interface; English help included.",
+    "controls": "Drag roles onto/off the boat; tap the boat or drag it to the opposite bank to cross. Space/Enter crosses, U undo, H hint, R restart."
+  },
+  {
     "id": "river-holdem",
     "category": "games",
     "name": "River Holdem",
@@ -6381,10 +9396,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/River-Holdem.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/river-holdem.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "River Holdem playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "river-raid",
+    "category": "games",
+    "name": "River Raid 2K",
+    "tags": [
+      "games",
+      "river-raid",
+      "arcade",
+      "shooter"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/river-raid/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/river-raid/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "An intuitive remake of the 1982 classic: fly your jet down an endless procedural river, blast planes, helicopters and fuel depots - and refuel mid-flight without touching the water.",
+    "controls": "Arrow keys to fly, Space to fire"
   },
   {
     "id": "road-hopper",
@@ -6433,6 +9466,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/roguish/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/roguish.jpg",
     "shelf": "RPG & Adventure",
     "badge": "ROGUELIKE",
     "desc": "Traditional ASCII/tile turn-based roguelike with procedural dungeons and permadeath.",
@@ -6490,6 +9524,24 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Spin the wheel and test your luck at the casino table. Place chips on straight numbers, red or black, odds or evens, dozens and more, then watch the ball settle. Straight numbers pay 35 to 1.",
     "controls": "Pick a chip value, tap the table to place bets, then SPIN"
+  },
+  {
+    "id": "rover",
+    "category": "games",
+    "name": "Rover",
+    "tags": [
+      "games",
+      "sokoban",
+      "puzzle",
+      "levels",
+      "editor"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rover/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rover/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A sokoban-style puzzle on canvas: guide the rover and push blocks, lasers, mirrors and sliders onto their homes across 24 handcrafted levels - or design your own in the built-in editor.",
+    "controls": "Arrow keys to move the rover and push blocks - the menus offer undo, restart and the level editor"
   },
   {
     "id": "rubiks-cube",
@@ -6553,6 +9605,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Runway-Stylist.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/runway-stylist.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Runway Stylist playable in your web browser.",
@@ -6567,6 +9620,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sandspiel/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sandspiel.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Sandspiel playable in your web browser.",
@@ -6589,6 +9643,23 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse"
   },
   {
+    "id": "sdf-maker",
+    "category": "games",
+    "name": "SDF Maker",
+    "tags": [
+      "tools",
+      "graphics",
+      "SDF",
+      "textures"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sdf-maker/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sdf-maker/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Generate and combine 2D signed distance field shapes, tune their parameters and export a texture-ready result in the browser.",
+    "controls": "Mouse: choose shapes and adjust parameters - Keyboard: use the editor controls"
+  },
+  {
     "id": "server-survival",
     "category": "games",
     "name": "Server Survival",
@@ -6609,6 +9680,21 @@ const GAMES_DATA = [
     "controls": "Mouse: Place and connect services, drag the camera · Click nodes to configure"
   },
   {
+    "id": "set-matching",
+    "category": "games",
+    "name": "Set Matching",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/set-matching/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Find every three-card set whose four attributes are each all the same or all different.",
+    "controls": "Mouse / touch; rules and controls linked in-game."
+  },
+  {
     "id": "shadow-post",
     "category": "games",
     "name": "Shadow Post",
@@ -6618,6 +9704,7 @@ const GAMES_DATA = [
       "system"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Shadow-Post.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/shadow-post.jpg",
     "shelf": "Emulators",
     "badge": "EMU",
     "desc": "Browser-based virtual system and hardware emulator.",
@@ -6632,6 +9719,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Shan-Hai.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/shan-hai.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Shan Hai playable in your web browser.",
@@ -6653,6 +9741,23 @@ const GAMES_DATA = [
     "controls": "WASD to Move, Mouse to Aim & Shoot"
   },
   {
+    "id": "shikaku",
+    "category": "games",
+    "name": "Shikaku",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "shikaku"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/shikaku/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Partition the grid into rectangles, each enclosing one clue with matching area. Five difficulty tiers, logical hints and local saves. Original Simplified Chinese interface; English help included.",
+    "controls": "Drag between opposite rectangle corners; tap assigned cells to erase; H hint, Z undo; English help link below game"
+  },
+  {
     "id": "shiny",
     "category": "games",
     "name": "Shiny",
@@ -6671,6 +9776,23 @@ const GAMES_DATA = [
     "controls": "Hold: Turn rainy (drop rain on people)"
   },
   {
+    "id": "shogi",
+    "category": "games",
+    "name": "Shogi",
+    "tags": [
+      "games",
+      "shogi",
+      "board-game",
+      "strategy"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/shogi/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/shogi/1.png",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "Japanese chess for two at one board: full rules with captured-piece drops, plus undo/redo via an in-browser database and a tsumego editing mode.",
+    "controls": "Click a piece then a destination square; dropped pieces re-enter from your tray (Japanese interface)"
+  },
+  {
     "id": "sight-and-light",
     "category": "games",
     "name": "Sight & Light (2D Raycasting)",
@@ -6681,10 +9803,29 @@ const GAMES_DATA = [
       "interactive"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sight-and-light/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sight-and-light.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "TECH",
     "desc": "Interactive visualization of 2D visibility polygon casting and shadow geometry by Nicky Case.",
     "controls": "Mouse Move & Drag Blocks"
+  },
+  {
+    "id": "signal-and-sigil",
+    "category": "games",
+    "name": "Signal & Sigil",
+    "tags": [
+      "rpg",
+      "story",
+      "fantasy",
+      "turn-based",
+      "choices"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/signal-and-sigil/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/signal-and-sigil.jpg",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A self-contained story RPG about a failing beacon, a glass moth and the choices you make on the way to the bell tower. Choose a calling, pass skill checks, manage focus and supplies, and take your turn in combat.",
+    "controls": "Mouse or touch to choose actions. In encounters, choose Strike, Cast, Guard or use a salve."
   },
   {
     "id": "signal-caravan",
@@ -6695,10 +9836,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Signal-Caravan.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/signal-caravan.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Signal Caravan playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "signal-dash",
+    "category": "games",
+    "name": "Signal Dash",
+    "tags": [
+      "arcade",
+      "action",
+      "pixel",
+      "handheld",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/signal-dash/",
+    "shelf": "Arcade & Action",
+    "badge": "",
+    "desc": "A quick, original one-screen arcade game with a pocket-sized pixel display. Collect clean signal cells, dodge static, and use pulse charges to clear a lane. All graphics are drawn in code.",
+    "controls": "Move with ←/→ or A/D. Press Space to spend a pulse charge. On touch screens, use the on-screen arrows and Pulse button."
   },
   {
     "id": "silent-rescue",
@@ -6709,6 +9868,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Silent-Rescue.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/silent-rescue.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Silent Rescue playable in your web browser.",
@@ -6725,6 +9885,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/simon/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/simon.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Simon playable in your web browser.",
@@ -6795,6 +9956,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/skifree/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/skifree.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Skifree playable in your web browser.",
@@ -6829,6 +9991,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Sky-Hop.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sky-hop.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Sky Hop playable in your web browser.",
@@ -6853,6 +10016,22 @@ const GAMES_DATA = [
     "controls": "Hold: Adjust power; release to shoot"
   },
   {
+    "id": "skyhop",
+    "category": "games",
+    "name": "Skyhop",
+    "tags": [
+      "platformer",
+      "arcade",
+      "action"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skyhop/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skyhop/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A side-scrolling aerial platform game where you hop between ledges and survive the scrolling level.",
+    "controls": "Arrow keys: move and jump"
+  },
+  {
     "id": "skyline-planner",
     "category": "games",
     "name": "Skyline Planner",
@@ -6861,10 +10040,44 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Skyline-Planner.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/skyline-planner.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Skyline Planner playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "skyscrapers",
+    "category": "games",
+    "name": "Skyscrapers",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "skyscrapers"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skyscrapers/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Arrange tower heights without repeating in rows or columns, matching the visible-tower clues around the edges. Twenty supplied puzzles plus seeded play. Original Simplified Chinese interface; English help included.",
+    "controls": "Select cell then number pad / keyboard; H hint, Z undo; English help link below game"
+  },
+  {
+    "id": "skyward",
+    "category": "games",
+    "name": "Skyward",
+    "tags": [
+      "arcade",
+      "flight-sim",
+      "procedural"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skyward/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skyward/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A one-file procedural arcade flight simulator: take off from a runway, fly a gate course to your landing field, and build a career logbook of routes, weather, and grades.",
+    "controls": "W/S pitch, A/D roll, Q/E rudder, arrows for throttle, C camera, R respawn, B new mission, N free flight"
   },
   {
     "id": "slay-the-web",
@@ -6922,6 +10135,24 @@ const GAMES_DATA = [
     "controls": "Mouse / touch a tile next to the gap to slide it"
   },
   {
+    "id": "sliding-robots",
+    "category": "games",
+    "name": "Sliding Robots",
+    "tags": [
+      "games",
+      "puzzle",
+      "ricochet-robots",
+      "sliding",
+      "single-player"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sliding-robots/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sliding-robots/1.png",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A Ricochet Robots-style sliding puzzle: tap a robot to send it racing across the board, bouncing off the walls, until all four reach their targets in as few moves as possible.",
+    "controls": "Click or tap a robot to send it sliding - bounce off the walls to reach the targets"
+  },
+  {
     "id": "slime-volleyball",
     "category": "games",
     "name": "Slime Volleyball",
@@ -6948,10 +10179,47 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Slingstorm.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/slingstorm.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Slingstorm playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "slip39-tool",
+    "category": "games",
+    "name": "SLIP-39 Tool",
+    "tags": [
+      "tools",
+      "security",
+      "cryptography",
+      "mnemonics"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slip39-tool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slip39-tool/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Create and recover Shamir Secret Sharing mnemonic sets using SLIP-39 entirely in the browser. Keep sensitive secrets local.",
+    "controls": "Mouse and keyboard: enter shares and configure thresholds - Never share secrets with a third party"
+  },
+  {
+    "id": "slitherlink",
+    "category": "games",
+    "name": "Slitherlink",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "loop",
+      "slitherlink"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slitherlink/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/slitherlink.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Draw one closed loop along grid edges to satisfy the numbered clues. Generated puzzles, undo and local saves. Original Chinese-language interface.",
+    "controls": "Click an edge to draw or erase a line; right-click marks an excluded edge; use Undo to revert; R restarts"
   },
   {
     "id": "slope",
@@ -7010,6 +10278,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/snake/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/snake.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Snake playable in your web browser.",
@@ -7024,6 +10293,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Snake-Game.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/snake-game.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Snake Game playable in your web browser.",
@@ -7067,6 +10337,23 @@ const GAMES_DATA = [
     "controls": "Tap Roll to throw the die"
   },
   {
+    "id": "snesjs",
+    "category": "games",
+    "name": "SNES.js",
+    "tags": [
+      "emulator",
+      "SNES",
+      "retro",
+      "upload"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/snesjs/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/snesjs/1.jpg",
+    "shelf": "Emulators",
+    "badge": "New",
+    "desc": "A browser Super Nintendo emulator with local cartridge upload, HiROM support and a canvas display. No game ROMs are distributed.",
+    "controls": "Choose a local SNES ROM - Checkbox: select HiROM when needed - Keyboard: use the controller keys shown in the page"
+  },
+  {
     "id": "snow-ridge",
     "category": "games",
     "name": "Snow Ridge",
@@ -7075,6 +10362,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Snow-Ridge.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/snow-ridge.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Snow Ridge playable in your web browser.",
@@ -7091,6 +10379,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Snowrider.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/snowrider.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Snowrider playable in your web browser.",
@@ -7107,6 +10396,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sokoban/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sokoban.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Sokoban playable in your web browser.",
@@ -7123,6 +10413,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Sokoban-Quest.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sokoban-quest.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Sokoban Quest playable in your web browser.",
@@ -7137,6 +10428,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/solitaire/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/solitaire.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Solitaire playable in your web browser.",
@@ -7151,6 +10443,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Solitaire-Classic.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/solitaire-classic.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Solitaire Classic playable in your web browser.",
@@ -7218,6 +10511,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/space-huggers/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/space-huggers.jpg",
     "shelf": "Arcade & Action",
     "badge": "ROGUELITE",
     "desc": "Procedural pixel-art run-and-gun roguelite action platformer by Frank Force with explosive destruction.",
@@ -7235,6 +10529,7 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/space-invaders-13k/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/space-invaders-13k.jpg",
     "shelf": "Arcade & Action",
     "badge": "Retro",
     "desc": "Classic arcade Space Invaders recreated with smooth particles, shields, and escalating waves in 13KB.",
@@ -7251,10 +10546,28 @@ const GAMES_DATA = [
       "shooter"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/space-invaders/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/space-invaders.jpg",
     "shelf": "Arcade & Action",
     "badge": "RETRO",
     "desc": "Authentic reproduction of the original Taito 1978 arcade bunker shooter.",
     "controls": "Arrow Keys to Slide, Space to Fire Laser"
+  },
+  {
+    "id": "space-jam",
+    "category": "games",
+    "name": "Space-Jam",
+    "tags": [
+      "arcade",
+      "shooter",
+      "shmup",
+      "horizontal"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/space-jam/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/space-jam/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A polished horizontal side-scrolling space shooter: blast through 10 themed levels of enemy formations and bosses, grab weapon upgrades, and top the high-score board.",
+    "controls": "WASD or arrows to move, auto-fire, B or click for smart bomb, P to pause"
   },
   {
     "id": "spacecompany",
@@ -7267,6 +10580,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/SpaceCompany/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/spacecompany.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "SpaceCompany playable in your web browser.",
@@ -7284,10 +10598,30 @@ const GAMES_DATA = [
       "js13k"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/spacepi/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/spacepi.jpg",
     "shelf": "Arcade & Action",
     "badge": "Arcade",
     "desc": "Neon arcade space shooter \u2014 pilot your craft through asteroid fields and annihilate enemy squadrons.",
     "controls": "WASD / Arrow Keys: Fly | Space / Left Click: Fire Lasers | Shift: Boost"
+  },
+  {
+    "id": "spades",
+    "category": "games",
+    "name": "Spades",
+    "tags": [
+      "games",
+      "html5",
+      "cards",
+      "spades",
+      "ai",
+      "trick-taking"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spades/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/spades.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Four-player partnership Spades with three computer players, bidding, coaching, trick replay and local performance statistics. Includes Standard, Joker-Joker and JJDD house-rule presets. Current matches restart on reload.",
+    "controls": "New Hand deals; choose a bid or Nil; tap a legal card twice to play; Coach explains rules; Menu offers presets, replay and Reset match"
   },
   {
     "id": "spashal",
@@ -7300,6 +10634,7 @@ const GAMES_DATA = [
       "gravity"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/spashal/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/spashal.jpg",
     "shelf": "Arcade & Action",
     "badge": "PHYSICS",
     "desc": "Gravitational orbital slingshot game navigating through planetary gravitational wells.",
@@ -7314,10 +10649,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Spectrum-Console.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/spectrum-console.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Spectrum Console playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "spectrum-tool",
+    "category": "games",
+    "name": "Spectrum",
+    "tags": [
+      "tools",
+      "audio",
+      "visualizer",
+      "spectrum"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spectrum-tool/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/spectrum-tool/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "Load an audio file and explore its frequency spectrum with an interactive browser visualization.",
+    "controls": "Mouse: choose a local audio file and adjust the display"
   },
   {
     "id": "spelling-bee",
@@ -7399,10 +10752,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Spud-Arena.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/spud-arena.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Spud Arena playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "squeek-arena",
+    "category": "games",
+    "name": "Squeek Arena",
+    "tags": [
+      "fighting",
+      "arcade",
+      "combos",
+      "hamster"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/squeek-arena/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/squeek-arena/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "An original hamster arcade fighting game: create your own fighter, then master high/low defense, hit-confirmed combos, throws, fireballs and full-meter supers against an infinite-time training dummy or three CPU opponents. 99-second rounds, first to two wins, original hamster artwork and fully synthesized sound. PvE only — everything stays in your browser.",
+    "controls": "A-D/arrows move, W jump, S crouch, Shift/hold back guard (crouch+guard blocks low), J/U light/heavy punch, I/K light/heavy kick, L fireball, O uppercut, V throw, Q super, Esc pause (touch supported)"
   },
   {
     "id": "stack-tower",
@@ -7413,6 +10784,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Stack-Tower.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/stack-tower.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Stack Tower playable in your web browser.",
@@ -7456,6 +10828,23 @@ const GAMES_DATA = [
     "controls": "Arrow keys / A-D or drag to move, auto-fire (Space also shoots)"
   },
   {
+    "id": "star-switch",
+    "category": "games",
+    "name": "Star Switch",
+    "tags": [
+      "platformer",
+      "2p",
+      "co-op",
+      "local"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/star-switch/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/star-switch/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A two-player local platformer for sharing one keyboard: cyan and orange set off together to collect stars, stomp enemies, and flip the glowing switch that opens the rainbow exit. One-player touch mode on phones and iPads, with Easy/Medium/Hard difficulty and all sound synthesized in the browser.",
+    "controls": "Player 1: A/D move, W jump, S action · Player 2: arrows (Up jump, Down action) · phone/iPad: on-screen buttons"
+  },
+  {
     "id": "starforge-idle",
     "category": "games",
     "name": "Starforge Idle",
@@ -7466,6 +10855,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Starforge-Idle.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/starforge-idle.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Starforge Idle playable in your web browser.",
@@ -7480,6 +10870,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Starline-Route.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/starline-route.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Starline Route playable in your web browser.",
@@ -7497,10 +10888,28 @@ const GAMES_DATA = [
       "space"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sorades/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sorades.jpg",
     "shelf": "Arcade & Action",
     "badge": "SHMUP",
     "desc": "Fast vertical space shooter in 13KB JS with bullet hell bosses and weapon upgrades.",
     "controls": "Arrow Keys / WASD to Fly, Space to Fire"
+  },
+  {
+    "id": "sorting-studio",
+    "category": "games",
+    "name": "Sorting Studio",
+    "tags": [
+      "sorting",
+      "algorithms",
+      "education",
+      "visualization",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sorting-studio/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Watch bubble, selection, and insertion sort rearrange a generated list. Step through comparisons and swaps, or play at an adjustable speed while operation counters update.",
+    "controls": "Choose a sorting algorithm, array size, and speed. Use Play, Step, Reset list, or New random list to explore comparisons and swaps."
   },
   {
     "id": "starship-suspects",
@@ -7511,6 +10920,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Starship-Suspects.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/starship-suspects.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Starship Suspects playable in your web browser.",
@@ -7525,6 +10935,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Stratigraphy-Lab.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/stratigraphy-lab.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Stratigraphy Lab playable in your web browser.",
@@ -7539,6 +10950,7 @@ const GAMES_DATA = [
       "adventure"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/submersible/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/submersible.jpg",
     "shelf": "Arcade & Action",
     "badge": "New",
     "desc": "A pixelated underwater adventure game",
@@ -7570,6 +10982,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/sudoku/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sudoku.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Sudoku playable in your web browser.",
@@ -7604,10 +11017,28 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Sudoku-Studio.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sudoku-studio.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Sudoku Studio playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "suguru",
+    "category": "games",
+    "name": "Suguru",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "suguru"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/suguru/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Fill each region with 1 through its size; touching cells, including diagonals, must differ. Five difficulty tiers, notes, hints and local saves. Original Simplified Chinese interface; English help included.",
+    "controls": "Select cell then number pad / keyboard; H hint, Z undo; English help link below game"
   },
   {
     "id": "supaxl",
@@ -7628,6 +11059,41 @@ const GAMES_DATA = [
     "controls": "Arrow keys to move and jump"
   },
   {
+    "id": "super-pixel-bros",
+    "category": "games",
+    "name": "Super Pixel Bros",
+    "tags": [
+      "games",
+      "platformer",
+      "retro",
+      "arcade"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/super-pixel-bros/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/super-pixel-bros/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A tiny original Mario-style platformer: every sprite is drawn with code, every sound is synthesized, and the goal is simple - run, jump, collect the coins and reach the flag.",
+    "controls": "Arrow keys or A/D to move, Space or W to jump, Enter to start or restart"
+  },
+  {
+    "id": "surds",
+    "category": "games",
+    "name": "Hybrid Royale",
+    "tags": [
+      "games",
+      "dodge",
+      "word",
+      "arcade",
+      "single-player"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/surds/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/surds/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Dodge the red balls and collect the hidden letters in order to spell the secret word before you fall - particular or random letter order.",
+    "controls": "Arrow keys or WASD to move - dodge the red balls and collect the letters in order"
+  },
+  {
     "id": "survivor",
     "category": "games",
     "name": "SURVIVOR Sound Odyssey",
@@ -7638,6 +11104,7 @@ const GAMES_DATA = [
       "retro"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/survivor/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/survivor.jpg",
     "shelf": "Arcade & Action",
     "badge": "AUDIO ACTION",
     "desc": "Dynamic audio-driven space survival arcade game with interactive sound synthesis.",
@@ -7692,6 +11159,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Switchyard-Rush.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/switchyard-rush.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Switchyard Rush playable in your web browser.",
@@ -7708,10 +11176,28 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/t-rex-runner/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/t-rex-runner.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "T Rex Runner playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "tama-pets",
+    "category": "games",
+    "name": "Tama-Pets",
+    "tags": [
+      "games",
+      "tamagotchi",
+      "virtual-pet",
+      "raising"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tama-pets/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tama-pets/1.png",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "New",
+    "desc": "Raise a virtual pet: feed it, play with it, bathe it and put it to sleep, keep an eye on the status bars, and see how many days you can keep it alive. Progress saves in your browser.",
+    "controls": "Use the action buttons to feed, play, clean and rest your pet - keep the status bars up"
   },
   {
     "id": "tangram",
@@ -7740,6 +11226,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Tank-Arena.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tank-arena.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Tank Arena playable in your web browser.",
@@ -7762,6 +11249,40 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Turn-based artillery combat over destructible terrain. Set your angle and power, factor in the wind, and lob a shell at the enemy tank. First to knock out the other tank wins the duel.",
     "controls": "Adjust Angle and Power with the buttons, then Fire"
+  },
+  {
+    "id": "tasquare",
+    "category": "games",
+    "name": "Tasquare",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "tasquare"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tasquare/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Shade separate solid squares so each clue matches the combined area of its neighboring black regions; keep all white cells connected. Original Simplified Chinese interface; English help included.",
+    "controls": "Tap to cycle unknown, black and white; right-click toggles black; arrows move, Enter marks, R restarts."
+  },
+  {
+    "id": "tatamibari",
+    "category": "games",
+    "name": "Tatamibari",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "tatamibari"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tatamibari/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Partition the grid into rectangles with exactly one shape clue each; no four rectangles may meet at a point. Five generated tiers. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Drag internal edges to draw walls or mark joins. 1 wall, 2 join, 3 unknown; see English help for other controls."
   },
   {
     "id": "temple-run-2",
@@ -7797,6 +11318,23 @@ const GAMES_DATA = [
     "controls": "Tap Bowl to release the ball at the current aim"
   },
   {
+    "id": "tennis",
+    "category": "games",
+    "name": "Tennis",
+    "tags": [
+      "sports",
+      "tennis",
+      "arcade",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tennis/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tennis/1.jpg",
+    "shelf": "Sports & Racing",
+    "badge": "New",
+    "desc": "A simple browser tennis game with canvas physics, a player paddle and a computer opponent. Keep the ball in play and score points.",
+    "controls": "Arrow keys: move your player - Space: serve"
+  },
+  {
     "id": "teterjs",
     "category": "games",
     "name": "Teterjs",
@@ -7805,6 +11343,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/teterjs/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/teterjs.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Teterjs playable in your web browser.",
@@ -7910,6 +11449,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/trust/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/trust.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "STORY",
     "desc": "Award-winning interactive exploration of game theory, trust, and betrayal by Nicky Case.",
@@ -7924,6 +11464,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Thunder-Vanguard.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/thunder-vanguard.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Thunder Vanguard playable in your web browser.",
@@ -7948,6 +11489,26 @@ const GAMES_DATA = [
     "controls": "Tap a square to place your mark"
   },
   {
+    "id": "tic-tac-toe-3d",
+    "category": "games",
+    "name": "3D Tic-Tac-Toe",
+    "tags": [
+      "games",
+      "html5",
+      "board",
+      "tic-tac-toe",
+      "3d",
+      "ai",
+      "local-multiplayer"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tic-tac-toe-3d/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tic-tac-toe-3d.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "",
+    "desc": "Make three in a row across a 3×3×3 cube, including lines between layers. Play against a computer, with two local players, or watch two computers.",
+    "controls": "Choose Human or Computer for each side; click cells in the three layer grids; replay after a win or draw"
+  },
+  {
     "id": "tictactoe",
     "category": "games",
     "name": "Tictactoe",
@@ -7956,6 +11517,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tictactoe/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tictactoe.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Tictactoe playable in your web browser.",
@@ -7972,6 +11534,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Tidal-Grid.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tidal-grid.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Tidal Grid playable in your web browser.",
@@ -7986,10 +11549,28 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Tide-Salvage.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tide-salvage.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Tide Salvage playable in your web browser.",
     "controls": "Keyboard / Mouse"
+  },
+  {
+    "id": "tidepool-steward",
+    "category": "games",
+    "name": "Tidepool Steward",
+    "tags": [
+      "strategy",
+      "ecosystem",
+      "simulation",
+      "coastal",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tidepool-steward/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "Guide a tiny intertidal reserve through a changing season. Restore kelp and eelgrass, clear debris, protect habitat, and balance a simplified coastal food web over twelve weeks.",
+    "controls": "Mouse or touch: select a habitat tile and choose one of four stewardship actions. Use Advance to resolve the week; Restart begins a fresh season."
   },
   {
     "id": "timber-test",
@@ -8019,6 +11600,7 @@ const GAMES_DATA = [
       "system"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Time-Post.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/time-post.jpg",
     "shelf": "Emulators",
     "badge": "EMU",
     "desc": "Browser-based virtual system and hardware emulator.",
@@ -8035,6 +11617,7 @@ const GAMES_DATA = [
       "tycoon"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Tiny-Factory.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tiny-factory.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "Tiny Factory playable in your web browser.",
@@ -8089,6 +11672,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Touchline-Manager.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/touchline-manager.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Touchline Manager playable in your web browser.",
@@ -8121,6 +11705,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tower-defense/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tower-defense.jpg",
     "shelf": "Arcade & Action",
     "badge": "TD",
     "desc": "Tower Defense playable in your web browser.",
@@ -8135,6 +11720,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/tower-game/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tower-game.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Tower Game playable in your web browser.",
@@ -8177,6 +11763,38 @@ const GAMES_DATA = [
     "controls": "Tap a car to select it, then tap an empty square in its lane"
   },
   {
+    "id": "trees-and-tents",
+    "category": "games",
+    "name": "Trees and Tents",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/trees-and-tents/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Place non-touching tents beside trees and satisfy row and column clues across ten forest camps.",
+    "controls": "Mouse / touch; rules and controls linked in-game."
+  },
+  {
+    "id": "trees-armageddon",
+    "category": "games",
+    "name": "Trees Armageddon",
+    "tags": [
+      "games",
+      "artillery",
+      "turn-based",
+      "worms-style"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/trees-armageddon/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/trees-armageddon/1.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Turn-based artillery for two teams of tree characters: set your angle and power, factor in the wind, and watch the shot arc over the branches. Three hits knocks an opponent out - last team standing wins.",
+    "controls": "Aim with angle and power, account for the wind, then fire - teams alternate turns"
+  },
+  {
     "id": "tri-peaks",
     "category": "games",
     "name": "Tri Peaks Solitaire",
@@ -8193,6 +11811,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Scale three peaks of cards by playing any card one rank above or below the waste pile. Chain long runs for a bigger score and clear every peak. Aces wrap around from King to two for extra options.",
     "controls": "Tap a card adjacent in rank to the waste; tap the stock to draw"
+  },
+  {
+    "id": "triplets",
+    "category": "games",
+    "name": "Triplets",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "triplets"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/triplets/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Fill three-cell regions with three equal symbols or three different symbols; touching cells across region borders must differ. Seven generated board sizes. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Choose square/circle/triangle and tap cells. 1/2/3 select symbols, H hint, Z undo, P pause."
   },
   {
     "id": "trunk-line",
@@ -8222,6 +11857,7 @@ const GAMES_DATA = [
       "arcade"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Truss-Workshop.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/truss-workshop.jpg",
     "shelf": "Sports & Racing",
     "badge": "",
     "desc": "Truss Workshop playable in your web browser.",
@@ -8265,6 +11901,23 @@ const GAMES_DATA = [
     "controls": "Keyboard: type the highlighted words - Buttons: choose 30s / 60s and beginner / pro difficulty"
   },
   {
+    "id": "ulam-liar-game",
+    "category": "games",
+    "name": "Ulam Liar Game",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "ulam-liar-game"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ulam-liar-game/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Find a hidden number by asking subset questions against an opponent allowed a limited number of lies. Baked policies show the difference between bounds and exact question budgets. Original interface partly Simplified Chinese; English help included.",
+    "controls": "Tap or brush cells to select a question, then Ask. In accusation phase tap the secret number. U undo, H hint, R restart."
+  },
+  {
     "id": "underrun",
     "category": "games",
     "name": "Underrun (Twin-Stick Survival)",
@@ -8280,6 +11933,23 @@ const GAMES_DATA = [
     "badge": "ACTION",
     "desc": "Intense sci-fi top-down shooter in 13KB JS by Dominic Szablewski. Fight alien arachnids with plasma guns and deploy sentry nodes.",
     "controls": "WASD to Move, Mouse to Aim & Fire"
+  },
+  {
+    "id": "unit-converter",
+    "category": "games",
+    "name": "Unit Converter",
+    "tags": [
+      "tools",
+      "converter",
+      "measurements",
+      "offline",
+      "utilities"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/unit-converter/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Convert length, mass, volume, temperature, area, speed, time, data, pressure, energy, frequency and angle using bundled static conversion tables. Works offline with no API.",
+    "controls": "Choose a category, enter a value, and select source and destination units. Swap units or copy the result."
   },
   {
     "id": "up-1-way",
@@ -8320,6 +11990,24 @@ const GAMES_DATA = [
     "controls": "Keyboard / Mouse (Click canvas to lock cursor, ESC to release)"
   },
   {
+    "id": "vampire-survivors",
+    "category": "games",
+    "name": "Canvas Survivor",
+    "tags": [
+      "games",
+      "roguelite",
+      "bullet-heaven",
+      "survival",
+      "canvas"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/vampire-survivors/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/vampire-survivors/1.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A Vampire-Survivors-style bullet heaven written in zero-dependency JavaScript: survive the waves, level up, and stack weapon upgrades in a canvas roguelite.",
+    "controls": "Move with WASD or the arrow keys and attack automatically - pick an upgrade at every level-up"
+  },
+  {
     "id": "vectoid-td-3d-v1.4",
     "category": "games",
     "name": "Vectoid TD 3D v1.4",
@@ -8329,10 +12017,28 @@ const GAMES_DATA = [
       "tower-defense"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/vectoid-td-3d-v1.4/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/vectoid-td-3d-v1.4.jpg",
     "shelf": "Strategy & Idle",
     "badge": "TD",
     "desc": "Build and upgrade towers , prevent enemies from reaching the goal. Beat all waves to win.",
     "controls": "0-9 - Buy tower hotkey. Space - Start wave / Fast forward hotkey"
+  },
+  {
+    "id": "vesper-breakers",
+    "category": "games",
+    "name": "Vesper Breakers",
+    "tags": [
+      "arcade",
+      "shooter",
+      "co-op",
+      "comet"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/vesper-breakers/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/vesper-breakers/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "An original momentum arcade expedition: split comet cores, dodge raiders, and spend energy on shield, blink, and pulse abilities to clear the five-sector Vesper corridor. Solo, or two-player local co-op on one keyboard, plus a local last-survivor tournament mode. All art is procedural and all audio is synthesized at runtime.",
+    "controls": "Solo: W/↑ thrust, A/D or ←/→ turn, S/↓ brake, Space/F fire, Shift shield, Q blink, E pulse, Esc/P pause. Co-op: Mint uses W/A/S/D + F/Shift/Q/E, Copper uses arrows + / Enter/, . (touch supported)"
   },
   {
     "id": "vex-7",
@@ -8366,6 +12072,40 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Jacks or Better video poker. You're dealt five cards — hold the ones you want, draw the rest, and get paid on pairs of jacks or better up to a royal flush.",
     "controls": "Mouse / touch to hold cards and press Deal / Draw"
+  },
+  {
+    "id": "violencetown",
+    "category": "games",
+    "name": "Violencetown",
+    "tags": [
+      "games",
+      "rpg",
+      "turn-based",
+      "action",
+      "zero-dependency"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/violencetown/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/violencetown/1.png",
+    "shelf": "RPG & Adventure",
+    "badge": "New",
+    "desc": "A turn-based 2D action-RPG of small violences across a hand-authored world: one input is one action is one world tick, so combat, moods and the day/night cycle only advance when you act, while townsfolk keep wandering on their own dice. Radial action wheel, quests, spells, crafting and a full offline save.",
+    "controls": "Arrow keys or WASD to move, one key or tap per action - act through the radial wheel and fight turn by turn"
+  },
+  {
+    "id": "void-runner",
+    "category": "games",
+    "name": "Void Runner",
+    "tags": [
+      "runner",
+      "arcade",
+      "reflex"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/void-runner/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/void-runner/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A fast endless runner through a neon void with obstacles, score chasing and responsive keyboard controls.",
+    "controls": "Arrow keys or A/D: steer and dodge"
   },
   {
     "id": "voidcall",
@@ -8424,6 +12164,40 @@ const GAMES_DATA = [
     "controls": "Tap / Drag: Move the keeper"
   },
   {
+    "id": "voronoi-workshop",
+    "category": "games",
+    "name": "Voronoi Workshop",
+    "tags": [
+      "geometry",
+      "voronoi",
+      "procedural",
+      "visualization",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/voronoi-workshop/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "Move, add, and remove sites to reshape a Voronoi diagram. Every pixel belongs to its nearest site, revealing how a handful of points partition a plane.",
+    "controls": "Drag a marker to move it. Click empty canvas to add a site; right-click a marker to remove it. Change layout, palette, and boundaries, then generate a new map."
+  },
+  {
+    "id": "voxel-musou",
+    "category": "games",
+    "name": "Voxel Musou",
+    "tags": [
+      "action",
+      "musou",
+      "voxel",
+      "3d"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/voxel-musou/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/voxel-musou/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "A Dynasty Warriors-inspired voxel action game: one warrior against a thousand foes. Seven officers with distinct attack sets, four Three Kingdoms battlefields (Hulao Gate, Changban, the Red Cliffs night fleet, Mount Dingjun), officer duels, rescues and set pieces, plus three ranked trials — hundreds of instanced soldiers, charge attacks and scripted musou combos at a fixed 60 Hz.",
+    "controls": "WASD/arrows to move (camera-relative), J/left-click attack, K/right-click charge, Space jump, L/Shift dodge, I musou (full gauge), mouse/Q/E camera, R recenter (gamepad supported)"
+  },
+  {
     "id": "war-card",
     "category": "games",
     "name": "War",
@@ -8442,6 +12216,40 @@ const GAMES_DATA = [
     "controls": "Tap Flip to play each round"
   },
   {
+    "id": "water-jugs",
+    "category": "games",
+    "name": "Water Jugs",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "water-jugs"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/water-jugs/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Measure a target volume with unmarked jugs using only full fills, emptying and transfers. Includes 63 baked puzzles and daily/seeded challenges. Original Simplified Chinese interface; English help included.",
+    "controls": "Drag jugs to the faucet, drain or another jug. U undo, H hint, R restart."
+  },
+  {
+    "id": "waveform-lab",
+    "category": "games",
+    "name": "Waveform Lab",
+    "tags": [
+      "audio",
+      "synthesizer",
+      "waveform",
+      "music",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/waveform-lab/",
+    "shelf": "Tools & Utilities",
+    "badge": "",
+    "desc": "Design and play single synthesized tones. Shape square, triangle, sawtooth, or sine waves with an ADSR envelope and low-pass filter, then export a local WAV. This is a sound-design instrument, not a song sequencer.",
+    "controls": "Press Play tone or hold piano keys / A-W-S-E-D-F-T-G-Y-H-U-J-K. Adjust waveform, frequency, ADSR, filter and note length; Export WAV saves locally."
+  },
+  {
     "id": "wbwwb",
     "category": "games",
     "name": "We Become What We Behold",
@@ -8452,10 +12260,45 @@ const GAMES_DATA = [
       "interactive"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/wbwwb/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/wbwwb.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "STORY",
     "desc": "A 5-minute satirical game by Nicky Case about news cycles, social media feedback loops, and outrage.",
     "controls": "Mouse to Frame & Snap Photos"
+  },
+  {
+    "id": "weather-forge",
+    "category": "games",
+    "name": "Weather Forge",
+    "tags": [
+      "simulation",
+      "weather",
+      "science",
+      "experiment",
+      "offline"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/weather-forge/",
+    "shelf": "Interactive Stories & Experiments",
+    "badge": "",
+    "desc": "An original local weather experiment. Adjust temperature, humidity, pressure, and wind to see how a procedural cloud field responds; seed an updraft and watch it grow into a storm.",
+    "controls": "Adjust the weather sliders or choose a preset. Tap or click the sky to seed a warm updraft; Pause freezes the local simulation."
+  },
+  {
+    "id": "web-jjy",
+    "category": "games",
+    "name": "Web JJY",
+    "tags": [
+      "audio",
+      "radio",
+      "signal",
+      "simulator"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/web-jjy/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/web-jjy/1.jpg",
+    "shelf": "Tools & Utilities",
+    "badge": "New",
+    "desc": "A browser-based standard-wave simulator that generates Japan's JJY time signal through Web Audio for experimenting with radio-controlled clocks.",
+    "controls": "Mouse: click Start - Checkbox: enable summer time - Connect an earphone near a radio-controlled clock"
   },
   {
     "id": "whack-a-mole",
@@ -8484,6 +12327,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Wind-Tunnel-Contracts.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/wind-tunnel-contracts.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Wind Tunnel Contracts playable in your web browser.",
@@ -8498,6 +12342,7 @@ const GAMES_DATA = [
       "html5"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Wonder-Park.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/wonder-park.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "Wonder Park playable in your web browser.",
@@ -8514,6 +12359,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/singlefiles/Word-Grid.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/word-grid.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Word Grid playable in your web browser.",
@@ -8554,6 +12400,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "Transform the start word into the goal word one letter at a time. Every rung of the ladder has to be a real four-letter word. A classic word puzzle invented by Lewis Carroll.",
     "controls": "Type a four-letter word and press Add or Enter"
+  },
+  {
+    "id": "word-pluck",
+    "category": "games",
+    "name": "Word Pluck",
+    "tags": [
+      "typing",
+      "words",
+      "speed",
+      "education"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-pluck/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/word-pluck/1.jpg",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "A fast browser typing game where words rain down the screen. Type them before they hit the bottom and track your speed, accuracy and streak.",
+    "controls": "Keyboard: type the falling words - Space: pause or resume - Mouse: toggle tips and sound"
   },
   {
     "id": "word-scramble",
@@ -8602,6 +12465,7 @@ const GAMES_DATA = [
       "strategy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/wordle/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/wordle.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "Wordle playable in your web browser.",
@@ -8626,6 +12490,24 @@ const GAMES_DATA = [
     "controls": "Arrow keys to move, up to jump"
   },
   {
+    "id": "xiangqi",
+    "category": "games",
+    "name": "Xiangqi",
+    "tags": [
+      "games",
+      "xiangqi",
+      "chinese-chess",
+      "board-game",
+      "ai"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/xiangqi/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/xiangqi/1.png",
+    "shelf": "Strategy & Idle",
+    "badge": "New",
+    "desc": "Chinese chess for two players on one screen: play locally, battle the built-in computer AI, or take on a friend online. Full piece rules including the general, advisors, cannons and horses.",
+    "controls": "Click a piece then a highlighted destination square - choose local 2-player, computer AI or online"
+  },
+  {
     "id": "xiuxian-idle",
     "category": "games",
     "name": "Xiuxian Idle",
@@ -8645,6 +12527,22 @@ const GAMES_DATA = [
     "controls": "Mouse: navigate the cultivation, inventory, lottery, alchemy and exploration menus - All in Chinese"
   },
   {
+    "id": "xonix",
+    "category": "games",
+    "name": "Xonix",
+    "tags": [
+      "arcade",
+      "territory",
+      "puzzle"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/xonix/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/xonix/1.jpg",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "Claim territory by drawing lines through the open field while avoiding roaming enemies in this classic arcade puzzle.",
+    "controls": "Arrow keys: draw paths and capture territory"
+  },
+  {
     "id": "xx142-b2",
     "category": "games",
     "name": "XX142-B2 Alien Infiltration",
@@ -8655,6 +12553,7 @@ const GAMES_DATA = [
       "sci-fi"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/xx142-b2/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/xx142-b2.jpg",
     "shelf": "Arcade & Action",
     "badge": "3D STEALTH",
     "desc": "3D isometric sci-fi stealth infiltration mission inside an extraterrestrial base.",
@@ -8679,6 +12578,23 @@ const GAMES_DATA = [
     "controls": "Tap dice to hold, press Roll, then tap a category to score"
   },
   {
+    "id": "yajilin",
+    "category": "games",
+    "name": "Yajilin",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "yajilin"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/yajilin/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Shade nonadjacent cells to satisfy arrow counts, and draw a single loop through every other non-clue cell. English help included; original interface partly Chinese.",
+    "controls": "Mouse / touch; see the linked English rules and controls guide."
+  },
+  {
     "id": "yet-another-idle-rpg",
     "category": "games",
     "name": "Yet Another Idle RPG",
@@ -8698,6 +12614,40 @@ const GAMES_DATA = [
     "controls": "Mouse: click PLAY and navigate the skill / action menus - Progress continues offline between sessions"
   },
   {
+    "id": "zaxxon3d",
+    "category": "games",
+    "name": "Zaxxon 3D",
+    "tags": [
+      "arcade",
+      "shooter",
+      "isometric",
+      "3d"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/zaxxon3d/",
+    "image": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/zaxxon3d/title.png",
+    "shelf": "Arcade & Action",
+    "badge": "New",
+    "desc": "An isometric 3D arcade shooter: pilot your craft through an axonometric gauntlet of turrets, aliens, and destructible walls.",
+    "controls": "W/A/S/D or arrow keys to steer, Space or Enter to fire"
+  },
+  {
+    "id": "zebra-logic",
+    "category": "games",
+    "name": "Zebra Logic",
+    "tags": [
+      "games",
+      "html5",
+      "puzzle",
+      "logic",
+      "zebra-logic"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/zebra-logic/",
+    "shelf": "Puzzle & Logic",
+    "badge": "New",
+    "desc": "Deduce who lives in each house from generated logic clues. English clue text and table labels accompany a pairwise deduction grid and independently checked answer panel. Original Simplified Chinese interface; English help included.",
+    "controls": "Tap the pair grid to cycle blank, cross and check. Arrows navigate, X excludes, O checks, Space cycles; fill answer dropdowns and check."
+  },
+  {
     "id": "zedinvaders",
     "category": "games",
     "name": "Zed Invaders 3D",
@@ -8708,6 +12658,7 @@ const GAMES_DATA = [
       "shooter"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Platforms/games/zedinvaders/index.html",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/zedinvaders.jpg",
     "shelf": "Arcade & Action",
     "badge": "SHMUP",
     "desc": "Pseudo-3D isometric invader defense with multiple alien unit types and explosive particle effects.",
@@ -8730,6 +12681,23 @@ const GAMES_DATA = [
     "badge": "New",
     "desc": "A hypnotic one-button zigzag runner from Kenta Cho: tap to turn, trace the winding path without overshooting, and keep your nerve as the speed mounts.",
     "controls": "Tap / Click / any key: Turn"
+  },
+  {
+    "id": "zx-spectrum-emulator",
+    "category": "games",
+    "name": "ZX Spectrum 48K Emulator",
+    "tags": [
+      "emulator",
+      "zx-spectrum",
+      "48k",
+      "open-firmware",
+      "local-files"
+    ],
+    "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/zx-spectrum-emulator/",
+    "shelf": "Emulators",
+    "badge": "",
+    "desc": "A 48K-only browser emulator with the freely licensed Open82 replacement system ROM. No commercial games or original Sinclair ROMs are bundled; open a compatible snapshot or tape file from your device.",
+    "controls": "Use the emulator's File menu to open a 48K .SNA, .Z80, .SZX, .TAP or .TZX file. Keyboard controls are handled by the emulator; use LOAD \"\" for tapes."
   }
 ];
 
