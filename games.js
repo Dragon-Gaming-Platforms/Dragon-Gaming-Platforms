@@ -12729,6 +12729,29 @@ const GAMES_DATA = [
     "'": '&#39;'
   })[m]);
 
+  function normalizeSearchText(value) {
+    return String(value == null ? '' : value)
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  // Build the searchable text once rather than lowercasing every catalog field
+  // again for every keypress. Search result ranking favors titles and tags over
+  // long descriptions, where short queries match almost every item.
+  const SEARCH_INDEX = GAMES_DATA.map((game, order) => {
+    const name = normalizeSearchText(game.name);
+    const tags = (Array.isArray(game.tags) ? game.tags : []).map(normalizeSearchText);
+    const category = normalizeSearchText(game.category);
+    const description = normalizeSearchText(game.desc);
+    const searchable = [name, ...tags, category, description].join(' ');
+    return { game, order, name, tags, category, description, searchable };
+  });
+  const SEARCH_INDEX_BY_ID = new Map(SEARCH_INDEX.map((entry) => [entry.game.id, entry]));
+  const SEARCH_RESULT_PAGE_SIZE = 36;
+  const SEARCH_DEBOUNCE_MS = 100;
+
   // ---- State Keys ----
   const KEY_FAVS      = 'dgp_favorites';
   const KEY_RECENTS   = 'dgp_recent_played';
@@ -12746,6 +12769,10 @@ const GAMES_DATA = [
   let currentTag = 'All';
   let currentSearchQuery = '';
   let currentSort = 'featured';
+  let searchResultLimit = SEARCH_RESULT_PAGE_SIZE;
+  let searchRenderTimer = 0;
+  let cardRenderFavorites = new Set();
+  let cardRenderPlayCounts = {};
   let activeGame = null;
   let erudaLoaded = false;
 
@@ -12825,9 +12852,6 @@ const GAMES_DATA = [
 
   function getPlayCounts() {
     try { return JSON.parse(localStorage.getItem(KEY_PLAYCOUNT)) || {}; } catch(e) { return {}; }
-  }
-  function getPlayCount(id) {
-    return getPlayCounts()[id] || 0;
   }
   function incrementPlayCount(id) {
     const counts = getPlayCounts();
@@ -13242,29 +13266,43 @@ const GAMES_DATA = [
   // ---- Filtering, Search & Card Rendering ----
   function getFilteredGames() {
     let list = [...GAMES_DATA];
-    const favs = getFavorites();
-    const recents = getRecents();
+    const favs = currentCategory === 'favorites' ? new Set(getFavorites()) : null;
+    const recents = currentCategory === 'recent' ? getRecents() : null;
+    const activeTag = currentTag && currentTag !== 'All' ? normalizeSearchText(currentTag) : '';
+    const query = normalizeSearchText(currentSearchQuery);
+    const queryTerms = query ? query.split(/\s+/) : [];
+    const relevance = query ? new Map() : null;
 
-    if (currentCategory === 'favorites') {
-      list = list.filter(g => favs.includes(g.id));
-    } else if (currentCategory === 'recent') {
-      list = recents.map(id => list.find(g => g.id === id)).filter(Boolean);
+    if (favs) {
+      list = list.filter((game) => favs.has(game.id));
+    } else if (recents) {
+      const byId = new Map(GAMES_DATA.map((game) => [game.id, game]));
+      list = recents.map((id) => byId.get(id)).filter(Boolean);
     } else if (currentCategory !== 'all') {
-      list = list.filter(g => g.category === currentCategory);
+      list = list.filter((game) => game.category === currentCategory);
     }
 
-    if (currentTag && currentTag !== 'All') {
-      list = list.filter(g => g.tags.some(t => t.toLowerCase() === currentTag.toLowerCase()));
+    if (activeTag) {
+      list = list.filter((game) => SEARCH_INDEX_BY_ID.get(game.id)?.tags.includes(activeTag));
     }
 
-    if (currentSearchQuery.trim()) {
-      const q = currentSearchQuery.toLowerCase().trim();
-      list = list.filter(g =>
-        g.name.toLowerCase().includes(q) ||
-        g.desc.toLowerCase().includes(q) ||
-        g.tags.some(t => t.toLowerCase().includes(q)) ||
-        g.category.toLowerCase().includes(q)
-      );
+    if (queryTerms.length) {
+      list = list.filter((game) => {
+        const entry = SEARCH_INDEX_BY_ID.get(game.id);
+        if (!entry || !queryTerms.every((term) => entry.searchable.includes(term))) return false;
+
+        let score = 8;
+        if (entry.name === query) score = 0;
+        else if (entry.name.startsWith(query)) score = 1;
+        else if (entry.name.includes(query)) score = 2;
+        else if (entry.tags.includes(query)) score = 3;
+        else if (entry.tags.some((tag) => tag.startsWith(query))) score = 4;
+        else if (entry.tags.some((tag) => tag.includes(query))) score = 5;
+        else if (entry.description.includes(query)) score = 6;
+        else if (entry.category.includes(query)) score = 7;
+        relevance.set(game.id, score);
+        return true;
+      });
     }
 
     if (currentSort === 'az') {
@@ -13274,6 +13312,11 @@ const GAMES_DATA = [
     } else if (currentSort === 'played') {
       const counts = getPlayCounts();
       list.sort((a, b) => (counts[b.id] || 0) - (counts[a.id] || 0));
+    } else if (relevance) {
+      list.sort((a, b) =>
+        relevance.get(a.id) - relevance.get(b.id) ||
+        SEARCH_INDEX_BY_ID.get(a.id).order - SEARCH_INDEX_BY_ID.get(b.id).order
+      );
     }
 
     return list;
@@ -13281,8 +13324,8 @@ const GAMES_DATA = [
 
   function cardHTML(item) {
     const icons = { games: "🎮", emulators: "🕹️", other: "📦" };
-    const isFav = isFavorite(item.id);
-    const playCount = getPlayCount(item.id);
+    const isFav = cardRenderFavorites.has(item.id);
+    const playCount = cardRenderPlayCounts[item.id] || 0;
     const tagsHTML = item.tags.slice(0, 3).map(t => `<span class="game-card__tag">${esc(t)}</span>`).join('');
 
     return `
@@ -13369,16 +13412,87 @@ const GAMES_DATA = [
 
         <div class="filter-bar__meta">
           <span class="filter-bar__count-label" id="resultsCountLabel">Showing games…</span>
-          ${(currentSearchQuery || currentTag !== 'All' || currentCategory !== 'all') ? `<button class="section-clear-btn" id="resetFiltersBtn">Reset Filters</button>` : ''}
+          ${(currentSearchQuery.trim() || currentTag !== 'All' || currentCategory !== 'all') ? `<button class="section-clear-btn" id="resetFiltersBtn">Reset Filters</button>` : ''}
         </div>
       </div>
     `;
   }
 
+  function scheduleSearchRender() {
+    if (searchRenderTimer) clearTimeout(searchRenderTimer);
+    searchRenderTimer = window.setTimeout(() => {
+      searchRenderTimer = 0;
+      renderFilteredGrid();
+    }, SEARCH_DEBOUNCE_MS);
+  }
+
+  function bindCatalogInteractions(gridRoot) {
+    if (!gridRoot || gridRoot.dataset.dgpInteractionsBound === 'true') return;
+    gridRoot.dataset.dgpInteractionsBound = 'true';
+
+    // Delegate card actions once. Search used to tear down and recreate hundreds
+    // of per-card listeners on every input event.
+    gridRoot.addEventListener('click', (event) => {
+      const target = event.target instanceof Element ? event.target : event.target.parentElement;
+      if (!target) return;
+
+      const favoriteButton = target.closest('.game-card__fav-btn');
+      if (favoriteButton && gridRoot.contains(favoriteButton)) {
+        toggleFavorite(favoriteButton.dataset.favId);
+        return;
+      }
+      if (target.closest('#loadMoreSearchResults')) {
+        const previousLimit = searchResultLimit;
+        searchResultLimit += SEARCH_RESULT_PAGE_SIZE;
+        renderFilteredGrid();
+        const nextPageButton = gridRoot.querySelector('#loadMoreSearchResults');
+        const firstNewCard = gridRoot.querySelectorAll('.game-card')[previousLimit];
+        (nextPageButton || firstNewCard)?.focus({ preventScroll: true });
+        return;
+      }
+      if (target.closest('#clearRecentsBtn')) {
+        clearRecents();
+        return;
+      }
+      if (target.closest('#emptyResetBtn, #resetFiltersBtn')) {
+        resetFilters();
+        return;
+      }
+
+      const card = target.closest('.game-card[data-id]');
+      if (card && gridRoot.contains(card)) openGame(card.dataset.id);
+    });
+
+    gridRoot.addEventListener('keydown', (event) => {
+      if (!['Enter', ' ', 'Spacebar'].includes(event.key)) return;
+      const target = event.target instanceof Element ? event.target : event.target.parentElement;
+      const card = target?.closest('.game-card[data-id]');
+      if (!card || !gridRoot.contains(card) || target.closest('.game-card__fav-btn')) return;
+      event.preventDefault();
+      openGame(card.dataset.id);
+    });
+  }
+
   function renderFilteredGrid() {
-    const list = getFilteredGames();
+    if (searchRenderTimer) {
+      clearTimeout(searchRenderTimer);
+      searchRenderTimer = 0;
+    }
+
+    const matchingList = getFilteredGames();
+    const searchActive = Boolean(normalizeSearchText(currentSearchQuery));
+    const list = searchActive ? matchingList.slice(0, searchResultLimit) : matchingList;
+    cardRenderFavorites = new Set(getFavorites());
+    cardRenderPlayCounts = getPlayCounts();
+
     const countLabel = $('#resultsCountLabel');
-    if (countLabel) countLabel.textContent = `Showing ${list.length} of ${GAMES_DATA.length} items`;
+    if (countLabel) {
+      countLabel.textContent = searchActive
+        ? (matchingList.length
+          ? `Showing ${list.length} of ${matchingList.length} matches (${GAMES_DATA.length} items total)`
+          : `No matches found (${GAMES_DATA.length} items searched)`)
+        : `Showing ${list.length} of ${GAMES_DATA.length} items`;
+    }
 
     let content = '';
 
@@ -13391,9 +13505,10 @@ const GAMES_DATA = [
           <button class="hero__cta hero__cta--secondary" id="emptyResetBtn" style="padding:8px 18px; font-size:0.8rem;">Reset All Filters</button>
         </div>
       `;
-    } else if (currentCategory === 'all' && !currentSearchQuery && currentTag === 'All' && currentSort === 'featured') {
-      const favs = getFavorites().map(id => GAMES_DATA.find(g => g.id === id)).filter(Boolean);
-      const recents = getRecents().map(id => GAMES_DATA.find(g => g.id === id)).filter(Boolean);
+    } else if (currentCategory === 'all' && !searchActive && currentTag === 'All' && currentSort === 'featured') {
+      const gamesById = new Map(GAMES_DATA.map((game) => [game.id, game]));
+      const favs = getFavorites().map((id) => gamesById.get(id)).filter(Boolean);
+      const recents = getRecents().map((id) => gamesById.get(id)).filter(Boolean);
 
       let favsSection = '';
       if (favs.length) {
@@ -13424,8 +13539,8 @@ const GAMES_DATA = [
         `;
       }
 
-      const catSections = CATEGORIES.map(cat => {
-        const catItems = GAMES_DATA.filter(g => g.category === cat.id);
+      const catSections = CATEGORIES.map((cat) => {
+        const catItems = GAMES_DATA.filter((game) => game.category === cat.id);
         return `
           <section class="category-section" id="category-${cat.id}">
             <div class="section-header">
@@ -13447,41 +13562,23 @@ const GAMES_DATA = [
       `;
     }
 
+    if (searchActive && list.length < matchingList.length) {
+      const remaining = matchingList.length - list.length;
+      const nextPageSize = Math.min(SEARCH_RESULT_PAGE_SIZE, remaining);
+      content += `
+        <div class="search-results-more">
+          <button type="button" class="search-results-more__button" id="loadMoreSearchResults">
+            Show ${nextPageSize} more ${nextPageSize === 1 ? 'result' : 'results'}
+          </button>
+        </div>
+      `;
+    }
+
     const gridRoot = $('#catalogRoot');
-    if (gridRoot) gridRoot.innerHTML = content;
-
-    $$('.game-card', gridRoot).forEach(card => {
-      card.addEventListener('click', (e) => {
-        if (e.target.closest('.game-card__fav-btn')) return;
-        const id = card.dataset.id;
-        openGame(id);
-      });
-      // Keyboard activation (Enter / Space) for accessibility and non-pointer input.
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-          if (e.target.closest('.game-card__fav-btn')) return;
-          e.preventDefault();
-          openGame(card.dataset.id);
-        }
-      });
-    });
-
-    $$('.game-card__fav-btn', gridRoot).forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const id = btn.dataset.favId;
-        toggleFavorite(id);
-      });
-    });
-
-    const clearRecentsBtn = $('#clearRecentsBtn');
-    if (clearRecentsBtn) clearRecentsBtn.addEventListener('click', clearRecents);
-
-    const emptyResetBtn = $('#emptyResetBtn');
-    if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetFilters);
-
-    const resetBtn = $('#resetFiltersBtn');
-    if (resetBtn) resetBtn.addEventListener('click', resetFilters);
+    if (gridRoot) {
+      bindCatalogInteractions(gridRoot);
+      gridRoot.innerHTML = content;
+    }
   }
 
   function resetFilters() {
@@ -13489,6 +13586,11 @@ const GAMES_DATA = [
     currentTag = 'All';
     currentSearchQuery = '';
     currentSort = 'featured';
+    searchResultLimit = SEARCH_RESULT_PAGE_SIZE;
+    if (searchRenderTimer) {
+      clearTimeout(searchRenderTimer);
+      searchRenderTimer = 0;
+    }
     renderFilterBar();
     renderFilteredGrid();
   }
@@ -13503,16 +13605,22 @@ const GAMES_DATA = [
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         currentSearchQuery = e.target.value;
-        if (searchClear) searchClear.style.display = currentSearchQuery ? 'block' : 'none';
-        renderFilteredGrid();
+        searchResultLimit = SEARCH_RESULT_PAGE_SIZE;
+        if (searchClear) searchClear.style.display = currentSearchQuery.trim() ? 'block' : 'none';
+        scheduleSearchRender();
       });
     }
 
     if (searchClear) {
       searchClear.addEventListener('click', () => {
         currentSearchQuery = '';
+        searchResultLimit = SEARCH_RESULT_PAGE_SIZE;
         if (searchInput) searchInput.value = '';
         searchClear.style.display = 'none';
+        if (searchRenderTimer) {
+          clearTimeout(searchRenderTimer);
+          searchRenderTimer = 0;
+        }
         renderFilteredGrid();
       });
     }
@@ -13543,6 +13651,9 @@ const GAMES_DATA = [
         renderFilteredGrid();
       });
     });
+
+    const resetBtn = $('#resetFiltersBtn', filterRoot);
+    if (resetBtn) resetBtn.addEventListener('click', resetFilters);
   }
 
   // ---- Settings Section HTML ----
