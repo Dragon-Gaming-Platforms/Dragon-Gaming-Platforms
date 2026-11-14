@@ -376,6 +376,7 @@ const GAMES_DATA = [
       "akari"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/akari/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/akari.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Place bulbs to illuminate every white cell without lighting another bulb. Generated puzzles with difficulty settings, hints, undo and local saves.",
@@ -578,6 +579,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ascii-art-studio/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ascii-art-studio.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Convert a local image into copyable monochrome ASCII art. Adjust output width, character density, contrast, brightness and inversion; download the result as plain text.",
@@ -660,6 +662,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/atari-2600-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/atari-2600-emulator.jpg",
     "shelf": "Emulators",
     "badge": "",
     "desc": "A locally hosted Javatari emulator for the Atari 2600. It contains no cartridge ROMs; load a game file you are entitled to use from your device. Local play works without an account or server.",
@@ -971,6 +974,7 @@ const GAMES_DATA = [
       "battleship-solitaire"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/battleship-solitaire/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/battleship-solitaire.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Deduce the positions of a fleet from row and column totals. Straight ships must not touch, even diagonally. Campaign and daily puzzles; not the two-player Battleship game. Original Simplified Chinese interface; English help included.",
@@ -1688,6 +1692,7 @@ const GAMES_DATA = [
       "bulgarian-solitaire"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bulgarian-solitaire/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/bulgarian-solitaire.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Deal, merge and split piles to reach a target partition; shortest routes and campaign boards are included. English help included; original interface partly Chinese.",
@@ -1755,6 +1760,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/c64-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/c64-emulator.jpg",
     "shelf": "Emulators",
     "badge": "",
     "desc": "A self-contained Commodore 64 emulator with keyboard, touch and gamepad controls. It intentionally includes no copyrighted C64 system ROMs or commercial programs; add files you have the right to use from your device.",
@@ -2117,6 +2123,7 @@ const GAMES_DATA = [
       "chinese-rings"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chinese-rings/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/chinese-rings.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Unlink interlocking rings under the classic Chinese-rings rule. Includes exhaustive shortest-path targets, campaign boards, hints and daily/seeded challenges. Original Simplified Chinese interface; English help included.",
@@ -3113,6 +3120,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/diagonal-junctions/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/diagonal-junctions.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Draw diagonals so every numbered junction has exactly the required number of line ends; a count-only Slant variant.",
@@ -3231,6 +3239,7 @@ const GAMES_DATA = [
       "board"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/domineering/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/domineering.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "You place red vertical dominoes on an 8×8 board; the computer places blue horizontal dominoes.",
@@ -3266,6 +3275,7 @@ const GAMES_DATA = [
       "dominosa"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dominosa/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/dominosa.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Partition a number grid into dominoes, using each unordered number pair exactly once. English help included; original interface partly Chinese.",
@@ -3337,6 +3347,7 @@ const GAMES_DATA = [
       "dosun-fuwari"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dosun-fuwari/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/dosun-fuwari.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Place one balloon and one iron ball per region, obeying upward and downward support rules. English help included; original interface partly Chinese.",
@@ -3372,6 +3383,7 @@ const GAMES_DATA = [
       "double-choco"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/double-choco/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/double-choco.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Divide a two-tone grid into blocks whose connected light and dark halves are congruent. Number clues give the size of each half. Original interface partly Simplified Chinese; English help included.",
@@ -3906,6 +3918,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/erosion-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/erosion-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "Sculpt a procedural terrain and run a local water-and-sediment experiment. Tune rainfall and erodibility, then watch downhill channels reshape the height field.",
@@ -3959,6 +3972,7 @@ const GAMES_DATA = [
       "euclid-game"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/euclid-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/euclid-game.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Cut squares from a gold rectangle in a two-player Euclidean subtraction game against a perfect opponent. Baked strategy tables, campaign and daily/seeded boards. Original interface partly Simplified Chinese; English help included.",
@@ -3976,6 +3990,7 @@ const GAMES_DATA = [
       "euler-trails"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/euler-trails/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/euler-trails.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Draw every graph edge exactly once within the minimum stroke budget. Includes 48 baked puzzles, daily/seeded boards and independent graph-theory checks. Original interface partly Simplified Chinese; English help included.",
@@ -4378,6 +4393,7 @@ const GAMES_DATA = [
       "board"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fox-and-hounds/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/fox-and-hounds.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Outrun four forward-only hounds, or trap the fox, with local two-player and configurable computer play.",
@@ -4460,6 +4476,7 @@ const GAMES_DATA = [
       "frog-swap"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/frog-swap/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/frog-swap.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Swap two groups of forward-only frogs using adjacent slides and jumps over an opposing frog. English help included; original interface partly Chinese.",
@@ -4511,6 +4528,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/frontier-conquest/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/frontier-conquest.jpg",
     "shelf": "Strategy & Idle",
     "badge": "",
     "desc": "A compact, original territory-control strategy game. Reinforce your borders, roll tactical battles against a local rival, and claim enough of the map to win. Includes no external map or game assets.",
@@ -4713,6 +4731,7 @@ const GAMES_DATA = [
       "local-files"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/genesis-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/genesis-emulator.jpg",
     "shelf": "Emulators",
     "badge": "Experimental",
     "desc": "An experimental, browser-based Mega Drive / Genesis emulator. Choose a ROM you are entitled to use; it is read locally and never uploaded. Only Sonic 1 and Sonic 2 have been tested by the core authors.",
@@ -4986,6 +5005,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/graph-theory-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/graph-theory-lab.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Build a small weighted network and step through breadth-first search, depth-first search, or Dijkstra's shortest-path algorithm. Compare visited order, frontier, path, and cost.",
@@ -5019,6 +5039,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gridlock-chess/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/gridlock-chess.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Guide chess pieces to marked targets while landings toggle a cross of blocking lights.",
@@ -5174,6 +5195,7 @@ const GAMES_DATA = [
       "hebi-ichigo"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hebi-ichigo/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hebi-ichigo.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Place non-touching 1–5 snakes using directional number clues. Every white cell must be assigned a number or explicitly marked empty. Original interface partly Simplified Chinese; English help included.",
@@ -5264,6 +5286,7 @@ const GAMES_DATA = [
       "herugolf"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/herugolf/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/herugolf.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Guide every numbered ball to a different hole using strokes that shorten by one cell each time. Routes cannot cross; water may be crossed but not landed on. Original Simplified Chinese interface; English help included.",
@@ -5330,6 +5353,7 @@ const GAMES_DATA = [
       "heyawake"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/heyawake/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/heyawake.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Shade cells to satisfy room counts, keep white cells connected, and break white corridors spanning three rooms. Fifty levels with hints and completion tracking.",
@@ -5347,6 +5371,7 @@ const GAMES_DATA = [
       "hidato"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hidato/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hidato.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Complete a consecutive number chain using horizontal, vertical and diagonal neighbors. Seeded 5×5, 6×6 and 7×7 puzzles with logical hints and local saves. Original Simplified Chinese interface; English help included.",
@@ -5643,6 +5668,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/interference-studio/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/interference-studio.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "Arrange local point emitters and explore constructive and destructive wave interference. Tune wavelength, phase, propagation speed, and color map in an original canvas-based physics visualizer.",
@@ -5902,6 +5928,7 @@ const GAMES_DATA = [
       "sandbox"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/js-playground/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/js-playground.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Write JavaScript, inspect console output, and build a small DOM preview in a sandboxed iframe with an opaque origin and restrictive Content Security Policy. No packages or server execution.",
@@ -6063,6 +6090,7 @@ const GAMES_DATA = [
       "kakurasu"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kakurasu/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/kakurasu.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Select cells to satisfy every weighted row and column sum. A cell contributes its column number to its row and its row number to its column. Campaign, daily puzzles and hints. Original Simplified Chinese interface; English help included.",
@@ -6206,6 +6234,7 @@ const GAMES_DATA = [
       "knights-and-knaves"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/knights-and-knaves/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/knights-and-knaves.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Deduce who always tells the truth and who always lies from logical testimony. Five generated tiers with English testimony and independent truth-table verification. Original interface partly Simplified Chinese; English help included.",
@@ -6221,6 +6250,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/knights-out/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/knights-out.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Move your knight in an L (two squares one way, one the other), landing only on a lit, unoccupied square.",
@@ -6236,6 +6266,7 @@ const GAMES_DATA = [
       "board"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/konane/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/konane.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Capture stones with straight orthogonal jumps in Hawaiian checkers; computer or local two-player play.",
@@ -6304,6 +6335,7 @@ const GAMES_DATA = [
       "kurotto"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kurotto/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/kurotto.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Shade cells so each numbered circle touches black components whose combined size equals its clue. Four generated board sizes. Original interface partly Simplified Chinese; English help included.",
@@ -6389,6 +6421,7 @@ const GAMES_DATA = [
       "board"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lines-of-action/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/lines-of-action.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Connect all of your pieces into one group, including diagonal neighbors.",
@@ -6422,6 +6455,7 @@ const GAMES_DATA = [
       "lits"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lits/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/lits.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Shade one L, I, T or S tetromino in every room. Keep all shaded cells connected, avoid 2×2 blocks, and never let identical tetromino types touch across rooms.",
@@ -6492,6 +6526,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/logic-gate-playground/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/logic-gate-playground.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Build a four-stage Boolean circuit from common logic gates. Toggle three inputs, wire earlier outputs into later gates, and compare all eight truth-table rows against a target function.",
@@ -6544,6 +6579,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/lsystem-garden/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/lsystem-garden.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "Grow procedural branching art from simple rewrite rules. Explore fern, tree, Koch, Sierpinski, and dragon-curve grammars with adjustable iterations, turns, stroke weight, and palette.",
@@ -6632,6 +6668,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/magnetism-bench/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/magnetism-bench.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "Arrange bar magnets and inspect a locally computed magnetic-field vector map. Move the probe, compare like and unlike poles, and rotate the selected magnet.",
@@ -6737,6 +6774,7 @@ const GAMES_DATA = [
       "canvas"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mandelbrot-explorer/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mandelbrot-explorer.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Explore the Mandelbrot and Julia sets with an interactive, locally rendered complex-plane explorer. Zoom, pan, tune iteration detail, change palettes and copy a shareable view link.",
@@ -6858,6 +6896,7 @@ const GAMES_DATA = [
       "matchstick-arithmetic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/matchstick-arithmetic/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/matchstick-arithmetic.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Repair seven-segment equations by moving matches without changing the total match count. Sixty campaign puzzles plus daily and seeded challenges. Original Simplified Chinese interface; English help included.",
@@ -7048,6 +7087,7 @@ const GAMES_DATA = [
       "midloop"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/midloop/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/midloop.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Draw one closed loop through all dots. Every dot must be the midpoint of the straight segment that passes through it. Four grid sizes, hints and local saves. Original Simplified Chinese interface; English help included.",
@@ -7397,6 +7437,7 @@ const GAMES_DATA = [
       "moonsun"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/moonsun/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/moonsun.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Make one loop through every room, choosing either all its moons or all its suns. Visited rooms must alternate between moon and sun. Three sizes with logical hints. Original Simplified Chinese interface; English help included.",
@@ -7724,6 +7765,7 @@ const GAMES_DATA = [
       "norinori"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/norinori/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/norinori.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Shade exactly two cells in each region, forming isolated dominoes that may cross region boundaries. Generated boards run in a local worker. Original interface partly Simplified Chinese; English help included.",
@@ -7947,6 +7989,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/optics-bench/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/optics-bench.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "Explore image formation with an interactive thin-lens ray bench. Change object distance, height, focal length, and lens type; compare real and virtual images and principal rays.",
@@ -7964,6 +8007,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/orbit-garden/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/orbit-garden.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "An interactive gravity sandbox for arranging small orbital systems. Choose a preset, pause the motion, or drag on the canvas to launch a new body. Uses a local softened Newtonian simulation with no external assets.",
@@ -8134,6 +8178,7 @@ const GAMES_DATA = [
       "pancake-sorting"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pancake-sorting/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pancake-sorting.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Sort a stack using prefix reversals: flip the top k pancakes together. Includes burnt-side puzzles and exact shortest-path targets. Original Simplified Chinese interface; English help included.",
@@ -8287,6 +8332,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pendulum-studio/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pendulum-studio.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "Explore a damped pendulum with an interactive local physics workbench. Set its release angle, length, gravity, and damping; drag the bob and compare the motion trace and energy.",
@@ -8304,6 +8350,7 @@ const GAMES_DATA = [
       "pentapack"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pentapack/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pentapack.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Fit pentomino pieces into shaped trays without gaps or overlaps. Thirty campaign puzzles plus date-based and seeded challenges, with hints and local records. Original Simplified Chinese interface; English help included.",
@@ -8765,6 +8812,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/prime-spiral-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/prime-spiral-lab.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Plot consecutive integers on a Ulam spiral and highlight primes to reveal diagonal patterns. Change the range, cell scale, and residue coloring with a local sieve.",
@@ -8812,6 +8860,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/prism-relay/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/prism-relay.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "",
     "desc": "A code-drawn beam-routing puzzle. Rotate mirrors to guide a light pulse around blockers and into the receiver across five original circuits.",
@@ -8986,6 +9035,7 @@ const GAMES_DATA = [
       "privacy"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/qr-code-studio/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/qr-code-studio.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Generate QR codes for text or links entirely in the browser. Adjust error correction, quiet zone, module size and colors, then download a PNG or SVG. No QR API or network request is used.",
@@ -9001,6 +9051,7 @@ const GAMES_DATA = [
       "board"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/quarto/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/quarto.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Choose a piece for your opponent, then place the piece they give you on an empty square.",
@@ -9190,6 +9241,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/reaction-field/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/reaction-field.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "Explore a self-organizing reaction-diffusion field. Seed reagent B, tune feed and kill rates, and watch spots, branches, mazes, and waves emerge in a local Gray–Scott simulation.",
@@ -9382,6 +9434,7 @@ const GAMES_DATA = [
       "river-crossing"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/river-crossing/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/river-crossing.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Ferry people and cargo across a river while respecting capacity and forbidden pairings. Includes supervised and free-boat variants with shortest-route targets. Original Simplified Chinese interface; English help included.",
@@ -9689,6 +9742,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/set-matching/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/set-matching.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Find every three-card set whose four attributes are each all the same or all different.",
@@ -9752,6 +9806,7 @@ const GAMES_DATA = [
       "shikaku"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/shikaku/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/shikaku.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Partition the grid into rectangles, each enclosing one clue with matching area. Five difficulty tiers, logical hints and local saves. Original Simplified Chinese interface; English help included.",
@@ -9854,6 +9909,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/signal-dash/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/signal-dash.jpg",
     "shelf": "Arcade & Action",
     "badge": "",
     "desc": "A quick, original one-screen arcade game with a pocket-sized pixel display. Collect clean signal cells, dodge static, and use pulse charges to clear a lane. All graphics are drawn in code.",
@@ -10058,6 +10114,7 @@ const GAMES_DATA = [
       "skyscrapers"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/skyscrapers/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/skyscrapers.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Arrange tower heights without repeating in rows or columns, matching the visible-tower clues around the edges. Twenty supplied puzzles plus seeded play. Original Simplified Chinese interface; English help included.",
@@ -10906,6 +10963,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sorting-studio/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sorting-studio.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Watch bubble, selection, and insertion sort rearrange a generated list. Step through comparisons and swaps, or play at an adjustable speed while operation counters update.",
@@ -11035,6 +11093,7 @@ const GAMES_DATA = [
       "suguru"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/suguru/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/suguru.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Fill each region with 1 through its size; touching cells, including diagonals, must differ. Five difficulty tiers, notes, hints and local saves. Original Simplified Chinese interface; English help included.",
@@ -11262,6 +11321,7 @@ const GAMES_DATA = [
       "tasquare"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tasquare/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tasquare.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Shade separate solid squares so each clue matches the combined area of its neighboring black regions; keep all white cells connected. Original Simplified Chinese interface; English help included.",
@@ -11279,6 +11339,7 @@ const GAMES_DATA = [
       "tatamibari"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tatamibari/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tatamibari.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Partition the grid into rectangles with exactly one shape clue each; no four rectangles may meet at a point. Five generated tiers. Original interface partly Simplified Chinese; English help included.",
@@ -11567,6 +11628,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tidepool-steward/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tidepool-steward.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "Guide a tiny intertidal reserve through a changing season. Restore kelp and eelgrass, clear debris, protect habitat, and balance a simplified coastal food web over twelve weeks.",
@@ -11772,6 +11834,7 @@ const GAMES_DATA = [
       "puzzle"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/trees-and-tents/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/trees-and-tents.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Place non-touching tents beside trees and satisfy row and column clues across ten forest camps.",
@@ -11824,6 +11887,7 @@ const GAMES_DATA = [
       "triplets"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/triplets/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/triplets.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Fill three-cell regions with three equal symbols or three different symbols; touching cells across region borders must differ. Seven generated board sizes. Original interface partly Simplified Chinese; English help included.",
@@ -11912,6 +11976,7 @@ const GAMES_DATA = [
       "ulam-liar-game"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ulam-liar-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ulam-liar-game.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Find a hidden number by asking subset questions against an opponent allowed a limited number of lies. Baked policies show the difference between bounds and exact question budgets. Original interface partly Simplified Chinese; English help included.",
@@ -11946,6 +12011,7 @@ const GAMES_DATA = [
       "utilities"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/unit-converter/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/unit-converter.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Convert length, mass, volume, temperature, area, speed, time, data, pressure, energy, frequency and angle using bundled static conversion tables. Works offline with no API.",
@@ -12175,6 +12241,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/voronoi-workshop/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/voronoi-workshop.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "Move, add, and remove sites to reshape a Voronoi diagram. Every pixel belongs to its nearest site, revealing how a handful of points partition a plane.",
@@ -12227,6 +12294,7 @@ const GAMES_DATA = [
       "water-jugs"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/water-jugs/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/water-jugs.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Measure a target volume with unmarked jugs using only full fills, emptying and transfers. Includes 63 baked puzzles and daily/seeded challenges. Original Simplified Chinese interface; English help included.",
@@ -12244,6 +12312,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/waveform-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/waveform-lab.jpg",
     "shelf": "Tools & Utilities",
     "badge": "",
     "desc": "Design and play single synthesized tones. Shape square, triangle, sawtooth, or sine waves with an ADSR envelope and low-pass filter, then export a local WAV. This is a sound-design instrument, not a song sequencer.",
@@ -12278,6 +12347,7 @@ const GAMES_DATA = [
       "offline"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/weather-forge/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/weather-forge.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "",
     "desc": "An original local weather experiment. Adjust temperature, humidity, pressure, and wind to see how a procedural cloud field responds; seed an updraft and watch it grow into a storm.",
@@ -12589,6 +12659,7 @@ const GAMES_DATA = [
       "yajilin"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/yajilin/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/yajilin.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Shade nonadjacent cells to satisfy arrow counts, and draw a single loop through every other non-clue cell. English help included; original interface partly Chinese.",
@@ -12642,6 +12713,7 @@ const GAMES_DATA = [
       "zebra-logic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/zebra-logic/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/zebra-logic.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Deduce who lives in each house from generated logic clues. English clue text and table labels accompany a pairwise deduction grid and independently checked answer panel. Original Simplified Chinese interface; English help included.",
@@ -12694,6 +12766,7 @@ const GAMES_DATA = [
       "local-files"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/zx-spectrum-emulator/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/zx-spectrum-emulator.jpg",
     "shelf": "Emulators",
     "badge": "",
     "desc": "A 48K-only browser emulator with the freely licensed Open82 replacement system ROM. No commercial games or original Sinclair ROMs are bundled; open a compatible snapshot or tape file from your device.",
