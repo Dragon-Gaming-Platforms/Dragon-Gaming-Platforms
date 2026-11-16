@@ -5,6 +5,8 @@ on:
     branches: ["**"]
     paths:
       - '.github/workflows/ci.yml'
+      - '.github/workflows/sync-assets-catalog.yml'
+      - 'scripts/sync_assets_catalog.py'
       - 'AGENTS.md'
       - 'README.md'
       - '404.html'
@@ -20,6 +22,8 @@ on:
   pull_request:
     paths:
       - '.github/workflows/ci.yml'
+      - '.github/workflows/sync-assets-catalog.yml'
+      - 'scripts/sync_assets_catalog.py'
       - 'AGENTS.md'
       - 'README.md'
       - '404.html'
@@ -71,6 +75,9 @@ jobs:
           node --check games.js
           node --check site-enhancements.js
           node --check sw.js
+
+      - name: Run asset-sync script tests
+        run: python3 -m unittest discover -s scripts/tests -p 'test_*.py'
 
       - name: Run catalog, manifest, shell, and browser tests
         env:
