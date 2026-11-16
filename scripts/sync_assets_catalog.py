@@ -25,9 +25,11 @@ Orphaned assets-repo entries, id conflicts and metadata problems are reported
 as warnings (and THIRD_PARTY.md attribution is left to the maintainer).
 
 Recount-only mode (--recount-only) refreshes every hard-coded count string
-(search placeholder, navbar counts, the N+ marketing numbers, AGENTS.md
-totals) from the actual catalog contents without adding games or needing an
-assets checkout.
+(search placeholder, navbar counts, the N+ marketing numbers, and the managed
+AGENTS.md catalog-count block) from the actual catalog contents without adding
+games or needing an assets checkout. The handbook block uses stable markers;
+legacy formats are migrated, and unfamiliar layouts receive a canonical count
+section rather than failing the catalog sync.
 """
 import argparse
 import json
@@ -38,6 +40,12 @@ from collections import Counter
 
 ASSETS_BASE = "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/"
 CATALOGS = ["games.js", "cdn.games.js", "singlefile.html"]
+AGENTS_COUNT_START = "<!-- ASSET_SYNC_CATALOG_COUNTS_START -->"
+AGENTS_COUNT_END = "<!-- ASSET_SYNC_CATALOG_COUNTS_END -->"
+LEGACY_AGENTS_COUNT_RE = re.compile(
+    r"\*\*\s*\d+\s+(?:items?|entries)\s*\*\*\s*"
+    r"(?:\([^\n)]*\)|:\s*\*\*[^\n]*?\*\*)"
+)
 SHELVES = {
     "Arcade & Action", "Puzzle & Logic", "Sports & Racing", "RPG & Adventure",
     "Strategy & Idle", "Emulators", "Interactive Stories & Experiments",
@@ -192,6 +200,79 @@ def sub_once(text, pattern, repl, fname):
     return new
 
 
+def agents_count_text(counts):
+    total, games, emulators, other = counts
+    return "The main `GAMES_DATA` catalog currently contains **%d entries**: **%d games, %d emulators, and %d tools/other entries**." % (total, games, emulators, other)
+
+
+def agents_count_block(counts):
+    return AGENTS_COUNT_START + "\n" + agents_count_text(counts) + "\n" + AGENTS_COUNT_END
+
+
+def update_agents_catalog_counts(content, counts):
+    """Refresh AGENTS.md counts without depending on the handbook's prose format.
+
+    Prefer the explicit managed block. For older handbooks, migrate a known
+    legacy count sentence or replace the first paragraph below the catalog
+    snapshot heading. If neither layout exists, add a canonical snapshot section
+    instead of failing the whole catalog sync over documentation wording.
+    """
+    block = agents_count_block(counts)
+    markers = re.compile(re.escape(AGENTS_COUNT_START) + r".*?" + re.escape(AGENTS_COUNT_END), re.S)
+    if (content.count(AGENTS_COUNT_START) == 1 and content.count(AGENTS_COUNT_END) == 1
+            and len(markers.findall(content)) == 1):
+        return markers.sub(lambda _match: block, content, count=1)
+
+    # Recover from partial/duplicated markers left by a prior manual edit.
+    content = markers.sub("", content)
+    content = content.replace(AGENTS_COUNT_START, "").replace(AGENTS_COUNT_END, "")
+
+    heading = re.search(r"(?im)^(#{1,6})\s+Current catalog snapshot\s*$", content)
+    if heading:
+        level = len(heading.group(1))
+        remainder = content[heading.end():]
+        next_heading = re.search(r"(?m)^#{1,%d}\s+" % level, remainder)
+        section_end = next_heading.start() if next_heading else len(remainder)
+        section = remainder[:section_end]
+        paragraph = re.search(r"\S.*?(?=\n[ \t]*\n|\Z)", section, re.S)
+        old_clause = LEGACY_AGENTS_COUNT_RE.search(paragraph.group()) if paragraph else None
+        if old_clause:
+            start = paragraph.start() + old_clause.start()
+            end = paragraph.start() + old_clause.end()
+            section = section[:start] + block + section[end:]
+        elif paragraph and re.search(r"\d", paragraph.group()) and re.search(
+                r"catalog|games?|items?|entries|emulators?|other", paragraph.group(), re.I):
+            section = section[:paragraph.start()] + block + section[paragraph.end():]
+        else:
+            # Keep newly written prose intact; insert the canonical count as a
+            # separate paragraph unless an older numeric count was identified.
+            insertion = paragraph.start() if paragraph else 0
+            section = section[:insertion] + "\n\n" + block + "\n" + section[insertion:]
+        return content[:heading.end()] + section + remainder[section_end:]
+
+    # Previous versions used formats such as "**651 items** (641 `games`, ... )"
+    # or "**651 entries**: **641 games, ...**". Migrate those when present.
+    legacy_matches = list(LEGACY_AGENTS_COUNT_RE.finditer(content))
+    if legacy_matches:
+        pieces = []
+        cursor = 0
+        for index, match in enumerate(legacy_matches):
+            pieces.append(content[cursor:match.start()])
+            pieces.append(block if index == 0 else agents_count_text(counts))
+            cursor = match.end()
+        pieces.append(content[cursor:])
+        return "".join(pieces)
+
+    # Unknown handbook layout: add a stable section, preserving all existing text.
+    section = "### Current catalog snapshot\n\n" + block
+    overview = re.search(r"(?m)^##\s+1\.\s+Project at a glance\s*$", content)
+    if overview:
+        next_section = re.search(r"(?m)^##\s+", content[overview.end():])
+        insert_at = overview.end() + next_section.start() if next_section else len(content)
+        return content[:insert_at].rstrip() + "\n\n" + section + "\n\n" + content[insert_at:].lstrip()
+    return content.rstrip() + "\n\n" + section + "\n"
+
+
 def update_counts(contents):
     data = parse_data(contents["games.js"], "games.js")
     cats = Counter(x["category"] for x in data)
@@ -209,11 +290,8 @@ def update_counts(contents):
         contents[fname] = sub_once(
             contents[fname], r"Play \d+\+ classic games, emulators, and unblocked tools",
             "Play %d+ classic games, emulators, and unblocked tools" % hero_n, fname)
-    contents["AGENTS.md"] = sub_once(
-        contents["AGENTS.md"],
-        r"\*\*\d+ items\*\* \(\d+ `games`, \d+ `emulators`, \d+ `other`\)",
-        "**%d items** (%d `games`, %d `emulators`, %d `other`)" % (total, g_n, e_n, o_n),
-        "AGENTS.md")
+    contents["AGENTS.md"] = update_agents_catalog_counts(
+        contents["AGENTS.md"], (total, g_n, e_n, o_n))
     return total, g_n, e_n, o_n
 
 

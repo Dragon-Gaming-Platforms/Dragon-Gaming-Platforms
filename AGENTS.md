@@ -56,7 +56,11 @@ Dragon Gaming Platforms (DGP) is a static browser-gaming portal and utility hub.
 
 ### Current catalog snapshot
 
-The main `GAMES_DATA` catalog currently contains **744 entries**: **734 games, 7 emulators, and 3 tools/other entries**. The total and displayed counts change as the catalog changes. `scripts/tests/site.test.cjs` checks ID uniqueness and verifies the main navigation count against the catalog; it also checks that the hero's approximate count does not exceed the catalog total.
+<!-- ASSET_SYNC_CATALOG_COUNTS_START -->
+The main `GAMES_DATA` catalog currently contains **744 entries**: **734 games, 7 emulators, and 3 tools/other entries**.
+<!-- ASSET_SYNC_CATALOG_COUNTS_END -->
+
+The total and displayed counts change as the catalog changes. `scripts/tests/site.test.cjs` checks ID uniqueness and verifies the main navigation count against the catalog; it also checks that the hero's approximate count does not exceed the catalog total.
 
 ---
 
@@ -437,7 +441,7 @@ Read the full workflow before dispatching it. A workflow may push commits, updat
 
 ## 18. CI and automated tests
 
-`/.github/workflows/ci.yml` runs on matching pushes, pull requests, and `workflow_dispatch`. It uses Node 22, actions/checkout and setup-node, and installs `jsdom@26.1.0` under `$RUNNER_TEMP` rather than adding project package files. Sparse checkout includes root files, `pwa/`, and `scripts/`; it deliberately excludes the hundreds of megabytes under game directories.
+`/.github/workflows/ci.yml` runs on matching pushes, pull requests, and `workflow_dispatch`. It uses Node 22, runs the Python asset-sync regression suite, and installs `jsdom@26.1.0` under `$RUNNER_TEMP` rather than adding project package files. Sparse checkout includes root files, `pwa/`, and `scripts/`; it deliberately excludes the hundreds of megabytes under game directories.
 
 ### Current test coverage
 
@@ -448,6 +452,8 @@ Read the full workflow before dispatching it. A workflow may push commits, updat
 3. The worker declares a positive cache schema, precaches required shell resources, and excludes portable/CDN snapshots.
 4. `index.html` references its main CSS, catalog engine, enhancement CSS/JS, and manifest.
 5. jsdom browser flows: recent history validation/deduplication/clear, debounced one-character search, 36-result pagination, ranking, delegated favorites/reset actions, `?search=`, `?play=`, and `?random=1`.
+
+`python3 -m unittest discover -s scripts/tests -p 'test_*.py'` checks that asset sync updates the managed handbook block, migrates legacy count formats, tolerates reorganized handbook text, and adds a fixture game in an isolated temporary worktree.
 
 The browser flow test skips if jsdom is unavailable when run locally. CI always installs its pinned test dependency, so it should not skip there. Tests are not a substitute for checking in a real browser on mobile/desktop or verifying actual game-host availability.
 
@@ -465,9 +471,11 @@ The browser flow test skips if jsdom is unavailable when run locally. CI always 
 
 | Script | Purpose | Use notes |
 |---|---|---|
-| `scripts/sync_assets_catalog.py` | Add missing games from a checked-out companion assets `games/` directory; optional `game.json` metadata and recount mode | Supports `--dry-run` and `--recount-only`; a real run can write `games.js`, `cdn.games.js`, `singlefile.html`, and count strings. Review outputs and exact file scope before use. |
+| `scripts/sync_assets_catalog.py` | Add missing games from a checked-out companion assets `games/` directory; optional `game.json` metadata and recount mode | Supports `--dry-run` and `--recount-only`; refreshes the managed catalog-count block in this handbook without relying on its surrounding prose. A real run can write `games.js`, `cdn.games.js`, `singlefile.html`, `index.html`, and AGENTS.md. Review outputs and exact file scope before use. |
 | `scripts/add_10_games.py` | Hard-coded sample catalog authoring script | It rewrites `games.js`, `cdn.games.js`, and `singlefile.html`, then sorts the catalog. The sample list/fields may be stale; do not run it during main-site-only work or when portable snapshots are protected. Review every output first. |
 | `scripts/tests/site.test.cjs` | Automated static and jsdom tests | Run with Node; jsdom is supplied by CI or a temporary local install. |
+
+The `ASSET_SYNC_CATALOG_COUNTS_START` / `ASSET_SYNC_CATALOG_COUNTS_END` comments delimit the catalog total maintained by the sync script. Keep each marker exactly once; the script also migrates older count wording and falls back to creating the snapshot section if the handbook is reorganized.
 
 Do not add test-generated files or dry-run reports under the repository root. Use `/tmp` or runner temporary storage. Do not place downloaded third-party source or credentials in a test fixture.
 
