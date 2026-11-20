@@ -479,6 +479,7 @@ const GAMES_DATA = [
       "emergence"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ant-colony-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ant-colony-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Hundreds of foragers with no map and no leader build a pheromone highway between nest and food.",
@@ -530,6 +531,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/aqre/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/aqre.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Match each room’s shaded-cell total, connect all shaded cells, and avoid runs of four of either color.",
@@ -547,6 +549,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/aquarium/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/aquarium.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Fill connected rooms with level water, matching the shaded-cell totals outside each row and column.",
@@ -732,6 +735,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ataxx/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ataxx.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Clone or jump discs and convert neighboring opponents in a 7×7 territory battle. Local two-player or bounded computer opponent.",
@@ -782,6 +786,7 @@ const GAMES_DATA = [
       "statistics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/auction-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/auction-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "First-price, second-price and English auctions on the same private values, with revenue measured over thousands of draws against revenue equivalence.",
@@ -1079,6 +1084,7 @@ const GAMES_DATA = [
       "education"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bayes-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/bayes-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A rare-disease test and a biased coin: watch Bayes' rule turn a scary positive into a modest probability, and belief tighten flip by flip.",
@@ -1222,6 +1228,7 @@ const GAMES_DATA = [
       "mathematics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/bezier-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/bezier-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A draggable Bézier curve with de Casteljau's construction, the control hull, curvature and the osculating circle — all checked against each other.",
@@ -1530,6 +1537,7 @@ const GAMES_DATA = [
       "flocking"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/boids-flocking-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/boids-flocking-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Interactive flocking simulation where autonomous agents follow separation, alignment, and cohesion rules.",
@@ -1722,6 +1730,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/breakthrough/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/breakthrough.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Race pawns across an 8×8 board, advancing straight or diagonally and capturing diagonally. Two-player or computer play.",
@@ -1932,6 +1941,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/canal-view/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/canal-view.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Connect a shaded canal without solid 2×2 blocks, using sightline totals on the clear banks.",
@@ -2055,6 +2065,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cave/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/cave.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Carve a connected cave with numbered white sightlines and shaded walls that all reach the outside edge.",
@@ -2347,6 +2358,7 @@ const GAMES_DATA = [
       "emergence"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chladni-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/chladni-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Sand on a vibrating plate, settling into the nodal lines of mode (n, m).",
@@ -2364,6 +2376,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/chocona/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/chocona.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Match each room’s shaded total while making every separate chocolate component a filled rectangle.",
@@ -2430,6 +2443,7 @@ const GAMES_DATA = [
       "security"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/cipher-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/cipher-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Four classical ciphers with two real attacks: chi-squared Caesar cracking and a Vigenère cracker that finds the key length first.",
@@ -2560,6 +2574,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/clobber/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/clobber.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Capture an orthogonally adjacent enemy stone on a 6×5 checkerboard. The player with no legal capture loses.",
@@ -2677,6 +2692,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/col/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/col.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Place stones on a 7×7 grid without orthogonally touching your own color. Opposing neighbors are allowed; no legal placement loses.",
@@ -2729,6 +2745,7 @@ const GAMES_DATA = [
       "wcag"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/color-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/color-lab.jpg",
     "shelf": "Tools & Utilities",
     "badge": "New",
     "desc": "Build an HSL harmony, then test it for WCAG contrast and simulated colour-vision deficiency.",
@@ -2835,6 +2852,7 @@ const GAMES_DATA = [
       "text"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/compression-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/compression-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Run-length, Huffman and LZ78 applied to the same text, counted in exact bits including headers, against Shannon's entropy floor.",
@@ -3119,6 +3137,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/creek/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/creek.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Shade cells around numbered junctions while keeping every clear cell connected into one creek.",
@@ -3152,6 +3171,7 @@ const GAMES_DATA = [
       "emergence"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/crystal-growth-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/crystal-growth-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Diffusion-limited aggregation: random walkers freeze on contact and grow branching fractal crystals.",
@@ -3325,6 +3345,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dao/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/dao.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Slide four pieces on a 4×4 board into a row, column, 2×2 square or the four corners. Cornering an enemy piece loses.",
@@ -3552,6 +3573,7 @@ const GAMES_DATA = [
       "diffusion"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/diffusion-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/diffusion-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Hundreds of random walkers, with the mean squared displacement measured live against time.",
@@ -3604,6 +3626,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/dodo/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/dodo.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A 37-cell hex-grid blocking game with 13 checkers each. Move forward into empty cells; the first player with no move wins.",
@@ -4189,6 +4212,7 @@ const GAMES_DATA = [
       "visualization"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/elementary-automata-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/elementary-automata-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Explore all 256 Wolfram one-dimensional cellular automata generation by generation.",
@@ -4330,6 +4354,7 @@ const GAMES_DATA = [
       "networks"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/epidemic-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/epidemic-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A stochastic SIR outbreak on a contact lattice, with the curves and the herd-immunity threshold.",
@@ -4384,6 +4409,7 @@ const GAMES_DATA = [
       "education"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/error-correction-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/error-correction-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "An extended Hamming(8,4) code you can corrupt by hand, with a real decoder and exact vs simulated failure statistics.",
@@ -4625,6 +4651,7 @@ const GAMES_DATA = [
       "oscillators"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/firefly-sync-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/firefly-sync-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Kuramoto fireflies settle into a shared rhythm as coupling rises.",
@@ -4790,6 +4817,7 @@ const GAMES_DATA = [
       "education"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/floating-point-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/floating-point-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "IEEE-754 bit patterns, unit-in-the-last-place, catastrophic cancellation and a million additions of 0.1, all measured rather than illustrated.",
@@ -4843,6 +4871,7 @@ const GAMES_DATA = [
       "art"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/flow-field-studio/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/flow-field-studio.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Thousands of particles steered by a seeded noise field paint an image that nobody designed.",
@@ -4859,6 +4888,7 @@ const GAMES_DATA = [
       "fluid"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fluid-ink-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/fluid-ink-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Fluid diffusion simulation where ink drops spread and fade over time.",
@@ -4927,6 +4957,7 @@ const GAMES_DATA = [
       "drawing"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/fourier-epicycles/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/fourier-epicycles.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Draw a closed curve and watch a chain of rotating vectors rebuild it from its Fourier coefficients.",
@@ -5299,6 +5330,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/genetics-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/genetics-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Run replicate Wright–Fisher populations and watch drift, selection and mutation fight over allele frequencies.",
@@ -5570,6 +5602,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/gopher/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/gopher.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "The 6×6 square-grid Gopher edition: after the free opening, place next to exactly one enemy and no friendly stones.",
@@ -5694,6 +5727,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/grundys-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/grundys-game.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Split one shared heap into two nonempty unequal heaps. Nothing is removed; the last legal split wins.",
@@ -5795,6 +5829,7 @@ const GAMES_DATA = [
       "generative"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/harmonograph-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/harmonograph-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Two damped pendulums per axis draw a single decaying curve — change the frequency ratios and the figure changes character.",
@@ -5812,6 +5847,7 @@ const GAMES_DATA = [
       "performance"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hash-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hash-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Linear, quadratic and double hashing on a real table, with measured probe counts against Knuth's formulas and a hash-quality slider.",
@@ -6010,6 +6046,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hexapawn/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hexapawn.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A solved 3×3 pawn game: advance straight, capture diagonally, and reach the back rank or leave the other side without a move.",
@@ -6320,6 +6357,7 @@ const GAMES_DATA = [
       "tiling"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/hyperbolic-tiling-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/hyperbolic-tiling-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Regular {p, q} tilings of the hyperbolic plane, spun inside a Poincaré disc.",
@@ -6338,6 +6376,7 @@ const GAMES_DATA = [
       "generative"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ifs-fractal-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ifs-fractal-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Six iterated function systems drawn point by point, with the map weights under your thumb.",
@@ -6478,6 +6517,7 @@ const GAMES_DATA = [
       "monte-carlo"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/ising-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/ising-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Metropolis Monte Carlo on a square lattice: heat it up, cool it down, and watch order appear and dissolve.",
@@ -6545,6 +6585,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/isolation/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/isolation.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Move your runner one king step, then remove an empty floor cell on a 7×7 board. Trap the other runner to win.",
@@ -6900,6 +6941,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kalman-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/kalman-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A Kalman filter and a particle filter tracking the same noisy 1-D sensor, with ±2σ bands and a normalised-innovation consistency check.",
@@ -6917,6 +6959,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/kayles/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/kayles.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Play normal-play Kayles on independent rows of 3, 5 and 7 pins. Remove one pin or two neighboring pins; the last removal wins.",
@@ -7076,6 +7119,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/knightthrough/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/knightthrough.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "An 8×8 forward-knight race with captures. Leap over blockers and reach the enemy back rank before your opponent.",
@@ -7511,6 +7555,7 @@ const GAMES_DATA = [
       "dynamics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/magnetic-pendulum-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/magnetic-pendulum-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A swinging bob over two to six magnets, and the fractal basin map that decides where it lands.",
@@ -7598,6 +7643,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/makaro/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/makaro.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Fill each room with 1 through its size, avoid equal edge-neighbors, and make each arrow point to its largest neighbor. 24 original unique puzzles.",
@@ -7687,6 +7733,7 @@ const GAMES_DATA = [
       "education"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/market-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/market-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A supply-and-demand market with price controls, unit taxes and a monopoly — surplus shaded, deadweight loss measured.",
@@ -8082,6 +8129,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mini-amazons/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mini-amazons.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A compact 6×6 Amazons variant with two queens per player. Move a queen, fire a blocking arrow, and leave your opponent without a move.",
@@ -8302,6 +8350,7 @@ const GAMES_DATA = [
       "numerics"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/monte-carlo-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/monte-carlo-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Estimate π three ways — darts, an integral and Buffon's needle — and watch the error fall like 1/√N.",
@@ -8470,6 +8519,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/mu-torere/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/mu-torere.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Traditional Māori strategy on an eight-point ring and center. Move to the sole empty point and immobilize your opponent.",
@@ -8537,6 +8587,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nanro/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/nanro.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Choose a connected numbered network with region-size clues, differing numbers across borders, and no solid numbered 2×2. 24 original unique puzzles.",
@@ -8658,6 +8709,7 @@ const GAMES_DATA = [
       "visualisation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/neural-net-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/neural-net-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A two-layer network learns where to draw the boundary between two colours of dots, and you can watch it think.",
@@ -8675,6 +8727,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/neutreeko/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/neutreeko.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Slide three pieces on a 5×5 board as far as possible. Make three adjacent stones in any straight horizontal, vertical or diagonal line.",
@@ -8692,6 +8745,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/neutron/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/neutron.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Slide a neutral neutron and your own pawns on a 5×5 board. Bring the neutron to your home row or leave it immobile for the opponent.",
@@ -8815,6 +8869,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nogo/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/nogo.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A 7×7 no-capture Go variant: captures, suicide and passing are forbidden. Leave your opponent without a legal placement.",
@@ -8832,6 +8887,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/nondango/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/nondango.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Color circles so every room has one black circle and no three consecutive circles share a color, including diagonals. 24 original unique puzzles.",
@@ -8918,6 +8974,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/notakto/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/notakto.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Misère three-board tic-tac-toe: both players place shared X marks. Three in a row kills a board; killing the final board loses.",
@@ -9142,6 +9199,7 @@ const GAMES_DATA = [
       "visualisation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/optimizer-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/optimizer-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "SGD, momentum, RMSProp and Adam descending the same landscape from the same point — with the gradients checked against finite differences.",
@@ -9242,6 +9300,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/order-and-chaos/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/order-and-chaos.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Asymmetric 6×6 strategy. Both players can place X or O; Order wants five identical marks in a line, Chaos wants a full board without one.",
@@ -9451,6 +9510,7 @@ const GAMES_DATA = [
       "visualisation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/pathfinding-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/pathfinding-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Four search algorithms race across the same weighted grid — paint terrain, build mazes, and compare every route they find.",
@@ -9572,6 +9632,7 @@ const GAMES_DATA = [
       "tiling"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/penrose-tiling-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/penrose-tiling-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Five families of parallel lines are cut into a patch of thick and thin rhombi that never repeats.",
@@ -9627,6 +9688,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/percolation-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/percolation-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Fill a lattice at random and watch a spanning cluster appear at the critical probability — a hands-on phase transition.",
@@ -10051,6 +10113,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/predator-prey-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/predator-prey-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Grass, rabbits and foxes share a wrapping meadow in an agent-based ecosystem with population charts.",
@@ -10344,6 +10407,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/quadrant-five/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/quadrant-five.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "An independent place-and-rotate alignment game: place on a 6×6 board, twist a 3×3 quadrant 90°, and make five in a row.",
@@ -10362,6 +10426,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/quantum-tunneling-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/quantum-tunneling-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A Gaussian wave packet hits a rectangular barrier and part of it comes out the other side.",
@@ -10396,6 +10461,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/queueing-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/queueing-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "An M/M/1 queue you can push into saturation, with the measured wait time plotted against the theory.",
@@ -10685,6 +10751,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/renban/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/renban.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Fill a Latin grid while every outlined room contains distinct consecutive digits in any order. 24 original uniquely solvable puzzles.",
@@ -10966,6 +11033,7 @@ const GAMES_DATA = [
       "contraption"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/rope-pulley-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/rope-pulley-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Physics contraption toy with Verlet integration rope simulation and anchor dragging.",
@@ -11122,6 +11190,7 @@ const GAMES_DATA = [
       "emergence"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sandpile-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sandpile-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Drop grains one at a time and watch avalanches of every size fall out of four simple rules.",
@@ -11154,6 +11223,7 @@ const GAMES_DATA = [
       "optimisation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/scheduling-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/scheduling-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Five dispatch rules over identical machines with live Gantt charts, tardiness accounting and a makespan lower bound.",
@@ -11474,6 +11544,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/silver-dollar/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/silver-dollar.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Slide shared coins left along a numbered strip without jumping or overtaking. Leave the opponent no room to move.",
@@ -11769,6 +11840,7 @@ const GAMES_DATA = [
       "emergence"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/slime-network-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/slime-network-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Grow a living transport network from thousands of physarum-style foragers.",
@@ -11987,6 +12059,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/snort/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/snort.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Place stones on a 7×7 grid without touching the opponent orthogonally. Same-color neighbors are allowed; no legal placement loses.",
@@ -12409,6 +12482,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/squava/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/squava.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Place stones on a 5×5 grid: four in a straight line wins, but making three without a four loses. Four takes precedence.",
@@ -12595,6 +12669,7 @@ const GAMES_DATA = [
       "visualization"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/strange-attractor-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/strange-attractor-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Six chaotic systems — Lorenz, Rössler, Thomas, Aizawa, Clifford and De Jong — integrated and projected in the browser.",
@@ -12727,6 +12802,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/sukoro/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/sukoro.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Build one connected numbered network. Each digit counts its numbered edge-neighbors, and equal digits cannot touch. 24 original unique puzzles.",
@@ -12954,6 +13030,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tapa/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tapa.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Interpret cyclic run clues around white cells to build one connected shaded wall without solid 2×2 blocks.",
@@ -13007,6 +13084,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/teeko/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/teeko.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Place four stones each on a 5×5 board, then move one stone a king step. Make four in a line or a filled 2×2 square.",
@@ -13405,6 +13483,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/toads-and-frogs/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/toads-and-frogs.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A partisan strip game: Blue toads move right, Amber frogs left. Step into a space or jump one opponent; the player unable to move loses.",
@@ -13502,6 +13581,7 @@ const GAMES_DATA = [
       "traffic"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/traffic-flow-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/traffic-flow-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A single-lane Nagel–Schreckenberg ring road where jams appear on their own.",
@@ -13537,6 +13617,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/traffic-lights/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/traffic-lights.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Advance shared lights from off to green to yellow to red on a 3×4 board. Make three of one color in a straight line to win.",
@@ -13554,6 +13635,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/treblecross/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/treblecross.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Alternate adding a shared X to a nine-cell line. Complete three consecutive X marks to win; Tactical plays the fully solved game.",
@@ -13674,6 +13756,7 @@ const GAMES_DATA = [
       "graphs"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/tsp-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/tsp-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "Nearest neighbour, 2-opt and simulated annealing on the same cities, measured against a minimum spanning tree lower bound.",
@@ -13691,6 +13774,7 @@ const GAMES_DATA = [
       "simulation"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/turing-machine-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/turing-machine-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "A single tape, a finite state table and one head that reads, writes and moves — the simplest complete computer.",
@@ -13709,6 +13793,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/turning-turtles/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/turning-turtles.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Flip one head to tails and optionally any coin to its left. The rightmost flipped coin must be heads; turn the last head to win.",
@@ -14080,6 +14165,7 @@ const GAMES_DATA = [
       "game-theory"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/voting-lab/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/voting-lab.jpg",
     "shelf": "Interactive Stories & Experiments",
     "badge": "New",
     "desc": "One voter profile, five counting rules, and four different winners: plurality, IRV, Borda, approval and Condorcet side by side.",
@@ -14410,6 +14496,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/wythoffs-game/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/wythoffs-game.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "A two-heap strategy game: remove any positive amount from one heap, or the same amount from both. Last move wins.",
@@ -14533,6 +14620,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/yavalath/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/yavalath.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Place stones on a 61-cell hexagon. Four in a straight hex line wins, but three without four loses. No-swap two-player practice edition.",
@@ -14569,6 +14657,7 @@ const GAMES_DATA = [
       "original"
     ],
     "path": "https://dragon-gaming-platforms.github.io/Dragon-Gaming-Assets/games/yin-yang/",
+    "image": "https://dragon-gaming-platforms.github.io/Thumbnail-Assets/thumbnails/jpg/yin-yang.jpg",
     "shelf": "Puzzle & Logic",
     "badge": "New",
     "desc": "Complete a two-color grid so black and white each connect without any monochrome 2×2 square.",
